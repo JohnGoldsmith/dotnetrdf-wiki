@@ -23,6 +23,8 @@ testsuite - Informal test suite
 unittest - Unit testing
 utilities - Various utilities that make up the dotNetRDF toolkit
 
+This top level folder contains all the assemblies which are referenced by the projects here, not all references are required for all projects.
+
 License
 -------
 
