@@ -11,67 +11,38 @@ SVN Guide
 
 This SVN repository contains the following folders:
 
-benchmark - Benchmarking Applications
-bin - Compiled Binaries of the most recent stable release
-interop - Experimental and not yet released interoperability library
-library - Source for the main dotNetRDF library
-linkedata - Experimental and not yet released linked data extensions library
-releases - Copies of the library source as of each stable release
-samples - Various demo applications
-sparqldemo - ASP.Net SPARQL demo application
-testsuite - Informal test suite
-unittest - Unit testing
-utilities - Various utilities that make up the dotNetRDF toolkit
+bin - Latest stable release binaries
 
-This top level folder contains all the assemblies which are referenced by the projects here, not all references are required for all projects.
+Branches - Branch development
 
-License
--------
+releases - Past Release Source Code
 
-dotNetRDF is licensed under the GNU GPL Version 3
+Trunk - Trunk development
 
-Alternatively you may use it under the GNU Lesser GPL Version 3 or under the MIT license
+ Trunk/Dependencies - All the libraries that various projects depend on
+ Trunk/Libraries - Library Development
+  Trunk/Libraries/core - dotNetRDF.dll source code
+  Trunk/Libraries/interop - dotNetRDF.Interop.dll source code
+  Trunk/Libraries/linkeddata - dotNetRDF.LinkedData.dll source code
+ Trunk/Samples - Sample applications
+  Trunk/Samples/sparqldemo - Sample SPARQL Demonstration application
+  Trunk/Samples/virtuoso - Sample Virtuoso application
+  Trunk/Samples/WebDemos - Sample web demos - live version at http://www.dotnetrdf.org/demos/
+ Trunk/Testing - Testing
+  Trunk/Testing/testsuite - Informal test suite
+  Trunk/Testing/unittest - Unit tests
+ Trunk/Utilities - Utility applications
+  Trunk/Utilities/AllegroGraphIndexer - AllegroGraph Utility
+  Trunk/Utilities/bsbm - Berlin SPARQL Benchmark application
+  Trunk/Utilities/parsergui - GUI for RDF Parsing
+  Trunk/Utilities/rdfConvert - Command line for RDF conversion
+  Trunk/Utilities/rdfQuery - Command line for RDF Querying
+  Trunk/Utilities/rdfWebDeploy - Command line for RDF and ASP.Net deployment
+  Trunk/Utilities/SparqlGUI - GUI for SPARQL
+  Trunk/Utilities/storemanager - GUI for Triple Stores
 
-If none of these licenses are suitable for your intended use please contact us to discuss
-alternative terms
 
-Security
---------
 
-This Project creates a Strong Name signed assembly.  The Key file for this requires a Password which is as follows:
-VDSOpenSource2008
 
-For security conscious deployment scenarios we suggest that you build the project from source and use your own key file
 
-Acknowledgements
-----------------
 
-Uses code (3rd Party Libraries) from the following sources
--MySQL Connector.Net from MySQL AB http://www.mysql.org
--JSON.Net from James Newton-King http://james.newtonking.com
--Virtuoso ADO.Net Provider from OpenLink Software http://www.openlinksw.com
--HtmlAgilityPack from Simon Mourier http://www.codeplex.com/htmlagilitypack
-
-Thanks to the following people who have helped in the development process or whose suggestions have led to 
-improvements in the code:
-- Eamon Nerbonne for the BlockingStreamReader fix (http://eamon.nerbonne.org/) which is much nicer than the
-  alternative of pre-caching in a MemoryStream
-- Hugh Williams and Jacqui Hand of OpenLink Software (http://www.openlinksw.com) for helping me resolve some
-  issues with their ADO.Net provider including promptly providing me with a fixed version once the issue
-  I'd identified had been traced to it's cause and extending my evaluation license so I could build the code
-- Toby Inkster (http://tobyinkster.co.uk/) for providing me with some TriX extensibility stylesheets that I 
-  could use to test my TriX parser
-- Marek Safar from the Mono project for fixing the bug in gmcs I identified which meant I couldn't compile
-  a Mono build of dotNetRDF
-- Andy Seaborne for excellent answers to various SPARQL and ARQ function library related questions which
-  have contributed to the new Leviathan engine and the ARQ function library support
-- The SPARQL Working Group for useful feedback and responses to my comments
-- The following people who have contributed bug reports and patches on the mailing lists:
- - Tana Isaac
- - Koos Strydoom
- - Alexander Sidorov
- - Michael Friis
- - Bob DuCharme
- - Alexander Zapirov
- - Sergey Novikov
- - Jeen Broekstra
