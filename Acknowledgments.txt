@@ -52,3 +52,4 @@ improvements in the code:
  - Jim Rhyne
  - Guillherme Alcantra Dias
  - Csaba Gonczi
+ - Rahul Patil
