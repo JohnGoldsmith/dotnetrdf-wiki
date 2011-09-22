@@ -1,13 +1,28 @@
 Acknowledgements
-----------------
+================
+
+Dependencies
+------------
 
 Uses code (3rd Party Libraries) from the following sources:
--MySQL Connector.Net from MySQL AB http://www.mysql.org
--JSON.Net from James Newton-King http://james.newtonking.com
--HtmlAgilityPack from Simon Mourier http://www.codeplex.com/htmlagilitypack
+- MySQL Connector.Net -> http://www.mysql.org
+- JSON.Net by James Newton-King -> http://json.codeplex.com
+- HtmlAgilityPack by Simon Mourier -> http://htmlagilitypack.codeplex.com
+- OpenLink.Data.Virtuoso -> http://virtuoso.openlinksw.com/dataspace/dav/wiki/Main/VirtAdoNet35Provider
+- Lucene.Net -> http://incubator.apache.org/lucene.net/
+- FileAssociation by Brendan Grant -> http://www.codeproject.com/KB/dotnet/System_File_Association.aspx
+- ICSharpCode.AvalonEdit by Daniel Grunwald -> http://wiki.sharpdevelop.net/AvalonEdit.ashx
 
 Uses code (embedded in the library) from the following sources:
--HashLib http://hashlib.codeplex.com/
+-HashLib http://hashlib.codeplex.com
+
+Not all products require all dependencies (obviously!) so your download may only include some of these.
+
+Contributors
+------------
+
+dotNetRDF is developed by the following people:
+- Rob Vesse
 
 Thanks to the following people who have helped in the development process or whose suggestions have led to 
 improvements in the code:
