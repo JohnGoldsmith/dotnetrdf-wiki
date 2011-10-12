@@ -46,9 +46,9 @@ improvements in the code:
 - Kendall Clark and Mike Grove for giving me early access to Stardog
 - Ben Lavender for help getting Dydra support up and running
 - Sid John and Steve S for help with debugging and testing Windows Phone 7/Silverlight related issues
+- Koos Strydoom for extensive contributions around the SQL based stores and ASP.Net integration
 - The following people who have contributed bug reports, patches, ideas etc on the mailing lists:
  - Tana Isaac
- - Koos Strydoom
  - Alexander Sidorov
  - Michael Friis
  - Bob DuCharme
@@ -68,3 +68,4 @@ improvements in the code:
  - Guillherme Alcantra Dias
  - Csaba Gonczi
  - Rahul Patil
+ - Dan Smith
