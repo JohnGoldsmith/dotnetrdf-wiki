@@ -70,3 +70,4 @@ improvements in the code:
  - Csaba Gonczi
  - Rahul Patil
  - Dan Smith
+ - Nigel Jefferson
