@@ -71,3 +71,4 @@ improvements in the code:
  - Rahul Patil
  - Dan Smith
  - Nigel Jefferson
+ - Volker Helms
