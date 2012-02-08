@@ -72,3 +72,4 @@ improvements in the code:
  - Dan Smith
  - Nigel Jefferson
  - Volker Helms
+ - Francis Wolfe
