@@ -5,7 +5,6 @@ Dependencies
 ------------
 
 Uses code (3rd Party Libraries) from the following sources:
-- MySQL Connector.Net -> http://www.mysql.org
 - JSON.Net by James Newton-King -> http://json.codeplex.com
 - HtmlAgilityPack by Simon Mourier -> http://htmlagilitypack.codeplex.com
 - OpenLink.Data.Virtuoso -> http://virtuoso.openlinksw.com/dataspace/dav/wiki/Main/VirtAdoNet35Provider
