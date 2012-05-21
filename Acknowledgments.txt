@@ -72,3 +72,4 @@ improvements in the code:
  - Nigel Jefferson
  - Volker Helms
  - Francis Wolfe
+ - Antonio Nunziante
