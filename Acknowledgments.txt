@@ -73,4 +73,5 @@ improvements in the code:
  - Volker Helms
  - Francis Wolfe
  - Antonio Nunziante
- - Rahul Patil
+ - Rahul Sharma
+ - Anthony Piretti
