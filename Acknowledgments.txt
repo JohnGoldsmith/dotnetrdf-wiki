@@ -75,3 +75,4 @@ improvements in the code:
  - Antonio Nunziante
  - Rahul Sharma
  - Anthony Piretti
+ - Tomasz Pluskiewicz
