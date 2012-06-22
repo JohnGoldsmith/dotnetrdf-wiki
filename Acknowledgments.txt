@@ -17,14 +17,23 @@ Uses code (embedded in the library) from the following sources:
 
 Not all products require all dependencies (obviously!) so your download may only include some of these.
 
+Developers
+----------
+
+dotNetRDF is developed by the following people:
+
+- Rob Vesse
+- Ron Michael Zettlemoyer
+
+Like any open source project dotNetRDF runs as a meritocracy, those who contribute over time will be 
+invited to join the project as developers
+
 Contributors
 ------------
 
-dotNetRDF is developed by the following people:
-- Rob Vesse
-
 Thanks to the following people who have helped in the development process or whose suggestions have led to 
 improvements in the code:
+
 - Eamon Nerbonne for the BlockingStreamReader fix (http://eamon.nerbonne.org/) which is much nicer than the
   alternative of pre-caching in a MemoryStream
 - Hugh Williams and Jacqui Hand of OpenLink Software (http://www.openlinksw.com) for helping me resolve some
