@@ -85,3 +85,4 @@ improvements in the code:
  - Rahul Sharma
  - Anthony Piretti
  - Tomasz Pluskiewicz
+ - Rob Styles
