@@ -12,9 +12,6 @@ Uses code (3rd Party Libraries) from the following sources:
 - FileAssociation by Brendan Grant -> http://www.codeproject.com/KB/dotnet/System_File_Association.aspx
 - ICSharpCode.AvalonEdit by Daniel Grunwald -> http://wiki.sharpdevelop.net/AvalonEdit.ashx
 
-Uses code (embedded in the library) from the following sources:
--HashLib http://hashlib.codeplex.com
-
 Not all products require all dependencies (obviously!) so your download may only include some of these.
 
 Developers
