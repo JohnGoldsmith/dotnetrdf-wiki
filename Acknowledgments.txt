@@ -31,11 +31,9 @@ Contributors
 Thanks to the following people who have helped in the development process or whose suggestions have led to 
 improvements in the code:
 
-- Eamon Nerbonne for the BlockingStreamReader fix (http://eamon.nerbonne.org/) which is much nicer than the
-  alternative of pre-caching in a MemoryStream
-- Hugh Williams and Jacqui Hand of OpenLink Software (http://www.openlinksw.com) for helping me resolve some
-  issues with their ADO.Net provider including promptly providing me with a fixed version once the issue
-  I'd identified had been traced to it's cause and extending my evaluation license so I could build the code
+- Eamon Nerbonne for the BlockingStreamReader fix (http://eamon.nerbonne.org/) 
+- Hugh Williams and Jacqui Hand of OpenLink Software (http://www.openlinksw.com) for help with their ADO.Net
+  provider
 - Toby Inkster (http://tobyinkster.co.uk/) for providing me with some TriX extensibility stylesheets that I 
   could use to test my TriX parser
 - Marek Safar from the Mono project for fixing the bug in gmcs I identified which meant I couldn't compile
@@ -48,7 +46,9 @@ improvements in the code:
 - Graham Moore and Khalil Ahmed of NetworkedPlanet for excellent input on needed changes in the API to better support 3rd 
   party developers plugging their stuff into the API
 - Laurent Lefort for feedback and suggestions regarding rdfEditor
-- Kendall Clark and Mike Grove for giving me early access to Stardog
+- Kendall Clark, Mike Grove and the entire Stardog team for giving me early access to Stardog and continuining to
+  provide top notch support and complimentary developer licenses to allow us to ensure our Stardog support remains
+  up to date
 - Ben Lavender for help getting Dydra support up and running
 - Sid John and Steve S for help with debugging and testing Windows Phone 7/Silverlight related issues
 - Koos Strydoom for extensive contributions around the SQL based stores and ASP.Net integration
