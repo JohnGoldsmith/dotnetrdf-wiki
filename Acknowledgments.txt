@@ -83,3 +83,4 @@ improvements in the code:
  - Anthony Piretti
  - Tomasz Pluskiewicz
  - Rob Styles
+ - Alexandre Bouffard
