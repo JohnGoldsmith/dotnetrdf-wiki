@@ -21,6 +21,7 @@ dotNetRDF is developed by the following people:
 
 - Rob Vesse
 - Ron Michael Zettlemoyer
+- Kal Ahmed
 
 Like any open source project dotNetRDF runs as a meritocracy, those who contribute over time will be 
 invited to join the project as developers
