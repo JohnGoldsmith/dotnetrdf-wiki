@@ -62,9 +62,11 @@ In light of the Nodes refactor we will make some similar changes to the Triple A
  - Remove reference to the Graph on a Triple
  - Remove the rarely used Context parameter on a Triple
 
-This is intended to simplify the Triple class, reduce it's memory footprint and get to a data model where it purely represents a Triple.
+This is intended to simplify the Triple class, reduce it's memory footprint and get to a data model where it purely represents a Triple.  It also simplifies the constructor for Triple since we no longer need to validate that the Nodes originate from the same Graph.  Removing the Context parameter only really affects the rarely used N3 function contexts which is a feature we don't truly support anyway and so I would prefer to remove support for.
 
 With the removal of the Graph property we need to introduce a properly Quad class to represent Quads, the Quad class will have essentially the same API as a Triple but with the addition of a Graph property which will return a Uri *not* a IGraph.
+
+Implementation wise I intend to make Quad a standalone class not an extension because we don't want to allow implicit casting of Quad to Triple. Users should always be aware that this is a lossy operation, an AsTriple() method will be provided to do this explicitly.  Conversely Triple will likely provide an AsQuad(Uri graphUri) method.  This decision also means we can implement Quad as a decorator over a Triple allowing us to reduce memory footprint.
 
 ### IGraph Refactor
 
@@ -75,8 +77,42 @@ The Nodes refactor will result in a couple of minor changes to the IGraph API as
 
 As a result of this and the Nodes refactor there will be some implementation benefits for IGraph.  For example Merge() becomes super simple, just Assert() the triples from one graph into the other since there is no need to worry about mapping Blank Node IDs.
 
-The only real change we propose for the IGraph API is to rename the BaseUri property as the Name property since this more accurately describes it's purpose.  BaseUri would remain as an obsoleted synonym property in initial releases.
+The actual change we propose for the IGraph API are as follows:
+
+ 1. Rename the BaseUri property as the Name property since this more accurately describes it's purpose.  BaseUri would remain as an obsoleted synonym property in initial 
+releases.
+ 1. Add a Quads property to retrieve the Triple's in Quad form
 
 ### ITripleStore/ISparqlDataset Refactor
 
-The ITripleStore interface is both poorly named and a messy API, it also overlaps heavily with the ISparqlDataset API.  I suggest consolidating the functionality of the two APIs (while removing irrelevant functionality) into a single IGraphStore API.  The new name more accurately reflects the purpose and would have a cleaner API
+The ITripleStore interface is both poorly named and a messy API, it also overlaps heavily with the ISparqlDataset API.  I suggest consolidating the functionality of the two APIs (while removing irrelevant functionality) into a single IGraphStore API.  The new name more accurately reflects the purpose and would have a cleaner API, excerpts of the proposed API are given below:
+
+    IGraphStore
+    {
+      IEnumerable<Uri> GraphUris { get; }
+
+      IEnumerable<IGraph> Graphs { get; }
+
+      IGraph this[Uri u] { get; }
+
+      bool Add(IGraph g);
+
+      bool Add(IGraph g, Uri graphUri); //Add under the given named graph
+
+      bool Copy(Uri srcUri, Uri destUri);
+
+      bool Move(Uri srcUri, Uri destUri);
+
+      bool Remove(Uri u);
+
+      //Get all Triples with given Subject in given Graph(s), must eliminate duplicates if multiple graphs are specified
+      IEnumerable<Triple> GetTriplesWithSubject(IEnumerable<Uri> graphUris, INode subj);
+
+      //Get all Quads in the store
+      IEnumerable<Quad> Quads { get; } 
+  
+      //Get all quads that match the given subject
+      IEnumerable<Quad> GetQuadsWithSubject(INode subj)
+    }
+
+Note that while this interface outline is by no means complete it does not include the active and default graph management portions of the ISparqlDataset API.  It is proposed that the burden of tracking what constitutes those graphs is the job of the query engine.
