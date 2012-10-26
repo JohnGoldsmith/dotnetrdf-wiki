@@ -164,6 +164,7 @@ As a result of other refactors there will be some changes required in the Query 
 
 Currently methods that can take any type of query return an Object and the user must cast to an appropriate IGraph or SparqlResultSet, this has proved to be a less than ideal decision and so I would like to introduce a general QueryResult class like so:
 
+
     class QueryResult
     {
       bool IsResultSet { get; }
@@ -192,6 +193,10 @@ Right now to evaluate an expression you need to pass in the entire query context
  - Aggregates need to be pre-calculated and their values present in the Sets representing each group
  - We should implement IEquatable<ISparqlExpression> so that we can do the above and other expression manipulations
 
-In the spirit of the Query Processor Refactor we should also consider refactoring IExpressionTransformer into a visitor interface as part of these changes.
+With equality in place it then becomes relatively easy to scan the expression tree to find aggregates and replace them with temporary variables (or their assigned variables) in the same way that ARQ does.  In the spirit of the Query Processor Refactor and to make this easier we should also consider refactoring IExpressionTransformer into a visitor interface as part of these changes.
 
 If we make this refactor it also paves the way for writing a true streaming engine that does not to process the query in blocks like Leviathan does but rather operates more in the manner of ARQ.
+
+### Optimizer Refactor
+
+As with other proposed refactors changing IAlgebraOptimiser to be a visitor would make it easier to use and extend going forward.
