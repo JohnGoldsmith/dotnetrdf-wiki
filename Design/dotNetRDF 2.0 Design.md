@@ -21,7 +21,6 @@ There are more radical refactors we could consider like splitting SPARQL off int
 
 There are a number of API refactors we wish to make as part of a 2.0 release and these are detailed here, they range from minor clean up to fairly significant refactors.
 
-
 ## Data Model Refactor
 
 The core data model has become somewhat large and in places overly complex with multiple ways of achieving the same thing, not to mention confusing and misleading interface names in many places.  There are a variety of refactors we are proposing all of which aim to simplify the API and in some cases reduce the memory footprint and complexity of their usage.
@@ -82,12 +81,16 @@ The actual change we propose for the IGraph API are as follows:
  1. Rename the BaseUri property as the Name property since this more accurately describes it's purpose.  BaseUri would remain as an obsoleted synonym property in initial 
 releases.
  1. Add a Quads property to retrieve the Triple's in Quad form
+ 1. Make Triples property return a IEnumerable<Triple> instead of BaseTripleCollection
+
+The 3rd change is the most significant but also the most important, it hides internal implementation details of how triples (more than it is already) are stored and makes it much easier to implement Graphs that don't have any direct in-memory storage if desired.
 
 ### ITripleStore/ISparqlDataset Refactor
 
 The ITripleStore interface is both poorly named and a messy API, it also overlaps heavily with the ISparqlDataset API.  I suggest consolidating the functionality of the two APIs (while removing irrelevant functionality) into a single IGraphStore API.  The new name more accurately reflects the purpose and would have a cleaner API, excerpts of the proposed API are given below:
 
-    IGraphStore
+
+    interface IGraphStore
     {
       IEnumerable<Uri> GraphUris { get; }
 
@@ -95,9 +98,15 @@ The ITripleStore interface is both poorly named and a messy API, it also overlap
 
       IGraph this[Uri u] { get; }
 
+      bool HasGraph(Uri u);
+
       bool Add(IGraph g);
 
-      bool Add(IGraph g, Uri graphUri); //Add under the given named graph
+      bool Add(IGraph g, Uri graphUri);
+
+      bool AddTriple(Uri graphUri, Triple t);
+
+      bool AddQuad(Quad q);
 
       bool Copy(Uri srcUri, Uri destUri);
 
@@ -105,14 +114,84 @@ The ITripleStore interface is both poorly named and a messy API, it also overlap
 
       bool Remove(Uri u);
 
-      //Get all Triples with given Subject in given Graph(s), must eliminate duplicates if multiple graphs are specified
+      //Get all Triples in the Store
+      IEnumerable<Triple> Triples { get; }
+
+      //Get all Triples with given Subject in given Graph(s)
       IEnumerable<Triple> GetTriplesWithSubject(IEnumerable<Uri> graphUris, INode subj);
 
       //Get all Quads in the store
       IEnumerable<Quad> Quads { get; } 
   
-      //Get all quads that match the given subject
+      //Get all quads that match the given subject across all graphs
       IEnumerable<Quad> GetQuadsWithSubject(INode subj)
+
+      //Get all quads that match the given subject in the given graphs
+      IEnumerable<Quad> GetQuadsWithSubject(IEnumerable<Uri> graphUris, INode subj);
+
+      //Is a Triple found anywhere in the store
+      bool ContainsTriple(Triple t);
+
+      //Is the Triple contained in the given Graphs
+      bool ContainsTriple(IEnumerable<Uri> graphUris, Triple t);
+
+      //Does a Quad exist in the store
+      bool ContainsQuad(Quad q);
     }
 
 Note that while this interface outline is by no means complete it does not include the active and default graph management portions of the ISparqlDataset API.  It is proposed that the burden of tracking what constitutes those graphs is the job of the query engine.
+
+There will also be no Graphs property exposing a BaseGraphCollection, that will instead become purely the standard backing implementation for base implementations of this interface.
+
+With this interface in place we will need to introduce new implementations of this which cover our existing key implementations:
+
+ - An in-memory implementation
+ - A storage backed implementation
+
+## IO APIs Refactor
+
+The Data Model refactors outlined above will facilitate some refactoring and streamlining of the existing IO APIs particularly in the Parsing namespace.  I propose to remove the IStoreReader interface and generalize the IRdfReader interface so we a RDF parser can pass into a IGraph/IGraphStore.  This will mean adding overloads of the Load() method which take a IGraphStore instead
+
+As a side effect of the above the IRdfHandler interface will need to be expanded to add a HandleQuad() method, parsers will call either HandleTriple()/HandleQuad() depending on the data they produce.
+
+On the writing side we will introduce a IQuadFormatter which provides a Format(Quad q) method in a similar way to the existing ITripleFormatter method.  Similar to the changes on the parsing side we will replace the IStoreWriter interface with an expanded IRdfWriter interface.
+
+## Query APIs Refactor
+
+As a result of other refactors there will be some changes required in the Query API, most notably that it needs to reflect the fact that queries will now operate over a IGraphStore instance and must track the default/active graphs themselves.  For convenience I may end up using a simplified version of ISparqlDataset to do this, I will leave that decision until I actually make the refactor since my other proposals may impact on it.
+
+### Query Results
+
+Currently methods that can take any type of query return an Object and the user must cast to an appropriate IGraph or SparqlResultSet, this has proved to be a less than ideal decision and so I would like to introduce a general QueryResult class like so:
+
+    class QueryResult
+    {
+      bool IsResultSet { get; }
+ 
+      bool IsGraph { get; }
+
+      bool IsBoolean { get; }
+
+      SparqlResultSet Results { get; }
+
+      IGraph Graph { get; }
+
+      bool BooleanResult { get; }
+    }
+
+Doing this makes peoples code simpler since they don't need to cast and it also allows us to expand result returns in the future to include additional information e.g. execution time.
+
+### Query Processor Refactor
+
+Currently LeviathanQueryProcessor is visitor like in it's implementation but most of the real implementation is hidden inside the algebra classes.  I would like to move all implementation into the query processor itself.  This makes the code easier to maintain since it's all in one place and much easier for people to override specific parts of the implementation.
+
+### ISparqlExpression Refactor
+
+Right now to evaluate an expression you need to pass in the entire query context, realistically all you actually need is the Set you are applying the expression on.  Making this refactor has a couple of blockers right now:
+
+ - Aggregates need to be pre-calculated and their values present in the Sets representing each group
+ - We should implement IEquatable<ISparqlExpression> so that we can do the above and other expression manipulations
+
+In the spirit of the Query Processor Refactor we should also consider refactoring IExpressionTransformer into a visitor interface as part of these changes.
+
+If we make this refactor it also paves the way for writing a true streaming engine that does not to process the query in blocks like Leviathan does but rather operates more in the manner of ARQ.
