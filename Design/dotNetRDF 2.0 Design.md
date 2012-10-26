@@ -33,4 +33,50 @@ I propose that we refactor the Nodes API as follows:
  1. Remove the tight coupling between a Node and the Graph it originated from
  1. Allow for free moving of Nodes between different Graphs
  1. Identify Blank Nodes in a way that allows the above
+ 1. Don't require any work to create Node values to be done in Nodes
+ 1. Move all Node classes to the Nodes namespace
 
+The first point means removing the Graph and GraphUri properties from the INode interface, doing so removes the coupling between a Node and its originating Graph.  This has particular benefits for things like creating wrappers around factories and graphs since it will eliminate some of the current issues we can encounter involving Graph reference mismatches.
+
+Once this is done point 2 becomes easy because we can now freely copy Nodes around because they just represent node values provided we fix point 3.  As a result the existing CopyNode() methods can all be deprecated and ultimately removed.
+
+Point 5 is primarily just a clean up activity to better organize the code going forward.
+
+#### Blank Node Identification
+
+Point 3 is somewhat trickier, currently we use user defined/auto-assigned string labels to identify blank nodes.  This has proved to be a poor implementation decision requiring tons of hacks and workarounds to have blank nodes be properly scoped and avoid collisions.  My initial though was to identify blank nodes by a combination of two Guids, one is the Node ID identifier and one the Factory identifier.  This means that Blank Nodes don't strictly meet point 1 because this means it is tied to the factory, in practice this is likely not be necessary.
+
+Thus it will depend on whether we allow users to create Blank Nodes using an explicit Guid, if we do then we need the Factory ID to ensure correct scoping.  If we don't allow this we can likely get away with a single Guid since it is for all intents and purposes a unique identifier so will also provide inherent scoping.
+
+One thing we will have to do in making this change is still allow users to create blank nodes by human readable label and simply map these consistently to Guids internally (within the scope of a factory).  This is required to keep parsers playing nice and likely makes minimal difference to memory footprint as we already keep a similar map to avoid collisions between user and auto-assigned identifiers.  Moving to Guids simply replaces that map with an alternative map.
+
+#### Node Creation
+
+Point 4 refers to the fact that internally some nodes are creating by passing a Graph reference and having them call back to the graph to get data such as new Blank Node ID or resolving the QName.  This again was a poor design decision and so we will remove the relevant constructors and instead require the Node Factory creating the Node to provide us with the Blank Node ID or resolved URI.
+
+
+### Triple refactor
+
+In light of the Nodes refactor we will make some similar changes to the Triple API:
+
+ - Remove reference to the Graph on a Triple
+ - Remove the rarely used Context parameter on a Triple
+
+This is intended to simplify the Triple class, reduce it's memory footprint and get to a data model where it purely represents a Triple.
+
+With the removal of the Graph property we need to introduce a properly Quad class to represent Quads, the Quad class will have essentially the same API as a Triple but with the addition of a Graph property which will return a Uri *not* a IGraph.
+
+### IGraph Refactor
+
+The Nodes refactor will result in a couple of minor changes to the IGraph API as it currently stands:
+
+ - There will no longer need to be a two argument form of Merge() since Nodes don't have a reference to their Graph URI to be preserve
+ - GetNextBlankNodeID() becomes obsolete and eventually removed
+
+As a result of this and the Nodes refactor there will be some implementation benefits for IGraph.  For example Merge() becomes super simple, just Assert() the triples from one graph into the other since there is no need to worry about mapping Blank Node IDs.
+
+The only real change we propose for the IGraph API is to rename the BaseUri property as the Name property since this more accurately describes it's purpose.  BaseUri would remain as an obsoleted synonym property in initial releases.
+
+### ITripleStore/ISparqlDataset Refactor
+
+The ITripleStore interface is both poorly named and a messy API, it also overlaps heavily with the ISparqlDataset API.  I suggest consolidating the functionality of the two APIs (while removing irrelevant functionality) into a single IGraphStore API.  The new name more accurately reflects the purpose and would have a cleaner API
