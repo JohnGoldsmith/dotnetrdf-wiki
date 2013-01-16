@@ -1,35 +1,39 @@
-= Welcome =
+= Warning - Incomplete = 
 
-Welcome to your wiki! This is the default page we've installed for your convenience. Go ahead and edit it.
+We are currently experimenting with porting some of our documentation to our BitBucket wiki in order to make it easier to maintain.  Please see the [[http://www.dotnetrdf.org?content.asp?pageID=dotNetRDF%20API|main documentation]] for the time being.
 
-== Wiki features ==
+= Introduction =
 
-This wiki uses the [[http://www.wikicreole.org/|Creole]] syntax, and is fully compatible with the 1.0 specification.
+To get started with using dotNetRDF check out the [[User Guide]] which contains a series of step by step articles explaining how to use the Library.  If you are an advanced user who wants to leverage one of the extension points in our API please see the [[Developer Guide]]
 
-The wiki itself is actually a mercurial repository, which means you can clone it, edit it locally/offline, add images or any other file type, and push it back to us. It will be live immediately.
+== Important Links ==
 
-Go ahead and try:
+* [[FAQs]] - Questions we get asked frequently about the library
+* [[User Guide]] - Step by step articles on performing common tasks with dotNetRDF
+* [[Developer Guide]] - Advanced topics for advanced users and extension developers
 
-{{{
-$ hg clone https://bitbucket.org/dotnetrdf/dotnetrdf/wiki
-}}}
+=== Note ===
 
-Wiki pages are normal files, with the .wiki extension. You can edit them locally, as well as creating new ones.
+Unless otherwise stated the documentation in the [[User Guide]] and [[Developer Guide]] refers to the latest version of the library.  Documentation for older versions can be accessed below:
 
-== Syntax highlighting ==
+* No previous versions currently available
 
-You can also highlight snippets of text, we use the excellent [[http://www.pygments.org/|Pygments]] library.
+Please note there may be a small window after a new release while we update our documentation when some pages may be inaccurate, if you find any inaccuracies please [[Contact Us]] so we can resolve them ASAP.
 
-Here's an example of some Python code:
+== Formal Documentation ==
 
-{{{
-#!python
+We also provide MSDN style documentation generated from the XML comments in the code (which means our code has full Intellisense support) by going to the [[http://www.dotnetrdf.org/api/|Intellisense API]] page.
 
-def wiki_rocks(text):
-    formatter = lambda t: "funky"+t
-    return formatter(text)
-}}}
+== Namespaces ==
 
-You can check out the source of this page to see how that's done, and make sure to bookmark [[http://pygments.org/docs/lexers/|the vast library of Pygment lexers]], we accept the 'short name' or the 'mimetype' of anything in there.
+The following are the key namespaces within dotNetRDF:
 
-Have fun!
+* **VDS.RDF** provides Core Classes and Interfaces for RDF representation
+** **VDS.RDF.Configuration** provides Classes that form the [[User Guide/Configuration API|Configuration API]]
+** **VDS.RDF.Ontology** provides Classes for accessing Graphs in a more resource-centric manner
+** **VDS.RDF.Parsing** provides Classes for Parsing concrete RDF syntaxes
+** **VDS.RDF.Query** provides Classes for Querying RDF
+** **VDS.RDF.Storage** provides Classes for storing RDF in various Triple Stores
+** **VDS.RDF.Update** provides Classes for supporting SPARQL Update
+** **VDS.RDF.Web** provides Classes designed specifically for deploying RDF in ASP.Net applications
+** **VDS.RDF.Writing** provides Classes for serializing RDF in concrete syntaxes
