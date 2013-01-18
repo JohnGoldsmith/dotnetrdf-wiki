@@ -27,7 +27,9 @@ The proposed type signature is as follows:
     public class MedusaQueryProcessor
       : ISparqlQueryAlgebraProcessor<IEnumerable<ISet>, ISet>
 
-This states that Medusa produces enumerables of `ISet` as its results and takes an `ISet` as its context information.  The `ISet` passed as the context serves to constrain the return of evaluating different algebra operators.  Let us consider `Join` as an example, since joins are expensive we want to minimize the effort expended here.  We can do this if we feed the results of evaluating the LHS into the RHS so that for each result on the LHS we only consider results from the RHS that are likely to be compatible.  This may be easier to understand given sample code:
+This states that Medusa produces enumerables of `ISet` as its results and takes an `ISet` as its context information.  The `ISet` passed as the context serves to constrain the return of evaluating different algebra operators.
+
+Let us consider `Join` as an example, since joins are expensive we want to minimize the effort expended here.  We can do this if we feed the results of evaluating the LHS into the RHS so that for each result on the LHS we only consider results from the RHS that are likely to be compatible.  This may be easier to understand given sample code:
 
     IEnumerable<ISet> lhs = this.ProcessAlgebra(join.Lhs, context);
     
@@ -53,4 +55,31 @@ This states that Medusa produces enumerables of `ISet` as its results and takes 
 
 ## Implementation Barriers
 
-There are some barriers to implementing the proposal namely concerned with the fact that 
+There are some barriers to implementing the proposal namely concerned with the fact that a lot of the supporting APIs around SPARQL evaluation are somewhat closely tied to the Leviathan engine.
+
+### Expression Evaluation
+
+Chief of these is the `ISparqlExpression` interface, currently it's `Evaluation()` method signature looks like the following:
+
+    IValuedNode Evaluate(SparqlEvaluationContext context, int bindingID);
+
+We propose to change this to the following:
+
+    IValuedNode Evaluate(IExpressionEvaluationContext context, ISet s);
+
+Some form of context is still needed because some forms of expressions need to have state persisted through the life of the query (e.g. the `NOW()` function) but this can be a subset of the existing `SparqlEvaluationContext` functionality.  Likely requirements are a dictionary of strings to objects for holding arbitrary context information and a reference back to the query processor (needed for `EXISTS` and `NOT EXISTS`).  The existing `SparqlEvaluationContext` can likely be renamed as `LeviathanEvaluationContext` to indicate that it is scoped to the Leviathan engine and it will just implement the new `IExpressionEvaluationContext` interface.
+
+Making this change allows us to avoid some of the hacky create a `SparqlEvaluationContext`, populate it and pass it in behaviours that the existing POC does.  Expression evaluation is used all over the place and changing the API in this way would make implementing new query engines much easier in the future since most engines will likely utilize `ISet` as a basic representation of potential solution even if their context and other machinery is very different.
+
+### Centralized Evaluation Logic
+
+Another change we should make as we move towards supporting multiple query engines is centralizing query evaluation logic in query processors rather in the `ISparqlAlgebra` classes.  Currently `ISparqlAlgebra` defines an interface method with the following signature:
+
+    BaseMultiset Evaluate(SparqlEvaluationContext context);
+
+As a result of this most of the actual query evaluation logic lives in the algebra classes rather than in `LeviathanQueryProcessor`, if we are going to implement the Medusa engine and thus have another query processor where the evaluation logic lives in the actual query processor it makes sense to move the Leviathan logic into its query processor as well.  This then allows `ISparqlAlgebra` to serve purely as a structural representation of the query rather than as an evaluation implementation.
+
+In a similar vein the triple pattern evaluation logic also lives in the `ITriplePattern` implementations and again is closely tied to  the Leviathan engine.  Thus we propose to introduce a new interface `ISparqlQueryPatternProcessor<TResult, TContext>` which would be responsible for evaluating triple patterns.  With this in place the existing logic can be moved into `LeviathanQueryProcessor` and the new `MedusaQueryProcessor` can add its own logic in its own implementation.
+
+With these changes made the `Evaluate()` methods would be removed from both `ISparqlAlgebra` and `ITriplePattern`
+
