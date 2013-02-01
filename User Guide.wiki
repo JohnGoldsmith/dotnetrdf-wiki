@@ -40,30 +40,23 @@ Please see the following for documentation of ontology, inference and reasoning 
 * [[User Guide/Ontology API|Ontology API]]
 * [[User Guide/Inference and Reasoning|Inference and Reasoning]]
 
+== ASP.Net Integration ==
+
+Please see the [[User Guide/ASP.Net Integration|ASP.Net Integration]] page for an overview of how we integrate into ASP.Net applications, or you can jump to specific topics below:
+
+* [[User Guide/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
+* [[User Guide/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]]
+
 == Advanced APIs ==
 
 The following documentation covers what are considered advanced topics but which may still be of value to everyday users of dotNetRDF.
 
-Configuration API
-Handlers API
-Advanced SPARQL
-Full Text Querying with SPARQL
-Advanced SPARQL Operations
-3rd Party Triple Store Integration
-
-Triple Store Integration
-IO Managers
-Store Specific Documentation
-Using the Talis Platform
-Using Virtuoso Universal Server
-We support a variety of different 3rd party Triple Stores through our IStorageProvider interface (formally known as IGenericIOManager). Since in early releases we only supported Virtuoso and Talis only they have dedicated articles, in future these articles will likely simply redirect to the main article as there is very limited store specific functionality.
-
-As all connections implement the IStorageProvider interface most examples using Talis/Virtuoso are also applicable to other stores (except where they use the store specific classes like TalisGraph). You will also find examples throughout the user guide which use other stores.
-
-ASP.Net Integration
-
-Creating SPARQL Endpoints
-Deploying with rdfWebDeploy
+* [[User Guide/Configuration API|Configuration API]]
+* [[User Guide/Handlers API|Handlers API]]
+* [[User Guide/Advanced SPARQL|Advanced SPARQL]]
+** [[User Guide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
+** [[User Guide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
+* [[User Guide/Triple Store Integration|Triple Store Integration]]
 
 === Notes ===
 
