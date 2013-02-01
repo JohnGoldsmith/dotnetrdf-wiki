@@ -66,7 +66,7 @@ An ##INode## represents a node in a RDF graph, this is sometimes referred to as 
 
 As stated each RDF term can be treated as a node in a graph. As such all RDF terms are modelled as concrete implementations of the ##INode## interface and of a relevant sub-interface from the list above e.g. ##IUriNode##.
 
-Currently all nodes are scoped to a particular graph and so must be created through a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INodeFactory|INodeFactory], an ##IGraph## is by definition an ##INodeFactory##.
+Currently all nodes are scoped to a particular graph and so must be created through a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INodeFactory|INodeFactory]], an ##IGraph## is by definition an ##INodeFactory##.
 
 === URI Nodes ===
 
