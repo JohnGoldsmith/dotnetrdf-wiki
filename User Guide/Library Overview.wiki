@@ -175,7 +175,12 @@ bool equal = one1.Equals(one2);
 
 //Prints false since the string values are not equal
 Console.WriteLine(equal.ToString());
+}}}
+
 If you want to compare Literals based on typed Value rather than literal Value then you can change the above code as follows:
+
+{{{
+#!csharp
 
 //Use Loose Literal Equality Mode
 Options.LiteralEqualityMode = LiteralEqualityMode.Loose;
