@@ -1,6 +1,8 @@
 = Warning - Incomplete = 
 
-We are currently experimenting with porting some of our documentation to our BitBucket wiki in order to make it easier to maintain.  Please see the [[http://www.dotnetrdf.org?content.asp?pageID=dotNetRDF%20API|main documentation]] for the time being.
+We are currently porting our documentation to our BitBucket wiki to make it easier to maintain, many links here are currently broken.
+
+Please see the [[http://www.dotnetrdf.org?content.asp?pageID=dotNetRDF%20API|main documentation]] for the time being.
 
 = dotNetRDF Documentation =
 
