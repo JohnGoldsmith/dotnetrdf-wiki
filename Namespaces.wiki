@@ -1,0 +1,16 @@
+[[Home]] > [[Developer Guide]] > [[Architecture]] > [[Namespaces]]
+
+= Namespaces =
+
+This page serves as a quick reference to our main namespaces, there are many more child namespaces not detailed here.  Please see the [[http://www.dotnetrdf.org/api/|Intellisense API]] to browse the full API.
+
+|=Namespaces|=Purpose|
+| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF|VDS.RDF]] | Core Classes and Interfaces for RDF representation and access |
+| **VDS.RDF.Configuration** | Classes that form the [[User Guide/Configuration API|Configuration API]] |
+| **VDS.RDF.Ontology** | Classes for accessing Graphs in a more resource-centric manner |
+| **VDS.RDF.Parsing** | Classes for Parsing concrete RDF syntaxes |
+| **VDS.RDF.Query** | Classes for Querying RDF |
+| **VDS.RDF.Storage** | Classes for storing RDF in various Triple Stores |
+| **VDS.RDF.Update** | Classes for supporting SPARQL Update |
+| **VDS.RDF.Web** | Classes designed specifically for deploying RDF in ASP.Net applications |
+| **VDS.RDF.Writing** | Classes for serializing RDF in concrete syntaxes |
