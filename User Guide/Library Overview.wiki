@@ -222,21 +222,19 @@ g.Assert(t);
 
 If you wish to remove a Triple from a Graph you create it in the same manner shown above and call the //Retract(...)// method which like the //Assert(...)// method takes a single Triple or an enumerable of Triples.
 
-Triple equality is based on the Hash Codes of the Triples for two reasons:
+Triple equality is defined as the triples having equal subjects, predicates and objects.  Note that while normally a blank node is only considered equal if its ID and source graph are equal for the purposes of triple equality triples blank nodes need only have equal identifiers.
 
-This provides better speed of equality checking and is particularly useful when a method like Contains is used on a collection of Triples which relies upon the implementation of the classes Equals method
-It allows for Triples containing Blank Nodes to be considered equal even if those Triples come from different Graphs. Normally Blank Nodes from different Graphs are never equal but given a single Triple in isolation where all the non-Blank Node components are equal it is possible to safely assume equality (though not to actually determine it)
-Triples contain a reference to the Graph that they were created for (though not necessarily the Graph they are asserted in) - this reference is retrieved from the Nodes that the Triple is instantiated with. Triples also have a property named Context which can be used to store arbitrary application specific data in a class which implements the ITripleContext interface.
+Triples contain a reference to the Graph that they were created for (though not necessarily the Graph they are asserted in) - this reference is retrieved from the Nodes that the Triple is instantiated with. Triples also have a property named Context which can be used to store arbitrary application specific data in a class which implements the ##ITripleContext## interface.
 
-
-Triple Store
+== Triple Store ==
 
 A Triple Store represents a collection of Graphs and is used to work with larger quantities of RDF. Triple Stores are designed to be less tangible than Graphs in terms of their interface and implementations. While a specific implementation may represent some Triple Store it does not necessarily provide direct access to all the data in that Store i.e. a Triple Store is not necessarily in-memory.
-Triple Stores are actually based on several interfaces, the base interface for them is ITripleStore. This interface defines properties and methods relating to adding & removing Graphs and the retrieval or Graphs and Triples contained in the Store.
 
-If you have a Store that is partially/fully in-memory then it will implement the IInMemoryQueryableStore interface which is an extension of ITripleStore. The IInMemoryQueryableStore interface defines a swathe of additional methods which provide for various forms of selection of Triples from the Store, it also provides two query methods which allow for executing SPARQL queries on the Triple Store using the libraries in-memory SPARQL implementation. The library contains a class called TripleStore which is the basic implementation of this interface.
+Triple Stores are actually based on several interfaces, the base interface for them is ##ITripleStore##. This interface defines properties and methods relating to adding & removing Graphs and the retrieval or Graphs and Triples contained in the Store.
 
-If you have a Store which is a representation of some backing Store which provides its own SPARQL implementation and where the data will not be loaded in-memory (by dotNetRDF at least) then it will implement the INativelyQueryableStore interface. This interface also extends ITripleStore but it only provides a single query method for executing SPARQL queries on the Store.
+If you have a Store that is partially/fully in-memory then it will implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface which is an extension of ##ITripleStore##. The ##IInMemoryQueryableStore## interface defines a swathe of additional methods which provide for various forms of selection of Triples from the Store, it also provides two query methods which allow for executing SPARQL queries on the Triple Store using the libraries in-memory SPARQL implementation. The library contains a class called [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.TripleStore|TripleStore]] which is the basic implementation of this interface.
+
+If you have a Store which is a representation of some backing Store which provides its own SPARQL implementation and where the data will not be loaded in-memory (by dotNetRDF at least) then it will implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore|INativelyQueryableStore]] interface. This interface also extends ##ITripleStore## but it only provides a single query method for executing SPARQL queries on the Store.
 
 ----
 
