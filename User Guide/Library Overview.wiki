@@ -2,48 +2,73 @@
 
 = dotNetRDF Library Overview =
 
-dotNetRDF is a .Net library written in C# designed to provide a simple but powerful API for working with RDF (Resource Description Framework) data. It provides a large variety of classes for performing all the common tasks from reading & writing RDF data to querying over it. The Library is designed to be highly extensible and allow for users to add in support for additional features (e.g. custom RDF Triple Stores) as required.
-The Library operates primarily at the level of Triples, Graphs and Triple Stores and provides very limited support for Inference and no support for OWL.
+dotNetRDF is a .Net library written in C# designed to provide a simple but powerful API for working with Resource Description Framework (RDF) data.  As such it provides a large variety of classes for performing all the common tasks from reading & writing RDF data to querying over it.
 
-The core classes of the Library can be found in the VDS.RDF namespace. All of the core classes are based either on interfaces or abstract classes to make the library as extensible as possible. These key interfaces and classes are as follows:
+The Library is designed to be highly extensible and allow for users to add in support for additional features (e.g. custom RDF Triple Stores) as required.
 
-INode - Each RDF Term is a Node in a Graph and so we represents RDF Terms as INode objects
-IBlankNode - Represents a Blank Node
-ILiteralNode - Represents a Literal Node
-IUriNode - Represents a URI Node
-IGraph - Interface for Graphs, an RDF document forms a Graph in the mathematical sense - see RDF Concepts and Abstract Syntax (W3C Specification) - so we represents sets of Triples as Graphs
-Graph - Basic representation of a Graph
-ITripleStore - A Triple Store is a collection of one/more Graphs
-TripleStore - Basic representation of a Triple Store
-All code examples presented in this section require you to add the using VDS.RDF; statement to your code file.
+The Library operates primarily at the level of Triples, Graphs and Triple Stores and provides very limited support for Inference and no direct support for OWL (see [[How To/Load OWL|How To: Load OWL]]).
 
+= Core Concepts =
 
-Graphs
+The core classes of the Library can be found in the [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF|VDS.RDF]] namespace. All of the core classes are based either on interfaces or abstract classes to make the library as extensible as possible. These key interfaces are as follows:
 
-An RDF Document can be considered to form a Graph and so we represent sets of Triples as Graphs. All Graphs in the library are implementations of the IGraph class and generally derive from the abstract BaseGraph class which implements some of the core methods of the interface allowing specific implementations to concentrate on specifics such as persistence to storage/thread safety.
+|= Interface |= Purpose |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode|INode]] | Represents a node in a RDF Graph, represents the value of a RDF term |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph|IGraph]] | Interface for Graphs, an RDF document forms a Graph in the mathematical sense - see [[http://www.w3.org/TR/rdf-concepts/|RDF Concepts and Abstract Syntax (W3C Specification)]] - so we represents sets of Triples as Graphs |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ITripleStore|ITripleStore]] | A Triple Store is a collection of one/more Graphs |
+
+**NB** All code examples presented in this section require you to add the ##using VDS.RDF;## statement to the start of your code file.
+
+== Graphs ==
+
+An RDF Document can be considered to form a mathematical graph and so we represent sets of RDF triples as graphs. All graphs in the library are implementations of the ##IGraph## class and generally derive from the abstract BaseGraph class which implements some of the core methods of the interface allowing specific implementations to concentrate on specifics such as persistence to storage/thread safety.
 An IGraph implementation is an in-memory representation of an RDF document.
 
 The most commonly used IGraph implementation is the Graph class. It can be used as follows:
 
+{{{
+#!csharp
+
 //Get a new Graph and set it's Base URI
 Graph g = new Graph();
 g.BaseUri = new Uri("http://example.org/");
-Triples can be added to a Graph using the Assert(...) method, the method takes a single Triple or an array/list/enumerable of Triples. Examples of using this method are given in the section of this page on Triples.
+}}}
+
+Triples can be added to a Graph using the //Assert(...)// method, the method takes a single Triple or an array/list/enumerable of Triples. Examples of using this method are given in the section of this page on Triples.
 
 Once your Graph contains some data you can enumerate through it using a foreach loop:
+
+{{{
+#!csharp
 
 //Loop through Triples
 foreach (Triple t in g.Triples)
 {
     Console.WriteLine(t.ToString());
 }
+}}}
+
 Any IGraph implements IEnumerable<Triple> and so can be used with all the LINQ extension methods for IEnumerable.
 
 
-Nodes
+== Nodes ==
 
-As stated each RDF Term can be treated as a Node in a Graph. As such all RDF Terms are modelled as concrete implementations of the INode interface and of a relevant sub-interface e.g. IUriNode. All Nodes are scoped to a particular Graph and so must be created through a Graph.
-URI Nodes
+An ##INode## represents a node in a RDF graph, this is sometimes referred to as a RDF term.  The interface is quite sparse providing primarily information about the type of the node and the graph it is associated with.  There are then a number of specialized interfaces which extend the basic interface to provide node type specific information:
+
+|= Interface |= Node Type |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IBlankNode|IBlankNode]] | Blank Node, an anonymous node |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ILiteralNode|ILiteralNode]] | Literal Node, a node with a textual value and optionally a datatype or language tag |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUriNode|IUriNode]] | URI Node |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraphLiteralNode|IGraphLiteralNode]] | Graph Literal Node, represents a sub-graph |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IVariableNode|IVariableNode]] | Variable Node, represents a variable |
+
+**NB** The latter two go beyond the basic RDF model and are rarely used.
+
+As stated each RDF term can be treated as a node in a Graph. As such all RDF terms are modelled as concrete implementations of the INode interface and of a relevant sub-interface from the list above e.g. IUriNode.
+
+Currently all nodes are scoped to a particular graph and so must be created through a [[http://www.dotnetrdf.org/api/content.asp?Topic=VDS.RDF.INodeFactory|INodeFactory], an ##IGraph## is by definition an ##INodeFactory##.
+
+=== URI Nodes ===
 
 The core of RDF is the use of URIs to refer to resources so you will find that you use the IUriNode interface the majority of the time. A IUriNode can be constructed in three ways as follows:
 //Need a Graph first
