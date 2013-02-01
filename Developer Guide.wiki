@@ -4,3 +4,7 @@
 
 This developers guide is intended for advanced users who want to extend dotNetRDF further and the project developers.  If you are new to dotNetRDF you should start with the [[User Guide]] before moving onto this guide.
 
+== Architecture ==
+
+The [[Architecture]] section covers the architecture of dotNetRDF, this includes high level information like our [[Namespaces]] but also discussions of low level architectural details of different portions of the library.
+
