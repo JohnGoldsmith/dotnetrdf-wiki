@@ -5,3 +5,68 @@
 Welcome to the dotNetRDF user guide, this provides an introduction to dotNetRDF and aims to cover how to carry out a variety of common tasks in dotNetRDF.  Using this guide you can learn the basics of working with the library in order to enable you the user to build applications using dotNetRDF.
 
 If you are already an experienced dotNetRDF user you may wish to look at the [[Developer Guide]] instead which covers project architecture and advanced topics.
+
+== Basic Tutorial ==
+
+This series of pages aims to introduce you to the core concepts of dotNetRDF and get you up and running with the library, reading in order is suggested for new users:
+
+# [[User Guide/Getting Started|Getting Started]]
+# [[User Guide/Library Overview|Library Overview]]
+# [[User Guide/Hello World|Hello World]]
+# [[User Guide/Reading RDF|Reading RDF]]
+# [[User Guide/Writing RDF|Writing RDF]]
+# [[User Guide/Working with Graphs|Working with Graphs]]
+# [[User Guide/Typed Values and Lists|Typed Values and Lists]]
+# [[User Guide/Working with Triple Stores|Working with Triple Stores]]
+# [[User Guide/Querying with SPARQL|Querying with SPARQL]]
+# [[User Guide/Updating with SPARQL|Updating with SPARQL]]
+
+== General Topics == 
+
+If you want to look up a specific namespace, class or method in the API please see the [[http://www.dotnetrdf.org/api/|Formal API documentation]] which is MSDN style documentation of our libraries.
+
+The following pages cover some general topics about the library:
+
+* [[User Guide/Exceptions|Exceptions]]
+* [[User Guide/Event Model|Event Model]]
+* [[User Guide/Utility Methods|Utility Methods]]
+* [[User Guide/Extension Methods|Extension Methods]]
+* [[User Guide/Using the Namespace Mapper|Using the Namespace Mapper]]
+
+== Ontologies, Inference and Reasoning ==
+
+Please see the following for documentation of ontology, inference and reasoning support:
+
+* [[User Guide/Ontology API|Ontology API]]
+* [[User Guide/Inference and Reasoning|Inference and Reasoning]]
+
+== Advanced APIs ==
+
+The following documentation covers what are considered advanced topics but which may still be of value to everyday users of dotNetRDF.
+
+Configuration API
+Handlers API
+Advanced SPARQL
+Full Text Querying with SPARQL
+Advanced SPARQL Operations
+3rd Party Triple Store Integration
+
+Triple Store Integration
+IO Managers
+Store Specific Documentation
+Using the Talis Platform
+Using Virtuoso Universal Server
+We support a variety of different 3rd party Triple Stores through our IStorageProvider interface (formally known as IGenericIOManager). Since in early releases we only supported Virtuoso and Talis only they have dedicated articles, in future these articles will likely simply redirect to the main article as there is very limited store specific functionality.
+
+As all connections implement the IStorageProvider interface most examples using Talis/Virtuoso are also applicable to other stores (except where they use the store specific classes like TalisGraph). You will also find examples throughout the user guide which use other stores.
+
+ASP.Net Integration
+
+Creating SPARQL Endpoints
+Deploying with rdfWebDeploy
+
+=== Notes ===
+
+Note that where we refer to the user in this guide we are referring to you the developer who is using the API.
+
+All examples in the User Guide are given using C#.Net
