@@ -2,7 +2,7 @@
 
 = Namespaces =
 
-This page serves as a quick reference to our main namespaces, there are many more child namespaces not detailed here.  Please see the [[http://www.dotnetrdf.org/api/|Intellisense API]] to browse the full API.
+This page serves as a quick reference to our main namespaces, there are many more child namespaces not detailed here.  Please see the [[http://www.dotnetrdf.org/api/|Formal API Documentation]] to browse the full API.
 
 |=Namespaces|=Purpose|=Documentation|
 | [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF|VDS.RDF]] | Core Classes and Interfaces for RDF representation and access | [[User Guide]] |
