@@ -1,0 +1,54 @@
+[[Home]] > [[User Guide]] > [[Getting Started]]
+
+= Getting Started with dotNetRDF =
+
+This page serves as a quick reference on how to add dotNetRDF to your projects and what features are found in which libraries. If you've done this already you can jump ahead to the [[User Guide/Library Overview|Library Overview]] which will introduce you to the Core APIs in dotNetRDF.
+
+== Add dotNetRDF to your Project/Solution ==
+
+=== Using NuGet ===
+
+Using NuGet is our preferred and recommended way to manage dotNetRDF since it will ensure you install the correct version and all required dependencies.
+
+To do this you will need to have the NuGet Package Manager extension to Visual Studio installed. Then you can right click on your project and select Manage NuGet Packages, search the online gallery for dotNetRDF and install the libraries you want.
+
+=== Adding manually to your Project/Solution ===
+
+If you prefer to install dotNetRDF manually you can do so by following these instructions, if you haven't done so already go ahead and [[http://www.dotnetrdf.org/content.asp?pageID=Download dotNetRDF|Download dotNetRDF]].  This will give you a zip file which when unzipped contains the following directory structure:
+
+* **Core** Contains the builds of the Core Library
+* **Data** Contains the builds of the Data Libraries
+** **Virtuoso** Contains the Data.Virtuoso Library
+* **Query** Contains the builds of the Query Libraries
+** **FullText** Contains the Query.FullText Library
+
+The first thing you'll notice is that under each of these directories are a bunch of subdirectories. These represent builds of the library targeting specific .Net framework versions and profiles. For reference the directory names correspond as follows:
+
+* net35 .Net 3.5 Full
+* net35-client .Net 3.5 Client Profile
+* net40 .Net 4.0 Full
+* net40-client .Net 4.0 Client Profile
+* sl4 Silverlight 4.0
+* sl4-wp Silverlight 4.0 for Windows Phone 7
+
+One of the most important things you need to do when adding dotNetRDF as a reference to your project is ensure you select the correct version that matches the target framework version and profile your project uses. If you don't do this you will run into all sorts of compiler errors!
+
+To add dotNetRDF to your project right click on your project and click Add Reference, then browse to the directory containining the appropriate version of the library you want and select all the files in that directory. This will add both the dotNetRDF and its dependencies to your project ensuring that all features will work correctly. While you can add just dotNetRDF on its own if you then attempt to use certain features which rely on the dependent libraries you'll run into problems.
+
+The Libraries
+
+So as seen above the standard distribution of dotNetRDF comes with a variety of different libraries. This section details what features can be found in each library.
+
+Core
+
+The Core library provides all the core RDF and SPARQL infrastructure of dotNetRDF. It includes all the classes for reading and writing RDF, manipulating it in memory and a SPARQL 1.1 implementation. It also includes support for a variety of popular 3rd party triple stores as detailed in Triple Store Integration.
+
+The Core library depends on HtmlAgilityPack and Json.Net
+
+Data.Virtuoso
+
+The Data.Virtuoso library provides for integration with OpenLink Virtuoso a popular open source/commercial triple store. It is separate from the Core library unlike some other connectors because it requires additional dependencies in the form of the Virtuoso ADO.Net provider
+
+Query.FullText
+
+The Query.FullText library provides full text querying extensions to SPARQL based on top of Lucene.Net. See Full Text Querying with SPARQL for more details on this functionality.
