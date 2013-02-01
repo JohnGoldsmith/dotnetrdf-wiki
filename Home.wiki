@@ -2,9 +2,12 @@
 
 We are currently experimenting with porting some of our documentation to our BitBucket wiki in order to make it easier to maintain.  Please see the [[http://www.dotnetrdf.org?content.asp?pageID=dotNetRDF%20API|main documentation]] for the time being.
 
-= Introduction =
+= dotNetRDF Documentation =
 
-To get started with using dotNetRDF check out the [[User Guide]] which contains a series of step by step articles explaining how to use the Library.  If you are an advanced user who wants to leverage one of the extension points in our API please see the [[Developer Guide]]
+This wiki serves as the primary source of documentation for users and developers and is divided into several main sections:
+
+* The [[User Guide]] covers general usage of the library including step by step introductory tutorials.  This should be the starting point for most users.
+* The [[Developer Guide]] covers architectural discussions, coding standards and extensibility documentation.  This is intended for advanced users and project developers.
 
 == Important Links ==
 
@@ -20,20 +23,6 @@ Unless otherwise stated the documentation in the [[User Guide]] and [[Developer 
 
 Please note there may be a small window after a new release while we update our documentation when some pages may be inaccurate, if you find any inaccuracies please [[Contact Us]] so we can resolve them ASAP.
 
-== Formal Documentation ==
+== API Documentation ==
 
-We also provide MSDN style documentation generated from the XML comments in the code (which means our code has full Intellisense support) by going to the [[http://www.dotnetrdf.org/api/|Intellisense API]] page.
-
-== Namespaces ==
-
-The following are the key namespaces within dotNetRDF:
-
-* **VDS.RDF** provides Core Classes and Interfaces for RDF representation
-** **VDS.RDF.Configuration** provides Classes that form the [[User Guide/Configuration API|Configuration API]]
-** **VDS.RDF.Ontology** provides Classes for accessing Graphs in a more resource-centric manner
-** **VDS.RDF.Parsing** provides Classes for Parsing concrete RDF syntaxes
-** **VDS.RDF.Query** provides Classes for Querying RDF
-** **VDS.RDF.Storage** provides Classes for storing RDF in various Triple Stores
-** **VDS.RDF.Update** provides Classes for supporting SPARQL Update
-** **VDS.RDF.Web** provides Classes designed specifically for deploying RDF in ASP.Net applications
-** **VDS.RDF.Writing** provides Classes for serializing RDF in concrete syntaxes
+We also provide MSDN style API documentation generated from the XML comments in the code (which means our code has full Intellisense support) by going to the [[http://www.dotnetrdf.org/api/|Intellisense API]] page.
