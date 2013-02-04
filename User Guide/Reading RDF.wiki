@@ -227,15 +227,15 @@ All the Store Parsers provided in the library behave as follows:
 These are the standard parser classes contained in the Library:
 
 |= Parser Class |= Supported Input |
-| NTriplesParser | NTriples |
-| Notation3Parser | Notation 3 |
-| NQuadsParser | NQuads, NTriples |
-| RdfAParser | RDFa 1.0 embedded in (X)HTML, some RDFa 1.1 support |
-| RdfJsonParser | RDF/JSON (Talis specification) |
-| RdfXmlParser | RDF/XML |
-| TriGParser | TriG |
-| TriXParser | TriX |
-| TurtleParser | Turtle, NTriples |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.NTriplesParser|NTriplesParser]] | NTriples |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Notation3Parser|Notation3Parser]] | Notation 3, Turtle, NTriples, some forms of TriG |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.NQuadsParser|NQuadsParser]] | NQuads, NTriples |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.RdfAParser|RdfAParser]] | RDFa 1.0 embedded in (X)HTML, some RDFa 1.1 support |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.RdfJsonParser|RdfJsonParser]] | RDF/JSON (Talis specification) |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.RdfXmlParser|RdfXmlParser]] | RDF/XML |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TriGParser|TriGParser]] | TriG |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TrixParser|TriXParser]] | TriX |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TurtleParser|TurtleParser]] | Turtle, NTriples |
 
 = Tutorial Navigation =
 
