@@ -2,26 +2,36 @@
 
 = Reading RDF with dotNetRDF =
 
-So one of the main things you'll want to do when working with RDF is to be able to read it in from Files, URIs and other sources in order to work with it using dotNetRDF. All the classes related to this are contained within the VDS.RDF.Parsing namespace. So when you want to read RDF you'll need the following statements at the start of your code file:
+So one of the main things you'll want to do when working with RDF is to be able to read it in from Files, URIs and other sources in order to work with it using dotNetRDF. All the classes related to this are contained within the ##VDS.RDF.Parsing## namespace. So when you want to read RDF you'll need the following statements at the start of your code file:
+
+{{{
+#!csharp
+
 using VDS.RDF;
 using VDS.RDF.Parsing;
+}}}
+
 dotNetRDF currently supports reading RDF files in all of the following RDF syntaxes:
 
-NTriples
-Turtle
-Notation 3
-RDF/XML
-RDF/JSON (Talis Specification)
-RDFa 1.0
-TriG (Turtle with Named Graphs)
-TriX (Named Graphs in XML)
-NQuads (NTriples plus Context)
-Graph Parsers
+# NTriples
+# Turtle
+# Notation 3
+# RDF/XML
+# RDF/JSON (Talis Specification)
+# RDFa 1.0 (Limited RDFa 1.1 support)
+# TriG (Turtle with Named Graphs)
+# TriX (Named Graphs in XML)
+# NQuads (NTriples plus Context)
 
-Graph Parsers implement the IRdfReader interface which defines a Load(...) method which takes an IGraph or a IRdfHandler and either a TextReader, StreamReader or a String. Basic usage is as follows:
+== Graph Parsers ==
 
-Graph g = new Graph();
-Graph h = new Graph();
+Graph Parsers implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader|IRdfReader]] interface which defines a ##Load(…)## method which takes an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph|IGraph]] or a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.IRdfHandler|IRdfHandler]] and either a ##TextReader##, ##StreamReader## or a ##String##. Basic usage is as follows:
+
+{{{
+#!csharp
+
+IGraph g = new Graph();
+IGraph h = new Graph();
 TurtleParser ttlparser = new TurtleParser();
 
 //Load using a Filename
@@ -29,13 +39,18 @@ ttlparser.Load(g, "Example.ttl");
 
 //Load using a StreamReader
 ttlparser.Load(h, new StreamReader("Example.ttl"));
-While the above is a slightly contrived example you'll note that Parsers are reusable, once instantiated you can use them as many times as you need. Another useful feature is that parsers are designed to be thread safe so multiple threads can use the same instance of a parser to parse different inputs simultaneously without interfering with each other.
+}}}
 
-Parsers are typically capable of throwing RdfParseException and RdfException so you should always use Try Catch blocks around Parser usage e.g.
+While the above is a slightly contrived example you'll note that parsers are reusable, once instantiated you can use them as many times as you need. Another useful feature is that parsers are designed to be thread safe so multiple threads can use the same instance of a parser to parse different inputs simultaneously without interfering with each other.
+
+Parsers are typically capable of throwing [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.RdfParseException|RdfParseException]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.RdfException|RdfException]] so you should always use Try Catch blocks around Parser usage e.g.
+
+{{{
+#!csharp
 
 try 
 {
-	Graph g = new Graph();
+	IGraph g = new Graph();
 	NTriplesParser ntparser = new NTriplesParser();
 
 	//Load using Filename
@@ -43,20 +58,30 @@ try
 } 
 catch (RdfParseException parseEx) 
 {
+        //This indicates a parser error e.g unexpected character, premature end of input, invalid syntax etc.
 	Console.WriteLine("Parser Error");
 	Console.WriteLine(parseEx.Message);
 } 
 catch (RdfException rdfEx)
 {
+        //This represents a RDF error e.g. illegal triple for the given syntax, undefined namespace
 	Console.WriteLine("RDF Error");
 	Console.WriteLine(rdfEx.Message);
 }
-Reading RDF from Files
+}}}
 
-If you just want to quickly read RDF from a file without having to decide which parser you need you can use the static FileLoader class which provides a Load(IGraph g, String file) method.
-Graph g = new Graph();
+== Reading RDF from Files ==
+
+If you just want to quickly read RDF from a file without having to decide which parser you need you can use the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.FileLoader|FileLoader]] class which provides a ##Load(IGraph g, String file)## method:
+
+{{{
+#!csharp
+
+IGraph g = new Graph();
 FileLoader.Load(g, "somefile.rdf");
-The FileLoader will try to select the correct Parser based on the file extension of the file if it corresponds to a standard file extension, if this is not possible it will use the StringParser class which attempts to detect the format using simple heuristics.
+}}}
+
+The ##FileLoader## will try to select the correct Parser based on the file extension of the file if it corresponds to a standard file extension, if this is not possible it will use the StringParser class which attempts to detect the format using simple heuristics.
 
 You can also force the loader to use a specific parser by using the 3 argument form Load(IGraph g, String file, IRdfReader parser).
 
