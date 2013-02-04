@@ -149,54 +149,9 @@ ILiteralNode number = g.CreateLiteralNode("1", UriFactory.Create(XmlSpecsHelper.
 ILiteralNode t = g.CreateLiteralNode("true", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeBoolean));
 }}}
 
-Literal Node equality is somewhat more complex but basically follows the following rules:
-
-# If a Language Specifier is present both Nodes must have an identical Language Specifier
-# If a Data Type URI is present both Nodes must have an identical Data Type URI
-# The String value of the Literal must match on a character by character basis (using Ordinal comparison)
-
-While this is an exact implementation of the official RDF Specification in applications this may not always be the desired behaviour. It is possible for literals representing the same actual value to be encoded in different ways, consider the following example:
-
-{{{
-#!csharp
-
-//Need a Graph first
-IGraph g = new Graph();
-
-//Create two Literal Nodes which both represent the Integer 1
-//You'll need to be using the VDS.RDF.Parsing namespace to reference the constants used here
-ILiteralNode one1 = g.CreateLiteralNode("1", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
-ILiteralNode one2 = g.CreateLiteralNode("0001", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
-
-//Are they equal
-bool equal = one1.Equals(one2);
-
-//Prints false since the string values are not equal
-Console.WriteLine(equal.ToString());
-}}}
-
-If you want to compare Literals based on typed Value rather than literal Value then you can change the above code as follows:
-
-{{{
-#!csharp
-
-//Use Loose Literal Equality Mode
-Options.LiteralEqualityMode = LiteralEqualityMode.Loose;
-
-//Are they equal
-bool equal = one1.Equals(one2);
-
-//Prints true since the typed values are equal
-Console.WriteLine(equal.ToString());
-}}}
-
-Be careful when using this since ##Options.LiteralEqualityMode## is a global static option which affects all Node equality calculations involving Literal Nodes and adds performance overheads. Reset this to the default value of ##LiteralEqualityMode.Strict## as soon as you no longer need it. Note also that this only works for a limited range of standard data types.
-
-The alternative to changing the literal equality mode is to call //CompareTo()// method instead and check that the value returned equals zero since literal node comparison is akin to loose equality.
-
 == Triples ==
 
-A Triple is the basic unit of RDF data, nodes on their own have no meaning but used in a Triple form a statement which asserts some knowledge. A Triple is formed of a Subject, Predicate and Object. It is interpreted as stating that some Subject is related to some Object by a relationship specified by the Predicate. The components of the Triple class are Nodes which means that any of the Node classes discussed in the previous section can be used in any of the positions.
+A Triple is the basic unit of RDF data, nodes on their own have no meaning but used in a Triple form a statement which asserts some knowledge. A Triple is formed of a Subject, Predicate and Object. It is interpreted as stating that some Subject is related to some Object by a relationship specified by the Predicate. The components of the Triple class are Nodes which means that any of the Node classes discussed in the previous section can be used in any of the ositions.
 
 In practise the RDF specification restricts which types of Node can appear in which position but since some advanced RDF syntaxes like Notation 3 extend the specification and relax these rules so we allow for any Node type in any position.
 

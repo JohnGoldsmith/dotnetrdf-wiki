@@ -25,7 +25,7 @@ dotNetRDF currently supports reading RDF files in all of the following RDF synta
 
 = Graph Parsers =
 
-Graph Parsers implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader|IRdfReader]] interface which defines a ##Load(…)## method which takes an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph|IGraph]] or a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.IRdfHandler|IRdfHandler]] and either a ##TextReader##, ##StreamReader## or a ##String##. Basic usage is as follows:
+Graph Parsers implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader|IRdfReader]] interface which defines a //Load(…)// method which takes an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph|IGraph]] or a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.IRdfHandler|IRdfHandler]] and either a ##TextReader##, ##StreamReader## or a ##String##. Basic usage is as follows:
 
 {{{
 #!csharp
@@ -76,7 +76,7 @@ Often it is not necessary to invoke a parser directly since you can use a helper
 
 === Reading RDF from Files ===
 
-If you just want to quickly read RDF from a file without having to decide which parser you need you can use the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.FileLoader|FileLoader]] class which provides a ##Load(IGraph g, String file)## method:
+If you just want to quickly read RDF from a file without having to decide which parser you need you can use the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.FileLoader|FileLoader]] class which provides a //Load(IGraph g, String file)// method:
 
 {{{
 #!csharp
@@ -87,11 +87,11 @@ FileLoader.Load(g, "somefile.rdf");
 
 The ##FileLoader## will try to select the correct Parser based on the file extension of the file if it corresponds to a standard file extension, if this is not possible it will use the StringParser class which attempts to detect the format using simple heuristics.
 
-You can also force the loader to use a specific parser by using the 3 argument form ##Load(IGraph g, String file, IRdfReader parser)##.
+You can also force the loader to use a specific parser by using the 3 argument form //Load(IGraph g, String file, IRdfReader parser)//.
 
 === Reading RDF from URIs ===
 
-Often you will want to read some RDF from a URI, to do this we provide the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.UriLoader|UriLoader]] class which provides a ##Load(IGraph g, Uri u)## method.
+Often you will want to read some RDF from a URI, to do this we provide the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.UriLoader|UriLoader]] class which provides a //Load(IGraph g, Uri u)// method.
 
 {{{
 #!csharp
@@ -102,11 +102,11 @@ UriLoader.Load(g, new Uri("http://dbpedia.org/resource/Barack_Obama"));
 
 The ##UriLoader## will automatically select the correct Parser to use based on the returned ##Content-Type## header of the HTTP Response. In addition to the normal errors thrown by parsers the ##UriLoader## may also throw a ##RdfException## if the input URI is not valid or a ##WebException## if an error occurs in retrieving the URI using HTTP.
 
-You can also force the loader to use a specific parser by using the 3 argument form ##Load(IGraph g, Uri u, IRdfReader parser)##.
+You can also force the loader to use a specific parser by using the 3 argument form //Load(IGraph g, Uri u, IRdfReader parser)//.
 
 === Reading RDF from Embedded Resources ===
 
-If you choose to embed RDF files in your assemblies you can read RDF from these using the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.EmbeddedResourceLoader|EmbeddedResourceLoader]] class which provides a ##Load(IGraph g, String resource)## method.
+If you choose to embed RDF files in your assemblies you can read RDF from these using the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.EmbeddedResourceLoader|EmbeddedResourceLoader]] class which provides a //Load(IGraph g, String resource)// method.
 
 {{{
 #!csharp
@@ -117,11 +117,11 @@ EmbeddedResourceLoader.Load(g, "Your.Namespace.EmbeddedFile.n3, YourAssembly");
 
 Note that the Resource Name must be an assembly qualified name. Like the other loaders this attempts to select the correct Parser based on the resource name.
 
-You can also force the loader to use a specific parser by using the 3 argument form ##Load(IGraph g, String resourceName, IRdfReader parser)##.
+You can also force the loader to use a specific parser by using the 3 argument form //Load(IGraph g, String resourceName, IRdfReader parser)//.
 
 === Reading RDF from Strings ===
 
-Occasionally you may have a fragment of RDF in a string which you wish to parse. To do this you can use the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.StringParser|StringParser]] class and it's ##Parse(IGraph g, String data)## method.
+Occasionally you may have a fragment of RDF in a string which you wish to parse. To do this you can use the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.StringParser|StringParser]] class and it's //Parse(IGraph g, String data)// method.
 
 {{{
 #!csharp
