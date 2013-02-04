@@ -25,7 +25,7 @@ dotNetRDF currently supports reading RDF files in all of the following RDF synta
 
 = Graph Parsers =
 
-Graph Parsers implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader|IRdfReader]] interface which defines a ##Load(…)## method which takes an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph|IGraph]] or a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.IRdfHandler|IRdfHandler]] and either a ##TextReader##, ##StreamReader## or a ##String##. Basic usage is as follows:
+Graph Parsers implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader|IRdfReader]] interface which defines a ##Load(…)## method which takes an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph|IGraph]] or a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.IRdfHandler|IRdfHandler]] and either a ##TextReader##, ##StreamReader## or a ##String##. Basic usage is as follows:
 
 {{{
 #!csharp
@@ -161,26 +161,40 @@ Additionally some Parsers allow you to instantiate them with a [[http://www.dotn
 
 Store Parsers differ from Graph Parsers in that the input they parse may contain multiple Graphs and so their output is actually a Triple Store rather than a single Graph. You will often see Store Parsers referred to as RDF Dataset parsers.
 
-Store Parsers implement the IStoreReader interface which defines a similar to the IRdReader interface takes a ITripleStore or IRdfHandler and either a TextReader, StreamReader or a String. A Store Parser can be used as follows:
+Store Parsers implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.IStoreReader|IStoreReader]] interface which defines a similar to the ##IRdReader## interface takes a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ITripleStore|ITripleStore]] or [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.IRdfHandler|IRdfHandler]] and either a ##TextReader##, ##StreamReader## or a ##String##. A Store Parser can be used as follows:
+
+{{{
+#!csharp
 
 TripleStore store = new TripleStore();
 TriGParser trigparser = new TriGParser();
 
 //Load the Store
 trigparser.Load(store, "Example.trig");
-As with Graph Parsers various exceptions may be thrown, in additional to those potentially thrown by Graph Parsers a Store Parser may throw a RdfStorageException if the input parameters are not of the correct type.
+}}}
 
-Reading RDF Datasets from various sources
+As with Graph Parsers various exceptions may be thrown.
 
-Similarily to Graph Parsers the Store Parsers can all be invoked indirectly with various methods of the EmbeddedResourceLoader, FileLoader, StringParser and UriLoader classes.
+== Reading RDF Datasets from Common Sources ==
 
-Advanced Parsing
+Similarly to Graph Parsers the Store Parsers can all be invoked indirectly with various methods of the ##EmbeddedResourceLoader##, ##FileLoader##, ##StringParser## and ##UriLoader## classes.  See the API documentation for those classes (linked earlier under the Graph Parsers section) for the relevant overloads.
 
-The examples we've shown so far all use an abstracted parsing model where you parse directly to a IGraph or ITripleStore. Behind the scenes this actually leverages our parser subsystem which is also exposed to you via the IRdfHandler based overloads. This allows you much greater control over what is done with parsed Triples. In the examples given so far you have only been able to parse RDF into either a IGraph or a ITripleStore instance but this is not your only option.
-You can use a IRdfHandler to control explicitly what happens with the RDF you are parsing. Using any of the included implementations will require you to add the following using statement:
+= Advanced Parsing =
+
+The examples we've shown so far all use an abstracted parsing model where you parse directly to a ##IGraph## or ##ITripleStore##. Behind the scenes this actually leverages our parser subsystem which is also exposed to you via the ##IRdfHandler## based overloads. This allows you much greater control over what is done with parsed Triples. In the examples given so far you have only been able to parse RDF into either a ##IGraph## or a ##ITripleStore## instance but this is not your only option.
+
+You can use a ##IRdfHandler## to control explicitly what happens with the RDF you are parsing. Using any of the included implementations will require you to add the following using statement:
+
+{{{
+#!csharp
 
 using VDS.RDF.Parsing.Handlers;
-For example you may only want to count the Triples and not care about the actual values so you could use a CountHandler to do this:
+}}}
+
+For example you may only want to count the Triples and not care about the actual values so you could use a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.CountHandler|CountHandler]] to do this:
+
+{{{
+#!csharp
 
 //Create a Handler and use it for parsing
 CountHandler handler = new CountHandler();
@@ -189,32 +203,45 @@ parser.Load(handler, "example.ttl");
 
 //Print the resulting count
 Console.WriteLine(handler.Count + " Triple(s)");
-There are a variety of included implementations which do various things like redirecting Triples directly to a file, native Triple Store etc. You can also implement your own either entirely from scratch or just derive from BaseRdfHandler like our own implementations do to get most of the implementation for free.
+}}}
 
-Parser Behaviour
+There are a variety of included implementations which do various things like redirecting Triples directly to a file, native Triple Store etc. You can also implement your own either entirely from scratch or just derive from [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseRdfHandler|BaseRdfHandler]] like our own implementations do to get most of the implementation for free.
+
+= Parser Behaviour =
 
 All the Graph Parsers provided in the library behave as follows:
-File/Stream Management:
-In the event of an error during Parsing the file/stream being Parsed will be closed
-On successful completion of Parsing the file/stream being Parsed will be closed
-If Parsing fails the Graph will not contain any of the Triples successfully parsed prior to the failure
-If a Parser is asked to parse into a non-empty Graph then the Parser will first parse into an Empty Graph and then Merge that Graph with the provided Graph.
+
+# File/Stream Management:
+## In the event of an error during Parsing the file/stream being Parsed will be closed
+## On successful completion of Parsing the file/stream being Parsed will be closed
+# If Parsing fails the Graph will not contain any of the Triples successfully parsed prior to the failure
+# If a Parser is asked to parse into a non-empty Graph then the Parser will first parse into an Empty Graph and then Merge that Graph with the provided Graph.
+
 All the Store Parsers provided in the library behave as follows:
 
-File/Stream Management as Graph Parsers
-If the Parser produces a Graph which already exists in the destination Store then an error may occur depending on how that Store behaves when a Graph already exists
-Parser Classes
+# File/Stream Management as Graph Parsers
+# If the Parser produces a Graph which already exists in the destination Store then an error may occur depending on how that Store behaves when a Graph already exists
+
+= Parser Classes =
 
 These are the standard parser classes contained in the Library:
-NTriplesParser - Parses NTriples syntax
-Notation3Parser - Parses Notation 3
-NQuadsParser - Parses NQuads
-RdfAParser - Parsers RDFa 1.0 embedded in (X)HTML
-RdfJsonParser - Parses RDF/JSON (Talis specification)
-RdfXmlParser - Parses RDF/XML
-TriGParser - Parses TriG
-TriXParser - Parses TriX
-TurtleParser - Parses Turtle
-Previous: Hello World
-Next: Writing RDF
-Further Reading: Working with Graphs | Working with Triple Stores
+
+|= Parser Class |= Supported Syntax |
+| NTriplesParser | NTriples |
+| Notation3Parser | Notation 3 |
+| NQuadsParser | NQuads, NTriples |
+| RdfAParser | RDFa 1.0 embedded in (X)HTML, some RDFa 1.1 support |
+| RdfJsonParser | RDF/JSON (Talis specification) |
+| RdfXmlParser | RDF/XML |
+| TriGParser | TriG |
+| TriXParser | TriX |
+| TurtleParser | Turtle, NTriples |
+
+= Tutorial Navigation =
+
+The next topic is [[User Guide/Writing RDF|Writing RDF]], the previous topic was [[User Guide/Hello World|Hello World]].
+
+Users may wish to jump to the following topics to learn more:
+
+# [[User Guide/Working with Graphs|Working with Graphs]]
+# [[User Guide/Working with Triple Stores|Working with Triple Stores]]
