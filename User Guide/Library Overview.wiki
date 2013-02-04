@@ -88,10 +88,10 @@ IUriNode thisGraph = g.CreateUriNode();
 //Create a URI Node that refers to some specific URI
 IUriNode dotNetRDF = g.CreateUriNode(UriFactory.Create("http://www.dotnetrdf.org"));
 
-//Create a URI Node using a QName
+//Create a URI Node using a Prefixed Name
 //Need to define a Namespace first
 g.NamespaceMap.AddNamespace("ex", UriFactory.Create("http://example.org/namespace/"));
-IUriNode qname = g.CreateUriNode("ex:demo");
+IUriNode pname = g.CreateUriNode("ex:demo");
 //Resulting URI is http://example.org/namespace/demo
 }}}
 
