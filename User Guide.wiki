@@ -28,6 +28,7 @@ If you want to look up a specific namespace, class or method in the API please s
 The following pages cover some general topics about the library:
 
 * [[User Guide/Exceptions|Exceptions]]
+* [[User Guide/Equality and Comparison|Equality and Comparison]]
 * [[User Guide/Event Model|Event Model]]
 * [[User Guide/Utility Methods|Utility Methods]]
 * [[User Guide/Extension Methods|Extension Methods]]
