@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[Library Overview]]
+[[Home]] > [[User Guide]] > [[User Guide/Library Overview|Library Overview]]
 
 = dotNetRDF Library Overview =
 
@@ -121,8 +121,6 @@ IBlankNode anon = g.CreateBlankNode();
 //Blank Node will be given an alternative ID
 IBlankNode named = g.CreateBlankNode("ID");
 }}}
-
-Blank Nodes are scoped specifically to a Graph, Blank Nodes are only considered equal if they were created by the same ##IGraph## object and have identical IDs (with one exception at the Triple equality level).
 
 **Note:** Be careful of the above proviso about ID collisions between automatically assigned Blank Node IDs (those created with //CreateBlankNode()//) and those created with an explicit ID. If you try and create a Blank Node with the same explicit ID as an automatically assigned ID you will get back a different Blank Node ID. If you create an anonymous Blank Node you need to hold onto the reference to it as long as you want to use that Blank Node. You can get around this by using //GetBlankNode(String id)// to return the Blank Node with the given ID provided it exists in the Graph
 
