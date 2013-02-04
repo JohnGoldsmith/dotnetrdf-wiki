@@ -226,7 +226,7 @@ All the Store Parsers provided in the library behave as follows:
 
 These are the standard parser classes contained in the Library:
 
-|= Parser Class |= Supported Syntax |
+|= Parser Class |= Supported Input |
 | NTriplesParser | NTriples |
 | Notation3Parser | Notation 3 |
 | NQuadsParser | NQuads, NTriples |
