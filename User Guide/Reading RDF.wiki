@@ -13,15 +13,15 @@ using VDS.RDF.Parsing;
 
 dotNetRDF currently supports reading RDF files in all of the following RDF syntaxes:
 
-# NTriples
-# Turtle
-# Notation 3
-# RDF/XML
-# RDF/JSON (Talis Specification)
-# RDFa 1.0 (Limited RDFa 1.1 support)
-# TriG (Turtle with Named Graphs)
-# TriX (Named Graphs in XML)
-# NQuads (NTriples plus Context)
+* NTriples
+* Turtle
+* Notation 3
+* RDF/XML
+* RDF/JSON (Talis Specification)
+* RDFa 1.0 (Limited RDFa 1.1 support)
+* TriG (Turtle with Named Graphs)
+* TriX (Named Graphs in XML)
+* NQuads (NTriples plus Context)
 
 = Graph Parsers =
 
@@ -148,7 +148,7 @@ This is roughly equivalent to how the ##StringParser## works internally except t
 
 == Parser Configuration ==
 
-Some Parsers have additional configuration which can be used to change their behaviour. For example if a Parser implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableTokeniser||ITraceableTokeniser]] interface then the ##TraceTokeniser## property can be used to ask for Tokeniser Trace to be output to the Console. Similarly if it implements [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableParser|ITraceableParser]] then the ##TraceParser## property can be used to ask for Parsing Trace to be output. These features are often useful when debugging to discover why an RDF document is failing to parse since you can see how the input is being tokenised and parsed.
+Some Parsers have additional configuration which can be used to change their behaviour. For example if a Parser implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableTokeniser||ITraceableTokeniser]] interface then the //TraceTokeniser// property can be used to ask for Tokeniser Trace to be output to the Console. Similarly if it implements [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableParser|ITraceableParser]] then the //TraceParser// property can be used to ask for Parsing Trace to be output. These features are often useful when debugging to discover why an RDF document is failing to parse since you can see how the input is being tokenised and parsed.
 
 Additionally some Parsers allow you to instantiate them with a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Tokens.TokenQueueMode|TokenQueueMode]]. This controls the type of queue used in the tokeniser process and can potentially affect the speed of parsing (though in most cases there is minimal difference). The available modes are:
 
@@ -211,16 +211,16 @@ There are a variety of included implementations which do various things like red
 
 All the Graph Parsers provided in the library behave as follows:
 
-# File/Stream Management:
-## In the event of an error during Parsing the file/stream being Parsed will be closed
-## On successful completion of Parsing the file/stream being Parsed will be closed
-# If Parsing fails the Graph will not contain any of the Triples successfully parsed prior to the failure
-# If a Parser is asked to parse into a non-empty Graph then the Parser will first parse into an Empty Graph and then Merge that Graph with the provided Graph.
+* File/Stream Management:
+** In the event of an error during Parsing the file/stream being Parsed will be closed
+** On successful completion of Parsing the file/stream being Parsed will be closed
+* If Parsing fails the Graph will not contain any of the Triples successfully parsed prior to the failure
+* If a Parser is asked to parse into a non-empty Graph then the Parser will first parse into an Empty Graph and then Merge that Graph with the provided Graph.
 
 All the Store Parsers provided in the library behave as follows:
 
-# File/Stream Management as Graph Parsers
-# If the Parser produces a Graph which already exists in the destination Store then an error may occur depending on how that Store behaves when a Graph already exists
+* File/Stream Management as Graph Parsers
+* If the Parser produces a Graph which already exists in the destination Store then an error may occur depending on how that Store behaves when a Graph already exists
 
 = Parser Classes =
 
@@ -243,5 +243,5 @@ The next topic is [[User Guide/Writing RDF|Writing RDF]], the previous topic was
 
 Users may wish to jump to the following topics to learn more:
 
-# [[User Guide/Working with Graphs|Working with Graphs]]
-# [[User Guide/Working with Triple Stores|Working with Triple Stores]]
+* [[User Guide/Working with Graphs|Working with Graphs]]
+* [[User Guide/Working with Triple Stores|Working with Triple Stores]]

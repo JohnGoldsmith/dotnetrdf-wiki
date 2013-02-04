@@ -163,5 +163,5 @@ The next topic in the tutorial is [[User Guide/Reading RDF|Reading RDF]], the pr
 
 Users who wish to learn more may wish to jump straight to the following topics:
 
-# [[User Guide/Working with Graphs|Working with Graphs]]
-# [[User Guide/Writing RDF|Writing RDF]]
+* [[User Guide/Working with Graphs|Working with Graphs]]
+* [[User Guide/Writing RDF|Writing RDF]]

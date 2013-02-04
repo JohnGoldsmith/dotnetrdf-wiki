@@ -177,7 +177,7 @@ If you wish to remove a Triple from a Graph you create it in the same manner sho
 
 Triple equality is defined as the triples having equal subjects, predicates and objects.  Note that while normally a blank node is only considered equal if its ID and source graph are equal for the purposes of triple equality triples blank nodes need only have equal identifiers.
 
-Triples contain a reference to the Graph that they were created for (though not necessarily the Graph they are asserted in) - this reference is retrieved from the Nodes that the Triple is instantiated with. Triples also have a property named Context which can be used to store arbitrary application specific data in a class which implements the ##ITripleContext## interface.
+Triples contain a reference to the Graph that they were created for (though not necessarily the Graph they are asserted in) - this reference is retrieved from the Nodes that the Triple is instantiated with. Triples also have a property named //Context// which can be used to store arbitrary application specific data in a class which implements the ##ITripleContext## interface.
 
 == Triple Store ==
 
@@ -199,3 +199,4 @@ Users wishing to learn more may want to jump straight to one of the following to
 
 * [[User Guide/Working with Graphs|Working with Graphs]]
 * [[User Guide/Working with Triple Stores|Working with Triple Stores]]
+* [[User Guide/Equality and Comparison|Equality and Comparison]]

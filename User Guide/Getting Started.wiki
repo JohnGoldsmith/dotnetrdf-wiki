@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[Getting Started]]
+[[Home]] > [[User Guide]] > [[User Guide/Getting Started|Getting Started]]
 
 = Getting Started with dotNetRDF =
 
