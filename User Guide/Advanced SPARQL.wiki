@@ -2,7 +2,9 @@
 
 = Advanced SPARQL =
 
-This portion of the user guide is dedicated to advanced SPARQL topics, currently the following topics are covered:
+This portion of the user guide is dedicated to advanced SPARQL topics, if you were looking for an introduction to SPARQL with dotNetRDF please see [[User Guide/Querying with SPARQL|Querying with SPARQL]] and [[User Guide/Updating with SPARQL|Updating with SPARQL]].
+
+Currently the following topics are covered:
 
 * [[User Guide/SPARQL Datasets|SPARQL Datasets]]
 * [[User Guide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
