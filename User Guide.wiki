@@ -55,6 +55,7 @@ The following documentation covers what are considered advanced topics but which
 * [[User Guide/Configuration API|Configuration API]]
 * [[User Guide/Handlers API|Handlers API]]
 * [[User Guide/Advanced SPARQL|Advanced SPARQL]]
+** [[User Guide/SPARQL Datasets|SPARQL Datasets]]
 ** [[User Guide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
 ** [[User Guide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
 * [[User Guide/Triple Store Integration|Triple Store Integration]]
