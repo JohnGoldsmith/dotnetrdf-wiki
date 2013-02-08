@@ -6,7 +6,7 @@ SPARQL is the standard query language for the Semantic Web and can be used to qu
 
 If you want to learn about SPARQL you should take a look at the [[http://www.w3.org/TR/sparql11-query/|SPARQL Query Language Specification]] which provides examples of all the various query forms as well as the full formal specifcation.
 
-Advanced Users may want to take a look at the [[User Guide/Advanced SPARQL Operations|Advanced SPARQL Operations]] and [[Developer Guide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
+Advanced Users may want to take a look at the [[User Guide/Advanced SPARQL|Advanced SPARQL]] and [[Developer Guide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
 
 When using SPARQL you'll want to import the ##VDS.RDF.Query## namespace using the following statement at the start of your code files:
 
@@ -168,6 +168,7 @@ Now we'll look at the different ways in which you can actually make a query, the
 |= Method |= Purpose |
 | Query Processors | General purpose abstraction for making queries, highly recommended since it allows you to wrap any of the other query methods in abstracted code |
 | Remote Query | Make a query against a remote SPARQL endpoint |
+| Native Query | Make a query against an external SPARQL engine |
 | Direct Triple Store Query | Make a query directly against a ##IInMemoryQueryable## (//deprecated//) |
 
 == Query Processors ==
@@ -180,6 +181,7 @@ For example you can use the standard [[http://www.dotnetrdf.org/api/index.asp?To
 
 {{{
 #!csharp 
+
 using System;
 using VDS.RDF;
 using VDS.RDF.Parsing;
@@ -273,6 +275,12 @@ public class SparqlRemoteEndpointExample
 }
 }}}
 
+== Native Query ==
+
+We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the ##INativelyQueryableStore## interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[User Guide/Working with Triple Stores|Working with Triple Stores]] page you'll see an example of using the ##PersistentTripleStore## class to query any of our supported stores.
+
+Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] interface  which most of our available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] implementations also support, please see the [[User Guide/Triple Store Integration|Triple Store Integration]] page for an example of this.
+
 == Direct Triple Store Query ==
 
 In-memory representations of Triple Stores which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface can be queried locally using the libraries in-memory SPARQL implementation.
@@ -331,17 +339,14 @@ public class InMemoryTripleStoreExample
 
 The return type from the //ExecuteQuery()// method is an ##Object## since it may be either a ##SparqlResultSet## or an ##IGraph## so you will need to do an ##is## test and then cast as shown in the example. Alternatively you can use the ##as## operator though we tend to avoid this ourselves since it can unintentionally hide errors in query evaluation.
 
-== Native Query ==
-
-We use the term Native Query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the INativelyQueryableStore interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the Working with Triple Stores page you'll see an example of using the PersistentTripleStore class to query any of our supported stores.
-
-Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the IQueryableStorage interface (formally known as IQueryableGenericIOManager) which most of our available IStorageProvider (formally known as IGenericIOManager) implementations also support, please see Triple Store Integration for an example of this.
-
 = Loading/Saving Results =
 
-A SparqlResultSet may be loaded/saved using the ISparqlResultsReader and ISparqlResultsWriter interfaces respectively. These are functionally very similar to the IRdfReader and IRdfWriter interfaces described on the Reading RDF and Writing RDF pages.
+A ##SparqlResultSet## may be loaded/saved using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader|ISparqlResultsReader]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter|ISparqlResultsWriter]] interfaces respectively. These are functionally very similar to the ##IRdfReader## and ##IRdfWriter## interfaces described on the [[User Guide/Reading RDF|Reading RDF]] and [[User Guide/Writing RDF|Writing RDF]] pages.
 
 A quick example is as follows:
+
+{{{
+#!csharp
 
 using System;
 using VDS.RDF;
@@ -365,9 +370,17 @@ public class SaveLoadResultsExample
 		reader.Load(results2, "example.srj");
 	}
 }
+}}}
+
 Note that one important difference between reading SPARQL results versus reading RDF is that you cannot read SPARQL results into a non-empty result set - doing so results in an exception.
 
+----
 
-Next: Updating with SPARQL 
-Previous: Triple Store Integration | Working with Triple Stores
-Further Reading: Configuration API - Query Processors
+= Tutorial Navigation =
+
+The previous topic was [[User Guide/Working with Triple Stores|Working with Triple Stores]], the next topic is [[User Guide/Updating with SPARQL|Updating with SPARQL]]
+
+Users wishing to learn more may wish to jump straight to the following topics:
+* [[User Guide/Advanced SPARQL|Advanced SPARQL]]
+* [[User Guide/Triple Store Integration|Triple Store Integration]] 
+* [[User Guide/Configuration API/Query Processors|Configuration API - Query Processor]]
