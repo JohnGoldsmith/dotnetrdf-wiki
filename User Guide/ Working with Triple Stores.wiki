@@ -285,7 +285,7 @@ The Library contains the following standard ##ITripleStore## implementations:
 
 = Standard RDF Dataset Parsers & Writers =
 
-The Library contains the following standard IStoreReader and IStoreWriter implementations for RDF dataset formats:
+The Library contains the following standard ##IStoreReader## and ##IStoreWriter## implementations for RDF dataset formats:
 
 |= Implementation |= Description |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.NQuadsParser|NQuadsParser]] | Parses NQuads |
