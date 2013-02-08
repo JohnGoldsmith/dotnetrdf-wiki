@@ -95,7 +95,7 @@ The //ResultsType// property is used to determine what type of result set you ha
 |= Type |= Meaning |
 | ##SparqlResultsType.Boolean## | Is a Boolean results set (ASK Query results) |
 | ##SparqlResultsType.VariableBindings## | Is a table of results (SELECT Query results) |
-| ##SparqlResultsType.Unknown]] | Unknown results, usually means that nothing has been loaded into the instance yet |
+| ##SparqlResultsType.Unknown## | Unknown results, usually means that nothing has been loaded into the instance yet |
 
 === Result ===
 
