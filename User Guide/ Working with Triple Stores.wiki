@@ -286,12 +286,21 @@ The Library contains the following standard ##ITripleStore## implementations:
 = Standard RDF Dataset Parsers & Writers =
 
 The Library contains the following standard IStoreReader and IStoreWriter implementations for RDF dataset formats:
-NQuadsParser - Parses NQuads
-NQuadsWriter - Writes NQuads
-TriGParser - Parses TriG
-TriGWriter - Writes TriG
-TriXParser - Parses TriX
-TriXWriter - Writes TriX
-Previous: Typed Values and Lists 
-Next: Querying with SPARQL
-Further Reading: Triple Store Integration | Using Virtuoso Universal Server
+
+|= Implementation |= Description |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.NQuadsParser|NQuadsParser]] | Parses NQuads |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.NQuadsWriter|NQuadsWriter]] | Writes NQuads |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TriGParser|TriGParser]] | Parses TriG |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.TriGWriter|TriGWriter]] | Writes TriG |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TriXParser|TriXParser]] | Parses TriX |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.TrixWriter|TriXWriter]] | Writes TriX |
+
+----
+
+= Tutorial Navigation =
+
+The previous topic was [[User Guide/Typed Values and Lists|Typed Values and Lists]], the next topic is [[User Guide/Querying with SPARQL|Querying with SPARQL]]
+
+Users wishing to learn more may wish to jump straight to one of the following pages:
+
+* [[User Guide/Triple Store Integration|Triple Store Integration]]
