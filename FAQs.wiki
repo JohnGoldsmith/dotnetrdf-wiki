@@ -6,17 +6,6 @@ This page details common problems
 
 <<toc>>
 
-* Platform
-** What platforms does dotNetRDF run on?
-* Compilation/Runtime Errors
-** How do I compile dotNetRDF myself
-** My code won't compile because a namespace or class from dotNetRDF was not found?
-** I get a 'No overload for method X has Y arguments message' error or similar
-** I get a 'The Namespace URI for the given Prefix 'http' is not known by the in-scope NamespaceMapper' error or similar
-* Data Errors
-** The data returned from a remote service is not in the format I expected?
-** My query returned no results?
-
 == Platform ==
 
 === What platforms does dotNetRDF run on? ===
