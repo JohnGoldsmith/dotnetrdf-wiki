@@ -145,4 +145,4 @@ Note that if an item exists in the list multiple times all occurrences of it are
 
 = Tutorial Navigation =
 
-The previous topic was [[User Guide/Working with Graphs|Working with Graphs]], the next topic is [[User Guide/ Working with Triple Stores|Working with Triple Stores]]
+The previous topic was [[User Guide/Working with Graphs|Working with Graphs]], the next topic is [[User Guide/Working with Triple Stores|Working with Triple Stores]]
