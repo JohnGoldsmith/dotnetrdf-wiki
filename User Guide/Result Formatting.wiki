@@ -65,3 +65,4 @@ foreach (SparqlResult result in results)
 
   //Do what you want with the extracted string
 }
+}}}
