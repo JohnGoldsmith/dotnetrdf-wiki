@@ -8,17 +8,20 @@ Notes for Advanced Users
 
 Advanced Users may want to take a look at the Advanced SPARQL Operations and SPARQL Optimisation for more details about how our in-memory engine functions.
 
-Update Representation
+= Update Representation =
 
-Classes relating to SPARQL Update can be found in the VDS.RDF.Update namespace. Unlike Queries a SPARQL Update may contain multiple commands to be executed separated by a semicolon (just like DDL for SQL) so the basic representation of a SPARQL Update is the SparqlUpdateCommandSet which represents a set of commands to be executed. This has a Commands property which returns an enumeration of SparqlUpdateCommand instances.
+Classes relating to SPARQL Update can be found in the ##VDS.RDF.Update## namespace. Unlike Queries a SPARQL Update may contain multiple commands to be executed separated by a semicolon (just like DDL for SQL) so the basic representation of a SPARQL Update is the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] which represents a set of commands to be executed. This has a //Commands// property which returns an enumeration of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommand|SparqlUpdateCommand]] instances.
 
-The SparqlUpdateCommand is the abstract base class for all SPARQL Updates. Concrete implementations of this class for each possible SPARQL Update command can be found in the VDS.RDF.Update.Commands namespace.
+The ##SparqlUpdateCommand## is the abstract base class for all SPARQL Updates. Concrete implementations of this class for each possible SPARQL Update command can be found in the ##VDS.RDF.Update.Commands## namespace.
 
-Parsing Updates
+= Parsing Updates =
 
-SPARQL Updates are parsed using the SparqlUpdateParser found in the VDS.RDF.Parsing namespace. Like the parser for SPARQL Queries it supports four parsing methods - Parse(StreamReader reader), ParseFromFile(String file), ParseFromString(SparqlParameterizedString update) and ParseFromString(String update) - which all return a SparqlUpdateCommandSet.
+SPARQL Updates are parsed using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlUpdateParser|SparqlUpdateParser]] found in the ##VDS.RDF.Parsing## namespace. Like the parser for SPARQL Queries it supports four parsing methods - //Parse(StreamReader reader)//, //ParseFromFile(String file)//, //ParseFromString(SparqlParameterizedString update)// and //ParseFromString(String update)// - which all return a ##SparqlUpdateCommandSet##.
 
 This is fairly simply used like so:
+
+{{{
+#!csharp
 
 using System;
 using VDS.RDF;
@@ -43,13 +46,18 @@ public class SparqlUpdateParsingExample
 		//Now go ahead and do what you want with the Updates...
 	}
 }
-Applying SPARQL Updates
+}}}
 
-There are multiple ways to apply SPARQL Updates which we'll cover here but the most commonly used way which we recommend is to use an instance of ISparqlUpdateProcessor. It provides methods for processing an entire command set or specific commands.
+= Applying SPARQL Updates =
 
-In-Memory Updates
+There are multiple ways to apply SPARQL Updates which we'll cover here but the most commonly used way which we recommend is to use an instance of ##ISparqlUpdateProcessor##. It provides methods for processing an entire command set or specific commands.
+
+== In-Memory Updates ==
 
 If your data is purely in-memory then you will want to use the LeviathanUpdateProcessor like so:
+
+{{{
+#!csharp
 
 using System;
 using System.Linq;
@@ -90,13 +98,18 @@ public class LeviathanUpdateProcessorExample
 		}
 	}
 }
-Generic Updates
+}}}
 
-The other really useful processor is the GenericUpdateProcessor which allows you to apply updates to an underlying IStorageProvider (formally known as IGenericIOManager) instance.
+== Generic Updates ==
+
+The other really useful processor is the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.GenericUpdateProcessor|GenericUpdateProcessor]] which allows you to apply updates to an underlying [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] instance.
 
 The neat feature of this processor is that it is capable of applying SPARQL Updates even if the underlying store does not support them itself. If the underlying store does support SPARQL Update then the processor delegates the processing to the underlying store.
 
-Note: This is almost certainly less efficient than using a stores own implementation and depending on the exact capabilities of the underlying store not all Updates can be applied. If the underlying store provides its own implementation we always prefer this over our own.
+**Note:** This is almost certainly less efficient than using a stores own implementation and depending on the exact capabilities of the underlying store not all Updates can be applied. If the underlying store provides its own implementation we always prefer this over our own when using the ##GenericUpdateProcessor##
+
+{{{
+#!csharp
 
 using System;
 using System.Linq;
@@ -137,13 +150,18 @@ public class GenericUpdateProcessorExample
 		}
 	}
 }
-Other Processors
+}}}
 
-We also provide a RemoteUpdateProcessor which is a wrapper around a SparqlRemoteUpdateEndpoint instance and a SimpleUpdateProcessor which is a wrapper around a IUpdateableTripleStore instace.
+== Remote Updates ==
 
-Sending Updates to Remote Endpoints
+We also provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.RemoteUpdateProcessor|RemoteUpdateProcessor]] which is a wrapper around a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlRemoteUpdateEndpoint|SparqlRemoteUpdateEndpoint]] instance.  This allows for updates to be processed by a remote SPARQL Update endpoint.
 
-Just like SPARQL Queries you may wish to send SPARQL Updates to remote servers. To do this we provide the SparqlRemoteUpdateEndpoint class, it provides an Update(String sparqlUpdate) method which is used to send an update to the remote endpoint plus various methods and properties associated with configuring credentials and proxies for the request.
+=== Sending Updates to Remote Endpoints ===
+
+Just like SPARQL Queries you may wish to send SPARQL Updates to remote servers. To do this we provide the ##SparqlRemoteUpdateEndpoint## class, it provides an //Update(String sparqlUpdate)// method which is used to send an update to the remote endpoint plus various methods and properties associated with configuring credentials and proxies for the request.
+
+{{{
+#!csharp
 
 using System;
 using VDS.RDF;
@@ -168,7 +186,17 @@ public class RemoteSparqlUpdateExample
 		endpoint.Update(update.ToString());
 	}
 }
-The above example creates a SPARQL Update containing two commands (a COPY then a DELETE) which is sent to a Remote Endpoint. Invoking the Update(String update) method may throw an error if the remote endpoint refuses to process your update request for whatever reason (lack of permissions, malformed update etc).
+}}}
 
-Previous: Querying with SPARQL
-Further Reading: Querying with SPARQL, Configuration API - Update Processors
+The above example creates a SPARQL Update containing two commands (a COPY then a DELETE) which is sent to a Remote Endpoint. Invoking the //Update(String update)// method may throw an error if the remote endpoint refuses to process your update request for whatever reason (lack of permissions, malformed update etc).
+
+----
+
+= Tutorial Navigation =
+
+You've reached the end of the basic tutorial, the previous topic was [[User Guide/Querying with SPARQL|Querying with SPARQL]].  Go back to the [[User Guide]] to explore more topics.
+
+Users wishing to learn more may wish to jump straight to the following topics:
+
+* [[User Guide/Advanced SPARQL|Advanced SPARQL]]
+* [[User Guide/Configuration API/Update Processors|Configuration API - Update Processors]]
