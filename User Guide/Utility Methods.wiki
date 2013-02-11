@@ -81,7 +81,7 @@ Note that this method is only used when it is necessary to resolve a relative UR
 
 == ResolveQName ==
 
-The //ResolveQName(String qname, INamespaceMapper nsmap, Uri baseUri)// function is used to resolve a prefixed name to a URI in the context of the given [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INamespaceMapper]] and Base URI. This is primarily used internally in some of the Parsers and in ##IUriNode## creation.
+The //ResolveQName(String qname, INamespaceMapper nsmap, Uri baseUri)// function is used to resolve a prefixed name to a URI in the context of the given [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INamespaceMapper|INamespaceMapper]] and Base URI. This is primarily used internally in some of the Parsers and in ##IUriNode## creation.
 
 == ResolveUri ==
 
