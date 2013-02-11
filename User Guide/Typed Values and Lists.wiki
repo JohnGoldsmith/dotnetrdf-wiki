@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Typed Values and Lists]]
+[[Home]] > [[User Guide]] > [[User Guide/Typed Values and Lists|Typed Values and Lists]]
 
 = Typed Valued and Lists =
 
