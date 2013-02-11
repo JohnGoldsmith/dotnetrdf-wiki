@@ -20,6 +20,48 @@ INodeFormatter formatter = new TurtleFormatter();
 
 foreach (SparqlResult result in results)
 {
-
+   Console.WriteLine(result.ToString(formatter));
 }
 }}}
+
+The above will print out results using Turtle formatting for the terms, exact formatting will vary depending on the formatter used and arguments passed to the constructor.
+
+== Extracting Values as Strings ==
+
+Sometimes you may prefer to extract the actual values from the nodes as strings e.g.
+
+{{{
+#!csharp
+
+//Assume we have our results in the variable results
+
+foreach (SparqlResult result in results)
+{
+  INode n;
+  String data;
+  if (result.TryGetValue("var", out n))
+  {
+    switch (n.NodeType)
+    {
+      case NodeType.Uri:
+        data = ((IUriNode)n).Uri.AbsoluteUri;
+        break;
+      case NodeType.Blank:
+        data = ((IBlankNode)n).Label;
+        break;
+      case NodeType.Literal:
+        //You may want to inspect the DataType and Language properties and generate
+        //a different string here
+        data = ((ILiteralNode)n).Value;
+        break;
+      default:
+        throw new RdfOutputException("Unexpected Node Type");
+    }
+  }
+  else
+  {
+    data = String.Empty;
+  }
+
+  //Do what you want with the extracted string
+}
