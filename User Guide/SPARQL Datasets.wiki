@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/SPARQL Datasets|SPARQL Datasets]]
+[[Home]] > [[User Guide]] > [[User Guide/Advanced SPARQL|Advanced SPARQL]] > [[User Guide/SPARQL Datasets|SPARQL Datasets]]
 
 = SPARQL Datasets =
 
