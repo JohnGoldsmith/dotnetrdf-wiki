@@ -7,6 +7,6 @@ This portion of the user guide is dedicated to advanced SPARQL topics, if you we
 Currently the following topics are covered:
 
 * [[User Guide/SPARQL Datasets|SPARQL Datasets]]
-* [[User Guide/Results Formatting|Results Formatting]]
+* [[User Guide/Result Formatting|Result Formatting]]
 * [[User Guide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
 * [[User Guide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
