@@ -1,0 +1,13 @@
+= Broken TOC =
+
+This is a page to demonstrate that the bug with the TOC macro is not fully resolved.
+
+I am using the macro like so:
+
+{{{
+<<toc UserGuide/Storage/>>
+}}}
+
+Which should link to all pages within that directory, however the links get extra segments added because they are calculated from the current page not the wiki root.
+
+<<toc UserGuide/Storage/>>
