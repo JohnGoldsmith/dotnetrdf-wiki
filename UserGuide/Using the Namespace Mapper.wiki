@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Using the Namespace Mapper|Using the Namespace Mapper]]
+[[Home]] > [[User Guide]] > [[UserGuide/Using the Namespace Mapper|Using the Namespace Mapper]]
 
 = Using the Namespace Mapper =
 

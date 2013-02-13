@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Hello World|Hello World]]
+[[Home]] > [[User Guide]] > [[UserGuide/Hello World|Hello World]]
 
 = Hello World with dotNetRDF =
 
@@ -153,15 +153,15 @@ public class HelloWorld
 
 == Compiler/Runtime Errors ==
 
-If the simple example above gives you compiler/runtime errors then it is likely you haven't set up your environment correctly. Please refer to the [[User Guide/Getting Started|Getting Started]] document for more detail but the main thing to watch out for is that the default build of dotNetRDF targets .Net 4.0 Full while VS2010 will default most new projects to .Net 4.0 Client Profile. If you got dotNetRDF via NuGet then you should get the correct version though NuGet doesn't always properly cope with you changing the target framework version after you have installed a package.
+If the simple example above gives you compiler/runtime errors then it is likely you haven't set up your environment correctly. Please refer to the [[UserGuide/Getting Started|Getting Started]] document for more detail but the main thing to watch out for is that the default build of dotNetRDF targets .Net 4.0 Full while VS2010 will default most new projects to .Net 4.0 Client Profile. If you got dotNetRDF via NuGet then you should get the correct version though NuGet doesn't always properly cope with you changing the target framework version after you have installed a package.
 
 If you really can't get this working you can ask for [[Support]] but please try the obvious things first.
 
 = Tutorial Navigation =
 
-The next topic in the tutorial is [[User Guide/Reading RDF|Reading RDF]], the previous topic was the [[User Guide/Library Overview|Library Overview]].
+The next topic in the tutorial is [[UserGuide/Reading RDF|Reading RDF]], the previous topic was the [[UserGuide/Library Overview|Library Overview]].
 
 Users who wish to learn more may wish to jump straight to the following topics:
 
-* [[User Guide/Working with Graphs|Working with Graphs]]
-* [[User Guide/Writing RDF|Writing RDF]]
+* [[UserGuide/Working with Graphs|Working with Graphs]]
+* [[UserGuide/Writing RDF|Writing RDF]]

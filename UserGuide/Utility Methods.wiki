@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Utility Methods|Utility Methods]]
+[[Home]] > [[User Guide]] > [[UserGuide/Utility Methods|Utility Methods]]
 
 = Utility Methods =
 
@@ -6,7 +6,7 @@ The library provides a number of useful Utility Methods embodied in a single sta
 
 == CopyNode ==
 
-The //CopyNode()// method is designed to be use to copy nodes between graphs. As explained in the [[User Guide/Library Overview|Library Overview]] when you create a triple all the nodes of that triple must come from the same graph. When you are working with multiple graphs and combining the information you may need to assert information from one graph into the other, the following example demonstrates this:
+The //CopyNode()// method is designed to be use to copy nodes between graphs. As explained in the [[UserGuide/Library Overview|Library Overview]] when you create a triple all the nodes of that triple must come from the same graph. When you are working with multiple graphs and combining the information you may need to assert information from one graph into the other, the following example demonstrates this:
 
 {{{
 #!csharp
@@ -57,7 +57,7 @@ The //CopyNode()// method may also be invoked with a third boolean parameter whi
 
 The //CopyTriple()// method is similar to //CopyNode()// except it copies entire triples from one graph to another. Usage is functionally equivalent to the example for //CopyNode()// shown above.
 
-**Note:** Both of these methods have [[User Guide/Extension Methods|Extension Methods]] defined which invoke them, in the above example the call to //Tools.CopyNode()// could be replaced with the following and still have the same meaning:
+**Note:** Both of these methods have [[UserGuide/Extension Methods|Extension Methods]] defined which invoke them, in the above example the call to //Tools.CopyNode()// could be replaced with the following and still have the same meaning:
 
 {{{
 #!csharp

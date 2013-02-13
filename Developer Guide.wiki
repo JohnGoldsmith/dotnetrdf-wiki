@@ -12,20 +12,20 @@ The [[Architecture]] section covers the architecture of dotNetRDF, this includes
 
 The [[SPARQL]] section covers non-architectural topics around our SPARQL engine such as optimization and extensions.
 
-* [[Developer Guide/SPARQL/SPARQL Extensions|SPARQL Extensions]]
-* [[Developer Guide/SPARQL/Implementing Custom Optimizers|Implementing Custom Optimizers]]
+* [[DeveloperGuide/SPARQL/SPARQL Extensions|SPARQL Extensions]]
+* [[DeveloperGuide/SPARQL/Implementing Custom Optimizers|Implementing Custom Optimizers]]
 
 == General Topics ==
 
 This section of the guide covers topics pertaining to advanced functionality of dotNetRDF.
 
-* [[Developer Guide/URI Interning|URI Interning]]
-* [[Developer Guide/Notes for Silverlight and WP7 Developers|Notes for Silverlight and WP7 Developers]]
+* [[DeveloperGuide/URI Interning|URI Interning]]
+* [[DeveloperGuide/Notes for Silverlight and WP7 Developers|Notes for Silverlight and WP7 Developers]]
 
 == Developing for dotNetRDF ==
 
 This section covers how to contribute to dotNetRDF and is primarily intended for existing/prospective contributors.
 
-* [[Developer Guide/Code Style|Code Style]]
-* [[Developer Guide/Deprecation Policy|Deprecation Policy]]
-* [[Developer Guide/Test Environment|Test Environment]]
+* [[DeveloperGuide/Code Style|Code Style]]
+* [[DeveloperGuide/Deprecation Policy|Deprecation Policy]]
+* [[DeveloperGuide/Test Environment|Test Environment]]

@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Writing RDF|Writing RDF]]
+[[Home]] > [[User Guide]] > [[UserGuide/Writing RDF|Writing RDF]]
 
 = Writing RDF with dotNetRDF =
 
@@ -23,7 +23,7 @@ Currently dotNetRDF supports writing Graphs in the following formats:
 ** CSV
 ** TSV
 
-To learn about how to save Graphs to forms of Storage other than files on disk see [[User Guide/Working with Graphs|Working with Graphs]] and for information on saving Triple Stores see [[User Guide/Working with Triple Stores|Working with Triple Stores]]
+To learn about how to save Graphs to forms of Storage other than files on disk see [[UserGuide/Working with Graphs|Working with Graphs]] and for information on saving Triple Stores see [[UserGuide/Working with Triple Stores|Working with Triple Stores]]
 
 == Basic Usage ==
 
@@ -179,8 +179,8 @@ These are the standard Writer classes contained in the library:
 
 = Tutorial Navigation =
 
-The next topic is [[User Guide/Working with Graphs|Working with Graphs]], the previous topic was [[User Guide/Reading RDF|Reading RDF]].
+The next topic is [[UserGuide/Working with Graphs|Working with Graphs]], the previous topic was [[UserGuide/Reading RDF|Reading RDF]].
 
 Users wishing to learn more may wish to jump straight to one of the following topics:
 
-* [[User Guide/Working with Triple Stores|Working with Triple Stores]]
+* [[UserGuide/Working with Triple Stores|Working with Triple Stores]]

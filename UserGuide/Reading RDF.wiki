@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Reading RDF|Reading RDF]]
+[[Home]] > [[User Guide]] > [[UserGuide/Reading RDF|Reading RDF]]
 
 = Reading RDF with dotNetRDF =
 
@@ -239,9 +239,9 @@ These are the standard parser classes contained in the Library:
 
 = Tutorial Navigation =
 
-The next topic is [[User Guide/Writing RDF|Writing RDF]], the previous topic was [[User Guide/Hello World|Hello World]].
+The next topic is [[UserGuide/Writing RDF|Writing RDF]], the previous topic was [[UserGuide/Hello World|Hello World]].
 
 Users may wish to jump to the following topics to learn more:
 
-* [[User Guide/Working with Graphs|Working with Graphs]]
-* [[User Guide/Working with Triple Stores|Working with Triple Stores]]
+* [[UserGuide/Working with Graphs|Working with Graphs]]
+* [[UserGuide/Working with Triple Stores|Working with Triple Stores]]

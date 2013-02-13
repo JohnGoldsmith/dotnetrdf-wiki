@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Event Model|Event Model]]
+[[Home]] > [[User Guide]] > [[UserGuide/Event Model|Event Model]]
 
 = Event Model =
 

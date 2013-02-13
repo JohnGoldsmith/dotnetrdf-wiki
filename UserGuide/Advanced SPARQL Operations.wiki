@@ -1,8 +1,8 @@
-[[Home]] > [[User Guide]] > [[User Guide/Advanced SPARQL|Advanced SPARQL]] > [[User Guide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
+[[Home]] > [[User Guide]] > [[UserGuide/Advanced SPARQL|Advanced SPARQL]] > [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
 
 = Advanced SPARQL Operations =
 
-This article details advanced features of our of SPARQL implementation, if you are just interesting in using basic SPARQL see [[User Guide/Querying with SPARQL|Querying with SPARQL]] and [[User Guide/Updating with SPARQL|Updating with SPARQL]].
+This article details advanced features of our of SPARQL implementation, if you are just interesting in using basic SPARQL see [[UserGuide/Querying with SPARQL|Querying with SPARQL]] and [[UserGuide/Updating with SPARQL|Updating with SPARQL]].
 
 On this page we cover the following features:
 
@@ -37,7 +37,7 @@ The local optimiser setting is controlled by setting the //QueryOptimiser// prop
 
 === HTTP Handler Configuration ===
 
-If you are configuring a SPARQL endpoint via our [[User Guide/Configuration API|Configuration API]] you can configure the Query Optimiser to use via the ##dnr:queryOptimiser## property. See [[User Guide/Configuration /HTTP Handlers|HTTP Handlers]] and [[User Guide/Configuration/Optimizers|Configuration API API - Optimizers]] for details on how to do this.
+If you are configuring a SPARQL endpoint via our [[UserGuide/Configuration API|Configuration API]] you can configure the Query Optimiser to use via the ##dnr:queryOptimiser## property. See [[UserGuide/Configuration /HTTP Handlers|HTTP Handlers]] and [[UserGuide/Configuration/Optimizers|Configuration API API - Optimizers]] for details on how to do this.
 
 == Algebra Optimisers ==
 
@@ -63,7 +63,7 @@ The local optimisers are changed by setting the //AlgebraOptimisers// property o
 
 === HTTP Handler Configuration ===
 
-If you are configuring a SPARQL endpoint via our [[User Guide/Configuration API|Configuration API]] you can configure the Algebra Optimisers to use via the ##dnr:algebraOptimiser## property. See [[User Guide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]] and [[User Guide/Configuration/Optimizers|Configuration API - Optimizers]] for details on how to do this.
+If you are configuring a SPARQL endpoint via our [[UserGuide/Configuration API|Configuration API]] you can configure the Algebra Optimisers to use via the ##dnr:algebraOptimiser## property. See [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]] and [[UserGuide/Configuration/Optimizers|Configuration API - Optimizers]] for details on how to do this.
 
 = Thread-Safety =
 

@@ -1,10 +1,10 @@
-[[Home]] > [[User Guide]] > [[User Guide/Working with Triple Stores|Working with Triple Stores]]
+[[Home]] > [[User Guide]] > [[UserGuide/Working with Triple Stores|Working with Triple Stores]]
 
 = Working with Triple Stores =
 
-Triples Stores in dotNetRDF are used to represent collections of graphs and to allow you to work with larger quantities of RDF easily. As stated in the [[User Guide/Library Overview]] our triple stores are designed to be less tangible than graphs since a triple store does not necessarily have to be in-memory and may simply represent an interface to or a partial view on some actual underlying store.
+Triples Stores in dotNetRDF are used to represent collections of graphs and to allow you to work with larger quantities of RDF easily. As stated in the [[UserGuide/Library Overview]] our triple stores are designed to be less tangible than graphs since a triple store does not necessarily have to be in-memory and may simply represent an interface to or a partial view on some actual underlying store.
 
-**Note:** This document primarily discusses Triple Stores in terms of their representation in-memory within the library. For details of working with external Triple Stores please see [[User Guide/Triple Store Integration|Triple Store Integration]]
+**Note:** This document primarily discusses Triple Stores in terms of their representation in-memory within the library. For details of working with external Triple Stores please see [[UserGuide/Triple Store Integration|Triple Store Integration]]
 
 = Basic Properties =
 
@@ -240,7 +240,7 @@ public class PersistentTripleStoreExample
 Often you want the information you place into an in-memory Triple Store to be persisted over time and be able to load/save that triple store as required. Currently we provide the means to save/load a Triple Store in the following ways:
 
 * As a file in a RDF dataset format - TriG, TriX or NQuads
-* As explained in [[User Guide/Working with Graphs|Working with Graphs]] you can also load/save individual Graphs from arbitrary stores for which there is an ##IStorageProvider## defined.
+* As explained in [[UserGuide/Working with Graphs|Working with Graphs]] you can also load/save individual Graphs from arbitrary stores for which there is an ##IStorageProvider## defined.
 
 == RDF Dataset Storage ==
 
@@ -299,8 +299,8 @@ The Library contains the following standard ##IStoreReader## and ##IStoreWriter#
 
 = Tutorial Navigation =
 
-The previous topic was [[User Guide/Typed Values and Lists|Typed Values and Lists]], the next topic is [[User Guide/Querying with SPARQL|Querying with SPARQL]]
+The previous topic was [[UserGuide/Typed Values and Lists|Typed Values and Lists]], the next topic is [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
 
 Users wishing to learn more may wish to jump straight to one of the following pages:
 
-* [[User Guide/Triple Store Integration|Triple Store Integration]]
+* [[UserGuide/Triple Store Integration|Triple Store Integration]]

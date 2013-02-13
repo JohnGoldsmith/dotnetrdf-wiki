@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Library Overview|Library Overview]]
+[[Home]] > [[User Guide]] > [[UserGuide/Library Overview|Library Overview]]
 
 = dotNetRDF Library Overview =
 
@@ -191,10 +191,10 @@ If you have a Store which is a representation of some backing Store which provid
 
 = Tutorial Navigation =
 
-The next topic in the tutorial is [[User Guide/Hello World|Hello World]], the previous topic was [[User Guide/Getting Started|Getting Started]].
+The next topic in the tutorial is [[UserGuide/Hello World|Hello World]], the previous topic was [[UserGuide/Getting Started|Getting Started]].
 
 Users wishing to learn more may want to jump straight to one of the following topics:
 
-* [[User Guide/Working with Graphs|Working with Graphs]]
-* [[User Guide/Working with Triple Stores|Working with Triple Stores]]
-* [[User Guide/Equality and Comparison|Equality and Comparison]]
+* [[UserGuide/Working with Graphs|Working with Graphs]]
+* [[UserGuide/Working with Triple Stores|Working with Triple Stores]]
+* [[UserGuide/Equality and Comparison|Equality and Comparison]]

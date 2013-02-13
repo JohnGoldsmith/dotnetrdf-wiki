@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Storage|Storage]] > [[User Guide/Storage/Providers|Storage Providers]]
+[[Home]] > [[User Guide]] > [[UserGuide/Storage|Storage]] > [[UserGuide/Storage/Providers|Storage Providers]]
 
 = Storage Providers =
 
@@ -7,15 +7,15 @@ This area of the [[User Guide]] covers the available [[http://www.dotnetrdf.org/
 The available providers are as follows:
 
 |= Provider |= Description |
-| [[User Guide/Storage/AllegroGraph|Allegro Graph]] | AllegroGraph 3.x and 4.x |
-| [[User Guide/Storage/DatasetFile|Dataset Files]] | Read-only view over a NQuads/TriG/TriX file |
-| [[User Guide/Storage/4store|4store]] | 4store |
-| [[User Guide/Storage/Fuseki|Fuseki]] | Apache Jena Fuseki, access any Jena based store via Fuseki |
-| [[User Guide/Storage/InMemory|In-Memory]] | In-Memory store |
-| [[User Guide/Storage/Sesame|Sesame]] | Any Sesame based store is supported e.g. Sesame, OWLIM, BigData |
-| [[User Guide/Storage/SPARQL Query|SPARQL Query Endpoints]] | Any SPARQL Query endpoint |
-| [[User Guide/Storage/SPARQL Graph Store|SPARQL Graph Store Protocol]] | Any SPARQL Graph Store Protocol endpoint |
-| [[User Guide/Storage/Stardog|Stardog]] | Stardog |
+| [[UserGuide/Storage/AllegroGraph|Allegro Graph]] | AllegroGraph 3.x and 4.x |
+| [[UserGuide/Storage/DatasetFile|Dataset Files]] | Read-only view over a NQuads/TriG/TriX file |
+| [[UserGuide/Storage/4store|4store]] | 4store |
+| [[UserGuide/Storage/Fuseki|Fuseki]] | Apache Jena Fuseki, access any Jena based store via Fuseki |
+| [[UserGuide/Storage/InMemory|In-Memory]] | In-Memory store |
+| [[UserGuide/Storage/Sesame|Sesame]] | Any Sesame based store is supported e.g. Sesame, OWLIM, BigData |
+| [[UserGuide/Storage/SPARQL Query|SPARQL Query Endpoints]] | Any SPARQL Query endpoint |
+| [[UserGuide/Storage/SPARQL Graph Store|SPARQL Graph Store Protocol]] | Any SPARQL Graph Store Protocol endpoint |
+| [[UserGuide/Storage/Stardog|Stardog]] | Stardog |
 
 There are also some useful wrappers available:
 

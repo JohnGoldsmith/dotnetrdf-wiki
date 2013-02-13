@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Typed Values and Lists|Typed Values and Lists]]
+[[Home]] > [[User Guide]] > [[UserGuide/Typed Values and Lists|Typed Values and Lists]]
 
 = Typed Valued and Lists =
 
@@ -145,4 +145,4 @@ Note that if an item exists in the list multiple times all occurrences of it are
 
 = Tutorial Navigation =
 
-The previous topic was [[User Guide/Working with Graphs|Working with Graphs]], the next topic is [[User Guide/Working with Triple Stores|Working with Triple Stores]]
+The previous topic was [[UserGuide/Working with Graphs|Working with Graphs]], the next topic is [[UserGuide/Working with Triple Stores|Working with Triple Stores]]

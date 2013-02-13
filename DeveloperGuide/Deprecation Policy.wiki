@@ -1,4 +1,4 @@
-[[Home]] > [[Developer Guide]] > [[Developer Guide/Deprecation Policy|Deprecation Policy]]
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/Deprecation Policy|Deprecation Policy]]
 
 = Deprecation Policy =
 

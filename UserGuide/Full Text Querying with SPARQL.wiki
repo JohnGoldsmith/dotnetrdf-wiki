@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Advanced SPARQL|Advanced SPARQL]] > [[User Guide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
+[[Home]] > [[User Guide]] > [[UserGuide/Advanced SPARQL|Advanced SPARQL]] > [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
 
 = Full Text Querying with SPARQL =
 
@@ -233,7 +233,7 @@ SELECT * WHERE { ?match pf:textMatch ( "text" 0.75) . }
 
 == Use with SPARQL Endpoints ==
 
-You can use Full Text Querying with SPARQL Endpoints by configuring it via the [[User Guide/Configuration API|Configuration API]], see [[User Guide/Configuration/Full Text Query|Configuration API - Full Text Query]] for more details.
+You can use Full Text Querying with SPARQL Endpoints by configuring it via the [[UserGuide/Configuration API|Configuration API]], see [[UserGuide/Configuration/Full Text Query|Configuration API - Full Text Query]] for more details.
 
 = Keeping an index in sync with Datasets =
 

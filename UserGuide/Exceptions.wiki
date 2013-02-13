@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Exceptions|Exceptions]]
+[[Home]] > [[User Guide]] > [[UserGuide/Exceptions|Exceptions]]
 
 = Exceptions =
 
@@ -27,7 +27,7 @@ The ##RdfException## is the most general exception class and is used to represen
 
 == DotNetRdfConfigurationException ==
 
-The ##DotNetRdfConfigurationException## is an exception that may occur when utilizing the [[User Guide/Configuration API|Configuration API]].  Typically it occurs due to malformed configuration information.
+The ##DotNetRdfConfigurationException## is an exception that may occur when utilizing the [[UserGuide/Configuration API|Configuration API]].  Typically it occurs due to malformed configuration information.
 
 == RdfParseException ==
 

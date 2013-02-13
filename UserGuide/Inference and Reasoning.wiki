@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Inference and Reasoning|Inference and Reasoning]]
+[[Home]] > [[User Guide]] > [[UserGuide/Inference and Reasoning|Inference and Reasoning]]
 
 = Inference and Reasoning =
 
@@ -157,8 +157,8 @@ Current implementations store the inferred information in a special Graph inside
 
 Currently there is no formal API support in the library for using inference with 3rd party stores, primarily because this feature is not available in many stores and there is not currently a standardised mechanism for specifying that you wish to use inference with a store.
 
-However some stores such as [[http://stardog.com|StarDog]] do support reasoning when making queries, see [[User Guide/Triple Store Integration|Triple Store Integration]] for more information.
+However some stores such as [[http://stardog.com|StarDog]] do support reasoning when making queries, see [[UserGuide/Triple Store Integration|Triple Store Integration]] for more information.
 
 = Reasoners and SPARQL Endpoints =
 
-Please see [[User Guide/Configuration API/Reasoners|Configuration API - Reasoners]] for information on how to specify reasoner configuration and how to attach them to HTTP Handlers.
+Please see [[UserGuide/Configuration API/Reasoners|Configuration API - Reasoners]] for information on how to specify reasoner configuration and how to attach them to HTTP Handlers.

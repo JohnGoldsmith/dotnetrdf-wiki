@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Querying with SPARQL|Querying with SPARQL]]
+[[Home]] > [[User Guide]] > [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
 
 = Querying with SPARQL =
 
@@ -6,7 +6,7 @@ SPARQL is the standard query language for the Semantic Web and can be used to qu
 
 If you want to learn about SPARQL you should take a look at the [[http://www.w3.org/TR/sparql11-query/|SPARQL Query Language Specification]] which provides examples of all the various query forms as well as the full formal specifcation.
 
-Advanced Users may want to take a look at the [[User Guide/Advanced SPARQL|Advanced SPARQL]] and [[Developer Guide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
+Advanced Users may want to take a look at the [[UserGuide/Advanced SPARQL|Advanced SPARQL]] and [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
 
 When using SPARQL you'll want to import the ##VDS.RDF.Query## namespace using the following statement at the start of your code files:
 
@@ -227,9 +227,9 @@ public class LeviathanQueryProcessorExample
 
 A key thing to notice here is that we create a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]] instance which wraps our ##IInMemoryQueryableStore## instance. This dataset allows us to control which graph is used as the default graph for queries or even to use the union of all graphs as the default graph.
 
-In this example we have only printed results in full to the Console, to learn more about how to format results for display see [[User Guide/Result Formatting|Result Formatting]].
+In this example we have only printed results in full to the Console, to learn more about how to format results for display see [[UserGuide/Result Formatting|Result Formatting]].
 
-A common error with making queries is that queries by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing queries may yield no results depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[User Guide/SPARQL Datasets|SPARQL Datasets]] page for discussions of configuring different kinds of dataset.
+A common error with making queries is that queries by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing queries may yield no results depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[UserGuide/SPARQL Datasets|SPARQL Datasets]] page for discussions of configuring different kinds of dataset.
 
 === Available Query Processors ===
 
@@ -289,9 +289,9 @@ public class SparqlRemoteEndpointExample
 
 == Native Query ==
 
-We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the ##INativelyQueryableStore## interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[User Guide/Working with Triple Stores|Working with Triple Stores]] page you'll see an example of using the ##PersistentTripleStore## class to query any of our supported stores.
+We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the ##INativelyQueryableStore## interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[UserGuide/Working with Triple Stores|Working with Triple Stores]] page you'll see an example of using the ##PersistentTripleStore## class to query any of our supported stores.
 
-Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] interface  which most of our available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] implementations also support, please see the [[User Guide/Triple Store Integration|Triple Store Integration]] page for an example of this.
+Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] interface  which most of our available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] implementations also support, please see the [[UserGuide/Triple Store Integration|Triple Store Integration]] page for an example of this.
 
 == Direct Triple Store Query ==
 
@@ -353,7 +353,7 @@ The return type from the //ExecuteQuery()// method is an ##Object## since it may
 
 = Loading/Saving Results =
 
-A ##SparqlResultSet## may be loaded/saved using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader|ISparqlResultsReader]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter|ISparqlResultsWriter]] interfaces respectively. These are functionally very similar to the ##IRdfReader## and ##IRdfWriter## interfaces described on the [[User Guide/Reading RDF|Reading RDF]] and [[User Guide/Writing RDF|Writing RDF]] pages.
+A ##SparqlResultSet## may be loaded/saved using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader|ISparqlResultsReader]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter|ISparqlResultsWriter]] interfaces respectively. These are functionally very similar to the ##IRdfReader## and ##IRdfWriter## interfaces described on the [[UserGuide/Reading RDF|Reading RDF]] and [[UserGuide/Writing RDF|Writing RDF]] pages.
 
 A quick example is as follows:
 
@@ -390,10 +390,10 @@ Note that one important difference between reading SPARQL results versus reading
 
 = Tutorial Navigation =
 
-The previous topic was [[User Guide/Working with Triple Stores|Working with Triple Stores]], the next topic is [[User Guide/Updating with SPARQL|Updating with SPARQL]]
+The previous topic was [[UserGuide/Working with Triple Stores|Working with Triple Stores]], the next topic is [[UserGuide/Updating with SPARQL|Updating with SPARQL]]
 
 Users wishing to learn more may wish to jump straight to the following topics:
-* [[User Guide/Advanced SPARQL|Advanced SPARQL]]
-** [[User Guide/Results Formatting|Results Formatting]]
-* [[User Guide/Triple Store Integration|Triple Store Integration]] 
-* [[User Guide/Configuration API/Query Processors|Configuration API - Query Processor]]
+* [[UserGuide/Advanced SPARQL|Advanced SPARQL]]
+** [[UserGuide/Results Formatting|Results Formatting]]
+* [[UserGuide/Triple Store Integration|Triple Store Integration]] 
+* [[UserGuide/Configuration API/Query Processors|Configuration API - Query Processor]]

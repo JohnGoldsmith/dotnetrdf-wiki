@@ -10,16 +10,16 @@ If you are already an experienced dotNetRDF user you may wish to look at the [[D
 
 This series of pages aims to introduce you to the core concepts of dotNetRDF and get you up and running with the library, reading in order is suggested for new users:
 
-# [[User Guide/Getting Started|Getting Started]]
-# [[User Guide/Library Overview|Library Overview]]
-# [[User Guide/Hello World|Hello World]]
-# [[User Guide/Reading RDF|Reading RDF]]
-# [[User Guide/Writing RDF|Writing RDF]]
-# [[User Guide/Working with Graphs|Working with Graphs]]
-# [[User Guide/Typed Values and Lists|Typed Values and Lists]]
-# [[User Guide/Working with Triple Stores|Working with Triple Stores]]
-# [[User Guide/Querying with SPARQL|Querying with SPARQL]]
-# [[User Guide/Updating with SPARQL|Updating with SPARQL]]
+# [[UserGuide/Getting Started|Getting Started]]
+# [[UserGuide/Library Overview|Library Overview]]
+# [[UserGuide/Hello World|Hello World]]
+# [[UserGuide/Reading RDF|Reading RDF]]
+# [[UserGuide/Writing RDF|Writing RDF]]
+# [[UserGuide/Working with Graphs|Working with Graphs]]
+# [[UserGuide/Typed Values and Lists|Typed Values and Lists]]
+# [[UserGuide/Working with Triple Stores|Working with Triple Stores]]
+# [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
+# [[UserGuide/Updating with SPARQL|Updating with SPARQL]]
 
 == General Topics == 
 
@@ -27,38 +27,38 @@ If you want to look up a specific namespace, class or method in the API please s
 
 The following pages cover some general topics about the library:
 
-* [[User Guide/Exceptions|Exceptions]]
-* [[User Guide/Equality and Comparison|Equality and Comparison]]
-* [[User Guide/Event Model|Event Model]]
-* [[User Guide/Utility Methods|Utility Methods]]
-* [[User Guide/Extension Methods|Extension Methods]]
-* [[User Guide/Using the Namespace Mapper|Using the Namespace Mapper]]
+* [[UserGuide/Exceptions|Exceptions]]
+* [[UserGuide/Equality and Comparison|Equality and Comparison]]
+* [[UserGuide/Event Model|Event Model]]
+* [[UserGuide/Utility Methods|Utility Methods]]
+* [[UserGuide/Extension Methods|Extension Methods]]
+* [[UserGuide/Using the Namespace Mapper|Using the Namespace Mapper]]
 
 == Ontologies, Inference and Reasoning ==
 
 Please see the following for documentation of ontology, inference and reasoning support:
 
-* [[User Guide/Ontology API|Ontology API]]
-* [[User Guide/Inference and Reasoning|Inference and Reasoning]]
+* [[UserGuide/Ontology API|Ontology API]]
+* [[UserGuide/Inference and Reasoning|Inference and Reasoning]]
 
 == ASP.Net Integration ==
 
-Please see the [[User Guide/ASP.Net Integration|ASP.Net Integration]] page for an overview of how we integrate into ASP.Net applications, or you can jump to specific topics below:
+Please see the [[UserGuide/ASP.Net Integration|ASP.Net Integration]] page for an overview of how we integrate into ASP.Net applications, or you can jump to specific topics below:
 
-* [[User Guide/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
-* [[User Guide/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]]
+* [[UserGuide/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
+* [[UserGuide/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]]
 
 == Advanced APIs ==
 
 The following documentation covers what are considered advanced topics but which may still be of value to everyday users of dotNetRDF.
 
-* [[User Guide/Configuration API|Configuration API]]
-* [[User Guide/Handlers API|Handlers API]]
-* [[User Guide/Advanced SPARQL|Advanced SPARQL]]
-** [[User Guide/SPARQL Datasets|SPARQL Datasets]]
-** [[User Guide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
-** [[User Guide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
-* [[User Guide/Triple Store Integration|Triple Store Integration]]
+* [[UserGuide/Configuration API|Configuration API]]
+* [[UserGuide/Handlers API|Handlers API]]
+* [[UserGuide/Advanced SPARQL|Advanced SPARQL]]
+** [[UserGuide/SPARQL Datasets|SPARQL Datasets]]
+** [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
+** [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
+* [[UserGuide/Triple Store Integration|Triple Store Integration]]
 
 === Notes ===
 

@@ -1,10 +1,10 @@
-[[Home]] > [[User Guide]] > [[User Guide/Updating with SPARQL|Updating with SPARQL]]
+[[Home]] > [[User Guide]] > [[UserGuide/Updating with SPARQL|Updating with SPARQL]]
 
 = Updating with SPARQL =
 
 SPARQL Update is a relatively new technology close to being standardised by the W3C SPARQL Working Group as part of the SPARQL 1.1 standard. dotNetRDF supports all of SPARQL Update as per the current Last Call draft of the specification. This article explains how to use SPARQL Updates using the dotNetRDF API.
 
-Advanced Users may want to take a look at the [[User Guide/Advanced SPARQL|Advanced SPARQL]] and [[Developer Guide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
+Advanced Users may want to take a look at the [[UserGuide/Advanced SPARQL|Advanced SPARQL]] and [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
 
 = Update Representation =
 
@@ -192,9 +192,9 @@ The above example creates a SPARQL Update containing two commands (a COPY then a
 
 = Tutorial Navigation =
 
-You've reached the end of the basic tutorial, the previous topic was [[User Guide/Querying with SPARQL|Querying with SPARQL]].  Go back to the [[User Guide]] to explore more topics.
+You've reached the end of the basic tutorial, the previous topic was [[UserGuide/Querying with SPARQL|Querying with SPARQL]].  Go back to the [[User Guide]] to explore more topics.
 
 Users wishing to learn more may wish to jump straight to the following topics:
 
-* [[User Guide/Advanced SPARQL|Advanced SPARQL]]
-* [[User Guide/Configuration API/Update Processors|Configuration API - Update Processors]]
+* [[UserGuide/Advanced SPARQL|Advanced SPARQL]]
+* [[UserGuide/Configuration API/Update Processors|Configuration API - Update Processors]]

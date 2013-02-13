@@ -10,7 +10,7 @@ This page details common problems
 
 === What platforms does dotNetRDF run on? ===
 
-dotNetRDF runs on .Net 3.5 Framework and higher, builds are provided for various framework profiles on the different versions of the framework. Exact supported features depend on the build used, see [[User Guide/Getting Started|Getting Started]] for more details on the builds.
+dotNetRDF runs on .Net 3.5 Framework and higher, builds are provided for various framework profiles on the different versions of the framework. Exact supported features depend on the build used, see [[UserGuide/Getting Started|Getting Started]] for more details on the builds.
 
 dotNetRDF will also run under Mono 2.8 and higher, generally we recommend using the newest Mono release possible for best results.
 
@@ -34,7 +34,7 @@ Are you using the latest version of the library? Check the Project Status page a
 
 Have you added the appropriate using declarations to your code? Check the Intellisense API to see what namespace different classes are in
 
-Are you trying to use deprecated/removed code? We have a clear [[Developer Guide/Deprecation Policy|Deprecation Policy]] and we actively obsolete and deprecate old APIs over time. If you upgrade your version over time you will see warnings ahead of time but if you jump several versions in one go you may encounter problems with missing APIs. See the ChangeLog.txt file in the release or consult the [[http://www.dotnetrdf.org?content.asp?pageID=Project%20Roadmap|Project Roadmap]] page to see what may have changed. The front page of the Intellisense API also details breaking API changes between major releases.
+Are you trying to use deprecated/removed code? We have a clear [[DeveloperGuide/Deprecation Policy|Deprecation Policy]] and we actively obsolete and deprecate old APIs over time. If you upgrade your version over time you will see warnings ahead of time but if you jump several versions in one go you may encounter problems with missing APIs. See the ChangeLog.txt file in the release or consult the [[http://www.dotnetrdf.org?content.asp?pageID=Project%20Roadmap|Project Roadmap]] page to see what may have changed. The front page of the Intellisense API also details breaking API changes between major releases.
 
 === I get a "No overload for method X takes Y arguments" error or similar ===
 
@@ -64,7 +64,7 @@ Is there a typo in your query? Are you sure the query you wrote is actually corr
 
 Are you using literals in triple patterns in your query? Literals in triple patterns are matched strictly in SPARQL so things that look very similar are not considered equal e.g. ##"1"^^xsd:integer != "1"^^xsd:decimal## . If you are using Literals you may be better using a variable combined with a ##FILTER## clause because the equality in filter expressions is value based equality so would match something like the above where triple pattern matching would not.
 
-Are there named graphs involved? If so does your query actually query the appropriate named graphs?  Please see [[User Guide/SPARQL Datasets|SPARQL Datasets]] for help with this.
+Are there named graphs involved? If so does your query actually query the appropriate named graphs?  Please see [[UserGuide/SPARQL Datasets|SPARQL Datasets]] for help with this.
 
 Does the data being queried actually contain the triples you are trying to match?
 

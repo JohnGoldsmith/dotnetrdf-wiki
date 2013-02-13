@@ -1,8 +1,8 @@
-[[Home]] > [[User Guide]] > [[User Guide/Getting Started|Getting Started]]
+[[Home]] > [[User Guide]] > [[UserGuide/Getting Started|Getting Started]]
 
 = Getting Started with dotNetRDF =
 
-This page serves as a quick reference on how to add dotNetRDF to your projects and what features are found in which libraries. If you've done this already you can jump ahead to the [[User Guide/Library Overview|Library Overview]] which will introduce you to the Core APIs in dotNetRDF.
+This page serves as a quick reference on how to add dotNetRDF to your projects and what features are found in which libraries. If you've done this already you can jump ahead to the [[UserGuide/Library Overview|Library Overview]] which will introduce you to the Core APIs in dotNetRDF.
 
 == Add dotNetRDF to your Project/Solution ==
 
@@ -62,9 +62,9 @@ The Query.FullText library provides full text querying extensions to SPARQL base
 
 = Tutorial Navigation =
 
-The next topic in the tutorial is the [[User Guide/Library Overview|Library Overview]]
+The next topic in the tutorial is the [[UserGuide/Library Overview|Library Overview]]
 
 Users interested in learning more may wish to jump straight to one of the following topics:
 
-* [[User Guide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]] 
-* [[User Guide/Triple Store Integration|Triple Store Integration]]
+* [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]] 
+* [[UserGuide/Triple Store Integration|Triple Store Integration]]

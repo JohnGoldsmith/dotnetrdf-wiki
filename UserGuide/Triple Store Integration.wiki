@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[User Guide/Storage|Storage]] > [[User Guide/Triple Store Integration|Triple Store Integration]]
+[[Home]] > [[User Guide]] > [[UserGuide/Storage|Storage]] > [[UserGuide/Triple Store Integration|Triple Store Integration]]
 
 = 3rd Party Triple Store Integration =
 
@@ -288,4 +288,4 @@ The advantage of the async API is that it means that HTTP based stores can be us
 
 = Available Implementations =
 
-For a list of available ##IStorageProvider## implementations please see the [[User Guide/Storage/Providers|Storage Providers]] page.
+For a list of available ##IStorageProvider## implementations please see the [[UserGuide/Storage/Providers|Storage Providers]] page.
