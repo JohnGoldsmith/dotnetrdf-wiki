@@ -2,6 +2,40 @@
 
 = Servers API =
 
-The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IStorageServer|IStorageServer]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IAsyncStorageServer|IASyncStorageServer]] interfaces.
+The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IStorageServer|IStorageServer]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IAsyncStorageServer|IASyncStorageServer]] interfaces.  These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] instances.
 
-These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] instances.
+= Basic Usage =
+
+== Properties ==
+
+These interfaces provide a single //IOBehaviour// property which reports [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IOBehaviour|IOBehaviour]] that describes the capabilities of an implementation i.e. which operations are supported.
+
+== Methods ==
+
+These interfaces provide several methods for carrying out the varying management tasks supported, here we demonstrate each with an example.
+
+=== ListStores() ===
+
+The //ListStores()// method lists the stores available on a server.
+
+{{{
+#!csharp
+using System;
+using VDS.RDF;
+using VDS.RDF.Storage.Management;
+
+public class ListStoresExample
+{
+  public static void Main(String[] args)
+  {
+     //Connect to a server, we use Stardog for this example
+     StardogServer server = new StardogServer("http://localhost:5822", "username", "password");
+
+     //Get the list of stores
+     foreach (String store : server.ListStores())
+     {
+       Console.WriteLine(store);
+     }
+  }
+}
+}}}
