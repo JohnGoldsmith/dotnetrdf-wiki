@@ -6,6 +6,8 @@ While the API can represent Triple Stores as an in-memory collection of Graphs a
 
 Some implementations may implement additional interfaces which provide extra features. See the async operations section for more detail on the asynchronous version of the API.
 
+Take a look at the [[UserGuide/Storage/Providers|Storage Providers]] page for available implementations.
+
 = General Usage =
 
 These interfaces provides a standard mechanism for using an external Triple Store in your applications and allows you to easily drop in and out different stores as required. So let's start by looking at what the interface provides:
@@ -285,7 +287,3 @@ The Async API essentially mirrors the synchronous API except that every method s
 The callback signature simply returns a reference to the ##IAsyncStorageProvider## that is invoking the callback, a set of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.AsyncStorageCallbackArgs|AsyncStorageCallbackArgs]] and the state information passed when the method was originally invoked.
 
 The advantage of the async API is that it means that HTTP based stores can be used on platforms where synchronous HTTP is not permitted (e.g. Windows Phone 7). Most of our ##IStorageProvider## implementations also implement ##IAsyncStorageProvider## as well.
-
-= Available Implementations =
-
-For a list of available ##IStorageProvider## implementations please see the [[UserGuide/Storage/Providers|Storage Providers]] page.
