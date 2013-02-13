@@ -2,7 +2,7 @@
 
 = Allegro Graph =
 
-dotNetRDF supports AllegroGraph 3.x and 4.x via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.AllegroGraphConnector|AllegroGraphConnector]] class.
+dotNetRDF supports [[http://http://www.franz.com/agraph/|Franz AllegroGraph]] 3.x and 4.x via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.AllegroGraphConnector|AllegroGraphConnector]] class.
 
 == Supported Capabilities ==
 
