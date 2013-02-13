@@ -9,3 +9,4 @@ You should start by reading the [[UserGuide/Triple Store Integration|Triple Stor
 After that you can browse the following topics to learn more:
 
 * [[UserGuide/Storage/Providers|Storage Providers]]
+* [[UserGuide/Storage/Servers|Servers API]]
