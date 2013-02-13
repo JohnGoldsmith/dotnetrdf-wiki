@@ -8,6 +8,6 @@ I am using the macro like so:
 <<toc UserGuide/Storage/>>
 }}}
 
-Which should link to all pages within that directory, however the links get extra segments added because they are calculated from the current page not the wiki root.
+Which should link to all pages within that directory, however the links get extra segments added because they are calculated from the current directory not the wiki root hence they have an extra ##UserGuide/## in them
 
 <<toc UserGuide/Storage/>>
