@@ -6,7 +6,7 @@ The [[http://dydra.com|Dydra]] cloud RDF database can be used via the [[http://w
 
 == Supported Capabilities ==
 
-* Load, Save, Update and List Graphs
+* Load, Save, Update, Delete and List Graphs
 * SPARQL Query and Update
 
 == Creating a Connection ==
