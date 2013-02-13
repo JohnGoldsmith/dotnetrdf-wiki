@@ -8,7 +8,7 @@ dotNetRDF supports [[http://http://www.franz.com/agraph/|Franz AllegroGraph]] 3.
 
 Currently the connector supports the following capabilities:
 
-* Load, Save, Update and List Graphs
+* Load, Save, Update, Delete and List Graphs
 * SPARQL Query
 
 == Creating a Connection ==
