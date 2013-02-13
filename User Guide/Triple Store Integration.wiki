@@ -19,8 +19,8 @@ The ##IStorageCapabilities## interface has a set of properties which are used to
 | //IOBehaviour// | Indicates detailed information about the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IOBehaviour|IOBehaviour]] that a store provides |
 | //IsReadOnly// | Indicates whether the Store is read-only |
 | //IsReady// | Indicates whether the Store is ready for use |
-| //ListGraphsSupported// indicates whether the store supports listing of Graphs via the //ListGraphs()// method
-| //UpdateSupported// indicates whether triple level updates to Graphs is supported via the //UpdateGraph()// method |
+| //ListGraphsSupported// | Indicates whether the store supports listing of Graphs via the //ListGraphs()// method
+| //UpdateSupported// | Indicates whether triple level updates to Graphs is supported via the //UpdateGraph()// method |
 
 == Accessing the Default Graph ==
 
