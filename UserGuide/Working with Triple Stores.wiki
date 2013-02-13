@@ -179,7 +179,7 @@ The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableSto
 
 An ##INativelyQueryableStore## defines only one additional method which is //ExecuteQuery(String query)// which takes a SPARQL query as a String and executes it against the underlying SPARQL implementation. Note that these stores may only be queryable read-only wrappers around an underlying store.
 
-We provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore|PersistentTripleStore]] class which is an implementation of the ##INativelyQueryableStore## that can be used with any of the backing stores we support with [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
+We provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore|PersistentTripleStore]] class which is an implementation of the ##INativelyQueryableStore## that can be used with any of the backing stores we support with [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage API]] implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
 
 {{{
 #!csharp
