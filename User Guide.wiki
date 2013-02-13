@@ -34,6 +34,22 @@ The following pages cover some general topics about the library:
 * [[UserGuide/Extension Methods|Extension Methods]]
 * [[UserGuide/Using the Namespace Mapper|Using the Namespace Mapper]]
 
+== 3rd Party Triple Store Integration ==
+
+We provide integration with a variety of 3rd party triple stores, see the following topics:
+
+* [[UserGuide/Storage API|Storage API]]
+** [[UserGuide/Triple Store Integration|Triple Store Integration]]
+
+== SPARQL Features ==
+
+The basic tutorial covers simple SPARQL query and updates, we have a selection of topics on advanced SPARQL features available:
+
+* [[UserGuide/Advanced SPARQL|Advanced SPARQL]]
+** [[UserGuide/SPARQL Datasets|SPARQL Datasets]]
+** [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
+** [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
+
 == Ontologies, Inference and Reasoning ==
 
 Please see the following for documentation of ontology, inference and reasoning support:
@@ -54,11 +70,6 @@ The following documentation covers what are considered advanced topics but which
 
 * [[UserGuide/Configuration API|Configuration API]]
 * [[UserGuide/Handlers API|Handlers API]]
-* [[UserGuide/Advanced SPARQL|Advanced SPARQL]]
-** [[UserGuide/SPARQL Datasets|SPARQL Datasets]]
-** [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
-** [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
-* [[UserGuide/Triple Store Integration|Triple Store Integration]]
 
 === Notes ===
 
