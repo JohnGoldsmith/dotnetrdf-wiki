@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Storage|Storage API]] > [[UserGuide/Triple Store Integration|Triple Store Integration]]
+[[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Triple Store Integration|Triple Store Integration]]
 
 = 3rd Party Triple Store Integration =
 
@@ -212,9 +212,9 @@ public class UpdateGraphExample
 
 == Additional Interfaces ==
 
-Some Stores provide SPARQL Query and/or Update support and this support is indicated by the ##IStorageProvider## implementation also implementing the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage API]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUpdateableStorage|IUpdateableStorage API]] interfaces.
+Some Stores provide SPARQL Query and/or Update support and this support is indicated by the ##IStorageProvider## implementation also implementing the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage API|IQueryableStorage API]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUpdateableStorage API|IUpdateableStorage API]] interfaces.
 
-There are also [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncQueryableStorage|IAsyncQueryableStorage API]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncUpdateableStorage|IAsyncUpdateableStorage API]] interfaces which are the async equivalents of the aforementioned interfaces.
+There are also [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncQueryableStorage API|IAsyncQueryableStorage API]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncUpdateableStorage API|IAsyncUpdateableStorage API]] interfaces which are the async equivalents of the aforementioned interfaces.
 
 === Query() ===
 

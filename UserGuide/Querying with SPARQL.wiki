@@ -239,7 +239,7 @@ The library includes the following query processors:
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.LeviathanQueryProcessor|LeviathanQueryProcessor]] | Standard in-memory query processor |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ExplainQueryProcessor|ExplainQueryProcessor]] | Extension of the ##LeviathanQueryProcessor## which executes queries and prints explanations to the Console |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.RemoteQueryProcessor|RemoteQueryProcessor]] | Executes queries against a remote SPARQL endpoint |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GenericQueryProcessor|GenericQueryProcessor]] | Executes a query against a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage API]] implementation |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GenericQueryProcessor|GenericQueryProcessor]] | Executes a query against a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage API|IQueryableStorage API]] implementation |
 
 === Customizing Query Behaviour ===
 
@@ -291,7 +291,7 @@ public class SparqlRemoteEndpointExample
 
 We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the ##INativelyQueryableStore## interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[UserGuide/Working with Triple Stores|Working with Triple Stores]] page you'll see an example of using the ##PersistentTripleStore## class to query any of our supported stores.
 
-Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage API]] interface  which most of our available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] implementations also support, please see the [[UserGuide/Triple Store Integration|Triple Store Integration]] page for an example of this.
+Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage API|IQueryableStorage API]] interface  which most of our available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] implementations also support, please see the [[UserGuide/Triple Store Integration|Triple Store Integration]] page for an example of this.
 
 == Direct Triple Store Query ==
 
