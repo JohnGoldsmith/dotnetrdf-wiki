@@ -70,3 +70,7 @@ For 4.x you can manage the root catalog like so:
 //Create an unauthenticated connection to the root catalog
 AllegroGraphServer agraph = new AllegroGraphServer("http://localhost:9875");
 }}}
+
+== Creating Stores ==
+
+When creating a store the ##AllegroGraphServer## will provide only simple  [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.StoreTemplate|StoreTemplate]] instances as templates.  No extra settings may currently be configured when creating stores on a Allegro Graph server.
