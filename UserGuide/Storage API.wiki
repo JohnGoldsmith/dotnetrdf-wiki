@@ -6,4 +6,4 @@ This page acts as a hub for API topics related to using external storage with do
 
 After that you can browse the following topics to learn more:
 
-<<toc UserGuide/Storage/>>
+<<toc Storage/>>
