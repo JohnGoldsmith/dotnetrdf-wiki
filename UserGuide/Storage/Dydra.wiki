@@ -1,3 +1,22 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]] > [[UserGuide/Storage/Dydra|Dydra]]
 
 = Dydra =
+
+The [[http://dydra.com|Dydra]] cloud RDF database can be used via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.DydraConnector|DydraConnector]].
+
+== Supported Capabilities ==
+
+* Load, Save, Update and List Graphs
+* SPARQL Query and Update
+
+== Creating a Connection ==
+
+Connecting to Dydra requires at least an account ID and repository ID, if the repository is not publicly accessible then a Dydra API key will also be required.
+
+{{{
+#!csharp
+
+DydraConnector dydra = new DydraConnector("account", "repository", "api-key");
+}}}
+
+You may optionally supply a proxy server if necessary.
