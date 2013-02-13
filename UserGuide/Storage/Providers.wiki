@@ -18,6 +18,7 @@ The available providers are as follows:
 | [[UserGuide/Storage/SPARQL Query|SPARQL Query Endpoints]] | Any SPARQL Query endpoint |
 | [[UserGuide/Storage/SPARQL Graph Store|SPARQL Graph Store Protocol]] | Any SPARQL Graph Store Protocol endpoint |
 | [[UserGuide/Storage/Stardog|Stardog]] | Stardog |
+| [[UserGuide/Storage/Virtuoso|Virtuoso]] | Virtuoso Universal Server |
 
 There are also some useful wrappers available:
 
