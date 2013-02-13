@@ -40,7 +40,7 @@ We provide integration with a variety of 3rd party triple stores, see the follow
 
 * [[UserGuide/Storage API|Storage API]]
 ** [[UserGuide/Triple Store Integration|Triple Store Integration]]
-** [[UserGUide/Storage/Providers|Storage Providers]]
+** [[UserGuide/Storage/Providers|Storage Providers]]
 
 == SPARQL Features ==
 
