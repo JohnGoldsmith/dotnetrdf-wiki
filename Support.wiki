@@ -20,7 +20,7 @@ For Bug Reports, Support Questions and Developer Discussion/Feature Request you 
 
 * Bug Reports - dotnetrdf-bugs@lists.sourceforge.net - [[https://lists.sourceforge.net/lists/listinfo/dotnetrdf-bugs|Subscribe here]]
 * General Support and Questions - dotnetrdf-support@lists.sourceforge.net - [[https://lists.sourceforge.net/lists/listinfo/dotnetrdf-support|Subscribe here]]
-* Developer Discussion, Feature Request and Technical Questions (also includes bug tracker notifications) - dotnetrdf-develop@lists.sourceforge.net - https://lists.sourceforge.net/lists/listinfo/dotnetrdf-develop|Subscribe here]]
+* Developer Discussion, Feature Request and Technical Questions (also includes bug tracker notifications) - dotnetrdf-develop@lists.sourceforge.net - [[https://lists.sourceforge.net/lists/listinfo/dotnetrdf-develop|Subscribe here]]
 
 == Other Channels ==
 
