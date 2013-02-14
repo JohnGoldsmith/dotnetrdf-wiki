@@ -52,7 +52,7 @@ You can also create connect directly to a server by creating an instance of the 
 {{{
 #!csharp
 
-SesameServer agraph = new SesameServer("http://localhost:8080/openrdf-sesame/");
+SesameServer sesame = new SesameServer("http://localhost:8080/openrdf-sesame/");
 }}}
 
 == Creating Stores ==
