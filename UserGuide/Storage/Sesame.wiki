@@ -38,3 +38,31 @@ SesameHttpProtocolConnector sesame = new SesameHttpProtocolConnector("http://loc
 }}}
 
 Additionally there are overloads for supplying a proxy server if necessary.
+
+= Managing a Server =
+
+We support managing a server via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer|SesameServer]] class which implements our [[UserGuide/Storage/Servers|Servers API]]
+
+Managing a server allows you to manage a single catalog at a time, a Sesame connection provides access to its associated server via the //ParentServer// or //AsyncParentServer// property.
+
+== Connecting to a Server ==
+
+You can also create connect directly to a server by creating an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer|SesameServer]] class.  This requires you to know the Base URI of the server:
+
+{{{
+#!csharp
+
+SesameServer agraph = new SesameServer("http://localhost:8080/openrdf-sesame/");
+}}}
+
+== Creating Stores ==
+
+When creating a store the ##SesameServer## will use one of the following templates:
+
+|= Template |= Description |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Sesame.SesameMemTemplate|SesameMemTemplate]] | Used to create Sesame memory stores |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Sesame.SesameNativeTemplate|SesameNativeTemplate]] | Used to create Sesame native stores |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate|SesameHttpTemplate]] | Used to create Sesame HTTP stores i.e. pointers to other remote Sesame repositories |
+
+Each template has various properties for configuring store type specific settings.
+
