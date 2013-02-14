@@ -1,3 +1,22 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]] > [[UserGuide/Storage/Sesame|Sesame]]
 
 = Sesame =
+
+We support the [[http://www.openrdf.org/doc/sesame2/system/ch08.html|Sesame 2.0 HTTP Protocol]] which allows us to communicate with any [[http://www.openrdf.org|Sesame]] based store exposed via a Sesame HTTP server.  This means we can support Sesame's own store implementations as well as others such as [[http://www.ontotext.com/owlim|OWLIM]] and [[http://www.systap.com/bigdata.htm|BigData]] which may be exposed via Sesame.
+
+Connectivity with Sesame is done via a number of classes:
+
+|= Provider |= Description |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SesameHttpProtocolConnector|SesameHttpProtocolConnector]] | Connect to a Sesame server that uses the latest version of the Sesame protocol |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SesameHttpProtocolVersion6Connector|SesameHttpProtocolVersion6Connector]] | Connect to a Sesame server that uses Version 6 (the current version) of the Sesame protocol |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SesameHttpProtocolVersion5Connector|SesameHttpProtocolVersion5Connector]] | Connect to a Sesame server that uses Version 5 of the Sesame protocol.  Use this if you are using an older version of Sesame prior to the addition of SPARQL Update support. |
+
+Typically you will most likely just use the ##SesameHttpProtocolConnector## since that will always reflect the current version of the Sesame protocol.
+
+== Supported Capabilities ==
+
+* Load, Save, Delete, Update and List Graphs
+* SPARQL Query
+* SPARQL Update (if using Version 6 connector or higher)
+
+== Creating a Connection ==
