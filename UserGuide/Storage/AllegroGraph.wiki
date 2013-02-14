@@ -10,6 +10,7 @@ Currently the connector supports the following capabilities:
 
 * Load, Save, Update, Delete and List Graphs
 * SPARQL Query
+* SPARQL Update (if using dotNetRDF 1.0.0 and higher)
 
 == Creating a Connection ==
 
