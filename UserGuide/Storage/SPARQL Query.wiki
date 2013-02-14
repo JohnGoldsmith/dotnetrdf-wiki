@@ -1,3 +1,20 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]] > [[UserGuide/Storage/SPARQL Query|SPARQL Query Endpoints]]
 
 = SPARQL Query Endpoints =
+
+You can treat any publicly accessible SPARQL Query endpoint as a read-only store using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlConnector|SparqlConnector]].
+
+== Supported Capabilities ==
+
+* Load and List Graphs
+* SPARQL Query
+
+== Creating a Connection ==
+
+You can create a connection either just by providing the endpoint URI like so:
+
+{{{
+#!csharp
+
+SparqlConnector sparql = new SparqlConnector("
+}}}
