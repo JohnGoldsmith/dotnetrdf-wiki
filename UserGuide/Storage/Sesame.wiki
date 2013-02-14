@@ -20,3 +20,21 @@ Typically you will most likely just use the ##SesameHttpProtocolConnector## sinc
 * SPARQL Update (if using Version 6 connector or higher)
 
 == Creating a Connection ==
+
+To create a connection to Sesame you need to know the Base URI of the server and the repository ID e.g.
+
+{{{
+#!csharp
+
+SesameHttpProtocolConnector sesame = new SesameHttpProtocolConnector("http://localhost:8080/openrdf-sesame/", "example");
+}}}
+
+If you are using HTTP authentication then you can optionally supply user credentials:
+
+{{{
+#!csharp
+
+SesameHttpProtocolConnector sesame = new SesameHttpProtocolConnector("http://localhost:8080/openrdf-sesame/", "example", "username", "password");
+}}}
+
+Additionally there are overloads for supplying a proxy server if necessary.
