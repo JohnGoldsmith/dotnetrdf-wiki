@@ -10,3 +10,4 @@ After that you can browse the following topics to learn more:
 
 * [[UserGuide/Storage/Providers|Storage Providers]]
 * [[UserGuide/Storage/Servers|Servers API]]
+* [[UserGuide/Storage/Transactions|Transactions API]]
