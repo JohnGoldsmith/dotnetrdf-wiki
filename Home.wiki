@@ -29,4 +29,4 @@ Please note there may be a small window after a new release while we update our 
 
 == API Documentation ==
 
-We also provide MSDN style API documentation generated from the XML comments in the code (which means our code has full Intellisense support) by going to the [[http://www.dotnetrdf.org/api/|Intellisense API]] page.
+We also provide MSDN style API documentation generated from the XML comments in the code (which means our code has full Intellisense support) by going to the [[http://www.dotnetrdf.org/api/|Formal API]] page.
