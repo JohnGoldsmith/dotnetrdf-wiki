@@ -36,7 +36,7 @@ The ##dnr:introText## property specifies a path to a file that contains introduc
 
 === dnr:cacheDuration ===
 
-The ##dnr:cacheDuration## property specifies a duration in minutes that configuration and data is cached in-memory for. Defaults to ##15## if not specified, values must be in the range of ##0## to ##120## and values outside this range will be set to the minimum/maximum as appropriate. Note that a value of ##0## indicates no caching.
+The ##dnr:cacheDuration## property specifies a duration in minutes that configuration and data is cached in-memory for. Defaults to ## 15## if not specified, values must be in the range of ## 0## to ## 120## and values outside this range will be set to the minimum/maximum as appropriate. Note that a value of ## 0## indicates no caching.
 
 === dnr:cacheSliding ===
 
@@ -56,7 +56,7 @@ All Handlers also support the following set of properties which are used to defi
 
 === dnr:compressionLevel ===
 
-The ##dnr:compressionLevel## property sets the compression level used by compressing writers, takes an integer, default writers understand values in the range -1 (None) to 10 (High). Defaults to ##5## if not specified.
+The ##dnr:compressionLevel## property sets the compression level used by compressing writers, takes an integer, default writers understand values in the range -1 (None) to 10 (High). Defaults to ## 5## if not specified.
 
 === dnr:prettyPrinting ===
 
