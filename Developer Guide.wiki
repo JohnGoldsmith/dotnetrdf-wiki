@@ -12,8 +12,9 @@ The [[DeveloperGuide/Architecture|Architecture]] section covers the architecture
 
 The [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] section covers non-architectural topics around our SPARQL engine such as optimization and extensions.
 
+* [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]]
+** [[DeveloperGuide/SPARQL/Implementing Custom Optimizers|Implementing Custom Optimizers]]
 * [[DeveloperGuide/SPARQL/SPARQL Extensions|SPARQL Extensions]]
-* [[DeveloperGuide/SPARQL/Implementing Custom Optimizers|Implementing Custom Optimizers]]
 
 == General Topics ==
 
