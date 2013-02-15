@@ -1,0 +1,3 @@
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/Architecture|Architecture]]
+
+= Architecture =
