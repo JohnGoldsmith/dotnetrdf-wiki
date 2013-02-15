@@ -54,7 +54,7 @@ _:manager a dnr:StorageProvider ;
   dnr:server <http://localhost:3030/dataset> .
 }}}
 
-The above specifies a Query Processor which passes the queries to the SPARQL engine of the specified Fuseki store. See [[UserGuide/Configuration/Storage Providers|Configuration API - Storage Providers]] for more detail on configuring generic managers.
+The above specifies a Query Processor which passes the queries to the SPARQL engine of the specified Fuseki store. See [[UserGuide/Configuration/Storage Providers|Configuration API - Storage Providers]] for more detail on configuring storage providers.
 
 == Simple Query Processor ==
 
