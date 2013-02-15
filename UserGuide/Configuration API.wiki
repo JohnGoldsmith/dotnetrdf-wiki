@@ -177,5 +177,6 @@ As of the most recent release all of the following objects can be loaded from Co
 
 == Miscellaneous ==
 
+* [[UserGuide/Configuration/Options|Static Options]]
 * [[UserGuide/Configuration/Proxy Servers|Proxy Servers]]
 
