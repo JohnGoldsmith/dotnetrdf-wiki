@@ -106,8 +106,7 @@ public class LoadObjectExample
 	public static void Main(String[] args)
 	{
 		//First need to load in the Configuration Graph
-		Graph config = new Graph();
-		FileLoader.Load(config, "config.ttl");
+		IGraph config = ConfigurationLoader.LoadConfiguration("config.ttl");
 
 		//Then get a Node referencing the object we want to load
 		INode graphNode = config.CreateUriNode(new Uri("http://example.org/graph"));
