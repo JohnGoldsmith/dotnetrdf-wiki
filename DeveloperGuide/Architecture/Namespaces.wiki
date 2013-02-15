@@ -1,4 +1,4 @@
-[[Home]] > [[Developer Guide]] > [[DeveloperGuide/Architecture]] > [[Namespaces]]
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/Architecture|Architecture]] > [[Namespaces]]
 
 = Namespaces =
 
