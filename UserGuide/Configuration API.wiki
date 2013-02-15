@@ -146,22 +146,37 @@ public class LoadObjectExample
 
 As of the most recent release all of the following objects can be loaded from Configuration files, follow the links by each one to see detailed descriptions of the possible configuration for these objects:
 
-Graphs - See Configuration API - Graphs
-Triple Stores - See Configuration API - Triple Stores
-SQL IO Managers - See Configuration API - SQL Managers
-Generic IO Managers - See Configuration API - Generic Managers
-SPARQL Endpoints - See Configuration API - SPARQL Endpoints
-Query Processors - See Configuration API - Query Processors
-Update Processors - See Configuration API - Update Processors
-Protocol Processors - See Configuration API - Protocol Processors
-SPARQL Datasets - See Configuration API - Datasets
-HTTP Handlers - See Configuration API - HTTP Handlers
-User Groups - See Configuration API - User Groups
-Permissions - See Configuration API - Permissions
-Users - See Configuration API - Users
-Proxy Servers - See Configuration API - Proxies
-Reasoners - See Configuration API - Reasoners
-SPARQL Expression Factories - See Configuration API - Expression Factories
-SPARQL Optimisers - See Configuration API - Optimisers
-Object Factories - See Configuration API - Object Factories
-Full Text Query Support - See Configuration API - Full Text Query
+== Core Objects ==
+
+* [[UserGuide/Configuration/Graphs|Graphs]]
+* [[UserGuide/Configuration/Triple Stores|Triple Stores]]
+* [[UserGuide/Configuration/Object Factories|Object Factories]]
+* [[UserGuide/Configuration/Readers and Writers|Readers and Writers]]
+
+== SPARQL Features ==
+
+* [[UserGuide/Configuration/SPARQL Endpoints|SPARQL Endpoints]]
+* [[UserGuide/Configuration/Query Processors|Query Processors]]
+* [[UserGuide/Configuration/Update Processors|Update Processors]]
+* [[UserGuide/Configuration/Protocol Processors|Protocol Processors]]
+* [[UserGuide/Configuration/SPARQL Datasets|SPARQL Datasets]]
+* [[UserGuide/Configuration/SPARQL Expression Factories|SPARQL Expression Factories]]
+* [[UserGuide/Configuration/SPARQL Optimisers|SPARQL Optimisers]]
+* [[UserGuide/Configuration/Full Text Query|Full Text Query]]
+* [[UserGuide/Configuration/Reasoners|Reasoners]]
+
+== 3rd Party Triple Store Integration ==
+
+* [[UserGuide/Configuration/Storage Providers|Storage Providers]]
+
+== ASP.Net Integration ==
+
+* [[UserGuide/Configuration/HTTP Handlers|HTTP Handlers]]
+* [[UserGuide/Configuration/User Groups|User Groups]]
+* [[UserGuide/Configuration/Permissions|Permissions]]
+* [[UserGuide/Configuration/Users|Users]]
+
+== Miscellaneous ==
+
+* [[UserGuide/Configuration/Proxy Servers|Proxy Servers]]
+
