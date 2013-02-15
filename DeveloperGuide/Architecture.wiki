@@ -1,3 +1,5 @@
 [[Home]] > [[Developer Guide]] > [[DeveloperGuide/Architecture|Architecture]]
 
 = Architecture =
+
+* [[DeveloperGuide/Architecture/Namespaces|Namespaces]]
