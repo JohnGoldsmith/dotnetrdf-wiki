@@ -1,0 +1,3 @@
+[[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/SPARQL Expression Factories|SPARQL Expression Factories]]
+
+= Configuring SPARQL Expression Factories =
