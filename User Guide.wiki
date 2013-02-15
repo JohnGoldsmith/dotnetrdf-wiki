@@ -64,8 +64,8 @@ Please see the following for documentation of ontology, inference and reasoning 
 
 Please see the [[UserGuide/ASP.Net Integration|ASP.Net Integration]] page for an overview of how we integrate into ASP.Net applications, or you can jump to specific topics below:
 
-* [[UserGuide/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
-* [[UserGuide/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]]
+* [[UserGuide/ASP/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
+* [[UserGuide/ASP/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]]
 
 == Advanced APIs ==
 
