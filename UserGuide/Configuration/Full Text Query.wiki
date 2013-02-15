@@ -1,0 +1,3 @@
+[[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Full Text Query|Full Text Query]]
+
+= Configuring Full Text Query =
