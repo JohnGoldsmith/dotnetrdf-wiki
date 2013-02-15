@@ -74,6 +74,10 @@ The following documentation covers what are considered advanced topics but which
 * [[UserGuide/Configuration API|Configuration API]]
 * [[UserGuide/Handlers API|Handlers API]]
 
+== Tools ==
+
+See the [[UserGuide/Tools|Tools]] page for documentation pertaining to our GUI and command line tools.
+
 === Notes ===
 
 Note that where we refer to the user in this guide we are referring to you the developer who is using the API.
