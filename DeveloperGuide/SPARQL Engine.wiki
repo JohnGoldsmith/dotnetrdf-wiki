@@ -1,3 +1,9 @@
 [[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]]
 
 = SPARQL Engine =
+
+This page acts as a hub for topics about our SPARQL Engine, if you are interested in learning how to make queries and updates please see the [[UserGuide/Querying with SPARQL|Querying with SPARQL]] and [[UserGuide/Updating with SPARQL|Updating with SPARQL]] pages.
+
+* [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]]
+** [[DeveloperGuide/SPARQL/Implementing Custom Optimizers|Implementing Custom Optimizers]]
+* [[DeveloperGuide/SPARQL/SPARQL Extensions|SPARQL Extensions]]
