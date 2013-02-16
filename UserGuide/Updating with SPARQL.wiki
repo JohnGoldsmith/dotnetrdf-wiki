@@ -197,4 +197,4 @@ You've reached the end of the basic tutorial, the previous topic was [[UserGuide
 Users wishing to learn more may wish to jump straight to the following topics:
 
 * [[UserGuide/Advanced SPARQL|Advanced SPARQL]]
-* [[UserGuide/Configuration API/Update Processors|Configuration API - Update Processors]]
+* [[UserGuide/Configuration/Update Processors|Configuration API - Update Processors]]
