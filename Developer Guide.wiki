@@ -6,7 +6,7 @@ This developers guide is intended for advanced users who want to extend dotNetRD
 
 == Architecture ==
 
-The [[DeveloperGuide/Architecture|Architecture]] section covers the architecture of dotNetRDF, this includes high level information like our [[Namespaces]] but also discussions of low level architectural details of different portions of the library.
+The [[DeveloperGuide/Architecture|Architecture]] section covers the architecture of dotNetRDF, this includes high level information like our [[DeveloperGuide/Architecture/Namespaces|Namespaces]] but also discussions of low level architectural details of different portions of the library.
 
 == SPARQL ==
 
