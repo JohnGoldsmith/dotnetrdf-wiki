@@ -6,7 +6,7 @@ dotNetRDF is a .Net library written in C# designed to provide a simple but power
 
 The Library is designed to be highly extensible and allow for users to add in support for additional features (e.g. custom RDF Triple Stores) as required.
 
-The Library operates primarily at the level of Triples, Graphs and Triple Stores and provides very limited support for Inference and no direct support for OWL (see [[How To/Load OWL|How To: Load OWL]]).
+The Library operates primarily at the level of Triples, Graphs and Triple Stores and provides very limited support for Inference and no direct support for OWL (see [[HowTo/Load OWL|How To: Load OWL]]).
 
 = Core Concepts =
 
