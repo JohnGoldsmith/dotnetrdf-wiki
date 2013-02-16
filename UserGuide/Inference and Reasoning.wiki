@@ -161,4 +161,4 @@ However some stores such as [[http://stardog.com|StarDog]] do support reasoning 
 
 = Reasoners and SPARQL Endpoints =
 
-Please see [[UserGuide/Configuration API/Reasoners|Configuration API - Reasoners]] for information on how to specify reasoner configuration and how to attach them to HTTP Handlers.
+Please see [[UserGuide/Configuration/Reasoners|Configuration API - Reasoners]] for information on how to specify reasoner configuration and how to attach them to HTTP Handlers.
