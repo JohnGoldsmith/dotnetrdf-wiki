@@ -1,3 +1,16 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Formatting API|Formatting API]]
 
 = Formatting API =
+
+The Formatting API is an collection of APIs found in the ##VDS.RDF.Writing.Formatting## namespace, it is concerned with turning objects like nodes, triples and SPARQL results into strings for display.  The formatting API underpins the writers already seen in the basic tutorial on the [[UserGuide/Writing RDF|Writing RDF]] page.
+
+The API consists of a number of interfaces:
+
+|= Interface |= Formatting Capabilities |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ICharFormatter|ICharFormatter]] | Formats individual characters |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IUriFormatter|IUriFormatter]] | Formats URIs |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IBaseUriFormatter|IBaseUriFormatter]] | Formats Base URI declarations |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INamespaceFormatter|INamespaceFormatter]] | Formats namespace declarations |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter|INodeFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode|INode]] instances |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ITripleFormatter|ITripleFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Triple|Triple]] instances |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IResultFormatter|IResultFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult|SparqlResult]] instances |
