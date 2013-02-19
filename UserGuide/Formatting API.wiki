@@ -14,3 +14,38 @@ The API consists of a number of interfaces:
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter|INodeFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode|INode]] instances |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ITripleFormatter|ITripleFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Triple|Triple]] instances |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IResultFormatter|IResultFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult|SparqlResult]] instances |
+
+= Basic Usage =
+
+Generally you will only want to use one of the higher level interfaces such as ##INodeFormatter## or ##ITripleFormatter##.  A formatter usually provides one or more //Format()// or //FormatX()// methods which are used to format specific things.  These methods take the thing to be formatted and return a string.
+
+Here's an example of formatting Triples for display on the console:
+
+{{{
+#!csharp
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using VDS.RDF;
+using VDS.RDF.Writing.Formatting;
+
+public class FormattingTriplesExample
+{
+  public static void Main(String[] args)
+  {
+    IGraph g = new Graph();
+
+    //Assume we fill our graph with data from somewhere...
+
+    //Create a formatter
+    ITripleFormatter formatter = new TurtleFormatter(g);
+
+    //Print triples with this formatter
+    foreach (Triple t in g.Triples)
+    {
+      Console.WriteLine(t.ToString(formatter));
+    }
+  }
+}
+}}}
