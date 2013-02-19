@@ -27,6 +27,7 @@ This section of the guide covers topics pertaining to advanced functionality of 
 
 This section covers how to contribute to dotNetRDF and is primarily intended for existing/prospective contributors.
 
+* [[DeveloperGuide/Compiling|Compiling]]
 * [[DeveloperGuide/Code Style|Code Style]]
 * [[DeveloperGuide/Deprecation Policy|Deprecation Policy]]
 * [[DeveloperGuide/Test Environment|Test Environment]]
