@@ -224,7 +224,7 @@ Slice(Select(Project(LazyBgp({ ?s rdfs:label ?label . ?s ?p ?o }))), LIMIT 10, O
 
 The algebra optimiser uses a variety of these kinds of optimisations depending on the query. Obviously they are not applicable in every case (e.g. if there is an ##ORDER BY## clause you need all the solutions in order to do the ordering before you can apply the ##LIMIT##) but they can be used to significantly improve performance in various cases.
 
-There are a similar set of optimisations that are used for ##ASK## queries since they aim to do the minimal amount of work possible as they only need to find one result satisfying the query. For a fuller list of available optimisers see the [[UserGuide/SPARQL/Advanced SPARQL Operations|Advanced SPARQL Operations]] page.
+There are a similar set of optimisations that are used for ##ASK## queries since they aim to do the minimal amount of work possible as they only need to find one result satisfying the query. For a fuller list of available optimisers see the [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]] page.
 
 = Evaluation Optimisation =
 
