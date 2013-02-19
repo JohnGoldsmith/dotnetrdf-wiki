@@ -18,6 +18,10 @@ PREFIX lfn: <http://www.dotnetrdf.org/leviathan#>
 SELECT lfn:md5hash(STR(?s)) AS ?SubjectHash WHERE {?s ?p ?o} GROUP BY ?s
 }}}
 
+= Available Functions =
+
+<<toc>>
+
 == Aggregate Functions ==
 
 The library contains the following custom aggregate functions. Not that if a query does not contain a ##GROUP BY## clause there is a single implicit group which is the entire result set.
@@ -90,7 +94,7 @@ Calculates the hypotenuse of a right angle triangle, the arguments represent the
 
 === reciprocal(expr) ===
 
-Calculates the reciprocal of an expression i.e. ##1 / expr##
+Calculates the reciprocal of an expression i.e. ## 1 / expr##
 
 === rnd() ===
 
