@@ -1,4 +1,4 @@
-[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/Leviathan Engine]]
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/Leviathan Engine|Leviathan Engine]]
 
 = Leviathan Engine =
 
