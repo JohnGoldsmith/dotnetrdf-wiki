@@ -17,7 +17,7 @@ Leviathan is the code name for our block based in-memory SPARQL evaluation engin
 ** ##LET## assignments permitted with semantics equivalent to [[http://jena.apache.org/documentation/query/index.html|ARQ]]
 ** Additional ##NMAX## and ##NMIN## aggregates (Numeric Maximum and Minimum)
 ** Additional ##MEDIAN and ##MODE## aggregates
-** Support for some of the XPath function library
+** Support for some of the [[DeveloperGuide/SPARQL/XPath Functions|XPath function library]]
 *** Most string functions supported
 *** All the numeric functions supported
 *** Some data time functions supported
