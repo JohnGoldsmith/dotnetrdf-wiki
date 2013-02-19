@@ -35,11 +35,12 @@ dotNetRDF supports a subset of this library which is as follows:
 
 == Numeric Functions ==
 
-[[http://www.w3.org/2005/xpath-functions/#abs|fn:abs()]] - Returns the absolute value of the expression
-[[http://www.w3.org/2005/xpath-functions/#ceiling|fn:ceiling()]] - Returns the value of the expression rounded up to a whole number
-[[http://www.w3.org/2005/xpath-functions/#floor|fn:floor()]] - Returns the value of the expression rounded down to a whole number
-[[http://www.w3.org/2005/xpath-functions/#round|fn:round()]] - Returns the value of the expression rounded to the nearest whole number
-[[http://www.w3.org/2005/xpath-functions/#round-half-to-even|fn:round-half-to-even()]] - Returns the value of the expression rounded to the nearest whole number, where the number is exactly between two whole numbers it rounds to the nearest even number.
+|= XPath Function |= SPARQL Equivalent |= SPARQL Version |= Description |
+| [[http://www.w3.org/2005/xpath-functions/#abs|fn:abs()]] | ##ABS()## | 1.1 | Returns the absolute value of the expression |
+| [[http://www.w3.org/2005/xpath-functions/#ceiling|fn:ceiling()]] | ##CEIL()## | 1.1 | Returns the value of the expression rounded up to a whole number |
+| [[http://www.w3.org/2005/xpath-functions/#floor|fn:floor()]] | ##FLOOR()## | 1.1 | Returns the value of the expression rounded down to a whole number |
+| [[http://www.w3.org/2005/xpath-functions/#round|fn:round()]] | ##ROUND()## | 1.1 | Returns the value of the expression rounded to the nearest whole number |
+| [[http://www.w3.org/2005/xpath-functions/#round-half-to-even|fn:round-half-to-even()]]  | | Returns the value of the expression rounded to the nearest whole number, where the number is exactly between two whole numbers it rounds to the nearest even number. |
 
 == String Functions ==
 
