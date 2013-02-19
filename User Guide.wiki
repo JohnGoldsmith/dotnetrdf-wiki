@@ -72,6 +72,7 @@ Please see the [[UserGuide/ASP.Net Integration|ASP.Net Integration]] page for an
 
 The following documentation covers what are considered advanced topics but which may still be of value to everyday users of dotNetRDF.
 
+* [[UserGuide/Formatting API|Formatting API]]
 * [[UserGuide/Configuration API|Configuration API]]
 * [[UserGuide/Handlers API|Handlers API]]
 
