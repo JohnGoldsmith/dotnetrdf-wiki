@@ -18,7 +18,7 @@ Typically implementations will only want to alter how triple patterns are reorde
 
 For example if you wanted to change how the triple patterns are ordered you'd derive from this class and them implement the //GetRankingComparer()// method. This method returns a ##IComparer<ITriplePattern>## which is used to order the set of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Patterns.ITriplePattern|ITriplePattern]] instances found in the Graph Pattern.
 
-**Important:** Note that ##BaseQueryOptimiser# implements a two-pass reordering by default. The second pass may change the initial ordering provided by your comparer, to disable the second pass you can override the //ShouldReorder// property to return false.
+**Important:** Note that ##BaseQueryOptimiser## implements a two-pass reordering by default. The second pass may change the initial ordering provided by your comparer, to disable the second pass you can override the //ShouldReorder// property to return false.
 
 == Useful Methods ==
 
