@@ -16,20 +16,22 @@ dotNetRDF supports a subset of this library which is as follows:
 
 == Boolean Functions ==
 
-[[http://www.w3.org/2005/xpath-functions/#not|fn:not()]] - Equivalent to the ! operator i.e. logical negation of the expression it is applied to
-[[http://www.w3.org/2005/xpath-functions/#boolean|fn:boolean()]] - Computes the effective boolean value of the expression it is applied to
-[[http://www.w3.org/2005/xpath-functions/#true|fn:true()]] - Equivalent to the plain literal true
-[[http://www.w3.org/2005/xpath-functions/#false|fn:false()]] - Equivalent to the plain literal false
+|= XPath Function |= SPARQL Equivalent |= SPARQL Version |= Description |
+| [[http://www.w3.org/2005/xpath-functions/#not|fn:not()]] | ##!## | 1.0 | Equivalent to the ##!## operator i.e. logical negation of the expression it is applied to |
+| [[http://www.w3.org/2005/xpath-functions/#boolean|fn:boolean()]] | | 1.0 | Computes the effective boolean value of the expression it is applied to.  SPARQL automatically computes effective boolean value when necessary |
+| [[http://www.w3.org/2005/xpath-functions/#true|fn:true()]] | ##true## | 1.0 | Equivalent to the plain literal ##true##
+| [[http://www.w3.org/2005/xpath-functions/#false|fn:false()]] | ##false## | 1.0 | Equivalent to the plain literal false |
 
 == Date Time Functions ==
 
-[[http://www.w3.org/2005/xpath-functions/#year-from-dateTime|fn:year-from-dateTime()]] - Returns the year portion of a Date Time
-[[http://www.w3.org/2005/xpath-functions/#month-from-dateTime|fn:month-from-dateTime()]] - Returns the month portion of a Date Time
-http://www.w3.org/2005/xpath-functions/#day-from-dateTime|fn:day-from-dateTime()]] - Returns the day portion of a Date Time
-[[http://www.w3.org/2005/xpath-functions/#hours-from-dateTime|fn:hours-from-dateTime()]] - Returns the hours portion of a Date Time
-[[http://www.w3.org/2005/xpath-functions/#minutes-from-dateTime|fn:minutes-from-dateTime()]] - Returns the minutes portion of a Date Time
-[[http://www.w3.org/2005/xpath-functions/#seconds-from-dateTime|fn:seconds-from-dateTime()]] - Returns the seconds portion of a Date Time
-[[http://www.w3.org/2005/xpath-functions/#timezone-from-dateTime|fn:timezone-from-dateTime()]] - Returns the time zone of a Date Time
+|= XPath Function |= SPARQL Equivalent |= SPARQL Version |= Description |
+| [[http://www.w3.org/2005/xpath-functions/#year-from-dateTime|fn:year-from-dateTime()]] | ##YEAR()## | 1.1 | Returns the year portion of a Date Time |
+| [[http://www.w3.org/2005/xpath-functions/#month-from-dateTime|fn:month-from-dateTime()]] | ##MONTH()## | 1.1 | Returns the month portion of a Date Time |
+| [[http://www.w3.org/2005/xpath-functions/#day-from-dateTime|fn:day-from-dateTime()]] | ##DAY()## | 1.1 | Returns the day portion of a Date Time |
+| [[http://www.w3.org/2005/xpath-functions/#hours-from-dateTime|fn:hours-from-dateTime()]] | ##HOURS()## | 1.1 | Returns the hours portion of a Date Time |
+| [[http://www.w3.org/2005/xpath-functions/#minutes-from-dateTime|fn:minutes-from-dateTime()]] | ##MINUTES()## | 1.1 | Returns the minutes portion of a Date Time |
+| [[http://www.w3.org/2005/xpath-functions/#seconds-from-dateTime|fn:seconds-from-dateTime()]] | ##SECONDS()## | 1.1 | Returns the seconds portion of a Date Time |
+| [[http://www.w3.org/2005/xpath-functions/#timezone-from-dateTime|fn:timezone-from-dateTime()]] | ##TIMEZONE()## and ##TZ()## | 1.1 | Returns the time zone of a Date Time |
 
 == Numeric Functions ==
 
