@@ -1,0 +1,60 @@
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/XPath Functions|XPath Function Library]]
+
+= XPath Function Library =
+
+The XPath Function Library is a library of functions which form part of the W3C specification for XPath. Please follow the appropriate links to see the documentation for the function, we have noted where we don't support all forms of a function. As a general rule for string functions which have forms which support a collation argument we do not support that form.
+
+**Note:** Many of these functions now have built-in equivalents in SPARQL 1.1 which often offer better functionality since they are slightly modified to work with RDF where appropriate.
+
+= Available Functions =
+
+dotNetRDF supports a subset of this library which is as follows:
+
+== Aggregate Functions ==
+
+[[http://www.w3.org/2005/xpath-functions/#string-join|fn:string-join()]] - Joins the members of a group into a string with the given selector
+
+== Boolean Functions ==
+
+[[http://www.w3.org/2005/xpath-functions/#not|fn:not()]] - Equivalent to the ! operator i.e. logical negation of the expression it is applied to
+[[http://www.w3.org/2005/xpath-functions/#boolean|fn:boolean()]] - Computes the effective boolean value of the expression it is applied to
+[[http://www.w3.org/2005/xpath-functions/#true|fn:true()]] - Equivalent to the plain literal true
+[[http://www.w3.org/2005/xpath-functions/#false|fn:false()]] - Equivalent to the plain literal false
+
+== Date Time Functions ==
+
+[[http://www.w3.org/2005/xpath-functions/#year-from-dateTime|fn:year-from-dateTime()]] - Returns the year portion of a Date Time
+[[http://www.w3.org/2005/xpath-functions/#month-from-dateTime|fn:month-from-dateTime()]] - Returns the month portion of a Date Time
+http://www.w3.org/2005/xpath-functions/#day-from-dateTime|fn:day-from-dateTime()]] - Returns the day portion of a Date Time
+[[http://www.w3.org/2005/xpath-functions/#hours-from-dateTime|fn:hours-from-dateTime()]] - Returns the hours portion of a Date Time
+[[http://www.w3.org/2005/xpath-functions/#minutes-from-dateTime|fn:minutes-from-dateTime()]] - Returns the minutes portion of a Date Time
+[[http://www.w3.org/2005/xpath-functions/#seconds-from-dateTime|fn:seconds-from-dateTime()]] - Returns the seconds portion of a Date Time
+[[http://www.w3.org/2005/xpath-functions/#timezone-from-dateTime|fn:timezone-from-dateTime()]] - Returns the time zone of a Date Time
+
+== Numeric Functions ==
+
+[[http://www.w3.org/2005/xpath-functions/#abs|fn:abs()]] - Returns the absolute value of the expression
+[[http://www.w3.org/2005/xpath-functions/#ceiling|fn:ceiling()]] - Returns the value of the expression rounded up to a whole number
+[[http://www.w3.org/2005/xpath-functions/#floor|fn:floor()]] - Returns the value of the expression rounded down to a whole number
+[[http://www.w3.org/2005/xpath-functions/#round|fn:round()]] - Returns the value of the expression rounded to the nearest whole number
+[[http://www.w3.org/2005/xpath-functions/#round-half-to-even|fn:round-half-to-even()]] - Returns the value of the expression rounded to the nearest whole number, where the number is exactly between two whole numbers it rounds to the nearest even number.
+
+== String Functions ==
+
+fn:matches() - Equivalent to the REGEX function
+fn:contains() - Determines whether a given string contains another string.
+fn:starts-with() - Determines whether a given string starts with another string.
+fn:ends-with() - Determines whether a given string ends with another string.
+fn:string-length() - Returns the length of the given string.
+fn:concat() - Concatenates any number of string arguments without a separator
+fn:substring() - Returns a substring from a string, uses a 1 based index
+fn:substring-before() - Gets the part of the string that occurs before a given string
+fn:substring-after() - Gets the part of the string that occurs before a given string
+fn:normalize-space() - Normalizes space in a string
+fn:normalize-unicode() - Normalizes a string to a given Unicode normalization form, not all forms are supported
+fn:upper-case() - Converts a string to upper case
+fn:lower-case() - Converts a string to lower case
+fn:encode-for-uri() - Encodes a String for use in a URI
+fn:escape-html-uri() - Escapes a URI for insertion in HTML
+fn:replace() - Performs a regular expression based replace on strings
+fn:compare() - Compares two strings and returns -1, 0 or 1 to indicate their relative ordering
