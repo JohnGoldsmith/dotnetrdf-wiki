@@ -114,40 +114,7 @@ public static void SaveGraph(IGraph g, IRdfWriter writer, String filename)
 
 = Formatters =
 
-Formatters are an alternative to using an ##IRdfWriter## to output RDF. Their advantage is that they can be used to format individual Nodes and Triples to just display what you want how you want, but their disadvantage is that they can't use the same array of compression techniques that a full ##IRdfWriter## can use when writing a whole graph because they are stateless by design.
-
-Formatters are found in the ##VDS.RDF.Writing.Formatting## namespace and the primary ones of interest are those that implement [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ITripleFormatter|ITripleFormatter]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter|INodeFormatter]]. Both these interfaces define //Format(…)// methods which take either a ##Triple## or an ##INode## and return a string representation of them. You can also call //ToString(…)// overloads on ##Triple## and ##INode## which take in a formatter and return the String representation as formatted by that formatter.
-
-For example:
-
-{{{
-#!csharp
-
-//Assumes that we already have a Graph in the variable g
-NTriplesFormatter formatter = new NTriplesFormatter();
-
-//Want to get only the triples defining types - assumes rdf: prefix is appropriately defined for this Graph
-UriNode rdfType = g.CreateUriNode("rdf:type");
-
-//This prints only the Triples we find with the predicate rdf:type using NTriples formatting
-foreach (Triple t in g.GetTriplesWithPredicate(rdfType))
-{
-	Console.WriteLine(t.ToString(formatter));
-}
-}}}
-
-Currently the library has the following formatters available but you can easily define your own:
-
-|= Formatter |= Format Produced |
-| CsvFormatter | CSV |
-| Notation3Formatter | Notation 3 |
-| NQuadsFormatter | NQuads |
-| NTriplesFormatter | NTriples |
-| SparqlFormatter | SPARQL style, can also format queries |
-| TsvFormatter | TSV |
-| TurtleFormatter | Turtle |
-| UncompressedNotation3Formatter | Uncompressed Notation 3 |
-| UncompressedTurtleFormatter | Uncompressed Turtle |
+Formatters are an alternative to using an ##IRdfWriter## to output RDF. Their advantage is that they can be used to format individual Nodes and Triples to just display what you want how you want, but their disadvantage is that they can't use the same array of compression techniques that a full ##IRdfWriter## can use when writing a whole graph because they are stateless by design.  See the [[UserGuide/Formatting API|Formatting API]] page for more information.
 
 = Writer Behaviour =
 
