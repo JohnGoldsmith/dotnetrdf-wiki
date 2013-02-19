@@ -16,7 +16,8 @@ dotNetRDF supports a subset of this library which is as follows:
 
 == Aggregate Functions ==
 
-[[http://www.w3.org/2005/xpath-functions/#string-join|fn:string-join()]] - Joins the members of a group into a string with the given selector
+|= XPath Function |= SPARQL Equivalent |= SPARQL Version |= Description |
+| [[http://www.w3.org/2005/xpath-functions/#string-join|fn:string-join()]] | ##GROUP_CONCAT()## | 1.1 | Joins the members of a group into a string with the given selector |
 
 == Boolean Functions ==
 
