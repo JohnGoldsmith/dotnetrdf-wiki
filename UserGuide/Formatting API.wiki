@@ -17,9 +17,49 @@ The API consists of a number of interfaces:
 
 = Basic Usage =
 
-Generally you will only want to use one of the higher level interfaces such as ##INodeFormatter## or ##ITripleFormatter##.  A formatter usually provides one or more //Format()// or //FormatX()// methods which are used to format specific things.  These methods take the thing to be formatted and return a string.
+Generally you will only want to use one of the higher level interfaces such as ##INodeFormatter## or ##ITripleFormatter##.  Both these interfaces define //Format(…)// methods which take either a ##Triple## or an ##INode## and return a string representation of them. You can also call //ToString(…)// overloads on ##Triple## and ##INode## which take in a formatter and return the String representation as formatted by that formatter.
 
-Here's an example of formatting Triples for display on the console:
+In general any formatter usually provides one or more //Format()// or //FormatX()// methods which are used to format specific things.  These methods take the thing to be formatted and return a string.
+
+== Example 1 ==
+
+For example we can format specific nodes:
+
+{{{
+#!csharp
+
+//Assumes that we already have a Graph in the variable g
+NTriplesFormatter formatter = new NTriplesFormatter();
+
+//Want to get only the triples defining types - assumes rdf: prefix is appropriately defined for this Graph
+UriNode rdfType = g.CreateUriNode("rdf:type");
+
+//This prints only the subjects of the Triples we find with
+//the predicate rdf:type using NTriples formatting
+foreach (Triple t in g.GetTriplesWithPredicate(rdfType))
+{
+	Console.WriteLine(t.Subject.ToString(formatter));
+}
+}}}
+
+== Standard Implementations ==
+
+Currently the library has the following formatters available but you can easily define your own:
+
+|= Formatter |= Format Produced |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.CsvFormatter|CsvFormatter]] | CSV |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.Notation3Formatter|Notation3Formatter]] | Notation 3 |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.NQuadsFormatter|NQuadsFormatter]] | NQuads |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.NTriplesFormatter|NTriplesFormatter]] | NTriples |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.SparqlFormatter|SparqlFormatter]] | SPARQL style, can also format queries |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.TsvFormatter|TsvFormatter]] | TSV |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.TurtleFormatter|TurtleFormatter]] | Turtle |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.UncompressedNotation3Formatter|UncompressedNotation3Formatter]] | Uncompressed Notation 3 |
+| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.UncompressedTurtleFormatter|UncompressedTurtleFormatter]] | Uncompressed Turtle |
+
+== Example 2 ==
+
+Here's another example of formatting Triples for display on the console:
 
 {{{
 #!csharp
