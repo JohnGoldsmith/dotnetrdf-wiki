@@ -8,4 +8,4 @@ This page provides information on the performance of our SPARQL engine.
 
 The [[http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/|Berlin SPARQL Benchmark]] is a standard benchmark for SPARQL engines, here are our results on this:
 
-![BSBM Results](DeveloperGuide/SPARQL/BSBMPerformance.jpg)
+{{DeveloperGuide/SPARQL/BSBMPerformance.png|BSBM Results}}
