@@ -4,6 +4,8 @@
 
 The Leviathan Function Library is a library of extension functions for SPARQL which embody a large number of numeric functions and a few string functions that can be used in queries executed by dotNetRDF.
 
+<<toc>>
+
 == Namespace ==
 
 The namespace for the Leviathan Function Library is ##http://www.dotnetrdf.org/leviathan### and the recommended prefix is ##lfn##
@@ -19,8 +21,6 @@ SELECT lfn:md5hash(STR(?s)) AS ?SubjectHash WHERE {?s ?p ?o} GROUP BY ?s
 }}}
 
 = Available Functions =
-
-<<toc>>
 
 == Aggregate Functions ==
 
