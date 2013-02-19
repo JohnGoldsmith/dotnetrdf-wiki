@@ -31,7 +31,7 @@ Using NAnt is primarily for advanced users, it allows you to build individual co
 
 You can get a list of available NAnt targets by using the NAnt CLIs project help functionality, general useful targets are as follows:
 
-!= Target |= Description |
+|= Target |= Description |
 | license | Checks all code files have appropriate license headers in place |
 | compile | Compiles all libraries and utilities |
 | compile-libs | Compile all libraries |
