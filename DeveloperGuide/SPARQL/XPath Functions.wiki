@@ -6,6 +6,10 @@ The XPath Function Library is a library of functions which form part of the W3C 
 
 **Note:** Many of these functions now have built-in equivalents in SPARQL 1.1 which often offer better functionality since they are slightly modified to work with RDF where appropriate.
 
+= Namespace =
+
+The namespace for XPath functions is ##http://www.w3.org/2005/xpath-functions/# ## and the preferred prefix is ##fn##
+
 = Available Functions =
 
 dotNetRDF supports a subset of this library which is as follows:
@@ -45,20 +49,20 @@ dotNetRDF supports a subset of this library which is as follows:
 == String Functions ==
 
 |= XPath Function |= SPARQL Equivalent |= SPARQL Version |= Description |
-| fn:matches() | ##REGEX()## | 1.0 | Equivalent to the ##REGEX## function |
-| fn:contains() | ##CONTAINS()## | 1.1 | Determines whether a given string contains another string. |
-| fn:starts-with() | ##STRSTARTS()## | 1.1 | Determines whether a given string starts with another string. |
-| fn:ends-with() | ##STRENDS()## | 1.1 | Determines whether a given string ends with another string. |
-| fn:string-length() | ##STRLEN()## | 1.1 | Returns the length of the given string. |
-| fn:concat() | ##CONCAT()## | 1.1 | Concatenates any number of string arguments without a separator |
-| fn:substring() | ##SUBSTR()## | 1.1 | Returns a substring from a string, uses a 1 based index |
-| fn:substring-before() | ##STRBEFORE()## | 1.1 | Gets the part of the string that occurs before a given string |
-| fn:substring-after() | ##STRAFTER()## | 1.1 | Gets the part of the string that occurs before a given string |
-| fn:normalize-space() | | | Normalizes space in a string |
-| fn:normalize-unicode() | | | Normalizes a string to a given Unicode normalization form, not all forms are supported |
-| fn:upper-case() | ##UCASE()## | 1.1 | Converts a string to upper case |
-| fn:lower-case() | ##LCASE()## | 1.1 | Converts a string to lower case |
-| fn:encode-for-uri() | ##ENCODE_FOR_URI()## | 1.1 | Encodes a String for use in a URI |
-| fn:escape-html-uri() | | | Escapes a URI for insertion in HTML |
-| fn:replace() | ##REPLACE()## | 1.1 | Performs a regular expression based replace on strings |
-| fn:compare() | | | Compares two strings and returns -1, 0 or 1 to indicate their relative ordering |
+| [[http://www.w3.org/2005/xpath-functions/#matches|fn:matches()]] | ##REGEX()## | 1.0 | Equivalent to the ##REGEX## function |
+| [[http://www.w3.org/2005/xpath-functions/#contains|fn:contains()]] | ##CONTAINS()## | 1.1 | Determines whether a given string contains another string. |
+| [[http://www.w3.org/2005/xpath-functions/#starts-with|fn:starts-with()]] | ##STRSTARTS()## | 1.1 | Determines whether a given string starts with another string. |
+| [[http://www.w3.org/2005/xpath-functions/#ends-with|fn:ends-with()]] | ##STRENDS()## | 1.1 | Determines whether a given string ends with another string. |
+| [[http://www.w3.org/2005/xpath-functions/#string-length|fn:string-length()]] | ##STRLEN()## | 1.1 | Returns the length of the given string. |
+| [[http://www.w3.org/2005/xpath-functions/#concat|fn:concat()]] | ##CONCAT()## | 1.1 | Concatenates any number of string arguments without a separator |
+| [[http://www.w3.org/2005/xpath-functions/#substring|fn:substring()]] | ##SUBSTR()## | 1.1 | Returns a substring from a string, uses a 1 based index |
+| [[http://www.w3.org/2005/xpath-functions/#substring-before|fn:substring-before()]] | ##STRBEFORE()## | 1.1 | Gets the part of the string that occurs before a given string |
+| [[http://www.w3.org/2005/xpath-functions/#substring-after|fn:substring-after()]] | ##STRAFTER()## | 1.1 | Gets the part of the string that occurs before a given string |
+| [[http://www.w3.org/2005/xpath-functions/#normalize-space|fn:normalize-space()]] | | | Normalizes space in a string |
+| [[http://www.w3.org/2005/xpath-functions/#normalize-unicode|fn:normalize-unicode()]] | | | Normalizes a string to a given Unicode normalization form, not all forms are supported |
+| [[http://www.w3.org/2005/xpath-functions/#upper-case|fn:upper-case()]] | ##UCASE()## | 1.1 | Converts a string to upper case |
+| [[http://www.w3.org/2005/xpath-functions/#lower-case|fn:lower-case()]] | ##LCASE()## | 1.1 | Converts a string to lower case |
+| [[http://www.w3.org/2005/xpath-functions/#encode-for-uri|fn:encode-for-uri()]] | ##ENCODE_FOR_URI()## | 1.1 | Encodes a String for use in a URI |
+| [[http://www.w3.org/2005/xpath-functions/#escape-html-uri|fn:escape-html-uri()]] | | | Escapes a URI for insertion in HTML |
+| [[http://www.w3.org/2005/xpath-functions/#replace|fn:replace()]] | ##REPLACE()## | 1.1 | Performs a regular expression based replace on strings |
+| [[http://www.w3.org/2005/xpath-functions/#compare|fn:compare()]] | | | Compares two strings and returns -1, 0 or 1 to indicate their relative ordering |
