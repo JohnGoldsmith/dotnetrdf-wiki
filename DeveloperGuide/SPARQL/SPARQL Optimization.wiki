@@ -8,6 +8,8 @@ This article aims to explain as much of how our SPARQL query optimisation works 
 # Algebra Optimisation
 # Evaluation Optimisation
 
+If you want to implement your own optimizers see [[DeveloperGuide/SPARQL/Implementing Custom Optimizers|Implementing Custom Optimisers]]
+
 = Query Optimisation =
 
 Query Optimisation is the first stage of optimisation and it occurs automatically at the end of query parsing. The aim of Query Optimisation is to reorder the Triple Patterns within each Graph Pattern to do several things:
