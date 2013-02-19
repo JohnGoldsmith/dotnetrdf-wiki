@@ -9,3 +9,5 @@ This page provides information on the performance of our SPARQL engine.
 The [[http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/|Berlin SPARQL Benchmark]] is a standard benchmark for SPARQL engines, here are our results on this:
 
 {{DeveloperGuide/SPARQL/BSBMPerformance.png|BSBM Results}}
+
+You can find the latest figures in the documentation repository at [[https://bitbucket.org/dotnetrdf/documentation/src/tip/Benchmarks/dotNetRDF%20BSBM%20v3%20Benchmark.xlsx?at=default]]
