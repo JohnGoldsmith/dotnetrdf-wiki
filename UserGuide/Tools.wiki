@@ -2,7 +2,7 @@
 
 = Tools =
 
-This page acts as a hub for documentation about our tools:
+This page acts as a hub for documentation about our tools, currently it is somewhat limited.  We hope to expand this more in the near future.
 
 |= Tool |= Description |
 | [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]] | Utility for helping with deployment of our [[UserGuide/ASP.Net Integration|ASP.Net Integration]] features |
