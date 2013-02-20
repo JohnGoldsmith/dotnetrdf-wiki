@@ -160,6 +160,7 @@ As of the most recent release all of the following objects can be loaded from Co
 * [[UserGuide/Configuration/Protocol Processors|Protocol Processors]]
 * [[UserGuide/Configuration/SPARQL Datasets|SPARQL Datasets]]
 * [[UserGuide/Configuration/SPARQL Expression Factories|SPARQL Expression Factories]]
+* [[UserGuide/Configuration/SPARQL Operators|SPARQL Operators]]
 * [[UserGuide/Configuration/SPARQL Optimisers|SPARQL Optimisers]]
 * [[UserGuide/Configuration/Full Text Query|Full Text Query]]
 * [[UserGuide/Configuration/Reasoners|Reasoners]]
