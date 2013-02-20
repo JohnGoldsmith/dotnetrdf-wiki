@@ -16,4 +16,22 @@ Custom operators are implemented by implementing the [[http://www.dotnetrdf.org/
 
 === The ISparqlOperator Interface ===
 
-The ##ISparqlOperator## interface is relatively simple
+The ##ISparqlOperator## interface is relatively simple containing a single property and two methods.  Once this is implemented you register your implementation like so:
+
+{{{
+#!csharp
+
+SparqlOperators.AddOperator(new MyCustomOperator());
+}}}
+
+==== Operator ====
+
+The //Operator// property returns a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Operators.SparqlOperatorType|SparqlOperatorType]] which indicates which operator your implementation overloads.
+
+==== IsApplicable() ====
+
+The //IsApplicable()// method takes in the proposed arguments for the operator and determines whether the operator can be applied to those arguments e.g. are the argument types compatible for the implementation.
+
+==== Apply() ====
+
+The //Apply()// method takes the arguments for the operator and applies the operator returning either the resulting value or throwing a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.RdfQueryException|RdfQueryException]] if an error occurs.
