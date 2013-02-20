@@ -1,0 +1,19 @@
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/SPARQL Operators|SPARQL Operators]]
+
+= SPARQL Operators =
+
+SPARQL Operators are an extension to SPARQL permitted by the specification which allow for implementations to extend the definition of certain operators - namely ##=##, ##!=##, ##<##, ##<=##, ##>##, ##>=##, ##+##, ##-##, ##*## and ##/##.
+
+Currently dotNetRDF only supports extending the arithmetic operators i.e. ##+##, ##-##, ##*## and ##/##.  In the future we will likely extend this functionality to allow any operator to be overloaded.
+
+== Extended Operators ==
+
+Right now the only operators which dotNetRDF provides extensions for are ##+## and ##-## when used with ##xsd:dateTime##, ##xsd:duration##, ##xsd:dayTimeDuration##.  This means that when using our SPARQL engine you can add/subtract durations from date times and add/subtract durations from each other.
+
+== Implementing Custom Operators ==
+
+Custom operators are implemented by implementing the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Operators.ISparqlOperator|ISparqlOperator]] interface and registering your implementation with the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Operators.SparqlOperators|SparqlOperators]] registry.
+
+=== The ISparqlOperator Interface ===
+
+The ##ISparqlOperator## interface is relatively simple
