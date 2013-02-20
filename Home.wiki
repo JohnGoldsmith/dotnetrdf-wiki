@@ -1,9 +1,3 @@
-= Warning - Incomplete = 
-
-We are currently porting our documentation to our BitBucket wiki to make it easier to maintain, many links here are currently broken.
-
-Please see the [[http://www.dotnetrdf.org?content.asp?pageID=dotNetRDF%20API|main documentation]] for the time being.
-
 = dotNetRDF Documentation =
 
 This wiki serves as the primary source of documentation for users and developers and is divided into several main sections:
