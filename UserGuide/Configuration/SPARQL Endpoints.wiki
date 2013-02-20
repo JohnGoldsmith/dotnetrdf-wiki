@@ -67,4 +67,4 @@ _:dbpedia a dnr:SparqlEndpoint ;
   dnr:endpointUri <http://dbpedia.org/sparql> .
 }}}
 
-The above configures a Federated Endpoint which sends the query to [[http://dbpedia.org/sparql|DBPedia's SPARQL endpoint]] and the [[http://sparql.org/books|Books endpoint]] at [[http://sparql.org]]
+The above configures a Federated Endpoint which sends the query to [[http://dbpedia.org/sparql|DBPedia's SPARQL endpoint]] and the [[http://sparql.org/books/sparql|Books endpoint]] at [[http://sparql.org]]
