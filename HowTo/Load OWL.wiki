@@ -1,6 +1,6 @@
 [[Home]] > [[How To]] > [[HowTo/Load OWL|Load OWL]]
 
-= How To: Load OWL =
+= Load OWL =
 
 While dotNetRDF does not support OWL in terms of axioms, OWL ontologies and reasoning it can still be used to load the RDF triples representing the OWL ontology.
 
