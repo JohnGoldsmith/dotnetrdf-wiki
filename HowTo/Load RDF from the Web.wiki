@@ -21,3 +21,5 @@ Occasionally some server may misinterpret the ##Accept## header that dotNetRDF n
 IGraph g = new Graph();
 g.LoadFromUri(new Uri("http://example.org/file.rdf"), new TurtleParser());
 }}}
+
+Learn more by reading the [[UserGuide/Reading RDF|Reading RDF]] documentation.
