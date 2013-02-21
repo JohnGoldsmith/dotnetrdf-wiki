@@ -1,6 +1,6 @@
 [[Home]] > [[How To]] > [[HowTo/Debug HTTP Communication|Debug HTTP Communication]]
 
-= How To: Debug HTTP Communication =
+= Debugging HTTP Communication =
 
 Various features of dotNetRDF rely on HTTP communication to provide functionality, most of the time this works fine but occasionally you may encounter errors.  dotNetRDF provides some helpful functionality to help you debug these errors.
 
