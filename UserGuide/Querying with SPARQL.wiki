@@ -229,7 +229,7 @@ A key thing to notice here is that we create a [[http://www.dotnetrdf.org/api/in
 
 In this example we have only printed results in full to the Console, to learn more about how to format results for display see [[UserGuide/Result Formatting|Result Formatting]].
 
-A common error with making queries is that queries by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing queries may yield no results depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[UserGuide/SPARQL Datasets|SPARQL Datasets]] page for discussions of configuring different kinds of dataset.
+A common error with making queries is that queries by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing queries may yield no results depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[UserGuide/SPARQL Datasets|SPARQL Datasets]] page for discussions of configuring different kinds of dataset.  You can also look at [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
 
 === Available Query Processors ===
 
