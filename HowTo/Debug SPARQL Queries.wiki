@@ -9,5 +9,18 @@ You can create this like so:
 {{{
 #!csharp
 
-//Assuming you already have a dataset you wish to use
-ISparqlQueryProcessor processor = new ExplainQueryProcessor
+//Assuming you already have a dataset you wish to use in the variable ds
+ISparqlQueryProcessor processor = new ExplainQueryProcessor(ds, ExplanationLevel.Full);
+
+}}}
+
+Once you have the processor you run your query like you would normally with a query processor i.e.
+
+{{{
+#!csharp
+
+//Assuming you have a query ready to run in variable q
+Object results = processor.ProcessQuery(q);
+}}}
+
+This will result in your query being evaluated but also explanations of the query level being printed to Console Standard Output and Debug Output.  These explanations will include useful information like how many results were found at each stage of the query and can help you see why you have no results
