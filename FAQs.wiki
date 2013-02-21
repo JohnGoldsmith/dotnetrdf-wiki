@@ -68,4 +68,6 @@ Are there named graphs involved? If so does your query actually query the approp
 
 Does the data being queried actually contain the triples you are trying to match?
 
+You can try debugging your query by following the instructions on [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]]
+
 If you still have problems then you may wish to ask for [[Support]] - bear in mind that for many query able data sources such as 3rd party triple stores you are likely better off asking the people behind the store for help rather than us because we may just be sending a query and receiving a result in which case the lack of results is outside of our control.
