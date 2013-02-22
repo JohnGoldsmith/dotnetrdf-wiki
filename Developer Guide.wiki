@@ -20,6 +20,7 @@ The [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] section covers non-architectu
 
 This section of the guide covers topics pertaining to advanced functionality of dotNetRDF.
 
+* [[HowTo/Minimize Memory Usage|Minimizing Memory Usage]]
 * [[DeveloperGuide/URI Interning|URI Interning]]
 * [[DeveloperGuide/Notes for Silverlight and WP7 Developers|Notes for Silverlight and WP7 Developers]]
 
