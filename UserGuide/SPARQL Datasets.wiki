@@ -32,6 +32,8 @@ The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparq
 
 How you construct your dataset can affect the results of your query due to SPARQL dataset descriptions as already discussed on this page.  For our examples here we will use the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset|InMemoryDataset]] which may be constructed in a number of ways.
 
+If your queries involve a lot of named graphs then you may get better performance by using an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryQuadDataset|InMemoryQuadDataset]] instead.  This has identical constructors to the ones shown in the following examples.
+
 === Default Behavior ===
 
 The default behavior of dotNetRDF is to treat the unnamed graph as the default graph and all other graphs as named graphs.  You get this type of dataset when constructing like so:
