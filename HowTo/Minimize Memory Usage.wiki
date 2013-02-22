@@ -1,6 +1,6 @@
 [[Home]] > [[How To]] > [[HowTo/Minimize Memory Usage|Minimize Memory Usage]]
 
-= Minimizing Memory Usage =
+= Minimize Memory Usage =
 
 Depending on how it is used and the data you are working with dotNetRDF can be very memory hungry resulting in large memory footprints for relatively small volumes of data or a memory footprint that grows ever larger over time.
 
