@@ -1,0 +1,7 @@
+[[Home]] > [[TOC|Table of Contents]]
+
+= Table of Contents =
+
+This is the master table of contents for our documentation, it is auto-generated from the wiki structure so should always be up to date.
+
+<<toc>>
