@@ -1,0 +1,4 @@
+syntax: glob
+
+# Temporary Artifacts
+*.bak
