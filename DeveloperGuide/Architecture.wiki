@@ -7,3 +7,4 @@ This page acts as a hub for documentation of the dotNetRDF architecture, current
 == Overview Documents ==
 
 * [[DeveloperGuide/Architecture/Namespaces|Namespaces]]
+* [[DeveloperGuide/Architecure/Design|Design]]
