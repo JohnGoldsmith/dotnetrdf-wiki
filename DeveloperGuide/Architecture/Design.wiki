@@ -1,0 +1,13 @@
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/Architecture|Architecture]] > [[DeveloperGuide/Architecture/Design|Design]]
+
+= Design =
+
+This section of the wiki covers design documents past and present for the library.
+
+== Future Designs ==
+
+== Past Designs ==
+
+=== Adopted Past Designs ===
+
+=== Obsolete/Discarded Past Designs ===
