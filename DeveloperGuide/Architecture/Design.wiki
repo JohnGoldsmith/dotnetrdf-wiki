@@ -7,7 +7,7 @@ This section of the wiki covers design documents past and present for the librar
 == Future Designs ==
 
 |= Design Document |= Description |
-| [[DeveloperGuide/Architecture/Design/2.0.md|dotNetRDF 2.0]] | Details the planned simplification and refactoring of dotNetRDF for 2.0 |
+| [[DeveloperGuide/Architecture/Design/2.0|dotNetRDF 2.0]] | Details the planned simplification and refactoring of dotNetRDF for 2.0 |
 | [[DeveloperGuide/Architecture/Design/Medusa|Medusa]] | Details a planned new streaming query engine for dotNetRDF |
 
 == Past Designs ==
