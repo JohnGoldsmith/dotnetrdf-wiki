@@ -2,12 +2,19 @@
 
 = Design =
 
-This section of the wiki covers design documents past and present for the library.
+This section of the wiki covers design documents past and present for the library.  A lot of time design for simple features/fixes takes place on the mailing list and via our [[http://www.dotnetrdf.org/tracker/|Issue Tracker]] so only major features get covered here.
 
 == Future Designs ==
+
+|= Design Document |= Description |
+| [[DeveloperGuide/Architecure/Design/2.0|dotNetRDF 2.0]] | Details the planned simplification and refactoring of dotNetRDF for 2.0 |
+| [[DeveloperGuide/Architecure/Design/Medusa|Medusa]] | Details a planned new streaming query engine for dotNetRDF |
 
 == Past Designs ==
 
 === Adopted Past Designs ===
+
+|= Design Document |= Description |
+| [[DeveloperGiode/Architecture/Design/dotNetRDF 0.4.1.docx]] | Designs for 0.4.1 which resulted in the [[UserGuide/Handlers API|Handlers API]] abstraction. |
 
 === Obsolete/Discarded Past Designs ===
