@@ -45,7 +45,7 @@ If you don't need the indices you can avoid using indices completely by always u
 
 == Use Only Simple Indexes ==
 
-If you can live with only simple index ices and don't need compound indexes you can disable the compound indices like so:
+If you can live with only simple indices and don't need compound indices you can disable the compound indices like so:
 
 {{{
 #!csharp
