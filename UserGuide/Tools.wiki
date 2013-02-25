@@ -8,4 +8,5 @@ This page acts as a hub for documentation about our tools, currently it is somew
 | [[UserGuide/Tools/rdfConvert|rdfConvert]] | Utility for converting between different RDF formats |
 | [[UserGuide/Tools/rdfEditor|rdfEditor]] | Notepad replacement for editing of RDF files |
 | [[UserGuide/Tools/rdfOptStats|rdfOptStats]] | Utility for generating stats for use with our in-memory stats based optimizer |
+| [[UserGuide/Tools/rdfQuery|rdfQuery]] | Utility for making SPARQL queries at the command line |
 | [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]] | Utility for helping with deployment of our [[UserGuide/ASP.Net Integration|ASP.Net Integration]] features |
