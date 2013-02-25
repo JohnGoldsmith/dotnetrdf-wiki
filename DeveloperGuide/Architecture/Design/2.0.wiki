@@ -1,3 +1,7 @@
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/Architecture|Architecture]] > [[DeveloperGuide/Architecture/Design|Design]] > [[DeveloperGuide/Architecture/Design/2.0|dotNetRDF 2.0 Design]]
+
+<<toc>>
+
 = dotNetRDF 2.0 Design =
 
 As we approach dotNetRDF 1.0 we have been thinking a lot about the state of the API and what we would really like to change if we were able to introduce more significant refactors and breaking changes.  This thinking so far forms the basis for this design document, the idea is that we would make a number of significant and breaking changes in the 2.0 API in order to clean up, simplify and modularize the API better.
@@ -146,9 +150,9 @@ The ##ITripleStore## interface is both poorly named and a messy API, it also ove
     }
 }}}
 
-Note that while this interface outline is by no means complete it does not include the active and default graph management portions of the ISparqlDataset API.  It is proposed that the burden of tracking what constitutes those graphs is the job of the query engine.
+Note that while this interface outline is by no means complete it does not include the active and default graph management portions of the ##ISparqlDataset## API.  It is proposed that the burden of tracking what constitutes those graphs is the job of the query engine.  Likely we will introduce custom algebra to cover this
 
-There will also be no Graphs property exposing a BaseGraphCollection, that will instead become purely the standard backing implementation for base implementations of this interface.
+There will also be no //Graphs// property exposing a ##BaseGraphCollection##, that will instead become purely the standard backing implementation for base implementations of this interface.
 
 With this interface in place we will need to introduce new implementations of this which cover our existing key implementations:
 
@@ -157,19 +161,29 @@ With this interface in place we will need to introduce new implementations of th
 
 === IO APIs Refactor ===
 
-The Data Model refactors outlined above will facilitate some refactoring and streamlining of the existing IO APIs particularly in the Parsing namespace.  I propose to remove the IStoreReader interface and generalize the IRdfReader interface so we a RDF parser can pass into a IGraph/IGraphStore.  This will mean adding overloads of the Load() method which take a IGraphStore instead
+The Data Model refactors outlined above will facilitate some refactoring and streamlining of the existing IO APIs particularly in the Parsing namespace.  I propose to remove the ##IStoreReader## interface and generalize the ##IRdfReader## interface so we a RDF parser can pass into a ##IGraph##/##IGraphStore##.  This will mean adding overloads of the //Load()// method which take a ##IGraphStore## instead
 
-As a side effect of the above the IRdfHandler interface will need to be expanded to add a HandleQuad() method, parsers will call either HandleTriple()/HandleQuad() depending on the data they produce.
+As a side effect of the above the ##IRdfHandler## interface will need to be expanded to add a //HandleQuad()// method, parsers will call either //HandleTriple()// or //HandleQuad()// depending on the data they produce.
 
-On the writing side we will introduce a IQuadFormatter which provides a Format(Quad q) method in a similar way to the existing ITripleFormatter method.  Similar to the changes on the parsing side we will replace the IStoreWriter interface with an expanded IRdfWriter interface.
+==== Formatting API Improvements ===
+
+On the writing side we will introduce a ##IQuadFormatter## which provides a //Format(Quad q)// method in a similar way to the existing ##ITripleFormatter## method.  Similar to the changes on the parsing side we will replace the ##IStoreWriter## interface with an expanded ##IRdfWriter## interface.
+
+We may also expand the formatting APIs to allow them to be passed a ##TextWriter## directly in order to eliminate some of the overheads of generating and then writing a string.  The existing overloads that return strings can be rewritten in terms of ##StringWriter## to minimize code duplication.
 
 === Query APIs Refactor ===
 
-As a result of other refactors there will be some changes required in the Query API, most notably that it needs to reflect the fact that queries will now operate over a IGraphStore instance and must track the default/active graphs themselves.  For convenience I may end up using a simplified version of ISparqlDataset to do this, I will leave that decision until I actually make the refactor since my other proposals may impact on it.
+As a result of other refactors there will be some changes required in the Query API, most notably that it needs to reflect the fact that queries will now operate over a ##IGraphStore## instance and must track the default/active graphs themselves.
+
+The mechanism by which we will track the default/active graphs is yet to be determined.
+
+==== Query Parser and AST ====
+
+While the current query parser and AST give us full conformance with the SPARQL specification their code is quite ugly and hacky in some respects.  We propose to replace the parser with a new parser either hand-written or using a parser generator with good .Net support like SableCC.  As part of this rewrite we would change the AST representation to align more closely with that used by ARQ as that would allow us to eliminate some of the  ugly code we currently have.
 
 ==== Query Results ====
 
-Currently methods that can take any type of query return an Object and the user must cast to an appropriate IGraph or SparqlResultSet, this has proved to be a less than ideal decision and so I would like to introduce a general QueryResult class like so:
+Currently methods that can take any type of query return an ##Object## and the user must cast to an appropriate ##IGraph## or ##SparqlResultSet##, this has proved to be a less than ideal decision and so I would like to introduce a general ##QueryResult## class like so:
 
 {{{
 #!csharp
@@ -192,21 +206,25 @@ Currently methods that can take any type of query return an Object and the user 
 
 Doing this makes peoples code simpler since they don't need to cast and it also allows us to expand result returns in the future to include additional information e.g. execution time.
 
+We also intend to abstract ##SparqlResultSet## into an interface and refactor it somewhat to support true streaming of results rather than having to buffer the entire results set into memory.
+
 ==== Query Processor Refactor ====
 
-Currently LeviathanQueryProcessor is visitor like in it's implementation but most of the real implementation is hidden inside the algebra classes.  I would like to move all implementation into the query processor itself.  This makes the code easier to maintain since it's all in one place and much easier for people to override specific parts of the implementation.
+Currently ##LeviathanQueryProcessor## is visitor like in it's implementation but most of the real implementation is hidden inside the algebra classes.  I would like to move all implementation into the query processor itself.  This makes the code easier to maintain since it's all in one place and much easier for people to override specific parts of the implementation.
+
+Some more thoughts on how the query processors can be refactored to support a new streaming engine can be found in the [[DeveloperGuide/Architecture/Design/Medusa|Medusa Query Engine]] design document.
 
 ==== ISparqlExpression Refactor ====
 
 Right now to evaluate an expression you need to pass in the entire query context, realistically all you actually need is the ##ISet## you are applying the expression on and possibly some limited context.  Making this refactor has a couple of blockers right now:
 
 * Some expressions like ##EXISTS## have semantics somewhat at odds with most other functions
-* We should implement IEquatable<ISparqlExpression> so that we can more easily perform expression manipulations
+* We should implement ##IEquatable<ISparqlExpression>## so that we can more easily perform expression manipulations
 
-With equality in place it then becomes relatively easy to scan the expression tree to find aggregates and replace them with temporary variables (or their assigned variables) in the same way that ARQ does.  In the spirit of the Query Processor Refactor and to make this easier we should also consider refactoring IExpressionTransformer into a visitor interface as part of these changes.
+With equality in place it then becomes relatively easy to scan the expression tree to find aggregates and replace them with temporary variables (or their assigned variables) in the same way that ARQ does.  In the spirit of the Query Processor Refactor and to make this easier we should also consider refactoring //IExpressionTransformer// into a visitor interface as part of these changes.
 
 If we make this refactor it also paves the way for writing a true streaming engine that does not to process the query in blocks like Leviathan does but rather operates more in the manner of ARQ.
 
-### Optimizer Refactor
+==== Optimizer Refactor ====
 
-As with other proposed refactors changing IAlgebraOptimiser to be a visitor would make it easier to use and extend going forward.
+As with other proposed refactors changing ##IAlgebraOptimiser## to be a visitor would make it easier to use and extend going forward.
