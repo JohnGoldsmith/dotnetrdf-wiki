@@ -15,6 +15,6 @@ This section of the wiki covers design documents past and present for the librar
 === Adopted Past Designs ===
 
 |= Design Document |= Description |
-| [[DeveloperGuide/Architecture/Design/dotNetRDF 0.4.1|dotNetRDF 0.4.1]] | Designs for 0.4.1 which resulted in the [[UserGuide/Handlers API|Handlers API]] abstraction. |
+| [[DeveloperGuide/Architecture/Design/dotNetRDF 0.4.1|dotNetRDF 0.4.1 Design]] | Designs for 0.4.1 which resulted in the [[UserGuide/Handlers API|Handlers API]] abstraction. |
 
 === Obsolete/Discarded Past Designs ===
