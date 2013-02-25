@@ -6,4 +6,5 @@ This page acts as a hub for documentation about our tools, currently it is somew
 
 |= Tool |= Description |
 | [[UserGuide/Tools/rdfConvert|rdfConvert]] | Utility for converting between different RDF formats |
+| [[UserGuide/Tools/rdfEditor|rdfEditor]] | Notepad replacement for editing of RDF files |
 | [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]] | Utility for helping with deployment of our [[UserGuide/ASP.Net Integration|ASP.Net Integration]] features |
