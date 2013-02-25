@@ -2,7 +2,7 @@
 
 = dotNetRDF 2.0 Design =
 
-<<toc 2>>
+<<toc 3>>
 
 As we approach dotNetRDF 1.0 we have been thinking a lot about the state of the API and what we would really like to change if we were able to introduce more significant refactors and breaking changes.  This thinking so far forms the basis for this design document, the idea is that we would make a number of significant and breaking changes in the 2.0 API in order to clean up, simplify and modularize the API better.
 
