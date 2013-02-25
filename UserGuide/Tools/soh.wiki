@@ -24,7 +24,7 @@ The mode must always be specified as the first argument to the tool.
 Command Usage is:
 
 {{{
-soh.exe query [--service URI] 'query'
+soh.exe query [options]
 }}}
 
 e.g. Query a endpoint with the query specified at the command line 
@@ -52,7 +52,7 @@ soh.exe query --service http://dbpedia.org/sparql --query query.rq
 Command Usage is:
 
 {{{
-soh.exe update service URI 'update'
+soh.exe update [options]
 }}}
 
 e.g. Update an endpoint specifying the update at the command line
