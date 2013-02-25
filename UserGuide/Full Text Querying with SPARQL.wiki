@@ -94,7 +94,7 @@ public class FullTextSearchExample
 		try
 		{
 			//Get a Lucene Search Provider
-			provider = new LuceneSearchProvider(Lucene.Util.Version.LUCENE_29, FSDirectory.Open("example"), new StandardAnalyzer(), new DefaultIndexSchema());
+			provider = new LuceneSearchProvider(Lucene.Util.Version.LUCENE_30, FSDirectory.Open("example"), new StandardAnalyzer(), new DefaultIndexSchema());
 
 			//Use it to make a search and print the results
 			NTriplesFormatter formatter = new NTriplesFormatter();
