@@ -60,7 +60,7 @@ e.g. Update an endpoint specifying the update at the command line
 soh.exe update service http://example.org/update "LOAD <http://dbpedia.org/resource/Ilkeston>"
 }}}
 e.g. Update an endpoint specifying the update using a file.
-{{
+{{{
 soh.exe update service http://example.org/update --update update.ru
 }}}
 
