@@ -34,3 +34,4 @@ This section covers how to contribute to dotNetRDF and is primarily intended for
 * [[DeveloperGuide/Code Style|Code Style]]
 * [[DeveloperGuide/Deprecation Policy|Deprecation Policy]]
 * [[DeveloperGuide/Test Environment|Test Environment]]
+* [[DeveloperGuide/Issue Tracker Integration|Issue Tracker Integration]]
