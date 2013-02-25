@@ -38,106 +38,73 @@ soh.exe query --service http://dbpedia.org/sparql --query query.rq
 
 ==== Supported Options ====
 
---service URI
+|= Option |= Purpose |
+| ##--service URI## or ##--server URI## | Either argument can be used to set the SPARQL endpoint to which the query is sent |
+| ##--query QUERY## or ##--file FILE## | Either of these arguments may be used to specify that the query should be taken from a file rather than the 1st anonymous argument. ##--query## has precedence if both are specified |
+| ##--accept mime/type## | Used to specify the Mime Type you'd like the query results in |
+| ##--v## or ##--verbose## | Used to enable Verbose mode
+| ##--nobom## | Used to disable the use of BOM for UTF-8 output |
+| #--version## | Displays the version and quits |
+| ##--h## or ##--help## | Displays the help and quits |
 
---server URI
-
-Either argument can be used to set the SPARQL endpoint to which the query is sent
---query QUERY
-
---file FILE
-
-Either of these arguments may be used to specify that the query should be taken from a file rather than the 1st anonymous argument. --query has precedence if both are specified
---accept MIMETYPE
-
-Used to specify the MIMETYPE you'd like the query results in
---v
-
---verbose
-
-Used to enable Verbose mode
---nobom
-
-Used to disable the use of BOM for UTF-8 output
---version
-
-Displays the version and quits
---h
-
---help
-
-Displays the help and quits
-Update Mode
+=== Update Mode ===
 
 Command Usage is:
 
-soh update service URI 'update'
+{{{
+soh.exe update service URI 'update'
+}}}
 
-e.g. soh update service http://example.org/update "LOAD <http://dbpedia.org/resource/Ilkeston>"
-e.g. soh update service http://example.org/update update update.ru
-Supported Options
+e.g. Update an endpoint specifying the update at the command line
+{{{
+soh.exe update service http://example.org/update "LOAD <http://dbpedia.org/resource/Ilkeston>"
+}}}
+e.g. Update an endpoint specifying the update using a file.
+{{
+soh.exe update service http://example.org/update --update update.ru
+}}}
 
---service URI
+==== Supported Options ====
 
---server URI
+|= Option |= Purpose |
+| ##--service URI## or ##--server URI## | Either argument can be used to set the SPARQL endpoint to which the update is sent |
+## --update UPDATE## or ##--file FILE## | Either of these arguments may be used to specify that the update should be taken from a file rather than the 1st anonymous argument. ##--update## has precedence if both are specified |
+| ##--v## or ##--verbose## | Used to enable Verbose mode |
+| ##--nobom## | Used to disable the use of BOM for UTF-8 output |
+| ##--version## | Displays the version and quits |
+| ##--h## or ##--help## | Displays the help and quits |
 
-Either argument can be used to set the SPARQL endpoint to which the update is sent
---update UPDATE
-
---file FILE
-
-Either of these arguments may be used to specify that the update should be taken from a file rather than the 1st anonymous argument. --query has precedence if both are specified
---v
-
---verbose
-
-Used to enable Verbose mode
---nobom
-
-Used to disable the use of BOM for UTF-8 output
---version
-
-Displays the version and quits
---h
-
---help
-
-Displays the help and quits
-Protocol Mode
+=== Protocol Mode ===
 
 Command Usage is:
 
-soh protocol [head|get|post|put|delete] datasetURI graph [file]
+{{{
+soh.exe protocol [head|get|post|put|delete] datasetURI graph [file] [options]
+}}}
 
-e.g. soh protocol put http://example.org/dataset/data default example.rdf
-e.g. soh protocol delete http://example.org/dataset/data http://example.org/someGraph
-Note
+e.g. Upload a RDF file to the default graoh
+{{{
+soh.exe protocol put http://example.org/dataset/data default example.rdf
+}}}
 
-The 2nd argument must be a supported HTTP method (case insensitive).
-The 3rd argument must be a SPARQL Uniform HTTP Protocol server endpoint URI
-The 4th argument must be either a Graph URI or default to indicate that either a Named Graph or the Default Graph should be affected
-The file argument is required only for the put and post methods. Using it with any other method will cause an error
-Supported Options
+e.g. Delete a given graph
+{{{
+soh.exe protocol delete http://example.org/dataset/data http://example.org/someGraph
+}}}
 
---accept MIMETYPE
+==== Note ====
 
-Used to specify the MIMETYPE you'd like to GET graphs in
---v
+* The 2nd argument must be a supported HTTP method (case insensitive).
+* The 3rd argument must be a SPARQL Uniform HTTP Protocol server endpoint URI
+* The 4th argument must be either a Graph URI or default to indicate that either a Named Graph or the Default Graph should be affected
+* The ##file## argument is required only for the put and post methods. Using it with any other method will cause an error
 
---verbose
+==== Supported Options ====
 
-Used to enable Verbose mode
---nobom
-
-Used to disable the use of BOM for UTF-8 output
---nocache
-
-Disables the use of GET request caching so data retrieved is always fresh data
---version
-
-Displays the version and quits
---h
-
---help
-
-Displays the help and quits
+|= Option |= Purpose |
+| ##--accept mime/type## | Used to specify the MIME Type you'd like to GET graphs in |
+| ##--v## or ##--verbose## | Used to enable Verbose mode |
+| ##--nobom## | Used to disable the use of BOM for UTF-8 output |
+| ##--nocache## | Disables the use of GET request caching so data retrieved is always fresh data
+| ##--version## | Displays the version and quits |
+| ##--h## or ##--help## | Displays the help and quits |
