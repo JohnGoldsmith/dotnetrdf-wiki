@@ -26,6 +26,8 @@ rdfServer.exe -v
 
 Then point your browser at ##http://localhost:1986/query## which will provide you a query interface, or ##http://localhost:1986/update## which will give you the update interface.
 
+**Important:** The current version contains a couple of bugs which means that SPARQL Updates do not work correctly, see TOOLS-323 and TOOLS-324 for details.
+
 === Supported Options ===
 
 |= Option |= Purpose |
