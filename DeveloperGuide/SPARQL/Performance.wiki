@@ -12,6 +12,8 @@ Our in-memory [[DeveloperGuide/SPARQL/Leviathan Engine|Leviathan engine]] is des
 
 Memory usage may be affected by how you load your data, see [[HowTo/Minimize Memory Usage|How To: Minimize Memory Usage]] for some discussion of configuring indexes to reduce memory usage.
 
+We recommend that if you have more than a million triples you switch to using one of the many supported third party triple stores, see [[UserGuide/Storage/Providers|Storage Providers]] for the available implementations.
+
 === Multi-Core Systems ===
 
 When running a .Net 4.0 build on a multi-core system dotNetRDF leverages the .Net PLINQ feature to parallelize some aspects of query evaluation that may significantly improve performance over running in single core mode.  However not all queries can be safely parallelized so you may see varying results.
