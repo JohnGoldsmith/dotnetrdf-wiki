@@ -29,3 +29,5 @@ You can learn more about this engine on the [[DeveloperGuide/SPARQL/Leviathan En
 * [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]]
 ** [[DeveloperGuide/SPARQL/Implementing Custom Optimizers|Implementing Custom Optimizers]]
 * [[DeveloperGuide/SPARQL/SPARQL Extensions|SPARQL Extensions]]
+* [[DeveloperGuide/SPARQL/Performance|SPARQL Performance]]
+* [[DeveloperGuide/SPARQL/Conformance|SPARQL Conformance]]
