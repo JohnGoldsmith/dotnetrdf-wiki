@@ -9,7 +9,7 @@ This page acts as a hub for topics about our SPARQL Engine, if you are intereste
 Leviathan is the code name for our block based in-memory SPARQL evaluation engine, it has the following capabilities:
 
 * Execution
-** Full SPARQL 1.0 and SPARQL 1.1 queries and updates are supported. Please see the [[http://www.dotnetrdf.org/content.asp?pageID=Known%20Issues|Known Issues]] page for current issues with our SPARQL support
+** Full SPARQL 1.0 and SPARQL 1.1 queries and updates are supported. Please see the [[http://www.dotnetrdf.org/content.asp?pageID=Known%20Issues|Known Issues]] page for current issues with our SPARQL support.  Also see [[DeveloperGuide/SPARQL/Conformance|SPARQL Conformance]] for current conformance status.
 * Optimisation
 ** Powerful query optimizations described on the [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] page
 * Extensions
