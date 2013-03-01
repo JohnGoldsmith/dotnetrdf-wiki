@@ -46,7 +46,7 @@ Provided your chosen store supports SPARQL you can query against it using the SP
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_sparql.jpg|Store Manager - SPARQL Query}}
 
-As with the [[UserGuide/Tools/SparqlGUI|SparqlGui]] you can save and load queries to text files as desired. 
+As with the [[UserGuide/Tools/SparqlGui|SparqlGui]] you can save and load queries to text files as desired. 
 
 Results are displayed in the viewer window like so:
 
