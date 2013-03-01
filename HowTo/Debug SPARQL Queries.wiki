@@ -1,4 +1,4 @@
-[[Home]] > [[How To]] > [[HowTo/Debug SPARQL Queries]]
+[[Home]] > [[How To]] > [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]]
 
 = Debugging SPARQL Queries =
 
