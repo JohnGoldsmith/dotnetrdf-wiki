@@ -82,6 +82,16 @@ The following documentation covers what are considered advanced topics but which
 
 See the [[UserGuide/Tools|Tools]] page for documentation pertaining to our GUI and command line tools.
 
+* [[UserGuide/Tools/rdfConvert|rdfConvert]] 
+* [[UserGuide/Tools/rdfEditor|rdfEditor]] 
+* [[UserGuide/Tools/rdfOptStats|rdfOptStats]] 
+* [[UserGuide/Tools/rdfQuery|rdfQuery]]
+* [[UserGuide/Tools/rdfServer|rdfServer]] 
+* [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]] 
+* [[UserGuide/Tools/soh|soh]]
+* [[UserGuide/Tools/SparqlGui|SparqlGui]]
+* [[UserGuide/Tools/Store Manager|Store Manager]]
+
 === Notes ===
 
 Note that where we refer to the user in this guide we are referring to you the developer who is using the API.
