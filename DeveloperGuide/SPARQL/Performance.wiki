@@ -26,4 +26,4 @@ The [[http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/|Be
 
 {{DeveloperGuide/SPARQL/BSBMPerformance.png|BSBM Results}}
 
-You can find the latest figures in the documentation repository at [[https://bitbucket.org/dotnetrdf/documentation/src/tip/Benchmarks/dotNetRDF%20BSBM%20v3%20Benchmark.xlsx?at=default]]
+You can find the latest figures in the spreadsheet[[DeveloperGuide/SPARQL/Performance/dotNetRDF BSBM v3 Performance.xlsx|here]]
