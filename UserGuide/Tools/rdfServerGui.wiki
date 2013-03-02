@@ -30,8 +30,23 @@ The Create Server tab provides the easiest way to get a server up and running, f
 | Configuration File | None | Used to specify a RDF configuration file that will be used to configure rdfServer |
 | Enable Log File? | Disabled | If enabled will log HTTP requests to the file specified by the Log File option |
 | Log File | log.txt | Log file to log HTTP requests to, only used if Enable Log File? is enabled |
+| Log Format | common | Log format for HTTP request logging, use one of the provided defaults or enter an Apache mod_log style format string |
 | Base Directory | None | If set static content from the given directory can be served in addition to handling SPARQL requests |
 | Enable Verbose Mode | Enabled | If set additional output will be printed to the Console for monitoring. |
 | Enable Quiet Mode | Disabled | If set disables verbose mode if set and reduces console output level. |
-| Run as External Process | Disabled | Allows for the server to persist as a separate process beyond the life of the GUI, external processes have more limited management options. |
+| Run as External Process | Disabled | Allows for the server to persist as a separate process beyond the life of the GUI, external processes have more limited management options.  When disabled the server runs in-process which means it pesists as long as the GUI is running, this provides more monitoring and management options. |
 | Start Server Automatically? | Disabled | If enabled the server will be started as soon as you hit the Create button. |
+
+Let's assume we create a server like so:
+
+{{http://www.dotnetrdf.org/images/screenshots/rdfservergui_create_simple.jpg|rdfServerGui}}
+
+The above creates an in-process server on the default host and port, with default logging enabled and verbose mode on.  After we hit create we can go to the Running Servers tab where we see the following:
+
+{{http://www.dotnetrdf.org/images/screenshots/rdfservergui_running_simple_stopped.jpg|rdfServerGui}}
+
+After we hit the Start button we can go to our browser and make some requests against the server, these will be logged to the monitoring pane like so:
+
+{{http://www.dotnetrdf.org/images/screenshots/rdfservergui_running_simple_monitoring.jpg|rdfServerGui}}
+
+We can hit Pause to temporarily suspend the server or stop to stop it completely, in-process servers can be stopped and started as many times as you want.
