@@ -18,6 +18,7 @@ Using the Toolkit requires .Net 4.0 Framework Full to be installed on your machi
 | [[UserGuide/Tools/rdfOptStats|rdfOptStats]] | Utility for generating stats for use with our in-memory stats based optimizer |
 | [[UserGuide/Tools/rdfQuery|rdfQuery]] | Utility for making SPARQL queries at the command line |
 | [[UserGuide/Tools/rdfServer|rdfServer]] | Utility for running a simple SPARQL server |
+| [[UserGuide/Tools/rdfServerGui|rdfServerGui]] | Simple GUI for managing rdfServer instances |
 | [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]] | Utility for helping with deployment of our [[UserGuide/ASP.Net Integration|ASP.Net Integration]] features |
 | [[UserGuide/Tools/soh|soh]] | Utility for accessing SPARQL servers via the command line |
 | [[UserGuide/Tools/SparqlGui|SparqlGui]] | GUI for experimenting with SPARQL queries using our in-memory SPARQL implementation |
