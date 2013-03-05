@@ -12,7 +12,7 @@ Here are the available options:
 
 === FullTripleIndexing ===
 
-Controls whether implementations of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection|BaseTripleCollection]] that support indexing will create full triple indexes, defaults to ##true##.  See [[HowTo/Minimize Memory Usage|Minimize Memory Usage]] for more discussions on triple indexing.
+Controls whether implementations of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection|BaseTripleCollection]] that support indexing will create full triple indexes, defaults to ##true##.  See [[HowTo/Minimize Memory Usage|Minimizing Memory Usage]] for more discussions on triple indexing.
 
 === InternUris ===
 
@@ -39,6 +39,14 @@ Controls whether literal values have Unicode normalization applied to them when 
 Controls whether to always send HTTP Basic Authentication headers in HTTP requests when appropriate, defaults to ##false##.
 
 Normally dotNetRDF relies on the standard .Net HTTP support which uses the standard HTTP challenge response pattern for establishing authenticated connections.  However some badly behaved servers may not carry out the challenge response correctly in which case it may be necessary to enable this option.  This only works for servers that use HTTP Basic Authentication, other authentication types cannot be forced.
+
+=== HttpDebugging ===
+
+Controls whether to print debug information about HTTP requests and responses to the console, defaults to ##false##.  See [[HowTo/Debug HTTP Requests|Debugging HTTP Requests]] for more information.
+
+=== HttpFullDebugging ===
+
+Controls whether the full response stream for HTTP responses is printed to the console for debugging, defaults to ##false##.  See [[HowTo/Debug HTTP Requests|Debugging HTTP Requests]] for more information.
 
 == Parsing Options ==
 
