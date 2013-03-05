@@ -42,11 +42,11 @@ Normally dotNetRDF relies on the standard .Net HTTP support which uses the stand
 
 === HttpDebugging ===
 
-Controls whether to print debug information about HTTP requests and responses to the console, defaults to ##false##.  See [[HowTo/Debug HTTP Requests|Debugging HTTP Requests]] for more information.
+Controls whether to print debug information about HTTP requests and responses to the console, defaults to ##false##.  See [[HowTo/Debug HTTP Communication|Debugging HTTP Communication]] for more information.
 
 === HttpFullDebugging ===
 
-Controls whether the full response stream for HTTP responses is printed to the console for debugging, defaults to ##false##.  See [[HowTo/Debug HTTP Requests|Debugging HTTP Requests]] for more information.
+Controls whether the full response stream for HTTP responses is printed to the console for debugging, defaults to ##false##.  See [[HowTo/Debug HTTP Communication|Debugging HTTP Communication]] for more information.
 
 == Parsing Options ==
 
