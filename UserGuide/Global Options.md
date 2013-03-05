@@ -1,0 +1,61 @@
+[[Home]] > [[User Guide]] > [[UserGuide/Global Options|Global Options]]
+
+= Global Options =
+
+dotNetRDF has a set of global static options provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Options|Options]] class.  These are used to configure various aspects of dotNetRDF behaviour, some act as defaults for certain functionality while others toggle functionality/features on/off as desired.
+
+Here are the available options:
+
+<<toc 2>>
+
+== Literal Options ==
+
+=== LiteralEqualityMode ===
+
+Controls the behaviour when you call //Equals()// on instances of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ILiteralNode|ILiteralNode]].  This takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralEqualityMode|LiteralEqualityMode]] enumeration, the default is ##Strict##.  In ##Strict## mode literal equality follows RDF term equality semantics i.e. the lexical values must be exactly equal and so must the language tag/datatype URI if present.
+
+If you set this to ##Loose## instead then value equality semantics are used i.e. if the literals represent the same value then they are considered equal.
+
+Please see [[UserGuide/Equality and Comparison|Equality and Comparison]] for more information.
+
+=== LiteralValueNormalization ===
+
+Controls whether literal values have Unicode normalization applied to them when they are created, this defaults to ##false##.  May be useful to enable if you are ingesting non-normalized data though may increase data load times.
+
+== Query Options ==
+
+=== QueryExecutionTimeout ===
+
+Global timeout setting for in-memory query execution given in milliseconds, defaults to ## 180, 000# i.e. 3 minutes.  This setting has no-effect for other forms of query execution.
+
+This can be overridden as a per-query level by the //Timeout// property of a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery|SparqlQuery]] instance.
+
+=== QueryOptimisation ===
+
+Controls whether query pattern optimization is applied, defaults to ##true##.  May be useful to disable if the default optimizer is optimizing your query poorly.
+
+=== AlgebraOptimisation ===
+
+Controls whether query algebra optimization is applied, defaults to ##true##.  May be useful to disable if the standard optimizers are optimizing your query poorly or if you want to execute the basic algebra only.
+
+=== UnsafeOptimisation ===
+
+Controls whether certain optimizations which //may// make queries run faster but change the semantics of the query can be applied, defaults to ##false##.
+
+=== QueryDefaultSyntax ===
+
+Sets the default syntax used for parsing SPARQL queries, takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQuerySyntax|SparqlQuerySyntax]] enumeration.  Defaults to ##Sparql_1_1## i.e. SPARQL 1.1
+
+=== QueryAllowUnknownFunctions ===
+
+Controls whether unknown SPARQL extension functions should be allowed, defaults to ##true##.  When enabled unknown extension functions are simply treated as functions that return unbound for every input.  When disabled an unknown extension function will give a parser error.
+
+=== RigorousEvaluation ===
+
+Controls whether the in-memory SPARQL engine rigorously checks the provided matches from the underlying [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]], defaults to ##false## as this is usually unnecessary.
+
+You may need to enable this if your ##ISparqlDataset## implementation cannot guarantee that a call to //GetTriplesWithX()// only returns triples matching the given arguments.
+
+=== UsePLinqEvaluation ===
+
+Controls whether the in-memory SPARQL engine uses PLINQ evaluation to improve SPARQL performance, defaults to ##true##.  This is only available on platforms that support PLINQ i.e. .Net 4.0 non-Silverlight builds.
