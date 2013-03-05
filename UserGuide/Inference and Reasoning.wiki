@@ -16,7 +16,7 @@ As part of the library three types of reasoners are provided currently - an RDFS
 
 === RDFS Reasoner ===
 
-RDFS is an RDF vocabulary for expressing schemas for RDF data specified by the W3C. It allows for the definition of class and property hierarchies and specifying things like the domains and ranges of properties. We provide both a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.StaticRdfsReasoner|StatisRdfsReasoner]] which has to be initialised with one/more schemas and uses only those to make inferences and a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.RdfsReasoner|RdfsReasoner]] which is dynamic in that every Graph you apply reasoning to can extend the set of rules that the reasoner uses.
+RDFS is an RDF vocabulary for expressing schemas for RDF data specified by the W3C. It allows for the definition of class and property hierarchies and specifying things like the domains and ranges of properties. We provide both a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.StaticRdfsReasoner|StaticRdfsReasoner]] which has to be initialised with one/more schemas and uses only those to make inferences and a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.RdfsReasoner|RdfsReasoner]] which is dynamic in that every Graph you apply reasoning to can extend the set of rules that the reasoner uses.
 
 The RDFS reasoner does not apply the full range of possible RDFS based inferencing but does do the following:
 
