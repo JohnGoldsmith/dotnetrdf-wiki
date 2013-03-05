@@ -2,7 +2,7 @@
 
 = Configuration API =
 
-The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] which is in the ##VDS.RDF.Configuration## namespace.
+The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] class which is in the ##VDS.RDF.Configuration## namespace.
 
 Dynamic loading is done by classes which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory|IObjectFactory]] interface which means that this mechanism can be extended as desired. Either additional ##IObjectFactory## instances can be registered programmatically with the //AddObjectFactory(IObjectFactory factory)// method or you can specify them in your configuration files and have the system automatically detect them by calling the //AutoConfigureObjectFactories(IGraph g)// function.
 
