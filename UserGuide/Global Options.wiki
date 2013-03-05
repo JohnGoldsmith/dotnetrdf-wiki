@@ -8,6 +8,12 @@ Here are the available options:
 
 <<toc 2>>
 
+== Core Options ==
+
+=== FullTripleIndexing ===
+
+Controls whether implementations of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection|BaseTripleCollection]] that support indexing will create full triple indexes, defaults to ##true##.  See [[HowTo/Minimize Memory Usage|Minimize Memory Usage]] for more discussions on triple indexing.
+
 == Literal Options ==
 
 === LiteralEqualityMode ===
@@ -21,6 +27,8 @@ Please see [[UserGuide/Equality and Comparison|Equality and Comparison]] for mor
 === LiteralValueNormalization ===
 
 Controls whether literal values have Unicode normalization applied to them when they are created, this defaults to ##false##.  May be useful to enable if you are ingesting non-normalized data though may increase data load times.
+
+== Parsing Options ==
 
 == Query Options ==
 
@@ -59,3 +67,7 @@ You may need to enable this if your ##ISparqlDataset## implementation cannot gua
 === UsePLinqEvaluation ===
 
 Controls whether the in-memory SPARQL engine uses PLINQ evaluation to improve SPARQL performance, defaults to ##true##.  This is only available on platforms that support PLINQ i.e. .Net 4.0 non-Silverlight builds.
+
+May be useful to disable if you have a multi-core machine but only want to use a single core for query evaluation.
+
+== Writing Options ==
