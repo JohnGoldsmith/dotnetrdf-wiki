@@ -11,7 +11,7 @@ Simple Endpoints are endpoints that use a single remote endpoint for queries. Th
 {{{
 #!turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:endpoint a dnr:SparqlEndpoint ;
   dnr:type "VDS.RDF.Query.SparqlRemoteEndpoint" ;
@@ -29,7 +29,7 @@ If your SPARQL endpoint requires a username and password this can be added using
 {{{
 #!turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:endpoint a dnr:SparqlEndpoint ;
   dnr:type "VDS.RDF.Query.SparqlRemoteEndpoint" ;
@@ -51,7 +51,7 @@ Federated Endpoints are endpoints that make queries across multiple remote endpo
 {{{
 #!turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:fed a dnr:SparqlEndpoint ;
   dnr:type "VDS.RDF.Query.FederatedSparqlRemoteEndpoint" ;
