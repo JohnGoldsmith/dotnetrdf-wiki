@@ -11,7 +11,7 @@ Basic Configuration for a Query Processor looks like the following:
 {{{
 #!turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlQueryProcessor .
   dnr:type "VDS.RDF.Query.LeviathanQueryProcessor" .
@@ -24,7 +24,7 @@ The Leviathan Query Processor is used to process queries on in-memory stores usi
 {{{
 #!turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlQueryProcessor .
   dnr:type "VDS.RDF.Query.LeviathanQueryProcessor" ;
@@ -43,7 +43,7 @@ Alternatively you may use the ##dnr:usingDataset## property to connect it to a D
 The Generic Query Processor is used to process queries against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]]. To configure these handlers simply add a ##dnr:storageProvider## property to the basic configuration like so:
 
 {{{
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlQueryProcessor .
   dnr:type "VDS.RDF.Query.GenericQueryProcessor" ;
@@ -63,7 +63,7 @@ Similar to the Generic Query Processor the Simple Query Processor passes queries
 {{{
 #!turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlQueryProcessor .
   dnr:type "VDS.RDF.Query.SimpleQueryProcessor" ;
@@ -87,7 +87,7 @@ The Remote Query Processor is used to farm out queries to a remote SPARQL endpoi
 {{{
 #!turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlQueryProcessor .
   dnr:type "VDS.RDF.Query.RemoteQueryProcessor" ;
@@ -107,7 +107,7 @@ The Pellet Query Processor is used to pass queries to the SPARQL service provide
 {{{
 #!turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlQueryProcessor .
   dnr:type "VDS.RDF.Query.PelletQueryProcessor" ;
