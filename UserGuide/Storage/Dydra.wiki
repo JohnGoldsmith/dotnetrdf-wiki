@@ -4,6 +4,8 @@
 
 The [[http://dydra.com|Dydra]] cloud RDF database can be used via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.DydraConnector|DydraConnector]].
 
+**Obsolete** - The ##DydraConnector## will be marked as obsolete in 1.0.0 because the Dydra API has repeatedly and consistently exhibited transient failures and errors.  Therefore Dydra support will be removed entirely in future releases per our [[DeveloperGuide/Deprecation Policy|Deprecation Policy]]
+
 == Supported Capabilities ==
 
 * Load, Save, Update, Delete and List Graphs
