@@ -17,6 +17,7 @@ The [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] section covers non-architectu
 * [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]]
 ** [[DeveloperGuide/SPARQL/Implementing Custom Optimizers|Implementing Custom Optimizers]]
 * [[DeveloperGuide/SPARQL/SPARQL Extensions|SPARQL Extensions]]
+* [[DeveloperGuide/SPARQL/Performance|SPARQL Performance]]
 
 == General Topics ==
 
