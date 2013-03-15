@@ -88,6 +88,7 @@ See the [[UserGuide/Tools|Tools]] page for documentation pertaining to our GUI a
 * [[UserGuide/Tools/rdfOptStats|rdfOptStats]] 
 * [[UserGuide/Tools/rdfQuery|rdfQuery]]
 * [[UserGuide/Tools/rdfServer|rdfServer]] 
+** [[UserGuide/Tools/rdfServerGui|rdfServerGui]]
 * [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]] 
 * [[UserGuide/Tools/soh|soh]]
 * [[UserGuide/Tools/SparqlGui|SparqlGui]]
