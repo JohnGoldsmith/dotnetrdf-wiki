@@ -207,6 +207,8 @@ Console.WriteLine(handler.Count + " Triple(s)");
 
 There are a variety of included implementations which do various things like redirecting Triples directly to a file, native Triple Store etc. You can also implement your own either entirely from scratch or just derive from [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseRdfHandler|BaseRdfHandler]] like our own implementations do to get most of the implementation for free.
 
+Take a look a the [[UserGuide/Handlers API|Handlers API]] for more discussion on this topic.
+
 = Parser Behaviour =
 
 All the Graph Parsers provided in the library behave as follows:
@@ -245,3 +247,4 @@ Users may wish to jump to the following topics to learn more:
 
 * [[UserGuide/Working with Graphs|Working with Graphs]]
 * [[UserGuide/Working with Triple Stores|Working with Triple Stores]]
+* [[UserGuide/Handlers API|Handlers API]]
