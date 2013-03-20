@@ -10,7 +10,7 @@ You can leverage this feature yourself by calling the //Create()// method of the
 
 == Possible problems associated with URI Interning ==
 
-While this feature is very powerful it may have adverse affects on memory usage in some scenarios. Over long periods of time this may have the same appearance as a memory link since large amounts of memory get allocated but are never released.
+While this feature is very powerful it may have adverse affects on memory usage in some scenarios. Over long periods of time this may have the same appearance as a memory leak since large amounts of memory get allocated but are never released.
 
 This is particularly true in scenarios where you will not manipulate RDF in memory for long periods or where you wish to do stream processing and keep memory usage low.
 
