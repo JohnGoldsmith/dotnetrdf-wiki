@@ -4,8 +4,8 @@
 
 Compiling dotNetRDF may be done in two ways:
 
-1. Using Visual Studio 2010 or higher
-2. Using NAnt
+# Using Visual Studio 2010 or higher
+# Using NAnt
 
 == Using Visual Studio ==
 
