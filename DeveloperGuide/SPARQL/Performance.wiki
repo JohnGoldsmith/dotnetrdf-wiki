@@ -22,7 +22,11 @@ When running a .Net 4.0 build on a multi-core system dotNetRDF leverages the .Ne
 
 === BSBM Performance ===
 
-The [[http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/|Berlin SPARQL Benchmark]] is a standard benchmark for SPARQL engines, here are our results on this:
+The [[http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/|Berlin SPARQL Benchmark]] is a standard benchmark for SPARQL engines, here are some of our results on this.
+
+The first graph compares total runtime (Y Axis) against dataset size (X axis) so smaller values are better since they indicate faster performance.  As you can see old releases scaled exponentially, the current codebase scales linearly.
+
+The second graph compares Query Mixed per Hour aka QMpH (Y Axis) against dataset size (X axis) so larger values are better since they indicate better higher throughput.  As you can see older releases tended to achieve reduced throughput as the dataset size increased, the current codebase gets much better throughput and scales linearly.
 
 {{DeveloperGuide/SPARQL/BSBMPerformance.png|BSBM Results}}
 
