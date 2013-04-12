@@ -35,7 +35,7 @@ Our default selectivity ranking is purely rules based and ranks patterns based o
 # Predicate
 # Object
 
-**Note:** The above represents the ranking implemented in the current release, this has changed in the past and may change in the future based on internal testing and benchmarking.  Sometimes you may be able to get better performance by using the statistics based [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightOptimiser|WeightOptimiser]].
+**Note:** The above represents the ranking implemented in the current release, this has changed in the past and may change in the future based on internal testing and benchmarking.  Sometimes you may be able to get better performance by using the statistics based [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightedOptimiser|WeightedOptimiser]].
 
 The name of a pattern refers to the the parts of the pattern that are not variables, i.e. an example Subject-Predicate pattern would be the following:
 
