@@ -15,15 +15,17 @@ If you want to implement your own optimizers see [[DeveloperGuide/SPARQL/Impleme
 Query Optimisation is the first stage of optimisation and it occurs automatically at the end of query parsing. The aim of Query Optimisation is to reorder the Triple Patterns within each Graph Pattern to do several things:
 
 * Evaluate the most selective Triple Patterns first - see Pattern Selectivity
-* Evaluate FILTERs at the earliest possible point - see Filter Placement
-* Evaluate BINDs at the earliest possible point - see Assignment Placement
+* Evaluate ##FILTER## at the earliest possible point - see Filter Placement
+* Evaluate ##BIND## at the earliest possible point - see Assignment Placement
 * Minimise the complexity of joins within Graph Patterns and across Graph Patterns - see Join Complexity Minimisation
 
 The optimiser addresses the first three aims in its first pass through and then does the last optimisation in a second pass.
 
 == Pattern Selectivity ==
 
-To minimise the size of intermediate results and evaluate queries as quickly as possible it is better if Triple Patterns with higher selectivity are evaluated first wherever possible. The selectivity of a pattern pertains to how restrictive it is and how likely we consider it to return smaller numbers of results. Our selectivity ranking is currently purely rules based and ranks patterns based on the following order (from highest to lowest selectivity):
+To minimise the size of intermediate results and evaluate queries as quickly as possible it is better if Triple Patterns with higher selectivity are evaluated first wherever possible. The selectivity of a pattern pertains to how restrictive it is and how likely we consider it to return smaller numbers of results.
+
+Our default selectivity ranking is purely rules based and ranks patterns based on the following order (from highest to lowest selectivity):
 
 # Subject-Predicate-Object
 # Subject-Predicate
@@ -33,7 +35,7 @@ To minimise the size of intermediate results and evaluate queries as quickly as 
 # Predicate
 # Object
 
-**Note:** The above represents the ranking implemented in the current release, this has changed in the past and may change in the future based on internal testing and benchmarking
+**Note:** The above represents the ranking implemented in the current release, this has changed in the past and may change in the future based on internal testing and benchmarking.  Sometimes you may be able to get better performance by using the statistics based [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightOptimiser|WeightOptimiser]].
 
 The name of a pattern refers to the the parts of the pattern that are not variables, i.e. an example Subject-Predicate pattern would be the following:
 
@@ -75,7 +77,7 @@ Where two patterns are equally selective the optimiser will order by the names o
 
 == Filter Placement ==
 
-Filter Placement referes to the notion expressed in the SPARQL specification here that a FILTER has the same meaning wherever it occurs within a set of Triple Patterns. Since the evaluation model for a BGP in the Leviathan engine is in order evaluation of each Triple Pattern it is desireable to evaluate a FILTER as soon as is possible. In essence this means evaluate if at the first point after which all mentioned variables have occurred.
+Filter Placement referes to the notion expressed in the SPARQL specification here that a ##FILTER## has the same meaning wherever it occurs within a group graph pattern. Since the evaluation model for Leviathan engine is block based (i.e. each operator is evaluated in full) it is desireable to evaluate a ##FILTER## as soon as is possible in order to minimize the intermediate results that need to be considered. In essence this means we evaluate if at the first point after which all mentioned variables have occurred.
 
 For example given the following query:
 
@@ -110,7 +112,7 @@ WHERE
 
 == Assignment Placement ==
 
-Assignment placement is exactly the same as Filter Placement. It just places ##BIND##s at the first point after which all mentioned variables occur. For example given:
+Assignment placement is exactly the same as Filter Placement. It just places ##BIND## clauses at the first point after which all mentioned variables occur. For example given:
 
 {{{
 #!sparql
@@ -142,7 +144,7 @@ SELECT * WHERE
 
 == Join Complexity Minimisation ==
 
-Join Complexity Minimisation is a 2nd pass optimisation which attempts to further reorder the Triple Patterns to minimise complex joins. In particular it looks to avoid Products (joins when the two sides are disjoint) since these are particularly expensive to compute.
+Join Complexity Minimisation is a 2nd pass optimisation which attempts to further reorder the triple patterns to minimise complex joins. In particular it looks to avoid cross products (joins when the two sides are disjoint) since these are particularly expensive to compute.
 
 As an example consider the following query:
 
@@ -174,9 +176,9 @@ SELECT * WHERE
 }
 }}}
 
-This is a poor optimisation as it requires a product join which between the results of the first two patterns which makes the evaluation engine work much harder than necessary.
+This is a poor optimisation as it requires computation of a cross product between the results of the first two patterns which makes the evaluation engine work much harder than necessary.
 
-So the second pass optimisation is designed to look specifically for these cases and reorder the patterns further to eliminate/reduce the complexity of the products. The example query actually optimises to the following:
+So the second pass optimisation is designed to look specifically for these cases and reorder the patterns further to eliminate or reduce the complexity of the products. The example query actually optimises to the following:
 
 {{{
 #!sparql
@@ -191,7 +193,7 @@ SELECT * WHERE
 }
 }}}
 
-In this version there are no product joins because at each join there is at least one variable that has been previously mentioned so the results of the two patterns are never disjoint.
+In this version there are no cross products because at each join there is at least one variable that has been previously mentioned so the results of the two patterns are never disjoint.
 
 = Algebra Optimisation =
  
@@ -213,13 +215,13 @@ SELECT * WHERE
 This query translates into the following algebra:
 
 {{{
-Select(Project(Bgp({ ?s rdfs:label ?label . ?s ?p ?o })))
+Select(Bgp({ ?s rdfs:label ?label . ?s ?p ?o }))
 }}}
 
 In a case like this there is absolutely nothing we can do other than evaluate the algebra as-is. But if we were to modify the query so it instead has a ##LIMIT## clause then we could optimise the algebra like so:
 
 {{{
-Slice(Select(Project(LazyBgp({ ?s rdfs:label ?label . ?s ?p ?o }))), LIMIT 10, OFFSET 0)
+Slice(Select(LazyBgp({ ?s rdfs:label ?label . ?s ?p ?o })), LIMIT 10, OFFSET 0)
 }}}
 
 [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Algebra.LazyBgp|LazyBgp]] is a specialised implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Algebra.IBgp|IBgp]] which does the minimum amount of work necessary to answer a query. In this case it needs only find the first 10 solutions that satisfy the pattern. Since a query may operate over millions of triples if we can stop processing earlier then we can get better performance. If we process the same query without this optimisation we have to find every possible solutions that satisfies the pattern and then discard all but 10.
@@ -234,7 +236,7 @@ The final stage of optimisation occurs during the actual evaluation of the queri
 
 == Dynamic Restriction of Triple Patterns ==
 
-When evaluating Triple Patterns the engine will in many cases already have values bound in the intermediate results for variables occuring in the next Triple Pattern to be evaluated. In this case the engine will substitute each possible combination into the next Triple Pattern and evaluate it in turn in order to build up the overall set of results. This typically results in much less work for the query engine since the results returned are much more likely to be be preserved by the subsequent join operation than if the pattern was evaluated without the variable substitution. Since the Joins are typically the most costly part of the query evaluation this produces significant performance boosts.
+When evaluating triple patterns the engine will in many cases already have values bound in the intermediate results for variables occuring in the next triple pattern to be evaluated. In this case the engine will substitute each possible combination into the next triple pattern and evaluate it in turn in order to build up the overall set of results. This typically results in much less work for the query engine since the results returned are much more likely to be be preserved by the subsequent join operation than if the pattern was evaluated without the variable substitution. Since the joins are typically the most costly part of the query evaluation this produces significant performance boosts.
 
 == Lazy Evaluation ==
 
@@ -242,4 +244,12 @@ The engine is optimised to use lazy evaluation wherever possible. What this mean
 
 == Parallel Evaluation ==
 
-The latest releases leverage the .Net PLINQ framework to parallelize parts of the query evaluation wherever possible.  This means queries can take full advantage of the processors available on your machine, see [[DeveloperGuide/SPARQL/Performance|Performance]] for performance data.
+The more recent releases leverage the .Net PLINQ framework to parallelize parts of the query evaluation wherever possible.  This means queries can take full advantage of the processors available on your machine, see [[DeveloperGuide/SPARQL/Performance|Performance]] for performance data which shows just how much of an impact this can have.
+
+Currently the following operations are parallelized:
+
+* Join
+* Left Join (##OPTIONAL##)
+* Product
+* Filter
+* Bind
