@@ -351,6 +351,10 @@ public class InMemoryTripleStoreExample
 
 The return type from the //ExecuteQuery()// method is an ##Object## since it may be either a ##SparqlResultSet## or an ##IGraph## so you will need to do an ##is## test and then cast as shown in the example. Alternatively you can use the ##as## operator though we tend to avoid this ourselves since it can unintentionally hide errors in query evaluation.
 
+As previously mentioned a common error here is that you get no results because you aren't querying the data you expect.  If you have a single graph you are querying just call //ExecuteQuery()// directly on the graph instead of creating an intermediary ##TripleStore## which guarantees that your query operates over your graph.  If you have more than one graph we **strongly** recommend that you use the query processor method of querying instead since that requires you to explicitly configure your dataset which makes errors like these much less likely to happen.
+
+If you are still having problems with no results you can also look at [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
+
 = Loading/Saving Results =
 
 A ##SparqlResultSet## may be loaded/saved using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader|ISparqlResultsReader]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter|ISparqlResultsWriter]] interfaces respectively. These are functionally very similar to the ##IRdfReader## and ##IRdfWriter## interfaces described on the [[UserGuide/Reading RDF|Reading RDF]] and [[UserGuide/Writing RDF|Writing RDF]] pages.
