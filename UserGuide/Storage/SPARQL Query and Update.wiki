@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]] > [[UserGuide/Storage/SPARQL Query and Update|SPARQL Query and Update Endpoints]]
 
-= SPARQL Query Endpoints =
+= SPARQL Query and Update Endpoints =
 
 You can treat any publicly accessible SPARQL store which has both Query and Update endpoints as a read-write store using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ReadWriteSparqlConnector|ReadWriteSparqlConnector]].
 
