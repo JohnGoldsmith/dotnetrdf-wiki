@@ -19,7 +19,9 @@ The latest version of the library is **1.0.0** (Build **1.0.0.2473**) which was 
 
 Unless otherwise stated the documentation in the [[User Guide]] and [[Developer Guide]] refers to the latest version of the library (which is noted above).  Documentation for older versions can be accessed below:
 
-* No previous versions of documentation are currently available since we only recently moved to this wiki
+* [[Home?rev=0.9.0|0.9.0 RC 4]]
+
+Unfortunately BitBucket does not currently provide easy browsing of past versions of documentation currently, while the above links will take you to the previous versions of the documentation as soon as you navigate on from there you will be viewing the latest documentation again.  Generally speaking there should be minimal differences between versions and you can always at ##?rev=0.9.0## to the current URL to view the specific version of that page.
 
 Please note there may be a small window after a new release while we update our documentation when some pages may be inaccurate, if you find any inaccuracies please [[Support|Contact Us]] so we can resolve them ASAP.
 
