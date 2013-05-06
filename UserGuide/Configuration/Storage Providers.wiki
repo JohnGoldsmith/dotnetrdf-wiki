@@ -132,13 +132,13 @@ It is possible to create read-only connections to SPARQL Query endpoints in two 
 
 _:sparqlQuery a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.SparqlConnector" ;
-  dnr:endpointUri "http://example.org/sparql" ;
+  dnr:queryEndpointUri "http://example.org/sparql" ;
   dnr:defaultGraphUri "http://example.org/defaultGraph" ;
   dnr:namedGraphUri "http://example.org/namedGraph" ;
   dnr:loadMode "Describe" .
 }}}
 
-The above specifies that the connection be made to the SPARQL Query endpoint with URI ##http://example.org/sparql## using the ##dnr:endpointUri## property.
+The above specifies that the connection be made to the SPARQL Query endpoint with URI ##http://example.org/sparql## using the ##dnr:queryEndpointUri## property.
 
 The ##dnr:defaultGraphUri## and ##dnr:namedGraphUri## properties are used to define Default and Named Graph URIs for use with the endpoint, these properties are optional.
 
@@ -153,17 +153,43 @@ The ##dnr:loadMode## property takes a value of either ##Describe## or ##Construc
 
 _:sparqlQuery a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.SparqlConnector" ;
-  dnr:endpoint _:endpoint ;
+  dnr:queryEndpoint _:endpoint ;
   dnr:loadMode "Describe" .
 
-_:endpoint a dnr:SparqlEndpoint ;
+_:endpoint a dnr:SparqlQueryEndpoint ;
   dnr:type "VDS.RDF.Query.SparqlRemoteEndpoint" ;
-  dnr:endpointUri <http://example.org/sparql> ;
+  dnr:queryEndpointUri <http://example.org/sparql> ;
   dnr:defaultGraphUri "http://example.org/defaultGraph" ;
   dnr:namedGraphUri "http://example.org/namedGraph" .
 }}}
 
 This defines the same connection as in the previous example but has the advantage that more complex endpoints can be specified in this way as described in [[UserGuide/Configuration/SPARQL Endpoints|Configuration API - SPARQL Endpoints]].
+
+== SPARQL Query and Update Endpoints ==
+
+Where a store provides both a query and update endpoint you may specify a connection to the store by specifying the relevant endpoints, as with the SPARQL Query connection you can use either the direct or separate specification modes.  For simplicitly our example here shows just the separate specification mode:
+
+{{{
+#!turtle
+
+@prefix <http://www.dotnetrdf.org/configuration#> .
+
+_:sparqlQuery a dnr:StorageProvider ;
+  dnr:type "VDS.RDF.Storage.SparqlConnector" ;
+  dnr:queryEndpoint _:queryEndpoint ;
+  dnr:updateEndpoint _:updateEndpoint ;
+  dnr:loadMode "Describe" .
+
+_:queryEndpoint a dnr:SparqlQueryEndpoint ;
+  dnr:type "VDS.RDF.Query.SparqlRemoteEndpoint" ;
+  dnr:queryEndpointUri <http://example.org/query> ;
+  dnr:defaultGraphUri "http://example.org/defaultGraph" ;
+  dnr:namedGraphUri "http://example.org/namedGraph" .
+  
+_:updateEndpoint a dnr:SparqlUpdateEndpoint ;
+  dnr:type "VDS.RDF.Update.SparqlRemoteUpdateEndpoint" ;
+  dnr:updateEndpointUri <http://example.org/update>" .
+}}}
 
 == SPARQL Graph Store HTTP Protocol ==
 

@@ -91,11 +91,11 @@ The Remote Query Processor is used to farm out queries to a remote SPARQL endpoi
 
 _:proc a dnr:SparqlQueryProcessor .
   dnr:type "VDS.RDF.Query.RemoteQueryProcessor" ;
-  dnr:endpoint _:endpoint .
+  dnr:queryEndpoint _:endpoint .
 
-_:endpoint a dnr:SparqlEndpoint ;
+_:endpoint a dnr:SparqlQueryEndpoint ;
   dnr:type "VDS.RDF.Query.SparqlRemoteEndpoint" ;
-  dnr:endpointUri <http://example.org/sparql> .
+  dnr:queryEndpointUri <http://example.org/sparql> .
 }}}
 
 The above configures a Remote Query Processor which passes queries to the endpoint at ##http://example.org/sparql##
