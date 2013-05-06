@@ -175,7 +175,7 @@ Where a store provides both a query and update endpoint you may specify a connec
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
 _:sparqlQuery a dnr:StorageProvider ;
-  dnr:type "VDS.RDF.Storage.SparqlConnector" ;
+  dnr:type "VDS.RDF.Storage.ReadWriteSparqlConnector" ;
   dnr:queryEndpoint _:queryEndpoint ;
   dnr:updateEndpoint _:updateEndpoint ;
   dnr:loadMode "Describe" .

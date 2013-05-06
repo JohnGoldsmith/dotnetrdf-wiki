@@ -17,6 +17,7 @@ The available providers are as follows:
 | [[UserGuide/Storage/InMemory|In-Memory]] | In-Memory store |
 | [[UserGuide/Storage/Sesame|Sesame]] | Any Sesame based store is supported e.g. Sesame, OWLIM, BigData |
 | [[UserGuide/Storage/SPARQL Query|SPARQL Query Endpoints]] | Any SPARQL Query endpoint |
+| [[UserGuide/Storage/SPARQL Query and Update|SPARQL Query and Update Endpoints]] | Any store providing both a query and update endpoint |
 | [[UserGuide/Storage/SPARQL Graph Store|SPARQL Graph Store Protocol]] | Any SPARQL Graph Store Protocol endpoint |
 | [[UserGuide/Storage/Stardog|Stardog]] | Stardog |
 | [[UserGuide/Storage/Virtuoso|Virtuoso]] | Virtuoso Universal Server |
