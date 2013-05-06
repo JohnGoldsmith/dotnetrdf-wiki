@@ -58,8 +58,6 @@ With full triple indexing set to off only simple indices will be created for new
 
 == Use Specific Indexes ===
 
-**Note:** Will be available in 1.0.0
-
 The standard graph allows you to configure the underlying [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection|BaseTripleCollection]] used so you can create a graph that only uses the indexes you want:
 
 {{{
