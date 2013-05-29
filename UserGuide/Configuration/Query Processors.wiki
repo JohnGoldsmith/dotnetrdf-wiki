@@ -13,7 +13,7 @@ Basic Configuration for a Query Processor looks like the following:
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
-_:proc a dnr:SparqlQueryProcessor .
+_:proc a dnr:SparqlQueryProcessor ;
   dnr:type "VDS.RDF.Query.LeviathanQueryProcessor" .
 }}}
 
@@ -26,7 +26,7 @@ The Leviathan Query Processor is used to process queries on in-memory stores usi
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
-_:proc a dnr:SparqlQueryProcessor .
+_:proc a dnr:SparqlQueryProcessor ;
   dnr:type "VDS.RDF.Query.LeviathanQueryProcessor" ;
   dnr:usingStore _:store .
 
@@ -45,7 +45,7 @@ The Generic Query Processor is used to process queries against some arbitrary st
 {{{
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
-_:proc a dnr:SparqlQueryProcessor .
+_:proc a dnr:SparqlQueryProcessor ;
   dnr:type "VDS.RDF.Query.GenericQueryProcessor" ;
   dnr:storageProvider _:manager .
 
@@ -65,7 +65,7 @@ Similar to the Generic Query Processor the Simple Query Processor passes queries
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
-_:proc a dnr:SparqlQueryProcessor .
+_:proc a dnr:SparqlQueryProcessor ;
   dnr:type "VDS.RDF.Query.SimpleQueryProcessor" ;
   dnr:usingStore _:store .
 
@@ -89,7 +89,7 @@ The Remote Query Processor is used to farm out queries to a remote SPARQL endpoi
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
-_:proc a dnr:SparqlQueryProcessor .
+_:proc a dnr:SparqlQueryProcessor ;
   dnr:type "VDS.RDF.Query.RemoteQueryProcessor" ;
   dnr:queryEndpoint _:endpoint .
 
@@ -109,7 +109,7 @@ The Pellet Query Processor is used to pass queries to the SPARQL service provide
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
-_:proc a dnr:SparqlQueryProcessor .
+_:proc a dnr:SparqlQueryProcessor ;
   dnr:type "VDS.RDF.Query.PelletQueryProcessor" ;
   dnr:server "http://ps.clarkparsia.com" ;
   dnr:storeID "wine" .
