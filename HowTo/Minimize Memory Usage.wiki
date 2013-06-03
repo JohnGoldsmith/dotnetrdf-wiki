@@ -73,3 +73,12 @@ Graph g = new Graph(tripleCollection);
 = Stream Processing =
 
 If you can work with RDF/SPARQL Results in a stream then you can leverage the [[UserGuide/Handlers API|Handlers API]] as an alternative to loading your data fully into memory, this API gives you complete control over what happens to triples/results as they are generated.
+
+= Token Queue Mode =
+
+Token based parsers accept a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Tokens.TokenQueueMode|TokenQueueMode]] which is defines how it tokenizes the input data, the choice of this can have a significant affect on memory usage.  The global default for this can be controlled via the //Options.DefaultTokenQueueMode// property.
+
+|= Queue Mode |= Behaviour |
+| ##QueueAllBeforeParsing## | As the name suggests in this mode input data is completely tokenized before any parsing takes place.  This is the most expensive memory wise but may be more performant for very small data |
+| ##SynchronousBufferDuringParsing## | This is the default, during parsing the tokenizer will buffer some number of tokens ahead in the input data.  It will stop buffering when the buffer is full and start buffering again once the parser starts reading tokens.  This makes it the most stable and memory efficient mode. |
+| ##AsynchronousBufferDuringParsing## | In this mode the tokenizer will buffer as many tokens as it can asynchronous with the parser, so it can consume very large amounts of memory.  However if the parser is very fast this may be the fastest way to parse. |
