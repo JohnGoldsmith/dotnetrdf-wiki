@@ -38,5 +38,5 @@ commit.BugNet = "PATH_TO_CLONE\Build\BugNetHooks\BugNET.MercurialChangeGroupHook
 If you are frequently pulling in changes from other peoples repositories or those merged via the BitBucket UI using ##hg pull## you may wish to also add the following to your hooks section:
 
 {{{
-incoming.BugNet = "PATH_TO_CLONE\Build\BugNetHooks\BugNET.MercurialChangeGroupHook.exe"
+changegroup.BugNet = "PATH_TO_CLONE\Build\BugNetHooks\BugNET.MercurialChangeGroupHook.exe"
 }}}
