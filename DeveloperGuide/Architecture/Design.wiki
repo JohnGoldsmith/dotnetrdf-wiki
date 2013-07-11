@@ -24,4 +24,3 @@ This section of the wiki covers design documents past and present for the librar
 
 |= Design Document |= Description |
 | [[DeveloperGuide/Architecture/Design/dotNetRDF 0.4.3 Design.docx|dotNetRDF 0.4.3]] | Designs for 0.4.3 which included a SQL backend which we later discontinued due to performance limitations |
-| [[DeveloperGuide/Architecture/Design/Medusa Query Engine Design.docx|Medusa]] | Obsolete version of the [[DeveloperGuide/Architecture/Design/Medusa|Medusa]] design. |
