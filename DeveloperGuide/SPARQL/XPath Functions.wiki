@@ -1,4 +1,4 @@
-[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/XPath Functions|XPath Function Library]]
+[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/Function Libraries|Function Libraries]] > [[DeveloperGuide/SPARQL/XPath Functions|XPath Function Library]]
 
 = XPath Function Library =
 
