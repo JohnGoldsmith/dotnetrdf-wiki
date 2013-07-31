@@ -10,3 +10,8 @@ Currently the following topics are covered:
 * [[UserGuide/Result Formatting|Result Formatting]]
 * [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
 * [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
+
+There may also be some useful topics for advanced users in the [[Developer Guide]]
+
+* [[DeveloperGuide/SPARQL Engine|SPARQL Engine]]
+** [[DeveloperGuide/SPARQL/Function Libraries|Function Libraries]]
