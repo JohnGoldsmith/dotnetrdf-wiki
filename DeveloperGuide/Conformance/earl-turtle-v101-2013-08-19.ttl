@@ -1667,10 +1667,6 @@
   earl:test        turtletest:turtle-syntax-bnode-05
 ] .
 
-_:b0    a              foaf:Person ;
-        foaf:homepage  <http://people.apache.org/~andy> ;
-        foaf:name      "Andy Seaborne" .
-
 [ a                earl:Assertion ;
   earl:assertedBy  <http://www.dotnetrdf.org/project#> ;
   earl:mode        earl:automatic ;
@@ -2528,21 +2524,6 @@ _:b0    a              foaf:Person ;
   earl:subject     <http://www.dotnetrdf.org/project#> ;
   earl:test        turtletest:turtle-syntax-bad-struct-07
 ] .
-
-<http://www.dotnetrdf.org/project#>
-        a                doap:Project , earl:Software ;
-        dc:creator       _:b0 ;
-        dc:title         "Apache Jena RIOT" ;
-        dct:hasVersion   "${project.version}" ;
-        dct:isPartOf     [ foaf:homepage  <http://jena.apache.org/> ] ;
-        doap:homepage    "http://jena.apache.org/" ;
-        doap:maintainer  _:b0 ;
-        doap:name        "Apache Jena RIOT" ;
-        doap:release     [ a             doap:Version ;
-                           doap:created  "2013-08-10+01:00"^^xsd:date ;
-                           doap:name     "RIOT"
-                         ] ;
-        foaf:homepage    <http://jena.apache.org/> .
 
 [ a                earl:Assertion ;
   earl:assertedBy  <http://www.dotnetrdf.org/project#> ;
