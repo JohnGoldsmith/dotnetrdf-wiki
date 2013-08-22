@@ -4,7 +4,7 @@
 
 <<toc 3>>
 
-As we approach dotNetRDF 1.0 we have been thinking a lot about the state of the API and what we would really like to change if we were able to introduce more significant refactors and breaking changes.  This thinking so far forms the basis for this design document, the idea is that we would make a number of significant and breaking changes in the 2.0 API in order to clean up, simplify and modularize the API better.
+Now we have reached dotNetRDF 1.0 we have been thinking a lot about the state of the API and what we would really like to change if we were able to introduce more significant refactors and breaking changes.  This thinking so far forms the basis for this design document, the idea is that we would make a number of significant and breaking changes in the 2.0 API in order to clean up, simplify and modularize the API better.
 
 It is proposed that an initial version of this revised API be published as a transitional 1.9 release so that users can use the new API and provide feedback as it is developed.  Parallel to that we will continue to support the 1.0 release with bug fixes, it is expected that an initial 1.9 will not be ready until around the same time as 1.1.0 is released.
 
@@ -42,6 +42,7 @@ I propose that we refactor the Nodes API as follows:
 # Identify Blank Nodes in a way that allows the above
 # Don't require any work to create Node values to be done in Nodes
 # Move all Node classes to the Nodes namespace
+# Consolidate nodes into a single interface
 
 The first point means removing the //Graph// and //GraphUri// properties from the ##INode## interface, doing so removes the coupling between a Node and its originating Graph.  This has particular benefits for things like creating wrappers around factories and graphs since it will eliminate some of the current issues we can encounter involving Graph reference mismatches.
 
@@ -49,13 +50,15 @@ Once this is done point 2 becomes easy because we can now freely copy Nodes arou
 
 Point 5 is primarily just a clean up activity to better organize the code going forward.
 
+Point 6 is likely the most significant, rather than having a separate interface for each Node type all the relevant methods will be directly on ##INode##.  The contract will be that trying to access something that doesn't make sense for the relevant //NodeType// will result in a ##NodeValueException##.  Making this change avoids the needs for lots of casting throughout the code base and should make code substantially easier to read and write.
+
 ===== Blank Node Identification =====
 
-Point 3 is somewhat trickier, currently we use user defined/auto-assigned string labels to identify blank nodes.  This has proved to be a poor implementation decision requiring tons of hacks and workarounds to have blank nodes be properly scoped and avoid collisions.  My initial though was to identify blank nodes by a combination of two Guids, one is the Node ID identifier and one the Factory identifier.  This means that Blank Nodes don't strictly meet point 1 because this means it is tied to the factory, in practice this is likely not be necessary.
+Point 3 is somewhat trickier, currently we use user defined/auto-assigned string labels to identify blank nodes.  This has proved to be a poor implementation decision requiring tons of hacks and workarounds to have blank nodes be properly scoped and avoid collisions.  My initial though was to identify blank nodes by a combination of two Guids, one is the Node ID identifier and one the Factory identifier.  This means that Blank Nodes don't strictly meet point 1 because this means it is tied to the factory, in practice this is likely not necessary.
 
-Thus it will depend on whether we allow users to create Blank Nodes using an explicit Guid, if we do then we need the Factory ID to ensure correct scoping.  If we don't allow this we can likely get away with a single Guid since it is for all intents and purposes a unique identifier so will also provide inherent scoping.
+Thus it will depend on whether we allow users to create Blank Nodes using an explicit Guid, if we do then we might need the Factory ID to ensure correct scoping.  If we don't allow this we can likely get away with a single Guid since it is for all intents and purposes a unique identifier so will also provide inherent scoping.  However the current consensus in the community is that a blank node can span multiple graphs and be the same node, it is only the serialization of that node which is scoped to a specific graph and in the case of dataset formats scoped to the dataset.
 
-One thing we will have to do in making this change is still allow users to create blank nodes by human readable label and simply map these consistently to Guids internally (within the scope of a factory).  This is required to keep parsers playing nice and likely makes minimal difference to memory footprint as we already keep a similar map to avoid collisions between user and auto-assigned identifiers.  Moving to Guids simply replaces that map with an alternative map.
+One thing we may want to do in making this change is still allow users to create blank nodes by human readable label and simply map these consistently to Guids internally (within the scope of a factory).  However a better solution might be to push this responsibility off on parsers which removes the need for graphs and node factories to track this.  Ultimately this will reduce memory usage within the system as this mapping will then be temporary for the life of a parser, there are techniques which can make this mapping extremely memory efficient which Jena already uses and we should look at adopting those in our parsers.
 
 ==== Node Creation ====
 
@@ -82,15 +85,20 @@ The Nodes refactor will result in a couple of minor changes to the ##IGraph## AP
 
 * There will no longer need to be a two argument form of //Merge()// since Nodes don't have a reference to their Graph URI to be preserve
 * //GetNextBlankNodeID()// becomes obsolete and eventually removed
+* Remove all defunct //GetXNode()// methods
 
 As a result of this and the Nodes refactor there will be some implementation benefits for ##IGraph##.  For example //Merge()// becomes super simple, just //Assert()// the triples from one graph into the other since there is no need to worry about mapping Blank Node IDs.
 
 The actual changes we propose for the ##IGraph## API are as follows:
 
-# Rename the //BaseUri// property as the //Name// property since this more accurately describes it's purpose.  //BaseUri// would remain as an obsoleted synonym property in initial 
-releases.
+# Remove the //BaseUri// property entirely, the current name is a misnomer and used as the graph name.  It would be better to have no name associated with an ##IGraph## directly because it is purely a set of triples.
 # Add a //Quads// property to retrieve the Triple's in ##Quad## form
 # Make //Triples// property return a ##IEnumerable<Triple>## instead of ##BaseTripleCollection##
+# Simplify the set of //GetTriplesWithXY()// methods into a single //Find(INode s, INode p, INode o)// method where any/all may be null to signify matching anything.
+# Add convenience //RetractWhere()// method so implementations can avoid materializing deletion candidates where possible
+# Remove other defunct selection related methods
+# Add //Edges// property which returns ##INode## instances used in the predicate position
+# Rename //Nodes// property to //Vertices// to more accurrately reflect what is returned
 
 The 3rd change is the most significant but also the most important, it hides internal implementation details of how triples (more than it is already) are stored and makes it much easier to implement Graphs that don't have any direct in-memory storage if desired.
 
