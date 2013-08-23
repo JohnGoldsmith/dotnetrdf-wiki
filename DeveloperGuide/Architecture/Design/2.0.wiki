@@ -77,7 +77,7 @@ With the removal of the //Graph// property we need to introduce a proper ##Quad#
 
 **Note:** We wish to make the //Graph// property return a ##INode## to support non-URI names for graphs though this goes beyond standard RDF, however it is common across other APIs and we should aim to be as broad and extensible as possible.
 
-Implementation wise I intend to make ##Quad## a standalone class not an extension because we don't want to allow implicit casting of ##Quad## to ##Triple##. Users should always be aware that this is a lossy operation, an //AsTriple()// method will be provided to do this explicitly.  Conversely ##Triple## will likely provide an //AsQuad(Uri graphUri)// method.  This decision also means we can implement ##Quad## as a decorator over a ##Triple## allowing us to reduce memory footprint.
+Implementation wise I intend to make ##Quad## a standalone class not an extension because we don't want to allow implicit casting of ##Quad## to ##Triple##. Users should always be aware that this is a lossy operation, an //AsTriple()// method will be provided to do this explicitly.  Conversely ##Triple## will likely provide an //AsQuad(Uri graphUri)// and //AsQuad(INode graphNode)// methods.  This decision also means we can implement ##Quad## as a decorator over a ##Triple## allowing us to reduce memory footprint further.
 
 === IGraph Refactor ===
 
@@ -87,15 +87,15 @@ The Nodes refactor will result in a couple of minor changes to the ##IGraph## AP
 * //GetNextBlankNodeID()// becomes obsolete and eventually removed
 * Remove all defunct //GetXNode()// methods
 
-As a result of this and the Nodes refactor there will be some implementation benefits for ##IGraph##.  For example //Merge()// becomes super simple, just //Assert()// the triples from one graph into the other since there is no need to worry about mapping Blank Node IDs.
+As a result of this and the Nodes refactor there will be some implementation benefits for ##IGraph##.  For example //Merge()// becomes super simple, just //Assert()// the triples from one graph into the other since there is no need to worry about mapping Blank Node IDs, this is particularly true since we will be explicitly allowing for blank node sharing across graphs.
 
-The actual changes we propose for the ##IGraph## API are as follows:
+The more significant changes we propose for the ##IGraph## API are as follows:
 
-# Remove the //BaseUri// property entirely, the current name is a misnomer and used as the graph name.  It would be better to have no name associated with an ##IGraph## directly because it is purely a set of triples.
+# Remove the //BaseUri// property entirely, the current name is a misnomer and generally used as the graph name.  It would be better to have no name associated with an ##IGraph## directly because it is purely a set of triples, graph names would be a property of a storage implementation for sets of graphs.
 # Add a //Quads// property to retrieve the Triple's in ##Quad## form
 # Make //Triples// property return a ##IEnumerable<Triple>## instead of ##BaseTripleCollection##
 # Simplify the set of //GetTriplesWithXY()// methods into a single //Find(INode s, INode p, INode o)// method where any/all may be null to signify matching anything.
-# Add convenience //RetractWhere()// method so implementations can avoid materializing deletion candidates where possible
+# Add convenience //RetractWhere()// method so that internally implementations can avoid materializing deletion candidates where possible
 # Remove other defunct selection related methods
 # Add //Edges// property which returns ##INode## instances used in the predicate position
 # Rename //Nodes// property to //Vertices// to more accurrately reflect what is returned
@@ -135,17 +135,14 @@ The ##ITripleStore## interface is both poorly named and a messy API, it also ove
       //Get all Triples in the Store
       IEnumerable<Triple> Triples { get; }
 
-      //Get all Triples with given Subject in given Graph(s)
-      IEnumerable<Triple> GetTriplesWithSubject(IEnumerable<Uri> graphUris, INode subj);
+      //Find matching triples
+      IEnumerable<Triple> Find(INode subj, INode pred, INode obj);
 
       //Get all Quads in the store
       IEnumerable<Quad> Quads { get; } 
   
-      //Get all quads that match the given subject across all graphs
-      IEnumerable<Quad> GetQuadsWithSubject(INode subj)
-
-      //Get all quads that match the given subject in the given graphs
-      IEnumerable<Quad> GetQuadsWithSubject(IEnumerable<Uri> graphUris, INode subj);
+      //Find all matching quads
+      IEnumerable<Quad> Find(INode graph, INode subj, INode pred, INode obj)
 
       //Is a Triple found anywhere in the store
       bool ContainsTriple(Triple t);
@@ -158,9 +155,9 @@ The ##ITripleStore## interface is both poorly named and a messy API, it also ove
     }
 }}}
 
-Note that while this interface outline is by no means complete it does not include the active and default graph management portions of the ##ISparqlDataset## API.  It is proposed that the burden of tracking what constitutes those graphs is the job of the query engine.  Likely we will introduce custom algebra to cover this
+Note that while this interface outline is by no means complete it does not include the active and default graph management portions of the ##ISparqlDataset## API.  It is proposed that the burden of tracking what constitutes those graphs is the job of the query engine.  Likely we will introduce custom algebra to cover this or manage it purely in the query processors.
 
-There will also be no //Graphs// property exposing a ##BaseGraphCollection##, that will instead become purely the standard backing implementation for base implementations of this interface.
+There will also be no //Graphs// property exposing a ##BaseGraphCollection##, that will instead become purely the standard backing implementation for our in-memory implementations of this interface.
 
 With this interface in place we will need to introduce new implementations of this which cover our existing key implementations:
 
@@ -169,9 +166,11 @@ With this interface in place we will need to introduce new implementations of th
 
 === IO APIs Refactor ===
 
-The Data Model refactors outlined above will facilitate some refactoring and streamlining of the existing IO APIs particularly in the Parsing namespace.  I propose to remove the ##IStoreReader## interface and generalize the ##IRdfReader## interface so we a RDF parser can pass into a ##IGraph##/##IGraphStore##.  This will mean adding overloads of the //Load()// method which take a ##IGraphStore## instead
+The Data Model refactors outlined above will facilitate some refactoring and streamlining of the existing IO APIs particularly in the Parsing namespace.  I propose to remove the ##IStoreReader## interface and generalize the ##IRdfReader## interface so we a RDF parser can pass into a ##IGraph##/##IGraphStore##.  This will mean adding overloads of the //Load()// method which take a ##IGraphStore## instead.
 
-As a side effect of the above the ##IRdfHandler## interface will need to be expanded to add a //HandleQuad()// method, parsers will call either //HandleTriple()// or //HandleQuad()// depending on the data they produce.
+Since there will be no longer a //BaseUri// property on graphs it will also be useful to provide a Base URI to readers and writers for the purposes of parsing and serialization so appropriate overloads will be required for this.
+
+As a side effect of the above the ##IRdfHandler## interface will need to be expanded to add a //HandleQuad()// method, parsers will call either //HandleTriple()// or //HandleQuad()// depending on the data they produce.  This also allows for handlers to handle triples and quads differently if they so desire.
 
 ==== Formatting API Improvements ===
 
