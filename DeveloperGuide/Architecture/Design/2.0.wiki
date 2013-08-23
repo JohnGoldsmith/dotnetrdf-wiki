@@ -73,9 +73,9 @@ In light of the Nodes refactor we will make some similar changes to the Triple A
 
 This is intended to simplify the ##Triple## class, reduce it's memory footprint and get to a data model where it purely represents a triple.  It also simplifies the constructor for ##Triple## since we no longer need to validate that the Nodes originate from the same Graph.  Removing the //Context// parameter only really affects the rarely used N3 function contexts which is a feature we don't truly support anyway and so I would prefer to remove support for.
 
-With the removal of the //Graph// property we need to introduce a proper ##Quad## class to represent Quads, the ##Quad## class will have essentially the same API as a Triple but with the addition of a //Graph// property which will return a ##Uri## *not* a ##IGraph##.
+With the removal of the //Graph// property we need to introduce a proper ##Quad## class to represent Quads, the ##Quad## class will have essentially the same API as a Triple but with the addition of a //Graph// property which will return a ##INode##
 
-**Note:** It may be wish to make the //Graph// property return a ##INode## to support non-URI names for graphs though this goes beyond standard RDF
+**Note:** We wish to make the //Graph// property return a ##INode## to support non-URI names for graphs though this goes beyond standard RDF, however it is common across other APIs and we should aim to be as broad and extensible as possible.
 
 Implementation wise I intend to make ##Quad## a standalone class not an extension because we don't want to allow implicit casting of ##Quad## to ##Triple##. Users should always be aware that this is a lossy operation, an //AsTriple()// method will be provided to do this explicitly.  Conversely ##Triple## will likely provide an //AsQuad(Uri graphUri)// method.  This decision also means we can implement ##Quad## as a decorator over a ##Triple## allowing us to reduce memory footprint.
 
