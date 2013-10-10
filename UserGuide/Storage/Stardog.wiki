@@ -4,7 +4,7 @@
 
 [[http://stardog.com|Stardog]] the RDF database from Clark & Parsia can be connected to via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogConnector|StardogConnector]].  This connector uses the Stardog HTTP interface so requires a running Stardog HTTP server.
 
-The ##StardogConnector## assumes the latest version of Stardog is being used, currently these are the 2.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV1Connector|StardogV1Connector]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV2Connector|StardogV2Connector]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
+The ##StardogConnector## assumes the latest version of Stardog is being used, currently these are the 2.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV1Connector|StardogV1Connector]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV2Connector|StardogV2Connector]] are provided if you wish to be explicit about the version of Stardog you are connecting to.  In terms of backwards compatibility the ##StardogV2Connector## can talk to a Stardog 1.x server but we can't guarantee this will work correctly, also as we update the ##StardogV2Connector## with support for newer Stardog features these will not work if used against a Stardog 1.x server.
 
 == Supported Capabilities ==
 
@@ -49,7 +49,6 @@ You can also create connect directly to a server by creating an instance of the 
 
 StardogServer server = new StardogServer("http://localhost:5822", "username", "password");
 }}}
-
 
 == Creating Stores ==
 
