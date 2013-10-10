@@ -32,6 +32,14 @@ Please see [[UserGuide/Equality and Comparison|Equality and Comparison]] for mor
 
 Controls whether literal values have Unicode normalization applied to them when they are created, this defaults to ##false##.  May be useful to enable if you are ingesting non-normalized data though may increase data load times.
 
+=== DefaultCulture ===
+
+Controls the culture used for comparing the lexical values of literals when lexical sorting is used.  The default is to use the invariant culture to preserve behavioural compatibility with past releases.  It may be useful to customize this setting if you want to more naturally sort string data.
+
+=== ComparisonOptions ===
+
+Controls how the lexical values of literals are compared when lexical sorting is used.  The default is to use Ordinal comparison which preserves behavioural compatibility with past releases.  It may be useful to customize this setting if you want to more naturally sort string data.
+
 == HTTP Options ==
 
 === ForceHttpBasicAuth ===
