@@ -4,6 +4,8 @@
 
 [[http://stardog.com|Stardog]] the RDF database from Clark & Parsia can be connected to via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogConnector|StardogConnector]].  This connector uses the Stardog HTTP interface so requires a running Stardog HTTP server.
 
+The ##StardogConnector## assumes the latest version of Stardog is being used, currently these are the 2.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV1Connector|StardogV1Connector]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV2Connector|StardogV2Connector]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
+
 == Supported Capabilities ==
 
 * Load, Save, Delete, Update and List Graphs
@@ -17,7 +19,7 @@ Connecting to a Stardog database requires knowing the Base URI for the server, a
 {{{
 #!csharp
 
-StardogConnector stardog = new StardogConnector("http://localhost:5822", "example", "username", "password");
+StardogConnector stardog = new StardogConnector("http://localhost:5820", "example", "username", "password");
 }}}
 
 == Configurable Query Reasoning ==
@@ -33,6 +35,8 @@ Stardog is one of the few stores currently supported that support transactions, 
 = Managing a Server =
 
 We support managing a server via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer|StardogServer]] class which implements our [[UserGuide/Storage/Servers|Servers API]]
+
+The ##StardogServer## assumes the latest version of Stardog is being used, currently these are the 2.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV1Server|StardogV1Server]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV2Server|StardogV2Server]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
 
 Managing a server allows you to manage a single catalog at a time, a ##StardogConnector## provides access to its associated server via the //ParentServer// or //AsyncParentServer// property.
 
