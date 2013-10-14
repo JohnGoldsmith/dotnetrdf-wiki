@@ -146,6 +146,10 @@ parser.Load(g, new StringReader("<http://example.org/a> <http://example.org/b> <
 
 This is roughly equivalent to how the ##StringParser## works internally except this method requires you to know the format of the RDF in advance.
 
+=== Reading RDF as a stream ===
+
+Sometimes you may wish to read RDF in a stream oriented fashion, please see the [[#Advanced Parsing|Advanced Parsing]] section of this page for how to do that.
+
 == Parser Configuration ==
 
 Some Parsers have additional configuration which can be used to change their behaviour. For example if a Parser implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableTokeniser|ITraceableTokeniser]] interface then the //TraceTokeniser// property can be used to ask for Tokeniser Trace to be output to the Console. Similarly if it implements [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableParser|ITraceableParser]] then the //TraceParser// property can be used to ask for Parsing Trace to be output. These features are often useful when debugging to discover why an RDF document is failing to parse since you can see how the input is being tokenised and parsed.
@@ -183,7 +187,7 @@ Similarly to Graph Parsers the Store Parsers can all be invoked indirectly with 
 
 The examples we've shown so far all use an abstracted parsing model where you parse directly to a ##IGraph## or ##ITripleStore##.  The downside of this is that you have to wait for your entire parsing operation to complete before you can work with the parsed data and that for very large inputs this can either take a substantial amount of time or exhaust available memory.
 
-Behind the scenes our parser subsystem is actually fully stream based and is exposed to you via the ##IRdfHandler## based overloads of relevant parsing methods. This allows you much greater control over what is done with parsed data such as processing it in a stream oriented fashion.
+Behind the scenes our parser subsystem is actually fully stream based and is exposed to you via the ##IRdfHandler## based overloads of relevant methods. This allows you much greater control over what is done with parsed data such as processing it in a stream oriented fashion.
 
 In the examples given so far you have only been able to parse RDF into either a ##IGraph## or a ##ITripleStore## instance but this is not your only option.  You can use a ##IRdfHandler## to control explicitly what happens with the RDF you are parsing. Using any of the included implementations will require you to add the following using statement:
 
