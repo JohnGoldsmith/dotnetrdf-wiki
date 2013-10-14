@@ -148,7 +148,7 @@ This is roughly equivalent to how the ##StringParser## works internally except t
 
 === Reading RDF as a stream ===
 
-Sometimes you may wish to read RDF in a stream oriented fashion, please see the [[#Advanced Parsing|Advanced Parsing]] section of this page for how to do that.
+Sometimes you may wish to read RDF in a stream oriented fashion, please see the [[UserGuide/Reading RDF#Advanced Parsing|Advanced Parsing]] section of this page for how to do that.
 
 == Parser Configuration ==
 
