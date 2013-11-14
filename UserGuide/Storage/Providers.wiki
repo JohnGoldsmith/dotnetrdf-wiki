@@ -11,7 +11,6 @@ The available providers are as follows:
 |= Provider |= Description |
 | [[UserGuide/Storage/AllegroGraph|Allegro Graph]] | AllegroGraph 3.x and 4.x |
 | [[UserGuide/Storage/DatasetFile|Dataset Files]] | Read-only view over a NQuads/TriG/TriX file |
-| [[UserGuide/Storage/Dydra|Dydra]] | Dydra cloud RDF store (//Deprecated//) |
 | [[UserGuide/Storage/4store|4store]] | 4store |
 | [[UserGuide/Storage/Fuseki|Fuseki]] | Apache Jena Fuseki, access any Jena based store via Fuseki |
 | [[UserGuide/Storage/InMemory|In-Memory]] | In-Memory store |

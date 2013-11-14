@@ -45,24 +45,6 @@ _:datasetFile a dnr:StorageProvider ;
 
 The ##dnr:fromFile## property is used to specify the dataset file to connect to and the ##dnr:async## property controls whether parsing of that file is done asynchronously.
 
-== Dydra ==
-
-You can specify a connection to Dydra as follows:
-
-{{{
-#!turtle
-
-@prefix <http://www.dotnetrdf.org/configuration#> .
-
-_:agraph a dnr:StorageProvider ;
-  dnr:type "VDS.RDF.Storage.DydraConnector" ;
-  dnr:catalogID "username" ;
-  dnr:storeID "repository" ;
-  dnr:user "Your API Key" .
-}}}
-
-For Dydra connections ##dnr:catalogID## specifies the user account that the desired repository belongs to while ##dnr:storeID## specifies the actual repository. The ##dnr:user## property is used to set your API Key that will authenticate you with Dydra.
-
 == 4store ==
 
 4store servers can be connected to as shown below:
