@@ -10,6 +10,7 @@ The ##StardogConnector## assumes the latest version of Stardog is being used, cu
 
 * Load, Save, Delete, Update and List Graphs
 * SPARQL Query with configurable reasoning levels
+* SPARQL Update for Stardog 2.x connections
 * Transactions
 
 == Creating a Connection ==
