@@ -4,6 +4,8 @@
 
 For automated testing dotNetRDF uses a combination of NUnit based unit tests and manual test harnesses. We also do manual testing for the UI tools in our toolkit as we develop new features for those tools. This document details the various test harnesses available and how to run them.
 
+We have a continuous integration server at [[http://ci.dotnetrdf.org|ci.dotnetrdf.org]] where you can review the current state of the test suite.  Please be aware that it is on a relatively modest server so occasionally may be unavailable.  Also note that you'll get a login page but guest login is enabled.
+
 == Unit Tests ==
 
 The Unit Tests are contained in a project called **dotNetRDF.Test** found in the ##Testing/unittest/## folder of our source code and within the solution when opened in Visual Studio. Before you can run the unit tests there is something you must do which is to configure the unit test environment.
@@ -18,7 +20,7 @@ Assuming that you do not change the config from the template running the tests w
 
 You may find that a few tests fail, some of these may be genuine failures while a few are intermittent failures. We suggest attempting to run the failing tests again at least once because sometimes this will resolve intermittent failures.
 
-Some of these intermittent failures are down to tests that rely upon web based resources such as [[http://dbpedia.org|DBPedia]] which may be temporarily unavailable or over capacity at the time of running the tests.  Others relate to timeout tests are may fail simply because your system is powerful enough to finish the tested task before the timeout is hit.
+Some of these intermittent failures are down to tests that rely upon web based resources such as [[http://dbpedia.org|DBPedia]] which may be temporarily unavailable or over capacity at the time of running the tests.  Others relate to timeout tests are may fail simply because your system is powerful enough to finish the tested task before the timeout is hit or conversely is too slow to run the test within the timeout.
 
 === Genuine Failures ===
 
