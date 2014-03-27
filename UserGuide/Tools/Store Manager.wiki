@@ -44,13 +44,13 @@ If your chosen Store supports named Graphs and can return the Graph list in resp
 
 Provided your chosen store supports SPARQL you can query against it using the SPARQL tab as shown in the screenshot below:
 
-{{http://www.dotnetrdf.org/images/screenshots/storemanager_sparql.jpg|Store Manager - SPARQL Query}}
+{{http://www.dotnetrdf.org/images/screenshots/storemanager_improved_editor.png|Store Manager - SPARQL Query}}
 
 As with the [[UserGuide/Tools/SparqlGui|SparqlGui]] you can save and load queries to text files as desired. 
 
-Results are displayed in the viewer window like so:
+Results are displayed in the same window like so, results from multiple queries are presented as tabs that can be switched between. You can hit the detach button to open a set of results in a separate window if you prefer that:
 
-{{http://www.dotnetrdf.org/images/screenshots/storemanager_graphviewer.jpg|Store Manager - Results View}}
+{{http://www.dotnetrdf.org/images/screenshots/storemanager_inline_results1.png|Store Manager - Results View}}
 
 The Graph viewer presents a list of all the Triples in the Graph. You can export the Graph in the format of your choice using the Export Data button which displays the following dialogue:
 
