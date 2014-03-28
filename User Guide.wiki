@@ -56,6 +56,8 @@ The basic tutorial covers simple SPARQL query and updates, we have a selection o
 ** [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
 ** [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
 
+The [[DeveloperGuide/SPARQL%20Engine|SPARQL Engine]] section of the [[Developer%20Guide]] may also be relevant to advanced users.
+
 == Ontologies, Inference and Reasoning ==
 
 Please see the following for documentation of ontology, inference and reasoning support:
