@@ -1,0 +1,9 @@
+[[Home]] > [[DeveloperGuide|Developer Guide]] > [[DeveloperGuide/SPARQL%20Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/Extension%20Functions|Extension Functions]]
+
+# Extension Functions
+
+Extension Functions are a standardised extension point provided by the [[http://www.w3.org/TR/sparql11-query/#extensionFunctions|SPARQL Specification]] which allows you to introduce new functions by naming them with URIs.  dotNetRDF includes full support for this functionality and includes a whole range of extension functions described on the [[DeveloperGuide/SPARQL/Function%20Libraries|Function Libraries]] page.  This page covers how to add your own extension functions.
+
+Adding an extension function requires implementing two interfaces:
+* [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.ISparqlExpression|ISparqlExpression]]
+* [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory|ISparqlCustomExpressionFactory]]
