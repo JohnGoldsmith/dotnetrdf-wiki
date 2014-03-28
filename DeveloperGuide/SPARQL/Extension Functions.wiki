@@ -1,9 +1,119 @@
 [[Home]] > [[DeveloperGuide|Developer Guide]] > [[DeveloperGuide/SPARQL%20Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/Extension%20Functions|Extension Functions]]
 
-# Extension Functions
+= Extension Functions
 
 Extension Functions are a standardised extension point provided by the [[http://www.w3.org/TR/sparql11-query/#extensionFunctions|SPARQL Specification]] which allows you to introduce new functions by naming them with URIs.  dotNetRDF includes full support for this functionality and includes a whole range of extension functions described on the [[DeveloperGuide/SPARQL/Function%20Libraries|Function Libraries]] page.  This page covers how to add your own extension functions.
 
 Adding an extension function requires implementing two interfaces:
 * [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.ISparqlExpression|ISparqlExpression]]
 * [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory|ISparqlCustomExpressionFactory]]
+
+== Implement ISparqlExpression
+
+The ##ISparqlExpression## interface implements the actual function logic, there are a variety of abstract implementations that may be relevant depending on the kind of function you wish to implement.  You may find it easiest to start by copying the code from a similar existing function or extending the same base class as a similar existing function.
+
+Let's take a look at an example implementation from dotNetRDF itself:
+
+{{{
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using VDS.RDF.Nodes;
+
+namespace VDS.RDF.Query.Expressions.Functions.Arq
+{
+    /// <summary>
+    /// Represents the ARQ namespace() function
+    /// </summary>
+    public class NamespaceFunction
+        : BaseUnaryExpression
+    {
+        /// <summary>
+        /// Creates a new ARQ Namespace function
+        /// </summary>
+        /// <param name="expr">Expression</param>
+        public NamespaceFunction(ISparqlExpression expr)
+            : base(expr) { }
+
+        /// <summary>
+        /// Gets the value of the function in the given Evaluation Context for the given Binding ID
+        /// </summary>
+        /// <param name="context">Evaluation Context</param>
+        /// <param name="bindingID">Binding ID</param>
+        /// <returns></returns>
+        public override IValuedNode Evaluate(SparqlEvaluationContext context, int bindingID)
+        {
+            INode temp = this._expr.Evaluate(context, bindingID);
+            if (temp != null)
+            {
+                if (temp.NodeType == NodeType.Uri)
+                {
+                    IUriNode u = (IUriNode)temp;
+                    if (!u.Uri.Fragment.Equals(String.Empty))
+                    {
+                        return new StringNode(null, u.Uri.AbsoluteUri.Substring(0, u.Uri.AbsoluteUri.LastIndexOf('#') + 1));
+                    }
+                    else
+                    {
+                        return new StringNode(null, u.Uri.AbsoluteUri.Substring(0, u.Uri.AbsoluteUri.LastIndexOf('/') + 1));
+                    }
+                }
+                else
+                {
+                    throw new RdfQueryException("Cannot find the Local Name for a non-URI Node");
+                }
+            }
+            else
+            {
+                throw new RdfQueryException("Cannot find the Local Name for a null");
+            }
+        }
+
+        /// <summary>
+        /// Gets the String representation of the function
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "<" + ArqFunctionFactory.ArqFunctionsNamespace + ArqFunctionFactory.Namespace + ">(" + this._expr.ToString() + ")";
+        }
+
+        /// <summary>
+        /// Gets the Type of the Expression
+        /// </summary>
+        public override SparqlExpressionType Type
+        {
+            get
+            {
+                return SparqlExpressionType.Function;
+            }
+        }
+
+        /// <summary>
+        /// Gets the Functor of the Expression
+        /// </summary>
+        public override string Functor
+        {
+            get
+            {
+                return ArqFunctionFactory.ArqFunctionsNamespace + ArqFunctionFactory.Namespace;
+            }
+        }
+
+        /// <summary>
+        /// Transforms the Expression using the given Transformer
+        /// </summary>
+        /// <param name="transformer">Expression Transformer</param>
+        /// <returns></returns>
+        public override ISparqlExpression Transform(IExpressionTransformer transformer)
+        {
+            return new NamespaceFunction(transformer.Transform(this._expr));
+        }
+    }
+}
+}}}
+
+Here we are attempting to split URIs (and only URIs) to determine a suitable namespace to use for them.  As you can see we extend [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.BaseUnaryExpression|BaseUnaryExpression]] which means we don't have to implement that much ourselves.
+
+The main method of interest is the ##Evaluate()## method which is where the actual function evaluation is done, the remaining methods and properties are primarily around having the expression play nice with other APIs such as query serialisation and optimisation.
