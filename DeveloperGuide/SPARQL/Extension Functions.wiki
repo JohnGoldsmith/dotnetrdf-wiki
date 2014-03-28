@@ -118,7 +118,9 @@ namespace VDS.RDF.Query.Expressions.Functions.Arq
 
 Here we are attempting to split URIs (and only URIs) to determine a suitable namespace to use for them.  As you can see we extend [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.BaseUnaryExpression|BaseUnaryExpression]] which means we don't have to implement that much ourselves.
 
-The main method of interest is the ##Evaluate()## method which is where the actual function evaluation is done, the remaining methods and properties are primarily around having the expression play nice with other APIs such as query serialisation and optimisation.
+The main method of interest is the ##Evaluate()## method which is where the actual function evaluation is done.  The usual pattern is to first evaluate the child expressions and then attempt to apply the function on the result, if the function cannot be applied due to type mismatches or any other error then a ##RdfQueryException## **must** be thrown.  If the function succeeds then it should return an appropriate [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Nodes.IValuedNode|IValueNode]] instance which represents the result of the function.
+
+The remaining methods and properties are primarily around having the expression play nice with other APIs such as query serialisation and optimisation.
 
 == Implements ISparqlCustomExpressionFactory
 
