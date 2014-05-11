@@ -56,6 +56,7 @@ foreach (Triple t in g.Triples)
 {
 	Console.WriteLine(t.ToString());
 }
+Console.ReadLine();
 }}}
 
 This will give us output like the following:
