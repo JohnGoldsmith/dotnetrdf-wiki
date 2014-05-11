@@ -148,6 +148,7 @@ public class HelloWorld
         RdfXmlWriter rdfxmlwriter = new RdfXmlWriter();
         rdfxmlwriter.Save(g, "HelloWorld.rdf");
 
+        Console.ReadLine();
     }
 }
 }}}
