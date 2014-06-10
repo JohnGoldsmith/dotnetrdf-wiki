@@ -35,7 +35,7 @@ In API terms this simply means you need to assert additional triples e.g.
 IGraph g = new Graph();
 g.NamespaceMap.AddNamespace(String.Empty, new Uri("http://example.org"));
 
-# Create necessary URI nodes
+// Create necessary URI nodes
 INode rdfType = g.CreateUriNode("rdf:type");
 INode rdfStatement = g.CreateUriNode("rdf:Statement");
 INode rdfSubj = g.CreateUriNode("rdf:subject");
@@ -46,10 +46,10 @@ INode s = g.CreateUriNode(":s");
 INode p = g.CreateUriNode(":p");
 INode o = g.CreateUriNode(":o");
 
-# Assert triple
+// Assert triple
 g.Assert(s, p, o);
 
-# Assert reification triples
+// Assert reification triples
 INode id = g.CreateBlankNode();
 g.Assert(id, rdfType, rdfStatement);
 g.Assert(id, rdfSubject, s);
