@@ -84,19 +84,19 @@ Another change that will be made is late binding of extension functions.  Extens
 
 The status of the Medusa prototype is as follows:
 
-- Results API implemented
-- IQuery API implemented
-- IQuery to IAlgebra compilation mostly implemented
-- Algebra API mostly implemented
-- Algebra evaluation mostly implemented
-- Minimal IExpression API
+* Results API implemented
+* IQuery API implemented
+* IQuery to IAlgebra compilation mostly implemented
+* Algebra API mostly implemented
+* Algebra evaluation mostly implemented
+* Minimal IExpression API
 
 The following features are missing:
 
-- Most expressions are not yet ported
-- No SPARQL Query parser
-- No SPARQL Updates
-- No Group By, Property Path, Service and Property Function evaluation
+* Most expressions are not yet ported
+* No SPARQL Query parser
+* No SPARQL Updates
+* No Group By, Property Path, Service and Property Function evaluation
 
 This means that basic queries can be built and evaluated programmatically but you can't yet parse and run an arbitrary SPARQL query.
 
