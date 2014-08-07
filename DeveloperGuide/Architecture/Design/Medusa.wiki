@@ -2,7 +2,7 @@
 
 = Medusa Query Engine =
 
-Medusa is the code name for a proposed streaming query engine for dotNetRDF.  
+Medusa is the code name for a next generation streaming query engine for dotNetRDF.  
 
 == Motivation ==
 
@@ -13,7 +13,7 @@ Our current [[DeveloperGuide/SPARQL/Leviathan Engine|Leviathan Engine]] is what 
 
 While the current version of Leviathan does have some limited support for lazy evaluation of certain queries this is by no means fantastic and is limited to a very small subset of queries.
 
-A streaming engine by constrast is designed to evaluate the query as lazily as possible, in the .Net context this means it will be implemented almost entirely using LINQ.  The advantages of a streaming engine are that it avoids the stated disadvantages of a block based engine.  A streaming engine has much lower memory overhead because it only needs enough memory to calculate the next answer, this also means that it can start returning results as soon as it finds it's first results.  Bear in mind that it does still have some disadvantages:
+A streaming engine by contrast is designed to evaluate the query as lazily as possible, in the .Net context this means it will be implemented almost entirely using LINQ.  The advantages of a streaming engine are that it avoids the stated disadvantages of a block based engine.  A streaming engine has much lower memory overhead because it only needs enough memory to calculate the next answer, this also means that it can start returning results as soon as it finds it's first results.  Bear in mind that it does still have some disadvantages:
 
 * May end up doing more work than a block based engine for some kinds of query
 * May be harder to parallelize evaluation for some kinds of query
@@ -22,50 +22,29 @@ Note that since we will use LINQ to build the Medusa engine using PLINQ to paral
 
 == Design ==
 
-The Medusa query engine will be implemented as an implementation of the ##ISparqlQueryAlgebraProcessor## interface, eventually like Leviathan it will also implement ##ISparqlQueryProcessor## but for the initial POC we confine ourselves to algebra processing.
+The Medusa query engine will be implemented as a ground up rewrite of the existing query engine.  Where appropriate it will port and re-use existing code but past experimentation has shown that the current API makes the design we want to follow unworkable.  Therefore the decision has been taken to write the new engine mostly from scratch, this will likely be quicker than trying to bend the existing API to the new design.
 
-The proposed type signature is as follows:
+The design borrows heavily from the design of the streaming [[http://jena.apache.org|Apache Jena]] ARQ engine where appropriate.
 
-{{{
-#!csharp
+=== Results API ===
 
-    public class MedusaQueryProcessor
-      : ISparqlQueryAlgebraProcessor<IEnumerable<ISet>, ISet>
-}}}
+A new ##IQueryResult## API is introduced replacing the current poor design of returning ##Object## and relying on users casting it appropriately.  This API provides properties for determining what kind of result it is and properties for accessing strongly typed results.
 
-This states that Medusa produces enumerables of ##ISet## as its results and takes an ##ISet## as its context information.  The ##ISet## passed as the context serves to constrain the return of evaluating different algebra operators.
+The ##SparqlResultSet## API is replaced with a new ##ITabularResults## API which embodies the notion that results may be streaming i.e. not cached into memory.  Extensions of this API that allow for random access and caching into memory are also provided.
 
-Let us consider ##Join## as an example, since joins are expensive we want to minimize the effort expended here.  We can do this if we feed the results of evaluating the LHS into the RHS so that for each result on the LHS we only consider results from the RHS that are likely to be compatible.  This may be easier to understand given sample code:
+=== Query API ===
 
-{{{
-#!csharp
+The existing immutable ##SparqlQuery## API is replaced with a new mutable ##IQuery## interface and a basic Query implementation.  The intention is that a ##IQuery## is entirely mutable so it can be built by a parser or programmatically from code.
 
-    IEnumerable<ISet> lhs = this.ProcessAlgebra(join.Lhs, context);
-    
-    if (join.Lhs.Variables.IsDisjoint(join.Rhs.Variables))
-    {
-        IEnumerable<ISet> rhs = this.ProcessAlgebra(join.Rhs, context);
+The existing ##GraphPattern## API is replaced with a new ##IElement## API based on the ##Element## API from ARQ.  This is necessary to resolve several problems that have emerged over the years in how graph patterns are represented.  One feature of this change is that ##ITriplePattern## and its associated APIs are removed entirely, things are either a ##IElement## or they are a ##Triple## contained within an appropriate ##IElement## instance.
 
-        //Do a product
-        return (from x in lhs
-                from y in rhs
-                select x.Join(y));
-     }
-     else
-     {
-        //Do a join
-        ISparqlAlgebra rhsAlgebra = join.Rhs;
-        List<String> vars = join.Lhs.Variables.Where(v => join.Rhs.Variables.Contains(v)).ToList();
-        return (from x in lhs
-                from y in this.ProcessAlgebra(rhsAlgebra, x)
-                where x.IsCompatibleWith(y, vars)
-                select x.Join(y));
-     }
-}}}
+=== Algebra API ===
 
-== Implementation Barriers ==
+The ##ISparqlAlgebra## API is replaced with a simplified ##IAlgebra## API.  One of the big changes here is that the representation of the algebra is separated from the evaluation thereof.  This makes it possible to build new/alternative query engines in the future based upon the same API without needing significant API rewrites.  It also reduces some complexity with their being multiple implementations of certain core algebra concepts with different evaluation strategies.
 
-There are some barriers to implementing the proposal namely concerned with the fact that a lot of the supporting APIs around SPARQL evaluation are somewhat closely tied to the Leviathan engine.
+The ##ISet## API is renamed to ##ISolution## to better describe it and has some additional methods added.
+
+In the new design the evaluation strategy is managed separately by a ##IAlgebraExecutor## interface which will make it much easier to extend and improve specific parts of the evaluation engine as necessary.  As already noted the Medusa engine will evaluate algebra by converting each operation into an appropriate ##IEnumerable<ISolution>## thus meaning that the query is evaluated lazily i.e. until the solution sequence is enumerated minimal real work is done.
 
 === Expression Evaluation ===
 
@@ -82,12 +61,10 @@ We propose to change this to the following:
 {{{
 #!csharp
 
-    IValuedNode Evaluate(IExpressionEvaluationContext context, ISet s);
+    IValuedNode Evaluate(ISolution solution, IExpressionContext context);
 }}}
 
-Some form of context is still needed because some forms of expressions need to have state persisted through the life of the query (e.g. the ##NOW()## function) but this can be a subset of the existing ##SparqlEvaluationContext## functionality.  Likely requirements are a dictionary of strings to objects for holding arbitrary context information and a reference back to the query processor (needed for ##EXISTS## and ##NOT EXISTS##).  The existing ##SparqlEvaluationContext## can likely be renamed as ##LeviathanEvaluationContext## to indicate that it is scoped to the Leviathan engine and it will just implement the new ##IExpressionEvaluationContext## interface.
-
-Making this change allows us to avoid some of the hacky create a ##SparqlEvaluationContext##, populate it and pass it in behaviours that the existing POC does.  Expression evaluation is used all over the place and changing the API in this way would make implementing new query engines much easier in the future since most engines will likely utilize ##ISet## as a basic representation of potential solution even if their context and other machinery is very different.
+Some form of context is still needed because some forms of expressions need to have state persisted through the life of the query (e.g. the ##NOW()## function) but this can be a subset of the existing ##SparqlEvaluationContext## functionality.  Likely requirements are a dictionary of strings to objects for holding arbitrary context information and a reference back to the query processor (needed for ##EXISTS## and ##NOT EXISTS##).
 
 === Centralized Evaluation Logic ===
 
