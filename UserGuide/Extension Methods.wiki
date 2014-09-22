@@ -45,6 +45,11 @@ The //GetEnhancedHashCode(this Uri u)// method is used to generate Hash Codes fo
 
 In most applications this wouldn't matter since the fragment identifier is usually insignificant but in the case of the Semantic Web fragment identifiers are an important part of URIs. Therefore we provide our own hash code function which does use the fragment identifier in computing hash codes.
 
+== LoadFromFile, LoadFromUri, LoadFromEmbeddedResource and LoadFromString ==
+
+These extension methods for ##IGraph## instances all provide shortcuts for invoking the various static loader classes that can be used to load RDF from various common sources as detailed in the [[UserGuide/Reading RDF#!reading-rdf-from-common-sources|Reading RDF]] documentation.
+
+
 == Retract ==
 
 The //Retract(this IGraph g, INode subj, INode pred, INode obj)// method the partner of the //Assert(...)// extension method and like that method is simply a shorthand way of retracting a Triple without having to explicitly instantiate it e.g.
