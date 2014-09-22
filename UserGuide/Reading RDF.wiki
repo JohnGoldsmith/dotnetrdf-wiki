@@ -74,6 +74,8 @@ catch (RdfException rdfEx)
 
 Often it is not necessary to invoke a parser directly since you can use a helper class to achieve the same effect without having to create the appropriate parser yourself, the following subsections detail available helper classes for reading RDF.
 
+Note that several of the sources detailed here also have helper [[UserGuide/Extension Methods|Extension Methods]] that can be used to further simplify the code examples shown here.
+
 === Reading RDF from Files ===
 
 If you just want to quickly read RDF from a file without having to decide which parser you need you can use the static [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.FileLoader|FileLoader]] class which provides a //Load(IGraph g, String file)// method:
