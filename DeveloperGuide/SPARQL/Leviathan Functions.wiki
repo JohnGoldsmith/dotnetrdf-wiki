@@ -176,6 +176,14 @@ Calculates the sine of the expression
 
 Calculates the inverse sine of the expression
 
+=== tan(expr) ===
+
+Calculates the tangent of the expression
+
+=== tan-1(expr) ===
+
+Calculates the inverse tangent of the expression
+
 == String Functions ==
 
 We also provide a couple of potentially useful string functions:
