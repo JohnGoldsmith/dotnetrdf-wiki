@@ -1,0 +1,9 @@
+[[Home]] > [[User Guide]] > [[UserGuide/RDF Serialisations|RDF Serialisations]]
+
+= RDF Serialisations
+
+This page serves as a reference of the RDF serialisations supported by dotNetRDF, this includes links to the specifications implemented.  How to choose between different variants of the specifications were supported and brief descriptions of the differences.
+
+== NTriples and NQuads
+
+NTriples is a simple line based format
