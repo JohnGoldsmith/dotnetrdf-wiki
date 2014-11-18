@@ -9,6 +9,7 @@ Several of these serialisations have multiple variants of them with differing sy
 |= Serialisation |= Known Variants |= Supported? |
 | NTriples | [[http://www.w3.org/TR/2004/REC-rdf-testcases-20040210/#ntriples|RDF 1.0 Test Cases]] and [[http://www.w3.org/TR/n-triples/|RDF 1.1 NTriples]] | Yes and 1.0.4 onwards |
 | NQuads | [[http://sw.deri.org/2008/07/n-quads/|DERI NQuads]] and [[http://www.w3.org/TR/n-quads/|RDF 1.1 NQuads]] | Yes and 1.0.4 onwards |
+| Turtle | [[http://www.w3.org/TeamSubmission/turtle/|Dave Beckett specification]] and [[http://www.w3.org/TR/turtle/|RDF 1.1 Turtle]] | Yes and 1.0.0 onwards |
 
 == NTriples
 
@@ -44,8 +45,28 @@ When using the ##NQuadsParser## or ##NQuadsWriter## the ##NQuadsSyntax.Original#
 
 === RDF 1.1
 
-The RDF 1.1 specifications included a new format specification for NQuads which is [[http://www.w3.org/TR/n-quads/|RDF 1.1 NQuads]] published in 2014.  The major difference between this and the previous syntax is that the RDF 1.1 variant uses UTF-8 encoding rather than ASCII.  This means that characters which previously had to be escaped can now be represented directly though they still be escaped if desired.
+The RDF 1.1 specifications included a new specification for NQuads which is [[http://www.w3.org/TR/n-quads/|RDF 1.1 NQuads]] published in 2014.  The major difference between this and the previous syntax is that the RDF 1.1 variant uses UTF-8 encoding rather than ASCII.  This means that characters which previously had to be escaped can now be represented directly though they still be escaped if desired.
 
 This syntax has been supported from **1.0.4** onwards
 
 When using the ##NQuadsParser## or ##NQuadsWriter## the ##NQuadsSyntax.Rdf11## enumeration value is used to indicate that this syntax should be used.
+
+== Turtle
+
+Turtle (the name originally derived from Terse RDF Triples Language) is a simple text based language for encoding RDF.  It has some basic similarities to NTriples (and in fact any valid NTriples document is a valid Turtle document) however it supports a wide variety of syntactic compressions which make encoding RDF triples far more compact.
+
+There are two variants of Turtle supported:
+
+=== Original
+
+The original [[http://www.w3.org/TeamSubmission/turtle/|Terse RDF Triples Language]] was specified by Dave Beckett in 2007 and later submitted to the W3C as a Team Submission in 2008.  The two versions of the specification are identical in technical content so are treated as a single syntax variant.
+
+When using the ##TurtleParser## and any of the Turtle writers the ##TurtleSyntax.Original## enumeration value is used to indicate that this syntax should be used.
+
+=== RDF 1.1
+
+The RDF 1.1 specifications included a new specification for Turtle which is [[http://www.w3.org/TR/turtle/|RDF 1.1 Turtle]] published in 2014.  The main differences between this and the previous syntax is that the RDF 1.1 variant provides more permissive prefixed names (one of the major syntax compressions used) and provides better alignment with the SPARQL syntax.
+
+This syntax has been supported from **1.0.0** onwards.
+
+When using the ##TurtleParser## and any of the Turtle writers the ##TurtleSyntax.W3C## enumeration value is used to indicate that this syntax should be used.
