@@ -11,7 +11,7 @@ using VDS.RDF;
 using VDS.RDF.Parsing;
 }}}
 
-dotNetRDF currently supports reading RDF files in all of the following RDF syntaxes:
+dotNetRDF currently supports reading RDF files in all of the following RDF serialisations:
 
 * NTriples
 * Turtle
@@ -22,6 +22,8 @@ dotNetRDF currently supports reading RDF files in all of the following RDF synta
 * TriG (Turtle with Named Graphs)
 * TriX (Named Graphs in XML)
 * NQuads (NTriples plus Context)
+
+Several of these serialisations have multiple variants of them with differing syntax rules.  Where multiple variants are supported dotNetRDF will default to accepting the most recent supported variant for input **but** will use the oldest supported variant for output.  This is [[http://en.wikipedia.org/wiki/Robustness_principle|Postel's Law]] in action - we are liberal in what we accept and conservative in what we send.
 
 = Graph Parsers =
 
@@ -151,6 +153,20 @@ This is roughly equivalent to how the ##StringParser## works internally except t
 === Reading RDF as a stream ===
 
 Sometimes you may wish to read RDF in a stream oriented fashion, please see the [[UserGuide/Reading RDF#!advanced-parsing|Advanced Parsing]] section of this page for how to do that.
+
+== Serialization Variants ==
+
+Several of the supported RDF serialisations have multiple variants of them with differing syntax rules.  Where multiple variants are supported dotNetRDF will default to accepting the most recent supported variant for input **but** will use the oldest supported variant for output.  This is [[http://en.wikipedia.org/wiki/Robustness_principle|Postel's Law]] in action - we are liberal in what we accept and conservative in what we send.
+
+However in some cases you may want to directly decide which syntax variant you use, in this case typically you construct a parser and provide a value from the relevant syntax enumeration e.g.
+
+{{{
+#!csharp
+// Create a NTriples parser that uses the older stricter syntax
+NTriplesParser parser = new NTriplesParser(NTriplesSyntax.Original);
+}}}
+
+Consult the documentation for a specific parser to see if multiple serialisation variants are supported.
 
 == Parser Configuration ==
 
