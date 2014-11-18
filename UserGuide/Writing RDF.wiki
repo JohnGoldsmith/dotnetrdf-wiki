@@ -23,6 +23,8 @@ Currently dotNetRDF supports writing Graphs in the following formats:
 ** CSV
 ** TSV
 
+Several of these serialisations have multiple variants of them with differing syntax rules.  Where multiple variants are supported dotNetRDF will default to accepting the most recent supported variant for input **but** will use the oldest supported variant for output.  This is [[http://en.wikipedia.org/wiki/Robustness_principle|Postel's Law]] in action - we are liberal in what we accept and conservative in what we send.
+
 To learn about how to save Graphs to forms of Storage other than files on disk see [[UserGuide/Working with Graphs|Working with Graphs]] and for information on saving Triple Stores see [[UserGuide/Working with Triple Stores|Working with Triple Stores]]
 
 == Basic Usage ==
@@ -76,6 +78,20 @@ String data = sw.ToString();
 This second method is essentially what the library does internally when you use our ##StringWriter## helper class as in the previous example
 
 **Note:** In the above examples we used the full name of the classes since if you import System.IO in your code the class names will be ambiguous references if you don't do so.
+
+== Serialization Variants ==
+
+Several of the supported RDF serialisations have multiple variants of them with differing syntax rules.  Where multiple variants are supported dotNetRDF will default to accepting the most recent supported variant for input **but** will use the oldest supported variant for output.  This is [[http://en.wikipedia.org/wiki/Robustness_principle|Postel's Law]] in action - we are liberal in what we accept and conservative in what we send.
+
+However in some cases you may want to directly decide which syntax variant you use, in this case typically you construct a writer and provide a value from the relevant syntax enumeration e.g.
+
+{{{
+#!csharp
+// Create a NTriples writer that uses the older stricter syntax
+NTriplesWriter writer = new NTriplesWriter(NTriplesSyntax.Original);
+}}}
+
+Consult the documentation for a specific parser to see if multiple serialisation variants are supported.
 
 == Advanced Usage ==
 
