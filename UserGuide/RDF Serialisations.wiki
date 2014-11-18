@@ -16,10 +16,14 @@ There are two variants of NTriples supported.
 
 The original NTriples syntax was defined as part of the RDF 1.0 Working Group defined in the [[http://www.w3.org/TR/2004/REC-rdf-testcases-20040210/#ntriples|RDF 1.0 Test Cases]] published in 2004.  It is a purely ASCII encoded serialisation so any character outside the ASCII range has to be represented using a ##\u## or ##\U## escape.
 
+Prior to **1.0.4** this was the only NTriples syntax supported.
+
 When using the ##NTriplesParser## or ##NTriplesWriter## the ##NTriplesSyntax.Original## enumeration value is used to indicate that this syntax should be used.
 
 === RDF 1.1
 
-The RDF 1.1 specifications including a new format specification for NTriples which is [[http://www.w3.org/TR/n-triples/|RDF 1.1 NTriples]].  The major difference between this and the previous syntax is that the RDF 1.1 variant uses UTF-8 encoding rather than ASCII.  This means that characters which previously had to be escaped can now be represented directly though they still be escaped if desired.
+The RDF 1.1 specifications including a new format specification for NTriples which is [[http://www.w3.org/TR/n-triples/|RDF 1.1 NTriples]] published in 2014.  The major difference between this and the previous syntax is that the RDF 1.1 variant uses UTF-8 encoding rather than ASCII.  This means that characters which previously had to be escaped can now be represented directly though they still be escaped if desired.
+
+This syntax has been supported from **1.0.4** onwards
 
 When using the ##NTriplesParser## or ##NTriplesWriter## the ##NTriplesSyntax.Rdf11## enumeration value is used to indicate that this syntax should be used.
