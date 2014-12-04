@@ -1,7 +1,5 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
 
-<<toc>>
-
 = Querying with SPARQL =
 
 SPARQL is the standard query language for the Semantic Web and can be used to query over large volumes of RDF data. dotNetRDF provides support for querying both over local in-memory data using it's own SPARQL implementation and for querying remote data using SPARQL endpoints or through other stores SPARQL implementations.
@@ -9,6 +7,8 @@ SPARQL is the standard query language for the Semantic Web and can be used to qu
 If you want to learn about SPARQL you should take a look at the [[http://www.w3.org/TR/sparql11-query/|SPARQL Query Language Specification]] which provides examples of all the various query forms as well as the full formal specifcation.
 
 Advanced Users may want to take a look at the [[UserGuide/Advanced SPARQL|Advanced SPARQL]] and [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
+
+<<toc>>
 
 When using SPARQL you'll want to import the ##VDS.RDF.Query## namespace using the following statement at the start of your code files:
 
