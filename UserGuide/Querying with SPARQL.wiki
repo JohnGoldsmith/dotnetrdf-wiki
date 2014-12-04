@@ -241,7 +241,7 @@ A common error with making queries is that queries by default typically operate 
 
 Another common error stems from misunderstandings about the purpose of ##FROM## and ##FROM NAMED## clauses.  These are used simply to identify the graphs used for the rest of the query and these graphs **MUST** exist in the dataset you are querying.  Note that providing a graph name does not cause that graph to be retrieved from a file or the web though we do provide the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.DiskDemandTripleStore|DiskDemandTripleStore]] and the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.WebDemandTripleStore|WebDemandTripleStore]] which can be used to add this behaviour if desired.
 
-The graphs identified by the ##FROM## clause are merged together and these form the default graph for the query, this is the graph that all triple patterns not contained in a ##GRAPH## clause must match.  The graphs identified by the ##FROM NAMED## clause may be accessed by using ##GRAPH## clauses in your queries.
+The graphs identified by the ##FROM## clause are merged together and these form the default graph for the query, this is the graph that all triple patterns not contained in a ##GRAPH## clause must match.  The graphs identified by the ##FROM NAMED## clause are used individually for matching triple patterns contained within ##GRAPH## clauses.
 
 It is also important to understand that using these clauses it is possible to define datasets that your queries can never match.  For example if you have a ##FROM## clause but no ##FROM NAMED## then there are by definition no named graphs for the purposes of evaluating that query and any ##GRAPH## clause would match nothing.
 
