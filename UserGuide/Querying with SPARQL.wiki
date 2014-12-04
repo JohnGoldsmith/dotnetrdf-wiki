@@ -1,5 +1,7 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
 
+<<toc>>
+
 = Querying with SPARQL =
 
 SPARQL is the standard query language for the Semantic Web and can be used to query over large volumes of RDF data. dotNetRDF provides support for querying both over local in-memory data using it's own SPARQL implementation and for querying remote data using SPARQL endpoints or through other stores SPARQL implementations.
@@ -229,7 +231,19 @@ A key thing to notice here is that we create a [[http://www.dotnetrdf.org/api/in
 
 In this example we have only printed results in full to the Console, to learn more about how to format results for display see [[UserGuide/Result Formatting|Result Formatting]].
 
+=== Common Errors ===
+
+==== Default Graph ====
+
 A common error with making queries is that queries by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing queries may yield no results depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[UserGuide/SPARQL Datasets|SPARQL Datasets]] page for discussions of configuring different kinds of dataset.  You can also look at [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
+
+==== FROM and FROM NAMED ====
+
+Another common error stems from misunderstandings about the purpose of ##FROM## and ##FROM NAMED## clauses.  These are used simply to identify the graphs used for the rest of the query and these graphs **MUST** exist in the dataset you are querying.  Note that providing a graph name does not cause that graph to be retrieved from a file or the web though we do provide the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.DiskDemandTripleStore|DiskDemandTripleStore]] and the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.WebDemandTripleStore|WebDemandTripleStore]] which can be used to add this behaviour if desired.
+
+The graphs identified by the ##FROM## clause are merged together and these form the default graph for the query, this is the graph that all triple patterns not contained in a ##GRAPH## clause must match.  The graphs identified by the ##FROM NAMED## clause may be accessed by using ##GRAPH## clauses in your queries.
+
+It is also important to understand that using these clauses it is possible to define datasets that your queries can never match.  For example if you have a ##FROM## clause but no ##FROM NAMED## then there are by definition no named graphs for the purposes of evaluating that query and any ##GRAPH## clause would match nothing.
 
 === Available Query Processors ===
 
