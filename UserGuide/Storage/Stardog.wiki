@@ -43,7 +43,7 @@ Managing a server allows you to manage a single catalog at a time, a ##StardogCo
 
 == Connecting to a Server ==
 
-You can also create connect directly to a server by creating an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer|StardogServer]] class.  This requires you to know the Base URI of the server:
+You can also connect directly to a server by creating an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer|StardogServer]] class.  This requires you to know the Base URI of the server:
 
 {{{
 #!csharp
