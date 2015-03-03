@@ -6,6 +6,8 @@
 
 If you are using our in-memory SPARQL engine then you can attempt to debug why your queries are not working by using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ExplainQueryProcessor|ExplainQueryProcessor]] to try and figure out what is happening with your queries.
 
+It is important to understand that explaining query evaluation will **substantially** impact performance so if you are trying to debug performance issues this is not the way to do so.
+
 You can create this like so:
 
 {{{
