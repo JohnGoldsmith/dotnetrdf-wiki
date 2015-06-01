@@ -44,6 +44,6 @@ Then point your browser at ##http://localhost:1986/query## which will provide yo
 
 When a Configuration file is used to configure the server the following limitations are placed on the configuration:
 
-* Only HTTP Handlers declared as `VDS.RDF.Web.SparqlServer` are supported
-* All `dotnetrdf:` URIs used as subjects for HTTP handlers must end in `/*` as SPARQL Servers are required to listen on wildcard paths.  For example `<dotnetrdf:/path/*>` would be a valid subject and the endpoints would then be available at `/path/query` and `/path/update`
+* Only HTTP Handlers declared as ##VDS.RDF.Web.SparqlServer## are supported
+* All ##dotnetrdf:## URIs used as subjects for HTTP handlers must end in ##/*## as SPARQL Servers are required to listen on wildcard paths.  For example ##<dotnetrdf:/path/*>## would be a valid subject and the endpoints would then be available at ##/path/query## and ##/path/update##
 * SPARQL Servers run under rdfServer **do not** support the SPARQL 1.1 Graph Store Protocol
