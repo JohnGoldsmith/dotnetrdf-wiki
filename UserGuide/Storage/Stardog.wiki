@@ -4,16 +4,16 @@
 
 [[http://stardog.com|Stardog]] the RDF database from Clark & Parsia can be connected to via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogConnector|StardogConnector]].  This connector uses the Stardog HTTP interface so requires a running Stardog HTTP server.
 
-The ##StardogConnector## assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV1Connector|StardogV1Connector]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV2Connector|StardogV2Connector]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV3Connector|StardogV4Connector]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
+The ##StardogConnector## assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV1Connector|StardogV1Connector]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV2Connector|StardogV2Connector]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV3Connector|StardogV3Connector]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
 
-In terms of backwards compatibility the newer connectors may be able to talk to an olrder server but we can't guarantee this will work correctly, also newer connectors have support for newer Stardog features which will not work if used against an older server.
+In terms of backwards compatibility the newer connectors may be able to talk to an older server but we can't guarantee this will work correctly, also newer connectors have support for newer Stardog features which will not work if used against an older server.
 
 == Supported Capabilities ==
 
 * Load, Save, Delete, Update and List Graphs
 * SPARQL Query
 ** Configurable query reasoning levels (for Stardog 1.x and 2.x)
-* SPARQL Update for Stardog 2.x connections
+* SPARQL Update for Stardog 2.x and 3.x connections
 * Transactions
 
 == Creating a Connection ==
