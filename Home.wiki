@@ -15,10 +15,11 @@ This wiki serves as the primary source of documentation for users and developers
 
 === Note ===
 
-The latest version of the library is **1.0.8** (Build **1.0.8.3533**) which was released on **20th March 2015**
+The latest version of the library is **1.0.9** (Build **1.0.9.3684**) which was released on **24th July 2015**
 
 Unless otherwise stated the documentation in the [[User Guide]] and [[Developer Guide]] refers to the latest version of the library (which is noted above).  Documentation for older versions can be accessed below:
 
+* [[Home?rev=1.0.8|1.0.8]]
 * [[Home?rev=1.0.7|1.0.7]]
 * [[Home?rev=1.0.6|1.0.6]]
 * [[Home?rev=1.0.5|1.0.5]]
