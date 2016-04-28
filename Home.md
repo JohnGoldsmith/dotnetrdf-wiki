@@ -1,1 +1,39 @@
-Welcome to the dotnetrdf wiki!
+= dotNetRDF Documentation =
+
+This wiki serves as the primary source of documentation for users and developers and is divided into several main sections:
+
+* The [[User Guide]] covers general usage of the library including step by step introductory tutorials.  This should be the starting point for most users.
+* The [[Developer Guide]] covers architectural discussions, coding standards and extensibility documentation.  This is intended for advanced users and project developers.
+
+== Important Links ==
+
+* [[FAQs]] - Questions we get asked frequently about the library
+* [[How To]] - Quick snippets and examples
+* [[User Guide]] - Step by step articles on performing common tasks with dotNetRDF
+* [[Developer Guide]] - Advanced topics for advanced users and extension developers
+* [[Support]] - Find out how to get more support for dotNetRDF
+
+=== Note ===
+
+The latest version of the library is **1.0.9** (Build **1.0.9.3684**) which was released on **24th July 2015**
+
+Unless otherwise stated the documentation in the [[User Guide]] and [[Developer Guide]] refers to the latest version of the library (which is noted above).  Documentation for older versions can be accessed below:
+
+* [[Home?rev=1.0.8|1.0.8]]
+* [[Home?rev=1.0.7|1.0.7]]
+* [[Home?rev=1.0.6|1.0.6]]
+* [[Home?rev=1.0.5|1.0.5]]
+* [[Home?rev=1.0.4|1.0.4]]
+* [[Home?rev=1.0.3|1.0.3]]
+* [[Home?rev=1.0.2|1.0.2]]
+* [[Home?rev=1.0.1|1.0.1]]
+* [[Home?rev=1.0.0|1.0.0]]
+* [[Home?rev=0.9.0|0.9.0 RC 4]]
+
+Unfortunately BitBucket does not currently provide easy browsing of past versions of documentation currently, while the above links will take you to the previous versions of the documentation as soon as you navigate on from there you will be viewing the latest documentation again.  Generally speaking there should be minimal differences between versions and you can always at ##?rev=0.9.0## to the current URL to view the specific version of that page.
+
+Please note there may be a small window after a new release while we update our documentation when some pages may be inaccurate, if you find any inaccuracies please [[Support|Contact Us]] so we can resolve them ASAP.
+
+== API Documentation ==
+
+We also provide MSDN style API documentation generated from the XML comments in the code (which means our code has full Intellisense support) by going to the [[http://www.dotnetrdf.org/api/|Formal API]] page.
