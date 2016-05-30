@@ -12,16 +12,16 @@ If you are already an experienced dotNetRDF user you may wish to look at the [[D
 
 This series of pages aims to introduce you to the core concepts of dotNetRDF and get you up and running with the library, reading in order is suggested for new users:
 
-# [[Getting Started|UserGuide-Getting-Started]]
-# [[Library Overview|UserGuide-Library-Overview]]
-# [[Hello World|UserGuide-Hello-World]]
-# [[Reading RDF|UserGuide-Reading-RDF]]
-# [[Writing RDF|UserGuide-Writing-RDF]]
-# [[Working with Graphs|UserGuide-Working-With-Graphs]]
-# [[Typed Values and Lists|UserGuide-Typed-Values-And-Lists]]
-# [[Working with Triple StoresUserGuide-Working-With-Triple-Stores]]
-# [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
-# [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
+1. [[Getting Started|UserGuide-Getting-Started]]
+1. [[Library Overview|UserGuide-Library-Overview]]
+1. [[Hello World|UserGuide-Hello-World]]
+1. [[Reading RDF|UserGuide-Reading-RDF]]
+1. [[Writing RDF|UserGuide-Writing-RDF]]
+1. [[Working with Graphs|UserGuide-Working-With-Graphs]]
+1. [[Typed Values and Lists|UserGuide-Typed-Values-And-Lists]]
+1. [[Working with Triple StoresUserGuide-Working-With-Triple-Stores]]
+1. [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
+1. [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
 
 ## General Topics
 
