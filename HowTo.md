@@ -1,4 +1,4 @@
-[[Home]] > [[How To]]
+[[Home]] > How To
 
 # How To
 
