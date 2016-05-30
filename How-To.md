@@ -10,4 +10,4 @@ This section of the documentation serves as a quick reference on how to carry ou
 * [[Load RDF from a File|HowTo/Load RDF from a File.md]]
 * [[Load RDF from the Web|HowTo/Load RDF from the Web.md]]
 * [[Minimize Memory Usage|HowTo/Minimize Memory Usage.md]]
-* [[Reify Triples|HowTo/Reify Triples.md]]
+* [[Reify Triples|HowTo/Reifiy Triples.md]]
