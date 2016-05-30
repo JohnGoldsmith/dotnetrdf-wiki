@@ -2,14 +2,14 @@
 
 This wiki serves as the primary source of documentation for users and developers and is divided into several main sections:
 
-* The [[User Guide]] covers general usage of the library including step by step introductory tutorials.  This should be the starting point for most users.
+* The [[User Guide|UserGuide]] covers general usage of the library including step by step introductory tutorials.  This should be the starting point for most users.
 * The [[Developer Guide]] covers architectural discussions, coding standards and extensibility documentation.  This is intended for advanced users and project developers.
 
 ## Important Links
 
 * [[FAQs]] - Questions we get asked frequently about the library
 * [[How To|HowTo]] - Quick snippets and examples
-* [[User Guide]] - Step by step articles on performing common tasks with dotNetRDF
+* [[User Guide|UserGuide]] - Step by step articles on performing common tasks with dotNetRDF
 * [[Developer Guide]] - Advanced topics for advanced users and extension developers
 * [[Support]] - Find out how to get more support for dotNetRDF
 
