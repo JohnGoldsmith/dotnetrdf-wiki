@@ -49,10 +49,10 @@ We provide integration with a variety of 3rd party triple stores, see the follow
 The basic tutorial covers simple SPARQL query and updates, we have a selection of topics on advanced SPARQL features available:
 
 * [[Advanced SPARQL|UserGuide-Advanced-SPARQL]]
-** [[Result Formatting|UserGuide-Result-Formatting]]
-** [[SPARQL Datasets|UserGuide-SPARQL-Datasets]]
-** [[Full Text Querying with SPARQL|UserGuide-Full-Text-Querying-With-SPARQL]]
-** [[Advanced SPARQL Operations|UserGuide-Advanced-SPARQL-Operations]]
+  * [[Result Formatting|UserGuide-Result-Formatting]]
+  * [[SPARQL Datasets|UserGuide-SPARQL-Datasets]]
+  * [[Full Text Querying with SPARQL|UserGuide-Full-Text-Querying-With-SPARQL]]
+  * [[Advanced SPARQL Operations|UserGuide-Advanced-SPARQL-Operations]]
 
 The [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] section of the [[Developer Guide|Developer-Guide]] may also be relevant to advanced users.
 
