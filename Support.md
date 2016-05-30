@@ -1,41 +1,5 @@
 [[Home]] > [[Support]]
 
-= Support =
+# Support
 
-Support for dotNetRDF can be obtained through a variety of channels detailed below.
-
-== Preferred Channels ==
-
-There are our preferred support channels, you are most likely to get help through these channels and they also are visible to all users.
-
-=== Issue Tracker ===
-
-Our [[http://www.dotnetrdf.org/tracker/|Issue Tracker]] can be used to report and monitor bugs, feature requests etc.
-
-**Note:** Some users in certain regions have reported issues accessing the bug tracker, if you have this problem please report your issue via the mailing lists instead.
-
-=== Email - Mailing Lists ===
-
-For Bug Reports, Support Questions and Developer Discussion/Feature Request you may subscribe to and use the following SourceForge mailing lists:
-
-* Bug Reports - dotnetrdf-bugs@lists.sourceforge.net - [[https://lists.sourceforge.net/lists/listinfo/dotnetrdf-bugs|Subscribe here]]
-* General Support and Questions - dotnetrdf-support@lists.sourceforge.net - [[https://lists.sourceforge.net/lists/listinfo/dotnetrdf-support|Subscribe here]]
-* Developer Discussion, Feature Request and Technical Questions (also includes bug tracker notifications) - dotnetrdf-develop@lists.sourceforge.net - [[https://lists.sourceforge.net/lists/listinfo/dotnetrdf-develop|Subscribe here]]
-
-== Other Channels ==
-
-These are non-preferred channels, while we may help you through these channels we prefer alternative support channels since these channels are only visible to small numbers of users or the user asking a question. As an open source project we much prefer to keep discussion in the open so that it benefits all users.
-
-=== Email - Developers ===
-
-You can contact me directly about dotNetRDF at the following email addresses:
-
-Rob Vesse - rvesse@dotnetrdf.org
-
-**Note:** We much prefer to provide support via the mailing lists, unless your question contains obviously sensitive information we will almost always send our replies to the mailing lists so other users can benefit from the information.
-
-=== Twitter ===
-
-You can send me messages on Twitter [[http://twitter.com/RobVesse|@RobVesse]] or if you tag your tweets with [[http://twitter.com/search?q=%23dotnetrdf|#dotnetrdf]] I'll see them in one of my Twitter searches
-
-**Note:** Unless your question is super simple we prefer to handle it via the mailing lists because it can be very hard to answer questions in 140 characters.
+Our [Issue Tracker](https://github.com/dotnetrdf/dotnetrdf/issues) can be used to report and monitor bugs, feature requests etc.

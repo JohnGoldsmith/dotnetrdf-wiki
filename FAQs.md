@@ -1,28 +1,27 @@
 [[Home]] > [[FAQs]]
 
-= FAQs =
+# FAQs
 
 This page details common problems
 
-<<toc>>
 
-== Platform ==
+## Platform
 
-=== What platforms does dotNetRDF run on? ===
+### What platforms does dotNetRDF run on?
 
 dotNetRDF runs on .Net 3.5 Framework and higher, builds are provided for various framework profiles on the different versions of the framework. Exact supported features depend on the build used, see [[UserGuide/Getting Started|Getting Started]] for more details on the builds.
 
 dotNetRDF will also run under Mono 2.8 and higher, generally we recommend using the newest Mono release possible for best results.
 
-== Compilation/Runtime Errors ==
+## Compilation/Runtime Errors
 
-=== How do I compile dotNetRDF myself? ===
+### How do I compile dotNetRDF myself?
 
-Firstly check out the source from this BitBucket repository. Once downloaded you can either open the solution in Visual Studio 2010 or build via the NAnt scripts. Building via the NAnt scripts is more powerful and only relies on the relevant .Net Framework SDKs having been installed on your system and so doesn't require a full Visual Studio install.
+Firstly check out the source from the [GitHub repository](https://github.com/dotnetrdf/dotnetrdf). Once downloaded you can either open the solution in Visual Studio 2015 or build via the NAnt scripts. Building via the NAnt scripts is more powerful and only relies on the relevant .Net Framework SDKs having been installed on your system and so doesn't require a full Visual Studio install.
 
-See documentation under ##Build/## in our svn trunk for more information.
+See documentation under `Build/` in the source-code tree for more information.
 
-=== My code won't compile because a namespace or class from dotNetRDF was not found? ===
+### My code won't compile because a namespace or class from dotNetRDF was not found?
 
 There are a number of possible causes of this type of error, please check you have done all of the following.
 
@@ -34,29 +33,29 @@ Are you using the latest version of the library? Check the Project Status page a
 
 Have you added the appropriate using declarations to your code? Check the Intellisense API to see what namespace different classes are in
 
-Are you trying to use deprecated/removed code? We have a clear [[DeveloperGuide/Deprecation Policy|Deprecation Policy]] and we actively obsolete and deprecate old APIs over time. If you upgrade your version over time you will see warnings ahead of time but if you jump several versions in one go you may encounter problems with missing APIs. See the ChangeLog.txt file in the release or consult the [[http://www.dotnetrdf.org?content.asp?pageID=Project%20Roadmap|Project Roadmap]] page to see what may have changed. The front page of the Intellisense API also details breaking API changes between major releases.
+Are you trying to use deprecated/removed code? We have a clear [[DeveloperGuide/Deprecation Policy|Deprecation Policy]] and we actively obsolete and deprecate old APIs over time. If you upgrade your version over time you will see warnings ahead of time but if you jump several versions in one go you may encounter problems with missing APIs. See the ChangeLog.txt file in the release or consult the [[Project Roadmap|Project Roadmap.md]] page to see what may have changed. 
 
-=== I get a "No overload for method X takes Y arguments" error or similar ===
+### I get a "No overload for method X takes Y arguments" error or similar
 
 Some features are not available across all builds of the library because they cannot be supported on the platform (e.g. anything using synchronous HTTP is not supported under Silverlight or Windows Phone)
 
 This means that some methods shown in the documentation and listed on the [[http://www.dotnetrdf.org/api/|Formal API]] will not be available. Use your editors auto-complete functions to see alternative overloads for the method which are supported with the chosen build of dotNetRDF.
 
-=== I get a "The Namespace URI for the given Prefix 'http' is not known by the in-scope NamespaceMapper" ===
+### I get a "The Namespace URI for the given Prefix 'http' is not known by the in-scope NamespaceMapper"
 
 This error occurs because you have tried to use the version of CreateUriNode() that expects a Prefixed Name e.g. rdf:type instead of the method that expects a Uri
 
 Ensure you call the version of the method that takes a Uri instance instead.
 
-== Data Errors ==
+## Data Errors
 
-=== The data returned from a remote service is not in the format I expected? ===
+### The data returned from a remote service is not in the format I expected?
 
 When you use any class that talks to some remote service to retrieve data whether it be the UriLoader or some triple store connector like the FusekiConnector the data returned will be dictated by the service you are accessing.
 
-All dotNetRDF is responsible for is sending the request to the remote service and parsing the data returned into the relevant .Net objects for you to work with. If some piece of data comes back as a ILiteralNode and you expected a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUriNode|IUriNode]] then that is nothing to with dotNetRDF - it is the remote service that returned the data in that format.
+All dotNetRDF is responsible for is sending the request to the remote service and parsing the data returned into the relevant .Net objects for you to work with. If some piece of data comes back as a `ILiteralNode` and you expected a `IUriNode` then that is nothing to with dotNetRDF - it is the remote service that returned the data in that format.
 
-=== My query returned no results? ===
+### My query returned no results?
 
 Depending on how you make a query it is either being evaluated by dotNetRDF itself or passed off to some external service to do the query processing. There can be a number of reasons why a query did not return, check the following.
 
