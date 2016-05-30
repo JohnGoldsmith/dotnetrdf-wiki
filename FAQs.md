@@ -33,7 +33,7 @@ Are you using the latest version of the library? Check the Project Status page a
 
 Have you added the appropriate using declarations to your code? Check the Intellisense API to see what namespace different classes are in
 
-Are you trying to use deprecated/removed code? We have a clear [[Deprecation Policy|DeveloperGuide/Deprecation Policy]] and we actively obsolete and deprecate old APIs over time. If you upgrade your version over time you will see warnings ahead of time but if you jump several versions in one go you may encounter problems with missing APIs. See the ChangeLog.txt file in the release or consult the [[Project Roadmap]] page to see what may have changed. 
+Are you trying to use deprecated/removed code? We have a clear [[Deprecation Policy|DeveloperGuide/Deprecation Policy.md]] and we actively obsolete and deprecate old APIs over time. If you upgrade your version over time you will see warnings ahead of time but if you jump several versions in one go you may encounter problems with missing APIs. See the ChangeLog.txt file in the release or consult the [[Project Roadmap]] page to see what may have changed. 
 
 ### I get a "No overload for method X takes Y arguments" error or similar
 
@@ -63,10 +63,10 @@ Is there a typo in your query? Are you sure the query you wrote is actually corr
 
 Are you using literals in triple patterns in your query? Literals in triple patterns are matched strictly in SPARQL so things that look very similar are not considered equal e.g. ##"1"^^xsd:integer != "1"^^xsd:decimal## . If you are using Literals you may be better using a variable combined with a ##FILTER## clause because the equality in filter expressions is value based equality so would match something like the above where triple pattern matching would not.
 
-Are there named graphs involved? If so does your query actually query the appropriate named graphs?  Please see [[SPARQL Datasets|UserGuide/SPARQL Datasets]] for help with this.
+Are there named graphs involved? If so does your query actually query the appropriate named graphs?  Please see [[SPARQL Datasets|UserGuide/SPARQL Datasets.md]] for help with this.
 
 Does the data being queried actually contain the triples you are trying to match?
 
-You can try debugging your query by following the instructions on [[Debugging SPARQL Queries|HowTo/Debug SPARQL Queries]]
+You can try debugging your query by following the instructions on [[Debugging SPARQL Queries|HowTo/Debug SPARQL Queries.md]]
 
 If you still have problems then you may wish to ask for [[Support]] - bear in mind that for many query able data sources such as 3rd party triple stores you are likely better off asking the people behind the store for help rather than us because we may just be sending a query and receiving a result in which case the lack of results is outside of our control.
