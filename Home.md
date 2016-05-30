@@ -21,4 +21,4 @@ Unless otherwise stated the documentation in the [[User Guide]] and [[Developer 
 
 Unfortunately GitHub does not currently provide easy browsing of past versions of documentation.  Generally speaking there should be minimal differences between versions.
 
-Please note there may be a small window after a new release while we update our documentation when some pages may be inaccurate, if you find any inaccuracies please [[Support|Contact Us]] so we can resolve them ASAP.
+Please note there may be a small window after a new release while we update our documentation when some pages may be inaccurate, if you find any inaccuracies please [[Contact Us|Support]] so we can resolve them ASAP.
