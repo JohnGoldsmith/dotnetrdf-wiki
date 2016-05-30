@@ -41,7 +41,7 @@ If you aren't sure what version you need right click on your project and select 
 
 To add dotNetRDF to your project right click on your project and click Add Reference, then browse to the directory containing the appropriate version of the library you want and select all the files in that directory. This will add both the dotNetRDF and its dependencies to your project ensuring that all features will work correctly. While you can add just dotNetRDF on its own if you then attempt to use certain features which rely on the dependent libraries you'll run into problems.
 
-== The Libraries  ==
+## The Libraries
 
 So as you've already seen above the standard distribution of dotNetRDF comes with a variety of different libraries. This section details what features can be found in each library.
 
