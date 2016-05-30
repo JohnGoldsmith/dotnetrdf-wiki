@@ -39,7 +39,7 @@ Are you trying to use deprecated/removed code? We have a clear [[Deprecation Pol
 
 Some features are not available across all builds of the library because they cannot be supported on the platform (e.g. anything using synchronous HTTP is not supported under Silverlight or Windows Phone)
 
-This means that some methods shown in the documentation and listed on the [[http://www.dotnetrdf.org/api/|Formal API]] will not be available. Use your editors auto-complete functions to see alternative overloads for the method which are supported with the chosen build of dotNetRDF.
+This means that some methods shown in the documentation will not be available. Use your editors auto-complete functions to see alternative overloads for the method which are supported with the chosen build of dotNetRDF.
 
 ### I get a "The Namespace URI for the given Prefix 'http' is not known by the in-scope NamespaceMapper"
 
