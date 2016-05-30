@@ -4,7 +4,7 @@
 
 Welcome to the dotNetRDF user guide, this provides an introduction to dotNetRDF and aims to cover how to carry out a variety of common tasks in dotNetRDF.  Using this guide you can learn the basics of working with the library in order to enable you the user to build applications using dotNetRDF.
 
-You may also be interested in our [[FAQs]] or our quick [[How To]] guides.
+You may also be interested in our [[FAQs]] or our quick [[How To|HowTo]] guides.
 
 If you are already an experienced dotNetRDF user you may wish to look at the [[Developer Guide]] instead which covers project architecture and advanced topics.
 
