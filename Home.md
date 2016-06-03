@@ -10,7 +10,7 @@ This wiki serves as the primary source of documentation for users and developers
 * [[FAQs]] - Questions we get asked frequently about the library
 * [[How To|HowTo]] - Quick snippets and examples
 * [[User Guide|UserGuide]] - Step by step articles on performing common tasks with dotNetRDF
-* [[Developer Guide]] - Advanced topics for advanced users and extension developers
+* [[Developer Guide|DeveloperGuide]] - Advanced topics for advanced users and extension developers
 * [[Support]] - Find out how to get more support for dotNetRDF
 
 ### Note
