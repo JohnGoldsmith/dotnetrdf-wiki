@@ -9,7 +9,7 @@ This page details common problems
 
 ### What platforms does dotNetRDF run on?
 
-dotNetRDF runs on .Net 3.5 Framework and higher, builds are provided for various framework profiles on the different versions of the framework. Exact supported features depend on the build used, see [[Getting Started|UserGuide/Getting Started.md]] for more details on the builds.
+dotNetRDF runs on .Net 3.5 Framework and higher, builds are provided for various framework profiles on the different versions of the framework. Exact supported features depend on the build used, see [[Getting Started|UserGuide/Getting-Started.md]] for more details on the builds.
 
 dotNetRDF will also run under Mono 2.8 and higher, generally we recommend using the newest Mono release possible for best results.
 
