@@ -1,4 +1,4 @@
-[Home](../../Home) > [Developer Guide](../../Developer%20Guide) > [1.9 Alpha](Introduction)
+[[Home]] > [[Developer Guide|DeveloperGuide]] > 1.9 Alpha - Introduction
 
 # 1.9 Alpha Documentation
 
@@ -35,6 +35,6 @@ On that theme as part of a new major version it also gives us the scope to rewri
 
 # Migrating to 1.9
 
-Please see the [Libraries](Libraries) page for details on what libraries (and thus features) are currently available.
+Please see the [[Libraries|DeveloperGuide-1.9-Libraries]] page for details on what libraries (and thus features) are currently available.
 
-Please see the [Migrating to 1.9](Migrating) documentation for notes about some of the more developer visible changes and how to update your code to address them.
+Please see the [[Migrating to 1.9|DeveloperGuide-1.9-Migrating]] documentation for notes about some of the more developer visible changes and how to update your code to address them.
