@@ -1,4 +1,4 @@
-[[Home]] > [[Developer Guide]] > Architecture
+[[Home]] > [[Developer Guide|DeveloperGuide]] > Architecture
 
 # Architecture
 
