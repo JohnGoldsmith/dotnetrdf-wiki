@@ -3,7 +3,7 @@
 This wiki serves as the primary source of documentation for users and developers and is divided into several main sections:
 
 * The [[User Guide|UserGuide]] covers general usage of the library including step by step introductory tutorials.  This should be the starting point for most users.
-* The [[Developer Guide]] covers architectural discussions, coding standards and extensibility documentation.  This is intended for advanced users and project developers.
+* The [[Developer Guide|DeveloperGuide]] covers architectural discussions, coding standards and extensibility documentation.  This is intended for advanced users and project developers.
 
 ## Important Links
 
@@ -17,7 +17,7 @@ This wiki serves as the primary source of documentation for users and developers
 
 The latest version of the library is **1.0.10** which was released on **30th May 2016**
 
-Unless otherwise stated the documentation in the [[User Guide|UserGuide]] and [[Developer Guide]] refers to the latest version of the library (which is noted above).  
+Unless otherwise stated the documentation in the [[User Guide|UserGuide]] and [[Developer Guide|DeveloperGuide]] refers to the latest version of the library (which is noted above).  
 
 Unfortunately GitHub does not currently provide easy browsing of past versions of documentation.  Generally speaking there should be minimal differences between versions.
 
