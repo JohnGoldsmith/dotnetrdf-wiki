@@ -33,7 +33,7 @@ Are you using the latest version of the library? Check the Project Status page a
 
 Have you added the appropriate using declarations to your code? Check the Intellisense API to see what namespace different classes are in
 
-Are you trying to use deprecated/removed code? We have a clear [[Deprecation Policy|DeveloperGuide-Deprecation-Policy.md]] and we actively obsolete and deprecate old APIs over time. If you upgrade your version over time you will see warnings ahead of time but if you jump several versions in one go you may encounter problems with missing APIs. See the ChangeLog.txt file in the release or consult the [[Project-Roadmap]] page to see what may have changed. 
+Are you trying to use deprecated/removed code? We have a clear [[Deprecation Policy|DeveloperGuide-Deprecation-Policy.md]] and we actively obsolete and deprecate old APIs over time. If you upgrade your version over time you will see warnings ahead of time but if you jump several versions in one go you may encounter problems with missing APIs. See the ChangeLog.txt file in the release see what may have changed. 
 
 ### I get a "No overload for method X takes Y arguments" error or similar
 
