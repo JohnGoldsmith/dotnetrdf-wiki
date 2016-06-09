@@ -1,22 +1,22 @@
-[[Home]] > [[DeveloperGuide|Developer Guide]] > [[DeveloperGuide/SPARQL%20Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/Extension%20Functions|Extension Functions]]
+[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[Extension Functions|DeveloperGuide-SPARQL-Extension-Functions]]
 
-= Extension Functions
+# Extension Functions
 
-Extension Functions are a standardised extension point provided by the [[http://www.w3.org/TR/sparql11-query/#extensionFunctions|SPARQL Specification]] which allows you to introduce new functions by naming them with URIs.  dotNetRDF includes full support for this functionality and includes a whole range of extension functions described on the [[DeveloperGuide/SPARQL/Function%20Libraries|Function Libraries]] page.  This page covers how to add your own extension functions.
+Extension Functions are a standardised extension point provided by the [SPARQL Specification](http://www.w3.org/TR/sparql11-query/#extensionFunctions) which allows you to introduce new functions by naming them with URIs.  dotNetRDF includes full support for this functionality and includes a whole range of extension functions described on the [[Function Libraries|DeveloperGuide-SPARQL-Function-Libraries]] page.  This page covers how to add your own extension functions.
 
 Adding an extension function requires implementing two interfaces:
-* [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.ISparqlExpression|ISparqlExpression]]
-* [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory|ISparqlCustomExpressionFactory]]
+* `VDS.RDF.Query.Expressions.ISparqlExpression`
+* VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory
 
-Note that by default the library allows unknown extension functions and just treats them as always producing an error, you can change this behaviour to disallow unknown extension functions by setting the ##Options.QueryAllowUnknownFunctions## property to ##false##
+Note that by default the library allows unknown extension functions and just treats them as always producing an error, you can change this behaviour to disallow unknown extension functions by setting the `Options.QueryAllowUnknownFunctions` property to `false`
 
-== Implement ISparqlExpression
+## Implement ISparqlExpression
 
-The ##ISparqlExpression## interface implements the actual function logic, there are a variety of abstract implementations that may be relevant depending on the kind of function you wish to implement.  You may find it easiest to start by copying the code from a similar existing function or extending the same base class as a similar existing function.
+The `ISparqlExpression` interface implements the actual function logic, there are a variety of abstract implementations that may be relevant depending on the kind of function you wish to implement.  You may find it easiest to start by copying the code from a similar existing function or extending the same base class as a similar existing function.
 
 Let's take a look at an example implementation from dotNetRDF itself:
 
-{{{
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -114,21 +114,21 @@ namespace VDS.RDF.Query.Expressions.Functions.Arq
         }
     }
 }
-}}}
+```
 
-Here we are attempting to split URIs (and only URIs) to determine a suitable namespace to use for them.  As you can see we extend [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.BaseUnaryExpression|BaseUnaryExpression]] which means we don't have to implement that much ourselves.
+Here we are attempting to split URIs (and only URIs) to determine a suitable namespace to use for them.  As you can see we extend `VDS.RDF.Query.Expressions.BaseUnaryExpression` which means we don't have to implement that much ourselves.
 
-The main method of interest is the ##Evaluate()## method which is where the actual function evaluation is done.  The usual pattern is to first evaluate the child expressions and then attempt to apply the function on the result, if the function cannot be applied due to type mismatches or any other error then a ##RdfQueryException## **must** be thrown.  If the function succeeds then it should return an appropriate [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Nodes.IValuedNode|IValueNode]] instance which represents the result of the function.
+The main method of interest is the `Evaluate()` method which is where the actual function evaluation is done.  The usual pattern is to first evaluate the child expressions and then attempt to apply the function on the result, if the function cannot be applied due to type mismatches or any other error then a `RdfQueryException` **must** be thrown.  If the function succeeds then it should return an appropriate `VDS.RDF.Nodes.IValuedNode` instance which represents the result of the function.
 
 The remaining methods and properties are primarily around having the expression play nice with other APIs such as query serialisation and optimisation.
 
-== Implements ISparqlCustomExpressionFactory
+## Implements ISparqlCustomExpressionFactory
 
-The ##ISparqlCustomExpressionFactory## interface provides a factory for your custom expressions, each factory can potentially produce many different extension functions depending on how you've implemented it.
+The `ISparqlCustomExpressionFactory` interface provides a factory for your custom expressions, each factory can potentially produce many different extension functions depending on how you've implemented it.
 
 Let's take a look at an example from the dotNetRDF code:
 
-{{{
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -375,27 +375,27 @@ namespace VDS.RDF.Query.Expressions
         }
     }
 }
-}}}
+```
 
-This is the factory corresponding to our earlier example as well as some other functions.  You can see that the key method is the ##TryCreateExpression## function which tries to create an extension function returning true if it succeeds.  In the case where the factory sees a function URI it recognises but an incorrect number of arguments it throws a ##RdfParseException##
+This is the factory corresponding to our earlier example as well as some other functions.  You can see that the key method is the `TryCreateExpression` function which tries to create an extension function returning true if it succeeds.  In the case where the factory sees a function URI it recognises but an incorrect number of arguments it throws a `RdfParseException`
 
-=== Registering Factories
+### Registering Factories
 
 In order for your factories to be used they have to be registered, factories can be registered in several places depending on the scope you want them to have.
 
-If you want your factory to have global scope and apply to all queries and updates then you can register it with the [[http://www.dotnetrdf.org/api/index.asp?topic=VDS.RDF.Query.Expressions.SparqlExpressionFactory|SparqlExpressionFactory]] class like so:
+If you want your factory to have global scope and apply to all queries and updates then you can register it with the `VDS.RDF.Query.Expressions.SparqlExpressionFactory` class like so:
 
-{{{
+```csharp
 SparqlExpressionFactory.AddCustomFactory(new MyCustomFactory());
-}}}
+```
 
-If you want your factory to have local scope and apply only to queries/updates produced by a specific parser then you can do this by setting the ##ExpressionFactories## properties on a parser instance like so:
+If you want your factory to have local scope and apply only to queries/updates produced by a specific parser then you can do this by setting the `ExpressionFactories` properties on a parser instance like so:
 
-{{{
+```csharp
 SparqlQueryParser parser = new SparqlQueryParser();
 parser.ExpressionFactories = new ISparqlCustomExpressionFactory[] { new MyCustomFactory(); }
-}}}
+```
 
 Once registered all subsequent queries and updates may now use your newly registered extension functions.
 
-When integrating with ASP.Net applications or using the [[UserGuide/Configuration%20API|Configuration API]] then you can configure custom expression factories as detailed on the [[UserGuide/Configuration/SPARQL%20Expression%20Factories|Configuring SPARQL Expression Factories]] page.
+When integrating with ASP.Net applications or using the [[Configuration API|UserGuide-Configuration-API]] then you can configure custom expression factories as detailed on the [[Configuring SPARQL Expression Factories|UserGuide-Configuration-SPARQL-Expression-Factories]] page.
