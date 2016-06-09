@@ -1,11 +1,12 @@
-[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/Conformance|SPARQL Conformance]]
+[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[SPARQL Conformance|DeveloperGuide-SPARQL-Conformance]]
 
-= SPARQL Conformance =
+# SPARQL Conformance
 
 This page details dotNetRDF conformance with the SPARQL specifications.
 
-|= Specification |= Conformance |
-| SPARQL 1.0 Query | 2 conformance tests fail due to an issue with the .Net ##Uri## class and UTF normalization |
+| Specification | Conformance |
+|---------------|-------------|
+| SPARQL 1.0 Query | 2 conformance tests fail due to an issue with the .Net `Uri` class and UTF normalization |
 | SPARQL 1.1 Query| 100% of conformance tests passed |
 | SPARQL 1.1 Update | 100% of conformance tests passed |
 | SPARQL 1.1 CSV and TSV Results | 100% of conformance tests passed |
