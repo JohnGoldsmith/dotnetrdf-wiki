@@ -1,16 +1,17 @@
-[[Home]] > [[Developer Guide]] > [[DeveloperGuide/Architecture|Architecture]] > [[DeveloperGuide/Architecture/Namespaces|Namespaces]]
+[[Home]] > [[Developer Guide|DeveloperGuide]] > [[Architecture|DeveloperGuide-Architecture]] > [[Namespaces|DeveloperGuide-Architecture-Namespaces]]
 
-= Namespaces =
+# Namespaces
 
-This page serves as a quick reference to our main namespaces, there are many more child namespaces not detailed here.  Please see the [[http://www.dotnetrdf.org/api/|Formal API Documentation]] to browse the full API.
+This page serves as a quick reference to our main namespaces, there are many more child namespaces not detailed here.  
 
-|=Namespaces|=Purpose|=Documentation|
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF|VDS.RDF]] | Core Classes and Interfaces for RDF representation and access | [[User Guide]] |
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF.Configuration|VDS.RDF.Configuration]] | Classes that can be used to declare application configuration in RDF | [[UserGuide/Configuration API|Configuration API]] |
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF.Ontology|VDS.RDF.Ontology]] | Classes for accessing Graphs in a more resource-centric manner | [[UserGuide/Ontology API|Ontology API]] |
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF.Parsing|VDS.RDF.Parsing]] | Classes for Parsing concrete RDF syntaxes | [[UserGuide/Reading RDF|Reading RDF]] |
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF.Query|VDS.RDF.Query]] | Classes for Querying RDF | [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF.Storage|VDS.RDF.Storage]] | Classes for storing RDF in various Triple Stores | [[UserGuide/Triple Store Integration|Triple Store Integration]] |
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF.Update|VDS.RDF.Update]] | Classes for supporting SPARQL Update | [[UserGuide/Updating with SPARQL|Updating with SPARQL]] |
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF.Web|VDS.RDF.Web]] | Classes designed specifically for deploying RDF in ASP.Net applications | [[UserGuide/ASP.Net Integration|ASP.Net Integration]] |
-| [[http://www.dotnetrdf.org/api/index.asp?Namespace=VDS.RDF.Writing|VDS.RDF.Writing]] | Classes for serializing RDF in concrete syntaxes | [[UserGuide/Writing RDF|Writing RDF]] |
+|Namespaces|Purpose|Documentation|
+|----------|-------|-------------|
+| VDS.RDF | Core Classes and Interfaces for RDF representation and access | [[User Guide|UserGuide]] |
+| VDS.RDF.Configuration | Classes that can be used to declare application configuration in RDF | [[Configuration API|UserGuide-Configuration-API]] |
+| VDS.RDF.Ontology | Classes for accessing Graphs in a more resource-centric manner | [[Ontology API|UserGuide-Ontology-API]] |
+| VDS.RDF.Parsing | Classes for Parsing concrete RDF syntaxes | [[Reading RDF|UserGuide-Reading-RDF]] |
+| VDS.RDF.Query | Classes for Querying RDF | [[Querying with SPARQL|UserGuide-Querying-With-SPARQL|]]
+| VDS.RDF.Storage | Classes for storing RDF in various Triple Stores | [[Triple Store Integration|UserGuide-Triple-Store-Integration]] |
+| VDS.RDF.Update | Classes for supporting SPARQL Update | [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]] |
+| VDS.RDF.Web | Classes designed specifically for deploying RDF in ASP.Net applications | [[ASP.Net Integration|UserGuide-ASPNET-Integration]] |
+| VDS.RDF.Writing | Classes for serializing RDF in concrete syntaxes | [[Writing RDF|UserGuide-Writing-RDF]] |
