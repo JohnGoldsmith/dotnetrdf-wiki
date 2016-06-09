@@ -14,7 +14,7 @@ If the API is included in any documentation on the website it **should** be upda
 
 ## Step 2 - Obsolete
 
-In a release subsequent to the ##Obsolete## attribute having been added the boolean parameter **must** be set to true so that using this code now results in a compiler error. The warning message **may** be updated to further clarify alternative/replacement APIs and when we will remove the API.
+In a release subsequent to the `Obsolete` attribute having been added the boolean parameter **must** be set to true so that using this code now results in a compiler error. The warning message **may** be updated to further clarify alternative/replacement APIs and when we will remove the API.
 
 Again there **must** be at least one release where this is present and the change **must** be noted in the Change Log for that release. Ideally an API should only remain in this state for a single release.
 
