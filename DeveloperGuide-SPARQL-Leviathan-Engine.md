@@ -1,10 +1,10 @@
-[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/Leviathan Engine|Leviathan Engine]]
+[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[Leviathan Engine|DeveloperGuide-SPARQL-Leviathan-Engine]]
 
-= Leviathan Engine =
+# Leviathan Engine
 
 Leviathan is the code name for our block based in-memory SPARQL engine, it supports full SPARQL 1.0 and SPARQL 1.1.  Leviathan is a designed to follow the SPARQL algebra closely and so executes complex queries correctly and accurately.
 
-== Development History ==
+## Development History
 
 * The 0.4.x releases improved the engine significantly with many additional SPARQL 1.1 features and enhancements/fixes to our join logic.
 * The 0.5.0 release made some internal changes to make the engine more extensible and provided a 25-30% performance boost for most queries.
@@ -12,29 +12,23 @@ Leviathan is the code name for our block based in-memory SPARQL engine, it suppo
 * The 0.7.0 release added new optimisations and also enabled parallel evaluation enhancements to various aspects of the engine which can yield significant performance improvements depending on the query and dataset.
 * The 0.8.0 release further improved parallel evaluation particularly for ##OPTIONAL##, improved how ##GROUP BY## is calculated and removed unnecessary logic from the engine to boost performance.
 
-== Demo ==
+## SPARQL Optimization
 
-You can try it out now by going to the [[http://www.dotnetrdf.org/demos/leviathan/|Leviathan Demo]].
+SPARQL Optimization is discussed on the [[SPARQL Optimization|DeveloperGuide-SPARQL-Optimization]] page.
 
-== SPARQL Optimization ==
-
-SPARQL Optimization is discussed on the [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] page.
-
-== SPARQL Algebra ==
+## SPARQL Algebra
 
 Leviathan follows the SPARQL Algebra relatively closely with a couple of minor differences. We model the solution modifiers differently and order them slightly differently to the SPARQL specification. 
 
-All algebra representations are based on the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Algebra.ISparqlAlgebra|ISparqlAlgebra]] interface which provides a single method Evaluate(). You can obtain the algebra representation of a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery|SparqlQuery]] object by using it's //ToAlgebra()// method. [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Patterns.GraphPattern|GraphPattern]] objects also have a //ToAlgebra()// method that you can use to get the algebra just for that pattern.
+All algebra representations are based on the `VDS.RDF.Query.Algebra.ISparqlAlgebra` interface which provides a single method Evaluate(). You can obtain the algebra representation of a `VDS.RDF.Query.SparqlQuery` object by using it's `ToAlgebra()` method. `VDS.RDF.Patterns.GraphPattern` objects also have a `ToAlgebra()` method that you can use to get the algebra just for that pattern.
 
-Given an ##ISparqlAlgebra## instance you can use either the //ToGraphPattern()// or the //ToQuery()// methods to attempt to convert it back into a ##GraphPattern## or ##SparqlQuery## but note that not all algebras can be successfully converted back into these.
+Given an `ISparqlAlgebra` instance you can use either the `ToGraphPattern()` or the `ToQuery()` methods to attempt to convert it back into a `GraphPattern` or `SparqlQuery` but note that not all algebras can be successfully converted back into these.
 
-Developers can if they wish use the classes from the ##VDS.RDF.Query.Algebra## namespace to manually compose queries.
+Developers can if they wish use the classes from the `VDS.RDF.Query.Algebra` namespace to manually compose queries.
 
-If you do compose an algebra expression you can evaluate it by creating an instance of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.LeviathanQueryProcessor|LeviathanQueryProcessor]] and then invoking the //ProcessAlgebra()// method on the algebra expression you created e.g.
+If you do compose an algebra expression you can evaluate it by creating an instance of `VDS.RDF.Query.LeviathanQueryProcessor` and then invoking the `ProcessAlgebra()` method on the algebra expression you created e.g.
 
-{{{
-#!csharp
-
+```csharp
 using System;
 using VDS.RDF;
 using VDS.RDF.Query;
@@ -69,9 +63,9 @@ public class AlgebraEvaluationExample
 		}
 	}
 }
-}}}
+```
 
-== Further Reading ==
+## Further Reading
 
-* [[DeveloperGuide/SPARQL/SPARQL Extensions|SPARQL Extensions]]
-* [[DeveloperGuide/SPARQL/Leviathan Functions|Leviathan Function Library]]
+* [[SPARQL Extensions|DeveloperGuide-SPARQL-Extensions]]
+* [[Leviathan Function Library|DeveloperGuide-SPARQL-Leviathan-Functions]]
