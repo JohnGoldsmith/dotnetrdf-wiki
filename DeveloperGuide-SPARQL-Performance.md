@@ -28,6 +28,6 @@ The first graph compares total runtime (Y Axis) against dataset size (X axis) so
 
 The second graph compares Query Mixed per Hour aka QMpH (Y Axis) against dataset size (X axis) so larger values are better since they indicate better higher throughput.  As you can see older releases tended to achieve reduced throughput as the dataset size increased, the current codebase gets much better throughput and scales linearly.
 
-{{BSBM Results|DeveloperGuide-SPARQL-BSBMPerformance.png}}
+![BSBM Results](https://github.com/dotnetrdf/dotnetrdf/wiki/BSBMPerformance.png)
 
 You can find the latest figures in the spreadsheet [[here|DeveloperGuide-SPARQL-Performance/dotNetRDF BSBM v3 Benchmark.xlsx]]
