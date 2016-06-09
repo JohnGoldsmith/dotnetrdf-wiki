@@ -1,37 +1,35 @@
-[[Home]] > [[Developer Guide]] > [[DeveloperGuide/SPARQL Engine|SPARQL Engine]] > [[DeveloperGuide/SPARQL/SPARQL Operators|SPARQL Operators]]
+[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[SPARQL Operators|DeveloperGuide-SPARQL-Operators]]
 
-= SPARQL Operators =
+# SPARQL Operators
 
-SPARQL Operators are an extension to SPARQL permitted by the specification which allow for implementations to extend the definition of certain operators - namely ##=##, ##!=##, ##<##, ##<=##, ##>##, ##>=##, ##+##, ##-##, ##*## and ##/##.
+SPARQL Operators are an extension to SPARQL permitted by the specification which allow for implementations to extend the definition of certain operators - namely `=`, `!=`, `<`, `<=`, `>`, `>=`, `+`, `-`, `*` and `/`.
 
-Currently dotNetRDF only supports extending the arithmetic operators i.e. ##+##, ##-##, ##*## and ##/##.  In the future we will likely extend this functionality to allow any operator to be overloaded.
+Currently dotNetRDF only supports extending the arithmetic operators i.e. `+`, `-`, `*` and `/`.  In the future we will likely extend this functionality to allow any operator to be overloaded.
 
-== Extended Operators ==
+## Extended Operators
 
-Right now the only operators which dotNetRDF provides extensions for are ##+## and ##-## when used with ##xsd:dateTime##, ##xsd:duration##, ##xsd:dayTimeDuration##.  This means that when using our SPARQL engine you can add/subtract durations from date times and add/subtract durations from each other.
+Right now the only operators which dotNetRDF provides extensions for are `+` and `-` when used with `xsd:dateTime`, `xsd:duration`, `xsd:dayTimeDuration`.  This means that when using our SPARQL engine you can add/subtract durations from date times and add/subtract durations from each other.
 
-== Implementing Custom Operators ==
+## Implementing Custom Operators
 
-Custom operators are implemented by implementing the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Operators.ISparqlOperator|ISparqlOperator]] interface and registering your implementation with the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Operators.SparqlOperators|SparqlOperators]] registry.
+Custom operators are implemented by implementing the `VDS.RDF.Query.Operators.ISparqlOperator` interface and registering your implementation with the `VDS.RDF.Query.Operators.SparqlOperators` registry.
 
-=== The ISparqlOperator Interface ===
+### The ISparqlOperator Interface
 
-The ##ISparqlOperator## interface is relatively simple containing a single property and two methods.  Once this is implemented you register your implementation like so:
+The `ISparqlOperator` interface is relatively simple containing a single property and two methods.  Once this is implemented you register your implementation like so:
 
-{{{
-#!csharp
-
+```csharp
 SparqlOperators.AddOperator(new MyCustomOperator());
-}}}
+```
 
-==== Operator ====
+#### Operator
 
-The //Operator// property returns a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Operators.SparqlOperatorType|SparqlOperatorType]] which indicates which operator your implementation overloads.
+The `Operator` property returns a `VDS.RDF.Query.Operators.SparqlOperatorType` which indicates which operator your implementation overloads.
 
-==== IsApplicable() ====
+#### IsApplicable()
 
-The //IsApplicable()// method takes in the proposed arguments for the operator and determines whether the operator can be applied to those arguments e.g. are the argument types compatible for the implementation.
+The `IsApplicable()` method takes in the proposed arguments for the operator and determines whether the operator can be applied to those arguments e.g. are the argument types compatible for the implementation.
 
-==== Apply() ====
+#### Apply()
 
-The //Apply()// method takes the arguments for the operator and applies the operator returning either the resulting value or throwing a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.RdfQueryException|RdfQueryException]] if an error occurs.
+The `Apply()` method takes the arguments for the operator and applies the operator returning either the resulting value or throwing a `VDS.RDF.Query.RdfQueryException` if an error occurs.
