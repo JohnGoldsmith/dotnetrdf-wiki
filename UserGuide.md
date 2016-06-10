@@ -6,7 +6,7 @@ Welcome to the dotNetRDF user guide, this provides an introduction to dotNetRDF 
 
 You may also be interested in our [[FAQs]] or our quick [[How To|HowTo]] guides.
 
-If you are already an experienced dotNetRDF user you may wish to look at the [[Developer Guide]] instead which covers project architecture and advanced topics.
+If you are already an experienced dotNetRDF user you may wish to look at the [[Developer Guide|DeveloperGuide]] instead which covers project architecture and advanced topics.
 
 ## Basic Tutorial
 
