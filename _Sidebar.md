@@ -11,3 +11,15 @@
 1. [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
 
 # User Guide
+
+1. [[Exceptions|UserGuide-Exceptions]]
+1. [[Equality and Comparison|UserGuide-Equality-And-Comparison]]
+1. [[Event Model|UserGuide-Event-Model]]
+1. [[Utility Methods|UserGuide-Utility-Methods]]
+1. [[Extension Methods|UserGuide-Extension-Methods]]
+1. [[Using the Namespace Mapper|UserGuide-Using-The-Namespace-Mapper]]
+1. [[Storage API|UserGuide-Storage-API]]
+   1. [[Triple Store Integration|UserGuide-Triple-Store-Integration]]
+   1. [[Storage Providers|UserGuide-Storage-Providers]]
+   1. [[Servers API|UserGuide-Servers]]
+   1. [[Transactions API|UserGuide-Transactions]]
