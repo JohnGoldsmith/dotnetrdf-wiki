@@ -21,5 +21,5 @@
 1. [[Storage API|UserGuide-Storage-API]]
    1. [[Triple Store Integration|UserGuide-Triple-Store-Integration]]
    1. [[Storage Providers|UserGuide-Storage-Providers]]
-   1. [[Servers API|UserGuide-Servers]]
-   1. [[Transactions API|UserGuide-Transactions]]
+   1. [[Servers API|UserGuide-Storage-Servers]]
+   1. [[Transactions API|UserGuide-Storage-Transactions]]
