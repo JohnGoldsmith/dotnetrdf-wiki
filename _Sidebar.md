@@ -10,7 +10,7 @@
 1. [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 1. [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
 
-# User Guide
+# [[User Guide|UserGuide]]
 
 1. [[Exceptions|UserGuide-Exceptions]]
 1. [[Equality and Comparison|UserGuide-Equality-And-Comparison]]
@@ -23,3 +23,46 @@
    1. [[Storage Providers|UserGuide-Storage-Providers]]
    1. [[Servers API|UserGuide-Storage-Servers]]
    1. [[Transactions API|UserGuide-Storage-Transactions]]
+1. [[Advanced SPARQL|UserGuide-Advanced-SPARQL]]
+   1. [[Result Formatting|UserGuide-Result-Formatting]]
+   1. [[SPARQL Datasets|UserGuide-SPARQL-Datasets]]
+   1. [[Full Text Querying with SPARQL|UserGuide-Full-Text-Querying-With-SPARQL]]
+   1. [[Advanced SPARQL Operations|UserGuide-Advanced-SPARQL-Operations]]
+1. [[Ontology API|UserGuide-Ontology-API]]
+1. [[Inference and Reasoning|UserGuide-Inference-And-Reasoning]]
+1. [[ASP.NET Integration|UserGuide-ASPNET-Integration]]
+1. [[Global Options|UserGuide-Global-Options]]
+1. [[Formatting API|UserGuide-Formatting-API]]
+1. [[Configuration API|UserGuide-Configuration-API]]
+1. [[Handlers API|UserGuide-Handlers-API]]
+1. [[Tools|UserGuide-Tools]]
+
+# [[Developer Guide|DeveloperGuide]]
+
+1. [[ Architecture | DeveloperGuide-Architecture ]]
+1. [[ SPARQL Engine | DeveloperGuide-SPARQL-Engine ]]
+  1. [[ SPARQL Optimization | DeveloperGuide-SPARQL-Optimization ]]
+  1. [[ Implementing Custom Optimizers | DeveloperGuide-SPARQL-Implementing-Custom-Optimizers ]]
+  1. [[ SPARQL Extensions | DeveloperGuide-SPARQL-Extensions ]]
+  1. [[ SPARQL Performance | DeveloperGuide-SPARQL-Performance ]]
+1. [[ URI Interning | DeveloperGuide-URI-Interning ]]
+1. [[ Notes for Silverlight and WP7 Developers | DeveloperGuide-Note-For-Silverlight-And-WP7-Developers ]]
+1. Developing for dotNetRDF
+  1. [[Compiling|DeveloperGuide-Compiling]]
+  1. [[ Code Style | DeveloperGuide-Code-Style ]]
+  1. [[ Deprecation Policy | DeveloperGuide-Deprecation-Policy ]]
+  1. [[ Test Environment | DeveloperGuide-Test-Environment ]]
+
+# [[How To|HowTo]]
+
+1. [[ Debug HTTP Communication | HowTo-Debug-HTTP-Communication ]]
+1. [[ Debug SPARQL Queries | HowTo-Debug-SPARQL-Queries ]]
+1. [[ Load OWL | HowTo-Load-OWL ]]
+1. [[ Load RDF from a File | HowTo-Load-RDF-From-A-File ]]
+1. [[ Load RDF from the Web | HowTo-Load-RDF-From-The-Web ]]
+1. [[ Minimize Memory Usage | HowTo-Minimize-Memory-Usage ]]
+1. [[ Reify Triples | HowTo-Reify-Triples ]]
+
+# [[FAQs]]
+
+# [[Support]]
