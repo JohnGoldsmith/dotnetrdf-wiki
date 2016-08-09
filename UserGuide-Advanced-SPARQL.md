@@ -11,7 +11,7 @@ Currently the following topics are covered:
 * [[Full Text Querying with SPARQL|UserGuide-Full-Text-Querying-With-SPARQL]]
 * [[Advanced SPARQL Operations|UserGuide-Advanced-SPARQL-Operations]]
 
-There may also be some useful topics for advanced users in the [[Developer Guide]]
+There may also be some useful topics for advanced users in the [[Developer Guide|DeveloperGuide]]
 
 * [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]]
   * [[Extension Functions|DeveloperGuide-SPARQL-Extension-Functions]]
