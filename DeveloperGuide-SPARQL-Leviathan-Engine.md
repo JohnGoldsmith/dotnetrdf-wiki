@@ -10,7 +10,7 @@ Leviathan is the code name for our block based in-memory SPARQL engine, it suppo
 * The 0.5.0 release made some internal changes to make the engine more extensible and provided a 25-30% performance boost for most queries.
 * The 0.6.0 release added various improved optimisations and made a 10x performance improvement to our join algorithms and added new SPARQL 1.1 features to the engine.
 * The 0.7.0 release added new optimisations and also enabled parallel evaluation enhancements to various aspects of the engine which can yield significant performance improvements depending on the query and dataset.
-* The 0.8.0 release further improved parallel evaluation particularly for ##OPTIONAL##, improved how ##GROUP BY## is calculated and removed unnecessary logic from the engine to boost performance.
+* The 0.8.0 release further improved parallel evaluation particularly for `OPTIONAL`, improved how `GROUP BY` is calculated and removed unnecessary logic from the engine to boost performance.
 
 ## SPARQL Optimization
 

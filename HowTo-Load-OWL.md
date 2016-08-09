@@ -15,7 +15,7 @@ IGraph g = new Graph();
 g.LoadFromFile("example.owl");
 ```
 
-The library assumes that any file with a ##.owl## extension is encoded as RDF/XML, if this is not the case you will need to use the overload method and supply a specific parser e.g.
+The library assumes that any file with a `.owl` extension is encoded as RDF/XML, if this is not the case you will need to use the overload method and supply a specific parser e.g.
 
 ```csharp
 

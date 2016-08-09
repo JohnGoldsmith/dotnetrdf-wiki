@@ -36,7 +36,7 @@ IGraph g = store[new Uri("http://example.org/graph")];
 
 # Basic Methods 
 
-The ##ITripleStore## interface defines the following methods for Triple Stores:
+The `ITripleStore` interface defines the following methods for Triple Stores:
 
 ## HasGraph 
 
@@ -56,7 +56,7 @@ else
 
 == Add and AddFromUri ===
 
-Used to add graphs into the triple store, graphs can either by added by use of classes that implement ##IGraph## or by specifying the URI of a graph. If you use the latter method then the triple store will attempt to retrieve the RDF located at that URI and then insert the resulting graph into the triple store. 
+Used to add graphs into the triple store, graphs can either by added by use of classes that implement `IGraph` or by specifying the URI of a graph. If you use the latter method then the triple store will attempt to retrieve the RDF located at that URI and then insert the resulting graph into the triple store. 
 
 Using the IGraph versions of the methods allows you to insert any type of graph you want into the triple store.
 
@@ -106,7 +106,7 @@ public class TripleStoreLoadExample
 }
 ```
 
-As you'll see from the above example there are a couple of important things to remember when using an ##ITripleStore##. Firstly that if you insert a graph that doesn't have a Base URI then it is treated as the default unnamed graph of the store. Secondly that you will encounter an error if you try and insert a graph that already exists unless you set the second parameter to true to indicate that the existing graph should be merged with the graph being loaded in.
+As you'll see from the above example there are a couple of important things to remember when using an `ITripleStore`. Firstly that if you insert a graph that doesn't have a Base URI then it is treated as the default unnamed graph of the store. Secondly that you will encounter an error if you try and insert a graph that already exists unless you set the second parameter to true to indicate that the existing graph should be merged with the graph being loaded in.
 
 ## Remove 
 
@@ -115,7 +115,7 @@ The `Remove(Uri graphUri)` method is used to remove a graph that is in the tripl
 # In-Memory Triple Stores 
 
 As you have seen the basic triple store interface simply allows you to enumerate over a triple store and to add and remove graphs from it. While this is useful in itself you'll often want to make queries over the entire store and for this you'll need to use one of the classes that implement [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]].
-One of the main things the ##IInMemoryQueryableStore## does is to define equivalents of all the various `GetTriples()` methods from the ##IGraph## interface for triple stores. It has two versions of each method, one which operates over all the triples in the triple Store and one which operates over a subset of the triples where the subset is defined by a list of Graph URIs.
+One of the main things the `IInMemoryQueryableStore` does is to define equivalents of all the various `GetTriples()` methods from the `IGraph` interface for triple stores. It has two versions of each method, one which operates over all the triples in the triple Store and one which operates over a subset of the triples where the subset is defined by a list of Graph URIs.
 
 Perhaps the more important feature of the interface is that it defines an `ExecuteQuery()` method which can be used to execute SPARQL queries in-memory over the Triple Store. There are two variants of this method, one which takes the raw SPARQL query as a String and one which takes a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery|SparqlQuery]] object e.g.
 
@@ -167,15 +167,15 @@ public class InMemoryTripleStoreExample
 }
 ```
 
-One of the advantages of using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQueryParser|SparqlQueryParser]] is that is implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableTokeniser|ITraceableTokeniser]] interface which means you can easily debug queries which won't parse. The other is that by getting an actual ##SparqlQuery## object you can manipulate certain properties of the query to control how it gets executed. For example the `Timeout` property is used to set a timeout in milliseconds after which query execution is aborted. Combined with the `PartialResultsOnTimeout` boolean property you can control what happens when queries take too long to run. Another useful property is the `QueryExecutionTime` property shown in the above example which allows you to see how long the actual execution of a query took.
+One of the advantages of using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQueryParser|SparqlQueryParser]] is that is implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableTokeniser|ITraceableTokeniser]] interface which means you can easily debug queries which won't parse. The other is that by getting an actual `SparqlQuery` object you can manipulate certain properties of the query to control how it gets executed. For example the `Timeout` property is used to set a timeout in milliseconds after which query execution is aborted. Combined with the `PartialResultsOnTimeout` boolean property you can control what happens when queries take too long to run. Another useful property is the `QueryExecutionTime` property shown in the above example which allows you to see how long the actual execution of a query took.
 
 # Natively Queryable Stores 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore|INativelyQueryableStore]] interface is another extension to the ##ITripleStore## interface which is disjoint from the ##IInMemoryQueryableStore## interface i.e. a Store cannot be both In-Memory and Natively Queryable. Natively Queryable Stores represents Stores which provide their own SPARQL implementations and so can be queried directly.
+The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore|INativelyQueryableStore]] interface is another extension to the `ITripleStore` interface which is disjoint from the `IInMemoryQueryableStore` interface i.e. a Store cannot be both In-Memory and Natively Queryable. Natively Queryable Stores represents Stores which provide their own SPARQL implementations and so can be queried directly.
 
-An ##INativelyQueryableStore## defines only one additional method which is `ExecuteQuery(String query)` which takes a SPARQL query as a String and executes it against the underlying SPARQL implementation. Note that these stores may only be queryable read-only wrappers around an underlying store.
+An `INativelyQueryableStore` defines only one additional method which is `ExecuteQuery(String query)` which takes a SPARQL query as a String and executes it against the underlying SPARQL implementation. Note that these stores may only be queryable read-only wrappers around an underlying store.
 
-We provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore|PersistentTripleStore]] class which is an implementation of the ##INativelyQueryableStore## that can be used with any of the backing stores we support with [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
+We provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore|PersistentTripleStore]] class which is an implementation of the `INativelyQueryableStore` that can be used with any of the backing stores we support with [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
 
 ```csharp
 
@@ -235,7 +235,7 @@ public class PersistentTripleStoreExample
 Often you want the information you place into an in-memory Triple Store to be persisted over time and be able to load/save that triple store as required. Currently we provide the means to save/load a Triple Store in the following ways:
 
 * As a file in a RDF dataset format - TriG, TriX or NQuads
-* As explained in [[UserGuide/Working with Graphs|Working with Graphs]] you can also load/save individual Graphs from arbitrary stores for which there is an ##IStorageProvider## defined.
+* As explained in [[UserGuide/Working with Graphs|Working with Graphs]] you can also load/save individual Graphs from arbitrary stores for which there is an `IStorageProvider` defined.
 
 ## RDF Dataset Storage 
 
@@ -269,7 +269,7 @@ public class TriGExample
 
 # Standard ITripleStore Implementations 
 
-The Library contains the following standard ##ITripleStore## implementations:
+The Library contains the following standard `ITripleStore` implementations:
 
 |= Implementation |= Description |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.DiskDemandTripleStore|DiskDemandTripleStore]] | Represents an in-memory store where Graphs are loaded on-demand from the local file system if they are not already in memory and provided the Graph Names are file URIs |
@@ -279,7 +279,7 @@ The Library contains the following standard ##ITripleStore## implementations:
 
 # Standard RDF Dataset Parsers & Writers 
 
-The Library contains the following standard ##IStoreReader## and ##IStoreWriter## implementations for RDF dataset formats:
+The Library contains the following standard `IStoreReader` and `IStoreWriter` implementations for RDF dataset formats:
 
 |= Implementation |= Description |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.NQuadsParser|NQuadsParser]] | Parses NQuads |

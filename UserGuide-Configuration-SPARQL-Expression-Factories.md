@@ -17,4 +17,4 @@ _:factory a dnr:SparqlExpressionFactory ;
   dnr:type "YourNamespace.YourType, YourAssembly" .
 ```
 
-In this example an expression factory from an external namespace is configured. As described in [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]] expression factories can be attached to HTTP Handlers using the ##dnr:expressionFactory## property.
+In this example an expression factory from an external namespace is configured. As described in [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]] expression factories can be attached to HTTP Handlers using the `dnr:expressionFactory` property.

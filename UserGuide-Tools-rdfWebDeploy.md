@@ -29,7 +29,7 @@ rdfWebDeploy.exe -dllverify /demos
 
 ## Notes 
 
-All modes which support the webapp parameter specify it as the virtual path for the parameter on your local IIS instance, if you don't have a local IIS instance specify a path to the root directory of your web application and specify the ##-noiis## option as an additional command line argument
+All modes which support the webapp parameter specify it as the virtual path for the parameter on your local IIS instance, if you don't have a local IIS instance specify a path to the root directory of your web application and specify the `-noiis` option as an additional command line argument
 
 ### Supported Modes 
 
@@ -39,7 +39,7 @@ All modes which support the webapp parameter specify it as the virtual path for 
 rdfWebDeploy.exe -deploy webapp config.ttl [options]
 ```
 
-Automatically deploys the given configuration file to the given web applications by setting up it's ##Web.Config## file appropriately and deploying necessary DLLs.
+Automatically deploys the given configuration file to the given web applications by setting up it's `Web.Config` file appropriately and deploying necessary DLLs.
 
 ==== dllupdate ====
 
@@ -55,7 +55,7 @@ Updates all the required DLLs in the applications bin directory to the versions 
 rdfWebDeploy.exe -dllverify webapp [options]
 ```
 
-Verifies whether the required DLLs are present in the applications ##bin/## directory
+Verifies whether the required DLLs are present in the applications `bin/` directory
 
 ==== help ====
 
@@ -95,12 +95,12 @@ Outputs the Configuration Vocabulary to the given file for use as a reference
 rdfWebDeploy.exe -xmldeploy web.config config.ttl [options]
 ```
 
-Automatically deploys the given configuration file to the given web applications by setting up it's ##Web.Config## file appropriately and deploying necessary DLLs
+Automatically deploys the given configuration file to the given web applications by setting up it's `Web.Config` file appropriately and deploying necessary DLLs
 
 ### Supported Options 
 
 |= Option |= Supported Modes |= Purpose |
-| ##-nointreg## | ##deploy## and ##xmldeploy## | If specified then Handlers will not be registered for IIS Integrated Mode |
-| ##-noclassicreg## | ##deploy## and ##xmldeploy## | If specified then Handlers will not be registered for IIS Classic Mode |
-| ##-noiis## | All modes that take the webapp parameter | If specified indicates that there is not a local IIS instance available or you wish to deploy to a web application which is not associated with your local IIS instance. Essentially forces ##deploy## mode to switch to ##xmldeploy## mode |
-| ##-site "Site Name"## | All modes that take the webapp parameter | Specifies the IIS site in which the web application resides |
+| `-nointreg` | `deploy` and `xmldeploy` | If specified then Handlers will not be registered for IIS Integrated Mode |
+| `-noclassicreg` | `deploy` and `xmldeploy` | If specified then Handlers will not be registered for IIS Classic Mode |
+| `-noiis` | All modes that take the webapp parameter | If specified indicates that there is not a local IIS instance available or you wish to deploy to a web application which is not associated with your local IIS instance. Essentially forces `deploy` mode to switch to `xmldeploy` mode |
+| `-site "Site Name"` | All modes that take the webapp parameter | Specifies the IIS site in which the web application resides |

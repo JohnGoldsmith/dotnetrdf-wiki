@@ -22,11 +22,11 @@ _:endpoint a dnr:SparqlQueryEndpoint ;
   dnr:namedGraphUri "http://example.org/namedGraph" .
 ```
 
-Any number of ##dnr:defaultGraphUri## and ##dnr:namedGraphUri## properties can be used to specify multiple default and named graphs to be used for requests to the endpoint
+Any number of `dnr:defaultGraphUri` and `dnr:namedGraphUri` properties can be used to specify multiple default and named graphs to be used for requests to the endpoint
 
 ### User Credentials 
 
-If your SPARQL endpoint requires a username and password this can be added using the ##dnr:user## and dnr:password properties or by using the dnr:credentials property to point to an object of type ##dnr:User## e.g.
+If your SPARQL endpoint requires a username and password this can be added using the `dnr:user` and dnr:password properties or by using the dnr:credentials property to point to an object of type `dnr:User` e.g.
 
 {{{
 #!turtle
@@ -42,9 +42,9 @@ _:endpoint a dnr:SparqlQueryEndpoint ;
 
 ### Proxy Settings 
 
-You can also specify settings for a proxy server which must be used for requests using the dnr:proxy property to point to an object of type ##dnr:Proxy##. See [[UserGuide/Configuration/Proxy Servers|Configuration API - Proxies]] for how to configure proxies.
+You can also specify settings for a proxy server which must be used for requests using the dnr:proxy property to point to an object of type `dnr:Proxy`. See [[UserGuide/Configuration/Proxy Servers|Configuration API - Proxies]] for how to configure proxies.
 
-Note that if the user credentials for the endpoint also apply to the proxy you can omit specifying them on the proxy object and use the ##dnr:useCredentialsForProxy## property to state that the same credentials are used for the proxy.
+Note that if the user credentials for the endpoint also apply to the proxy you can omit specifying them on the proxy object and use the `dnr:useCredentialsForProxy` property to state that the same credentials are used for the proxy.
 
 ## Federated Query Endpoints 
 

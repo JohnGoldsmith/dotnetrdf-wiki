@@ -16,7 +16,7 @@ rdfEditor is a notepad style GUI tool and as such should be relatively self expl
 
 ### Customisable Apperance 
 
-You can customise practically every aspect of the display of RDF, you can access the following dialogue by going to ##Options > Customise Appearance Settings##
+You can customise practically every aspect of the display of RDF, you can access the following dialogue by going to `Options > Customise Appearance Settings`
 
 {{http://www.dotnetrdf.org/images/screenshots/editor_appearance.jpg|rdfEditor - Customize Appearance}}
 
@@ -27,10 +27,10 @@ For information on advanced customisation see [[UserGuide/Tools/rdfEditor/Advanc
 You can convert from one RDF format to another like so:
 
 # Switch to the tab containing the document you want to convert from.  This must be a valid RDF document as reported by the editor.
-# Go to ##File > Save With...## and select one of the supported formats
+# Go to `File > Save With...` and select one of the supported formats
 # A new tab will be opened with the document converted to the destination format
 
-If you want to customize the conversion you can do so by first checking ##File > Save With... > Prompt for Advanced Writer Options?##.  With this option enabled rdfEditor will bring up a dialogue when you request a conversion allowing you to configure options as desired.
+If you want to customize the conversion you can do so by first checking `File > Save With... > Prompt for Advanced Writer Options?`.  With this option enabled rdfEditor will bring up a dialogue when you request a conversion allowing you to configure options as desired.
 
 ## Screenshots 
 

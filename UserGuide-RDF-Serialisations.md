@@ -19,11 +19,11 @@ There are two variants of NTriples supported.
 
 === Original
 
-The original NTriples syntax was defined as part of the RDF 1.0 Working Group defined in the [[http://www.w3.org/TR/2004/REC-rdf-testcases-20040210/#ntriples|RDF 1.0 Test Cases]] published in 2004.  It is a purely ASCII encoded serialisation so any character outside the ASCII range has to be represented using a ##\u## or ##\U## escape.
+The original NTriples syntax was defined as part of the RDF 1.0 Working Group defined in the [[http://www.w3.org/TR/2004/REC-rdf-testcases-20040210/#ntriples|RDF 1.0 Test Cases]] published in 2004.  It is a purely ASCII encoded serialisation so any character outside the ASCII range has to be represented using a `\u` or `\U` escape.
 
 Prior to **1.0.4** this was the only NTriples syntax supported.
 
-When using the ##NTriplesParser## or ##NTriplesWriter## the ##NTriplesSyntax.Original## enumeration value is used to indicate that this syntax should be used.
+When using the `NTriplesParser` or `NTriplesWriter` the `NTriplesSyntax.Original` enumeration value is used to indicate that this syntax should be used.
 
 === RDF 1.1
 
@@ -31,7 +31,7 @@ The RDF 1.1 specifications included a new format specification for NTriples whic
 
 This syntax has been supported from **1.0.4** onwards
 
-When using the ##NTriplesParser## or ##NTriplesWriter## the ##NTriplesSyntax.Rdf11## enumeration value is used to indicate that this syntax should be used.
+When using the `NTriplesParser` or `NTriplesWriter` the `NTriplesSyntax.Rdf11` enumeration value is used to indicate that this syntax should be used.
 
 == NQuads
 
@@ -39,9 +39,9 @@ NQuads is a simple line based format for encoding RDF quads which is closely rel
 
 === Original
 
-NQuads was originally specified by researchers at DERI as [[http://sw.deri.org/2008/07/n-quads/|NQuads: Extending NTriples with Context]] in 2008 and defines a simple extension to the original NTriples format that adds a fourth field to allow quads to be conveyed instead of triples.  It is a purely ASCII encoded serialisation so any character outside the ASCII range has to be represented using a ##\u## or ##\U## escape.
+NQuads was originally specified by researchers at DERI as [[http://sw.deri.org/2008/07/n-quads/|NQuads: Extending NTriples with Context]] in 2008 and defines a simple extension to the original NTriples format that adds a fourth field to allow quads to be conveyed instead of triples.  It is a purely ASCII encoded serialisation so any character outside the ASCII range has to be represented using a `\u` or `\U` escape.
 
-When using the ##NQuadsParser## or ##NQuadsWriter## the ##NQuadsSyntax.Original## enumeration value is used to indicate that this syntax should be used.
+When using the `NQuadsParser` or `NQuadsWriter` the `NQuadsSyntax.Original` enumeration value is used to indicate that this syntax should be used.
 
 === RDF 1.1
 
@@ -49,7 +49,7 @@ The RDF 1.1 specifications included a new specification for NQuads which is [[ht
 
 This syntax has been supported from **1.0.4** onwards
 
-When using the ##NQuadsParser## or ##NQuadsWriter## the ##NQuadsSyntax.Rdf11## enumeration value is used to indicate that this syntax should be used.
+When using the `NQuadsParser` or `NQuadsWriter` the `NQuadsSyntax.Rdf11` enumeration value is used to indicate that this syntax should be used.
 
 == Turtle
 
@@ -61,7 +61,7 @@ There are two variants of Turtle supported:
 
 The original [[http://www.w3.org/TeamSubmission/turtle/|Terse RDF Triples Language]] was specified by Dave Beckett in 2007 and later submitted to the W3C as a Team Submission in 2008.  The two versions of the specification are identical in technical content so are treated as a single syntax variant.
 
-When using the ##TurtleParser## and any of the Turtle writers the ##TurtleSyntax.Original## enumeration value is used to indicate that this syntax should be used.
+When using the `TurtleParser` and any of the Turtle writers the `TurtleSyntax.Original` enumeration value is used to indicate that this syntax should be used.
 
 === RDF 1.1
 
@@ -69,4 +69,4 @@ The RDF 1.1 specifications included a new specification for Turtle which is [[ht
 
 This syntax has been supported from **1.0.0** onwards.
 
-When using the ##TurtleParser## and any of the Turtle writers the ##TurtleSyntax.W3C## enumeration value is used to indicate that this syntax should be used.
+When using the `TurtleParser` and any of the Turtle writers the `TurtleSyntax.W3C` enumeration value is used to indicate that this syntax should be used.

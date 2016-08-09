@@ -13,7 +13,7 @@
 
 ## Creating a Connection 
 
-Connecting to Fuseki requires the Base URI of a dataset on the server, this is the URI that ends in ##/data##, for example:
+Connecting to Fuseki requires the Base URI of a dataset on the server, this is the URI that ends in `/data`, for example:
 
 ```csharp
 

@@ -12,7 +12,7 @@ g.LoadFromUri(new Uri("http://example.org/file.rdf"));
 
 ## Loading in a Specific Format 
 
-Occasionally some server may misinterpret the ##Accept## header that dotNetRDF normally uses and return a HTML page instead of a RDF graph.  You can force the loader to attempt to retrieve RDF in a specific format by specifying the parser you want to use e.g.
+Occasionally some server may misinterpret the `Accept` header that dotNetRDF normally uses and return a HTML page instead of a RDF graph.  You can force the loader to attempt to retrieve RDF in a specific format by specifying the parser you want to use e.g.
 
 ```csharp
 

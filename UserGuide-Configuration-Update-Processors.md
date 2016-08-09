@@ -36,15 +36,15 @@ _:store a dnr:TripleStore ;
 
 For information on how to configure Triple Stores see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
 
-Alternatively you may use the ##dnr:usingDataset## property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both ##dnr:usingDataset## and ##dnr:usingStore## are present then ##dnr:usingDataset## has priority and the value for ##dnr:usingStore## is ignored.
+Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and the value for `dnr:usingStore` is ignored.
 
 ## Generic Update Processor 
 
 The Generic Update Processor is used to process updates against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]].
 
-How updates are actually processed depends on the exact concrete implementation of ##IStorageProvider## being used, if the implementation also implements [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IUpdateableStorage|IUpdateableStorage]] then the managers own SPARQL Update implementation is used. If this interface is not implemented then dotNetRDF will approximate SPARQL update implementation - in this case not all of SPARQL update may be supported or behave correctly depending on the capabilities of the ##IStorageProvider## provided
+How updates are actually processed depends on the exact concrete implementation of `IStorageProvider` being used, if the implementation also implements [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IUpdateableStorage|IUpdateableStorage]] then the managers own SPARQL Update implementation is used. If this interface is not implemented then dotNetRDF will approximate SPARQL update implementation - in this case not all of SPARQL update may be supported or behave correctly depending on the capabilities of the `IStorageProvider` provided
 
-To configure these handlers simply add a ##dnr:storageProvider## property to the basic configuration like so:
+To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
 
 {{{
 #!turtle
@@ -62,7 +62,7 @@ _:manager a dnr:GenericIOManager ;
   dnr:storeID "store" .
 ```
 
-The above specifies a Update Processor which applies the updates to the AllegroGraph repository store in the catalog catalog on the server ##http://agraph.example.com##. See [[UserGuide/Configuration/Storage Providers|Configuration API - Storage Providers]] for more detail on configuring storage providers.
+The above specifies a Update Processor which applies the updates to the AllegroGraph repository store in the catalog catalog on the server `http://agraph.example.com`. See [[UserGuide/Configuration/Storage Providers|Configuration API - Storage Providers]] for more detail on configuring storage providers.
 
 ## Simple Update Processor 
 

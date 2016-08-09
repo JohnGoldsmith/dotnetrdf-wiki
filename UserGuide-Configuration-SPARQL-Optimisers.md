@@ -28,7 +28,7 @@ The above configures the default optimiser which is used when no other optimiser
 
 ## No Reorder Optimiser 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.NoReorderOptimiser|NoReorderOptimiser]] is an optimiser that only places ##FILTER## clauses but does not otherwise reorder Graph Patterns. It can be configured like so:
+The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.NoReorderOptimiser|NoReorderOptimiser]] is an optimiser that only places `FILTER` clauses but does not otherwise reorder Graph Patterns. It can be configured like so:
 
 {{{
 #!turtle
@@ -59,7 +59,7 @@ _:stats a dnr:Graph ;
 
 # Configuring Algebra Optimisers 
 
-You can configure any ##IAlgebraOptimiser## that has a public unparameterized constructor like so:
+You can configure any `IAlgebraOptimiser` that has a public unparameterized constructor like so:
 
 {{{
 #!turtle

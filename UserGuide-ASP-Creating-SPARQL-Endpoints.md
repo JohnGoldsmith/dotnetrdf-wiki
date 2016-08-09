@@ -10,13 +10,13 @@ dotNetRDF provides a set of HTTP Handlers that can be used to deploy various for
 
 ## Manual Configuration 
 
-Continue reading for information on how to manually set up your ##Web.config## file without using rdfWebDeploy
+Continue reading for information on how to manually set up your `Web.config` file without using rdfWebDeploy
 
 === Configuration Settings ==
 
-All Handlers are configured by using ##Web.config## to register them in your web application, the library supports registering multiple handlers in a single application each of which can have different settings. Each HTTP Handler registered in your ##Web.config## file must have corresponding configuration information stored in your Configuration Graph.
+All Handlers are configured by using `Web.config` to register them in your web application, the library supports registering multiple handlers in a single application each of which can have different settings. Each HTTP Handler registered in your `Web.config` file must have corresponding configuration information stored in your Configuration Graph.
 
-Your Configuration Graph is registered using the ##<appSettings>## section of your ##Web.config## file like so:
+Your Configuration Graph is registered using the `<appSettings>` section of your `Web.config` file like so:
 
 {{{
 #!xml
@@ -26,23 +26,23 @@ Your Configuration Graph is registered using the ##<appSettings>## section of yo
 </appSettings>
 ```
 
-Each Handler is associated with some Configuration data in your Configuration Graph by using special URIs of the form ##<dotnetrdf:/path>## as described in [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]]
+Each Handler is associated with some Configuration data in your Configuration Graph by using special URIs of the form `<dotnetrdf:/path>` as described in [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]]
 
 ### Handler Registration 
 
 ==== IIS 5x ====
 
-Under IIS 5x you cannot map arbitrary paths so you'll have to define a custom extension (we recommend you define ##.sparql##) which is done as follows:
+Under IIS 5x you cannot map arbitrary paths so you'll have to define a custom extension (we recommend you define `.sparql`) which is done as follows:
 
 # Open IIS Manager
 # Browse to your website/virtual directory and right click, select Properties
 # On to the Virtual Directory tab click the Configuration button
 # Click the Add button in the Application Configuration dialog that appears
-# Click the Browse button and browse to and select aspnet_isapi.dll which is typically located in ##C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\##
-# In the extension box type ##.sparql## (you must include the dot at the start!), uncheck the Check that file exists box
+# Click the Browse button and browse to and select aspnet_isapi.dll which is typically located in `C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\`
+# In the extension box type `.sparql` (you must include the dot at the start!), uncheck the Check that file exists box
 # Click OK to add the mapping (if the OK button is not enabled try clicking in the Executable box to get Windows to expand the path and then try to click OK)
 
-You've now configured IIS to route any request for a file with the ##.sparql## extension through ASP.Net which means any HTTP Handlers you define will be applied correctly. You can now configure a ASP.Net Handler by adding a line to the ##<httpHandlers>## section of the ##<system.web>## section of your ##Web.config## file:
+You've now configured IIS to route any request for a file with the `.sparql` extension through ASP.Net which means any HTTP Handlers you define will be applied correctly. You can now configure a ASP.Net Handler by adding a line to the `<httpHandlers>` section of the `<system.web>` section of your `Web.config` file:
 
 {{{
 #!xml
@@ -50,18 +50,18 @@ You've now configured IIS to route any request for a file with the ##.sparql## e
 <add verb="*" path="/query.sparql" validate="false" type="VDS.RDF.Web.QueryHandler" />
 ```
 
-Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to ##http://www.yourdomain.com/query.sparql##
+Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to `http://www.yourdomain.com/query.sparql`
 
 ==== IIS 6x ====
 
-On IIS 6x you configure a ASP.Net Handler by adding a line to the ##<httpHandlers>## section of the ##<system.web>## section of your ##Web.config## file:
+On IIS 6x you configure a ASP.Net Handler by adding a line to the `<httpHandlers>` section of the `<system.web>` section of your `Web.config` file:
 
 {{{
 #!xml
 <add verb="*" path="/sparql" validate="false" type="VDS.RDF.Web.QueryHandler" />
 ```
 
-Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to ##http://www.yourdomain.com/sparql##
+Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to `http://www.yourdomain.com/sparql`
 
 Under IIS 6x you will need to get IIS to serve the request even when the physical file doesn't exist. To do this you can either create a dummy file/folder with the appropriate name or use the IIS 5x configuration approach (see [[http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/4c840252-fab7-427e-a197-7facb6649106.mspx?mfr=true|Microsoft TechNet article]] for IIS 6x)
 
@@ -69,7 +69,7 @@ Under IIS 6x you will need to get IIS to serve the request even when the physica
 
 ==== IIS 7x ===
 
-Configuring a SPARQL Endpoint under IIS 7x is very easy if you are using ASP.Net's integrated pipeline mode (if not follow the instructions for IIS 6x). Simply add a line like the following to the ##<handlers>## section of the ##<system.webServer>## section of your ##Web.config## file:
+Configuring a SPARQL Endpoint under IIS 7x is very easy if you are using ASP.Net's integrated pipeline mode (if not follow the instructions for IIS 6x). Simply add a line like the following to the `<handlers>` section of the `<system.webServer>` section of your `Web.config` file:
 
 {{{
 #!xml
@@ -77,20 +77,20 @@ Configuring a SPARQL Endpoint under IIS 7x is very easy if you are using ASP.Net
 <add name="/sparql" verb="*" path="/sparql" type="VDS.RDF.Web.QueryHandler" />
 ```
 
-Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to ##http://www.yourdomain.com/sparql##
+Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to `http://www.yourdomain.com/sparql`
 
 ### Other Web.config tweaks 
 
-You may need to make some additional changes to ##Web.config## in order to get handlers working correctly.
+You may need to make some additional changes to `Web.config` in order to get handlers working correctly.
 
-If you are creating SPARQL endpoints you may need to add the following to the ##<system.web>## section of your config if you are using .Net 4.0+ as otherwise the ASP.Net engine may reject queries and updates as potentially dangerous requests:
+If you are creating SPARQL endpoints you may need to add the following to the `<system.web>` section of your config if you are using .Net 4.0+ as otherwise the ASP.Net engine may reject queries and updates as potentially dangerous requests:
 
 {{{
 #!xml
 <httpRuntime requestValidationMode="2.0" />
 ```
 
-You may also need to add the following to your ##<system.webServer>## configuration to get your ##Web.config## to be loaded:
+You may also need to add the following to your `<system.webServer>` configuration to get your `Web.config` to be loaded:
 
 {{{
 #!xml

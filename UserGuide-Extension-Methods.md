@@ -2,7 +2,7 @@
 
 # Extension Methods 
 
-The library provides a number of extension methods that can be used to simplify some common tasks and marginally decrease the amount of code you have to write. These extension methods are located in several static class called [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Extensions|Extensions]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralExtensions|LiteralExtensions]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GraphExtensions|GraphExtensions]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.TripleStoreExtensions|TripleStoreExtensions]] in the ##VDS.RDF## namespace so anywhere you reference ##VDS.RDF## you have the option of using these methods.
+The library provides a number of extension methods that can be used to simplify some common tasks and marginally decrease the amount of code you have to write. These extension methods are located in several static class called [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Extensions|Extensions]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralExtensions|LiteralExtensions]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GraphExtensions|GraphExtensions]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.TripleStoreExtensions|TripleStoreExtensions]] in the `VDS.RDF` namespace so anywhere you reference `VDS.RDF` you have the option of using these methods.
 
 Some of these methods are shorthand for other static methods in the API such as the `Tools.CopyNode()` and `Tools.CopyTriple()` methods which are described in more detail in the [[UserGuide/Utility Methods|Utility Methods]] article.
 
@@ -46,7 +46,7 @@ In most applications this wouldn't matter since the fragment identifier is usual
 
 ## LoadFromFile, LoadFromUri, LoadFromEmbeddedResource and LoadFromString 
 
-These extension methods for ##IGraph## instances all provide shortcuts for invoking the various static loader classes that can be used to load RDF from various common sources as detailed in the [[UserGuide/Reading RDF#!reading-rdf-from-common-sources|Reading RDF]] documentation.
+These extension methods for `IGraph` instances all provide shortcuts for invoking the various static loader classes that can be used to load RDF from various common sources as detailed in the [[UserGuide/Reading RDF#!reading-rdf-from-common-sources|Reading RDF]] documentation.
 
 
 ## Retract 
@@ -72,10 +72,10 @@ Again both methods of retracting are semantically identical.
 
 ## ToLiteral 
 
-The `ToLiteral(...)` methods are a whole family of methods which can be used to turn common .Net types into their equivalent ##ILiteralNode## representations.  Methods are provided for ##boolean##, ##int##, ##long##, ##byte##, ##sbyte##, ##decimal##, ##float##, ##double##, ##DateTime##, ##DateTimeOffset##, ##TimeSpan##.
+The `ToLiteral(...)` methods are a whole family of methods which can be used to turn common .Net types into their equivalent `ILiteralNode` representations.  Methods are provided for `boolean`, `int`, `long`, `byte`, `sbyte`, `decimal`, `float`, `double`, `DateTime`, `DateTimeOffset`, `TimeSpan`.
 
-Some overloads may allow for control over the exact literal generated, for example the ##DateTime## has an overload which allows specifying whether to preserve precisely i.e. include fractional seconds
+Some overloads may allow for control over the exact literal generated, for example the `DateTime` has an overload which allows specifying whether to preserve precisely i.e. include fractional seconds
 
 ## WithSubject, WithPredicate and WithObject 
 
-The //WithSegment(this IEnumerable<Triple>, INode Segment)// methods are used to filter any ##IEnumerable<Triple>## to find only the Triples that have the matching Subject, Predicate or Object.
+The //WithSegment(this IEnumerable<Triple>, INode Segment)// methods are used to filter any `IEnumerable<Triple>` to find only the Triples that have the matching Subject, Predicate or Object.

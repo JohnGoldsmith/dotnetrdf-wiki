@@ -27,7 +27,7 @@ If you are running with a non-standard port then you can specify that like so:
 VirtuosoManager virtuoso = new VirtuosoManager("localhost", 1234, VirtuosoManager.DefaultDB, "username", "password");
 ```
 
-**Note:** The port you provide is that of the SQL interface not that of the HTTP server, in a default installation this is #1111# or the constant ##VirtuosoManager.DefaultPort##
+**Note:** The port you provide is that of the SQL interface not that of the HTTP server, in a default installation this is #1111# or the constant `VirtuosoManager.DefaultPort`
 
 Advanced users may wish to configure the Virtuoso connection string manually in which case you can do this:
 

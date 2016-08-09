@@ -27,4 +27,4 @@ _:permission a dnr:Permission ;
   dnr:action "OTHER" .
 ```
 
-For permission sets multiple ##dnr:action## properties may be specified.
+For permission sets multiple `dnr:action` properties may be specified.

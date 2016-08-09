@@ -6,7 +6,7 @@ Inference and Reasoning are mechanisms whereby an application can discover addit
 
 # The IInferenceEngine interface 
 
-The ##IInferenceEngine## interface has two main methods which implementers need to implement in order to integrate your own reasoners into dotNetRDF. The first of these is the `Initialise(IGraph g)` method which is used to input graphs to the reasoner which define the schema/rules that the reasoner should follow. The reasoner can process and interpret this Graph in any way it wishes in order to generate the rules that it will use when actually applying inference to a Graph.
+The `IInferenceEngine` interface has two main methods which implementers need to implement in order to integrate your own reasoners into dotNetRDF. The first of these is the `Initialise(IGraph g)` method which is used to input graphs to the reasoner which define the schema/rules that the reasoner should follow. The reasoner can process and interpret this Graph in any way it wishes in order to generate the rules that it will use when actually applying inference to a Graph.
 
 The second method is the `Apply()` method which applies inference to a Graph outputting the inferred triples into either the same graph or to another graph. For implementers this method is where the core logic of the reasoner will be located (or at least called from).
 
@@ -46,7 +46,7 @@ And the following example data (data.ttl):
 :FerrariEnzo a ex:SportsCar .
 ```
 
-If you were to add the data into a graph and ask it for things which are cars then it would only give you back ##:FordFiesta## and ##:AudiA8## despite the fact that ##:FerrariEnzo## is also a car. If we apply an RDFS reasoner to the data using the schema given and then ask the same question we'd get back all three things e.g.
+If you were to add the data into a graph and ask it for things which are cars then it would only give you back `:FordFiesta` and `:AudiA8` despite the fact that `:FerrariEnzo` is also a car. If we apply an RDFS reasoner to the data using the schema given and then ask the same question we'd get back all three things e.g.
 
 ```csharp
 
@@ -94,7 +94,7 @@ public class RdfsReasoningExample
 
 ### SKOS Reasoner 
 
-SKOS is another RDF vocabulary specified by the W3C which is intended for use in defining taxonomies for classifying data. The SKOS reasoner included in the library is a simple concept hierarchy reasoner which can infer additional triples where the subject has an object which is a ##skos:Concept## in the taxonomy by following ##skos:narrower## and ##skos:broader## links as appropriate.
+SKOS is another RDF vocabulary specified by the W3C which is intended for use in defining taxonomies for classifying data. The SKOS reasoner included in the library is a simple concept hierarchy reasoner which can infer additional triples where the subject has an object which is a `skos:Concept` in the taxonomy by following `skos:narrower` and `skos:broader` links as appropriate.
 
 As with RDFS there is a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.StaticSkosReasoner|StaticSkosReasoner]] and a dynamic variant called [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.SkosReasoner|SkosReasoner]].
 
@@ -120,7 +120,7 @@ And the following data (data2.ttl):
 :FerrariEnzo ex:vehicleType ex:SportsCar .
 ```
 
-As seen in the RDFS example without inference we don't automatically know that anything which stated it was related to the concept ##:SportsCar## is also related to the concept :Car but by applying SKOS concept hierarchy reasoning we can do this.
+As seen in the RDFS example without inference we don't automatically know that anything which stated it was related to the concept `:SportsCar` is also related to the concept :Car but by applying SKOS concept hierarchy reasoning we can do this.
 
 ### Simple N3 Rules Reasoner 
 
@@ -134,20 +134,20 @@ The above rule would match anything that is a ex:Car and assert that it is also 
 
 Any rule which is composed of two graph literals and connected via => or <= can be processed and applied. Note that nested graph literals are not currently supported.
 
-Additionally if you use ##@forsome## or ##@forall## to define tokens as being variables these will be processed e.g.
+Additionally if you use `@forsome` or `@forall` to define tokens as being variables these will be processed e.g.
 
 {{{
 @forall :x .
 { :x a ex:Car } => { :x a ex:Vehicle }
 ```
 
-The above is equivalent to the previous example since we've used a ##@forall## directive to specify that :x is a variable.  Generally speaking specifying variables directly is always preferred.
+The above is equivalent to the previous example since we've used a `@forall` directive to specify that :x is a variable.  Generally speaking specifying variables directly is always preferred.
 
 # Using Inference with Triple Stores 
 
-The library also provides an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInferencingTripleStore|IInferencingTripleStore]] interface which extends the basic ##ITripleStore## interface with methods which allow for the attachment of reasoners (instances of ##IInferenceEngine## implementations) to a Triple Store. Reasoning when used in this sense is static in that inference is applied only at certain points:
+The library also provides an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInferencingTripleStore|IInferencingTripleStore]] interface which extends the basic `ITripleStore` interface with methods which allow for the attachment of reasoners (instances of `IInferenceEngine` implementations) to a Triple Store. Reasoning when used in this sense is static in that inference is applied only at certain points:
 
-* When you add a reasoner the ##IInferencingTripleStore## the implementations in the library will apply the reasoner to all existing Graphs in the Store
+* When you add a reasoner the `IInferencingTripleStore` the implementations in the library will apply the reasoner to all existing Graphs in the Store
 * When you add a new Graph to the Store the reasoner will be applied to that Graph
 
 Current implementations store the inferred information in a special Graph inside the Triple Store so that the existing Graphs are not themselves altered - there is no guarantee/requirement that 3rd party implementations of this interface will do this. Also there is a limitation in that inferences will not be made when a graph changes or is removed so you can have some data over which no inferences have been made or some data which is inferred from data you've removed from your Store.

@@ -12,23 +12,23 @@ SPARQL does not mandate what the default graph is so this can and often is datas
 
 === Query Datasets === 
 
-The dataset description of a query consists of the ##FROM## and ##FROM NAMED## clauses present in the query, these indicate to a query engine which graph(s) to use and where to use them when answering queries.
+The dataset description of a query consists of the `FROM` and `FROM NAMED` clauses present in the query, these indicate to a query engine which graph(s) to use and where to use them when answering queries.
 
-Graphs specified in the ##FROM## clause are used to form the default graph, this is the graph that queries operate over **except** when a ##GRAPH## clause is encountered.
+Graphs specified in the `FROM` clause are used to form the default graph, this is the graph that queries operate over **except** when a `GRAPH` clause is encountered.
 
-Graphs specified in the ##FROM NAMED## clauses are named graphs that may be accessed using a ##GRAPH## clause in your query.
+Graphs specified in the `FROM NAMED` clauses are named graphs that may be accessed using a `GRAPH` clause in your query.
 
 === Update Datasets === 
 
-The ##INSERT/DELETE## command in SPARQL Update allows the dataset to be specified in several ways:
+The `INSERT/DELETE` command in SPARQL Update allows the dataset to be specified in several ways:
 
-* The ##WITH## clause specifies a default graph for the ##INSERT## and ##DELETE## portions of the query
-* The ##USING## clauses specifies the graphs that form the default graph for the ##WHERE## portion of the update.  If there are no ##USING## clauses the ##WITH## clause specifies the default graph, if there is no ##WITH## then the default graph is dataset specific.
-* The ##USING NAMED## clause specifies the named graphs for the ##WHERE## portion of the update.
+* The `WITH` clause specifies a default graph for the `INSERT` and `DELETE` portions of the query
+* The `USING` clauses specifies the graphs that form the default graph for the `WHERE` portion of the update.  If there are no `USING` clauses the `WITH` clause specifies the default graph, if there is no `WITH` then the default graph is dataset specific.
+* The `USING NAMED` clause specifies the named graphs for the `WHERE` portion of the update.
 
 ## ISparqlDataset 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]] interface is used to represent a dataset over which queries and updates are applied.  dotNetRDF includes a number of implementations of this primarily for wrapping a ##IInMemoryQueryableStore## i.e. an in-memory ##ITripleStore## so that it can be queried.
+The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]] interface is used to represent a dataset over which queries and updates are applied.  dotNetRDF includes a number of implementations of this primarily for wrapping a `IInMemoryQueryableStore` i.e. an in-memory `ITripleStore` so that it can be queried.
 
 How you construct your dataset can affect the results of your query due to SPARQL dataset descriptions as already discussed on this page.  For our examples here we will use the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset|InMemoryDataset]] which may be constructed in a number of ways.
 

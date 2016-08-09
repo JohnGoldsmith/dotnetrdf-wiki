@@ -2,13 +2,13 @@
 
 # Configuration API 
 
-The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] class which is in the ##VDS.RDF.Configuration## namespace.
+The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] class which is in the `VDS.RDF.Configuration` namespace.
 
-Dynamic loading is done by classes which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory|IObjectFactory]] interface which means that this mechanism can be extended as desired. Either additional ##IObjectFactory## instances can be registered programmatically with the `AddObjectFactory(IObjectFactory factory)` method or you can specify them in your configuration files and have the system automatically detect them by calling the `AutoConfigureObjectFactories(IGraph g)` function.
+Dynamic loading is done by classes which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory|IObjectFactory]] interface which means that this mechanism can be extended as desired. Either additional `IObjectFactory` instances can be registered programmatically with the `AddObjectFactory(IObjectFactory factory)` method or you can specify them in your configuration files and have the system automatically detect them by calling the `AutoConfigureObjectFactories(IGraph g)` function.
 
 # Configuration File structure 
 
-A Configuration file is simply an RDF graph which uses the [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]] to specify objects which can be loaded dynamically by the ##ConfigurationLoader##. A Configuration file may be encoded in any valid RDF graph format which the library understands though typically we recommend using Turtle/N3 for their human readability and ease of editing compared to other RDF serializations.
+A Configuration file is simply an RDF graph which uses the [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]] to specify objects which can be loaded dynamically by the `ConfigurationLoader`. A Configuration file may be encoded in any valid RDF graph format which the library understands though typically we recommend using Turtle/N3 for their human readability and ease of editing compared to other RDF serializations.
 
 The [[http://www.dotnetrdf.org/configuration#|Configuration vocabulary]] allows for specifying a variety of commonly used objects in dotNetRDF as listed in the Configurable Objects section.
 
@@ -26,9 +26,9 @@ To specify an object you will need at least two triples, for example to specify 
   dnr:type "VDS.RDF.Graph" .
 ```
 
-We use the ##rdf:type## (specified here by the Turtle/N3 keyword ##a##) predicate to specify that some Node has a type of ##dnr:Graph## which is the class of Graphs in the Configuration Vocabulary. Then the ##dnr:type## property is used to specify the .Net type of this object, for dotNetRDF types it is sufficient to specify the full namespace qualified name of the class. For any other class you will need to specify the Assembly Qualified Name of the class.
+We use the `rdf:type` (specified here by the Turtle/N3 keyword `a`) predicate to specify that some Node has a type of `dnr:Graph` which is the class of Graphs in the Configuration Vocabulary. Then the `dnr:type` property is used to specify the .Net type of this object, for dotNetRDF types it is sufficient to specify the full namespace qualified name of the class. For any other class you will need to specify the Assembly Qualified Name of the class.
 
-If you fail to specify a ##dnr:type## property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the ##dnr:Graph## class the default type is [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph|Graph]].
+If you fail to specify a `dnr:type` property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the `dnr:Graph` class the default type is [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph|Graph]].
 
 ## Imports 
 
@@ -63,9 +63,9 @@ Currently the following may be auto-configured:
 
 ## Special URIs 
 
-Since your configuration file may need to specify information that is sensitive (e.g. passwords) which you may not want to expose in a plain text file we provide for the use of special URIs of the form ##<appsetting:AppSettingName>##.
+Since your configuration file may need to specify information that is sensitive (e.g. passwords) which you may not want to expose in a plain text file we provide for the use of special URIs of the form `<appsetting:AppSettingName>`.
 
-These URIs allow you to refer to the value of an AppSetting defined in the ##<appSettings>## section of your ##Web.config## file. You can then use the standard techniques for encrypting the ##<appSettings>## section of your ##Web.config## file to obfuscate your password.
+These URIs allow you to refer to the value of an AppSetting defined in the `<appSettings>` section of your `Web.config` file. You can then use the standard techniques for encrypting the `<appSettings>` section of your `Web.config` file to obfuscate your password.
 
 **Note:** We recommend that you follow security best practises so that where you need to set passwords in a configuration file you use an account that is restricted to only the privileges necessary for the application.
 
@@ -79,7 +79,7 @@ These URIs allow you to refer to the value of an AppSetting defined in the ##<ap
 
 The main function that you will want to use is the `LoadObject()` function which attempts to load objects dynamically based on the information in a provided graph. The function is invoked by passing in a Configuration Graph containing the configuration and a Node representing the Object to be loaded.
 
-For example consider the following configuration file which we'll refer to as ##config.ttl##:
+For example consider the following configuration file which we'll refer to as `config.ttl`:
 
 {{{
 #!turtle

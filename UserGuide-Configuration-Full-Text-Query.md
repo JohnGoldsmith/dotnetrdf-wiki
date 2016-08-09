@@ -8,7 +8,7 @@ You can use the [[UserGuide/Configuration API|Configuration API]] to attach full
 
 As the Full Text Query functionality is an additional feature it uses a separate [[http://www.dotnetrdf.org/configuration/fulltext#|Full Text Configuration Vocabulary]] to specify the additional vocabulary used in configuring these objects.
 
-Note that all types specified by the ##dnr:type## property that refer to classes in this library must have the assembly name ##dotNetRDF.Query.FullText## included and all types that refer to classes from Lucene.Net must include ##Lucene.Net##
+Note that all types specified by the `dnr:type` property that refer to classes in this library must have the assembly name `dotNetRDF.Query.FullText` included and all types that refer to classes from Lucene.Net must include `Lucene.Net`
 
 # Basic Configuration 
 
@@ -53,9 +53,9 @@ _:index a dnr-ft:Index ;
   dnr-ft:ensureIndex true .
 ```
 
-Here the ##dnr:fromFile## property is used to point to the directory where the index resides.
+Here the `dnr:fromFile` property is used to point to the directory where the index resides.
 
-The optional ##dnr-ft:ensureIndex## property is used to ensure that the index is ready for use, this is useful if you are creating a non-persistent index such as a Lucene.Net ##RAMDirectory##.
+The optional `dnr-ft:ensureIndex` property is used to ensure that the index is ready for use, this is useful if you are creating a non-persistent index such as a Lucene.Net `RAMDirectory`.
 
 ## Analyzers 
 
@@ -68,7 +68,7 @@ _:analyzer a dnr-ft:Analyzer ;
   dnr:type "Lucene.Net.Analysis.Standard.StandardAnalayzer" ;
   dnr-ft:version 2900 .
 ```
-The optional ##dnr-ft:version## property is used to specify the version of the analyzer to be used, if none is specified 3000 i.e. Lucene.Net 3.0 is assumed
+The optional `dnr-ft:version` property is used to specify the version of the analyzer to be used, if none is specified 3000 i.e. Lucene.Net 3.0 is assumed
 
 ## Indexers 
 
@@ -86,11 +86,11 @@ _:index a dnr-ft:Index ;
   dnr:fromFile "~/App_Data/index/" .
 ```
 
-The ##dnr-ft:index## property is used to point to the index being used and is a required property.
+The `dnr-ft:index` property is used to point to the index being used and is a required property.
 
-You may optionally specify the ##dnr-ft:analyzer## property to point to an analyzer, if not specified the Lucene.Net ##StandardAnalyzer## is used.
+You may optionally specify the `dnr-ft:analyzer` property to point to an analyzer, if not specified the Lucene.Net `StandardAnalyzer` is used.
 
-Also you may optionally specify the ##dnr-ft:schema## property to point to a Index Schema, if not specified the ##DefaultIndexSchema## is used.
+Also you may optionally specify the `dnr-ft:schema` property to point to a Index Schema, if not specified the `DefaultIndexSchema` is used.
 
 ## Search Providers 
 
@@ -109,13 +109,13 @@ _:index a dnr-ft:Index ;
   dnr-ft:ensureIndex true .
 ```
 
-As with Indexers the ##dnr-ft:index## property is required and points to the index being used. Again the ##dnr-ft:analyzer## and ##dnr-ft:schema## properties are optional and the same defaults as for Indexers are used if they are not specified.
+As with Indexers the `dnr-ft:index` property is required and points to the index being used. Again the `dnr-ft:analyzer` and `dnr-ft:schema` properties are optional and the same defaults as for Indexers are used if they are not specified.
 
 ### Auto-indexing 
 
 When you specify a Search Provider you can also state that it should auto-index some data sources to build the index it operates over. This is useful if you want to create non-persistent indexes over small amounts of data in a SPARQL endpoint for example.
 
-This can be done using the ##dnr-ft:buildIndexFor## and ##dnr-ft:buildIndexWith## properties which specify data sources and an Indexer respectively.
+This can be done using the `dnr-ft:buildIndexFor` and `dnr-ft:buildIndexWith` properties which specify data sources and an Indexer respectively.
 
 An example of this is shown below:
 
@@ -190,4 +190,4 @@ _:dataset a dnr:SparqlDataset ;
   dnr:type "VDS.RDF.Query.Dataset.InMemoryDataset" .
 ```
 
-The ##dnr-ft:indexNow## property is used to set whether the wrapped dataset should be indexed at initialization time, if you have a pre-built index you should set this to false but for non-persistent datasets you load up on demand it is generally useful to set to true.
+The `dnr-ft:indexNow` property is used to set whether the wrapped dataset should be indexed at initialization time, if you have a pre-built index you should set this to false but for non-persistent datasets you load up on demand it is generally useful to set to true.

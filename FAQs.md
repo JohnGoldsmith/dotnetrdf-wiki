@@ -61,7 +61,7 @@ Depending on how you make a query it is either being evaluated by dotNetRDF itse
 
 Is there a typo in your query? Are you sure the query you wrote is actually correct, minor mistakes in namespace declarations can make your query syntactically correct but fail to match anything. Did you misspell a namespace or Prefixed Name?
 
-Are you using literals in triple patterns in your query? Literals in triple patterns are matched strictly in SPARQL so things that look very similar are not considered equal e.g. ##"1"^^xsd:integer != "1"^^xsd:decimal## . If you are using Literals you may be better using a variable combined with a ##FILTER## clause because the equality in filter expressions is value based equality so would match something like the above where triple pattern matching would not.
+Are you using literals in triple patterns in your query? Literals in triple patterns are matched strictly in SPARQL so things that look very similar are not considered equal e.g. `"1"^^xsd:integer != "1"^^xsd:decimal` . If you are using Literals you may be better using a variable combined with a `FILTER` clause because the equality in filter expressions is value based equality so would match something like the above where triple pattern matching would not.
 
 Are there named graphs involved? If so does your query actually query the appropriate named graphs?  Please see [[SPARQL Datasets|UserGuide-SPARQL-Datasets]] for help with this.
 

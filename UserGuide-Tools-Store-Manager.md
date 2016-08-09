@@ -18,11 +18,11 @@ Firstly when you start up the application you'll see the following Start Page:
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_startpage.jpg|Store Manager - Start Page}}
 
-If you've used the tool previously you will see Recent and Favourite Connections here and can double click to instantly start working with one of those connections. If you'd like to modify an existing connection click once to select it then right click and hit ##Edit Connection## - if you always want to edit connections before using them you can select that option at the bottom of the start page and then just double click to edit a connection.
+If you've used the tool previously you will see Recent and Favourite Connections here and can double click to instantly start working with one of those connections. If you'd like to modify an existing connection click once to select it then right click and hit `Edit Connection` - if you always want to edit connections before using them you can select that option at the bottom of the start page and then just double click to edit a connection.
 
-To make a new connection select ##Connect to a Triple Store## to open the New Connection dialogue.
+To make a new connection select `Connect to a Triple Store` to open the New Connection dialogue.
 
-You can work with multiple connections at a time and can always get back to this Start Page by going to ##File > Show Start Page##, to just make a new connection go to ##File > New Connection##:
+You can work with multiple connections at a time and can always get back to this Start Page by going to `File > Show Start Page`, to just make a new connection go to `File > New Connection`:
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_menu.jpg|Store Manager - File Menu}}
 
@@ -32,7 +32,7 @@ When you've chosen to create a New Connection either via the File Menu or the St
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_newconnection.jpg|Store Manager - New Connection}}
 
-Available stores are any store which we provide support in any of our publicly released libraries or for which you have a [[UserGuide/Tools/StoreManager/Plugins|Store Plugin]] available in your ##plugins/## folder.
+Available stores are any store which we provide support in any of our publicly released libraries or for which you have a [[UserGuide/Tools/StoreManager/Plugins|Store Plugin]] available in your `plugins/` folder.
 
 ### Graph List 
 

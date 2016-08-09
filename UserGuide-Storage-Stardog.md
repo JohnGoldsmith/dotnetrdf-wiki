@@ -4,7 +4,7 @@
 
 [[http://stardog.com|Stardog]] the RDF database from Clark & Parsia can be connected to via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogConnector|StardogConnector]].  This connector uses the Stardog HTTP interface so requires a running Stardog HTTP server.
 
-The ##StardogConnector## assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV1Connector|StardogV1Connector]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV2Connector|StardogV2Connector]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV3Connector|StardogV3Connector]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
+The `StardogConnector` assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV1Connector|StardogV1Connector]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV2Connector|StardogV2Connector]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV3Connector|StardogV3Connector]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
 
 In terms of backwards compatibility the newer connectors may be able to talk to an older server but we can't guarantee this will work correctly, also newer connectors have support for newer Stardog features which will not work if used against an older server.
 
@@ -41,9 +41,9 @@ Stardog is one of the few stores currently supported that support transactions, 
 
 We support managing a server via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer|StardogServer]] class which implements our [[UserGuide/Storage/Servers|Servers API]]
 
-The ##StardogServer## assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV1Server|StardogV1Server]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV2Server|StardogV2Server]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV3Server|StardogV3Server]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
+The `StardogServer` assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV1Server|StardogV1Server]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV2Server|StardogV2Server]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV3Server|StardogV3Server]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
 
-A ##StardogConnector## provides access to its associated server via the `ParentServer` or `AsyncParentServer` property.
+A `StardogConnector` provides access to its associated server via the `ParentServer` or `AsyncParentServer` property.
 
 ## Connecting to a Server 
 
@@ -56,7 +56,7 @@ StardogServer server = new StardogServer("http://localhost:5822", "username", "p
 
 ## Creating Stores 
 
-When creating a store the ##StardogServer## will provide templates from the following selection:
+When creating a store the `StardogServer` will provide templates from the following selection:
 
 |= Template |= Description |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Stardog.StardogDiskTemplate|StardogDiskTemplate]] | Used to create a Stardog disk store |

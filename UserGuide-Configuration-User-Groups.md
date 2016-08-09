@@ -33,8 +33,8 @@ _:perm2 a dnr:Permission ;
   dnr:action "DELETE DATA" .
 ```
 
-In the above example we specify a user group with a single member, members are specified via the ##dnr:member## property. Permissions are granted to the group using the ##dnr:allow## and ##dnr:deny## properties - see [[UserGuide/Configuration/Permissions|Configuration API - Permissions]] for more details.
+In the above example we specify a user group with a single member, members are specified via the `dnr:member` property. Permissions are granted to the group using the `dnr:allow` and `dnr:deny` properties - see [[UserGuide/Configuration/Permissions|Configuration API - Permissions]] for more details.
 
-The ##dnr:requiresAuthentication## property specifies whether the permissions apply only to authenticated users or to unauthenticated users i.e. guests. Setting to to false means that the permissions apply to guests.
+The `dnr:requiresAuthentication` property specifies whether the permissions apply only to authenticated users or to unauthenticated users i.e. guests. Setting to to false means that the permissions apply to guests.
 
-The ##dnr:permissionModel## sets the permission model of the group to one of the supported models as specified by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.Permissions.PermissionModel|PermissionModel]] enumeration.
+The `dnr:permissionModel` sets the permission model of the group to one of the supported models as specified by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.Permissions.PermissionModel|PermissionModel]] enumeration.

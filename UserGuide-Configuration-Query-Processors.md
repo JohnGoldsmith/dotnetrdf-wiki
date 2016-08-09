@@ -19,7 +19,7 @@ _:proc a dnr:SparqlQueryProcessor ;
 
 ## Leviathan Query Processor 
 
-The Leviathan Query Processor is used to process queries on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a ##dnr:usingStore## property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface e.g.
+The Leviathan Query Processor is used to process queries on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface e.g.
 
 {{{
 #!turtle
@@ -36,11 +36,11 @@ _:store a dnr:TripleStore ;
 
 For information on how to configure Triple Stores see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
 
-Alternatively you may use the ##dnr:usingDataset## property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both ##dnr:usingDataset## and ##dnr:usingStore## are present then ##dnr:usingDataset## has priority and ##dnr:usingStore## will be ignored.
+Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and `dnr:usingStore` will be ignored.
 
 ## Generic Query Processor 
 
-The Generic Query Processor is used to process queries against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]]. To configure these handlers simply add a ##dnr:storageProvider## property to the basic configuration like so:
+The Generic Query Processor is used to process queries against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]]. To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
 
 {{{
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
@@ -98,11 +98,11 @@ _:endpoint a dnr:SparqlQueryEndpoint ;
   dnr:queryEndpointUri <http://example.org/sparql> .
 ```
 
-The above configures a Remote Query Processor which passes queries to the endpoint at ##http://example.org/sparql##
+The above configures a Remote Query Processor which passes queries to the endpoint at `http://example.org/sparql`
 
 ## Pellet Query Processor 
 
-The Pellet Query Processor is used to pass queries to the SPARQL service provided by a knowledge base on some remote Pellet Server. It is configured by adding the ##dnr:server## and ##dnr:storeID## properties to the basic configuration like so:
+The Pellet Query Processor is used to pass queries to the SPARQL service provided by a knowledge base on some remote Pellet Server. It is configured by adding the `dnr:server` and `dnr:storeID` properties to the basic configuration like so:
 
 {{{
 #!turtle
@@ -115,4 +115,4 @@ _:proc a dnr:SparqlQueryProcessor ;
   dnr:storeID "wine" .
 ```
 
-This would configure a Pellet Query Processor which sends queries to the SPARQL service of the ##wine## knowledge base on the Pellet Server at ##http://ps.clarkparsia.com##
+This would configure a Pellet Query Processor which sends queries to the SPARQL service of the `wine` knowledge base on the Pellet Server at `http://ps.clarkparsia.com`

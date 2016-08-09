@@ -31,7 +31,7 @@ This will result in your query being evaluated but also explanations of the quer
 
 Debugging queries against remote endpoints or native SPARQL provided by a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] is somewhat more difficult.
 
-For ##IQueryableStorage## check the documentation of the store you are using to see if they provide any query debugging tools that you can use.
+For `IQueryableStorage` check the documentation of the store you are using to see if they provide any query debugging tools that you can use.
 
 If not the best way to debug queries is to follow the following method:
 
@@ -39,7 +39,7 @@ If not the best way to debug queries is to follow the following method:
 # Run each triple pattern to verify that it will return results
 # Start to build your query back up in small chunks i.e. individual graph patterns
 # Run each graph pattern to verify that it will return results
-# Start adding back in the ##FILTER## and joins to your query
+# Start adding back in the `FILTER` and joins to your query
 # Run each form of the query to verify that it will return results
 
 The general idea is to verify whether the blocks of your query actually return results and identify what block(s) are preventing your query from returning a result.  Once you have done this you can start to adjust your query to produce some results.

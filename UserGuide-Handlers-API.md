@@ -6,13 +6,13 @@ The Handlers API is a powerful API that permits the stream processing of RDF and
 
 The API is designed to facilitate stream processing of the data, that is that handlers get the data as soon as it is available and they control whether processing continues or terminates. Handlers implement either the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.IRdfHandler|IRdfHandler]] or the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.ISparqlResultsHandler|ISparqlResultsHandler]] interface in order to do this, please note that there is no reason a custom implementation cannot implement both but for ease of implementation and abstraction purposes our implementations do one or the other.
 
-One thing to note is that both handler interfaces descend from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INodeFactory|INodeFactory]] interface which is a large interface that if implemented incorrectly may lead to serious issues. Therefore we'd typically recommend extending either of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseRdfHandler|BaseRdfHandler]] or [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseResultsHandler|BaseResultsHandler]]. If you are an advanced developer you may wish to extend their parent class [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseHandler|BaseHandler]] instead which will allow you complete control over how you implement the rest of the handler interface while still giving you the ##INodeFactory## implementation.
+One thing to note is that both handler interfaces descend from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INodeFactory|INodeFactory]] interface which is a large interface that if implemented incorrectly may lead to serious issues. Therefore we'd typically recommend extending either of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseRdfHandler|BaseRdfHandler]] or [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseResultsHandler|BaseResultsHandler]]. If you are an advanced developer you may wish to extend their parent class [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseHandler|BaseHandler]] instead which will allow you complete control over how you implement the rest of the handler interface while still giving you the `INodeFactory` implementation.
 
 **Note:** While the handlers API allows you to read RDF in a fully streaming fashion this does not mean that memory usage won't steadily increase over time due to various internal state that a parser has to keep during the parsing process.  You may also need to disable the [[DeveloperGuide/URI Interning|URI Interning]] feature if you wish to stream parse very large data files.
 
 # The IRdfHandler Interface 
 
-So let's start by looking at the methods of the ##IRdfHandler## interface:
+So let's start by looking at the methods of the `IRdfHandler` interface:
 
 ## StartRdf() 
 
@@ -22,17 +22,17 @@ Again please note that there is no reason why you cannot write a handler that ca
 
 ## HandleBaseUri(Uri baseUri) 
 
-This is called whenever the Base URI is altered by the data being processed, in most cases there is no need to do anything in this method other than return ##true## to indicate that parsing should continue.
+This is called whenever the Base URI is altered by the data being processed, in most cases there is no need to do anything in this method other than return `true` to indicate that parsing should continue.
 
 ## HandleNamespace(String prefix, Uri namespaceUri) 
 
-This is called whenever a Namespace declaration is encountered, again in mosts cases there is no need to do anything in this method other than return ##true## to indicate that parsing should continue.
+This is called whenever a Namespace declaration is encountered, again in mosts cases there is no need to do anything in this method other than return `true` to indicate that parsing should continue.
 
 ## HandleTriple(Triple t) 
 
 This is the method which is probably of interest to most people as this is where you actually receive the RDF triples for processing. If the data source from which you are handling triples is actually providing quads then the `GraphUri` property of the triples will be non-null.
 
-In this method you can implement whatever logic you wish regarding triples and then either return ##true## to indicate that processing should continue or ##false## to indicate processing should terminate.
+In this method you can implement whatever logic you wish regarding triples and then either return `true` to indicate that processing should continue or `false` to indicate processing should terminate.
 
 ## EndRdf(bool ok) 
 
@@ -42,7 +42,7 @@ Depending on your implementation you may wish to take different clean up actions
 
 # The ISparqlResultsHandler Interface 
 
-This interface functions very similarily to the ##IRdfHandler## interface just the methods are named differently.
+This interface functions very similarily to the `IRdfHandler` interface just the methods are named differently.
 
 ## StartResults() 
 
@@ -58,7 +58,7 @@ Called if the results set is a boolean result.
 
 ## HandleResult(SparqlResult result) 
 
-Called if the results set is a set of variable bindings. Like the `HandleTriple()` method this is where you will likely want to implement most of your logic and again you should return either ##true## to continue processing or ##false## to terminate processing.
+Called if the results set is a set of variable bindings. Like the `HandleTriple()` method this is where you will likely want to implement most of your logic and again you should return either `true` to continue processing or `false` to terminate processing.
 
 ## EndResults(bool ok) 
 
@@ -70,9 +70,9 @@ You can see a basic example of using the API on the [[UserGuide/Reading RDF|Read
 
 ## Using the WriteThroughHandler 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.WriteThroughHandler|WriteThroughHandler]] is a powerful ##IRdfHandler## implementation that takes in Triples/Quads and outputs them to an arbitrary ##TextWriter## using an ##ITripleFormatter## of your choice.
+The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.WriteThroughHandler|WriteThroughHandler]] is a powerful `IRdfHandler` implementation that takes in Triples/Quads and outputs them to an arbitrary `TextWriter` using an `ITripleFormatter` of your choice.
 
-This allows you to perform fast data conversion between different formats, please be aware that depending on the format the data compression will be far poorer than that produced by loading the data into memory and then writing it out with an ##IRdfWriter##.
+This allows you to perform fast data conversion between different formats, please be aware that depending on the format the data compression will be far poorer than that produced by loading the data into memory and then writing it out with an `IRdfWriter`.
 
 ```csharp
 

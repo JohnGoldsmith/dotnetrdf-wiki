@@ -44,17 +44,17 @@ rdfConvert may be used to convert between Dataset (NQuads, TriG and TriX) format
 ### Supported Options 
 
 |= Option |= Purpose
-| ##-best## | Causes the utility to attempt the best conversion it can (i.e. most compressed syntax) taking into account other options like compression level. May cause conversions to be slower and require more memory |
-| ##c[:integer]## | Sets the Compression Level used by compressing writers, if specified without an integer parameter then defaults to default compression. Specify ##-best## to ensure the setting is respected |
-| ##-debug## | Prints more detailed error messages if errors occur |
-| ##-ext:ext## | Overrides the default file extension which will be automatically determined based on the ##-out##/##-format## option. Must occur after the ##-out##/##-format## option or it may be ignored
-| ##-format:format## | Specifies an output format in terms of a MIME Type or a file extension, if the MIME type/file extension does not correspond to a supported RDF Graph/Dataset format then the utility aborts. |
-| ##-help## | Prints a usage summary if it is the only argument, otherwise ignored |
-| ##-hs[:boolean]## | Enables/Disables High Speed write mode, if specified without a boolean parameter then defaults to enabled |
-| ##-nobom## | Specifies that no BOM should be used for UTF-8 Output |
-| ##-nocache## | Specifies that caching of input URIs is disabled i.e. forces the RDF to be retrieved directly from the URI bypassing any locally cached copy |
-| ##-out:filename.ext## or ##-output:filename.ext## | Specifies a specific file to output to (assuming only 1 input), if more than one input is specified then this parameter sets the base filename for outputs (extension ignored in this case) |
-| ##-overwrite## | Specifies that the utility can overwrite existing files |
-| ##-pp[:boolean]## | Enables/Disables Pretty Printing, if specified without a boolean parameter then defaults to enabled |
-| ##-rapper## | Runs rdfConvert in [[http://librdf.org/raptor/rapper.html|rapper]] compatibility mode, type ##rdfConvert.exe -rapper -h## for further information. Must be the first argument or ignored |
-| ##-warnings## | Shows Warning Messages output by Parsers and Serializers |
+| `-best` | Causes the utility to attempt the best conversion it can (i.e. most compressed syntax) taking into account other options like compression level. May cause conversions to be slower and require more memory |
+| `c[:integer]` | Sets the Compression Level used by compressing writers, if specified without an integer parameter then defaults to default compression. Specify `-best` to ensure the setting is respected |
+| `-debug` | Prints more detailed error messages if errors occur |
+| `-ext:ext` | Overrides the default file extension which will be automatically determined based on the `-out`/`-format` option. Must occur after the `-out`/`-format` option or it may be ignored
+| `-format:format` | Specifies an output format in terms of a MIME Type or a file extension, if the MIME type/file extension does not correspond to a supported RDF Graph/Dataset format then the utility aborts. |
+| `-help` | Prints a usage summary if it is the only argument, otherwise ignored |
+| `-hs[:boolean]` | Enables/Disables High Speed write mode, if specified without a boolean parameter then defaults to enabled |
+| `-nobom` | Specifies that no BOM should be used for UTF-8 Output |
+| `-nocache` | Specifies that caching of input URIs is disabled i.e. forces the RDF to be retrieved directly from the URI bypassing any locally cached copy |
+| `-out:filename.ext` or `-output:filename.ext` | Specifies a specific file to output to (assuming only 1 input), if more than one input is specified then this parameter sets the base filename for outputs (extension ignored in this case) |
+| `-overwrite` | Specifies that the utility can overwrite existing files |
+| `-pp[:boolean]` | Enables/Disables Pretty Printing, if specified without a boolean parameter then defaults to enabled |
+| `-rapper` | Runs rdfConvert in [[http://librdf.org/raptor/rapper.html|rapper]] compatibility mode, type `rdfConvert.exe -rapper -h` for further information. Must be the first argument or ignored |
+| `-warnings` | Shows Warning Messages output by Parsers and Serializers |

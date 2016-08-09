@@ -19,7 +19,7 @@ _:proc a dnr:SparqlHttpProtocolProcessor .
 
 ## Leviathan Protocol Processor 
 
-The Leviathan Protocol Processor is used to process protocol requests on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a ##dnr:usingStore## property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface e.g.
+The Leviathan Protocol Processor is used to process protocol requests on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface e.g.
 
 {{{
 #!turtle
@@ -36,15 +36,15 @@ _:store a dnr:TripleStore ;
 
 For information on how to configure Triple Stores see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
 
-Alternatively you may use the ##dnr:usingDataset## property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both ##dnr:usingDataset## and ##dnr:usingStore## are present then ##dnr:usingDataset## has priority and the value of ##dnr:usingStore## is ignored.
+Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and the value of `dnr:usingStore` is ignored.
 
 ## Generic Protocol Processor 
 
 The Generic Protocol Processor is used to process protocol requests against some arbitrary store where the store you wish to connect to has an implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]].
 
-Not all features of the protocol may be supported or behave correctly depending on the capabilities of the ##IStorageProvider## used.
+Not all features of the protocol may be supported or behave correctly depending on the capabilities of the `IStorageProvider` used.
 
-To configure these handlers simply add a ##dnr:storageProvider## property to the basic configuration like so:
+To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
 
 {{{
 #!turtle

@@ -11,7 +11,7 @@ Connectivity with Sesame is done via a number of classes:
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SesameHttpProtocolVersion6Connector|SesameHttpProtocolVersion6Connector]] | Connect to a Sesame server that uses Version 6 (the current version) of the Sesame protocol |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SesameHttpProtocolVersion5Connector|SesameHttpProtocolVersion5Connector]] | Connect to a Sesame server that uses Version 5 of the Sesame protocol.  Use this if you are using an older version of Sesame prior to the addition of SPARQL Update support. |
 
-Typically you will most likely just use the ##SesameHttpProtocolConnector## since that will always reflect the current version of the Sesame protocol.
+Typically you will most likely just use the `SesameHttpProtocolConnector` since that will always reflect the current version of the Sesame protocol.
 
 ## Supported Capabilities 
 
@@ -54,7 +54,7 @@ SesameServer sesame = new SesameServer("http://localhost:8080/openrdf-sesame/");
 
 ## Creating Stores 
 
-When creating a store the ##SesameServer## will use one of the following templates:
+When creating a store the `SesameServer` will use one of the following templates:
 
 |= Template |= Description |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Sesame.SesameMemTemplate|SesameMemTemplate]] | Used to create Sesame memory stores |

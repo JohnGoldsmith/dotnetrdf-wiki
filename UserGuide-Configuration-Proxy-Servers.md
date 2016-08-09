@@ -15,4 +15,4 @@ _:proxy a dnr:Proxy ;
   dnr:password "password" .
 ```
 
-Username and password are optional for proxies. Note also that no ##dnr:type## property is required.
+Username and password are optional for proxies. Note also that no `dnr:type` property is required.

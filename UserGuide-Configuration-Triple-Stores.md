@@ -32,7 +32,7 @@ There are only 2 ways to specify Graphs to be loaded into a Triple Store but sin
 
 ### Other Graphs 
 
-Using the ##dnr:usingGraph## property any number of Graphs can be loaded into a Triple Store. Note that each graph must have a unique Base URI or the Triple Store will throw an error, as described in [[UserGuide/Configuration/Graphs|Configuration API - Graphs]] you can use the ##dnr:assignUri## property to ensure this.
+Using the `dnr:usingGraph` property any number of Graphs can be loaded into a Triple Store. Note that each graph must have a unique Base URI or the Triple Store will throw an error, as described in [[UserGuide/Configuration/Graphs|Configuration API - Graphs]] you can use the `dnr:assignUri` property to ensure this.
 
 The following example shows loading two graphs into a Triple Store
 
@@ -57,7 +57,7 @@ _:b a dnr:Graph ;
 
 ### Dataset Files 
 
-You can populate a Triple Store using a RDF dataset file which is in one of the dataset formats dotNetRDF understands (NQuads, TriG or TriX) which you specify with the ##dnr:fromFile## property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver|IPathResolver]] implementation by setting the `PathResolver` property of the ##ConfigurationLoader##.
+You can populate a Triple Store using a RDF dataset file which is in one of the dataset formats dotNetRDF understands (NQuads, TriG or TriX) which you specify with the `dnr:fromFile` property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver|IPathResolver]] implementation by setting the `PathResolver` property of the `ConfigurationLoader`.
 
 The following example loads a dataset from a file:
 
@@ -94,7 +94,7 @@ When you apply a reasoner to a Store then that reasoner gets applied over all ex
 
 # Configuring Complex Triple Stores 
 
-It is possible to configure a number of more complex [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ITripleStore|ITripleStore]] instances beyond the basic ##TripleStore## demonstrated so far. This section of the document describes additional types of Triple Store that can be configured.
+It is possible to configure a number of more complex [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ITripleStore|ITripleStore]] instances beyond the basic `TripleStore` demonstrated so far. This section of the document describes additional types of Triple Store that can be configured.
 
 ## Web Demand Triple Store 
 
@@ -111,7 +111,7 @@ _:store a dnr:TripleStore ;
 
 ## Persistent Triple Store 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore|PersistentTripleStore]] provides a view of an arbitrary store for which there is an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] provided. The Triple Store can then be used for query and update operations on the underlying store. This is configured by setting the ##dnr:type## property appropriately and then using the ##dnr:storageProvider## property to point to a storage provider to be used e.g.
+The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore|PersistentTripleStore]] provides a view of an arbitrary store for which there is an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] provided. The Triple Store can then be used for query and update operations on the underlying store. This is configured by setting the `dnr:type` property appropriately and then using the `dnr:storageProvider` property to point to a storage provider to be used e.g.
 
 {{{
 #!turtle

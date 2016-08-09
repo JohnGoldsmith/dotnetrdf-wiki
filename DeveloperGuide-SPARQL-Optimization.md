@@ -106,7 +106,7 @@ WHERE
 
 ## Assignment Placement
 
-Assignment placement is exactly the same as Filter Placement. It just places ##BIND## clauses at the first point after which all mentioned variables occur. For example given:
+Assignment placement is exactly the same as Filter Placement. It just places `BIND` clauses at the first point after which all mentioned variables occur. For example given:
 
 ```sparql
 

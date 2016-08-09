@@ -14,9 +14,9 @@ When you specify a handler definition you must use a special dotNetRDF URI as th
   dnr:type "VDS.RDF.Web.QueryHandler" .
 ```
 
-These URIs are of the format ##<dotnetrdf:/path>##, if you are using a Handler that supports wildcard paths then the path must end in a ##/*## like ##<dotnetrdf:/path/*>##. These paths should be absolute relative paths to guarantee correct operation.
+These URIs are of the format `<dotnetrdf:/path>`, if you are using a Handler that supports wildcard paths then the path must end in a `/*` like `<dotnetrdf:/path/*>`. These paths should be absolute relative paths to guarantee correct operation.
 
-Handlers must always have a ##dnr:type## property specified in order to indicate what type of Handler is used to service requests to that path.
+Handlers must always have a `dnr:type` property specified in order to indicate what type of Handler is used to service requests to that path.
 
 ## General Handler Configuration 
 
@@ -24,31 +24,31 @@ All handlers have a standard set of properties that can be used to specify some 
 
 ### dnr:userGroup 
 
-The ##dnr:userGroup## property is used to associate user groups (see [[UserGuide/Configuration/User Groups|Configuration API - User Groups]]) with a Handler for basic authentication purposes. Note that this feature is currently experimental and may be revised in future releases.
+The `dnr:userGroup` property is used to associate user groups (see [[UserGuide/Configuration/User Groups|Configuration API - User Groups]]) with a Handler for basic authentication purposes. Note that this feature is currently experimental and may be revised in future releases.
 
 ### dnr:showErrors 
 
-The ##dnr:showErrors## property takes a boolean value and controls whether friendly error messages are shown by handlers where such error messages are supported. Defaults to ##true## if not specified.
+The `dnr:showErrors` property takes a boolean value and controls whether friendly error messages are shown by handlers where such error messages are supported. Defaults to `true` if not specified.
 
 ### dnr:introText 
 
-The ##dnr:introText## property specifies a path to a file that contains introductory text that handlers can use for any HTML forms they output
+The `dnr:introText` property specifies a path to a file that contains introductory text that handlers can use for any HTML forms they output
 
 ### dnr:cacheDuration 
 
-The ##dnr:cacheDuration## property specifies a duration in minutes that configuration and data is cached in-memory for. Defaults to ## 15## if not specified, values must be in the range of ## 0## to ## 120## and values outside this range will be set to the minimum/maximum as appropriate. Note that a value of ## 0## indicates no caching.
+The `dnr:cacheDuration` property specifies a duration in minutes that configuration and data is cached in-memory for. Defaults to ` 15` if not specified, values must be in the range of ` 0` to ` 120` and values outside this range will be set to the minimum/maximum as appropriate. Note that a value of ` 0` indicates no caching.
 
 ### dnr:cacheSliding 
 
-The ##dnr:cacheSliding## property specifies whether sliding cache expiration is used. Defaults to ##true## if not specified.
+The `dnr:cacheSliding` property specifies whether sliding cache expiration is used. Defaults to `true` if not specified.
 
 ### dnr:expressionFactory 
 
-The ##dnr:expressionFactory## property adds locally scoped SPARQL expression factories to a Handler which the Handler will use when parsing SPARQL. See [[UserGuide/Configuration/SPARQL Expression Factories|Configuration API - Expression Factories]] for more details.
+The `dnr:expressionFactory` property adds locally scoped SPARQL expression factories to a Handler which the Handler will use when parsing SPARQL. See [[UserGuide/Configuration/SPARQL Expression Factories|Configuration API - Expression Factories]] for more details.
 
 ### dnr:enableCors 
 
-The ##dnr:enableCors## property takes a boolean value and specifies whether CORS headers are output.  Defaults to ##true## if not specified.
+The `dnr:enableCors` property takes a boolean value and specifies whether CORS headers are output.  Defaults to `true` if not specified.
 
 ## Handler Output Configuration 
 
@@ -56,35 +56,35 @@ All Handlers also support the following set of properties which are used to defi
 
 ### dnr:compressionLevel 
 
-The ##dnr:compressionLevel## property sets the compression level used by compressing writers, takes an integer, default writers understand values in the range -1 (None) to 10 (High). Defaults to ## 5## if not specified.
+The `dnr:compressionLevel` property sets the compression level used by compressing writers, takes an integer, default writers understand values in the range -1 (None) to 10 (High). Defaults to ` 5` if not specified.
 
 ### dnr:prettyPrinting 
 
-The ##dnr:prettyPrinting## property takes a boolean and controls the use of pretty printing, defaults to ##true## if not specified.
+The `dnr:prettyPrinting` property takes a boolean and controls the use of pretty printing, defaults to `true` if not specified.
 
 ### dnr:highSpeedWriting 
 
-The ##dnr:highSpeedWriting## property takes a boolean and controls the use of high speed mode, defaults to ##true## if not specified.
+The `dnr:highSpeedWriting` property takes a boolean and controls the use of high speed mode, defaults to `true` if not specified.
 
 ### dnr:dtdWriting 
 
-The ##dnr:dtdWriting## property takes a boolean and controls whether DTDs are included to help compress syntax for XML formats, defaults to ##false## if not specified.
+The `dnr:dtdWriting` property takes a boolean and controls whether DTDs are included to help compress syntax for XML formats, defaults to `false` if not specified.
 
 ### dnr:attributeWriting 
 
-The ##dnr:attributeWriting## property takes a boolean and controls advanced behaviour of some XML writers relating to the compressing of literal objects as attributes, defaults to ##true## if not specified.
+The `dnr:attributeWriting` property takes a boolean and controls advanced behaviour of some XML writers relating to the compressing of literal objects as attributes, defaults to `true` if not specified.
 
 ### dnr:multiThreadedWriting 
 
-The ###dnr:multiThreadedWriting## property takes a boolean and controls whether multi-threaded writing can be used, defaults to ##true## if not specified.
+The #`dnr:multiThreadedWriting` property takes a boolean and controls whether multi-threaded writing can be used, defaults to `true` if not specified.
 
 ### dnr:stylesheet 
 
-The ##dnr:stylesheet## property specifies a path to a stylesheet that is used for the formatting of any HTML content the handlers output.
+The `dnr:stylesheet` property specifies a path to a stylesheet that is used for the formatting of any HTML content the handlers output.
 
 ### dnr:importNamespacesFrom 
 
-The ##dnr:importNamespacesFrom## property points to a Graph that defines default namespaces (see [[UserGuide/Configuration/Graphs|Configuration API - Graphs]]), these are used for any output that can use QNames to compress output. Defaults to ##rdf##, ##rdfs## and ##xsd## namespaces if not specified.
+The `dnr:importNamespacesFrom` property points to a Graph that defines default namespaces (see [[UserGuide/Configuration/Graphs|Configuration API - Graphs]]), these are used for any output that can use QNames to compress output. Defaults to `rdf`, `rdfs` and `xsd` namespaces if not specified.
 
 # Handler Configurations 
 
@@ -110,9 +110,9 @@ _:graph a dnr:Graph ;
   dnr:fromFile "~/App_Data/example.rdf" .
 ```
 
-This creates configuration for a Handler which responds to requests on the URI /graph by sending back the Graph specified by the ##dnr:usingGraph## property. For details of how to configure Graphs see [[UserGuide/Configuration/Graphs|Configuration API - Graphs]].
+This creates configuration for a Handler which responds to requests on the URI /graph by sending back the Graph specified by the `dnr:usingGraph` property. For details of how to configure Graphs see [[UserGuide/Configuration/Graphs|Configuration API - Graphs]].
 
-For serving graphs at wildcard paths replace the URI with ##<dotnetrdf:/graph/*>## and change the value of ##dnr:type## to ##VDS.RDF.Web.WildcardGraphHandler##. This would result in a handler which responds to requests to any URI under ##/graph/## with the specified Graph.
+For serving graphs at wildcard paths replace the URI with `<dotnetrdf:/graph/*>` and change the value of `dnr:type` to `VDS.RDF.Web.WildcardGraphHandler`. This would result in a handler which responds to requests to any URI under `/graph/` with the specified Graph.
 
 ## Query Handlers 
 
@@ -137,13 +137,13 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests on the URI ##/sparql## by providing a SPARQL Query endpoint. The ##dnr:queryProcessor## property is used to specify the class that processes the queries - for more details on configuring Query Processors see [[UserGuide/Configuration/Query Processors|Configuration API - Query Processors]].
+This specifies configuration for a Handler which responds to requests on the URI `/sparql` by providing a SPARQL Query endpoint. The `dnr:queryProcessor` property is used to specify the class that processes the queries - for more details on configuring Query Processors see [[UserGuide/Configuration/Query Processors|Configuration API - Query Processors]].
 
 Query Handlers support the following additional properties. Note that while a Handler may have these properties specified not all query processors can/will use/respect these settings.
 
 ### dnr:defaultGraphUri 
 
-The ##dnr:defaultGraphUri## property specifies a Default Graph URI for queries
+The `dnr:defaultGraphUri` property specifies a Default Graph URI for queries
 
 ### dnr:timeout 
 
@@ -151,23 +151,23 @@ The dnr:timeout property specifies Timeout for queries
 
 ### dnr:partialResults 
 
-The ##dnr:partialResults## property specifies Partial Results on query timeout behaviour
+The `dnr:partialResults` property specifies Partial Results on query timeout behaviour
 
 ### dnr:showQueryForm 
 
-The ##dnr:showQueryForm## property takes a boolean specifying whether a HTML query form is shown if a request without a query is made to the endpoint
+The `dnr:showQueryForm` property takes a boolean specifying whether a HTML query form is shown if a request without a query is made to the endpoint
 
 ### dnr:defaultQueryFile 
 
-The ##dnr:defaultQueryFile## property specifies a path to a file containing the default query to display in the Query Form.
+The `dnr:defaultQueryFile` property specifies a path to a file containing the default query to display in the Query Form.
 
 ### dnr:queryOptimiser 
 
-The ##dnr:queryOptimiser## property specifies a Query Optimiser (see [[UserGuide/Configuration/SPARQL Optimisers|Configuration API - Optimisers]]) to be used for optimising SPARQL Queries.
+The `dnr:queryOptimiser` property specifies a Query Optimiser (see [[UserGuide/Configuration/SPARQL Optimisers|Configuration API - Optimisers]]) to be used for optimising SPARQL Queries.
 
 ### dnr:algebraOptimiser 
 
-The ##dnr:algebraOptimiser## property specifies Algebra Optimisers (see [[UserGuide/Configuration/SPARQL Optimisers|Configuration API - Optimisers]]) to be used for optimising SPARQL Algebra prior to evaluation.
+The `dnr:algebraOptimiser` property specifies Algebra Optimisers (see [[UserGuide/Configuration/SPARQL Optimisers|Configuration API - Optimisers]]) to be used for optimising SPARQL Algebra prior to evaluation.
 
 ## Update Handlers 
 
@@ -192,17 +192,17 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests on the URI ##/update## by providing a SPARQL Update endpoint. The ##dnr:updateProcessor## property is used to specify the class that processes the updates - for more details on configuring Update Processors see [[UserGuide/Configuration/Update Processors|Configuration API - Update Processors]].
+This specifies configuration for a Handler which responds to requests on the URI `/update` by providing a SPARQL Update endpoint. The `dnr:updateProcessor` property is used to specify the class that processes the updates - for more details on configuring Update Processors see [[UserGuide/Configuration/Update Processors|Configuration API - Update Processors]].
 
 Update Handlers support the following additional properties. Note that while a Handler may have these properties specified not all update processors can/will use/respect these settings.
 
 ### dnr:showUpdateForm 
 
-The ##dnr:showUpdateForm## property takes a boolean specifying whether a HTML update form is shown if a request without a update is made to the endpoint
+The `dnr:showUpdateForm` property takes a boolean specifying whether a HTML update form is shown if a request without a update is made to the endpoint
 
 ### dnr:defaultUpdateFile 
 
-The ##dnr:defaultUpdateFile## property specifies a path to a file containing the default update to display in the Update Form.
+The `dnr:defaultUpdateFile` property specifies a path to a file containing the default update to display in the Update Form.
 
 ## Protocol Handlers 
 
@@ -227,7 +227,7 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests under the URI /protocol/ by providing a SPARQL Graph Store HTTP Protocol endpoint. The ##dnr:protocolProcessor## property is used to specify the class that processes the protocol requests - for more details on configuring Protocol Processors see [[UserGuide/Configuration/Protocol Processors|Configuration API - Protocol Processors]].
+This specifies configuration for a Handler which responds to requests under the URI /protocol/ by providing a SPARQL Graph Store HTTP Protocol endpoint. The `dnr:protocolProcessor` property is used to specify the class that processes the protocol requests - for more details on configuring Protocol Processors see [[UserGuide/Configuration/Protocol Processors|Configuration API - Protocol Processors]].
 
 ## SPARQL Servers 
 
@@ -262,4 +262,4 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests to the URI ##/server/query## as a Query Endpoint, ##/server/update## as an Update Endpoint and all other URIs under ##/server## as a Graph Store HTTP Protocol endpoint.
+This specifies configuration for a Handler which responds to requests to the URI `/server/query` as a Query Endpoint, `/server/update` as an Update Endpoint and all other URIs under `/server` as a Graph Store HTTP Protocol endpoint.
