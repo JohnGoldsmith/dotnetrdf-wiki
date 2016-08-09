@@ -1,10 +1,10 @@
-[[Home]] > [[How To]] > [[HowTo/Debug HTTP Communication|Debug HTTP Communication]]
+[[Home]] > [[How To]] > Debug HTTP Communication
 
 # Debugging HTTP Communication 
 
 Various features of dotNetRDF rely on HTTP communication to provide functionality, most of the time this works fine but occasionally you may encounter errors.  dotNetRDF provides some helpful functionality to help you debug these errors.
 
-To get basic traces of HTTP requests and responses printed to the Console you can enable the global static option //HttpDebugging// found in the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Options|Options]] class e.g.
+To get basic traces of HTTP requests and responses printed to the Console you can enable the global static option `HttpDebugging` found in the [[Options|http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Options]] class e.g.
 
 ```csharp
 Options.HttpDebugging = true;
@@ -14,7 +14,7 @@ Options.HttpDebugging = true;
 
 While most of the time the above will be sufficient to diagnose a problem sometimes you may need to see the full HTTP response in order to see exactly what error messages the remote server is responding with.
 
-To get full response traces for HTTP responses you must have enabled the //HttpDebugging// property and then also enable the //HttpFullDebugging// property e.g.
+To get full response traces for HTTP responses you must have enabled the `HttpDebugging` property and then also enable the `HttpFullDebugging` property e.g.
 
 ```csharp
 Options.HttpDebugging = true;
