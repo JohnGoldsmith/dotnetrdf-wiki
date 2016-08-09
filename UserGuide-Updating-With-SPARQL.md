@@ -8,13 +8,13 @@ Advanced Users may want to take a look at the [[UserGuide/Advanced SPARQL|Advanc
 
 # Update Representation 
 
-Classes relating to SPARQL Update can be found in the `VDS.RDF.Update` namespace. Unlike Queries a SPARQL Update may contain multiple commands to be executed separated by a semicolon (just like DDL for SQL) so the basic representation of a SPARQL Update is the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] which represents a set of commands to be executed. This has a `Commands` property which returns an enumeration of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommand|SparqlUpdateCommand]] instances.
+Classes relating to SPARQL Update can be found in the `VDS.RDF.Update` namespace. Unlike Queries a SPARQL Update may contain multiple commands to be executed separated by a semicolon (just like DDL for SQL) so the basic representation of a SPARQL Update is the [SparqlUpdateCommandSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet) which represents a set of commands to be executed. This has a `Commands` property which returns an enumeration of [SparqlUpdateCommand](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommand) instances.
 
 The `SparqlUpdateCommand` is the abstract base class for all SPARQL Updates. Concrete implementations of this class for each possible SPARQL Update command can be found in the `VDS.RDF.Update.Commands` namespace.
 
 # Parsing Updates 
 
-SPARQL Updates are parsed using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlUpdateParser|SparqlUpdateParser]] found in the `VDS.RDF.Parsing` namespace. Like the parser for SPARQL Queries it supports four parsing methods - `Parse(StreamReader reader)`, `ParseFromFile(String file)`, `ParseFromString(SparqlParameterizedString update)` and `ParseFromString(String update)` - which all return a `SparqlUpdateCommandSet`.
+SPARQL Updates are parsed using the [SparqlUpdateParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlUpdateParser) found in the `VDS.RDF.Parsing` namespace. Like the parser for SPARQL Queries it supports four parsing methods - `Parse(StreamReader reader)`, `ParseFromFile(String file)`, `ParseFromString(SparqlParameterizedString update)` and `ParseFromString(String update)` - which all return a `SparqlUpdateCommandSet`.
 
 This is fairly simply used like so:
 
@@ -102,13 +102,13 @@ public class LeviathanUpdateProcessorExample
 }
 ```
 
-A key thing to notice here is that we create a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]] instance which wraps our `IInMemoryQueryableStore` instance. This dataset allows us to control which graph is used as the default graph for updates or even to use the union of all graphs as the default graph.
+A key thing to notice here is that we create a [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset) instance which wraps our `IInMemoryQueryableStore` instance. This dataset allows us to control which graph is used as the default graph for updates or even to use the union of all graphs as the default graph.
 
 A common error with making updates is that updates by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing updates may yield no changes depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[UserGuide/SPARQL Datasets|SPARQL Datasets]] page for discussions of configuring different kinds of dataset.  If your update has no effect it is always worth running an equivalent `SELECT` or `CONSTRUCT` query to see if that yields any results to make sure you are actually matching some data.
 
 ## Generic Updates 
 
-The other really useful processor is the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.GenericUpdateProcessor|GenericUpdateProcessor]] which allows you to apply updates to an underlying [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] instance.
+The other really useful processor is the [GenericUpdateProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.GenericUpdateProcessor) which allows you to apply updates to an underlying [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) instance.
 
 The neat feature of this processor is that it is capable of applying SPARQL Updates even if the underlying store does not support them itself. If the underlying store does support SPARQL Update then the processor delegates the processing to the underlying store.
 
@@ -159,7 +159,7 @@ public class GenericUpdateProcessorExample
 
 ## Remote Updates 
 
-We also provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.RemoteUpdateProcessor|RemoteUpdateProcessor]] which is a wrapper around a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlRemoteUpdateEndpoint|SparqlRemoteUpdateEndpoint]] instance.  This allows for updates to be processed by a remote SPARQL Update endpoint.
+We also provide a [RemoteUpdateProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.RemoteUpdateProcessor) which is a wrapper around a [SparqlRemoteUpdateEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlRemoteUpdateEndpoint) instance.  This allows for updates to be processed by a remote SPARQL Update endpoint.
 
 ### Sending Updates to Remote Endpoints 
 
