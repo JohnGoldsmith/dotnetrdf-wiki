@@ -28,11 +28,11 @@ The `INSERT/DELETE` command in SPARQL Update allows the dataset to be specified 
 
 ## ISparqlDataset 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]] interface is used to represent a dataset over which queries and updates are applied.  dotNetRDF includes a number of implementations of this primarily for wrapping a `IInMemoryQueryableStore` i.e. an in-memory `ITripleStore` so that it can be queried.
+The [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset) interface is used to represent a dataset over which queries and updates are applied.  dotNetRDF includes a number of implementations of this primarily for wrapping a `IInMemoryQueryableStore` i.e. an in-memory `ITripleStore` so that it can be queried.
 
-How you construct your dataset can affect the results of your query due to SPARQL dataset descriptions as already discussed on this page.  For our examples here we will use the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset|InMemoryDataset]] which may be constructed in a number of ways.
+How you construct your dataset can affect the results of your query due to SPARQL dataset descriptions as already discussed on this page.  For our examples here we will use the [InMemoryDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset) which may be constructed in a number of ways.
 
-If your queries involve a lot of named graphs then you may get better performance by using an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryQuadDataset|InMemoryQuadDataset]] instead.  This has identical constructors to the ones shown in the following examples.
+If your queries involve a lot of named graphs then you may get better performance by using an [InMemoryQuadDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryQuadDataset) instead.  This has identical constructors to the ones shown in the following examples.
 
 ### Default Behavior 
 

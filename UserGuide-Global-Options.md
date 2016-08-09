@@ -2,7 +2,7 @@
 
 # Global Options 
 
-dotNetRDF has a set of global static options provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Options|Options]] class.  These are used to configure various aspects of dotNetRDF behaviour, some act as defaults for certain functionality while others toggle functionality/features on/off as desired.
+dotNetRDF has a set of global static options provided by the [Options](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Options) class.  These are used to configure various aspects of dotNetRDF behaviour, some act as defaults for certain functionality while others toggle functionality/features on/off as desired.
 
 Here are the available options:
 
@@ -12,7 +12,7 @@ Here are the available options:
 
 ### FullTripleIndexing 
 
-Controls whether implementations of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection|BaseTripleCollection]] that support indexing will create full triple indexes, defaults to `true`.  See [[HowTo/Minimize Memory Usage|Minimizing Memory Usage]] for more discussions on triple indexing.
+Controls whether implementations of [BaseTripleCollection](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection) that support indexing will create full triple indexes, defaults to `true`.  See [[HowTo/Minimize Memory Usage|Minimizing Memory Usage]] for more discussions on triple indexing.
 
 ### InternUris 
 
@@ -22,7 +22,7 @@ Controls the [[DeveloperGuide/URI Interning|URI Interning]] feature of the libra
 
 ### LiteralEqualityMode 
 
-Controls the behaviour when you call `Equals()` on instances of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ILiteralNode|ILiteralNode]].  This takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralEqualityMode|LiteralEqualityMode]] enumeration, the default is `Strict`.  In `Strict` mode literal equality follows RDF term equality semantics i.e. the lexical values must be exactly equal and so must the language tag/datatype URI if present.
+Controls the behaviour when you call `Equals()` on instances of [ILiteralNode](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ILiteralNode).  This takes a value from the [LiteralEqualityMode](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralEqualityMode) enumeration, the default is `Strict`.  In `Strict` mode literal equality follows RDF term equality semantics i.e. the lexical values must be exactly equal and so must the language tag/datatype URI if present.
 
 If you set this to `Loose` instead then value equality semantics are used i.e. if the literals represent the same value then they are considered equal.
 
@@ -80,7 +80,7 @@ It may be useful to increase this if you have a slow internet connection or are 
 
 Global timeout setting for in-memory query execution given in milliseconds, defaults to ` 180,000` i.e. 3 minutes.  This setting has no-effect for other forms of query execution.
 
-This can be overridden as a per-query level by the `Timeout` property of a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery|SparqlQuery]] instance.
+This can be overridden as a per-query level by the `Timeout` property of a [SparqlQuery](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery) instance.
 
 ### QueryOptimisation 
 
@@ -96,7 +96,7 @@ Controls whether certain optimizations which `may` make queries run faster but c
 
 ### QueryDefaultSyntax 
 
-Sets the default syntax used for parsing SPARQL queries, takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQuerySyntax|SparqlQuerySyntax]] enumeration.  Defaults to `Sparql_1_1` i.e. SPARQL 1.1
+Sets the default syntax used for parsing SPARQL queries, takes a value from the [SparqlQuerySyntax](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQuerySyntax) enumeration.  Defaults to `Sparql_1_1` i.e. SPARQL 1.1
 
 ### QueryAllowUnknownFunctions 
 
@@ -104,7 +104,7 @@ Controls whether unknown SPARQL extension functions should be allowed, defaults 
 
 ### RigorousEvaluation 
 
-Controls whether the in-memory SPARQL engine rigorously checks the provided matches from the underlying [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]], defaults to `false` as this is usually unnecessary.
+Controls whether the in-memory SPARQL engine rigorously checks the provided matches from the underlying [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset), defaults to `false` as this is usually unnecessary.
 
 You may need to enable this if your `ISparqlDataset` implementation cannot guarantee that a call to `GetTriplesWithX()` only returns triples matching the given arguments.
 
@@ -126,7 +126,7 @@ May be useful to disable if you have a multi-core machine but only want to use a
 
 Sets the timeout used for in-memory update execution in milliseconds, defaults to ` 180,000` i.e. 3 minutes.  This setting has no-effect for other forms of update execution.
 
-This can be overridden as a per-update level by the `Timeout` property of a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] instance.
+This can be overridden as a per-update level by the `Timeout` property of a [SparqlUpdateCommandSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet) instance.
 
 ## Writing Options 
 

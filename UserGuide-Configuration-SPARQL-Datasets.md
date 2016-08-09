@@ -6,11 +6,11 @@ SPARQL Datasets are an abstraction dotNetRDF which separates the Leviathan engin
 
 As a general rule anywhere you could have used a Triple Store (see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]]) via the `dnr:usingStore` property you can use a Dataset instead via the `dnr:usingDataset` property.
 
-Datasets are configured using the [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]] in a number of ways, as each dataset is different each has its own unique configuration.
+Datasets are configured using the [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#) in a number of ways, as each dataset is different each has its own unique configuration.
 
 # In-Memory Datasets 
 
-The in-memory dataset represents pure in-memory data which is the default operation mode for Leviathan. Any [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] instance can be wrapped in a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset|InMemoryDataset]].
+The in-memory dataset represents pure in-memory data which is the default operation mode for Leviathan. Any [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) instance can be wrapped in a [InMemoryDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset).
 
 The following example shows a Triple Store configuration being specified as the underlying source for a Dataset configuration:
 
@@ -39,11 +39,11 @@ _:b a dnr:Graph ;
 
 As you can see for an in-memory dataset you simply connect it to a `dnr:TripleStore` definition using the `dnr:usingStore` property.
 
-You may alternatively use the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryQuadDataset|InMemoryQuadDataset]] just by changing the value of the `dnr:type` property appropriately. The quad dataset may be more performant if your queries access named graphs frequently.
+You may alternatively use the [InMemoryQuadDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryQuadDataset) just by changing the value of the `dnr:type` property appropriately. The quad dataset may be more performant if your queries access named graphs frequently.
 
 # Web Demand Datasets 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.WebDemandDataset|WebDemandDataset]] is a wrapper around another dataset that allows the dataset to load missing graphs on demand from the web.  It can be configured simply like so:
+The [WebDemandDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.WebDemandDataset) is a wrapper around another dataset that allows the dataset to load missing graphs on demand from the web.  It can be configured simply like so:
 
 {{{
 #!turtle

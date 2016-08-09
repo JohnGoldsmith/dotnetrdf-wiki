@@ -2,7 +2,7 @@
 
 # Extension Methods 
 
-The library provides a number of extension methods that can be used to simplify some common tasks and marginally decrease the amount of code you have to write. These extension methods are located in several static class called [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Extensions|Extensions]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralExtensions|LiteralExtensions]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GraphExtensions|GraphExtensions]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.TripleStoreExtensions|TripleStoreExtensions]] in the `VDS.RDF` namespace so anywhere you reference `VDS.RDF` you have the option of using these methods.
+The library provides a number of extension methods that can be used to simplify some common tasks and marginally decrease the amount of code you have to write. These extension methods are located in several static class called [Extensions](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Extensions), [LiteralExtensions](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralExtensions), [GraphExtensions](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GraphExtensions) and [TripleStoreExtensions](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.TripleStoreExtensions) in the `VDS.RDF` namespace so anywhere you reference `VDS.RDF` you have the option of using these methods.
 
 Some of these methods are shorthand for other static methods in the API such as the `Tools.CopyNode()` and `Tools.CopyTriple()` methods which are described in more detail in the [[UserGuide/Utility Methods|Utility Methods]] article.
 

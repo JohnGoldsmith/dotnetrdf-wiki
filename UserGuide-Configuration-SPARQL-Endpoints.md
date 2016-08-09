@@ -4,7 +4,7 @@
 
 SPARQL Endpoints are classes that provide access to remote SPARQL Query or Update endpoints.
 
-The library provides 2 concrete implementations for query endpoints which are [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlRemoteEndpoint|SparqlRemoteEndpoint]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FederatedSparqlRemoteEndpoint|FederatedSparqlRemoteEndpoint]]. The latter of these can be used to federate the query across multiple endpoints and merge the results together.  There is also a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlRemoteUpdateEndpoint|SparqlRemoteUpdateEndpoint]] which represents update endpoints.
+The library provides 2 concrete implementations for query endpoints which are [SparqlRemoteEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlRemoteEndpoint) and [FederatedSparqlRemoteEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FederatedSparqlRemoteEndpoint). The latter of these can be used to federate the query across multiple endpoints and merge the results together.  There is also a [SparqlRemoteUpdateEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlRemoteUpdateEndpoint) which represents update endpoints.
 
 ## Simple Query Endpoints 
 
@@ -69,7 +69,7 @@ _:dbpedia a dnr:SparqlQueryEndpoint ;
   dnr:queryEndpointUri <http://dbpedia.org/sparql> .
 ```
 
-The above configures a Federated Endpoint which sends the query to [[http://dbpedia.org/sparql|DBPedia's SPARQL endpoint]] and the [[http://sparql.org/books/sparql|Books endpoint]] at [[http://sparql.org]]
+The above configures a Federated Endpoint which sends the query to [DBPedia's SPARQL endpoint](http://dbpedia.org/sparql) and the [Books endpoint](http://sparql.org/books/sparql) at [[http://sparql.org]]
 
 ## Update Endpoints 
 

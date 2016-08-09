@@ -4,7 +4,7 @@
 
 Integration of dotNetRDF into ASP.Net applications is configured using the [[UserGuide/Configuration API|Configuration API]] and can be deployed using [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]. This guide teaches you how to deploy configuration using rdfWebDeploy.
 
-To see an example of a more complex configuration file you can go to [[http://www.dotnetrdf.org/demos/sampleConfig]] which is the configuration file used for all the demos found under the [[http://www.dotnetrdf.org/demos/]] URI. The configuration file shown there was tested and deployed using the method described here.
+To see an example of a more complex configuration file you can go to [Configuration API](http://www.dotnetrdf.org/demos/sampleConfig]] which is the configuration file used for all the demos found under the [[http://www.dotnetrdf.org/demos/]] URI. The configuration file shown there was tested and deployed using the method described here.
 
 # Problem 
 
@@ -12,7 +12,7 @@ In this example we want to create a SPARQL Query endpoint which has a base Graph
 
 ## Step 1 - Define Configuration 
 
-To start with we need to create a configuration file which defines this information - see the [[UserGuide/Configuration API|Configuration API]] documentation for guidance on this, this will look like the following:
+To start with we need to create a configuration file which defines this information - see the [[UserGuide/Configuration API) documentation for guidance on this, this will look like the following:
 
 {{{
 #!turtle
@@ -137,7 +137,7 @@ Navigate to the URL `/sparql` at your site and you should now have a working SPA
 
 There are two common error conditions you may run into:
 
-You get a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.DotNetRdfConfigurationException|DotNetRdfConfigurationException]] - this generally indicates that your Configuration file is invalid (note that `rdfWebDeploy -test` can only ensure general syntactic correctness and not validity). If you have debugging turned on you should normally see an informative message detailed what is wrong with your configuration. Correct the errors and retry - you may need to restart the IIS site to force the updated file to be read in some cases.
+You get a [DotNetRdfConfigurationException](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.DotNetRdfConfigurationException) - this generally indicates that your Configuration file is invalid (note that `rdfWebDeploy -test` can only ensure general syntactic correctness and not validity). If you have debugging turned on you should normally see an informative message detailed what is wrong with your configuration. Correct the errors and retry - you may need to restart the IIS site to force the updated file to be read in some cases.
 
 You get an `Unable to load type VDS.RDF.Web.QueryHandler` or similar error. This is usually due to a failure to upload the required DLLs into the `bin/` directory of your site. If you have done this ensure that you are running as an IIS Application rather than a virtual directory. If you are running as a virtual directory (and cannot change to running as an IIS application) then move the DLLs from the `bin/` directory in your virtual folder to the `bin/` directory of the application root
 
@@ -149,5 +149,5 @@ For more information on setting up SPARQL endpoints you may wish to look at the 
 
 * [[UserGuide/Configuration API|Configuration API]]
 * [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]]
-* [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]]
+* [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#)
 * [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]

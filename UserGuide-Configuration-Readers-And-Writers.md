@@ -10,7 +10,7 @@ You can configure any type of reader/writer supported via the library using this
 
 The `http://www.w3.org/ns/formats/media_type` URI is used to reference MIME types with which the reader/writer should be associated and the `http://www.w3.org/ns/formats/preferred_suffix` URI is used to reference file extensions with which the reader/writer should be associated.
 
-The following example shows how to change the default RDF/XML writer to be the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.PrettyRdfXmlWriter|PrettyRdfXmlWriter]]:
+The following example shows how to change the default RDF/XML writer to be the [PrettyRdfXmlWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.PrettyRdfXmlWriter):
 
 {{{
 #!turtle
@@ -30,9 +30,9 @@ You can use the `AutoConfigureReadersAndWriters(IGraph g)` method to have the AP
 The same basic configuration applies regardless of whether you are configuring a reader/writer, you merely need to swap out `dnr:RdfWriter` for the class representing what you are registering:
 
 |= RDF Class |= .Net Class |
-| `dnr:RdfWriter` | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfWriter|IRdfWriter]] |
-| `dnr:RdfParser` | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader|IRdfReader]] |
-| `dnr:DatasetParser` | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IStoreReader|IStoreReader]] |
-| `dnr:DatasetWriter` | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IStoreWriter|IStoreWriter]] |
-| `dnr:SparqlResultsParser` | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader|ISparqlResultsReader]] |
-| `dnr:SparqlResultsWriter` | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter|ISparqlResultsWriter]] |
+| `dnr:RdfWriter` | [IRdfWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfWriter) |
+| `dnr:RdfParser` | [IRdfReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader) |
+| `dnr:DatasetParser` | [IStoreReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IStoreReader) |
+| `dnr:DatasetWriter` | [IStoreWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IStoreWriter) |
+| `dnr:SparqlResultsParser` | [ISparqlResultsReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader) |
+| `dnr:SparqlResultsWriter` | [ISparqlResultsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter) |

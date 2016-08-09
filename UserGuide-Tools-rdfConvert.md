@@ -6,7 +6,7 @@ rdfConvert is a command line utility for converting RDF between different format
 
 ## Download 
 
-You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
+You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
 
 ## Documentation 
 
@@ -56,5 +56,5 @@ rdfConvert may be used to convert between Dataset (NQuads, TriG and TriX) format
 | `-out:filename.ext` or `-output:filename.ext` | Specifies a specific file to output to (assuming only 1 input), if more than one input is specified then this parameter sets the base filename for outputs (extension ignored in this case) |
 | `-overwrite` | Specifies that the utility can overwrite existing files |
 | `-pp[:boolean]` | Enables/Disables Pretty Printing, if specified without a boolean parameter then defaults to enabled |
-| `-rapper` | Runs rdfConvert in [[http://librdf.org/raptor/rapper.html|rapper]] compatibility mode, type `rdfConvert.exe -rapper -h` for further information. Must be the first argument or ignored |
+| `-rapper` | Runs rdfConvert in [rapper](http://librdf.org/raptor/rapper.html) compatibility mode, type `rdfConvert.exe -rapper -h` for further information. Must be the first argument or ignored |
 | `-warnings` | Shows Warning Messages output by Parsers and Serializers |

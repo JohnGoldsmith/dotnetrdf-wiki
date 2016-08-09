@@ -2,7 +2,7 @@
 
 # In-Memory 
 
-This is a wrapper over one of dotNetRDF's internal in-memory [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] or [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]] implementations.  It is primarily intended as a useful convenience for testing and prototyping prior to deploying the actual production store you intend to use.  This functionality is provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.InMemoryManager|InMemoryManager]] class.
+This is a wrapper over one of dotNetRDF's internal in-memory [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) or [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset) implementations.  It is primarily intended as a useful convenience for testing and prototyping prior to deploying the actual production store you intend to use.  This functionality is provided by the [InMemoryManager](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.InMemoryManager) class.
 
 ## Supported Capabilities 
 

@@ -6,7 +6,7 @@ A command line utility for querying local/remote RDF using SPARQL
 
 ## Download 
 
-You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
+You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
 
 ## Documentation 
 
@@ -46,7 +46,7 @@ To query a remote endpoint you can use the `-endpoint:` option and specify the e
 |= Option |= Purpose |
 | `partialResults[:boolean]` | Specifies whether partial results should be returned in the event of a query timeout. Only valid for queries over local files and remote URIs |
 | `-r:reaonser` | Applies a SKOS/RDFS reasoner to the input data, use `skos` or `rdfs` as the `reasoner` argument.  SKOS Concept Hierarchy/RDFS class & property hierarchies are dynamically determined based on the input data. You may need to reorder the input files and URIs in order to get correct inference results e.g. if your schema was the last input it would result in little/no inferences being made |
-| `-roqet` | Runs rdfQuery in [[http://librdf.org/rasqal/roqet.html|roqet]] compatibility mode, type `rdfQuery.exe -roqet -h` for more information. Must be the first argument or ignored. |
+| `-roqet` | Runs rdfQuery in [roqet](http://librdf.org/rasqal/roqet.html) compatibility mode, type `rdfQuery.exe -roqet -h` for more information. Must be the first argument or ignored. |
 | `-syntax[:syntax]` | Specifies what Query Syntax should be permitted, see Supported Syntax for more information. |
 | `-timeout:i` | Specifies the Query Timeout in milliseconds |
 

@@ -2,7 +2,7 @@
 
 # Transactions API 
 
-The Transactions API provides some degree of control over Transactions when working with a store that supports these.  Supporting stores implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ITransactionalStorage|ITransactionalStorage]] and/or [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncTransactionalStorage|IAsyncTransactionalStorage]] interfaces.
+The Transactions API provides some degree of control over Transactions when working with a store that supports these.  Supporting stores implement the [ITransactionalStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ITransactionalStorage) and/or [IAsyncTransactionalStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncTransactionalStorage) interfaces.
 
 # Basic Usage 
 

@@ -2,7 +2,7 @@
 
 # Allegro Graph 
 
-dotNetRDF supports [[http://www.franz.com/agraph/|Franz AllegroGraph]] 3.x and 4.x via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.AllegroGraphConnector|AllegroGraphConnector]] class.
+dotNetRDF supports [Franz AllegroGraph](http://www.franz.com/agraph/) 3.x and 4.x via the [AllegroGraphConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.AllegroGraphConnector) class.
 
 ## Supported Capabilities 
 
@@ -43,13 +43,13 @@ AllegroGraphConnector agraph = new AllegroGraphConnector("http://localhost:9875"
 
 # Managing a Server 
 
-We support managing a server via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer|AllegroGraphServer]] class which implements our [[UserGuide/Storage/Servers|Servers API]]
+We support managing a server via the [AllegroGraphServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer) class which implements our [[UserGuide/Storage/Servers|Servers API]]
 
 Managing a server allows you to manage a single catalog at a time, a `AllegroGraphConnector` provides access to its associated server via the `ParentServer` or `AsyncParentServer` property.
 
 ## Connecting to a Server 
 
-You can also create connect directly to a server by creating an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer|AllegroGraphServer]] class.  This requires you to know the Base URI and catalog ID you want to manage.
+You can also create connect directly to a server by creating an instance of the [AllegroGraphServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer) class.  This requires you to know the Base URI and catalog ID you want to manage.
 
 For 3.x you will always need the catalog ID:
 
@@ -69,4 +69,4 @@ AllegroGraphServer agraph = new AllegroGraphServer("http://localhost:9875");
 
 ## Creating Stores 
 
-When creating a store the `AllegroGraphServer` will provide only simple  [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.StoreTemplate|StoreTemplate]] instances as templates.  No extra settings may currently be configured when creating stores on a Allegro Graph server.
+When creating a store the `AllegroGraphServer` will provide only simple  [StoreTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.StoreTemplate) instances as templates.  No extra settings may currently be configured when creating stores on a Allegro Graph server.

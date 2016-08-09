@@ -63,7 +63,7 @@ On IIS 6x you configure a ASP.Net Handler by adding a line to the `<httpHandlers
 
 Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to `http://www.yourdomain.com/sparql`
 
-Under IIS 6x you will need to get IIS to serve the request even when the physical file doesn't exist. To do this you can either create a dummy file/folder with the appropriate name or use the IIS 5x configuration approach (see [[http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/4c840252-fab7-427e-a197-7facb6649106.mspx?mfr=true|Microsoft TechNet article]] for IIS 6x)
+Under IIS 6x you will need to get IIS to serve the request even when the physical file doesn't exist. To do this you can either create a dummy file/folder with the appropriate name or use the IIS 5x configuration approach (see [Microsoft TechNet article](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/4c840252-fab7-427e-a197-7facb6649106.mspx?mfr=true) for IIS 6x)
 
 **Note:** In theory it should be possible to configure under IIS 6 without the previous step but I don't currently have access to an appropriate machine to verify this.
 

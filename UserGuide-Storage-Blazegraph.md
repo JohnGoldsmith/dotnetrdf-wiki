@@ -2,6 +2,6 @@
 
 # Blazegraph 
 
-dotNetRDF supports [[http://blazegraph.com|SysTap's Blazegraph]] via the [[https://github.com/SYSTAP/blazegraph-dotnetrdf|Blazegraph dotNetRDF Connector]] which is maintained by SysTap
+dotNetRDF supports [SysTap's Blazegraph](http://blazegraph.com) via the [[https://github.com/SYSTAP/blazegraph-dotnetrdf|Blazegraph dotNetRDF Connector]] which is maintained by SysTap
 
 Please see [[https://github.com/SYSTAP/blazegraph-dotnetrdf]] for documentation

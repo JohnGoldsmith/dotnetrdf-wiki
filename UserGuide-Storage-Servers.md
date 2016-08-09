@@ -2,22 +2,22 @@
 
 # Servers API 
 
-The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IStorageServer|IStorageServer]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IAsyncStorageServer|IASyncStorageServer]] interfaces.  These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] instances.
+The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [IStorageServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IStorageServer) and [IASyncStorageServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IAsyncStorageServer) interfaces.  These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) instances.
 
 # Implementations 
 
 The following implementations are currently provided:
 
 |= Implementation |= Description |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer|AllegroGraphServer]] | Manages a catalog of an AllegroGraph server, see the [[UserGuide/Storage/AllegroGraph|Allegro Graph]] documentation |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer|SesameServer]] | Manages a Sesame HTTP Protocol compliant server, see the [[UserGuide/Storage/Sesame|Sesame]] documentation |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer|StardogServer]] | Manages a Stardog server, see the [[UserGuide/Storage/Stardog|Stardog]] documentation |
+| [AllegroGraphServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer) | Manages a catalog of an AllegroGraph server, see the [[UserGuide/Storage/AllegroGraph|Allegro Graph]] documentation |
+| [SesameServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer) | Manages a Sesame HTTP Protocol compliant server, see the [[UserGuide/Storage/Sesame|Sesame]] documentation |
+| [StardogServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer) | Manages a Stardog server, see the [[UserGuide/Storage/Stardog|Stardog]] documentation |
 
 # Basic Usage 
 
 ## Properties 
 
-These interfaces provide a single `IOBehaviour` property which reports [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IOBehaviour|IOBehaviour]] that describes the capabilities of an implementation i.e. which operations are supported.
+These interfaces provide a single `IOBehaviour` property which reports [IOBehaviour](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IOBehaviour) that describes the capabilities of an implementation i.e. which operations are supported.
 
 ## Methods 
 
@@ -95,7 +95,7 @@ public class ListStoresExample
 
 ### Creating a Store 
 
-Creating a store is the most complex operation is done with a combination of the `CreateStore()` and either the `GetDefaultTemplate()` or `GetAvailableTemplates()` method.  Creating a store requires that you provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.IStoreTemplate|IStoreTemplate]] instance which indicates to the server what kind of store to create.
+Creating a store is the most complex operation is done with a combination of the `CreateStore()` and either the `GetDefaultTemplate()` or `GetAvailableTemplates()` method.  Creating a store requires that you provide a [IStoreTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.IStoreTemplate) instance which indicates to the server what kind of store to create.
 
 ==== Templates ====
 

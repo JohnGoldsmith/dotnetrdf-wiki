@@ -8,7 +8,7 @@ You can use the related [[UserGuide/Tools/rdfServerGui|rdfServerGui]] tool to pr
 
 ## Download 
 
-You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
+You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
 
 ## Documentation 
 

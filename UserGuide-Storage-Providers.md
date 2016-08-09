@@ -2,7 +2,7 @@
 
 # Storage Providers 
 
-This area of the [[User Guide|UserGuide]] covers the available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncStorageProvider|IAsyncStorageProvider]] implementations.  Each provider has its own wiki page which details provider specific behaviour and any special functionality available for that provider.
+This area of the [[User Guide|UserGuide]] covers the available [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) and [IAsyncStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncStorageProvider) implementations.  Each provider has its own wiki page which details provider specific behaviour and any special functionality available for that provider.
 
 You should read the [[UserGuide/Triple Store Integration|Triple Store Integration]] page for an overview of how to use the Storage API.
 
@@ -25,5 +25,5 @@ The available providers are as follows:
 There are also some useful wrappers available:
 
 |= Wrapper |= Description |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ReadOnlyConnector|ReadOnlyConnector]] | Make any other provider read-only |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.QueryableReadOnlyConnector|QueryableReadOnlyConnector]] | Make any queryable provider read-only |
+| [ReadOnlyConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ReadOnlyConnector) | Make any other provider read-only |
+| [QueryableReadOnlyConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.QueryableReadOnlyConnector) | Make any queryable provider read-only |

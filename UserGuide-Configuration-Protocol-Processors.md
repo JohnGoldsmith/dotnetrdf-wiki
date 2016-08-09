@@ -2,7 +2,7 @@
 
 # Configuring Protocol Processors 
 
-Protocol Processors are classes that can process SPARQL Graph Store HTTP Protocol requests and return appropriate responses. Protocol Processors implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.Protocol.ISparqlHttpProtocolProcessor|ISparqlHttpProtocolProcessor]] interface and the library provides 3 concrete implementations of this all of which can be configured using the Configuration API.
+Protocol Processors are classes that can process SPARQL Graph Store HTTP Protocol requests and return appropriate responses. Protocol Processors implement the [ISparqlHttpProtocolProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.Protocol.ISparqlHttpProtocolProcessor) interface and the library provides 3 concrete implementations of this all of which can be configured using the Configuration API.
 
 # Basic Configuration 
 
@@ -19,7 +19,7 @@ _:proc a dnr:SparqlHttpProtocolProcessor .
 
 ## Leviathan Protocol Processor 
 
-The Leviathan Protocol Processor is used to process protocol requests on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface e.g.
+The Leviathan Protocol Processor is used to process protocol requests on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) interface e.g.
 
 {{{
 #!turtle
@@ -40,7 +40,7 @@ Alternatively you may use the `dnr:usingDataset` property to connect it to a Dat
 
 ## Generic Protocol Processor 
 
-The Generic Protocol Processor is used to process protocol requests against some arbitrary store where the store you wish to connect to has an implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]].
+The Generic Protocol Processor is used to process protocol requests against some arbitrary store where the store you wish to connect to has an implementation of [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider).
 
 Not all features of the protocol may be supported or behave correctly depending on the capabilities of the `IStorageProvider` used.
 

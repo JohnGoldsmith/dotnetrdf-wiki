@@ -2,7 +2,7 @@
 
 # SPARQL Query and Update Endpoints 
 
-You can treat any publicly accessible SPARQL store which has both Query and Update endpoints as a read-write store using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ReadWriteSparqlConnector|ReadWriteSparqlConnector]].
+You can treat any publicly accessible SPARQL store which has both Query and Update endpoints as a read-write store using the [ReadWriteSparqlConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ReadWriteSparqlConnector).
 
 **Note:** If you were looking for documentation on querying a SPARQL endpoint please see [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
@@ -22,7 +22,7 @@ You can create a connection either just by providing the endpoint URIs like so:
 SparqlConnector sparql = new SparqlConnector(new Uri("http://example.org/query"), new Uri("http://example.org/update"));
 ```
 
-Or you can provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.SparqlRemoteEndpoint|SparqlRemoteEndpoint]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.SparqlRemoteUpdateEndpoint|SparqlRemoteUpdateEndpoint]] instance like so:
+Or you can provide a [SparqlRemoteEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.SparqlRemoteEndpoint) and [SparqlRemoteUpdateEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.SparqlRemoteUpdateEndpoint) instance like so:
 
 ```csharp
 
@@ -32,4 +32,4 @@ SparqlRemoteUpdateEndpoint updateEndpoint = new SparqlRemoteUpdateEndpoint(new U
 ReadWriteSparqlConnector sparql = new SparqlConnector(queryEndpoint, updateEndpoint);
 ```
 
-In both cases there is an overload which takes a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlConnectorLoadMethod|SparqlConnectorLoadMethods]] which determines whether the `LoadGraph()` method operates by making a `CONSTRUCT` or a `DESCRIBE` query, the default is `CONSTRUCT`
+In both cases there is an overload which takes a [SparqlConnectorLoadMethods](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlConnectorLoadMethod) which determines whether the `LoadGraph()` method operates by making a `CONSTRUCT` or a `DESCRIBE` query, the default is `CONSTRUCT`

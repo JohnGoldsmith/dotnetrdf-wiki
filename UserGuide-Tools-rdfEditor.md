@@ -8,7 +8,7 @@ rdfEditor is a GUI tool designed as a Notepad replacement for editing RDF and SP
 
 ## Download 
 
-You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
+You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
 
 ## Documentation 
 
@@ -54,6 +54,6 @@ Structure view shows the actual triples/quads/SPARQL results found in a document
 
 ## Screencast 
 
-You can see it in action in the following [[http://www.dotnetrdf.org/content.asp?pageID=rdfEditor%20Demo%20Screencast|Demo Screencast]] - apologies for the somewhat low quality audio and video.
+You can see it in action in the following [Demo Screencast](http://www.dotnetrdf.org/content.asp?pageID=rdfEditor%20Demo%20Screencast) - apologies for the somewhat low quality audio and video.
 
 **Note:** This reflects the original release of rdfEditor, newer versions have many additional features and improvements such as multi-document editing.

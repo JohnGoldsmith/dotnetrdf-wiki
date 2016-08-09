@@ -93,9 +93,9 @@ An additional advantage of the Ontology API approach is that it will automatical
 The API provides the following concepts which are wrappers over graphs, triples and nodes:
 
 |= Class |= Purpose |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyGraph|OntologyGraph]] | Represents a graph whose ontology elements may be accessed |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.Ontology|Ontology]] | Represents information about an ontology |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyResource|OntologyResource]] | Represents a resource in the ontology, specific sub-classes expand the basic capabilities further |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyClass|OntologyClass]] | Represents a class in an ontology |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyProperty|OntologyProperty]] | Represents a property in an ontology |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.Individual|Individual]] | Represents an instance of a class in an ontology |
+| [OntologyGraph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyGraph) | Represents a graph whose ontology elements may be accessed |
+| [Ontology](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.Ontology) | Represents information about an ontology |
+| [OntologyResource](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyResource) | Represents a resource in the ontology, specific sub-classes expand the basic capabilities further |
+| [OntologyClass](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyClass) | Represents a class in an ontology |
+| [OntologyProperty](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyProperty) | Represents a property in an ontology |
+| [Individual](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.Individual) | Represents an instance of a class in an ontology |

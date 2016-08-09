@@ -2,7 +2,7 @@
 
 # Configuring Graphs 
 
-Graphs can be specified using the [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]] in a variety of ways. Graphs can be specified as empty or they can be specified as the merge of multiple data sources.
+Graphs can be specified using the [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#) in a variety of ways. Graphs can be specified as empty or they can be specified as the merge of multiple data sources.
 
 Graphs are loaded from Configuration in the following way:
 
@@ -55,11 +55,11 @@ _:otherGraph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" .
 ```
 
-**Note:** While it is possible to potentially introduce circular references by this mechanism the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] is designed such that these references are detected during the loading process and an error will be thrown.
+**Note:** While it is possible to potentially introduce circular references by this mechanism the [ConfigurationLoader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader) is designed such that these references are detected during the loading process and an error will be thrown.
 
 ### Files 
 
-Loading data from files is specified as shown below using the `dnr:fromFile` property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver|IPathResolver]] implementation by setting the `PathResolver` property of the `ConfigurationLoader`. Files are expected to be RDF graphs in formats which dotNetRDF understands.
+Loading data from files is specified as shown below using the `dnr:fromFile` property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [IPathResolver](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver) implementation by setting the `PathResolver` property of the `ConfigurationLoader`. Files are expected to be RDF graphs in formats which dotNetRDF understands.
 
 {{{
 #!turtle

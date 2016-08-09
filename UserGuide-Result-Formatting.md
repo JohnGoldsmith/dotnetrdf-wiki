@@ -2,11 +2,11 @@
 
 # Result Formatting 
 
-When you make a SPARQL query as detailed on the [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]] you typically get back a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet|SparqlResultSet]] object.  While you can trivially dump results to strings using the `ToString()` method this doesn't give you a particularly pretty output, this page details various methods by which you can format results for display.
+When you make a SPARQL query as detailed on the [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]] you typically get back a [SparqlResultSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet) object.  While you can trivially dump results to strings using the `ToString()` method this doesn't give you a particularly pretty output, this page details various methods by which you can format results for display.
 
 ## Using Formatters 
 
-dotNetRDF supports a powerful [[UserGuide/Formatting API|Formatting API]] which is discussed in general elsewhere, this can be leveraged for the purposes of formatting results.  Since values in each column of a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult|SparqlResult]] are just normal [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode|INode]] values you can use any of the existing [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter|INodeFormatter]] implementations for this.
+dotNetRDF supports a powerful [[UserGuide/Formatting API|Formatting API]] which is discussed in general elsewhere, this can be leveraged for the purposes of formatting results.  Since values in each column of a [SparqlResult](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult) are just normal [INode](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode) values you can use any of the existing [INodeFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter) implementations for this.
 
 For example:
 

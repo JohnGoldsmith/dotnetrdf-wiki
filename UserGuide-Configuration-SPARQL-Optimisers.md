@@ -4,8 +4,8 @@
 
 Optimisers come in two forms both of which can be configured using the Configuration API:
 
-* [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.IQueryOptimiser|IQueryOptimiser]] are optimisers which optimise Graph Patterns in a Query
-* [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.IAlgebraOptimiser|IAlgebraOptimiser]] are optimisers which optimise SPARQL Algebra
+* [IQueryOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.IQueryOptimiser) are optimisers which optimise Graph Patterns in a Query
+* [IAlgebraOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.IAlgebraOptimiser) are optimisers which optimise SPARQL Algebra
 
 Please see [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]] for details on how to attach optimisers to HTTP Handlers.
 
@@ -28,7 +28,7 @@ The above configures the default optimiser which is used when no other optimiser
 
 ## No Reorder Optimiser 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.NoReorderOptimiser|NoReorderOptimiser]] is an optimiser that only places `FILTER` clauses but does not otherwise reorder Graph Patterns. It can be configured like so:
+The [NoReorderOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.NoReorderOptimiser) is an optimiser that only places `FILTER` clauses but does not otherwise reorder Graph Patterns. It can be configured like so:
 
 {{{
 #!turtle
@@ -41,7 +41,7 @@ _:optimiser a dnr:QueryOptimiser ;
 
 ## Weighted Optimiser 
 
-The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightedOptimiser|WeightedOptimiser]] reorders Graph Patterns based on weighting calculated from statistics about data. These statistics must be invented/computed and then linked as a Graph to the optimiser like so:
+The [WeightedOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightedOptimiser) reorders Graph Patterns based on weighting calculated from statistics about data. These statistics must be invented/computed and then linked as a Graph to the optimiser like so:
 
 {{{
 #!turtle

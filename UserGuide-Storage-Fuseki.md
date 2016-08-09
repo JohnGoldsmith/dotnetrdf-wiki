@@ -2,7 +2,7 @@
 
 # Fuseki 
 
-[[http://jena.apache.org|Apache Jena]] [[http://jena.apache.org/documentation/serving_data/index.html|Fuseki]] is a HTTP server that allows you to expose any Jena based store e.g. TDB for SPARQL access over HTTP.  dotNetRDF can connect to such stores using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.FusekiConnector|FusekiConnector]].
+[Apache Jena](http://jena.apache.org) [Fuseki](http://jena.apache.org/documentation/serving_data/index.html) is a HTTP server that allows you to expose any Jena based store e.g. TDB for SPARQL access over HTTP.  dotNetRDF can connect to such stores using the [FusekiConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.FusekiConnector).
 
 ## Supported Capabilities 
 

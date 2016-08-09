@@ -2,15 +2,15 @@
 
 # Configuration API 
 
-The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] class which is in the `VDS.RDF.Configuration` namespace.
+The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [ConfigurationLoader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader) class which is in the `VDS.RDF.Configuration` namespace.
 
-Dynamic loading is done by classes which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory|IObjectFactory]] interface which means that this mechanism can be extended as desired. Either additional `IObjectFactory` instances can be registered programmatically with the `AddObjectFactory(IObjectFactory factory)` method or you can specify them in your configuration files and have the system automatically detect them by calling the `AutoConfigureObjectFactories(IGraph g)` function.
+Dynamic loading is done by classes which implement the [IObjectFactory](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory) interface which means that this mechanism can be extended as desired. Either additional `IObjectFactory` instances can be registered programmatically with the `AddObjectFactory(IObjectFactory factory)` method or you can specify them in your configuration files and have the system automatically detect them by calling the `AutoConfigureObjectFactories(IGraph g)` function.
 
 # Configuration File structure 
 
-A Configuration file is simply an RDF graph which uses the [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]] to specify objects which can be loaded dynamically by the `ConfigurationLoader`. A Configuration file may be encoded in any valid RDF graph format which the library understands though typically we recommend using Turtle/N3 for their human readability and ease of editing compared to other RDF serializations.
+A Configuration file is simply an RDF graph which uses the [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#) to specify objects which can be loaded dynamically by the `ConfigurationLoader`. A Configuration file may be encoded in any valid RDF graph format which the library understands though typically we recommend using Turtle/N3 for their human readability and ease of editing compared to other RDF serializations.
 
-The [[http://www.dotnetrdf.org/configuration#|Configuration vocabulary]] allows for specifying a variety of commonly used objects in dotNetRDF as listed in the Configurable Objects section.
+The [Configuration vocabulary](http://www.dotnetrdf.org/configuration#) allows for specifying a variety of commonly used objects in dotNetRDF as listed in the Configurable Objects section.
 
 ## Vocabulary Basics 
 
@@ -28,7 +28,7 @@ To specify an object you will need at least two triples, for example to specify 
 
 We use the `rdf:type` (specified here by the Turtle/N3 keyword `a`) predicate to specify that some Node has a type of `dnr:Graph` which is the class of Graphs in the Configuration Vocabulary. Then the `dnr:type` property is used to specify the .Net type of this object, for dotNetRDF types it is sufficient to specify the full namespace qualified name of the class. For any other class you will need to specify the Assembly Qualified Name of the class.
 
-If you fail to specify a `dnr:type` property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the `dnr:Graph` class the default type is [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph|Graph]].
+If you fail to specify a `dnr:type` property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the `dnr:Graph` class the default type is [Graph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph).
 
 ## Imports 
 

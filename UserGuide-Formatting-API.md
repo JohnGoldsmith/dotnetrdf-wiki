@@ -7,13 +7,13 @@ The Formatting API is an collection of APIs found in the `VDS.RDF.Writing.Format
 The API consists of a number of interfaces:
 
 |= Interface |= Formatting Capabilities |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ICharFormatter|ICharFormatter]] | Formats individual characters |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IUriFormatter|IUriFormatter]] | Formats URIs |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IBaseUriFormatter|IBaseUriFormatter]] | Formats Base URI declarations |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INamespaceFormatter|INamespaceFormatter]] | Formats namespace declarations |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter|INodeFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode|INode]] instances |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ITripleFormatter|ITripleFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Triple|Triple]] instances |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IResultFormatter|IResultFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult|SparqlResult]] instances |
+| [ICharFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ICharFormatter) | Formats individual characters |
+| [IUriFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IUriFormatter) | Formats URIs |
+| [IBaseUriFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IBaseUriFormatter) | Formats Base URI declarations |
+| [INamespaceFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INamespaceFormatter) | Formats namespace declarations |
+| [INodeFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter) | Formats [INode](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode) instances |
+| [ITripleFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ITripleFormatter) | Formats [Triple](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Triple) instances |
+| [IResultFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IResultFormatter) | Formats [SparqlResult](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult) instances |
 
 # Basic Usage 
 
@@ -46,15 +46,15 @@ foreach (Triple t in g.GetTriplesWithPredicate(rdfType))
 Currently the library has the following formatters available but you can easily define your own:
 
 |= Formatter |= Format Produced |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.CsvFormatter|CsvFormatter]] | CSV |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.Notation3Formatter|Notation3Formatter]] | Notation 3 |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.NQuadsFormatter|NQuadsFormatter]] | NQuads |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.NTriplesFormatter|NTriplesFormatter]] | NTriples |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.SparqlFormatter|SparqlFormatter]] | SPARQL style, can also format queries |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.TsvFormatter|TsvFormatter]] | TSV |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.TurtleFormatter|TurtleFormatter]] | Turtle |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.UncompressedNotation3Formatter|UncompressedNotation3Formatter]] | Uncompressed Notation 3 |
-| [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.UncompressedTurtleFormatter|UncompressedTurtleFormatter]] | Uncompressed Turtle |
+| [CsvFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.CsvFormatter) | CSV |
+| [Notation3Formatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.Notation3Formatter) | Notation 3 |
+| [NQuadsFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.NQuadsFormatter) | NQuads |
+| [NTriplesFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.NTriplesFormatter) | NTriples |
+| [SparqlFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.SparqlFormatter) | SPARQL style, can also format queries |
+| [TsvFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.TsvFormatter) | TSV |
+| [TurtleFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.TurtleFormatter) | Turtle |
+| [UncompressedNotation3Formatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.UncompressedNotation3Formatter) | Uncompressed Notation 3 |
+| [UncompressedTurtleFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.UncompressedTurtleFormatter) | Uncompressed Turtle |
 
 ## Example 2 
 
