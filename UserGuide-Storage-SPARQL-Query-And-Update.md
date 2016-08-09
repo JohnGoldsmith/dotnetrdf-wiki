@@ -4,7 +4,7 @@
 
 You can treat any publicly accessible SPARQL store which has both Query and Update endpoints as a read-write store using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ReadWriteSparqlConnector|ReadWriteSparqlConnector]].
 
-**Note:** If you were looking for documentation on querying a SPARQL endpoint please see [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
+**Note:** If you were looking for documentation on querying a SPARQL endpoint please see [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
 ## Supported Capabilities 
 

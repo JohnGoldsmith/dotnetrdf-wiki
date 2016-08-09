@@ -2,7 +2,7 @@
 
 # Result Formatting 
 
-When you make a SPARQL query as detailed on the [[UserGuide/Querying with SPARQL|Querying with SPARQL]] you typically get back a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet|SparqlResultSet]] object.  While you can trivially dump results to strings using the //ToString()// method this doesn't give you a particularly pretty output, this page details various methods by which you can format results for display.
+When you make a SPARQL query as detailed on the [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]] you typically get back a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet|SparqlResultSet]] object.  While you can trivially dump results to strings using the //ToString()// method this doesn't give you a particularly pretty output, this page details various methods by which you can format results for display.
 
 ## Using Formatters 
 

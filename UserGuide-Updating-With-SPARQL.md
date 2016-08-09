@@ -198,7 +198,7 @@ The above example creates a SPARQL Update containing two commands (a COPY then a
 
 # Tutorial Navigation 
 
-You've reached the end of the basic tutorial, the previous topic was [[UserGuide/Querying with SPARQL|Querying with SPARQL]].  Go back to the [[User Guide|UserGuide]] to explore more topics.
+You've reached the end of the basic tutorial, the previous topic was [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]].  Go back to the [[User Guide|UserGuide]] to explore more topics.
 
 Users wishing to learn more may wish to jump straight to the following topics:
 

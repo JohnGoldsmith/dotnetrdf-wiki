@@ -293,7 +293,7 @@ The Library contains the following standard ##IStoreReader## and ##IStoreWriter#
 
 # Tutorial Navigation 
 
-The previous topic was [[UserGuide/Typed Values and Lists|Typed Values and Lists]], the next topic is [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
+The previous topic was [[UserGuide/Typed Values and Lists|Typed Values and Lists]], the next topic is [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
 Users wishing to learn more may wish to jump straight to one of the following pages:
 

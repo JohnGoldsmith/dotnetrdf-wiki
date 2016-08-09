@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
+[[Home]] > [[User Guide|UserGuide]] > [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
 # Querying with SPARQL 
 
