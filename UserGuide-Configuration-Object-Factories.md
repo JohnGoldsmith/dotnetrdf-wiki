@@ -1,17 +1,16 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Object Factories|Object Factories]]
 
-= Configuring Object Factories =
+# Configuring Object Factories 
 
 Object Factories are classes that are used to extend the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] so it can load more complex or user defined objects. These classes must implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory|IObjectFactory]] interface and have a public unparameterized constructor. They can be configured as follows:
 
-{{{
-#!csharp
+```csharp
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:factory a dnr:ObjectFactory ;
   dnr:type "YourNamespace.YourType, YourAssembly" .
-}}}
+```
 
 This configures an object factory from an external assembly. Object factories can be registered as described on the [[UserGuide/Configuration API|Configuration API]] page.
 

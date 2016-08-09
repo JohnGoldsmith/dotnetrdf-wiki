@@ -1,47 +1,47 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfQuery|rdfQuery]]
 
-= rdfQuery =
+# rdfQuery 
 
 A command line utility for querying local/remote RDF using SPARQL
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-== Documentation ==
+## Documentation 
 
 Command usage is as follows:
 
 {{{
 rdfQuery.exe input1 [input2 [input3 [...]]] [options] query
-}}}
+```
 
 e.g. Query a single file
 {{{
 rdfQuery.exe data.rdf "SELECT * WHERE {?s a ?type}"
-}}}
+```
 
 e.g. Query a remote file and get SPARQL JSON results
 {{{
 rdfQuery.exe -uri:http://example.org/something -outformat:json "SELECT * WHERE {?s a ?type}" > results.srj
-}}}
+```
 
 e.g. Query a remote endpoint and get SPARQL XML results
 {{{
 rdfQuery.exe -endpoint:http://dbpedia.org/sparql -out:results.srx -outformat:srx "SELECT * WHERE {?s a ?type} LIMIT 50"
-}}}
+```
 
 As in the above examples you can query a mixture of local files and URIs by prefixing URIs with ##-uri:##
 
 To query a remote endpoint you can use the ##-endpoint:## option and specify the endpoint URI. If you use this option you cannot specify any other inputs
 
-=== Notes ===
+### Notes 
 
 * rdfQuery uses the SPARQL XML Results & NTriples Writers as its default writers if a specific format is not specified with the ##-outformat## option
 * rdfQuery writes to stdout if no output file is specified with the -out or -output option
 * rdfQuery reads a query from stdin if the last argument is not a query (i.e. it is anything other than some -option)
 
-=== Supported Options ===
+### Supported Options 
 
 |= Option |= Purpose |
 | ##partialResults[:boolean]## | Specifies whether partial results should be returned in the event of a query timeout. Only valid for queries over local files and remote URIs |

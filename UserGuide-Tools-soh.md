@@ -1,14 +1,14 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/soh|SPARQL over HTTP (soh)]]
 
-= SPARQL over HTTP (soh) =
+# SPARQL over HTTP (soh) 
 
 A command line utility for accessing SPARQL servers
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-== Documentation ==
+## Documentation 
 
 soh operates in one of three modes:
 
@@ -19,22 +19,22 @@ soh operates in one of three modes:
 
 The mode must always be specified as the first argument to the tool.
 
-=== Query Mode ===
+### Query Mode 
 
 Command Usage is:
 
 {{{
 soh.exe query [options]
-}}}
+```
 
 e.g. Query a endpoint with the query specified at the command line 
 {{{
 soh.exe query --service http://dbpedia.org/sparql "SELECT * WHERE {?s a ?type} LIMIT 10"
-}}}
+```
 e.g. Query an endpoint with the query taken from a file
 {{{
 soh.exe query --service http://dbpedia.org/sparql --query query.rq
-}}}
+```
 
 ==== Supported Options ====
 
@@ -47,22 +47,22 @@ soh.exe query --service http://dbpedia.org/sparql --query query.rq
 | #--version## | Displays the version and quits |
 | ##--h## or ##--help## | Displays the help and quits |
 
-=== Update Mode ===
+### Update Mode 
 
 Command Usage is:
 
 {{{
 soh.exe update [options]
-}}}
+```
 
 e.g. Update an endpoint specifying the update at the command line
 {{{
 soh.exe update service http://example.org/update "LOAD <http://dbpedia.org/resource/Ilkeston>"
-}}}
+```
 e.g. Update an endpoint specifying the update using a file.
 {{{
 soh.exe update service http://example.org/update --update update.ru
-}}}
+```
 
 ==== Supported Options ====
 
@@ -74,23 +74,23 @@ soh.exe update service http://example.org/update --update update.ru
 | ##--version## | Displays the version and quits |
 | ##--h## or ##--help## | Displays the help and quits |
 
-=== Protocol Mode ===
+### Protocol Mode 
 
 Command Usage is:
 
 {{{
 soh.exe protocol [head|get|post|put|delete] datasetURI graph [file] [options]
-}}}
+```
 
 e.g. Upload a RDF file to the default graoh
 {{{
 soh.exe protocol put http://example.org/dataset/data default example.rdf
-}}}
+```
 
 e.g. Delete a given graph
 {{{
 soh.exe protocol delete http://example.org/dataset/data http://example.org/someGraph
-}}}
+```
 
 ==== Note ====
 

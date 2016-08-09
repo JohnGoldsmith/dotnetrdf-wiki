@@ -1,32 +1,32 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfServer|rdfServer]]
 
-= rdfServer =
+# rdfServer 
 
 rdfServer is a command line HTTP server which provides a SPARQL Server.
 
 You can use the related [[UserGuide/Tools/rdfServerGui|rdfServerGui]] tool to provide a simple GUI for the creation and management of these servers.
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-== Documentation ==
+## Documentation 
 
 Usage is as follows:
 
 {{{
 rdfServer.exe [options]
-}}}
+```
 
 For example try the following:
 
 {{{
 rdfServer.exe -v
-}}}
+```
 
 Then point your browser at ##http://localhost:1986/query## which will provide you a query interface, or ##http://localhost:1986/update## which will give you the update interface.
 
-=== Supported Options ===
+### Supported Options 
 
 |= Option |= Purpose |
 | ##-b directory## or ##-base directory## | Sets the Base Directory from which static content can be served |
@@ -40,7 +40,7 @@ Then point your browser at ##http://localhost:1986/query## which will provide yo
 | ##-r## or ##-rest## | Enabled RESTful Control which allows a request to be POSTed to ##/control## with ##operation=restart## or ##operation=stop## to control the server |
 | ##-v## or ##-verbose## | Sets Verbose mode - causes all requests and errors to be logged to console |
 
-=== Configuration Limitations ===
+### Configuration Limitations 
 
 When a Configuration file is used to configure the server the following limitations are placed on the configuration:
 

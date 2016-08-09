@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/User Groups|User Groups]]
 
-= Configuring User Groups =
+# Configuring User Groups 
 
 User Groups are configured very simply as follows:
 
@@ -31,7 +31,7 @@ _:perm2 a dnr:Permission ;
   dnr:action "DELETE" ;
   dnr:action "MODIFY" ;
   dnr:action "DELETE DATA" .
-}}}
+```
 
 In the above example we specify a user group with a single member, members are specified via the ##dnr:member## property. Permissions are granted to the group using the ##dnr:allow## and ##dnr:deny## properties - see [[UserGuide/Configuration/Permissions|Configuration API - Permissions]] for more details.
 

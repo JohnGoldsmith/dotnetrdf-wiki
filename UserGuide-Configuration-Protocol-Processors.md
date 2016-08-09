@@ -1,10 +1,10 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Protocol Processors|Protocol Processors]]
 
-= Configuring Protocol Processors =
+# Configuring Protocol Processors 
 
 Protocol Processors are classes that can process SPARQL Graph Store HTTP Protocol requests and return appropriate responses. Protocol Processors implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.Protocol.ISparqlHttpProtocolProcessor|ISparqlHttpProtocolProcessor]] interface and the library provides 3 concrete implementations of this all of which can be configured using the Configuration API.
 
-= Basic Configuration =
+# Basic Configuration 
 
 Basic Configuration for a Protocol Processor looks like the following:
 
@@ -15,9 +15,9 @@ Basic Configuration for a Protocol Processor looks like the following:
 
 _:proc a dnr:SparqlHttpProtocolProcessor .
   dnr:type "VDS.RDF.Update.Protocol.LeviathanProtocolProcessor" .
-}}}
+```
 
-== Leviathan Protocol Processor ==
+## Leviathan Protocol Processor 
 
 The Leviathan Protocol Processor is used to process protocol requests on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a ##dnr:usingStore## property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface e.g.
 
@@ -32,13 +32,13 @@ _:proc a dnr:SparqlHttpProtocolProcessor .
 
 _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
-}}}
+```
 
 For information on how to configure Triple Stores see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
 
 Alternatively you may use the ##dnr:usingDataset## property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both ##dnr:usingDataset## and ##dnr:usingStore## are present then ##dnr:usingDataset## has priority and the value of ##dnr:usingStore## is ignored.
 
-== Generic Protocol Processor ==
+## Generic Protocol Processor 
 
 The Generic Protocol Processor is used to process protocol requests against some arbitrary store where the store you wish to connect to has an implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]].
 
@@ -60,11 +60,11 @@ _:manager a dnr:StorageProvider ;
   dnr:server "http://virtuoso.example.com" ;
   dnr:user "username" ;
   dnr:password "password" .
-}}}
+```
 
 The above configures a Generic Protocol Processor which processes requests using a Virtuoso quad store.
 
-== Protocol to Update Processor ==
+## Protocol to Update Processor 
 
 The Protocol to Update Processor is a processor which operates using the supplied Query and Update processors, see [[UserGuide/Configuration/Query Processors|Configuration API - Query Processors]] and [[UserGuide/Configuration/Update Processors|Configuration API - Update Processors]] for details on configuring these.
 
@@ -88,6 +88,6 @@ _:uProc a dnr:SparqlUpdateProcessor ;
 
 _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
-}}}
+```
 
 Note that the above is in effect identical to the example given for the Leviathan Protocol Processor but much more complex configurations are possible than with the plain Leviathan processor.

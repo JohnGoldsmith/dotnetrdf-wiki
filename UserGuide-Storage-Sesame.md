@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]] > [[UserGuide/Storage/Sesame|Sesame]]
 
-= Sesame =
+# Sesame 
 
 We support the [[http://www.openrdf.org/doc/sesame2/system/ch08.html|Sesame 2.0 HTTP Protocol]] which allows us to communicate with any [[http://www.openrdf.org|Sesame]] based store exposed via a Sesame HTTP server.  This means we can support Sesame's own store implementations as well as others such as [[http://www.ontotext.com/owlim|OWLIM]] and [[http://www.systap.com/bigdata.htm|BigData]] which may be exposed via Sesame.
 
@@ -13,49 +13,46 @@ Connectivity with Sesame is done via a number of classes:
 
 Typically you will most likely just use the ##SesameHttpProtocolConnector## since that will always reflect the current version of the Sesame protocol.
 
-== Supported Capabilities ==
+## Supported Capabilities 
 
 * Load, Save, Delete, Update and List Graphs
 * SPARQL Query
 * SPARQL Update (if using Version 6 connector or higher)
 
-== Creating a Connection ==
+## Creating a Connection 
 
 To create a connection to Sesame you need to know the Base URI of the server and the repository ID e.g.
 
-{{{
-#!csharp
+```csharp
 
 SesameHttpProtocolConnector sesame = new SesameHttpProtocolConnector("http://localhost:8080/openrdf-sesame/", "example");
-}}}
+```
 
 If you are using HTTP authentication then you can optionally supply user credentials:
 
-{{{
-#!csharp
+```csharp
 
 SesameHttpProtocolConnector sesame = new SesameHttpProtocolConnector("http://localhost:8080/openrdf-sesame/", "example", "username", "password");
-}}}
+```
 
 Additionally there are overloads for supplying a proxy server if necessary.
 
-= Managing a Server =
+# Managing a Server 
 
 We support managing a server via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer|SesameServer]] class which implements our [[UserGuide/Storage/Servers|Servers API]]
 
 Managing a server allows you to manage a single catalog at a time, a Sesame connection provides access to its associated server via the //ParentServer// or //AsyncParentServer// property.
 
-== Connecting to a Server ==
+## Connecting to a Server 
 
 You can also create connect directly to a server by creating an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer|SesameServer]] class.  This requires you to know the Base URI of the server:
 
-{{{
-#!csharp
+```csharp
 
 SesameServer sesame = new SesameServer("http://localhost:8080/openrdf-sesame/");
-}}}
+```
 
-== Creating Stores ==
+## Creating Stores 
 
 When creating a store the ##SesameServer## will use one of the following templates:
 

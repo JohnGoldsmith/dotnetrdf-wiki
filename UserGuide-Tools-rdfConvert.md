@@ -1,47 +1,47 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfConvert|rdfConvert]]
 
-= rdfConvert =
+# rdfConvert 
 
 rdfConvert is a command line utility for converting RDF between different formats.
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-== Documentation ==
+## Documentation 
 
 Command usage is as follows:
 
 {{{
 rdfConvert.exe input1 [input2 [input3 [...]]] (-out:filename.ext | -outformat:mime/type) [options]
-}}}
+```
 
 e.g. Convert a RDF/XML file to Turtle
 
 {{{
 rdfConvert.exe input.rdf -out:output.ttl
-}}}
+```
 
 e.g. Convert multiple files into HTML
 {{{
 rdfConvert.exe input1.rdf input2.ttl input3.n3 -format:text/html
-}}}
+```
 
 e.g. Convert a RDF/XML file into N3
 {{{
 rdfConvert.exe input.rdf -ext:n3
-}}}
+```
 
 You can use URIs as input just by stating URIs (anything with a :// in it will be assumed to be a URI) e.g. 
 {{{
 rdfConvert.exe http://example.org/something -out:something.rdf
-}}}
+```
 
-=== Notes ===
+### Notes 
 
 rdfConvert may be used to convert between Dataset (NQuads, TriG and TriX) formats as well as Graph formats
 
-=== Supported Options ===
+### Supported Options 
 
 |= Option |= Purpose
 | ##-best## | Causes the utility to attempt the best conversion it can (i.e. most compressed syntax) taking into account other options like compression level. May cause conversions to be slower and require more memory |

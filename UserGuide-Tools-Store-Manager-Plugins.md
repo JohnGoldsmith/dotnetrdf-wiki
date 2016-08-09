@@ -1,10 +1,10 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/Store Manager|Store Manager]] > [[UserGuide/Tools/StoreManager/Plugins|Store Manager Plugins]]
 
-= Store Manager Plugins =
+# Store Manager Plugins 
 
 [[UserGuide/Tools/Store Manager|Store Manager]] supports a plugin system which allows you to manage any store that you've exposed via dotNetRDF's ##IStorageProvider## interface using Store Manager without having to make any code changes to the tool.
 
-== Plugin Requirements ==
+## Plugin Requirements 
 
 A plugin requires the following:
 
@@ -13,7 +13,7 @@ A plugin requires the following:
 
 See the [[UserGuide/Storage API|Storage API]] documentation for details of the ##IStorageProvider## API.
 
-== Deploying a Plugin ==
+## Deploying a Plugin 
 
 Once you have these DLL(s) you simply drop them into the ##plugins/## directory of your copy of Store Manager and when you restart Store Manager it should detect them automatically if you've got your classes set up appropriately.
 
@@ -21,6 +21,6 @@ You can check which plugins were successfully detected by going to ##Help > Abou
 
 If your plugin has been properly recognized and provides classes matching the above then when you go to ##File > New Connection## you should see your store in the list of available stores.
 
-== Help with Developing a Plugin ==
+## Help with Developing a Plugin 
 
 If you need help with getting this advanced feature working we suggest you ask on the [[mailto:dotnetrdf-develop@lists.sf.net|developer list]].

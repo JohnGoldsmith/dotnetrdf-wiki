@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Querying with SPARQL|Querying with SPARQL]]
 
-= Querying with SPARQL =
+# Querying with SPARQL 
 
 SPARQL is the standard query language for the Semantic Web and can be used to query over large volumes of RDF data. dotNetRDF provides support for querying both over local in-memory data using it's own SPARQL implementation and for querying remote data using SPARQL endpoints or through other stores SPARQL implementations.
 
@@ -12,20 +12,18 @@ Advanced Users may want to take a look at the [[UserGuide/Advanced SPARQL|Advanc
 
 When using SPARQL you'll want to import the ##VDS.RDF.Query## namespace using the following statement at the start of your code files:
 
-{{{
-#!csharp
+```csharp
 
 using VDS.RDF.Query;
-}}}
+```
 
 If you are going to parse SPARQL queries yourself you will also need to use the ##VDS.RDF.Parsing## namespace.
 
-= Representing Queries =
+# Representing Queries 
 
 While some parts of the library will allow you to pass a raw SPARQL query as a string often you will need to parse a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery|SparqlQuery]] object around. A ##SparqlQuery## can be created in a couple of ways, firstly you can simply parse a raw SPARQL string into a query like so:
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using VDS.RDF.Parsing;
@@ -42,12 +40,11 @@ public class QueryParsingExample
 		SparqlQuery q = parser.ParseFromString("SELECT * WHERE { ?s a ?type }");
 	}
 }
-}}}
+```
 
 Queries can be parsed from strings, files or streams as desired. This method works well if you have a relatively simple query but can become cumbersome if you are generating complicated queries in code because you have to build up the string in memory and ensure it is properly formatted yourself. If this is the case you will often be better off using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlParameterizedString|SparqlParameterizedString]] class to build your query string, it provides a ##SqlCommand## style interface for building a query string:
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using VDS.RDF.Query;
@@ -80,17 +77,17 @@ public class SparqlParameterizedStringExample
 		SparqlQuery query = parser.ParseFromString(queryString);
 	}
 }
-}}}
+```
 
-= Accessing Results =
+# Accessing Results 
 
 The key classes for accessing results when using SPARQL are the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet|SparqlResultSet]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult|SparqlResult]] class, these represent a Result Set and an individual Result respectively. When you make any kind of SPARQL query through any of the methods described in this article you will always get a ##SparqlResultSet## or an ##IGraph## in return (unless an error occurs).
 
-== Result Sets ==
+## Result Sets 
 
 The ##SparqlResultSet## class is used to represent the results of SELECT and ASK queries. A Result Set either contains a table of ##SparqlResult## items in the case of a SELECT query or a single boolean value in the case of an ASK query. The following are the key properties of the ##SparqlResultSet##:
 
-=== ResultsType ===
+### ResultsType 
 
 The //ResultsType// property is used to determine what type of result set you have received. The possible values are from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultsType|SparqlResultsType]] enumeration and are as follows:
 
@@ -99,16 +96,15 @@ The //ResultsType// property is used to determine what type of result set you ha
 | ##SparqlResultsType.VariableBindings## | Is a table of results (SELECT Query results) |
 | ##SparqlResultsType.Unknown## | Unknown results, usually means that nothing has been loaded into the instance yet |
 
-=== Result ===
+### Result 
 
 The //Result// property gives the boolean result of an ASK query or in the case of a SELECT query always returns true.
 
-=== Results ===
+### Results 
 
 The //Results// property gives the set of ##SparqlResult## objects as a strongly typed ##List<SparqlResult>##. You can use this to enumerate results or you can enumerate directly over the result set since it is ##IEnumerable<SparqlResult>## e.g.
 
-{{{
-#!csharp
+```csharp
 
 //Enumerating via the Results property
 foreach (SparqlResult result in rset.Results)
@@ -121,33 +117,32 @@ foreach (SparqlResult result in rset)
 {
 	Console.WriteLine(result.ToString());
 }
-}}}
+```
 
 Generally it is best to use the second form since this means you can do LINQ operations more efficiently on the Result Set.
 
-=== Variables ===
+### Variables 
 
 The //Variables// property gives an ##IEnumerable<String>## which lists all the variables that are bound in the Result Set. A variable which is listed in this enumeration does not necessarily appear in every result.
 Result
 
-== Result Rows ==
+## Result Rows 
 
 A ##SparqlResultSet## is composed of a table of results which are enumerated via the //Results// property as seen above. Each row in this table is an instance of the ##SparqlResult## class which has a number of methods and properties to allow you to access the variables and values for that result row.
 
-=== Count ===
+### Count 
 
 The //Count// property tells you how many variable/value pairs are present in the result row
 
-=== Variables ===
+### Variables 
 
 The //Variables// property enumerates the variables actually present in the result row. Note that this may differ from the Variables property of the containing SparqlResultSet since not every result necessarily has every variable in it e.g. empty rows, rows from different sides of a UNION etc.
 
-=== Accessing Values ===
+### Accessing Values 
 
 Values from a row may be accessed in three ways:
 
-{{{
-#!csharp
+```csharp
 
 //Assuming our result row is in a variable r
 
@@ -159,11 +154,11 @@ INode value = r[0];
 
 //With method
 INode value = r.Value("var");
-}}}
+```
 
 **Warning:** All of the above return a value/null if the variable is present (but possibly unbound) in the result or throw an error if the variable is not present. Consider using the //HasValue()// method to check whether a given variable is present in a result before attempting to retrieve it.
 
-= Making a Query =
+# Making a Query 
 
 Now we'll look at the different ways in which you can actually make a query, there are several ways depending on what you are querying.
 
@@ -173,7 +168,7 @@ Now we'll look at the different ways in which you can actually make a query, the
 | Native Query | Make a query against an external SPARQL engine |
 | Direct Triple Store Query | Make a query directly against a ##IInMemoryQueryable## (//deprecated//) |
 
-== Query Processors ==
+## Query Processors 
 
 Query Processors are classes use to evaluate queries which abstract away from whatever the underlying query engine is. The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ISparqlQueryProcessor|ISparqlQueryProcessor]] interface defines two methods for evaluating queries both called //ProcessQuery()//.  Query processors are the preferred means of evaluating queries in dotNetRDF and should used in preference to other methods wherever possible.
 
@@ -181,8 +176,7 @@ The first //ProcessQuery(SparqlQuery query)// takes in a ##SparqlQuery## and ret
 
 For example you can use the standard [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.LeviathanQueryProcessor|LeviathanQueryProcessor]] to evaluate queries in-memory e.g.
 
-{{{
-#!csharp 
+```csharp 
 
 using System;
 using VDS.RDF;
@@ -225,13 +219,13 @@ public class LeviathanQueryProcessorExample
 		}
 	}
 }
-}}}
+```
 
 A key thing to notice here is that we create a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]] instance which wraps our ##IInMemoryQueryableStore## instance. This dataset allows us to control which graph is used as the default graph for queries or even to use the union of all graphs as the default graph.
 
 In this example we have only printed results in full to the Console, to learn more about how to format results for display see [[UserGuide/Result Formatting|Result Formatting]].
 
-=== Common Errors ===
+### Common Errors 
 
 ==== Default Graph ====
 
@@ -247,7 +241,7 @@ The graphs identified by the ##FROM## clause are merged together and these form 
 
 It is also important to understand that using these clauses it is possible to define datasets that your queries can never match.  For example if you have a ##FROM## clause but no ##FROM NAMED## then there are by definition no named graphs for the purposes of evaluating that query and any ##GRAPH## clause would match nothing.
 
-=== Available Query Processors ===
+### Available Query Processors 
 
 The library includes the following query processors:
 
@@ -257,13 +251,13 @@ The library includes the following query processors:
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.RemoteQueryProcessor|RemoteQueryProcessor]] | Executes queries against a remote SPARQL endpoint |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GenericQueryProcessor|GenericQueryProcessor]] | Executes a query against a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] implementation |
 
-=== Customizing Query Behaviour ===
+### Customizing Query Behaviour 
 
 When you use the //ProcessQuery()// overload that takes a ##SparqlQuery## object you have the option of setting some properties on it which control its behaviour with regards to execution timeout. Since some queries can take a very long time to run it is often sensible to limit how long queries can run for, the //Timeout// property of the ##SparqlQuery## allows you to specify the timeout. If you wish to get results back even when a timeout occurs then you can set the //PartialResultsOnTimeout// property to ensure you get some results even if a timeout occurs.
 
 **However** there is no guarantee that a query processor implementation will respect these properties.
 
-= Remote Query =
+# Remote Query 
 
 Remote SPARQL endpoints can be queried using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlRemoteEndpoint|SparqlRemoteEndpoint]] class. This class is a wrapper around a remote endpoint which sends queries to the endpoint and then turns the response into a ##SparqlResultSet## or ##IGraph## as appropriate.
 
@@ -271,8 +265,7 @@ A remote endpoint is a combination of an endpoint URI and an optional default Gr
 
 A remote endpoint can be used as follows:
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using VDS.RDF;
@@ -301,15 +294,15 @@ public class SparqlRemoteEndpointExample
 		}
 	}
 }
-}}}
+```
 
-== Native Query ==
+## Native Query 
 
 We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the ##INativelyQueryableStore## interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[UserGuide/Working with Triple Stores|Working with Triple Stores]] page you'll see an example of using the ##PersistentTripleStore## class to query any of our supported stores.
 
 Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] interface  which most of our available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] implementations also support, please see the [[UserGuide/Triple Store Integration|Triple Store Integration]] page for an example of this.
 
-== Direct Triple Store Query ==
+## Direct Triple Store Query 
 
 In-memory representations of Triple Stores which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface can be queried locally using the libraries in-memory SPARQL implementation.
 
@@ -317,8 +310,7 @@ In-memory representations of Triple Stores which implement the [[http://www.dotn
 
 The following example shows how this works:
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using VDS.RDF;
@@ -363,7 +355,7 @@ public class InMemoryTripleStoreExample
 		}
 	}
 }
-}}}
+```
 
 The return type from the //ExecuteQuery()// method is an ##Object## since it may be either a ##SparqlResultSet## or an ##IGraph## so you will need to do an ##is## test and then cast as shown in the example. Alternatively you can use the ##as## operator though we tend to avoid this ourselves since it can unintentionally hide errors in query evaluation.
 
@@ -371,14 +363,13 @@ As previously mentioned a common error here is that you get no results because y
 
 If you are still having problems with no results you can also look at [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
 
-= Loading/Saving Results =
+# Loading/Saving Results 
 
 A ##SparqlResultSet## may be loaded/saved using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader|ISparqlResultsReader]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter|ISparqlResultsWriter]] interfaces respectively. These are functionally very similar to the ##IRdfReader## and ##IRdfWriter## interfaces described on the [[UserGuide/Reading RDF|Reading RDF]] and [[UserGuide/Writing RDF|Writing RDF]] pages.
 
 A quick example is as follows:
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using VDS.RDF;
@@ -402,13 +393,13 @@ public class SaveLoadResultsExample
 		reader.Load(results2, "example.srj");
 	}
 }
-}}}
+```
 
 Note that one important difference between reading SPARQL results versus reading RDF is that you cannot read SPARQL results into a non-empty result set - doing so results in an exception.
 
 ----
 
-= Tutorial Navigation =
+# Tutorial Navigation 
 
 The previous topic was [[UserGuide/Working with Triple Stores|Working with Triple Stores]], the next topic is [[UserGuide/Updating with SPARQL|Updating with SPARQL]]
 

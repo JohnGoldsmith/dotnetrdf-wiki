@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Formatting API|Formatting API]]
 
-= Formatting API =
+# Formatting API 
 
 The Formatting API is an collection of APIs found in the ##VDS.RDF.Writing.Formatting## namespace, it is concerned with turning objects like nodes, triples and SPARQL results into strings for display.  The formatting API underpins the writers already seen in the basic tutorial on the [[UserGuide/Writing RDF|Writing RDF]] page.
 
@@ -15,18 +15,17 @@ The API consists of a number of interfaces:
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ITripleFormatter|ITripleFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Triple|Triple]] instances |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IResultFormatter|IResultFormatter]] | Formats [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult|SparqlResult]] instances |
 
-= Basic Usage =
+# Basic Usage 
 
 Generally you will only want to use one of the higher level interfaces such as ##INodeFormatter## or ##ITripleFormatter##.  Both these interfaces define //Format(…)// methods which take either a ##Triple## or an ##INode## and return a string representation of them. You can also call //ToString(…)// overloads on ##Triple## and ##INode## which take in a formatter and return the String representation as formatted by that formatter.
 
 In general any formatter usually provides one or more //Format()// or //FormatX()// methods which are used to format specific things.  These methods take the thing to be formatted and return a string.
 
-== Example 1 ==
+## Example 1 
 
 For example we can format specific nodes:
 
-{{{
-#!csharp
+```csharp
 
 //Assumes that we already have a Graph in the variable g
 NTriplesFormatter formatter = new NTriplesFormatter();
@@ -40,9 +39,9 @@ foreach (Triple t in g.GetTriplesWithPredicate(rdfType))
 {
 	Console.WriteLine(t.Subject.ToString(formatter));
 }
-}}}
+```
 
-== Standard Implementations ==
+## Standard Implementations 
 
 Currently the library has the following formatters available but you can easily define your own:
 
@@ -57,12 +56,11 @@ Currently the library has the following formatters available but you can easily 
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.UncompressedNotation3Formatter|UncompressedNotation3Formatter]] | Uncompressed Notation 3 |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.UncompressedTurtleFormatter|UncompressedTurtleFormatter]] | Uncompressed Turtle |
 
-== Example 2 ==
+## Example 2 
 
 Here's another example of formatting Triples for display on the console:
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -88,4 +86,4 @@ public class FormattingTriplesExample
     }
   }
 }
-}}}
+```

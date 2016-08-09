@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Users|Users]]
 
-= Configuring Users =
+# Configuring Users 
 
 Users are configured very simply as follows:
 
@@ -12,7 +12,7 @@ Users are configured very simply as follows:
 _:user a dnr:User ;
   dnr:user "username" ;
   dnr:password "password" .
-}}}
+```
 
 Users may be used in conjunction with [[UserGuide/Configuration/User Groups|User Groups]] and [[UserGuide/Configuration/Permissions|Permissions]] in a limited way to control access to HTTP Handlers though this is not fully implemented in the current version of dotNetRDF.
 

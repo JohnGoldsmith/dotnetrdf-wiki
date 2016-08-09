@@ -1,12 +1,12 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/SPARQL Endpoints|SPARQL Endpoints]]
 
-= Configuring SPARQL Endpoints =
+# Configuring SPARQL Endpoints 
 
 SPARQL Endpoints are classes that provide access to remote SPARQL Query or Update endpoints.
 
 The library provides 2 concrete implementations for query endpoints which are [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlRemoteEndpoint|SparqlRemoteEndpoint]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FederatedSparqlRemoteEndpoint|FederatedSparqlRemoteEndpoint]]. The latter of these can be used to federate the query across multiple endpoints and merge the results together.  There is also a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlRemoteUpdateEndpoint|SparqlRemoteUpdateEndpoint]] which represents update endpoints.
 
-== Simple Query Endpoints ==
+## Simple Query Endpoints 
 
 Simple query endpoints are endpoints that use a single remote endpoint for queries. These can be specified relatively simply as follows:
 
@@ -20,11 +20,11 @@ _:endpoint a dnr:SparqlQueryEndpoint ;
   dnr:queryEndpointUri <http://example.org/sparql> ;
   dnr:defaultGraphUri "http://example.org/defaultGraph" ;
   dnr:namedGraphUri "http://example.org/namedGraph" .
-}}}
+```
 
 Any number of ##dnr:defaultGraphUri## and ##dnr:namedGraphUri## properties can be used to specify multiple default and named graphs to be used for requests to the endpoint
 
-=== User Credentials ===
+### User Credentials 
 
 If your SPARQL endpoint requires a username and password this can be added using the ##dnr:user## and dnr:password properties or by using the dnr:credentials property to point to an object of type ##dnr:User## e.g.
 
@@ -38,15 +38,15 @@ _:endpoint a dnr:SparqlQueryEndpoint ;
   dnr:queryEndpointUri <http://example.org/sparql> ;
   dnr:user "username" ;
   dnr:password "password" .
-}}}
+```
 
-=== Proxy Settings ===
+### Proxy Settings 
 
 You can also specify settings for a proxy server which must be used for requests using the dnr:proxy property to point to an object of type ##dnr:Proxy##. See [[UserGuide/Configuration/Proxy Servers|Configuration API - Proxies]] for how to configure proxies.
 
 Note that if the user credentials for the endpoint also apply to the proxy you can omit specifying them on the proxy object and use the ##dnr:useCredentialsForProxy## property to state that the same credentials are used for the proxy.
 
-== Federated Query Endpoints ==
+## Federated Query Endpoints 
 
 Federated Endpoints are endpoints that make queries across multiple remote endpoints and combine the results together before returning them. A Federated Endpoint is specified as follows:
 
@@ -67,11 +67,11 @@ _:fed a dnr:SparqlQueryEndpoint ;
 _:dbpedia a dnr:SparqlQueryEndpoint ;
   dnr:type "VDS.RDF.Query.SparqlRemoteEndpoint" ;
   dnr:queryEndpointUri <http://dbpedia.org/sparql> .
-}}}
+```
 
 The above configures a Federated Endpoint which sends the query to [[http://dbpedia.org/sparql|DBPedia's SPARQL endpoint]] and the [[http://sparql.org/books/sparql|Books endpoint]] at [[http://sparql.org]]
 
-== Update Endpoints ==
+## Update Endpoints 
 
 Updates endpoints are endpoints used to make updates against, an update endpoint is specified as follows:
 
@@ -85,4 +85,4 @@ _:endpoint a dnr:SparqlUpdateEndpoint ;
   dnr:updateEndpointUri <http://example.org/update> ;
   dnr:user "username" ;
   dnr:password "password" .
-}}}
+```

@@ -1,34 +1,34 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/SparqlGui|SparqlGui]]
 
-= SparqlGui =
+# SparqlGui 
 
 The SparqlGUI is a Windows GUI tool for testing out SPARQL queries on arbitrary datasets which you create by loading in RDF from files and/or remote URIs. Additionally you may set an option so that the query can load graphs on demand from the web where they are specified in ##FROM##, ##FROM NAMED## or ##GRAPH## clauses in the query.
 
 It will also run under Mono though user experience for Windows Forms based GUIs is less than optimal with Mono.
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-== Documentation ==
+## Documentation 
 
 As a GUI tool SparqlGui is fairly self-explanatory, here we primarily cover the various options you can configure to tune the behaviour of the tool.
 
-=== Syntax Options ===
+### Syntax Options 
 
 The ##Syntax Options## panel lets you set which SPARQL syntax should be used for parsing your queries, this allows you to test whether a query is valid for a given SPARQL specification. If you try and use syntax in your query that is not supported by your chosen syntax then a parsing error will occur and a message will be displayed when you attempt to make your query.
 
 SPARQL 1.0 and 1.1 represent the standards, SPARQL 1.1 Extended is the SPARQL 1.1 standard plus some custom extensions - namely LET assignment, additional aggregates and some keyword synonyms.
 
-=== SPARQL Results Format ===
+### SPARQL Results Format 
 
 Selects the format that you want the results of SELECT/ASK queries presenting to you in. This only applies when the ##View Results and Graphs in Application## option is disabled.
 
-=== Graph Format ===
+### Graph Format 
 
 Selects the format that you want the results of CONSTRUCT/DESCRIBE queries presenting to you in.  This only applies when the ##View Results and Graphs in Application## option is disabled.
 
-=== Query Options ===
+### Query Options 
 
 Query Options lets you set options for how queries are executed and parsed.
 
@@ -55,7 +55,7 @@ If you try and make a query without loading any data first you will receive a wa
 
 You can save and load queries to text files using the Load Query and Save Query buttons.
 
-== Screenshots ==
+## Screenshots 
 
 The main interface looks like the following:
 
@@ -65,7 +65,7 @@ Using the top of the form you can import RDF from local files and remote URIs as
 
 {{http://www.dotnetrdf.org/images/screenshots/sparqlgui_main2.jpg|SparqlGui - Interface with Data Loaded}}
 
-=== Query Results ===
+### Query Results 
 
 Query results are displayed by default inside a new window in the program like so:
 
@@ -75,7 +75,7 @@ From this window you can choose to export the SPARQL Results/RDF Graph if you wi
 
 You can disable this to use the alternative behaviour of opening the results directly in the relevant program for the produced output type by unchecking the ##View Results and Graphs in the Application## in the Options panel
 
-=== Query Inspector ===
+### Query Inspector 
 
 The utility includes a Query Inspector function which allows you to see how dotNetRDF interprets your query i.e. explicit nesting and triple pattern reordering and the resulting SPARQL Algebra for your query as seen in the following screenshot:
 

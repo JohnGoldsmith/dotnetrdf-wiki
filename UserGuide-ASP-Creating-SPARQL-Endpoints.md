@@ -1,14 +1,14 @@
 [[Home]] > [[User Guide]] > [[UserGuide/ASP.Net Integration|ASP.Net Integration]] > [[UserGuide/ASP/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
 
-= Creating SPARQL Endpoints =
+# Creating SPARQL Endpoints 
 
 dotNetRDF provides a set of HTTP Handlers that can be used to deploy various forms of RDF and SPARQL endpoints as part of your ASP.Net website.
 
-== Automated Configuration ==
+## Automated Configuration 
 
 [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]] gives a guide to the available handlers and [[UserGuide/ASP/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]] walks you through the automated process of deploying them.
 
-== Manual Configuration ==
+## Manual Configuration 
 
 Continue reading for information on how to manually set up your ##Web.config## file without using rdfWebDeploy
 
@@ -24,11 +24,11 @@ Your Configuration Graph is registered using the ##<appSettings>## section of yo
 <appSettings>
   <add key="dotNetRDFConfig" value="~/App_Data/config.ttl" />
 </appSettings>
-}}}
+```
 
 Each Handler is associated with some Configuration data in your Configuration Graph by using special URIs of the form ##<dotnetrdf:/path>## as described in [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]]
 
-=== Handler Registration ===
+### Handler Registration 
 
 ==== IIS 5x ====
 
@@ -48,7 +48,7 @@ You've now configured IIS to route any request for a file with the ##.sparql## e
 #!xml
 
 <add verb="*" path="/query.sparql" validate="false" type="VDS.RDF.Web.QueryHandler" />
-}}}
+```
 
 Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to ##http://www.yourdomain.com/query.sparql##
 
@@ -59,7 +59,7 @@ On IIS 6x you configure a ASP.Net Handler by adding a line to the ##<httpHandler
 {{{
 #!xml
 <add verb="*" path="/sparql" validate="false" type="VDS.RDF.Web.QueryHandler" />
-}}}
+```
 
 Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to ##http://www.yourdomain.com/sparql##
 
@@ -75,11 +75,11 @@ Configuring a SPARQL Endpoint under IIS 7x is very easy if you are using ASP.Net
 #!xml
 
 <add name="/sparql" verb="*" path="/sparql" type="VDS.RDF.Web.QueryHandler" />
-}}}
+```
 
 Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to ##http://www.yourdomain.com/sparql##
 
-=== Other Web.config tweaks ===
+### Other Web.config tweaks 
 
 You may need to make some additional changes to ##Web.config## in order to get handlers working correctly.
 
@@ -88,16 +88,16 @@ If you are creating SPARQL endpoints you may need to add the following to the ##
 {{{
 #!xml
 <httpRuntime requestValidationMode="2.0" />
-}}}
+```
 
 You may also need to add the following to your ##<system.webServer>## configuration to get your ##Web.config## to be loaded:
 
 {{{
 #!xml
 <validation validateIntegratedModeConfiguration="false" />
-}}}
+```
 
-= General IIS Configuration =
+# General IIS Configuration 
 
 As a general rule it is advisable to register the following MIME types with IIS server to ensure that it serves responses correctly:
 

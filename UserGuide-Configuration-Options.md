@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Options|Static Options]]
 
-= Configuring Static Options =
+# Configuring Static Options 
 
 The Configuration API includes the capability to automatically configure any static property of any class provided the .Net type of that property is one of the following:
 
@@ -21,6 +21,6 @@ Configuration for static options is defined like so:
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 <dotnetrdf-configure:VDS.RDF.Options#UsePLinqEvaluation> dnr:configure false .
-}}}
+```
 
 The above example will turn off PLINQ Evaluation for queries, note that the subject must use a special URI of the form ##<dotnetrdf-configure:Class#Property>## and the predicate must be ##dnr:configure##

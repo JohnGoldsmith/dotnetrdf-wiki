@@ -1,6 +1,6 @@
 [[Home]] > [[How To]] > [[HowTo/Reify Triples|Reify Triples]]
 
-= Reify Triples =
+# Reify Triples 
 
 Reified triples are not special in any sense from dotNetRDF's point of view they are merely triples asserted in a graph.
 
@@ -11,7 +11,7 @@ For example consider the following Turtle fragment:
 @prefix : <http://example.org> .
 
 :s :p :o .
-}}}
+```
 
 Reifying this graph simply transforms it to the following form:
 
@@ -26,12 +26,11 @@ Reifying this graph simply transforms it to the following form:
    rdf:subject :s ;
    rdf:predicate :p ;
    rdf:object :o .
-}}}
+```
 
 In API terms this simply means you need to assert additional triples e.g.
 
-{{{
-#!csharp
+```csharp
 IGraph g = new Graph();
 g.NamespaceMap.AddNamespace(String.Empty, new Uri("http://example.org"));
 
@@ -55,5 +54,5 @@ g.Assert(id, rdfType, rdfStatement);
 g.Assert(id, rdfSubject, s);
 g.Assert(id, rdfPredicate, p);
 g.Assert(id, rdfObject, o);
-}}}
+```
 

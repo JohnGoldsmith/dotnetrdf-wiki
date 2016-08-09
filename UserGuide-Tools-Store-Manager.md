@@ -1,18 +1,18 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/Store Manager|Store Manager]]
 
-= Store Manager =
+# Store Manager 
 
 The Store Manager is a utility which allows you to use a simple GUI interface to view and manage the contents of Triple Stores. You can work with any of the supported native Triple Stores, see [[UserGuide/Storage/Providers|Storage Providers]] for the list of currently supported stores.
 
 Functionality differs depending on the type of store and the capabilities of the given store (or more specifically of our integration with that store).
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-== Documentation ==
+## Documentation 
 
-=== Getting Started ===
+### Getting Started 
 
 Firstly when you start up the application you'll see the following Start Page:
 
@@ -26,7 +26,7 @@ You can work with multiple connections at a time and can always get back to this
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_menu.jpg|Store Manager - File Menu}}
 
-=== Connecting to a Store ===
+### Connecting to a Store 
 
 When you've chosen to create a New Connection either via the File Menu or the Start Page you'll see the following dialogue:
 
@@ -34,13 +34,13 @@ When you've chosen to create a New Connection either via the File Menu or the St
 
 Available stores are any store which we provide support in any of our publicly released libraries or for which you have a [[UserGuide/Tools/StoreManager/Plugins|Store Plugin]] available in your ##plugins/## folder.
 
-=== Graph List ===
+### Graph List 
 
 If your chosen Store supports named Graphs and can return the Graph list in response to an appropriate SPARQL query then you will see a list of graphs on the main screen.
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_graphlist.jpg|Store Manager - Graph List}}
 
-=== Querying with SPARQL ===
+### Querying with SPARQL 
 
 Provided your chosen store supports SPARQL you can query against it using the SPARQL tab as shown in the screenshot below:
 
@@ -60,7 +60,7 @@ The dialogue allows you to save to a file in the format of your choice using the
 
 You may also visualise the Graph using GraphViz (if you have it installed on your system), even if it isn't installed you can use the Visualise button to access a dialogue which will let you save your Graph in DOT format so you can process it with GraphViz at a later date. If GraphViz is installed you can generate a PNG/SVG image of the Graph using this feature.
 
-=== Tasks View ===
+### Tasks View 
 
 When connecting to a store all actions performed on that store are treated as distinct tasks and run in the background. This allows you to carry out multiple operations simultaneously while the GUI remains responsive and lets you monitor the progress of any Task. Tasks can be monitored from the Tasks view shown below:
 

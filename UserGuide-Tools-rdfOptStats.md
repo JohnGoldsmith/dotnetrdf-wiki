@@ -1,32 +1,32 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfOptStats|rdfOptStats]]
 
-= rdfOptStats =
+# rdfOptStats 
 
 rdfOptStats is a command line utility for generating statistics on RDF for use with our  [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightedOptimiser|WeightedOptimiser]] for SPARQL queries.
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-== Documentation ==
+## Documentation 
 
 Command usage is as follows:
 
 {{{
 rdfOptStats.exe [options] input1 [input2 [input3 ...]]
-}}}
+```
 
 e.g. Generate all stats to a file ##stats.ttl## for the input files ##data1.rdf## and ##data2.rdf##
 {{{
 rdfOptStats.exe -all -output stats.ttl data1.rdf data2.rdf
-}}}
+```
 
 e.g. Generate all stats for all files within a given directory
 {{{
 rdfOptStats.exe -all -output stats.nt data\*
-}}}
+```
 
-=== Notes ===
+### Notes 
 
 Only simple wildcard patterns are supported as inputs e.g.
 
@@ -37,7 +37,7 @@ Only simple wildcard patterns are supported as inputs e.g.
 
 Any other wildcard pattern will be rejected
 
-=== Supported Options ===
+### Supported Options 
 
 |= Option |= Purpose |
 | ##-all## | Specifies that counts of Subjects, Predicates and Objects should be generated |

@@ -1,10 +1,10 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Servers|Servers API]]
 
-= Servers API =
+# Servers API 
 
 The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IStorageServer|IStorageServer]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IAsyncStorageServer|IASyncStorageServer]] interfaces.  These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] instances.
 
-= Implementations =
+# Implementations 
 
 The following implementations are currently provided:
 
@@ -13,22 +13,21 @@ The following implementations are currently provided:
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer|SesameServer]] | Manages a Sesame HTTP Protocol compliant server, see the [[UserGuide/Storage/Sesame|Sesame]] documentation |
 | [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer|StardogServer]] | Manages a Stardog server, see the [[UserGuide/Storage/Stardog|Stardog]] documentation |
 
-= Basic Usage =
+# Basic Usage 
 
-== Properties ==
+## Properties 
 
 These interfaces provide a single //IOBehaviour// property which reports [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IOBehaviour|IOBehaviour]] that describes the capabilities of an implementation i.e. which operations are supported.
 
-== Methods ==
+## Methods 
 
 These interfaces provide several methods for carrying out the varying management tasks supported, here we demonstrate each with an example.
 
-=== ListStores() ===
+### ListStores() 
 
 The //ListStores()// method lists the stores available on a server.
 
-{{{
-#!csharp
+```csharp
 using System;
 using VDS.RDF;
 using VDS.RDF.Storage.Management;
@@ -47,14 +46,13 @@ public class ListStoresExample
      }
   }
 }
-}}}
+```
 
-=== GetStore() ===
+### GetStore() 
 
 The //GetStore()// method gets a connection to a specific store assuming it is available on the server.
 
-{{{
-#!csharp
+```csharp
 using System;
 using VDS.RDF;
 using VDS.RDF.Storage;
@@ -71,14 +69,13 @@ public class ListStoresExample
      IStorageProvider store = server.GetStore("example");
   }
 }
-}}}
+```
 
-=== DeleteStore() ===
+### DeleteStore() 
 
 The //DeleteStore()// method is used to delete a store from the server, this is typically non-reversible and should be used with extreme care.
 
-{{{
-#!csharp
+```csharp
 using System;
 using VDS.RDF;
 using VDS.RDF.Storage.Management;
@@ -94,9 +91,9 @@ public class ListStoresExample
      server.DeleteStore("example");
   }
 }
-}}}
+```
 
-=== Creating a Store ===
+### Creating a Store 
 
 Creating a store is the most complex operation is done with a combination of the //CreateStore()// and either the //GetDefaultTemplate()// or //GetAvailableTemplates()// method.  Creating a store requires that you provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.IStoreTemplate|IStoreTemplate]] instance which indicates to the server what kind of store to create.
 
@@ -112,8 +109,7 @@ Since servers may have many implementation specific features typically there wil
 
 Once you have an appropriate template you can pass it to the //CreateStore()// method to get the store created.  This method will return ##true## if the creation succeeds and ##false## (or an exception) otherwise.
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using VDS.RDF;
@@ -139,4 +135,4 @@ public class ListStoresExample
      }
   }
 }
-}}}
+```

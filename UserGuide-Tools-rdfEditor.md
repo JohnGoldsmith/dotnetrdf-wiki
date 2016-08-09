@@ -1,20 +1,20 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfEditor|rdfEditor]]
 
-= rdfEditor =
+# rdfEditor 
 
 rdfEditor is a GUI tool designed as a Notepad replacement for editing RDF and SPARQL. It provides syntax highlighting, validation and auto-completion and all major RDF and SPARQL syntaxes are supported (though auto-completion is only available for some syntaxes).
 
 **Note:** This tool is Windows only
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-== Documentation ==
+## Documentation 
 
 rdfEditor is a notepad style GUI tool and as such should be relatively self explanatory.  Some useful features that may not be immediately obvious are highlighted here.
 
-=== Customisable Apperance ===
+### Customisable Apperance 
 
 You can customise practically every aspect of the display of RDF, you can access the following dialogue by going to ##Options > Customise Appearance Settings##
 
@@ -22,7 +22,7 @@ You can customise practically every aspect of the display of RDF, you can access
 
 For information on advanced customisation see [[UserGuide/Tools/rdfEditor/Advanced Settings|Advanced Settings]]
 
-=== Converting between Formats ===
+### Converting between Formats 
 
 You can convert from one RDF format to another like so:
 
@@ -32,27 +32,27 @@ You can convert from one RDF format to another like so:
 
 If you want to customize the conversion you can do so by first checking ##File > Save With... > Prompt for Advanced Writer Options?##.  With this option enabled rdfEditor will bring up a dialogue when you request a conversion allowing you to configure options as desired.
 
-== Screenshots ==
+## Screenshots 
 
-=== Turtle Syntax ===
+### Turtle Syntax 
 
 {{http://www.dotnetrdf.org/images/screenshots/editor_turtle.jpg|rdfEditor - Turtle Syntax}}
 
-=== SPARQL Syntax ===
+### SPARQL Syntax 
 
 {{http://www.dotnetrdf.org/images/screenshots/editor_sparql.jpg|rdfEditor - SPARQL Syntax}}
 
-=== RDF/XML Syntax ===
+### RDF/XML Syntax 
 
 {{http://www.dotnetrdf.org/images/screenshots/editor_rdfxml.jpg|rdfEditor - RDF/XML Syntax}}
 
-=== Structure View ===
+### Structure View 
 
 Structure view shows the actual triples/quads/SPARQL results found in a document being edited
 
 {{http://www.dotnetrdf.org/images/screenshots/editor_structure.jpg|rdfEditor - Structure View}}
 
-== Screencast ==
+## Screencast 
 
 You can see it in action in the following [[http://www.dotnetrdf.org/content.asp?pageID=rdfEditor%20Demo%20Screencast|Demo Screencast]] - apologies for the somewhat low quality audio and video.
 

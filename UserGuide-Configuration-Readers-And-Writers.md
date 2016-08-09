@@ -1,10 +1,10 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Readers and Writers|Readers and Writers]]
 
-= Configuring Readers and Writers =
+# Configuring Readers and Writers 
 
 Configuring Readers and Writers allows you to register custom readers/writers or change the default implementations used by the library.
 
-== Basic Configuration ==
+## Basic Configuration 
 
 You can configure any type of reader/writer supported via the library using this mechanism.  There is some common vocabulary that is used to associate a reader/writer with specific data types.
 
@@ -23,7 +23,7 @@ The following example shows how to change the default RDF/XML writer to be the [
 	dnr:type "VDS.RDF.Writing.PrettyRdfXmlWriter" ;
 	fmt:media_type "application/rdf+xml" ;
 	fmt:preferred_suffix "rdf" .
-}}}
+```
 
 You can use the //AutoConfigureReadersAndWriters(IGraph g)// method to have the API automatically load reader and writer configuration.
 

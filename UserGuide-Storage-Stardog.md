@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]] > [[UserGuide/Storage/Stardog|Stardog]]
 
-= Stardog =
+# Stardog 
 
 [[http://stardog.com|Stardog]] the RDF database from Clark & Parsia can be connected to via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogConnector|StardogConnector]].  This connector uses the Stardog HTTP interface so requires a running Stardog HTTP server.
 
@@ -8,7 +8,7 @@ The ##StardogConnector## assumes the latest version of Stardog is being used, cu
 
 In terms of backwards compatibility the newer connectors may be able to talk to an older server but we can't guarantee this will work correctly, also newer connectors have support for newer Stardog features which will not work if used against an older server.
 
-== Supported Capabilities ==
+## Supported Capabilities 
 
 * Load, Save, Delete, Update and List Graphs
 * SPARQL Query
@@ -16,17 +16,16 @@ In terms of backwards compatibility the newer connectors may be able to talk to 
 * SPARQL Update for Stardog 2.x and 3.x connections
 * Transactions
 
-== Creating a Connection ==
+## Creating a Connection 
 
 Connecting to a Stardog database requires knowing the Base URI for the server, a database ID and user credentials if security is enabled e.g.
 
-{{{
-#!csharp
+```csharp
 
 StardogConnector stardog = new StardogConnector("http://localhost:5820", "example", "username", "password");
-}}}
+```
 
-== Configurable Query Reasoning ==
+## Configurable Query Reasoning 
 
 Stardog 1.x and 2.x supports configurable reasoning levels on a per-query basis.  The current reasoning level is controlled by the //Reasoning// property and takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogReasoningMode|StardogReasoningMode]] enum.
 
@@ -34,11 +33,11 @@ Note that from Stardog 3.x the reasoning level is controlled at the database lev
 
 This may be changed any time you like and affects any subsequent queries made via the //Query()// method.
 
-== Transactions ==
+## Transactions 
 
 Stardog is one of the few stores currently supported that support transactions, see the [[UserGuide/Storage/Transactions|Transactions API]] page for an overview of those APIs.  If the Transaction APIs are not explicitly used each operation occurs in its own transaction which is auto-committed at the end of its operation.
 
-= Managing a Server =
+# Managing a Server 
 
 We support managing a server via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer|StardogServer]] class which implements our [[UserGuide/Storage/Servers|Servers API]]
 
@@ -46,17 +45,16 @@ The ##StardogServer## assumes the latest version of Stardog is being used, curre
 
 A ##StardogConnector## provides access to its associated server via the //ParentServer// or //AsyncParentServer// property.
 
-== Connecting to a Server ==
+## Connecting to a Server 
 
 You can also connect directly to a server by creating an instance of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer|StardogServer]] class.  This requires you to know the Base URI of the server:
 
-{{{
-#!csharp
+```csharp
 
 StardogServer server = new StardogServer("http://localhost:5822", "username", "password");
-}}}
+```
 
-== Creating Stores ==
+## Creating Stores 
 
 When creating a store the ##StardogServer## will provide templates from the following selection:
 

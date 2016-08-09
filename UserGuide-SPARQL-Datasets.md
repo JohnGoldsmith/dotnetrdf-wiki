@@ -1,10 +1,10 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Advanced SPARQL|Advanced SPARQL]] > [[UserGuide/SPARQL Datasets|SPARQL Datasets]]
 
-= SPARQL Datasets =
+# SPARQL Datasets 
 
 A SPARQL dataset refers to the dataset notion from the SPARQL specification, within dotNetRDF it may refer to the concrete ISparqlDataset interface which represents datasets for in-memory queries or it may refer to the dataset description associated with a query/update.
 
-== Dataset Description ==
+## Dataset Description 
 
 The dataset for a SPARQL Query or Update consists of a default graph and zero or more named graphs, the default graph is often also referred to as the unnamed graph.
 
@@ -26,7 +26,7 @@ The ##INSERT/DELETE## command in SPARQL Update allows the dataset to be specifie
 * The ##USING## clauses specifies the graphs that form the default graph for the ##WHERE## portion of the update.  If there are no ##USING## clauses the ##WITH## clause specifies the default graph, if there is no ##WITH## then the default graph is dataset specific.
 * The ##USING NAMED## clause specifies the named graphs for the ##WHERE## portion of the update.
 
-== ISparqlDataset ==
+## ISparqlDataset 
 
 The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]] interface is used to represent a dataset over which queries and updates are applied.  dotNetRDF includes a number of implementations of this primarily for wrapping a ##IInMemoryQueryableStore## i.e. an in-memory ##ITripleStore## so that it can be queried.
 
@@ -34,21 +34,19 @@ How you construct your dataset can affect the results of your query due to SPARQ
 
 If your queries involve a lot of named graphs then you may get better performance by using an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryQuadDataset|InMemoryQuadDataset]] instead.  This has identical constructors to the ones shown in the following examples.
 
-=== Default Behavior ===
+### Default Behavior 
 
 The default behavior of dotNetRDF is to treat the unnamed graph as the default graph and all other graphs as named graphs.  You get this type of dataset when constructing like so:
 
-{{{
-#!csharp
+```csharp
 
 //Construct a fresh dataset
 ISparqlDataset ds = new InMemoryDataset();
-}}}
+```
 
 Or if you construct from an existing triple store:
 
-{{{
-#!csharp
+```csharp
 
 TripleStore store = new TripleStore();
 
@@ -56,14 +54,13 @@ TripleStore store = new TripleStore();
 
 //Construct a dataset
 ISparqlDataset ds = new InMemoryDataset(store);
-}}}
+```
 
-=== Specific Default Graph ===
+### Specific Default Graph 
 
 If you have a specific graph that you wish to have treated as the default graph you can create a dataset like so:
 
-{{{
-#!csharp
+```csharp
 
 TripleStore store = new TripleStore();
 
@@ -71,14 +68,13 @@ TripleStore store = new TripleStore();
 
 //Construct a dataset using a specific graph as the default
 ISparqlDataset ds = new InMemoryDataset(store, new Uri("http://example.org/default-graph"));
-}}}
+```
 
-=== Union Default Graph ===
+### Union Default Graph 
 
 Union default graph is a special behavior whereby the default graphs acts as if it were the union of all the graphs in the store, it may be constructed like so:
 
-{{{
-#!csharp
+```csharp
 
 TripleStore store = new TripleStore();
 
@@ -86,4 +82,4 @@ TripleStore store = new TripleStore();
 
 //Construct a dataset using a union default graph
 ISparqlDataset ds = new InMemoryDataset(store, true);
-}}}
+```

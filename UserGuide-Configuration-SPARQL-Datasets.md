@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/SPARQL Datasets|SPARQL Datasets]]
 
-= Configuring SPARQL Datasets =
+# Configuring SPARQL Datasets 
 
 SPARQL Datasets are an abstraction dotNetRDF which separates the Leviathan engine (our in-memory SPARQL engine) from the data so that arbitrary datasets can be plugged into it. This allows for datasets which don't have to be in-memory themselves though they do have to materialise triples in-memory as needed by the engine.
 
@@ -8,7 +8,7 @@ As a general rule anywhere you could have used a Triple Store (see [[UserGuide/C
 
 Datasets are configured using the [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]] in a number of ways, as each dataset is different each has its own unique configuration.
 
-= In-Memory Datasets =
+# In-Memory Datasets 
 
 The in-memory dataset represents pure in-memory data which is the default operation mode for Leviathan. Any [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] instance can be wrapped in a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset|InMemoryDataset]].
 
@@ -35,13 +35,13 @@ _:a a dnr:Graph ;
 _:b a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" ;
   dnr:fromUri <http://dbpedia.org/resource/Southampton> .
-}}}
+```
 
 As you can see for an in-memory dataset you simply connect it to a ##dnr:TripleStore## definition using the ##dnr:usingStore## property.
 
 You may alternatively use the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryQuadDataset|InMemoryQuadDataset]] just by changing the value of the ##dnr:type## property appropriately. The quad dataset may be more performant if your queries access named graphs frequently.
 
-= Web Demand Datasets =
+# Web Demand Datasets 
 
 The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.WebDemandDataset|WebDemandDataset]] is a wrapper around another dataset that allows the dataset to load missing graphs on demand from the web.  It can be configured simply like so:
 
@@ -56,4 +56,4 @@ _:dataset a dnr:SparqlDataset ;
 
 _:memDataset a dnr:SparqlDataset ;
   dnr:type "VDS.RDF.Query.Datasets.InMemoryQuadDataset" .
-}}}
+```

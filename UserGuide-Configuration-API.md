@@ -1,18 +1,18 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]]
 
-= Configuration API =
+# Configuration API 
 
 The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] class which is in the ##VDS.RDF.Configuration## namespace.
 
 Dynamic loading is done by classes which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory|IObjectFactory]] interface which means that this mechanism can be extended as desired. Either additional ##IObjectFactory## instances can be registered programmatically with the //AddObjectFactory(IObjectFactory factory)// method or you can specify them in your configuration files and have the system automatically detect them by calling the //AutoConfigureObjectFactories(IGraph g)// function.
 
-= Configuration File structure =
+# Configuration File structure 
 
 A Configuration file is simply an RDF graph which uses the [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]] to specify objects which can be loaded dynamically by the ##ConfigurationLoader##. A Configuration file may be encoded in any valid RDF graph format which the library understands though typically we recommend using Turtle/N3 for their human readability and ease of editing compared to other RDF serializations.
 
 The [[http://www.dotnetrdf.org/configuration#|Configuration vocabulary]] allows for specifying a variety of commonly used objects in dotNetRDF as listed in the Configurable Objects section.
 
-== Vocabulary Basics ==
+## Vocabulary Basics 
 
 To specify an object you will need at least two triples, for example to specify an empty Graph you would need the following:
 
@@ -24,13 +24,13 @@ To specify an object you will need at least two triples, for example to specify 
 # Encodes a Graph
 <http://example.org/graph> a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" .
-}}}
+```
 
 We use the ##rdf:type## (specified here by the Turtle/N3 keyword ##a##) predicate to specify that some Node has a type of ##dnr:Graph## which is the class of Graphs in the Configuration Vocabulary. Then the ##dnr:type## property is used to specify the .Net type of this object, for dotNetRDF types it is sufficient to specify the full namespace qualified name of the class. For any other class you will need to specify the Assembly Qualified Name of the class.
 
 If you fail to specify a ##dnr:type## property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the ##dnr:Graph## class the default type is [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph|Graph]].
 
-== Imports ==
+## Imports 
 
 Since configuration graph for larger applications can grow to be quite complex you can use our imports mechanism to split your configuration over several files.  Importing is as simple as the following:
 
@@ -44,11 +44,11 @@ Since configuration graph for larger applications can grow to be quite complex y
 
 # Import from another URI
 <> dnr:imports <http://example.org/other-config.ttl> .
-}}}
+```
 
 If you are using imports then you should always use the //LoadConfiguration()// method to load your Configuration Graph as this will automatically resolve imports for you.
 
-== Auto-Configuration ==
+## Auto-Configuration 
 
 The API supports the notion of auto-configuration, some types of object that should be globally registered can be auto-configured either when your Configuration is loaded or on demand via one of the auto-configuration methods e.g. //AutoConfigureOjectFactories(IGraph g)//
 
@@ -61,7 +61,7 @@ Currently the following may be auto-configured:
 * [[UserGuide/Configuration/SPARQL Operators|SPARQL Operators]]
 * [[UserGuide/Configuration/Options|Static Options]]
 
-== Special URIs ==
+## Special URIs 
 
 Since your configuration file may need to specify information that is sensitive (e.g. passwords) which you may not want to expose in a plain text file we provide for the use of special URIs of the form ##<appsetting:AppSettingName>##.
 
@@ -69,13 +69,13 @@ These URIs allow you to refer to the value of an AppSetting defined in the ##<ap
 
 **Note:** We recommend that you follow security best practises so that where you need to set passwords in a configuration file you use an account that is restricted to only the privileges necessary for the application.
 
-= Key Functions =
+# Key Functions 
 
-== LoadConfiguration() ==
+## LoadConfiguration() 
 
 //LoadConfiguration()// is a helper function that can be used to load in a configuration graph, it invokes the standard RDF loading mechanisms but also handles some special features of the Configuration API such as imports, auto-configuration etc.
 
-== LoadObject() ==
+## LoadObject() 
 
 The main function that you will want to use is the //LoadObject()// function which attempts to load objects dynamically based on the information in a provided graph. The function is invoked by passing in a Configuration Graph containing the configuration and a Node representing the Object to be loaded.
 
@@ -90,12 +90,11 @@ For example consider the following configuration file which we'll refer to as ##
 <http://example.org/graph> a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" ;
   dnr:fromFile "example.rdf" .
-}}}
+```
 
 To load the Graph specified in the Configuration file you would use the following code:
 
-{{{
-#!csharp
+```csharp
 using System;
 using VDS.RDF;
 using VDS.RDF.Configuration;
@@ -139,20 +138,20 @@ public class LoadObjectExample
 		}
 	}
 }
-}}}
+```
 
-= Configurable Objects =
+# Configurable Objects 
 
 As of the most recent release all of the following objects can be loaded from Configuration files, follow the links by each one to see detailed descriptions of the possible configuration for these objects:
 
-== Core Objects ==
+## Core Objects 
 
 * [[UserGuide/Configuration/Graphs|Graphs]]
 * [[UserGuide/Configuration/Triple Stores|Triple Stores]]
 * [[UserGuide/Configuration/Object Factories|Object Factories]]
 * [[UserGuide/Configuration/Readers and Writers|Readers and Writers]]
 
-== SPARQL Features ==
+## SPARQL Features 
 
 * [[UserGuide/Configuration/SPARQL Endpoints|SPARQL Endpoints]]
 * [[UserGuide/Configuration/Query Processors|Query Processors]]
@@ -165,18 +164,18 @@ As of the most recent release all of the following objects can be loaded from Co
 * [[UserGuide/Configuration/Full Text Query|Full Text Query]]
 * [[UserGuide/Configuration/Reasoners|Reasoners]]
 
-== 3rd Party Triple Store Integration ==
+## 3rd Party Triple Store Integration 
 
 * [[UserGuide/Configuration/Storage Providers|Storage Providers]]
 
-== ASP.Net Integration ==
+## ASP.Net Integration 
 
 * [[UserGuide/Configuration/HTTP Handlers|HTTP Handlers]]
 * [[UserGuide/Configuration/User Groups|User Groups]]
 * [[UserGuide/Configuration/Permissions|Permissions]]
 * [[UserGuide/Configuration/Users|Users]]
 
-== Miscellaneous ==
+## Miscellaneous 
 
 * [[UserGuide/Configuration/Options|Static Options]]
 * [[UserGuide/Configuration/Proxy Servers|Proxy Servers]]

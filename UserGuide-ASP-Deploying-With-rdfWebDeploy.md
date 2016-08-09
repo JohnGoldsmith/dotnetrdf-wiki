@@ -1,16 +1,16 @@
 [[Home]] > [[User Guide]] > [[UserGuide/ASP.Net Integration|ASP.Net Integration]] > [[UserGuide/ASP/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]]
 
-= Deploying with rdfWebDeploy =
+# Deploying with rdfWebDeploy 
 
 Integration of dotNetRDF into ASP.Net applications is configured using the [[UserGuide/Configuration API|Configuration API]] and can be deployed using [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]. This guide teaches you how to deploy configuration using rdfWebDeploy.
 
 To see an example of a more complex configuration file you can go to [[http://www.dotnetrdf.org/demos/sampleConfig]] which is the configuration file used for all the demos found under the [[http://www.dotnetrdf.org/demos/]] URI. The configuration file shown there was tested and deployed using the method described here.
 
-= Problem =
+# Problem 
 
 In this example we want to create a SPARQL Query endpoint which has a base Graph as it's initial dataset but which users can introduce additional graphs into using ##FROM/FROM NAMED## clauses and using Default/Named Graph URIs in the requests. We want this endpoint to be available at our website under the URI ##/sparql##
 
-== Step 1 - Define Configuration ==
+## Step 1 - Define Configuration 
 
 To start with we need to create a configuration file which defines this information - see the [[UserGuide/Configuration API|Configuration API]] documentation for guidance on this, this will look like the following:
 
@@ -38,19 +38,19 @@ _:store a dnr:TripleStore ;
 _:initGraph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" ;
   dnr:fromFile "~/App_Data/example.rdf" .
-}}}
+```
 
 Here we've defined out configuration file in Turtle but any RDF serialization which dotNetRDF understands can be used, we'll refer to this file as ##config.ttl## for the rest of the document but you can name this file whatever you want. Please ensure you use an appropriate file extension for the RDF serialization used to ensure correct behaviour.
 
 We recommend that you create your configuration file in your applications ##App_Data/## directory
 
-== Step 2 - Test Configuration ==
+## Step 2 - Test Configuration 
 
 Next step is to test your Configuration for errors and mistakes by issuing the following command at the command line (assumes you have the Tools package installed and on your path):
 
 {{{
 X:\example.com\www>rdfWebDeploy -test App_Data\config.ttl
-}}}
+```
 
 This will test your configuration file and produce output like the following:
 
@@ -81,11 +81,11 @@ rdfWebDeploy: Testing for bad ranges for properties
 rdfWebDeploy: Testing for bad domains for properties
 
 rdfWedDeploy: Tests Completed - 0 Warning(s) - 0 Error(s)
-}}}
+```
 
 If you see any error messages at this stage you should correct this errors now.
 
-== Step 3 - Deploying to Web.config ==
+## Step 3 - Deploying to Web.config 
 
 You now need to deploy this configuration to your ##Web.config## file, don't worry if your application doesn't have one as this step will create one if necessary. The command to be issued at the command line now varies depending on whether the application you are deploying to is on a local IIS server instance or whether it is a local copy of an application you plan to upload to your web hosting.
 
@@ -95,13 +95,13 @@ With either of these methods you can add the options ##-nointreg## to not regist
 
 **Important:** This tool was originally designed for .Net 3.5 but dotNetRDF now also supports .Net 4.0, as the ##Web.config## format has some differences between ASP.Net 3.5 and ASP.Net 4.0 we strongly recommend you ensure that you have a pre-existing ##Web.config## before running this step as we cannot guarantee that a created ##Web.config## will be compatible with your environment whereas updating an existing ##Web.config## file should work fine.
 
-=== Local IIS Method ===
+### Local IIS Method 
 
 If your application is configured on a local IIS server instance then you can issue the following command:
 
 {{{
 X:\example.com\www>rdfWebDeploy -deploy /appVirtualPath config.ttl
-}}}
+```
 
 With this method you specify the virtual path to your application and then the name of the configuration file. If this configuration file is located in the current directory it is copied to the ##App_Data/## directory, otherwise it is checked for in the ##App_Data/## directory.
 
@@ -109,31 +109,31 @@ If your application is not on the default site of your IIS instance then you wou
 
 {{{
 X:\example.com\www>rdfWebDeploy -deploy /appVirtualPath config.ttl -site "www.example.com"
-}}}
+```
 
-=== No IIS Method ===
+### No IIS Method 
 
 If you intend to upload your application to web hosting and it is not configured on a local IIS server instance then you should issue the following command:
 
 {{{
 X:\example.com\www>rdfWebDeploy -xmldeploy "X:\example.com\www\Web.Config" config.ttl
-}}}
+```
 
 With this method you specify the path to the ##Web.Config## file (or the root folder) of your application and the name of the configuration file. If this configuration file is located in the current directory it is copied to the ##App_Data/## directory, otherwise it is checked for in the ##App_Data/## directory.
 
-=== Additional Features ===
+### Additional Features 
 
 For either of the above methods you can add the ##-negotiate## option to install the Negotiate by File Extension module. This module allows all our HTTP Handlers to transparently negotiate based on the file extension in the URL. So for our example here if the ##-negotiate## option is used you'd be able to browse to ##/sparql.srj?query=SELECT * WHERE { ?s ?p ?o}## to force the results to be returned as SPARQL Results JSON.
 
-== Step 4 - Upload ==
+## Step 4 - Upload 
 
 If your application is being used on remote web hosting now upload your application to your web hosting provider. Your provider must support ASP.Net 3.5 for this to function correctly, IIS 7+ based hosting is recommended for best support.
 
-== Step 5 - Testing ==
+## Step 5 - Testing 
 
 Navigate to the URL ##/sparql## at your site and you should now have a working SPARQL Endpoint.
 
-= Common Errors =
+# Common Errors 
 
 There are two common error conditions you may run into:
 
@@ -143,7 +143,7 @@ You get an ##Unable to load type VDS.RDF.Web.QueryHandler## or similar error. Th
 
 Depending on your version of ASP.Net you may also need to make some manual tweaks to the ##Web.config## - see [[UserGuide/ASP/Creating SPARQL Endpoints|Creating SPARQL endpoints]] for more details.
 
-= Further Reading =
+# Further Reading 
 
 For more information on setting up SPARQL endpoints you may wish to look at the following topics:
 

@@ -1,15 +1,14 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Ontology API|Ontology API]]
 
-= Ontology API =
+# Ontology API 
 
 The Ontology API part of dotNetRDF provides a number of abstractions over graphs, triples and nodes that allow users who don't want to work at the levels of triples to create and manipulate ontologies and schemas. In general anything that uses RDFS and OWL classes and properties and expresses relationships between them may be more easily manipulated using the Ontology API than directly using the core graph and triple APIs.
 
-== Basic Example ==
+## Basic Example 
 
 The following provides a basic example of the differences between the Ontology API and the Graph and Triple APIs. In this first code sample we use the Ontology API to enumerate the super and sub classes of a given class:
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using System.Linq;
@@ -42,12 +41,11 @@ public class OntologyGraphExample()
 		}
 	}
 }
-}}}
+```
 
 Now we'll show code to achieve the same thing using the Graph and Triple APIs:
 
-{{{
-#!csharp
+```csharp
 
 using System;
 using System.Linq;
@@ -84,13 +82,13 @@ public class GraphExample()
 		}
 	}
 }
-}}}
+```
 
 While the 2nd example may not seem like much more code it requires the end user to understand how the RDF is structured at the triple level in order to retrieve the data.
 
 An additional advantage of the Ontology API approach is that it will automatically traverse the class hierarchy for you so using the 1st method you get all super and sub classes regardless of distance from the original class while using the 2nd method you only get direct super and sub classes. Getting all super and sub classes in the class hierarchy using the 2nd method would require significantly more code or the application of an RDFS reasoner.
 
-= Concepts =
+# Concepts 
 
 The API provides the following concepts which are wrappers over graphs, triples and nodes:
 

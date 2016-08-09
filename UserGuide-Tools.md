@@ -1,16 +1,16 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]]
 
-= Tools =
+# Tools 
 
 Besides our developer APIs we also produce a suite of command line and GUI tools for working with RDF and SPARQL, you can find links to their documentation in this section of the user guide.
 
-== Download ==
+## Download 
 
 You can download our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]] from our main website.
 
 Using the Toolkit requires .Net 4.0 Framework Full to be installed on your machine.
 
-== Available Tools ==
+## Available Tools 
 
 |= Tool |= Description |
 | [[UserGuide/Tools/rdfConvert|rdfConvert]] | Utility for converting between different RDF formats |

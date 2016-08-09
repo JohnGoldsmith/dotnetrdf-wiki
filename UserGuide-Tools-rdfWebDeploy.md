@@ -1,43 +1,43 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]
 
-= rdfWebDeploy =
+# rdfWebDeploy 
 
 rdfWebDeploy is a command line utility for deploying [[UserGuide/ASP.Net Integration|ASP.Net Integration]]
 
-== Download ==
+## Download 
 
 You can download this tool as part of our [[http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows|Toolkit]]
 
-= Documentation =
+# Documentation 
 
 Command usage is as follows:
 
 {{{
 rdfWebDeploy.exe mode [options]
-}}}
+```
 
 For example to deploy an application:
 
 {{{
 rdfWebDeploy.exe -deploy /demos config.ttl
-}}}
+```
 
 To verify dotNetRDF DLLs are present and correct:
 {{{
 rdfWebDeploy.exe -dllverify /demos
-}}}
+```
 
-== Notes ==
+## Notes 
 
 All modes which support the webapp parameter specify it as the virtual path for the parameter on your local IIS instance, if you don't have a local IIS instance specify a path to the root directory of your web application and specify the ##-noiis## option as an additional command line argument
 
-=== Supported Modes ===
+### Supported Modes 
 
 ==== deploy ===
 
 {{{
 rdfWebDeploy.exe -deploy webapp config.ttl [options]
-}}}
+```
 
 Automatically deploys the given configuration file to the given web applications by setting up it's ##Web.Config## file appropriately and deploying necessary DLLs.
 
@@ -45,7 +45,7 @@ Automatically deploys the given configuration file to the given web applications
 
 {{{
 rdfWebDeploy.exe -dllupdate webapp [options]
-}}}
+```
 
 Updates all the required DLLs in the applications bin directory to the versions in the toolkits directory.
 
@@ -53,7 +53,7 @@ Updates all the required DLLs in the applications bin directory to the versions 
 
 {{{
 rdfWebDeploy.exe -dllverify webapp [options]
-}}}
+```
 
 Verifies whether the required DLLs are present in the applications ##bin/## directory
 
@@ -61,7 +61,7 @@ Verifies whether the required DLLs are present in the applications ##bin/## dire
 
 {{{
 rdfWebDeploy.exe -help
-}}}
+```
 
 Shows a console version of this usage guide
 
@@ -69,7 +69,7 @@ Shows a console version of this usage guide
 
 {{{
 rdfWebDeploy.exe -list config.ttl
-}}}
+```
 
 Lists the Handlers in the given configuration file
 
@@ -77,7 +77,7 @@ Lists the Handlers in the given configuration file
 
 {{{
 rdfWebDeploy.exe -test config.ttl
-}}}
+```
 
 Tests whether a configuration file parses and makes various tests for validity
 
@@ -85,7 +85,7 @@ Tests whether a configuration file parses and makes various tests for validity
 
 {{{
 rdfWebDeploy.exe -vocab file.ttl
-}}}
+```
 
 Outputs the Configuration Vocabulary to the given file for use as a reference
 
@@ -93,11 +93,11 @@ Outputs the Configuration Vocabulary to the given file for use as a reference
 
 {{{
 rdfWebDeploy.exe -xmldeploy web.config config.ttl [options]
-}}}
+```
 
 Automatically deploys the given configuration file to the given web applications by setting up it's ##Web.Config## file appropriately and deploying necessary DLLs
 
-=== Supported Options ===
+### Supported Options 
 
 |= Option |= Supported Modes |= Purpose |
 | ##-nointreg## | ##deploy## and ##xmldeploy## | If specified then Handlers will not be registered for IIS Integrated Mode |

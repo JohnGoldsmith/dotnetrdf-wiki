@@ -1,6 +1,6 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Graphs|Graphs]]
 
-= Configuring Graphs =
+# Configuring Graphs 
 
 Graphs can be specified using the [[http://www.dotnetrdf.org/configuration#|Configuration Vocabulary]] in a variety of ways. Graphs can be specified as empty or they can be specified as the merge of multiple data sources.
 
@@ -19,7 +19,7 @@ Graphs are loaded from Configuration in the following way:
 
 **Note:** If any of the data sources fails to load then the loading of the Graph will fail.
 
-= Basic Configuration =
+# Basic Configuration 
 
 At it's most basic a Graph is specified as follows:
 
@@ -30,15 +30,15 @@ At it's most basic a Graph is specified as follows:
 
 _:graph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" .
-}}}
+```
 
 With the built in loader you can specify any type which implements the ##IGraph## interface and has a public unparameterized constructor.
 
-== Data Source Configuration ==
+## Data Source Configuration 
 
 As already detailed there are multiple types of data source which you can fill a Graph with data from. Any combination of these may be used for a Graph and the resulting Graph will be the merge of all the data sources with the sources being loaded in the order specified earlier.
 
-=== Other Graphs ===
+### Other Graphs 
 
 Loading data from other graphs is specified as follows using the ##dnr:fromGraph## property:
 
@@ -53,11 +53,11 @@ _:graph a dnr:Graph ;
 
 _:otherGraph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" .
-}}}
+```
 
 **Note:** While it is possible to potentially introduce circular references by this mechanism the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] is designed such that these references are detected during the loading process and an error will be thrown.
 
-=== Files ===
+### Files 
 
 Loading data from files is specified as shown below using the ##dnr:fromFile## property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver|IPathResolver]] implementation by setting the //PathResolver// property of the ##ConfigurationLoader##. Files are expected to be RDF graphs in formats which dotNetRDF understands.
 
@@ -69,9 +69,9 @@ Loading data from files is specified as shown below using the ##dnr:fromFile## p
 _:graph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" ;
   dnr:fromFile "example.rdf" .
-}}}
+```
 
-=== Strings (RDF Fragments) ===
+### Strings (RDF Fragments) 
 
 You can encode the source of data for your Graph directly as a string using the ##dnr:fromString## property like so:
 
@@ -84,9 +84,9 @@ _:graph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" ;
   dnr:fromString """@prefix : <http://example.org/> .
                     :this :is "RDF data encoded in a Literal" . """ .
-}}}
+```
 
-=== Datasets ===
+### Datasets 
 
 Graphs can be filled with data from named graphs held in a SPARQL dataset specified using a combination of the ##dnr:fromDataset## and ##dnr:withUri## properties. The ##dnr:fromDataset## property is used to point to a SPARQL Dataset (see [[UserGuide/Configuration/SPARQL Datasets|Configuration API - SPARQL Datasets]]) from which data should be loaded and the ##dnr:withUri## property is used to specify the URI of the Graph from the dataset which should be loaded. Multiple ##dnr:withUri## properties may be specified to load multiple graphs from the dataset.
 
@@ -111,9 +111,9 @@ _:graph a dnr:Graph ;
 _:store a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.FusekiConnector" ;
   dnr:server <http://localhost:3030/dataset> .
-}}}
+```
 
-=== URIs ===
+### URIs 
 
 Graphs can be loaded from URIs using the ##dnr:fromUri## property:
 
@@ -126,9 +126,9 @@ _:graph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" ;
   # Gets the Graph of DBPedia's description of Southampton
   dnr:fromUri <http://dbpedia.org/resource/Southampton> .
-}}}
+```
 
-== Assigning a Base URI ==
+## Assigning a Base URI 
 
 Since Graphs loaded in this way will either have no Base URI or have a Base URI of one of their data sources it is often useful to assign a property URI to this Graph. This URI is the URI used if the Graph is subsequently saved/loaded or otherwise manipulated. A Base URI can be assigned using the ##dnr:assignUri## property like so:
 
@@ -139,9 +139,9 @@ Since Graphs loaded in this way will either have no Base URI or have a Base URI 
 _:graph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" ;
   dnr:assignUri <http://example.org/assignedUri> .
-}}}
+```
 
-== Applying Reasoners ==
+## Applying Reasoners 
 
 You can also apply reasoners to Graphs loaded in this way with the triples that the reasoner produces being materialised in the Graph. To learn how to configure a reasoner see [[UserGuide/Configuration/Reasoners|Configuration API - Reasoners]].
 
@@ -158,4 +158,4 @@ _:graph a dnr:Graph ;
 
 _:rdfs a dnr:Reasoner ;
   dnr:type "VDS.RDF.Query.Inference.RdfsReasoner" .
-}}}
+```

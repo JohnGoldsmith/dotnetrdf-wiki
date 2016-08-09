@@ -1,10 +1,10 @@
 [[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Update Processors|Update Processors]]
 
-= Configuring Update Processors =
+# Configuring Update Processors 
 
 Update Processors are used to process SPARQL Update commands. Update Processors implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.ISparqlUpdateProcessor|ISparqlUpdateProcessor]] interface and the library provides 3 concrete implementations which can be configured using the Configuration API
 
-= Basic Configuration =
+# Basic Configuration 
 
 Basic Configuration for a Update Processor looks like the following:
 
@@ -15,9 +15,9 @@ Basic Configuration for a Update Processor looks like the following:
 
 _:proc a dnr:SparqlUpdateProcessor .
   dnr:type "VDS.RDF.Update.LeviathanUpdateProcessor" .
-}}}
+```
 
-== Leviathan Update Processor ==
+## Leviathan Update Processor 
 
 The Leviathan Update Processor is used to process updates on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a dnr:usingStore property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]] interface e.g.
 
@@ -32,13 +32,13 @@ _:proc a dnr:SparqlUpdateProcessor .
 
 _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
-}}}
+```
 
 For information on how to configure Triple Stores see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
 
 Alternatively you may use the ##dnr:usingDataset## property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both ##dnr:usingDataset## and ##dnr:usingStore## are present then ##dnr:usingDataset## has priority and the value for ##dnr:usingStore## is ignored.
 
-== Generic Update Processor ==
+## Generic Update Processor 
 
 The Generic Update Processor is used to process updates against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]].
 
@@ -60,11 +60,11 @@ _:manager a dnr:GenericIOManager ;
   dnr:server "http://agraph.example.com" ;
   dnr:catalogID "catalog" ;
   dnr:storeID "store" .
-}}}
+```
 
 The above specifies a Update Processor which applies the updates to the AllegroGraph repository store in the catalog catalog on the server ##http://agraph.example.com##. See [[UserGuide/Configuration/Storage Providers|Configuration API - Storage Providers]] for more detail on configuring storage providers.
 
-== Simple Update Processor ==
+## Simple Update Processor 
 
 Similar to the Generic Update Processor the Simple Update Processor passes updates to the //ExecuteUpdate()// method of a Triple Store that implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUpdateableTripleStore|IUpdateableTripleStore]] interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
 
@@ -79,6 +79,6 @@ _:proc a dnr:SparqlUpdateProcessor .
 
 _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
-}}}
+```
 
 The above specifies a simple query processor that operates on an in-memory store. Note that both native and in-memory stores can be configured for use with this processor.

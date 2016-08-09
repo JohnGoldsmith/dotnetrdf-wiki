@@ -1,8 +1,8 @@
 [[Home]] > [[How To]] > [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]]
 
-= Debugging SPARQL Queries =
+# Debugging SPARQL Queries 
 
-== In-Memory Queries ==
+## In-Memory Queries 
 
 If you are using our in-memory SPARQL engine then you can attempt to debug why your queries are not working by using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ExplainQueryProcessor|ExplainQueryProcessor]] to try and figure out what is happening with your queries.
 
@@ -10,26 +10,24 @@ It is important to understand that explaining query evaluation will **substantia
 
 You can create this like so:
 
-{{{
-#!csharp
+```csharp
 
 //Assuming you already have a dataset you wish to use in the variable ds
 ISparqlQueryProcessor processor = new ExplainQueryProcessor(ds, ExplanationLevel.Full);
 
-}}}
+```
 
 Once you have the processor you run your query like you would normally with a query processor i.e.
 
-{{{
-#!csharp
+```csharp
 
 //Assuming you have a query ready to run in variable q
 Object results = processor.ProcessQuery(q);
-}}}
+```
 
 This will result in your query being evaluated but also explanations of the query level being printed to Console Standard Output and Debug Output.  These explanations will include useful information like how many results were found at each stage of the query and can help you see why you have no results
 
-== Remote/Native Queries ==
+## Remote/Native Queries 
 
 Debugging queries against remote endpoints or native SPARQL provided by a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] is somewhat more difficult.
 
