@@ -8,7 +8,7 @@ Advanced Users may want to take a look at the [[UserGuide/Advanced SPARQL|Advanc
 
 # Update Representation 
 
-Classes relating to SPARQL Update can be found in the ##VDS.RDF.Update## namespace. Unlike Queries a SPARQL Update may contain multiple commands to be executed separated by a semicolon (just like DDL for SQL) so the basic representation of a SPARQL Update is the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] which represents a set of commands to be executed. This has a //Commands// property which returns an enumeration of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommand|SparqlUpdateCommand]] instances.
+Classes relating to SPARQL Update can be found in the ##VDS.RDF.Update## namespace. Unlike Queries a SPARQL Update may contain multiple commands to be executed separated by a semicolon (just like DDL for SQL) so the basic representation of a SPARQL Update is the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] which represents a set of commands to be executed. This has a `Commands` property which returns an enumeration of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommand|SparqlUpdateCommand]] instances.
 
 The ##SparqlUpdateCommand## is the abstract base class for all SPARQL Updates. Concrete implementations of this class for each possible SPARQL Update command can be found in the ##VDS.RDF.Update.Commands## namespace.
 

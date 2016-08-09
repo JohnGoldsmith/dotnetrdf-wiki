@@ -29,11 +29,11 @@ The library includes three different query optimisers:
 
 ### Global Query Optimiser 
 
-The global optimiser setting is changed by setting the //QueryOptimiser// property of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.SparqlOptimiser|SparqlOptimiser]] static class. This optimiser is used by all [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQueryParser|SparqlQueryParser]] instances unless changed locally.
+The global optimiser setting is changed by setting the `QueryOptimiser` property of the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.SparqlOptimiser|SparqlOptimiser]] static class. This optimiser is used by all [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQueryParser|SparqlQueryParser]] instances unless changed locally.
 
 ### Local Query Optimiser 
 
-The local optimiser setting is controlled by setting the //QueryOptimiser// property of a ##SparqlQueryParser## instance. The local setting always overrides the global setting.
+The local optimiser setting is controlled by setting the `QueryOptimiser` property of a ##SparqlQueryParser## instance. The local setting always overrides the global setting.
 
 ### HTTP Handler Configuration 
 
@@ -59,7 +59,7 @@ The global optimisers are changed by using the //AddOptimiser()// and //RemoveOp
 
 ### Local Algebra Optimisers 
 
-The local optimisers are changed by setting the //AlgebraOptimisers// property on a ##SparqlQuery## instance. These optimisers are used when transforming the query into the Algebra form and apply ahead of any global optimisers.
+The local optimisers are changed by setting the `AlgebraOptimisers` property on a ##SparqlQuery## instance. These optimisers are used when transforming the query into the Algebra form and apply ahead of any global optimisers.
 
 ### HTTP Handler Configuration 
 
@@ -81,7 +81,7 @@ While in principle queries and updates are thread safe it is possible to write c
 
 # Transactions 
 
-Transactions are an advanced non-standard feature of our SPARQL Update implementation. Transactions track the sequence of actions that a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] performs and only commit/rollback the changes at the end of processing a command set. By default if you process commands individually (i.e. by calling the relevant //ProcessXCommand()// method directly) these are auto-committed unless you change the //AutoCommit// property for the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.LeviathanUpdateProcessor|LeviathanUpdateProcessor]] you are using.
+Transactions are an advanced non-standard feature of our SPARQL Update implementation. Transactions track the sequence of actions that a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] performs and only commit/rollback the changes at the end of processing a command set. By default if you process commands individually (i.e. by calling the relevant //ProcessXCommand()// method directly) these are auto-committed unless you change the `AutoCommit` property for the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.LeviathanUpdateProcessor|LeviathanUpdateProcessor]] you are using.
 
 Like thread-safety you do not need to do anything special to use transactions unless you want to control them in detail. Calling the //Flush()// or //Discard()// method on a ##ISparqlDataset## that supports transactions will have the effect of committing or rolling back the current Transaction (if any)
 

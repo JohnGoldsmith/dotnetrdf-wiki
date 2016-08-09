@@ -17,7 +17,7 @@ The following implementations are currently provided:
 
 ## Properties 
 
-These interfaces provide a single //IOBehaviour// property which reports [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IOBehaviour|IOBehaviour]] that describes the capabilities of an implementation i.e. which operations are supported.
+These interfaces provide a single `IOBehaviour` property which reports [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IOBehaviour|IOBehaviour]] that describes the capabilities of an implementation i.e. which operations are supported.
 
 ## Methods 
 
@@ -101,7 +101,7 @@ Creating a store is the most complex operation is done with a combination of the
 
 The //GetDefaultTemplate()// method returns a template that can be modified in order to create whatever the server considers its default store type.  If the server supports multiple store types the //GetAvailableTemplates()// method will return all available templates.
 
-A template has at the minimum a //ID// property which specifies the ID for the store to be created, it also has a //TemplateName// and //TemplateDescription// properties which describe the type of store the template may be used to create.  Templates also provide a //Validate()// method which can be used to ensure that templates are valid before use, any server will call this on templates passed to the //CreateStore()// method before actually attempting to create the store.
+A template has at the minimum a `ID` property which specifies the ID for the store to be created, it also has a `TemplateName` and `TemplateDescription` properties which describe the type of store the template may be used to create.  Templates also provide a //Validate()// method which can be used to ensure that templates are valid before use, any server will call this on templates passed to the //CreateStore()// method before actually attempting to create the store.
 
 Since servers may have many implementation specific features typically there will be some number of additional properties that are available on a template that will allow you to customize your template.  See documentation for the various supported implementations to see what templates are supported.  Template implementations are annotated using ##System.ComponentModel## annotations so can be explored via reflection if you so desire.
 

@@ -59,7 +59,7 @@ _:otherGraph a dnr:Graph ;
 
 ### Files 
 
-Loading data from files is specified as shown below using the ##dnr:fromFile## property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver|IPathResolver]] implementation by setting the //PathResolver// property of the ##ConfigurationLoader##. Files are expected to be RDF graphs in formats which dotNetRDF understands.
+Loading data from files is specified as shown below using the ##dnr:fromFile## property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver|IPathResolver]] implementation by setting the `PathResolver` property of the ##ConfigurationLoader##. Files are expected to be RDF graphs in formats which dotNetRDF understands.
 
 {{{
 #!turtle

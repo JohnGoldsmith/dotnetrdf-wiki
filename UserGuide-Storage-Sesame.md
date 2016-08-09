@@ -41,7 +41,7 @@ Additionally there are overloads for supplying a proxy server if necessary.
 
 We support managing a server via the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer|SesameServer]] class which implements our [[UserGuide/Storage/Servers|Servers API]]
 
-Managing a server allows you to manage a single catalog at a time, a Sesame connection provides access to its associated server via the //ParentServer// or //AsyncParentServer// property.
+Managing a server allows you to manage a single catalog at a time, a Sesame connection provides access to its associated server via the `ParentServer` or `AsyncParentServer` property.
 
 ## Connecting to a Server 
 

@@ -89,7 +89,7 @@ The ##SparqlResultSet## class is used to represent the results of SELECT and ASK
 
 ### ResultsType 
 
-The //ResultsType// property is used to determine what type of result set you have received. The possible values are from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultsType|SparqlResultsType]] enumeration and are as follows:
+The `ResultsType` property is used to determine what type of result set you have received. The possible values are from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultsType|SparqlResultsType]] enumeration and are as follows:
 
 |= Type |= Meaning |
 | ##SparqlResultsType.Boolean## | Is a Boolean results set (ASK Query results) |
@@ -98,11 +98,11 @@ The //ResultsType// property is used to determine what type of result set you ha
 
 ### Result 
 
-The //Result// property gives the boolean result of an ASK query or in the case of a SELECT query always returns true.
+The `Result` property gives the boolean result of an ASK query or in the case of a SELECT query always returns true.
 
 ### Results 
 
-The //Results// property gives the set of ##SparqlResult## objects as a strongly typed ##List<SparqlResult>##. You can use this to enumerate results or you can enumerate directly over the result set since it is ##IEnumerable<SparqlResult>## e.g.
+The `Results` property gives the set of ##SparqlResult## objects as a strongly typed ##List<SparqlResult>##. You can use this to enumerate results or you can enumerate directly over the result set since it is ##IEnumerable<SparqlResult>## e.g.
 
 ```csharp
 
@@ -123,20 +123,20 @@ Generally it is best to use the second form since this means you can do LINQ ope
 
 ### Variables 
 
-The //Variables// property gives an ##IEnumerable<String>## which lists all the variables that are bound in the Result Set. A variable which is listed in this enumeration does not necessarily appear in every result.
+The `Variables` property gives an ##IEnumerable<String>## which lists all the variables that are bound in the Result Set. A variable which is listed in this enumeration does not necessarily appear in every result.
 Result
 
 ## Result Rows 
 
-A ##SparqlResultSet## is composed of a table of results which are enumerated via the //Results// property as seen above. Each row in this table is an instance of the ##SparqlResult## class which has a number of methods and properties to allow you to access the variables and values for that result row.
+A ##SparqlResultSet## is composed of a table of results which are enumerated via the `Results` property as seen above. Each row in this table is an instance of the ##SparqlResult## class which has a number of methods and properties to allow you to access the variables and values for that result row.
 
 ### Count 
 
-The //Count// property tells you how many variable/value pairs are present in the result row
+The `Count` property tells you how many variable/value pairs are present in the result row
 
 ### Variables 
 
-The //Variables// property enumerates the variables actually present in the result row. Note that this may differ from the Variables property of the containing SparqlResultSet since not every result necessarily has every variable in it e.g. empty rows, rows from different sides of a UNION etc.
+The `Variables` property enumerates the variables actually present in the result row. Note that this may differ from the Variables property of the containing SparqlResultSet since not every result necessarily has every variable in it e.g. empty rows, rows from different sides of a UNION etc.
 
 ### Accessing Values 
 
@@ -166,7 +166,7 @@ Now we'll look at the different ways in which you can actually make a query, the
 | Query Processors | General purpose abstraction for making queries, highly recommended since it allows you to wrap any of the other query methods in abstracted code |
 | Remote Query | Make a query against a remote SPARQL endpoint |
 | Native Query | Make a query against an external SPARQL engine |
-| Direct Triple Store Query | Make a query directly against a ##IInMemoryQueryable## (//deprecated//) |
+| Direct Triple Store Query | Make a query directly against a ##IInMemoryQueryable## (`deprecated`) |
 
 ## Query Processors 
 
@@ -253,7 +253,7 @@ The library includes the following query processors:
 
 ### Customizing Query Behaviour 
 
-When you use the //ProcessQuery()// overload that takes a ##SparqlQuery## object you have the option of setting some properties on it which control its behaviour with regards to execution timeout. Since some queries can take a very long time to run it is often sensible to limit how long queries can run for, the //Timeout// property of the ##SparqlQuery## allows you to specify the timeout. If you wish to get results back even when a timeout occurs then you can set the //PartialResultsOnTimeout// property to ensure you get some results even if a timeout occurs.
+When you use the //ProcessQuery()// overload that takes a ##SparqlQuery## object you have the option of setting some properties on it which control its behaviour with regards to execution timeout. Since some queries can take a very long time to run it is often sensible to limit how long queries can run for, the `Timeout` property of the ##SparqlQuery## allows you to specify the timeout. If you wish to get results back even when a timeout occurs then you can set the `PartialResultsOnTimeout` property to ensure you get some results even if a timeout occurs.
 
 **However** there is no guarantee that a query processor implementation will respect these properties.
 

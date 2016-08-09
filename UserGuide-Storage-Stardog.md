@@ -27,7 +27,7 @@ StardogConnector stardog = new StardogConnector("http://localhost:5820", "exampl
 
 ## Configurable Query Reasoning 
 
-Stardog 1.x and 2.x supports configurable reasoning levels on a per-query basis.  The current reasoning level is controlled by the //Reasoning// property and takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogReasoningMode|StardogReasoningMode]] enum.
+Stardog 1.x and 2.x supports configurable reasoning levels on a per-query basis.  The current reasoning level is controlled by the `Reasoning` property and takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogReasoningMode|StardogReasoningMode]] enum.
 
 Note that from Stardog 3.x the reasoning level is controlled at the database level and cannot be changed at the connection level.
 
@@ -43,7 +43,7 @@ We support managing a server via the [[http://www.dotnetrdf.org/api/index.asp?To
 
 The ##StardogServer## assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV1Server|StardogV1Server]], [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV2Server|StardogV2Server]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV3Server|StardogV3Server]] are provided if you wish to be explicit about the version of Stardog you are connecting to.
 
-A ##StardogConnector## provides access to its associated server via the //ParentServer// or //AsyncParentServer// property.
+A ##StardogConnector## provides access to its associated server via the `ParentServer` or `AsyncParentServer` property.
 
 ## Connecting to a Server 
 

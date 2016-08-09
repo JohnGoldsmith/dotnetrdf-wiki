@@ -30,7 +30,7 @@ This is called whenever a Namespace declaration is encountered, again in mosts c
 
 ## HandleTriple(Triple t) 
 
-This is the method which is probably of interest to most people as this is where you actually receive the RDF triples for processing. If the data source from which you are handling triples is actually providing quads then the //GraphUri// property of the triples will be non-null.
+This is the method which is probably of interest to most people as this is where you actually receive the RDF triples for processing. If the data source from which you are handling triples is actually providing quads then the `GraphUri` property of the triples will be non-null.
 
 In this method you can implement whatever logic you wish regarding triples and then either return ##true## to indicate that processing should continue or ##false## to indicate processing should terminate.
 

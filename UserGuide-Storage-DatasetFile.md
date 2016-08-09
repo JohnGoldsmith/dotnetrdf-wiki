@@ -18,4 +18,4 @@ You can create a connection to a dataset file like so:
 DatasetFileManager dataset = new DatasetFileManager("example.trig", false);
 ```
 
-The boolean parameter here controls whether to load the file in async, if set to ##true## your code will continue immediately but you won't be able to use the store immediately.  If you use async loading the //IsReady// property will indicate when the store is ready for use.
+The boolean parameter here controls whether to load the file in async, if set to ##true## your code will continue immediately but you won't be able to use the store immediately.  If you use async loading the `IsReady` property will indicate when the store is ready for use.
