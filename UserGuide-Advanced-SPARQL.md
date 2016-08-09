@@ -2,7 +2,7 @@
 
 # Advanced SPARQL
 
-This portion of the user guide is dedicated to advanced SPARQL topics, if you were looking for an introduction to SPARQL with dotNetRDF please see [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]] and [[UserGuide/Updating with SPARQL|Updating with SPARQL]].  If you are having problems with a query not returning results you may want to look at the [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]] page.
+This portion of the user guide is dedicated to advanced SPARQL topics, if you were looking for an introduction to SPARQL with dotNetRDF please see [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]] and [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]].  If you are having problems with a query not returning results you may want to look at the [[Debugging SPARQL Queries|HowTo-Debug-SPARQL-Queries]] page.
 
 Currently the following topics are covered:
 

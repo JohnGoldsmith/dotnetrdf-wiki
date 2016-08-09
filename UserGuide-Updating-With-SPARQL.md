@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Updating with SPARQL|Updating with SPARQL]]
+[[Home]] > [[User Guide|UserGuide]] > [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
 
 # Updating with SPARQL 
 

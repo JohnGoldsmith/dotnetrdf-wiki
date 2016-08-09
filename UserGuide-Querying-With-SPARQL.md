@@ -229,7 +229,7 @@ In this example we have only printed results in full to the Console, to learn mo
 
 ==== Default Graph ====
 
-A common error with making queries is that queries by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing queries may yield no results depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[UserGuide/SPARQL Datasets|SPARQL Datasets]] page for discussions of configuring different kinds of dataset.  You can also look at [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
+A common error with making queries is that queries by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing queries may yield no results depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[UserGuide/SPARQL Datasets|SPARQL Datasets]] page for discussions of configuring different kinds of dataset.  You can also look at [[Debugging SPARQL Queries|HowTo-Debug-SPARQL-Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
 
 The typical cause of this is that when you call ##LoadFromFile()## or ##LoadFromUri()## the library automatically assigns the graph a name based on the data source so when you add it a store instance it is a named graph rather than the default graph.  The easiest way to resolve this is to simply set the ##BaseUri## property of your graph instance to ##null## after loading it and before you execute queries with it.
 
@@ -361,7 +361,7 @@ The return type from the //ExecuteQuery()// method is an ##Object## since it may
 
 As previously mentioned a common error here is that you get no results because you aren't querying the data you expect.  If you have a single graph you are querying just call //ExecuteQuery()// directly on the graph instead of creating an intermediary ##TripleStore## which guarantees that your query operates over your graph.  If you have more than one graph we **strongly** recommend that you use the query processor method of querying instead since that requires you to explicitly configure your dataset which makes errors like these much less likely to happen.
 
-If you are still having problems with no results you can also look at [[HowTo/Debug SPARQL Queries|Debugging SPARQL Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
+If you are still having problems with no results you can also look at [[Debugging SPARQL Queries|HowTo-Debug-SPARQL-Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
 
 # Loading/Saving Results 
 
@@ -401,7 +401,7 @@ Note that one important difference between reading SPARQL results versus reading
 
 # Tutorial Navigation 
 
-The previous topic was [[UserGuide/Working with Triple Stores|Working with Triple Stores]], the next topic is [[UserGuide/Updating with SPARQL|Updating with SPARQL]]
+The previous topic was [[UserGuide/Working with Triple Stores|Working with Triple Stores]], the next topic is [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
 
 Users wishing to learn more may wish to jump straight to the following topics:
 * [[UserGuide/Advanced SPARQL|Advanced SPARQL]]

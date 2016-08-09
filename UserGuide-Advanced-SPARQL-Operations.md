@@ -2,7 +2,7 @@
 
 # Advanced SPARQL Operations 
 
-This article details advanced features of our of SPARQL implementation, if you are just interesting in using basic SPARQL see [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]] and [[UserGuide/Updating with SPARQL|Updating with SPARQL]].
+This article details advanced features of our of SPARQL implementation, if you are just interesting in using basic SPARQL see [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]] and [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]].
 
 On this page we cover the following features:
 
