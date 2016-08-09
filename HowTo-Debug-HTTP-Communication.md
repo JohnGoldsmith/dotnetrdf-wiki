@@ -1,4 +1,4 @@
-[[Home]] > [[How To]] > Debug HTTP Communication
+[[Home]] > [[HowTo]] > Debug HTTP Communication
 
 # Debugging HTTP Communication 
 
