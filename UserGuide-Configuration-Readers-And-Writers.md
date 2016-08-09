@@ -25,7 +25,7 @@ The following example shows how to change the default RDF/XML writer to be the [
 	fmt:preferred_suffix "rdf" .
 ```
 
-You can use the //AutoConfigureReadersAndWriters(IGraph g)// method to have the API automatically load reader and writer configuration.
+You can use the `AutoConfigureReadersAndWriters(IGraph g)` method to have the API automatically load reader and writer configuration.
 
 The same basic configuration applies regardless of whether you are configuring a reader/writer, you merely need to swap out ##dnr:RdfWriter## for the class representing what you are registering:
 

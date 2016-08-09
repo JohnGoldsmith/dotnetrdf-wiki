@@ -19,7 +19,7 @@ The API consists of a number of interfaces:
 
 Generally you will only want to use one of the higher level interfaces such as ##INodeFormatter## or ##ITripleFormatter##.  Both these interfaces define //Format(…)// methods which take either a ##Triple## or an ##INode## and return a string representation of them. You can also call //ToString(…)// overloads on ##Triple## and ##INode## which take in a formatter and return the String representation as formatted by that formatter.
 
-In general any formatter usually provides one or more //Format()// or //FormatX()// methods which are used to format specific things.  These methods take the thing to be formatted and return a string.
+In general any formatter usually provides one or more `Format()` or `FormatX()` methods which are used to format specific things.  These methods take the thing to be formatted and return a string.
 
 ## Example 1 
 

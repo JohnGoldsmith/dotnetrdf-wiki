@@ -55,7 +55,7 @@ The library includes the following algebra optimisers which are automatically re
 
 ### Global Algebra Optimisers 
 
-The global optimisers are changed by using the //AddOptimiser()// and //RemoveOptimiser()// methods of the ##SparqlOptimiser## static class. These optimisers are used when transforming any query into its Algebra form for evaluation.
+The global optimisers are changed by using the `AddOptimiser()` and `RemoveOptimiser()` methods of the ##SparqlOptimiser## static class. These optimisers are used when transforming any query into its Algebra form for evaluation.
 
 ### Local Algebra Optimisers 
 
@@ -81,9 +81,9 @@ While in principle queries and updates are thread safe it is possible to write c
 
 # Transactions 
 
-Transactions are an advanced non-standard feature of our SPARQL Update implementation. Transactions track the sequence of actions that a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] performs and only commit/rollback the changes at the end of processing a command set. By default if you process commands individually (i.e. by calling the relevant //ProcessXCommand()// method directly) these are auto-committed unless you change the `AutoCommit` property for the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.LeviathanUpdateProcessor|LeviathanUpdateProcessor]] you are using.
+Transactions are an advanced non-standard feature of our SPARQL Update implementation. Transactions track the sequence of actions that a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet|SparqlUpdateCommandSet]] performs and only commit/rollback the changes at the end of processing a command set. By default if you process commands individually (i.e. by calling the relevant `ProcessXCommand()` method directly) these are auto-committed unless you change the `AutoCommit` property for the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.LeviathanUpdateProcessor|LeviathanUpdateProcessor]] you are using.
 
-Like thread-safety you do not need to do anything special to use transactions unless you want to control them in detail. Calling the //Flush()// or //Discard()// method on a ##ISparqlDataset## that supports transactions will have the effect of committing or rolling back the current Transaction (if any)
+Like thread-safety you do not need to do anything special to use transactions unless you want to control them in detail. Calling the `Flush()` or `Discard()` method on a ##ISparqlDataset## that supports transactions will have the effect of committing or rolling back the current Transaction (if any)
 
 For example if you tried to process the following commands an error would be thrown and any temporary changes made to the state of the dataset would be rolled back:
 

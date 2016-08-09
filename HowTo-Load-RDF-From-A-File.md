@@ -2,7 +2,7 @@
 
 # Load RDF from a File 
 
-RDF can be loading from local files using the //LoadFromFile()// extension method.  This method exists for both [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph|IGraph]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ITripleStore|ITripleStore]] e.g.
+RDF can be loading from local files using the `LoadFromFile()` extension method.  This method exists for both [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph|IGraph]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ITripleStore|ITripleStore]] e.g.
 
 ```csharp
 

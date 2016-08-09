@@ -24,7 +24,7 @@ UriFactory.Clear();
 
 # Triple Indexing 
 
-By default the standard [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph|Graph]] implementation builds a number of triple indexes behind the scenes.  This help make the //GetTriplesWithX()// methods and SPARQL queries run very fast on in-memory data.  However depending on what you are doing with the graph you may either not need indexes at all or only need certain indexes.
+By default the standard [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph|Graph]] implementation builds a number of triple indexes behind the scenes.  This help make the `GetTriplesWithX()` methods and SPARQL queries run very fast on in-memory data.  However depending on what you are doing with the graph you may either not need indexes at all or only need certain indexes.
 
 By default indexed graphs in dotNetRDF will incorporate 6 indices:
 
@@ -72,7 +72,7 @@ If you can work with RDF/SPARQL Results in a stream then you can leverage the [[
 
 # Token Queue Mode 
 
-Token based parsers accept a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Tokens.TokenQueueMode|TokenQueueMode]] which is defines how it tokenizes the input data, the choice of this can have a significant affect on memory usage.  The global default for this can be controlled via the //Options.DefaultTokenQueueMode// property.
+Token based parsers accept a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Tokens.TokenQueueMode|TokenQueueMode]] which is defines how it tokenizes the input data, the choice of this can have a significant affect on memory usage.  The global default for this can be controlled via the `Options.DefaultTokenQueueMode` property.
 
 |= Queue Mode |= Behaviour |
 | ##QueueAllBeforeParsing## | As the name suggests in this mode input data is completely tokenized before any parsing takes place.  This is the most expensive memory wise but may be more performant for very small data |

@@ -25,7 +25,7 @@ These interfaces provide several methods for carrying out the varying management
 
 ### ListStores() 
 
-The //ListStores()// method lists the stores available on a server.
+The `ListStores()` method lists the stores available on a server.
 
 ```csharp
 using System;
@@ -50,7 +50,7 @@ public class ListStoresExample
 
 ### GetStore() 
 
-The //GetStore()// method gets a connection to a specific store assuming it is available on the server.
+The `GetStore()` method gets a connection to a specific store assuming it is available on the server.
 
 ```csharp
 using System;
@@ -73,7 +73,7 @@ public class ListStoresExample
 
 ### DeleteStore() 
 
-The //DeleteStore()// method is used to delete a store from the server, this is typically non-reversible and should be used with extreme care.
+The `DeleteStore()` method is used to delete a store from the server, this is typically non-reversible and should be used with extreme care.
 
 ```csharp
 using System;
@@ -95,19 +95,19 @@ public class ListStoresExample
 
 ### Creating a Store 
 
-Creating a store is the most complex operation is done with a combination of the //CreateStore()// and either the //GetDefaultTemplate()// or //GetAvailableTemplates()// method.  Creating a store requires that you provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.IStoreTemplate|IStoreTemplate]] instance which indicates to the server what kind of store to create.
+Creating a store is the most complex operation is done with a combination of the `CreateStore()` and either the `GetDefaultTemplate()` or `GetAvailableTemplates()` method.  Creating a store requires that you provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.IStoreTemplate|IStoreTemplate]] instance which indicates to the server what kind of store to create.
 
 ==== Templates ====
 
-The //GetDefaultTemplate()// method returns a template that can be modified in order to create whatever the server considers its default store type.  If the server supports multiple store types the //GetAvailableTemplates()// method will return all available templates.
+The `GetDefaultTemplate()` method returns a template that can be modified in order to create whatever the server considers its default store type.  If the server supports multiple store types the `GetAvailableTemplates()` method will return all available templates.
 
-A template has at the minimum a `ID` property which specifies the ID for the store to be created, it also has a `TemplateName` and `TemplateDescription` properties which describe the type of store the template may be used to create.  Templates also provide a //Validate()// method which can be used to ensure that templates are valid before use, any server will call this on templates passed to the //CreateStore()// method before actually attempting to create the store.
+A template has at the minimum a `ID` property which specifies the ID for the store to be created, it also has a `TemplateName` and `TemplateDescription` properties which describe the type of store the template may be used to create.  Templates also provide a `Validate()` method which can be used to ensure that templates are valid before use, any server will call this on templates passed to the `CreateStore()` method before actually attempting to create the store.
 
 Since servers may have many implementation specific features typically there will be some number of additional properties that are available on a template that will allow you to customize your template.  See documentation for the various supported implementations to see what templates are supported.  Template implementations are annotated using ##System.ComponentModel## annotations so can be explored via reflection if you so desire.
 
 ==== CreateStore() ====
 
-Once you have an appropriate template you can pass it to the //CreateStore()// method to get the store created.  This method will return ##true## if the creation succeeds and ##false## (or an exception) otherwise.
+Once you have an appropriate template you can pass it to the `CreateStore()` method to get the store created.  This method will return ##true## if the creation succeeds and ##false## (or an exception) otherwise.
 
 ```csharp
 

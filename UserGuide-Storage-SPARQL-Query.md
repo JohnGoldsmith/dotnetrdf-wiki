@@ -29,4 +29,4 @@ SparqlRemoteEndpoint endpoint = new SparqlRemoteEndpoint(new Uri("http://example
 SparqlConnector sparql = new SparqlConnector(endpoint);
 ```
 
-In both cases there is an overload which takes a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlConnectorLoadMethod|SparqlConnectorLoadMethods]] which determines whether the //LoadGraph()// method operates by making a ##CONSTRUCT## or a ##DESCRIBE## query, the default is ##CONSTRUCT##
+In both cases there is an overload which takes a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlConnectorLoadMethod|SparqlConnectorLoadMethods]] which determines whether the `LoadGraph()` method operates by making a ##CONSTRUCT## or a ##DESCRIBE## query, the default is ##CONSTRUCT##

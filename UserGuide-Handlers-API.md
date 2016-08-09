@@ -58,7 +58,7 @@ Called if the results set is a boolean result.
 
 ## HandleResult(SparqlResult result) 
 
-Called if the results set is a set of variable bindings. Like the //HandleTriple()// method this is where you will likely want to implement most of your logic and again you should return either ##true## to continue processing or ##false## to terminate processing.
+Called if the results set is a set of variable bindings. Like the `HandleTriple()` method this is where you will likely want to implement most of your logic and again you should return either ##true## to continue processing or ##false## to terminate processing.
 
 ## EndResults(bool ok) 
 

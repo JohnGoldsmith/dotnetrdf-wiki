@@ -14,7 +14,7 @@ The ##SparqlUpdateCommand## is the abstract base class for all SPARQL Updates. C
 
 # Parsing Updates 
 
-SPARQL Updates are parsed using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlUpdateParser|SparqlUpdateParser]] found in the ##VDS.RDF.Parsing## namespace. Like the parser for SPARQL Queries it supports four parsing methods - //Parse(StreamReader reader)//, //ParseFromFile(String file)//, //ParseFromString(SparqlParameterizedString update)// and //ParseFromString(String update)// - which all return a ##SparqlUpdateCommandSet##.
+SPARQL Updates are parsed using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlUpdateParser|SparqlUpdateParser]] found in the ##VDS.RDF.Parsing## namespace. Like the parser for SPARQL Queries it supports four parsing methods - `Parse(StreamReader reader)`, `ParseFromFile(String file)`, `ParseFromString(SparqlParameterizedString update)` and `ParseFromString(String update)` - which all return a ##SparqlUpdateCommandSet##.
 
 This is fairly simply used like so:
 
@@ -163,7 +163,7 @@ We also provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.
 
 ### Sending Updates to Remote Endpoints 
 
-Just like SPARQL Queries you may wish to send SPARQL Updates to remote servers. To do this we provide the ##SparqlRemoteUpdateEndpoint## class, it provides an //Update(String sparqlUpdate)// method which is used to send an update to the remote endpoint plus various methods and properties associated with configuring credentials and proxies for the request.
+Just like SPARQL Queries you may wish to send SPARQL Updates to remote servers. To do this we provide the ##SparqlRemoteUpdateEndpoint## class, it provides an `Update(String sparqlUpdate)` method which is used to send an update to the remote endpoint plus various methods and properties associated with configuring credentials and proxies for the request.
 
 ```csharp
 
@@ -192,7 +192,7 @@ public class RemoteSparqlUpdateExample
 }
 ```
 
-The above example creates a SPARQL Update containing two commands (a COPY then a DELETE) which is sent to a Remote Endpoint. Invoking the //Update(String update)// method may throw an error if the remote endpoint refuses to process your update request for whatever reason (lack of permissions, malformed update etc).
+The above example creates a SPARQL Update containing two commands (a COPY then a DELETE) which is sent to a Remote Endpoint. Invoking the `Update(String update)` method may throw an error if the remote endpoint refuses to process your update request for whatever reason (lack of permissions, malformed update etc).
 
 ----
 

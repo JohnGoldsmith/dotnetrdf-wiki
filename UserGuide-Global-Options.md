@@ -22,7 +22,7 @@ Controls the [[DeveloperGuide/URI Interning|URI Interning]] feature of the libra
 
 ### LiteralEqualityMode 
 
-Controls the behaviour when you call //Equals()// on instances of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ILiteralNode|ILiteralNode]].  This takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralEqualityMode|LiteralEqualityMode]] enumeration, the default is ##Strict##.  In ##Strict## mode literal equality follows RDF term equality semantics i.e. the lexical values must be exactly equal and so must the language tag/datatype URI if present.
+Controls the behaviour when you call `Equals()` on instances of [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ILiteralNode|ILiteralNode]].  This takes a value from the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.LiteralEqualityMode|LiteralEqualityMode]] enumeration, the default is ##Strict##.  In ##Strict## mode literal equality follows RDF term equality semantics i.e. the lexical values must be exactly equal and so must the language tag/datatype URI if present.
 
 If you set this to ##Loose## instead then value equality semantics are used i.e. if the literals represent the same value then they are considered equal.
 
@@ -106,7 +106,7 @@ Controls whether unknown SPARQL extension functions should be allowed, defaults 
 
 Controls whether the in-memory SPARQL engine rigorously checks the provided matches from the underlying [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset|ISparqlDataset]], defaults to ##false## as this is usually unnecessary.
 
-You may need to enable this if your ##ISparqlDataset## implementation cannot guarantee that a call to //GetTriplesWithX()// only returns triples matching the given arguments.
+You may need to enable this if your ##ISparqlDataset## implementation cannot guarantee that a call to `GetTriplesWithX()` only returns triples matching the given arguments.
 
 ### StrictOperations 
 

@@ -12,12 +12,12 @@ These interfaces are fairly rudimentary and provide three simple methods:
 
 ## Begin() 
 
-The //Begin()// method starts a new transaction.
+The `Begin()` method starts a new transaction.
 
 ## Commit() 
 
-The //Commit()// method commits the current transaction.
+The `Commit()` method commits the current transaction.
 
 ## Rollback() 
 
-The //Rollback()// method rolls back the current transaction.
+The `Rollback()` method rolls back the current transaction.

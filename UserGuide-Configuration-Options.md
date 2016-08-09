@@ -11,7 +11,7 @@ The Configuration API includes the capability to automatically configure any sta
 * ##Uri##
 * An Enum
 
-Static options may be automatically configured when using the //LoadConfiguration()// methods with the ##autoConfigure## argument set to ##true## or by calling //AutoConfigureStaticOptions(IGraph g)//.  This is useful when you want to ensure that some static options are always set in your environment.
+Static options may be automatically configured when using the `LoadConfiguration()` methods with the ##autoConfigure## argument set to ##true## or by calling `AutoConfigureStaticOptions(IGraph g)`.  This is useful when you want to ensure that some static options are always set in your environment.
 
 Configuration for static options is defined like so:
 

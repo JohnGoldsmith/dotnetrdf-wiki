@@ -156,7 +156,7 @@ INode value = r[0];
 INode value = r.Value("var");
 ```
 
-**Warning:** All of the above return a value/null if the variable is present (but possibly unbound) in the result or throw an error if the variable is not present. Consider using the //HasValue()// method to check whether a given variable is present in a result before attempting to retrieve it.
+**Warning:** All of the above return a value/null if the variable is present (but possibly unbound) in the result or throw an error if the variable is not present. Consider using the `HasValue()` method to check whether a given variable is present in a result before attempting to retrieve it.
 
 # Making a Query 
 
@@ -170,9 +170,9 @@ Now we'll look at the different ways in which you can actually make a query, the
 
 ## Query Processors 
 
-Query Processors are classes use to evaluate queries which abstract away from whatever the underlying query engine is. The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ISparqlQueryProcessor|ISparqlQueryProcessor]] interface defines two methods for evaluating queries both called //ProcessQuery()//.  Query processors are the preferred means of evaluating queries in dotNetRDF and should used in preference to other methods wherever possible.
+Query Processors are classes use to evaluate queries which abstract away from whatever the underlying query engine is. The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ISparqlQueryProcessor|ISparqlQueryProcessor]] interface defines two methods for evaluating queries both called `ProcessQuery()`.  Query processors are the preferred means of evaluating queries in dotNetRDF and should used in preference to other methods wherever possible.
 
-The first //ProcessQuery(SparqlQuery query)// takes in a ##SparqlQuery## and returns either a ##SparqlResultSet## or an ##IGraph## instance. The second ##ProcessQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, SparqlQuery query)## is for advanced users and gives much more detailed control over the processing of results.
+The first `ProcessQuery(SparqlQuery query)` takes in a ##SparqlQuery## and returns either a ##SparqlResultSet## or an ##IGraph## instance. The second ##ProcessQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, SparqlQuery query)## is for advanced users and gives much more detailed control over the processing of results.
 
 For example you can use the standard [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.LeviathanQueryProcessor|LeviathanQueryProcessor]] to evaluate queries in-memory e.g.
 
@@ -253,7 +253,7 @@ The library includes the following query processors:
 
 ### Customizing Query Behaviour 
 
-When you use the //ProcessQuery()// overload that takes a ##SparqlQuery## object you have the option of setting some properties on it which control its behaviour with regards to execution timeout. Since some queries can take a very long time to run it is often sensible to limit how long queries can run for, the `Timeout` property of the ##SparqlQuery## allows you to specify the timeout. If you wish to get results back even when a timeout occurs then you can set the `PartialResultsOnTimeout` property to ensure you get some results even if a timeout occurs.
+When you use the `ProcessQuery()` overload that takes a ##SparqlQuery## object you have the option of setting some properties on it which control its behaviour with regards to execution timeout. Since some queries can take a very long time to run it is often sensible to limit how long queries can run for, the `Timeout` property of the ##SparqlQuery## allows you to specify the timeout. If you wish to get results back even when a timeout occurs then you can set the `PartialResultsOnTimeout` property to ensure you get some results even if a timeout occurs.
 
 **However** there is no guarantee that a query processor implementation will respect these properties.
 
@@ -261,7 +261,7 @@ When you use the //ProcessQuery()// overload that takes a ##SparqlQuery## object
 
 Remote SPARQL endpoints can be queried using the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlRemoteEndpoint|SparqlRemoteEndpoint]] class. This class is a wrapper around a remote endpoint which sends queries to the endpoint and then turns the response into a ##SparqlResultSet## or ##IGraph## as appropriate.
 
-A remote endpoint is a combination of an endpoint URI and an optional default Graph URI. A ##SparqlRemoteEndpoint## provides specific strongly typed methods for making queries meaning that you don't need to type check and cast the result. The //QueryWithResultGraph(String sparqlQuery)// method can be used to make a CONSTRUCT or DESCRIBE query while the //QueryWithResultSet(String sparqlQuery)// method can be used to make SELECT and ASK queries. You can also use the //QueryRaw(String sparqlQuery, out String ctype)// method if you wish to get the raw response stream from the endpoint and process it yourself.
+A remote endpoint is a combination of an endpoint URI and an optional default Graph URI. A ##SparqlRemoteEndpoint## provides specific strongly typed methods for making queries meaning that you don't need to type check and cast the result. The `QueryWithResultGraph(String sparqlQuery)` method can be used to make a CONSTRUCT or DESCRIBE query while the `QueryWithResultSet(String sparqlQuery)` method can be used to make SELECT and ASK queries. You can also use the `QueryRaw(String sparqlQuery, out String ctype)` method if you wish to get the raw response stream from the endpoint and process it yourself.
 
 A remote endpoint can be used as follows:
 
@@ -357,9 +357,9 @@ public class InMemoryTripleStoreExample
 }
 ```
 
-The return type from the //ExecuteQuery()// method is an ##Object## since it may be either a ##SparqlResultSet## or an ##IGraph## so you will need to do an ##is## test and then cast as shown in the example. Alternatively you can use the ##as## operator though we tend to avoid this ourselves since it can unintentionally hide errors in query evaluation.
+The return type from the `ExecuteQuery()` method is an ##Object## since it may be either a ##SparqlResultSet## or an ##IGraph## so you will need to do an ##is## test and then cast as shown in the example. Alternatively you can use the ##as## operator though we tend to avoid this ourselves since it can unintentionally hide errors in query evaluation.
 
-As previously mentioned a common error here is that you get no results because you aren't querying the data you expect.  If you have a single graph you are querying just call //ExecuteQuery()// directly on the graph instead of creating an intermediary ##TripleStore## which guarantees that your query operates over your graph.  If you have more than one graph we **strongly** recommend that you use the query processor method of querying instead since that requires you to explicitly configure your dataset which makes errors like these much less likely to happen.
+As previously mentioned a common error here is that you get no results because you aren't querying the data you expect.  If you have a single graph you are querying just call `ExecuteQuery()` directly on the graph instead of creating an intermediary ##TripleStore## which guarantees that your query operates over your graph.  If you have more than one graph we **strongly** recommend that you use the query processor method of querying instead since that requires you to explicitly configure your dataset which makes errors like these much less likely to happen.
 
 If you are still having problems with no results you can also look at [[Debugging SPARQL Queries|HowTo-Debug-SPARQL-Queries]] for a method to debug what is happening with your query when using the in-memory SPARQL engine.
 

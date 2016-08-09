@@ -110,14 +110,14 @@ As you'll see from the above example there are a couple of important things to r
 
 ## Remove 
 
-The //Remove(Uri graphUri)// method is used to remove a graph that is in the triple store. Removing a graph that doesn't exist has no effect and does not cause an error.
+The `Remove(Uri graphUri)` method is used to remove a graph that is in the triple store. Removing a graph that doesn't exist has no effect and does not cause an error.
 
 # In-Memory Triple Stores 
 
 As you have seen the basic triple store interface simply allows you to enumerate over a triple store and to add and remove graphs from it. While this is useful in itself you'll often want to make queries over the entire store and for this you'll need to use one of the classes that implement [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore|IInMemoryQueryableStore]].
-One of the main things the ##IInMemoryQueryableStore## does is to define equivalents of all the various //GetTriples()// methods from the ##IGraph## interface for triple stores. It has two versions of each method, one which operates over all the triples in the triple Store and one which operates over a subset of the triples where the subset is defined by a list of Graph URIs.
+One of the main things the ##IInMemoryQueryableStore## does is to define equivalents of all the various `GetTriples()` methods from the ##IGraph## interface for triple stores. It has two versions of each method, one which operates over all the triples in the triple Store and one which operates over a subset of the triples where the subset is defined by a list of Graph URIs.
 
-Perhaps the more important feature of the interface is that it defines an //ExecuteQuery()// method which can be used to execute SPARQL queries in-memory over the Triple Store. There are two variants of this method, one which takes the raw SPARQL query as a String and one which takes a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery|SparqlQuery]] object e.g.
+Perhaps the more important feature of the interface is that it defines an `ExecuteQuery()` method which can be used to execute SPARQL queries in-memory over the Triple Store. There are two variants of this method, one which takes the raw SPARQL query as a String and one which takes a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery|SparqlQuery]] object e.g.
 
 ```csharp
 
@@ -173,7 +173,7 @@ One of the advantages of using the [[http://www.dotnetrdf.org/api/index.asp?Topi
 
 The [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore|INativelyQueryableStore]] interface is another extension to the ##ITripleStore## interface which is disjoint from the ##IInMemoryQueryableStore## interface i.e. a Store cannot be both In-Memory and Natively Queryable. Natively Queryable Stores represents Stores which provide their own SPARQL implementations and so can be queried directly.
 
-An ##INativelyQueryableStore## defines only one additional method which is //ExecuteQuery(String query)// which takes a SPARQL query as a String and executes it against the underlying SPARQL implementation. Note that these stores may only be queryable read-only wrappers around an underlying store.
+An ##INativelyQueryableStore## defines only one additional method which is `ExecuteQuery(String query)` which takes a SPARQL query as a String and executes it against the underlying SPARQL implementation. Note that these stores may only be queryable read-only wrappers around an underlying store.
 
 We provide a [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore|PersistentTripleStore]] class which is an implementation of the ##INativelyQueryableStore## that can be used with any of the backing stores we support with [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage|IQueryableStorage]] implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
 

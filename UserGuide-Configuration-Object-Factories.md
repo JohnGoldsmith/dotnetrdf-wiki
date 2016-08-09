@@ -14,4 +14,4 @@ _:factory a dnr:ObjectFactory ;
 
 This configures an object factory from an external assembly. Object factories can be registered as described on the [[UserGuide/Configuration API|Configuration API]] page.
 
-**Note:** When a configuration graph is used in an ASP.Net application the //AutoConfigureObjectFactories()// method will be called automatically before attempting to load configuration so any custom objects you define will be loadable.
+**Note:** When a configuration graph is used in an ASP.Net application the `AutoConfigureObjectFactories()` method will be called automatically before attempting to load configuration so any custom objects you define will be loadable.

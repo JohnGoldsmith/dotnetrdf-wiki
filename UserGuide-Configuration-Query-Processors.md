@@ -58,7 +58,7 @@ The above specifies a Query Processor which passes the queries to the SPARQL eng
 
 ## Simple Query Processor 
 
-Similar to the Generic Query Processor the Simple Query Processor passes queries to the //ExecuteQuery()// method of a Triple Store that implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore|INativelyQueryablerStore]] interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
+Similar to the Generic Query Processor the Simple Query Processor passes queries to the `ExecuteQuery()` method of a Triple Store that implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore|INativelyQueryablerStore]] interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
 
 {{{
 #!turtle

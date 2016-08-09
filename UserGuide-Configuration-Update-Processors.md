@@ -66,7 +66,7 @@ The above specifies a Update Processor which applies the updates to the AllegroG
 
 ## Simple Update Processor 
 
-Similar to the Generic Update Processor the Simple Update Processor passes updates to the //ExecuteUpdate()// method of a Triple Store that implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUpdateableTripleStore|IUpdateableTripleStore]] interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
+Similar to the Generic Update Processor the Simple Update Processor passes updates to the `ExecuteUpdate()` method of a Triple Store that implements the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUpdateableTripleStore|IUpdateableTripleStore]] interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
 
 {{{
 #!turtle

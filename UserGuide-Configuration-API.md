@@ -4,7 +4,7 @@
 
 The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader|ConfigurationLoader]] class which is in the ##VDS.RDF.Configuration## namespace.
 
-Dynamic loading is done by classes which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory|IObjectFactory]] interface which means that this mechanism can be extended as desired. Either additional ##IObjectFactory## instances can be registered programmatically with the //AddObjectFactory(IObjectFactory factory)// method or you can specify them in your configuration files and have the system automatically detect them by calling the //AutoConfigureObjectFactories(IGraph g)// function.
+Dynamic loading is done by classes which implement the [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory|IObjectFactory]] interface which means that this mechanism can be extended as desired. Either additional ##IObjectFactory## instances can be registered programmatically with the `AddObjectFactory(IObjectFactory factory)` method or you can specify them in your configuration files and have the system automatically detect them by calling the `AutoConfigureObjectFactories(IGraph g)` function.
 
 # Configuration File structure 
 
@@ -46,13 +46,13 @@ Since configuration graph for larger applications can grow to be quite complex y
 <> dnr:imports <http://example.org/other-config.ttl> .
 ```
 
-If you are using imports then you should always use the //LoadConfiguration()// method to load your Configuration Graph as this will automatically resolve imports for you.
+If you are using imports then you should always use the `LoadConfiguration()` method to load your Configuration Graph as this will automatically resolve imports for you.
 
 ## Auto-Configuration 
 
-The API supports the notion of auto-configuration, some types of object that should be globally registered can be auto-configured either when your Configuration is loaded or on demand via one of the auto-configuration methods e.g. //AutoConfigureOjectFactories(IGraph g)//
+The API supports the notion of auto-configuration, some types of object that should be globally registered can be auto-configured either when your Configuration is loaded or on demand via one of the auto-configuration methods e.g. `AutoConfigureOjectFactories(IGraph g)`
 
-When you use the //LoadConfiguration()// method the auto-configuration will be automatically done for you unless you explicitly opt out using one of the overloads.
+When you use the `LoadConfiguration()` method the auto-configuration will be automatically done for you unless you explicitly opt out using one of the overloads.
 
 Currently the following may be auto-configured:
 
@@ -73,11 +73,11 @@ These URIs allow you to refer to the value of an AppSetting defined in the ##<ap
 
 ## LoadConfiguration() 
 
-//LoadConfiguration()// is a helper function that can be used to load in a configuration graph, it invokes the standard RDF loading mechanisms but also handles some special features of the Configuration API such as imports, auto-configuration etc.
+`LoadConfiguration()` is a helper function that can be used to load in a configuration graph, it invokes the standard RDF loading mechanisms but also handles some special features of the Configuration API such as imports, auto-configuration etc.
 
 ## LoadObject() 
 
-The main function that you will want to use is the //LoadObject()// function which attempts to load objects dynamically based on the information in a provided graph. The function is invoked by passing in a Configuration Graph containing the configuration and a Node representing the Object to be loaded.
+The main function that you will want to use is the `LoadObject()` function which attempts to load objects dynamically based on the information in a provided graph. The function is invoked by passing in a Configuration Graph containing the configuration and a Node representing the Object to be loaded.
 
 For example consider the following configuration file which we'll refer to as ##config.ttl##:
 

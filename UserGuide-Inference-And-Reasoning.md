@@ -6,9 +6,9 @@ Inference and Reasoning are mechanisms whereby an application can discover addit
 
 # The IInferenceEngine interface 
 
-The ##IInferenceEngine## interface has two main methods which implementers need to implement in order to integrate your own reasoners into dotNetRDF. The first of these is the //Initialise(IGraph g)// method which is used to input graphs to the reasoner which define the schema/rules that the reasoner should follow. The reasoner can process and interpret this Graph in any way it wishes in order to generate the rules that it will use when actually applying inference to a Graph.
+The ##IInferenceEngine## interface has two main methods which implementers need to implement in order to integrate your own reasoners into dotNetRDF. The first of these is the `Initialise(IGraph g)` method which is used to input graphs to the reasoner which define the schema/rules that the reasoner should follow. The reasoner can process and interpret this Graph in any way it wishes in order to generate the rules that it will use when actually applying inference to a Graph.
 
-The second method is the //Apply()// method which applies inference to a Graph outputting the inferred triples into either the same graph or to another graph. For implementers this method is where the core logic of the reasoner will be located (or at least called from).
+The second method is the `Apply()` method which applies inference to a Graph outputting the inferred triples into either the same graph or to another graph. For implementers this method is where the core logic of the reasoner will be located (or at least called from).
 
 ## Existing Implementations 
 

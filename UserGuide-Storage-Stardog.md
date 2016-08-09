@@ -31,7 +31,7 @@ Stardog 1.x and 2.x supports configurable reasoning levels on a per-query basis.
 
 Note that from Stardog 3.x the reasoning level is controlled at the database level and cannot be changed at the connection level.
 
-This may be changed any time you like and affects any subsequent queries made via the //Query()// method.
+This may be changed any time you like and affects any subsequent queries made via the `Query()` method.
 
 ## Transactions 
 
