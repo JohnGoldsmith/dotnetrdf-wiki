@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Advanced SPARQL|Advanced SPARQL]] > [[UserGuide/Result Formatting|Result Formatting]]
+[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] > [[UserGuide/Result Formatting|Result Formatting]]
 
 # Result Formatting 
 

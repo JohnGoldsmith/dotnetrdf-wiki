@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Advanced SPARQL|Advanced SPARQL]] > [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
+[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] > [[UserGuide/Advanced SPARQL Operations|Advanced SPARQL Operations]]
 
 # Advanced SPARQL Operations 
 

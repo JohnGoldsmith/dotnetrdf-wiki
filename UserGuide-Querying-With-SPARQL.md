@@ -6,7 +6,7 @@ SPARQL is the standard query language for the Semantic Web and can be used to qu
 
 If you want to learn about SPARQL you should take a look at the [SPARQL Query Language Specification](http://www.w3.org/TR/sparql11-query/) which provides examples of all the various query forms as well as the full formal specifcation.
 
-Advanced Users may want to take a look at the [[UserGuide/Advanced SPARQL|Advanced SPARQL]] and [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
+Advanced Users may want to take a look at the [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] and [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
 
 <<toc>>
 
@@ -404,7 +404,7 @@ Note that one important difference between reading SPARQL results versus reading
 The previous topic was [[UserGuide/Working with Triple Stores|Working with Triple Stores]], the next topic is [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
 
 Users wishing to learn more may wish to jump straight to the following topics:
-* [[UserGuide/Advanced SPARQL|Advanced SPARQL]]
+* [[Advanced SPARQL|UserGuide-Advanced-SPARQL]]
 ** [[UserGuide/Result Formatting|Result Formatting]]
 * [[UserGuide/Triple Store Integration|Triple Store Integration]] 
 * [[UserGuide/Configuration/Query Processors|Configuration API - Query Processor]]
