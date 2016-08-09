@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]] > [[UserGuide/Storage/SPARQL Query|SPARQL Query Endpoints]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]] > [[UserGuide/Storage/SPARQL Query|SPARQL Query Endpoints]]
 
 # SPARQL Query Endpoints 
 

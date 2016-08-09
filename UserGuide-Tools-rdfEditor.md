@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfEditor|rdfEditor]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfEditor|rdfEditor]]
 
 # rdfEditor 
 

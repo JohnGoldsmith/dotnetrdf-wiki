@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfServerGui|rdfServerGui]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfServerGui|rdfServerGui]]
 
 # rdfServerGui 
 

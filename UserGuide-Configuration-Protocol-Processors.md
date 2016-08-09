@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Protocol Processors|Protocol Processors]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Protocol Processors|Protocol Processors]]
 
 # Configuring Protocol Processors 
 

@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/Store Manager|Store Manager]] > [[UserGuide/Tools/StoreManager/Plugins|Store Manager Plugins]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/Store Manager|Store Manager]] > [[UserGuide/Tools/StoreManager/Plugins|Store Manager Plugins]]
 
 # Store Manager Plugins 
 

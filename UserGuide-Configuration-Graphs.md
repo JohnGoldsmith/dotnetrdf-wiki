@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Graphs|Graphs]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Graphs|Graphs]]
 
 # Configuring Graphs 
 

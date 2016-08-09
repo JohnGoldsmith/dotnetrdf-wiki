@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/soh|SPARQL over HTTP (soh)]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/soh|SPARQL over HTTP (soh)]]
 
 # SPARQL over HTTP (soh) 
 

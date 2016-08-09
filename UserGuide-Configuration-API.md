@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Configuration API|Configuration API]]
 
 # Configuration API 
 

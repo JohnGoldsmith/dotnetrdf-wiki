@@ -1,8 +1,8 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]]
 
 # Storage Providers 
 
-This area of the [[User Guide]] covers the available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncStorageProvider|IAsyncStorageProvider]] implementations.  Each provider has its own wiki page which details provider specific behaviour and any special functionality available for that provider.
+This area of the [[User Guide|UserGuide]] covers the available [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider|IStorageProvider]] and [[http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncStorageProvider|IAsyncStorageProvider]] implementations.  Each provider has its own wiki page which details provider specific behaviour and any special functionality available for that provider.
 
 You should read the [[UserGuide/Triple Store Integration|Triple Store Integration]] page for an overview of how to use the Storage API.
 

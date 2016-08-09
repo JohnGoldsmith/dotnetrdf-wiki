@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/ASP.Net Integration|ASP.Net Integration]] > [[UserGuide/ASP/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/ASP.Net Integration|ASP.Net Integration]] > [[UserGuide/ASP/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
 
 # Creating SPARQL Endpoints 
 

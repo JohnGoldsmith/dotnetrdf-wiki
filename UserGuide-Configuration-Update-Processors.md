@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Update Processors|Update Processors]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Update Processors|Update Processors]]
 
 # Configuring Update Processors 
 

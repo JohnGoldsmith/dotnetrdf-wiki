@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Global Options|Global Options]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Global Options|Global Options]]
 
 # Global Options 
 

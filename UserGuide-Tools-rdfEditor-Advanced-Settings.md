@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfEditor|rdfEditor]] > [[UserGuide/Tools/rdfEditor/Advanced Settings|Advanced Settings]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfEditor|rdfEditor]] > [[UserGuide/Tools/rdfEditor/Advanced Settings|Advanced Settings]]
 
 # rdfEditor Advanced Settings 
 

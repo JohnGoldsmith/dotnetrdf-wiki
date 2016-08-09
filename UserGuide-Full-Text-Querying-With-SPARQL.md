@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Advanced SPARQL|Advanced SPARQL]] > [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Advanced SPARQL|Advanced SPARQL]] > [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]]
 
 # Full Text Querying with SPARQL 
 

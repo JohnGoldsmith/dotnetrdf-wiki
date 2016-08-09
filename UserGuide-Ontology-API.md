@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Ontology API|Ontology API]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Ontology API|Ontology API]]
 
 # Ontology API 
 

@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Extension Methods|Extension Methods]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Extension Methods|Extension Methods]]
 
 # Extension Methods 
 

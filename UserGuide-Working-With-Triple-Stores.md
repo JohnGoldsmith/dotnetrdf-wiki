@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Working with Triple Stores|Working with Triple Stores]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Working with Triple Stores|Working with Triple Stores]]
 
 # Working with Triple Stores 
 

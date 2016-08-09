@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Formatting API|Formatting API]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Formatting API|Formatting API]]
 
 # Formatting API 
 

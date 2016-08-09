@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Inference and Reasoning|Inference and Reasoning]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Inference and Reasoning|Inference and Reasoning]]
 
 # Inference and Reasoning 
 

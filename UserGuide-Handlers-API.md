@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide]] > [[UserGuide/Handlers API|Handlers API]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Handlers API|Handlers API]]
 
 # Handlers API 
 
