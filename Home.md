@@ -15,7 +15,7 @@ This wiki serves as the primary source of documentation for users and developers
 
 ### Note
 
-The latest version of the library is **1.0.10** which was released on **30th May 2016**
+The latest version of the library is **1.0.12** which was released on **4th August 2016**
 
 Unless otherwise stated the documentation in the [[User Guide|UserGuide]] and [[Developer Guide|DeveloperGuide]] refers to the latest version of the library (which is noted above).  
 
