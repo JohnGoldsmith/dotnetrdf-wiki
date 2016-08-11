@@ -49,7 +49,7 @@ After we hit the Start button we can go to our browser and make some requests ag
 
 {{http://www.dotnetrdf.org/images/screenshots/rdfservergui_running_simple_monitoring.jpg|rdfServerGui}}
 
-==== Running as External Process ====
+#### Running as External Process 
 
 If you run as an external process for your server you have more limited control, however they have the advantage that they persist beyond the life of the GUI.  So if you start an external server from the GUI and then close the GUI you can still access that server through your browser until such time as you kill the external process.
 

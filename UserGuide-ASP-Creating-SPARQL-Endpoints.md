@@ -30,7 +30,7 @@ Each Handler is associated with some Configuration data in your Configuration Gr
 
 ### Handler Registration 
 
-==== IIS 5x ====
+#### IIS 5x 
 
 Under IIS 5x you cannot map arbitrary paths so you'll have to define a custom extension (we recommend you define `.sparql`) which is done as follows:
 
@@ -52,7 +52,7 @@ You've now configured IIS to route any request for a file with the `.sparql` ext
 
 Then provided you have entered all the relevant configuration settings for your Handler in your Configuration Graph you can access the endpoint by pointing your browser to `http://www.yourdomain.com/query.sparql`
 
-==== IIS 6x ====
+#### IIS 6x 
 
 On IIS 6x you configure a ASP.Net Handler by adding a line to the `<httpHandlers>` section of the `<system.web>` section of your `Web.config` file:
 

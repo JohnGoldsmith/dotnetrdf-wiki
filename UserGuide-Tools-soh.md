@@ -37,7 +37,7 @@ e.g. Query an endpoint with the query taken from a file
 soh.exe query --service http://dbpedia.org/sparql --query query.rq
 ```
 
-==== Supported Options ====
+#### Supported Options 
 
 | Option | Purpose |
 | --- | --- |
@@ -66,7 +66,7 @@ e.g. Update an endpoint specifying the update using a file.
 soh.exe update service http://example.org/update --update update.ru
 ```
 
-==== Supported Options ====
+#### Supported Options 
 
 | Option | Purpose |
 | --- | --- |
@@ -95,14 +95,14 @@ e.g. Delete a given graph
 soh.exe protocol delete http://example.org/dataset/data http://example.org/someGraph
 ```
 
-==== Note ====
+#### Note 
 
 * The 2nd argument must be a supported HTTP method (case insensitive).
 * The 3rd argument must be a SPARQL Uniform HTTP Protocol server endpoint URI
 * The 4th argument must be either a Graph URI or default to indicate that either a Named Graph or the Default Graph should be affected
 * The `file` argument is required only for the put and post methods. Using it with any other method will cause an error
 
-==== Supported Options ====
+#### Supported Options 
 
 | Option | Purpose |
 | --- | --- |

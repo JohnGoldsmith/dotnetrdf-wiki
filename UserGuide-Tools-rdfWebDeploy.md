@@ -41,7 +41,7 @@ rdfWebDeploy.exe -deploy webapp config.ttl [options]
 
 Automatically deploys the given configuration file to the given web applications by setting up it's `Web.Config` file appropriately and deploying necessary DLLs.
 
-==== dllupdate ====
+#### dllupdate 
 
 {{{
 rdfWebDeploy.exe -dllupdate webapp [options]
@@ -49,7 +49,7 @@ rdfWebDeploy.exe -dllupdate webapp [options]
 
 Updates all the required DLLs in the applications bin directory to the versions in the toolkits directory.
 
-==== dllverify ====
+#### dllverify 
 
 {{{
 rdfWebDeploy.exe -dllverify webapp [options]
@@ -57,7 +57,7 @@ rdfWebDeploy.exe -dllverify webapp [options]
 
 Verifies whether the required DLLs are present in the applications `bin/` directory
 
-==== help ====
+#### help 
 
 {{{
 rdfWebDeploy.exe -help
@@ -73,7 +73,7 @@ rdfWebDeploy.exe -list config.ttl
 
 Lists the Handlers in the given configuration file
 
-==== test ====
+#### test 
 
 {{{
 rdfWebDeploy.exe -test config.ttl
@@ -81,7 +81,7 @@ rdfWebDeploy.exe -test config.ttl
 
 Tests whether a configuration file parses and makes various tests for validity
 
-==== vocab ====
+#### vocab 
 
 {{{
 rdfWebDeploy.exe -vocab file.ttl
@@ -89,7 +89,7 @@ rdfWebDeploy.exe -vocab file.ttl
 
 Outputs the Configuration Vocabulary to the given file for use as a reference
 
-==== xmldeploy ====
+#### xmldeploy 
 
 {{{
 rdfWebDeploy.exe -xmldeploy web.config config.ttl [options]
