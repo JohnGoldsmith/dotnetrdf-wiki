@@ -1,10 +1,10 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/Full Text Query|Full Text Query]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/Full Text Query|Full Text Query]]
 
 # Configuring Full Text Query 
 
 Full Text Query is a non-standard SPARQL extension provided by the **dotNetRDF.Query.FullText.dll** library, please see [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]] for general details on its usage.
 
-You can use the [[UserGuide/Configuration API|Configuration API]] to attach full text query functionality to a SPARQL Endpoint. To do this you will need to specify configuration for one of several ancillary objects.
+You can use the [[Configuration API|UserGuide-Configuration-API]] to attach full text query functionality to a SPARQL Endpoint. To do this you will need to specify configuration for one of several ancillary objects.
 
 As the Full Text Query functionality is an additional feature it uses a separate [Full Text Configuration Vocabulary](http://www.dotnetrdf.org/configuration/fulltext#) to specify the additional vocabulary used in configuring these objects.
 

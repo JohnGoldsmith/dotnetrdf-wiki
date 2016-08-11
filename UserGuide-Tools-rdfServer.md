@@ -31,7 +31,7 @@ Then point your browser at `http://localhost:1986/query` which will provide you 
 | Option | Purpose |
 | --- | --- |
 | `-b directory` or `-base directory` | Sets the Base Directory from which static content can be served |
-| `-c config.ttl` or `-config config.ttl` | Sets the Configuration File which specifies the Dataset to use for querying (see `default.ttl` for an example or the online documentation for the [[UserGuide/Configuration API|Configuration API]]).  Configuration via the Configuration API has some limitations as detailed later on this page. |
+| `-c config.ttl` or `-config config.ttl` | Sets the Configuration File which specifies the Dataset to use for querying (see `default.ttl` for an example or the online documentation for the [[Configuration API|UserGuide-Configuration-API]]).  Configuration via the Configuration API has some limitations as detailed later on this page. |
 | `-f format` or `-format format` | Sets the Log Format for use with logging, format string is in Apache mod_log style |
 | `-help` | Prints this usage summary and quits |
 | `-h host` or `-host host` | Sets the host name that the server listens on |

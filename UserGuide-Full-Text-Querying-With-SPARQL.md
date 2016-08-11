@@ -228,7 +228,7 @@ SELECT * WHERE { ?match pf:textMatch ( "text" 0.75) . }
 
 ## Use with SPARQL Endpoints 
 
-You can use Full Text Querying with SPARQL Endpoints by configuring it via the [[UserGuide/Configuration API|Configuration API]], see [[UserGuide/Configuration/Full Text Query|Configuration API - Full Text Query]] for more details.
+You can use Full Text Querying with SPARQL Endpoints by configuring it via the [[Configuration API|UserGuide-Configuration-API]], see [[Configuration API - Full Text Query|UserGuide-Configuration-Full-Text-Query]] for more details.
 
 # Keeping an index in sync with Datasets 
 

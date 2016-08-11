@@ -2,7 +2,7 @@
 
 # Deploying with rdfWebDeploy 
 
-Integration of dotNetRDF into ASP.Net applications is configured using the [[UserGuide/Configuration API|Configuration API]] and can be deployed using [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]. This guide teaches you how to deploy configuration using rdfWebDeploy.
+Integration of dotNetRDF into ASP.Net applications is configured using the [[Configuration API|UserGuide-Configuration-API]] and can be deployed using [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]. This guide teaches you how to deploy configuration using rdfWebDeploy.
 
 To see an example of a more complex configuration file you can go to [Configuration API](http://www.dotnetrdf.org/demos/sampleConfig]] which is the configuration file used for all the demos found under the [[http://www.dotnetrdf.org/demos/]] URI. The configuration file shown there was tested and deployed using the method described here.
 
@@ -147,7 +147,7 @@ Depending on your version of ASP.Net you may also need to make some manual tweak
 
 For more information on setting up SPARQL endpoints you may wish to look at the following topics:
 
-* [[UserGuide/Configuration API|Configuration API]]
+* [[Configuration API|UserGuide-Configuration-API]]
 * [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]]
 * [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#)
 * [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]

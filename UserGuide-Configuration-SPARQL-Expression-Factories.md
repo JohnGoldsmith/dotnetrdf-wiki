@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Configuration API|Configuration API]] > [[UserGuide/Configuration/SPARQL Expression Factories|SPARQL Expression Factories]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/SPARQL Expression Factories|SPARQL Expression Factories]]
 
 # Configuring SPARQL Expression Factories 
 
