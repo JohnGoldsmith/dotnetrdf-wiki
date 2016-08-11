@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[UserGuide/Storage/SPARQL Graph Store|SPARQL Graph Store Protocol Endpoints]]
+[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[SPARQL Graph Store Protocol Endpoints|UserGuide-Storage-SPARQL-Graph-Store]]
 
 # SPARQL Graph Store Protocol Endpoints 
 
