@@ -4,7 +4,7 @@
 
 Triples Stores in dotNetRDF are used to represent collections of graphs and to allow you to work with larger quantities of RDF easily. As stated in the [[UserGuide/Library Overview|Library Overview]] our triple stores are designed to be less tangible than graphs since a triple store does not necessarily have to be in-memory and may simply represent an interface to or a partial view on some actual underlying store.
 
-**Note:** This document primarily discusses Triple Stores in terms of their representation in-memory within the library. For details of working with external Triple Stores please see [[UserGuide/Triple Store Integration|Triple Store Integration]]
+**Note:** This document primarily discusses Triple Stores in terms of their representation in-memory within the library. For details of working with external Triple Stores please see [[Triple Store Integration|UserGuide/Triple Store Integration]]
 
 # Basic Properties 
 
@@ -297,4 +297,4 @@ The previous topic was [[UserGuide/Typed Values and Lists|Typed Values and Lists
 
 Users wishing to learn more may wish to jump straight to one of the following pages:
 
-* [[UserGuide/Triple Store Integration|Triple Store Integration]]
+* [[Triple Store Integration|UserGuide/Triple Store Integration]]

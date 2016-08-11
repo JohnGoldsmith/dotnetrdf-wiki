@@ -300,7 +300,7 @@ public class SparqlRemoteEndpointExample
 
 We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the `INativelyQueryableStore` interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[UserGuide/Working with Triple Stores|Working with Triple Stores]] page you'll see an example of using the `PersistentTripleStore` class to query any of our supported stores.
 
-Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) interface  which most of our available [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) implementations also support, please see the [[UserGuide/Triple Store Integration|Triple Store Integration]] page for an example of this.
+Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) interface  which most of our available [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) implementations also support, please see the [[Triple Store Integration|UserGuide/Triple Store Integration]] page for an example of this.
 
 ## Direct Triple Store Query 
 
@@ -406,5 +406,5 @@ The previous topic was [[UserGuide/Working with Triple Stores|Working with Tripl
 Users wishing to learn more may wish to jump straight to the following topics:
 * [[Advanced SPARQL|UserGuide-Advanced-SPARQL]]
 ** [[UserGuide/Result Formatting|Result Formatting]]
-* [[UserGuide/Triple Store Integration|Triple Store Integration]] 
+* [[Triple Store Integration|UserGuide/Triple Store Integration]] 
 * [[UserGuide/Configuration/Query Processors|Configuration API - Query Processor]]

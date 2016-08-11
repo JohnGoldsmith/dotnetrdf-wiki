@@ -156,7 +156,7 @@ Current implementations store the inferred information in a special Graph inside
 
 Currently there is no formal API support in the library for using inference with 3rd party stores, primarily because this feature is not available in many stores and there is not currently a standardised mechanism for specifying that you wish to use inference with a store.
 
-However some stores such as [StarDog](http://stardog.com) do support reasoning when making queries, see [[UserGuide/Triple Store Integration|Triple Store Integration]] for more information.
+However some stores such as [StarDog](http://stardog.com) do support reasoning when making queries, see [[Triple Store Integration|UserGuide/Triple Store Integration]] for more information.
 
 # Reasoners and SPARQL Endpoints 
 

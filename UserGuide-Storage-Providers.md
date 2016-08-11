@@ -1,14 +1,15 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Storage API|Storage API]] > [[UserGuide/Storage/Providers|Storage Providers]]
+[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]]
 
 # Storage Providers 
 
 This area of the [[User Guide|UserGuide]] covers the available [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) and [IAsyncStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IAsyncStorageProvider) implementations.  Each provider has its own wiki page which details provider specific behaviour and any special functionality available for that provider.
 
-You should read the [[UserGuide/Triple Store Integration|Triple Store Integration]] page for an overview of how to use the Storage API.
+You should read the [[Triple Store Integration|UserGuide/Triple Store Integration]] page for an overview of how to use the Storage API.
 
 The available providers are as follows:
 
-|= Provider |= Description |
+| Provider | Description |
+| --- | --- |
 | [[UserGuide/Storage/AllegroGraph|Allegro Graph]] | AllegroGraph 3.x and 4.x |
 | [[UserGuide/Storage/Blazegraph|Blazegraph]] | Blazegraph |
 | [[UserGuide/Storage/DatasetFile|Dataset Files]] | Read-only view over a NQuads/TriG/TriX file |
@@ -24,6 +25,7 @@ The available providers are as follows:
 
 There are also some useful wrappers available:
 
-|= Wrapper |= Description |
+| Wrapper | Description |
+| --- | --- |
 | [ReadOnlyConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ReadOnlyConnector) | Make any other provider read-only |
 | [QueryableReadOnlyConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.QueryableReadOnlyConnector) | Make any queryable provider read-only |

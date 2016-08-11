@@ -11,7 +11,7 @@ A plugin requires the following:
 * A DLL containing your implementation of `IStorageProvider`
 * A DLL (may be the same DLL as above) which implements the `IConnectionDefinition` interface found in **StoreManager.Core.dll** and has properties annotated with the `ConnectionAttribute`
 
-See the [[UserGuide/Storage API|Storage API]] documentation for details of the `IStorageProvider` API.
+See the [[Storage API|UserGuide-Storage-API]] documentation for details of the `IStorageProvider` API.
 
 ## Deploying a Plugin 
 
