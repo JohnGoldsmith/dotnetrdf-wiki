@@ -18,7 +18,8 @@ Before you can perform full text queries you must first build an index from your
 
 Currently the following implementations are available:
 
-|= Indexer |= Description |
+| Indexer | Description |
+| --- | --- |
 | [LuceneSubjectsIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.Lucene.LuceneSubjectsIndexer) | Relates the Subject of the Triple to the full text of the Literal Object |
 | [LucenePredicatesIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.LucenePredicatesIndexer) | Relates the Predicate of the Triple to the full text of the Literal Object |
 | [LuceneObjectsIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.LuceneObjectsIndexer) | Relates the Object of the Triple to its own full text |

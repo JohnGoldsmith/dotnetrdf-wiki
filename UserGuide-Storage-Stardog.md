@@ -58,7 +58,8 @@ StardogServer server = new StardogServer("http://localhost:5822", "username", "p
 
 When creating a store the `StardogServer` will provide templates from the following selection:
 
-|= Template |= Description |
+| Template | Description |
+| --- | --- |
 | [StardogDiskTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Stardog.StardogDiskTemplate) | Used to create a Stardog disk store |
 | [StardogMemTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Stardog.StardogMemTemplate) | Used to create a Stardog memory store |
 

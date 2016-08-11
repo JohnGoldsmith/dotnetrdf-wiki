@@ -271,7 +271,8 @@ public class TriGExample
 
 The Library contains the following standard `ITripleStore` implementations:
 
-|= Implementation |= Description |
+| Implementation | Description |
+| --- | --- |
 | [DiskDemandTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.DiskDemandTripleStore) | Represents an in-memory store where Graphs are loaded on-demand from the local file system if they are not already in memory and provided the Graph Names are file URIs |
 | [PersistentTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore) | Represents an in-memory view of some store provided by a IStorageProvider instance. |
 | [TripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.TripleStore) | In-memory Triple Store representation. |
@@ -281,7 +282,8 @@ The Library contains the following standard `ITripleStore` implementations:
 
 The Library contains the following standard `IStoreReader` and `IStoreWriter` implementations for RDF dataset formats:
 
-|= Implementation |= Description |
+| Implementation | Description |
+| --- | --- |
 | [NQuadsParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.NQuadsParser) | Parses NQuads |
 | [NQuadsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.NQuadsWriter) | Writes NQuads |
 | [TriGParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TriGParser) | Parses TriG |

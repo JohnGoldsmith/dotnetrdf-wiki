@@ -12,7 +12,8 @@ Using the Toolkit requires .Net 4.0 Framework Full to be installed on your machi
 
 ## Available Tools 
 
-|= Tool |= Description |
+| Tool | Description |
+| --- | --- |
 | [[UserGuide/Tools/rdfConvert|rdfConvert]] | Utility for converting between different RDF formats |
 | [[UserGuide/Tools/rdfEditor|rdfEditor]] | Notepad replacement for editing of RDF files |
 | [[UserGuide/Tools/rdfOptStats|rdfOptStats]] | Utility for generating stats for use with our in-memory stats based optimizer |

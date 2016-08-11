@@ -91,7 +91,8 @@ The `SparqlResultSet` class is used to represent the results of SELECT and ASK q
 
 The `ResultsType` property is used to determine what type of result set you have received. The possible values are from the [SparqlResultsType](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultsType) enumeration and are as follows:
 
-|= Type |= Meaning |
+| Type | Meaning |
+| --- | --- |
 | `SparqlResultsType.Boolean` | Is a Boolean results set (ASK Query results) |
 | `SparqlResultsType.VariableBindings` | Is a table of results (SELECT Query results) |
 | `SparqlResultsType.Unknown` | Unknown results, usually means that nothing has been loaded into the instance yet |
@@ -162,7 +163,8 @@ INode value = r.Value("var");
 
 Now we'll look at the different ways in which you can actually make a query, there are several ways depending on what you are querying.
 
-|= Method |= Purpose |
+| Method | Purpose |
+| --- | --- |
 | Query Processors | General purpose abstraction for making queries, highly recommended since it allows you to wrap any of the other query methods in abstracted code |
 | Remote Query | Make a query against a remote SPARQL endpoint |
 | Native Query | Make a query against an external SPARQL engine |
@@ -245,7 +247,8 @@ It is also important to understand that using these clauses it is possible to de
 
 The library includes the following query processors:
 
-|= Processor |= Description |
+| Processor | Description |
+| --- | --- |
 | [LeviathanQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.LeviathanQueryProcessor) | Standard in-memory query processor |
 | [ExplainQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ExplainQueryProcessor) | Extension of the `LeviathanQueryProcessor` which executes queries and prints explanations to the Console |
 | [RemoteQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.RemoteQueryProcessor) | Executes queries against a remote SPARQL endpoint |

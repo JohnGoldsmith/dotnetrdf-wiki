@@ -22,7 +22,8 @@ Query Optimisers are applied to queries at the end of parsing, a Query Optimiser
 
 The library includes three different query optimisers:
 
-|= Optimizer |= Description |
+| Optimizer | Description |
+| --- | --- |
 | [DefaultOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.DefaultOptimiser) | The default optimiser which does reordering based on simple rules and places `FILTER` and assignments |
 | [NoReorderOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.NoReorderOptimiser) | An optimiser which doesn't reorder triple patterns but still places `FILTER` and assignments |
 | [WeightedOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightOptimiser) | An optimiser which does the reordering based on weighting calculated from provided statistics about the data, also places `FILTER` and assignments |
@@ -45,7 +46,8 @@ Algebra Optimisers are applied to queries when they are transformed into SPARQL 
 
 The library includes the following algebra optimisers which are automatically registered globally and applied in the following order:
 
-|= Optimizer |= Purpose |
+| Optimizer | Purpose |
+| --- | --- |
 | [AskBgpOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.AskBgpOptimiser) | An optimiser which optimises the algebra form for `ASK` queries to use the special operators where possible. These are operators designed to find the first possible solution and then return as that is sufficient for `ASK` queries. |
 | [LazyBgpOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.LazyBgpOptimiser) | An optimiser which optimises queries with `LIMIT` clauses to use the special operators where possible. These are operators designed to find the requisite number of solutions and then return in order to minimise the work done. |
 | [StrictAlgebraOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.StrictAlgebraOptimiser) | Transforms the basic generated algebra into the strict form as far as possible. This makes the algebra easier to traverse for subsequent optimisers. |

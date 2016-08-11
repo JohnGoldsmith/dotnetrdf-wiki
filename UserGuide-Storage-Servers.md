@@ -8,7 +8,8 @@ The Servers API provides limited management capabilities for 3rd party triple st
 
 The following implementations are currently provided:
 
-|= Implementation |= Description |
+| Implementation | Description |
+| --- | --- |
 | [AllegroGraphServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer) | Manages a catalog of an AllegroGraph server, see the [[UserGuide/Storage/AllegroGraph|Allegro Graph]] documentation |
 | [SesameServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer) | Manages a Sesame HTTP Protocol compliant server, see the [[UserGuide/Storage/Sesame|Sesame]] documentation |
 | [StardogServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer) | Manages a Stardog server, see the [[UserGuide/Storage/Stardog|Stardog]] documentation |

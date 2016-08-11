@@ -12,7 +12,8 @@ You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?con
 
 soh operates in one of three modes:
 
-|= Mode |= Function |
+| Mode | Function |
+| --- | --- |
 | query | Makes SPARQL Queries |
 | update | Makes SPARQL Updates |
 | protocol | Makes SPARQL Graph Store protocol requests |
@@ -38,7 +39,8 @@ soh.exe query --service http://dbpedia.org/sparql --query query.rq
 
 ==== Supported Options ====
 
-|= Option |= Purpose |
+| Option | Purpose |
+| --- | --- |
 | `--service URI` or `--server URI` | Either argument can be used to set the SPARQL endpoint to which the query is sent |
 | `--query QUERY` or `--file FILE` | Either of these arguments may be used to specify that the query should be taken from a file rather than the 1st anonymous argument. `--query` has precedence if both are specified |
 | `--accept mime/type` | Used to specify the Mime Type you'd like the query results in |
@@ -66,7 +68,8 @@ soh.exe update service http://example.org/update --update update.ru
 
 ==== Supported Options ====
 
-|= Option |= Purpose |
+| Option | Purpose |
+| --- | --- |
 | `--service URI` or `--server URI` | Either argument can be used to set the SPARQL endpoint to which the update is sent |
 ` --update UPDATE` or `--file FILE` | Either of these arguments may be used to specify that the update should be taken from a file rather than the 1st anonymous argument. `--update` has precedence if both are specified |
 | `--v` or `--verbose` | Used to enable Verbose mode |
@@ -101,7 +104,8 @@ soh.exe protocol delete http://example.org/dataset/data http://example.org/someG
 
 ==== Supported Options ====
 
-|= Option |= Purpose |
+| Option | Purpose |
+| --- | --- |
 | `--accept mime/type` | Used to specify the MIME Type you'd like to GET graphs in |
 | `--v` or `--verbose` | Used to enable Verbose mode |
 | `--nobom` | Used to disable the use of BOM for UTF-8 output |

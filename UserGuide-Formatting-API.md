@@ -6,7 +6,8 @@ The Formatting API is an collection of APIs found in the `VDS.RDF.Writing.Format
 
 The API consists of a number of interfaces:
 
-|= Interface |= Formatting Capabilities |
+| Interface | Formatting Capabilities |
+| --- | --- |
 | [ICharFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ICharFormatter) | Formats individual characters |
 | [IUriFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IUriFormatter) | Formats URIs |
 | [IBaseUriFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IBaseUriFormatter) | Formats Base URI declarations |
@@ -45,7 +46,8 @@ foreach (Triple t in g.GetTriplesWithPredicate(rdfType))
 
 Currently the library has the following formatters available but you can easily define your own:
 
-|= Formatter |= Format Produced |
+| Formatter | Format Produced |
+| --- | --- |
 | [CsvFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.CsvFormatter) | CSV |
 | [Notation3Formatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.Notation3Formatter) | Notation 3 |
 | [NQuadsFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.NQuadsFormatter) | NQuads |

@@ -43,7 +43,8 @@ To query a remote endpoint you can use the `-endpoint:` option and specify the e
 
 ### Supported Options 
 
-|= Option |= Purpose |
+| Option | Purpose |
+| --- | --- |
 | `partialResults[:boolean]` | Specifies whether partial results should be returned in the event of a query timeout. Only valid for queries over local files and remote URIs |
 | `-r:reaonser` | Applies a SKOS/RDFS reasoner to the input data, use `skos` or `rdfs` as the `reasoner` argument.  SKOS Concept Hierarchy/RDFS class & property hierarchies are dynamically determined based on the input data. You may need to reorder the input files and URIs in order to get correct inference results e.g. if your schema was the last input it would result in little/no inferences being made |
 | `-roqet` | Runs rdfQuery in [roqet](http://librdf.org/rasqal/roqet.html) compatibility mode, type `rdfQuery.exe -roqet -h` for more information. Must be the first argument or ignored. |

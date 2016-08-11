@@ -92,7 +92,8 @@ An additional advantage of the Ontology API approach is that it will automatical
 
 The API provides the following concepts which are wrappers over graphs, triples and nodes:
 
-|= Class |= Purpose |
+| Class | Purpose |
+| --- | --- |
 | [OntologyGraph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyGraph) | Represents a graph whose ontology elements may be accessed |
 | [Ontology](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.Ontology) | Represents information about an ontology |
 | [OntologyResource](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyResource) | Represents a resource in the ontology, specific sub-classes expand the basic capabilities further |

@@ -39,7 +39,8 @@ Any other wildcard pattern will be rejected
 
 ### Supported Options 
 
-|= Option |= Purpose |
+| Option | Purpose |
+| --- | --- |
 | `-all` | Specifies that counts of Subjects, Predicates and Objects should be generated |
 | `-literals` | Specifies that counts should include Literals (default is URIs only) - this requires an output format that supports Literal Subjects e.g. N3 |
 | `-nodes` | Specifies that aggregated for Nodes should be generated i.e. counts that don't specify which position the URI/Literal occurs in |

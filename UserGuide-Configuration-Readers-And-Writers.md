@@ -29,7 +29,8 @@ You can use the `AutoConfigureReadersAndWriters(IGraph g)` method to have the AP
 
 The same basic configuration applies regardless of whether you are configuring a reader/writer, you merely need to swap out `dnr:RdfWriter` for the class representing what you are registering:
 
-|= RDF Class |= .Net Class |
+| RDF Class | .Net Class |
+| --- | --- |
 | `dnr:RdfWriter` | [IRdfWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfWriter) |
 | `dnr:RdfParser` | [IRdfReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader) |
 | `dnr:DatasetParser` | [IStoreReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IStoreReader) |
