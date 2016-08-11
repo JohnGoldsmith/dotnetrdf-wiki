@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] > [[UserGuide/Result Formatting|Result Formatting]]
+[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] > [[Result Formatting|UserGuide-Result-Formatting|]]
 
 # Result Formatting 
 
@@ -6,7 +6,7 @@ When you make a SPARQL query as detailed on the [[Querying with SPARQL|UserGuide
 
 ## Using Formatters 
 
-dotNetRDF supports a powerful [[UserGuide/Formatting API|Formatting API]] which is discussed in general elsewhere, this can be leveraged for the purposes of formatting results.  Since values in each column of a [SparqlResult](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult) are just normal [INode](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode) values you can use any of the existing [INodeFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter) implementations for this.
+dotNetRDF supports a powerful [[Formatting API|UserGuide-Formatting-API]] which is discussed in general elsewhere, this can be leveraged for the purposes of formatting results.  Since values in each column of a [SparqlResult](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult) are just normal [INode](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INode) values you can use any of the existing [INodeFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter) implementations for this.
 
 For example:
 

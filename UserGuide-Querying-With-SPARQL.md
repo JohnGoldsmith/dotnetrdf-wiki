@@ -225,7 +225,7 @@ public class LeviathanQueryProcessorExample
 
 A key thing to notice here is that we create a [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset) instance which wraps our `IInMemoryQueryableStore` instance. This dataset allows us to control which graph is used as the default graph for queries or even to use the union of all graphs as the default graph.
 
-In this example we have only printed results in full to the Console, to learn more about how to format results for display see [[UserGuide/Result Formatting|Result Formatting]].
+In this example we have only printed results in full to the Console, to learn more about how to format results for display see [[Result Formatting|UserGuide-Result-Formatting|]].
 
 ### Common Errors 
 
@@ -408,6 +408,6 @@ The previous topic was [[UserGuide/Working with Triple Stores|Working with Tripl
 
 Users wishing to learn more may wish to jump straight to the following topics:
 * [[Advanced SPARQL|UserGuide-Advanced-SPARQL]]
-** [[UserGuide/Result Formatting|Result Formatting]]
+** [[Result Formatting|UserGuide-Result-Formatting|]]
 * [[Triple Store Integration|UserGuide/Triple Store Integration]] 
 * [[UserGuide/Configuration/Query Processors|Configuration API - Query Processor]]
