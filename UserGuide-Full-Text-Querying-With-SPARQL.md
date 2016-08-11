@@ -196,8 +196,7 @@ Those of you who may be familiar with [LARQ](http://jena.apache.org/documentatio
 
 So you can do things like get scores for matches:
 
-{{{
-#!sparql
+```sparql
 
 # Get matches with scores
 PREFIX pf: <http://jena.hpl.hp.com/ARQ/property#>
@@ -207,8 +206,7 @@ SELECT * WHERE { (?match ?score) pf:textMatch "text" . }
 
 Or apply a limit on the results:
 
-{{{
-#!sparql
+```sparql
 
 # Get up to 10 matches
 PREFIX pf: <http://jena.hpl.hp.com/ARQ/property#>
@@ -218,8 +216,7 @@ SELECT * WHERE { ?match pf:textMatch ( "text" 10) . }
 
 Or apply a score threshold to the results:
 
-{{{
-#!sparql
+```sparql
 
 # Apply a Score Threshold of 0.75
 PREFIX pf: <http://jena.hpl.hp.com/ARQ/property#>
