@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] > [[UserGuide/SPARQL Datasets|SPARQL Datasets]]
+[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] > [[SPARQL Datasets|UserGuide-SPARQL-Datasets]]
 
 # SPARQL Datasets 
 
@@ -10,7 +10,7 @@ The dataset for a SPARQL Query or Update consists of a default graph and zero or
 
 SPARQL does not mandate what the default graph is so this can and often is dataset specific, see the later sections of this page for how to construct different types of dataset for use with the libraries in-memory SPARLQ engine.
 
-=== Query Datasets === 
+### Query Datasets
 
 The dataset description of a query consists of the `FROM` and `FROM NAMED` clauses present in the query, these indicate to a query engine which graph(s) to use and where to use them when answering queries.
 
@@ -18,7 +18,7 @@ Graphs specified in the `FROM` clause are used to form the default graph, this i
 
 Graphs specified in the `FROM NAMED` clauses are named graphs that may be accessed using a `GRAPH` clause in your query.
 
-=== Update Datasets === 
+### Update Datasets
 
 The `INSERT/DELETE` command in SPARQL Update allows the dataset to be specified in several ways:
 
