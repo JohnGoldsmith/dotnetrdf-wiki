@@ -89,7 +89,7 @@ Like thread-safety you do not need to do anything special to use transactions un
 
 For example if you tried to process the following commands an error would be thrown and any temporary changes made to the state of the dataset would be rolled back:
 
-{{{
+```
 CREATE GRAPH <http://example.org/graph>;
 CREATE GRAPH <http://example.org/graph>
 ```
