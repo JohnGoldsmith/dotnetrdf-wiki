@@ -43,7 +43,7 @@ AllegroGraphConnector agraph = new AllegroGraphConnector("http://localhost:9875"
 
 # Managing a Server 
 
-We support managing a server via the [AllegroGraphServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer) class which implements our [[UserGuide/Storage/Servers|Servers API]]
+We support managing a server via the [AllegroGraphServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer) class which implements our [[Servers API|UserGuide-Storage-Servers]]
 
 Managing a server allows you to manage a single catalog at a time, a `AllegroGraphConnector` provides access to its associated server via the `ParentServer` or `AsyncParentServer` property.
 

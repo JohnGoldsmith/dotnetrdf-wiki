@@ -39,7 +39,7 @@ Stardog is one of the few stores currently supported that support transactions, 
 
 # Managing a Server 
 
-We support managing a server via the [StardogServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer) class which implements our [[UserGuide/Storage/Servers|Servers API]]
+We support managing a server via the [StardogServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer) class which implements our [[Servers API|UserGuide-Storage-Servers]]
 
 The `StardogServer` assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [StardogV1Server](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV1Server), [StardogV2Server](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV2Server) and [StardogV3Server](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV3Server) are provided if you wish to be explicit about the version of Stardog you are connecting to.
 

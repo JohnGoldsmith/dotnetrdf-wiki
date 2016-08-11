@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[UserGuide/Storage/Servers|Servers API]]
+[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Servers API|UserGuide-Storage-Servers]]
 
 # Servers API 
 
