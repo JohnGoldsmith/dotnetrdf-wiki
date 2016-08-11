@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[UserGuide/Storage/AllegroGraph|Allegro Graph]]
+[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[Allegro Graph|UserGuide-Storage-AllegroGraph]]
 
 # Allegro Graph 
 

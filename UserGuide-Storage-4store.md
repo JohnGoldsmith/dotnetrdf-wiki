@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[UserGuide/Storage/4store|4store]]
+[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[4store|UserGuide-Storage-4store]]
 
 # 4store 
 

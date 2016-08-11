@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[UserGuide/Storage/Sesame|Sesame]]
+[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[Sesame|UserGuide-Storage-Sesame]]
 
 # Sesame 
 

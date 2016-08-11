@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[UserGuide/Storage/Fuseki|Fuseki]]
+[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[Fuseki|UserGuide-Storage-Fuseki]]
 
 # Fuseki 
 

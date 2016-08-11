@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[UserGuide/Storage/Virtuoso|Virtuoso]]
+[[Home]] > [[User Guide|UserGuide]] > [[Storage API|UserGuide-Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[Virtuoso|UserGuide-Storage-Virtuoso]]
 
 # Virtuoso 
 

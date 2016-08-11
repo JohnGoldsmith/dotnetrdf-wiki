@@ -2,7 +2,7 @@
 
 # SPARQL Graph Store Protocol Endpoints 
 
-Any store which provides a [SPARQL Graph Store Protocol](http://www.w3.org/TR/sparql11-http-rdf-update/) endpoint may be connected to via the [SparqlHttpProtocolConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlHttpProtocolConnector).  This protocol is different from the normal SPARQL query and update protocol, if you wish to connect to a store that uses them see the [[UserGuide/Storage/SPARQL Query|SPARQL Query Endpoints]] documentation instead.
+Any store which provides a [SPARQL Graph Store Protocol](http://www.w3.org/TR/sparql11-http-rdf-update/) endpoint may be connected to via the [SparqlHttpProtocolConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlHttpProtocolConnector).  This protocol is different from the normal SPARQL query and update protocol, if you wish to connect to a store that uses them see the [[SPARQL Query Endpoints|UserGuide-Storage-SPARQL-Query]] documentation instead.
 
 ## Supported Capabilities 
 

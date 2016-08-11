@@ -10,18 +10,18 @@ The available providers are as follows:
 
 | Provider | Description |
 | --- | --- |
-| [[UserGuide/Storage/AllegroGraph|Allegro Graph]] | AllegroGraph 3.x and 4.x |
-| [[UserGuide/Storage/Blazegraph|Blazegraph]] | Blazegraph |
-| [[UserGuide/Storage/DatasetFile|Dataset Files]] | Read-only view over a NQuads/TriG/TriX file |
-| [[UserGuide/Storage/4store|4store]] | 4store |
-| [[UserGuide/Storage/Fuseki|Fuseki]] | Apache Jena Fuseki, access any Jena based store via Fuseki |
-| [[UserGuide/Storage/InMemory|In-Memory]] | In-Memory store |
-| [[UserGuide/Storage/Sesame|Sesame]] | Any Sesame based store is supported e.g. Sesame, OWLIM, BigData |
-| [[UserGuide/Storage/SPARQL Query|SPARQL Query Endpoints]] | Any SPARQL Query endpoint |
-| [[UserGuide/Storage/SPARQL Query and Update|SPARQL Query and Update Endpoints]] | Any store providing both a query and update endpoint |
-| [[UserGuide/Storage/SPARQL Graph Store|SPARQL Graph Store Protocol]] | Any SPARQL Graph Store Protocol endpoint |
-| [[UserGuide/Storage/Stardog|Stardog]] | Stardog |
-| [[UserGuide/Storage/Virtuoso|Virtuoso]] | Virtuoso Universal Server |
+| [[Allegro Graph|UserGuide-Storage-AllegroGraph]] | AllegroGraph 3.x and 4.x |
+| [[Blazegraph|UserGuide-Storage-Blazegraph]] | Blazegraph |
+| [[Dataset Files|UserGuide-Storage-DatasetFile]] | Read-only view over a NQuads/TriG/TriX file |
+| [[4store|UserGuide-Storage-4store]] | 4store |
+| [[Fuseki|UserGuide-Storage-Fuseki]] | Apache Jena Fuseki, access any Jena based store via Fuseki |
+| [[In-Memory|UserGuide-Storage-InMemory]] | In-Memory store |
+| [[Sesame|UserGuide-Storage-Sesame]] | Any Sesame based store is supported e.g. Sesame, OWLIM, BigData |
+| [[SPARQL Query Endpoints|UserGuide-Storage-SPARQL-Query]] | Any SPARQL Query endpoint |
+| [[SPARQL Query and Update Endpoints|UserGuide-Storage-SPARQL-Query-And-Update]] | Any store providing both a query and update endpoint |
+| [[SPARQL Graph Store Protocol|UserGuide-Storage-SPARQL-Graph-Store]] | Any SPARQL Graph Store Protocol endpoint |
+| [[Stardog|UserGuide-Storage-Stardog]] | Stardog |
+| [[Virtuoso|UserGuide-Storage-Virtuoso]] | Virtuoso Universal Server |
 
 There are also some useful wrappers available:
 
