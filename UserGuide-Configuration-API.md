@@ -170,7 +170,7 @@ As of the most recent release all of the following objects can be loaded from Co
 
 ## ASP.Net Integration 
 
-* [[UserGuide/Configuration/HTTP Handlers|HTTP Handlers]]
+* [[HTTP Handlers|UserGuide-Configuration-HTTP-Handlers]]
 * [[UserGuide/Configuration/User Groups|User Groups]]
 * [[UserGuide/Configuration/Permissions|Permissions]]
 * [[UserGuide/Configuration/Users|Users]]

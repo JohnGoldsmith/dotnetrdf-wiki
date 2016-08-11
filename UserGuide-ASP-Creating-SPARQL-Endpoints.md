@@ -6,7 +6,7 @@ dotNetRDF provides a set of HTTP Handlers that can be used to deploy various for
 
 ## Automated Configuration 
 
-[[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]] gives a guide to the available handlers and [[UserGuide/ASP/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]] walks you through the automated process of deploying them.
+[[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]] gives a guide to the available handlers and [[UserGuide/ASP/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]] walks you through the automated process of deploying them.
 
 ## Manual Configuration 
 
@@ -26,7 +26,7 @@ Your Configuration Graph is registered using the `<appSettings>` section of your
 </appSettings>
 ```
 
-Each Handler is associated with some Configuration data in your Configuration Graph by using special URIs of the form `<dotnetrdf:/path>` as described in [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]]
+Each Handler is associated with some Configuration data in your Configuration Graph by using special URIs of the form `<dotnetrdf:/path>` as described in [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]]
 
 ### Handler Registration 
 

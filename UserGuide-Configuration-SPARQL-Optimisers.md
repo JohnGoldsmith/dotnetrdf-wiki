@@ -7,7 +7,7 @@ Optimisers come in two forms both of which can be configured using the Configura
 * [IQueryOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.IQueryOptimiser) are optimisers which optimise Graph Patterns in a Query
 * [IAlgebraOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.IAlgebraOptimiser) are optimisers which optimise SPARQL Algebra
 
-Please see [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]] for details on how to attach optimisers to HTTP Handlers.
+Please see [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]] for details on how to attach optimisers to HTTP Handlers.
 
 # Configuring Query Optimisers 
 

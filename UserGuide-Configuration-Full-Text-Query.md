@@ -161,7 +161,7 @@ _:index a dnr-ft:Index ;
   dnr-ft:ensureIndex true .
 ```
 
-For details on how to attach this algebra optimiser to a HTTP Handler please see [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]]
+For details on how to attach this algebra optimiser to a HTTP Handler please see [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]]
 
 ## Datasets 
 

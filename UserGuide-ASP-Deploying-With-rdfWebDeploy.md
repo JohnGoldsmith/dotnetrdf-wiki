@@ -148,6 +148,6 @@ Depending on your version of ASP.Net you may also need to make some manual tweak
 For more information on setting up SPARQL endpoints you may wish to look at the following topics:
 
 * [[Configuration API|UserGuide-Configuration-API]]
-* [[UserGuide/Configuration/HTTP Handlers|Configuration API - HTTP Handlers]]
+* [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]]
 * [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#)
 * [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]
