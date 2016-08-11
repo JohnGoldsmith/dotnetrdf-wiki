@@ -35,7 +35,7 @@ This may be changed any time you like and affects any subsequent queries made vi
 
 ## Transactions 
 
-Stardog is one of the few stores currently supported that support transactions, see the [[UserGuide/Storage/Transactions|Transactions API]] page for an overview of those APIs.  If the Transaction APIs are not explicitly used each operation occurs in its own transaction which is auto-committed at the end of its operation.
+Stardog is one of the few stores currently supported that support transactions, see the [[Transactions API|UserGuide-Storage-Transactions]] page for an overview of those APIs.  If the Transaction APIs are not explicitly used each operation occurs in its own transaction which is auto-committed at the end of its operation.
 
 # Managing a Server 
 
