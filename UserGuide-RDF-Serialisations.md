@@ -6,7 +6,8 @@ This page serves as a reference of the RDF serialisations supported by dotNetRDF
 
 Several of these serialisations have multiple variants of them with differing syntax rules.  Where multiple variants are supported dotNetRDF will default to accepting the most recent supported variant for input **but** will use the oldest supported variant for output.  This is [Postel's Law](http://en.wikipedia.org/wiki/Robustness_principle) in action - we are liberal in what we accept and conservative in what we send.
 
-|= Serialisation |= Known Variants |= Supported? |
+| Serialisation | Known Variants | Supported? |
+| --- | --- | --- |
 | NTriples | [RDF 1.0 Test Cases](http://www.w3.org/TR/2004/REC-rdf-testcases-20040210/#ntriples) and [RDF 1.1 NTriples](http://www.w3.org/TR/n-triples/) | Yes and 1.0.4 onwards |
 | NQuads | [DERI NQuads](http://sw.deri.org/2008/07/n-quads/) and [RDF 1.1 NQuads](http://www.w3.org/TR/n-quads/) | Yes and 1.0.4 onwards |
 | Turtle | [Dave Beckett specification](http://www.w3.org/TeamSubmission/turtle/) and [RDF 1.1 Turtle](http://www.w3.org/TR/turtle/) | Yes and 1.0.0 onwards |
