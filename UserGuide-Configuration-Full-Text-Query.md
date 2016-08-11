@@ -2,7 +2,7 @@
 
 # Configuring Full Text Query 
 
-Full Text Query is a non-standard SPARQL extension provided by the **dotNetRDF.Query.FullText.dll** library, please see [[UserGuide/Full Text Querying with SPARQL|Full Text Querying with SPARQL]] for general details on its usage.
+Full Text Query is a non-standard SPARQL extension provided by the **dotNetRDF.Query.FullText.dll** library, please see [[Full Text Querying with SPARQL|UserGuide-Full-Text-Querying-With-SPARQL]] for general details on its usage.
 
 You can use the [[Configuration API|UserGuide-Configuration-API]] to attach full text query functionality to a SPARQL Endpoint. To do this you will need to specify configuration for one of several ancillary objects.
 
