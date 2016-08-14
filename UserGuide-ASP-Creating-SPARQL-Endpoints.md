@@ -64,7 +64,7 @@ Under IIS 6x you will need to get IIS to serve the request even when the physica
 
 **Note:** In theory it should be possible to configure under IIS 6 without the previous step but I don't currently have access to an appropriate machine to verify this.
 
-==== IIS 7x ===
+#### IIS 7x
 
 Configuring a SPARQL Endpoint under IIS 7x is very easy if you are using ASP.Net's integrated pipeline mode (if not follow the instructions for IIS 6x). Simply add a line like the following to the `<handlers>` section of the `<system.webServer>` section of your `Web.config` file:
 
