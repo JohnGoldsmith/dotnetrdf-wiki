@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/Object Factories|Object Factories]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[Object Factories|UserGuide-Configuration-Object-Factories]]
 
 # Configuring Object Factories 
 

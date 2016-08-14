@@ -54,10 +54,10 @@ When you use the `LoadConfiguration()` method the auto-configuration will be aut
 
 Currently the following may be auto-configured:
 
-* [[UserGuide/Configuration/Object Factories|Object Factories]]
-* [[UserGuide/Configuration/Readers and Writers|Readers and Writers]]
-* [[UserGuide/Configuration/SPARQL Operators|SPARQL Operators]]
-* [[UserGuide/Configuration/Options|Static Options]]
+* [[Object Factories|UserGuide-Configuration-Object-Factories]]
+* [[Readers and Writers|UserGuide-Configuration-Readers-And-Writers]]
+* [[SPARQL Operators|UserGuide-Configuration-SPARQL-Operators]]
+* [[Static Options|UserGuide-Configuration-Options]]
 
 ## Special URIs 
 
@@ -145,8 +145,8 @@ As of the most recent release all of the following objects can be loaded from Co
 
 * [[UserGuide/Configuration/Graphs|Graphs]]
 * [[UserGuide/Configuration/Triple Stores|Triple Stores]]
-* [[UserGuide/Configuration/Object Factories|Object Factories]]
-* [[UserGuide/Configuration/Readers and Writers|Readers and Writers]]
+* [[Object Factories|UserGuide-Configuration-Object-Factories]]
+* [[Readers and Writers|UserGuide-Configuration-Readers-And-Writers]]
 
 ## SPARQL Features 
 
@@ -156,7 +156,7 @@ As of the most recent release all of the following objects can be loaded from Co
 * [[UserGuide/Configuration/Protocol Processors|Protocol Processors]]
 * [[UserGuide/Configuration/SPARQL Datasets|SPARQL Datasets]]
 * [[UserGuide/Configuration/SPARQL Expression Factories|SPARQL Expression Factories]]
-* [[UserGuide/Configuration/SPARQL Operators|SPARQL Operators]]
+* [[SPARQL Operators|UserGuide-Configuration-SPARQL-Operators]]
 * [[UserGuide/Configuration/SPARQL Optimisers|SPARQL Optimisers]]
 * [[UserGuide/Configuration/Full Text Query|Full Text Query]]
 * [[UserGuide/Configuration/Reasoners|Reasoners]]
@@ -174,6 +174,6 @@ As of the most recent release all of the following objects can be loaded from Co
 
 ## Miscellaneous 
 
-* [[UserGuide/Configuration/Options|Static Options]]
+* [[Static Options|UserGuide-Configuration-Options]]
 * [[UserGuide/Configuration/Proxy Servers|Proxy Servers]]
 

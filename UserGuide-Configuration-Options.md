@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/Options|Static Options]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[Static Options|UserGuide-Configuration-Options]]
 
 # Configuring Static Options 
 

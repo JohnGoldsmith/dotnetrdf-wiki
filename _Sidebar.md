@@ -36,6 +36,10 @@
 1. [[Global Options|UserGuide-Global-Options]]
 1. [[Formatting API|UserGuide-Formatting-API]]
 1. [[Configuration API|UserGuide-Configuration-API]]
+   1. [[Object Factories|UserGuide-Configuration-Object-Factories]]
+   1. [[Readers and Writers|UserGuide-Configuration-Readers-And-Writers]]
+   1. [[SPARQL Operators|UserGuide-Configuration-SPARQL-Operators]]
+   1. [[Static Options|UserGuide-Configuration-Options]]
 1. [[Handlers API|UserGuide-Handlers-API]]
 1. [[Tools|UserGuide-Tools]]
 
