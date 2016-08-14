@@ -33,13 +33,13 @@ Each Handler is associated with some Configuration data in your Configuration Gr
 
 Under IIS 5x you cannot map arbitrary paths so you'll have to define a custom extension (we recommend you define `.sparql`) which is done as follows:
 
-# Open IIS Manager
-# Browse to your website/virtual directory and right click, select Properties
-# On to the Virtual Directory tab click the Configuration button
-# Click the Add button in the Application Configuration dialog that appears
-# Click the Browse button and browse to and select aspnet_isapi.dll which is typically located in `C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\`
-# In the extension box type `.sparql` (you must include the dot at the start!), uncheck the Check that file exists box
-# Click OK to add the mapping (if the OK button is not enabled try clicking in the Executable box to get Windows to expand the path and then try to click OK)
+1. Open IIS Manager
+1. Browse to your website/virtual directory and right click, select Properties
+1. On to the Virtual Directory tab click the Configuration button
+1. Click the Add button in the Application Configuration dialog that appears
+1. Click the Browse button and browse to and select aspnet_isapi.dll which is typically located in `C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\`
+1. In the extension box type `.sparql` (you must include the dot at the start!), uncheck the Check that file exists box
+1. Click OK to add the mapping (if the OK button is not enabled try clicking in the Executable box to get Windows to expand the path and then try to click OK)
 
 You've now configured IIS to route any request for a file with the `.sparql` extension through ASP.Net which means any HTTP Handlers you define will be applied correctly. You can now configure a ASP.Net Handler by adding a line to the `<httpHandlers>` section of the `<system.web>` section of your `Web.config` file:
 
