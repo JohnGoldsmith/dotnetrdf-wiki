@@ -6,8 +6,7 @@ SPARQL Operators are a SPARQL extension that allows you to extend how certain op
 
 These may be configured quite simply provided they implement the [ISparqlOperator](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Operators.ISparqlOperator) interface and have an unparameterized constructor.
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

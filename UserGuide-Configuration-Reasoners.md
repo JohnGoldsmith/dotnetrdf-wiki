@@ -10,8 +10,7 @@ Reasoners are attached to Graphs/Triple Stores using the `dnr:reasoner` property
 
 Basic Configuration for a reasoner looks like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

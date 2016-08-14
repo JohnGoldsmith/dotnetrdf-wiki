@@ -8,8 +8,7 @@ Query Processors are classes that can process SPARQL Queries are return a [Sparq
 
 Basic Configuration for a Query Processor looks like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -21,8 +20,7 @@ _:proc a dnr:SparqlQueryProcessor ;
 
 The Leviathan Query Processor is used to process queries on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) interface e.g.
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -60,8 +58,7 @@ The above specifies a Query Processor which passes the queries to the SPARQL eng
 
 Similar to the Generic Query Processor the Simple Query Processor passes queries to the `ExecuteQuery()` method of a Triple Store that implements the [INativelyQueryablerStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore) interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -84,8 +81,7 @@ The above configuration is effectively identical to the previous example, genera
 
 The Remote Query Processor is used to farm out queries to a remote SPARQL endpoint, it can be configured to use any endpoint configurable as described on [[UserGuide/Configuration/SPARQL Endpoints|Configuration API - SPARQL Endpoints]].
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -104,8 +100,7 @@ The above configures a Remote Query Processor which passes queries to the endpoi
 
 The Pellet Query Processor is used to pass queries to the SPARQL service provided by a knowledge base on some remote Pellet Server. It is configured by adding the `dnr:server` and `dnr:storeID` properties to the basic configuration like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

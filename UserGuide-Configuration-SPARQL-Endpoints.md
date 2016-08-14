@@ -10,8 +10,7 @@ The library provides 2 concrete implementations for query endpoints which are [S
 
 Simple query endpoints are endpoints that use a single remote endpoint for queries. These can be specified relatively simply as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -28,8 +27,7 @@ Any number of `dnr:defaultGraphUri` and `dnr:namedGraphUri` properties can be us
 
 If your SPARQL endpoint requires a username and password this can be added using the `dnr:user` and dnr:password properties or by using the dnr:credentials property to point to an object of type `dnr:User` e.g.
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -50,8 +48,7 @@ Note that if the user credentials for the endpoint also apply to the proxy you c
 
 Federated Endpoints are endpoints that make queries across multiple remote endpoints and combine the results together before returning them. A Federated Endpoint is specified as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -75,8 +72,7 @@ The above configures a Federated Endpoint which sends the query to [DBPedia's SP
 
 Updates endpoints are endpoints used to make updates against, an update endpoint is specified as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

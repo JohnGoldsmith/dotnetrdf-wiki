@@ -6,8 +6,7 @@ Reified triples are not special in any sense from dotNetRDF's point of view they
 
 For example consider the following Turtle fragment:
 
-{{{
-#!turtle
+```turtle
 @prefix : <http://example.org> .
 
 :s :p :o .
@@ -15,8 +14,7 @@ For example consider the following Turtle fragment:
 
 Reifying this graph simply transforms it to the following form:
 
-{{{
-#!turtle
+```turtle
 @prefix : <http://example.org> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 

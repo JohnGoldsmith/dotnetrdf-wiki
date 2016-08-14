@@ -14,8 +14,7 @@ The in-memory dataset represents pure in-memory data which is the default operat
 
 The following example shows a Triple Store configuration being specified as the underlying source for a Dataset configuration:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -45,8 +44,7 @@ You may alternatively use the [InMemoryQuadDataset](http://www.dotnetrdf.org/api
 
 The [WebDemandDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.WebDemandDataset) is a wrapper around another dataset that allows the dataset to load missing graphs on demand from the web.  It can be configured simply like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

@@ -17,8 +17,7 @@ Triple Stores are loaded from configuration in the following way:
 
 At it's most basic a Triple Store is configured as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -36,8 +35,7 @@ Using the `dnr:usingGraph` property any number of Graphs can be loaded into a Tr
 
 The following example shows loading two graphs into a Triple Store
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -61,8 +59,7 @@ You can populate a Triple Store using a RDF dataset file which is in one of the 
 
 The following example loads a dataset from a file:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -77,8 +74,7 @@ You can also apply reasoners to Triple Stores loaded in this way with the triple
 
 Linking a reasoner to a Triple Store is as easy as using the dnr:reasoner property as the following example in which an RDF Schema reasoner is applied to the Triple Store.
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -100,8 +96,7 @@ It is possible to configure a number of more complex [ITripleStore](http://www.d
 
 The [WebDemandTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.WebDemandTripleStore) is a Triple Store which attempts to load Graphs from the web whenever a Graph with a URI which is not currently in the Store is requested. Configuring this is as simple as altering the value of the dnr:type property like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -113,8 +108,7 @@ _:store a dnr:TripleStore ;
 
 The [PersistentTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore) provides a view of an arbitrary store for which there is an [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) provided. The Triple Store can then be used for query and update operations on the underlying store. This is configured by setting the `dnr:type` property appropriately and then using the `dnr:storageProvider` property to point to a storage provider to be used e.g.
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

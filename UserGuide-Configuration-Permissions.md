@@ -4,8 +4,7 @@
 
 Permissions are configured very simply as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -16,8 +15,7 @@ _:permission a dnr:Permission ;
 
 Or you can specify permission sets which specify that allow multiple actions to bee grouped together:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 

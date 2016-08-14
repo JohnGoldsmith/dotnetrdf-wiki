@@ -14,16 +14,14 @@ Note that all types specified by the `dnr:type` property that refer to classes i
 
 For all Full Text Configuration you'll need to add the additional prefix declaration like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr-ft: <http://www.dotnetrdf.org/configuration/fulltext#> .
 ```
 
 You will also need to declare the following:
 
-{{{
-#!turtle
+```turtle
 
 _:fulltextFactory a dnr:ObjectFactory ;
   dnr:type "VDS.RDF.Configuration.FullTextObjectFactory, dotNetRDF.Query.FullText" .
@@ -33,8 +31,7 @@ _:fulltextFactory a dnr:ObjectFactory ;
 
 Index Schemas are specified as follows, this example shows the [DefaultIndexSchema](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Schema.DefaultIndexSchema) which is the only schema included currently (advanced users can create their own schemas):
 
-{{{
-#!turtle
+```turtle
 
 _:schema a dnr-ft:Schema ;
   dnr:type "VDS.RDF.Query.FullText.Schema.DefaultIndexSchema, dotNetRDF.Query.FullText" .
@@ -44,8 +41,7 @@ _:schema a dnr-ft:Schema ;
 
 Indexes represent the actual indexed data, currently this means Lucene.Net directories. Their configuration looks like the following, this example shows a file system based index being used:
 
-{{{
-#!turtle
+```turtle
 
 _:index a dnr-ft:Index ;
   dnr:type "Lucene.Net.Store.FSDirectory, Lucene.Net" ;
@@ -61,8 +57,7 @@ The optional `dnr-ft:ensureIndex` property is used to ensure that the index is r
 
 Analyzers are required for Lucene.Net to do the analysis for both indexing and querying. Their configuration looks like the following, any Analyzer instance that has a unparameterized constructor or takes a single Lucene.Net Version parameter can be loaded this way:
 
-{{{
-#!turtle
+```turtle
 
 _:analyzer a dnr-ft:Analyzer ;
   dnr:type "Lucene.Net.Analysis.Standard.StandardAnalayzer" ;
@@ -74,8 +69,7 @@ The optional `dnr-ft:version` property is used to specify the version of the ana
 
 Indexers are classes that implement the [IFullTextIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.IFullTextIndexer) interface and can perform indexing. Their configuration looks like the following:
 
-{{{
-#!turtle
+```turtle
 
 _:indexer a dnr-ft:Indexer ;
   dnr:type "VDS.RDF.Query.FullText.Indexing.Lucene.LuceneObjectsIndexer, dotNetRDF.Query.FullText" ;
@@ -96,8 +90,7 @@ Also you may optionally specify the `dnr-ft:schema` property to point to a Index
 
 A Search Provider provides the actual full text query capability, currently only one implementation [LuceneSearchProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider) is available and it is configured as follows:
 
-{{{
-#!turtle
+```turtle
 
 _:searcher a dnr-ft:Searcher ;
   dnr:type "VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider, dotNetRDF.Query.FullText" ;
@@ -119,8 +112,7 @@ This can be done using the `dnr-ft:buildIndexFor` and `dnr-ft:buildIndexWith` pr
 
 An example of this is shown below:
 
-{{{
-#!turtle
+```turtle
 
 _:searcher a dnr-ft:Searcher ;
   dnr:type "VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider, dotNetRDF.Query.FullText" ;
@@ -144,8 +136,7 @@ _:graph a dnr:Graph ;
 
 The [FullTextOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.FullTextOptimiser) is the only optimiser provided by the Full Text library and is used to enable actual full text query support. It is configured as follows:
 
-{{{
-#!turtle
+```turtle
 
 _:optimiser a dnr:AlgebraOptimiser ;
   dnr:type "VDS.RDF.Query.Optimisation.FullTextOptimiser, dotNetRDF.Query.FullText" ;
@@ -169,8 +160,7 @@ You can use the [FullTextIndexedDataset](http://www.dotnetrdf.org/api/index.asp?
 
 It is configured as follows:
 
-{{{
-#!turtle
+```turtle
 
 _:ftDataset a dnr:SparqlDataset ;
   dnr:type "VDS.RDF.Query.Dataset.FullTextIndexedDataset, dotNetRDF.Query.FullText" ;

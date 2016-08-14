@@ -8,8 +8,7 @@ Update Processors are used to process SPARQL Update commands. Update Processors 
 
 Basic Configuration for a Update Processor looks like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -21,8 +20,7 @@ _:proc a dnr:SparqlUpdateProcessor .
 
 The Leviathan Update Processor is used to process updates on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a dnr:usingStore property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) interface e.g.
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -46,8 +44,7 @@ How updates are actually processed depends on the exact concrete implementation 
 
 To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -68,8 +65,7 @@ The above specifies a Update Processor which applies the updates to the AllegroG
 
 Similar to the Generic Update Processor the Simple Update Processor passes updates to the `ExecuteUpdate()` method of a Triple Store that implements the [IUpdateableTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUpdateableTripleStore) interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 

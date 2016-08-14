@@ -15,8 +15,7 @@ Static options may be automatically configured when using the `LoadConfiguration
 
 Configuration for static options is defined like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

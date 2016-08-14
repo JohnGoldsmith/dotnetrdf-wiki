@@ -16,8 +16,7 @@ The [Configuration vocabulary](http://www.dotnetrdf.org/configuration#) allows f
 
 To specify an object you will need at least two triples, for example to specify an empty Graph you would need the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -34,8 +33,7 @@ If you fail to specify a `dnr:type` property then the object may be unloadable t
 
 Since configuration graph for larger applications can grow to be quite complex you can use our imports mechanism to split your configuration over several files.  Importing is as simple as the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -81,8 +79,7 @@ The main function that you will want to use is the `LoadObject()` function which
 
 For example consider the following configuration file which we'll refer to as `config.ttl`:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

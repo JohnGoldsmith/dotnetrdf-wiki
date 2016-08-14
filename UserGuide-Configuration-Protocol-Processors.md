@@ -8,8 +8,7 @@ Protocol Processors are classes that can process SPARQL Graph Store HTTP Protoco
 
 Basic Configuration for a Protocol Processor looks like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -21,8 +20,7 @@ _:proc a dnr:SparqlHttpProtocolProcessor .
 
 The Leviathan Protocol Processor is used to process protocol requests on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) interface e.g.
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -46,8 +44,7 @@ Not all features of the protocol may be supported or behave correctly depending 
 
 To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -68,8 +65,7 @@ The above configures a Generic Protocol Processor which processes requests using
 
 The Protocol to Update Processor is a processor which operates using the supplied Query and Update processors, see [[UserGuide/Configuration/Query Processors|Configuration API - Query Processors]] and [[UserGuide/Configuration/Update Processors|Configuration API - Update Processors]] for details on configuring these.
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 

@@ -8,8 +8,7 @@ Storage Providers can be specified in order to provide connections to any of the
 
 You can specify a connection to an Allegro Graph server as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -32,8 +31,7 @@ The username and password are optional for Allegro Graph.
 
 You can specify a read-only connection to an RDF dataset file like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -49,8 +47,7 @@ The `dnr:fromFile` property is used to specify the dataset file to connect to an
 
 4store servers can be connected to as shown below:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -68,8 +65,7 @@ The `dnr:enableUpdates` property controls whether the 4store instance you are co
 
 You can connect to any store which is exposed via a Fuseki server using the following configuration:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -84,8 +80,7 @@ _:fuseki a dnr:StorageProvider ;
 
 Any server which supports the Sesame HTTP Protocol can be connected to as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -107,8 +102,7 @@ It is possible to create read-only connections to SPARQL Query endpoints in two 
 
 ### Direct Specification 
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -128,8 +122,7 @@ The `dnr:loadMode` property takes a value of either `Describe` or `Construct` an
 
 ### Separate Specification 
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -151,8 +144,7 @@ This defines the same connection as in the previous example but has the advantag
 
 Where a store provides both a query and update endpoint you may specify a connection to the store by specifying the relevant endpoints, as with the SPARQL Query connection you can use either the direct or separate specification modes.  For simplicitly our example here shows just the separate specification mode:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -177,8 +169,7 @@ _:updateEndpoint a dnr:SparqlUpdateEndpoint ;
 
 SPARQL 1.1 introduces a new RESTful HTTP Protocol for Graph Stores and you can create connections to stores that support this protocol as shown below:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -193,8 +184,7 @@ Defining a connection is simply a case of stating the server used with the `dnr:
 
 You can specify a connection to an Stardog server as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -214,8 +204,7 @@ You may optionally add the `dnr:loadMode` property to specify what reasoning mod
 
 Connections to Virtuoso's native quad store can be defined as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 

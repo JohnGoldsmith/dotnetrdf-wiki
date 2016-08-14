@@ -12,8 +12,7 @@ The `http://www.w3.org/ns/formats/media_type` URI is used to reference MIME type
 
 The following example shows how to change the default RDF/XML writer to be the [PrettyRdfXmlWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.PrettyRdfXmlWriter):
 
-{{{
-#!turtle
+```turtle
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 @prefix fmt: <http://www.w3.org/ns/formats/>.
 

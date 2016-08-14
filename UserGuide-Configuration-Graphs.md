@@ -23,8 +23,7 @@ Graphs are loaded from Configuration in the following way:
 
 At it's most basic a Graph is specified as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -42,8 +41,7 @@ As already detailed there are multiple types of data source which you can fill a
 
 Loading data from other graphs is specified as follows using the `dnr:fromGraph` property:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -61,8 +59,7 @@ _:otherGraph a dnr:Graph ;
 
 Loading data from files is specified as shown below using the `dnr:fromFile` property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [IPathResolver](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver) implementation by setting the `PathResolver` property of the `ConfigurationLoader`. Files are expected to be RDF graphs in formats which dotNetRDF understands.
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -75,8 +72,7 @@ _:graph a dnr:Graph ;
 
 You can encode the source of data for your Graph directly as a string using the `dnr:fromString` property like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -117,8 +113,7 @@ _:store a dnr:StorageProvider ;
 
 Graphs can be loaded from URIs using the `dnr:fromUri` property:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -132,8 +127,7 @@ _:graph a dnr:Graph ;
 
 Since Graphs loaded in this way will either have no Base URI or have a Base URI of one of their data sources it is often useful to assign a property URI to this Graph. This URI is the URI used if the Graph is subsequently saved/loaded or otherwise manipulated. A Base URI can be assigned using the `dnr:assignUri` property like so:
 
-{{{
-#!turtle
+```turtle
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:graph a dnr:Graph ;
@@ -147,8 +141,7 @@ You can also apply reasoners to Graphs loaded in this way with the triples that 
 
 Linking a reasoner to a Graph is as easy as using the `dnr:reasoner` property as the following example in which an RDF Schema reasoner is applied to the Graph.
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

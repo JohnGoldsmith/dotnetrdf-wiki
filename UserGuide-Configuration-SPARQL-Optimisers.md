@@ -15,8 +15,7 @@ Please see [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Hand
 
 Basic Configuration looks like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -30,8 +29,7 @@ The above configures the default optimiser which is used when no other optimiser
 
 The [NoReorderOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.NoReorderOptimiser) is an optimiser that only places `FILTER` clauses but does not otherwise reorder Graph Patterns. It can be configured like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -43,8 +41,7 @@ _:optimiser a dnr:QueryOptimiser ;
 
 The [WeightedOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightedOptimiser) reorders Graph Patterns based on weighting calculated from statistics about data. These statistics must be invented/computed and then linked as a Graph to the optimiser like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
@@ -61,8 +58,7 @@ _:stats a dnr:Graph ;
 
 You can configure any `IAlgebraOptimiser` that has a public unparameterized constructor like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 

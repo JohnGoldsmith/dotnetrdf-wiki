@@ -6,8 +6,7 @@ HTTP Handler configuration is used to specify the settings for HTTP Handlers tha
 
 When you specify a handler definition you must use a special dotNetRDF URI as the subject like so:
 
-{{{
-#!turtle
+```turtle
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
 <dotnetrdf:/folder/endpoint> a dnr:HttpHandler ;
@@ -96,8 +95,7 @@ Graph Handlers are used to serve an RDF Graph either at a fixed URI or at a base
 
 Configuration for these Handlers looks like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -120,8 +118,7 @@ Query Handlers are used to create SPARQL Query endpoints at fixed URIs. To do th
 
 An example configuration might look like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -175,8 +172,7 @@ Update Handlers are used to provide SPARQL Update endpoints at fixed URIs. To do
 
 An example configuration might look like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -210,8 +206,7 @@ Protocol Handlers are used to provide SPARQL Graph Store HTTP Protocol endpoints
 
 An example configuration is as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 
@@ -235,8 +230,7 @@ SPARQL Servers are handlers which combine the features of SPARQL Query, Update a
 
 Configuration is essentially the combination of configuration for a Query, Update and Protocol handler like so:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 

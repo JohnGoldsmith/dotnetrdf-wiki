@@ -4,8 +4,7 @@
 
 Proxy Servers are configured very simply as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix <http://www.dotnetrdf.org/configuration#> .
 

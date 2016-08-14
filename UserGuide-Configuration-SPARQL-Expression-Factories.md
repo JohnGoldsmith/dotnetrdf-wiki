@@ -8,8 +8,7 @@ These classes must implement the [SparqlCustomExpressionFactory](http://www.dotn
 
 They can be configured quite simply as follows:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
