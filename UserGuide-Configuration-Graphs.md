@@ -6,16 +6,16 @@ Graphs can be specified using the [Configuration Vocabulary](http://www.dotnetrd
 
 Graphs are loaded from Configuration in the following way:
 
-# Instantiate a Graph of the correct type as specified by the `dnr:type` property
-# Fill Graph with data from specified sources in the following order:
-## Other Graphs
-## Files
-## Strings (RDF Fragments encoded as Literal Nodes)
-## Datasets
-## 3rd Party Triple Stores
-## URIs
-# Assign a specific URI as the Base URI of the Graph
-# Apply any specified reasoners
+1. Instantiate a Graph of the correct type as specified by the `dnr:type` property
+1. Fill Graph with data from specified sources in the following order:
+    1. Other Graphs
+    1. Files
+    1. Strings (RDF Fragments encoded as Literal Nodes)
+    1. Datasets
+    1. 3rd Party Triple Stores
+    1. URIs
+1. Assign a specific URI as the Base URI of the Graph
+1.# Apply any specified reasoners
 
 **Note:** If any of the data sources fails to load then the loading of the Graph will fail.
 
@@ -88,12 +88,11 @@ Graphs can be filled with data from named graphs held in a SPARQL dataset specif
 
 If you specify multiple `dnr:fromDataset` properties then every URI specified with the `dnr:withUri` property will be loaded from every dataset. To load different graphs from different datasets use the `dnr:fromGraph` property to point to other graphs and setup those graphs to load the specific graphs from the specific databases you need.
 
-=== 3rd Party Triple Stores ==
+### 3rd Party Triple Stores
 
 Graphs can be filled with data from named graphs held in 3rd party triple stores using a combination of the `dnr:fromStore` property and the `dnr:withUri` property in an identical manner to that described above for Databases. Example configuration is as follows:
 
-{{{
-!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
