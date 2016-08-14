@@ -84,7 +84,7 @@ _:graph a dnr:Graph ;
 
 ### Datasets 
 
-Graphs can be filled with data from named graphs held in a SPARQL dataset specified using a combination of the `dnr:fromDataset` and `dnr:withUri` properties. The `dnr:fromDataset` property is used to point to a SPARQL Dataset (see [[UserGuide/Configuration/SPARQL Datasets|Configuration API - SPARQL Datasets]]) from which data should be loaded and the `dnr:withUri` property is used to specify the URI of the Graph from the dataset which should be loaded. Multiple `dnr:withUri` properties may be specified to load multiple graphs from the dataset.
+Graphs can be filled with data from named graphs held in a SPARQL dataset specified using a combination of the `dnr:fromDataset` and `dnr:withUri` properties. The `dnr:fromDataset` property is used to point to a SPARQL Dataset (see [[Configuration API - SPARQL Datasets|UserGuide-Configuration-SPARQL-Datasets]]) from which data should be loaded and the `dnr:withUri` property is used to specify the URI of the Graph from the dataset which should be loaded. Multiple `dnr:withUri` properties may be specified to load multiple graphs from the dataset.
 
 If you specify multiple `dnr:fromDataset` properties then every URI specified with the `dnr:withUri` property will be loaded from every dataset. To load different graphs from different datasets use the `dnr:fromGraph` property to point to other graphs and setup those graphs to load the specific graphs from the specific databases you need.
 
