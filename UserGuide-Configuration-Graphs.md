@@ -143,7 +143,7 @@ _:graph a dnr:Graph ;
 
 ## Applying Reasoners 
 
-You can also apply reasoners to Graphs loaded in this way with the triples that the reasoner produces being materialised in the Graph. To learn how to configure a reasoner see [[UserGuide/Configuration/Reasoners|Configuration API - Reasoners]].
+You can also apply reasoners to Graphs loaded in this way with the triples that the reasoner produces being materialised in the Graph. To learn how to configure a reasoner see [[Configuration API - Reasoners|UserGuide-Configuration-Reasoners]].
 
 Linking a reasoner to a Graph is as easy as using the `dnr:reasoner` property as the following example in which an RDF Schema reasoner is applied to the Graph.
 

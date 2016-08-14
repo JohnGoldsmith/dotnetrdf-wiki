@@ -22,7 +22,7 @@ The RDFS reasoner does not apply the full range of possible RDFS based inferenci
 
 * Asserts additional type triples for anything which has a type which is a sub-class of another type
 * Asserts additional triples where the property (predicate) is a sub-property of another property
-*Asserts additional type triples based on the domain and range of properties
+* Asserts additional type triples based on the domain and range of properties
 
 Consider the following example schema (schema.ttl):
 
@@ -160,4 +160,4 @@ However some stores such as [StarDog](http://stardog.com) do support reasoning w
 
 # Reasoners and SPARQL Endpoints 
 
-Please see [[UserGuide/Configuration/Reasoners|Configuration API - Reasoners]] for information on how to specify reasoner configuration and how to attach them to HTTP Handlers.
+Please see [[Configuration API - Reasoners|UserGuide-Configuration-Reasoners]] for information on how to specify reasoner configuration and how to attach them to HTTP Handlers.
