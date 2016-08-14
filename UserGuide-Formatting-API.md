@@ -2,7 +2,7 @@
 
 # Formatting API 
 
-The Formatting API is an collection of APIs found in the `VDS.RDF.Writing.Formatting` namespace, it is concerned with turning objects like nodes, triples and SPARQL results into strings for display.  The formatting API underpins the writers already seen in the basic tutorial on the [[UserGuide/Writing RDF|Writing RDF]] page.
+The Formatting API is an collection of APIs found in the `VDS.RDF.Writing.Formatting` namespace, it is concerned with turning objects like nodes, triples and SPARQL results into strings for display.  The formatting API underpins the writers already seen in the basic tutorial on the [[Writing RDF|UserGuide-Writing-RDF]] page.
 
 The API consists of a number of interfaces:
 
@@ -18,7 +18,7 @@ The API consists of a number of interfaces:
 
 # Basic Usage 
 
-Generally you will only want to use one of the higher level interfaces such as `INodeFormatter` or `ITripleFormatter`.  Both these interfaces define //Format(…)// methods which take either a `Triple` or an `INode` and return a string representation of them. You can also call //ToString(…)// overloads on `Triple` and `INode` which take in a formatter and return the String representation as formatted by that formatter.
+Generally you will only want to use one of the higher level interfaces such as `INodeFormatter` or `ITripleFormatter`.  Both these interfaces define `Format(…)` methods which take either a `Triple` or an `INode` and return a string representation of them. You can also call `ToString(…)` overloads on `Triple` and `INode` which take in a formatter and return the String representation as formatted by that formatter.
 
 In general any formatter usually provides one or more `Format()` or `FormatX()` methods which are used to format specific things.  These methods take the thing to be formatted and return a string.
 

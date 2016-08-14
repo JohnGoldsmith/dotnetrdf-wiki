@@ -368,7 +368,7 @@ If you are still having problems with no results you can also look at [[Debuggin
 
 # Loading/Saving Results 
 
-A `SparqlResultSet` may be loaded/saved using the [ISparqlResultsReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader) and [ISparqlResultsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter) interfaces respectively. These are functionally very similar to the `IRdfReader` and `IRdfWriter` interfaces described on the [[UserGuide/Reading RDF|Reading RDF]] and [[UserGuide/Writing RDF|Writing RDF]] pages.
+A `SparqlResultSet` may be loaded/saved using the [ISparqlResultsReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader) and [ISparqlResultsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter) interfaces respectively. These are functionally very similar to the `IRdfReader` and `IRdfWriter` interfaces described on the [[UserGuide/Reading RDF|Reading RDF]] and [[Writing RDF|UserGuide-Writing-RDF]] pages.
 
 A quick example is as follows:
 
