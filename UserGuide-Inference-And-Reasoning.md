@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Inference and Reasoning|Inference and Reasoning]]
+[[Home]] > [[User Guide|UserGuide]] > [[Inference and Reasoning|UserGuide-Inference-And-Reasoning]]
 
 # Inference and Reasoning 
 
@@ -26,7 +26,7 @@ The RDFS reasoner does not apply the full range of possible RDFS based inferenci
 
 Consider the following example schema (schema.ttl):
 
-{{{
+```
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix : <http://example.org/vehicles/> .
 
@@ -37,7 +37,7 @@ Consider the following example schema (schema.ttl):
 
 And the following example data (data.ttl):
 
-{{{
+```
 @prefix ex: <http://example.org/vehicles/> .
 @prefix : <http://myvehicledata.com/> .
 
@@ -100,7 +100,7 @@ As with RDFS there is a [StaticSkosReasoner](http://www.dotnetrdf.org/api/index.
 
 Consider the following classification of vehicles based on the earlier examples (taxonomy.ttl):
 
-{{{
+```
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>
 @prefix : <http://example.org/vehicles/> .
 
@@ -111,7 +111,7 @@ Consider the following classification of vehicles based on the earlier examples 
 
 And the following data (data2.ttl):
 
-{{{
+```
 @prefix ex: <http://example.org/vehicles/> .
 @prefix : <http://myvehicledata.com/> .
 
@@ -126,7 +126,7 @@ As seen in the RDFS example without inference we don't automatically know that a
 
 The [SimpleN3RulesReasoner](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.SimpleN3RulesReasoner) is a reasoner that is able to apply simple N3 Rules. The reasoner must be initialised with a Graph that has been parsed from an input N3 file in order to contain any rules. A simple rule is expressed as follows:
 
-{{{
+```
 { ?x a ex:Car } => { ?x a ex:Vehicle }
 ```
 
@@ -136,7 +136,7 @@ Any rule which is composed of two graph literals and connected via => or <= can 
 
 Additionally if you use `@forsome` or `@forall` to define tokens as being variables these will be processed e.g.
 
-{{{
+```
 @forall :x .
 { :x a ex:Car } => { :x a ex:Vehicle }
 ```
