@@ -140,7 +140,7 @@ You get a [DotNetRdfConfigurationException](http://www.dotnetrdf.org/api/index.a
 
 You get an `Unable to load type VDS.RDF.Web.QueryHandler` or similar error. This is usually due to a failure to upload the required DLLs into the `bin/` directory of your site. If you have done this ensure that you are running as an IIS Application rather than a virtual directory. If you are running as a virtual directory (and cannot change to running as an IIS application) then move the DLLs from the `bin/` directory in your virtual folder to the `bin/` directory of the application root
 
-Depending on your version of ASP.Net you may also need to make some manual tweaks to the `Web.config` - see [[UserGuide/ASP/Creating SPARQL Endpoints|Creating SPARQL endpoints]] for more details.
+Depending on your version of ASP.Net you may also need to make some manual tweaks to the `Web.config` - see [[Creating SPARQL Endpoints|UserGuide-ASP-Creating-SPARQL-Endpoints]] for more details.
 
 # Further Reading 
 
