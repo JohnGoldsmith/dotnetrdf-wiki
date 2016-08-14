@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/ASP.Net Integration|ASP.Net Integration]] > [[UserGuide/ASP/Creating SPARQL Endpoints|Creating SPARQL Endpoints]]
+[[Home]] > [[User Guide|UserGuide]] > [[ASP.Net Integration|UserGuide-ASPNET-Integration]] > [[Creating SPARQL Endpoints|UserGuide-ASP-Creating-SPARQ- Endpoints]]
 
 # Creating SPARQL Endpoints 
 
@@ -6,7 +6,7 @@ dotNetRDF provides a set of HTTP Handlers that can be used to deploy various for
 
 ## Automated Configuration 
 
-[[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]] gives a guide to the available handlers and [[UserGuide/ASP/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]] walks you through the automated process of deploying them.
+[[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]] gives a guide to the available handlers and [[Deploying with rdfWebDeploy|UserGuide-ASP-Deploying-With-rdfWebDeploy]] walks you through the automated process of deploying them.
 
 ## Manual Configuration 
 

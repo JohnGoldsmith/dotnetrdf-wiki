@@ -31,6 +31,8 @@
 1. [[Ontology API|UserGuide-Ontology-API]]
 1. [[Inference and Reasoning|UserGuide-Inference-And-Reasoning]]
 1. [[ASP.NET Integration|UserGuide-ASPNET-Integration]]
+   1. [[Creating SPARQL Endpoints|UserGuide-ASP-Creating-SPARQL-Endpoints]]
+   1. [[Deploying with rdfWebDeploy|UserGuide-ASP-Deploying-With-rdfWebDeploy]]
 1. [[Global Options|UserGuide-Global-Options]]
 1. [[Formatting API|UserGuide-Formatting-API]]
 1. [[Configuration API|UserGuide-Configuration-API]]

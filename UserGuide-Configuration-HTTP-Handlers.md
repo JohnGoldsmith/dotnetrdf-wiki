@@ -2,7 +2,7 @@
 
 # Configuring HTTP Handlers 
 
-HTTP Handler configuration is used to specify the settings for HTTP Handlers that you wish to use in ASP.Net applications. You can then either add handler registrations manually to your Web.config file or automatically using [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]] in order to get the handlers running in your ASP.Net application (see [[UserGuide/ASP/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]] for a full example).
+HTTP Handler configuration is used to specify the settings for HTTP Handlers that you wish to use in ASP.Net applications. You can then either add handler registrations manually to your Web.config file or automatically using [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]] in order to get the handlers running in your ASP.Net application (see [[Deploying with rdfWebDeploy|UserGuide-ASP-Deploying-With-rdfWebDeploy]] for a full example).
 
 When you specify a handler definition you must use a special dotNetRDF URI as the subject like so:
 

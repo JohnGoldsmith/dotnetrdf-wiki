@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/ASP.Net Integration|ASP.Net Integration]] > [[UserGuide/ASP/Deploying with rdfWebDeploy|Deploying with rdfWebDeploy]]
+[[Home]] > [[User Guide|UserGuide]] > [[ASP.Net Integration|UserGuide-ASPNET-Integration]] > [[Deploying with rdfWebDeploy|UserGuide-ASP-Deploying-With-rdfWebDeploy]]
 
 # Deploying with rdfWebDeploy 
 
