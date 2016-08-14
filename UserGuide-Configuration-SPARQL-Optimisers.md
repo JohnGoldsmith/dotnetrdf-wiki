@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/SPARQL Optimisers|SPARQL Optimisers]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[SPARQL Optimisers|UserGuide-Configuration-SPARQL-Optimisers]]
 
 # Configuring SPARQL Optimisers 
 

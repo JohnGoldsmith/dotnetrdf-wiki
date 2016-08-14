@@ -47,7 +47,7 @@
    1. [[SPARQL Datasets|UserGuide-Configuration-SPARQL-Datasets]]
    1. [[SPARQL Expression Factories|UserGuide-Configuration-SPARQL-Expression-Factories]]
    1. [[SPARQL Operators|UserGuide-Configuration-SPARQL-Operators]]
-   1. [[UserGuide/Configuration/SPARQL Optimisers|SPARQL Optimisers]]
+   1. [[SPARQL Optimisers|UserGuide-Configuration-SPARQL-Optimisers]]
    1. [[Full Text Query|UserGuide-Configuration-Full-Text-Query]]
    1. [[Reasoners|UserGuide-Configuration-Reasoners]]
    1. [[Storage Providers|UserGuide-Configuration-Storage-Providers]]

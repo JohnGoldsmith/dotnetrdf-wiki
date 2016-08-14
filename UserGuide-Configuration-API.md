@@ -157,7 +157,7 @@ As of the most recent release all of the following objects can be loaded from Co
 * [[SPARQL Datasets|UserGuide-Configuration-SPARQL-Datasets]]
 * [[SPARQL Expression Factories|UserGuide-Configuration-SPARQL-Expression-Factories]]
 * [[SPARQL Operators|UserGuide-Configuration-SPARQL-Operators]]
-* [[UserGuide/Configuration/SPARQL Optimisers|SPARQL Optimisers]]
+* [[SPARQL Optimisers|UserGuide-Configuration-SPARQL-Optimisers]]
 * [[Full Text Query|UserGuide-Configuration-Full-Text-Query]]
 * [[Reasoners|UserGuide-Configuration-Reasoners]]
 
