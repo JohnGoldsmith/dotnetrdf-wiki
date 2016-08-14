@@ -8,7 +8,7 @@ This is not down to memory leaks but rather down to internal features of the API
 
 # URI Interning 
 
-Our [[DeveloperGuide/URI Interning|URI Interning]] feature is used to improve the speed of URI comparisons however if the data you are working with has a lot of unique URIs or you work with data for short periods before throwing it away then this can use a lot of memory over time.
+Our [[URI Interning|DeveloperGuide-URI-Interning]] feature is used to improve the speed of URI comparisons however if the data you are working with has a lot of unique URIs or you work with data for short periods before throwing it away then this can use a lot of memory over time.
 
 You can disable this feature completely like so:
 

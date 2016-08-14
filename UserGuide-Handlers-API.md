@@ -8,7 +8,7 @@ The API is designed to facilitate stream processing of the data, that is that ha
 
 One thing to note is that both handler interfaces descend from the [INodeFactory](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INodeFactory) interface which is a large interface that if implemented incorrectly may lead to serious issues. Therefore we'd typically recommend extending either of [BaseRdfHandler](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseRdfHandler) or [BaseResultsHandler](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseResultsHandler). If you are an advanced developer you may wish to extend their parent class [BaseHandler](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Handlers.BaseHandler) instead which will allow you complete control over how you implement the rest of the handler interface while still giving you the `INodeFactory` implementation.
 
-**Note:** While the handlers API allows you to read RDF in a fully streaming fashion this does not mean that memory usage won't steadily increase over time due to various internal state that a parser has to keep during the parsing process.  You may also need to disable the [[DeveloperGuide/URI Interning|URI Interning]] feature if you wish to stream parse very large data files.
+**Note:** While the handlers API allows you to read RDF in a fully streaming fashion this does not mean that memory usage won't steadily increase over time due to various internal state that a parser has to keep during the parsing process.  You may also need to disable the [[URI Interning|DeveloperGuide-URI-Interning]] feature if you wish to stream parse very large data files.
 
 # The IRdfHandler Interface 
 

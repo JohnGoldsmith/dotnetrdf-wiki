@@ -6,17 +6,15 @@ dotNetRDF has a set of global static options provided by the [Options](http://ww
 
 Here are the available options:
 
-<<toc 2>>
-
 ## Core Options 
 
 ### FullTripleIndexing 
 
-Controls whether implementations of [BaseTripleCollection](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection) that support indexing will create full triple indexes, defaults to `true`.  See [[HowTo/Minimize Memory Usage|Minimizing Memory Usage]] for more discussions on triple indexing.
+Controls whether implementations of [BaseTripleCollection](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection) that support indexing will create full triple indexes, defaults to `true`.  See [[Minimizing Memory Usage|HowTo-Minimize-Memory-Usage]] for more discussions on triple indexing.
 
 ### InternUris 
 
-Controls the [[DeveloperGuide/URI Interning|URI Interning]] feature of the library which is used to speed up URI equality checks and reduce memory usage.  However depending on your usage of the library it may actually inflate memory usage, see the linked page for more discussion of this option.
+Controls the [[URI Interning|DeveloperGuide-URI-Interning]] feature of the library which is used to speed up URI equality checks and reduce memory usage.  However depending on your usage of the library it may actually inflate memory usage, see the linked page for more discussion of this option.
 
 ## Literal Options 
 
@@ -26,7 +24,7 @@ Controls the behaviour when you call `Equals()` on instances of [ILiteralNode](h
 
 If you set this to `Loose` instead then value equality semantics are used i.e. if the literals represent the same value then they are considered equal.
 
-Please see [[UserGuide/Equality and Comparison|Equality and Comparison]] for more information.
+Please see [[Equality and Comparison|UserGuide-Equality-And-Comparison]] for more information.
 
 ### LiteralValueNormalization 
 
@@ -50,11 +48,11 @@ Normally dotNetRDF relies on the standard .Net HTTP support which uses the stand
 
 ### HttpDebugging 
 
-Controls whether to print debug information about HTTP requests and responses to the console, defaults to `false`.  See [[HowTo/Debug HTTP Communication|Debugging HTTP Communication]] for more information.
+Controls whether to print debug information about HTTP requests and responses to the console, defaults to `false`.  See [[Debugging HTTP Communication|HowTo-Debug-HTTP-Communication]] for more information.
 
 ### HttpFullDebugging 
 
-Controls whether the full response stream for HTTP responses is printed to the console for debugging, defaults to `false`.  See [[HowTo/Debug HTTP Communication|Debugging HTTP Communication]] for more information.
+Controls whether the full response stream for HTTP responses is printed to the console for debugging, defaults to `false`.  See [[Debugging HTTP Communication|HowTo-Debug-HTTP-Communication]] for more information.
 
 ## Parsing Options 
 
@@ -112,7 +110,7 @@ You may need to enable this if your `ISparqlDataset` implementation cannot guara
 
 Controls whether SPARQL operators are restricted to only the implementations required by the SPARQL specifications, defaults to `false`.
 
-When disabled certain additional operators will be permitted such as date time computations.  See [[DeveloperGuide/SPARQL/SPARQL Operators|SPARQL Operators]] for discussion of this feature.
+When disabled certain additional operators will be permitted such as date time computations.  See [[SPARQL Operators|DeveloperGuide-SPARQL-Operators]] for discussion of this feature.
 
 ### UsePLinqEvaluation 
 
