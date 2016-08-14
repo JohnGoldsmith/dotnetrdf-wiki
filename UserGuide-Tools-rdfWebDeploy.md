@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]
+[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[rdfWebDeploy|UserGuide-Tools-rdfWebDeploy]]
 
 # rdfWebDeploy 
 

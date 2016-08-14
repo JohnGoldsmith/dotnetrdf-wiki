@@ -2,7 +2,7 @@
 
 # Deploying with rdfWebDeploy 
 
-Integration of dotNetRDF into ASP.Net applications is configured using the [[Configuration API|UserGuide-Configuration-API]] and can be deployed using [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]. This guide teaches you how to deploy configuration using rdfWebDeploy.
+Integration of dotNetRDF into ASP.Net applications is configured using the [[Configuration API|UserGuide-Configuration-API]] and can be deployed using [[rdfWebDeploy|UserGuide-Tools-rdfWebDeploy]]. This guide teaches you how to deploy configuration using rdfWebDeploy.
 
 To see an example of a more complex configuration file you can go to [Configuration API](http://www.dotnetrdf.org/demos/sampleConfig]] which is the configuration file used for all the demos found under the [[http://www.dotnetrdf.org/demos/]] URI. The configuration file shown there was tested and deployed using the method described here.
 
@@ -47,13 +47,13 @@ We recommend that you create your configuration file in your applications `App_D
 
 Next step is to test your Configuration for errors and mistakes by issuing the following command at the command line (assumes you have the Tools package installed and on your path):
 
-{{{
+```
 X:\example.com\www>rdfWebDeploy -test App_Data\config.ttl
 ```
 
 This will test your configuration file and produce output like the following:
 
-{{{
+```
 rdfWebDeploy: Opened the configuration file successfully
 rdfWebDeploy: Loaded the configuration vocabulary successfully
 
@@ -98,7 +98,7 @@ With either of these methods you can add the options `-nointreg` to not register
 
 If your application is configured on a local IIS server instance then you can issue the following command:
 
-{{{
+```
 X:\example.com\www>rdfWebDeploy -deploy /appVirtualPath config.ttl
 ```
 
@@ -106,7 +106,7 @@ With this method you specify the virtual path to your application and then the n
 
 If your application is not on the default site of your IIS instance then you would use the `-site` option like so:
 
-{{{
+```
 X:\example.com\www>rdfWebDeploy -deploy /appVirtualPath config.ttl -site "www.example.com"
 ```
 
@@ -114,7 +114,7 @@ X:\example.com\www>rdfWebDeploy -deploy /appVirtualPath config.ttl -site "www.ex
 
 If you intend to upload your application to web hosting and it is not configured on a local IIS server instance then you should issue the following command:
 
-{{{
+```
 X:\example.com\www>rdfWebDeploy -xmldeploy "X:\example.com\www\Web.Config" config.ttl
 ```
 
@@ -149,4 +149,4 @@ For more information on setting up SPARQL endpoints you may wish to look at the 
 * [[Configuration API|UserGuide-Configuration-API]]
 * [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]]
 * [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#)
-* [[UserGuide/Tools/rdfWebDeploy|rdfWebDeploy]]
+* [[rdfWebDeploy|UserGuide-Tools-rdfWebDeploy]]
