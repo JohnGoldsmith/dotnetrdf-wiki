@@ -14,8 +14,7 @@ In this example we want to create a SPARQL Query endpoint which has a base Graph
 
 To start with we need to create a configuration file which defines this information - see the [[UserGuide/Configuration API) documentation for guidance on this, this will look like the following:
 
-{{{
-#!turtle
+```turtle
 
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
