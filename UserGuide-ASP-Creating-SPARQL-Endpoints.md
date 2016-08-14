@@ -12,14 +12,13 @@ dotNetRDF provides a set of HTTP Handlers that can be used to deploy various for
 
 Continue reading for information on how to manually set up your `Web.config` file without using rdfWebDeploy
 
-=== Configuration Settings ==
+### Configuration Settings
 
 All Handlers are configured by using `Web.config` to register them in your web application, the library supports registering multiple handlers in a single application each of which can have different settings. Each HTTP Handler registered in your `Web.config` file must have corresponding configuration information stored in your Configuration Graph.
 
 Your Configuration Graph is registered using the `<appSettings>` section of your `Web.config` file like so:
 
-{{{
-#!xml
+```xml
 
 <appSettings>
   <add key="dotNetRDFConfig" value="~/App_Data/config.ttl" />
@@ -44,8 +43,7 @@ Under IIS 5x you cannot map arbitrary paths so you'll have to define a custom ex
 
 You've now configured IIS to route any request for a file with the `.sparql` extension through ASP.Net which means any HTTP Handlers you define will be applied correctly. You can now configure a ASP.Net Handler by adding a line to the `<httpHandlers>` section of the `<system.web>` section of your `Web.config` file:
 
-{{{
-#!xml
+```xml
 
 <add verb="*" path="/query.sparql" validate="false" type="VDS.RDF.Web.QueryHandler" />
 ```
@@ -56,8 +54,7 @@ Then provided you have entered all the relevant configuration settings for your 
 
 On IIS 6x you configure a ASP.Net Handler by adding a line to the `<httpHandlers>` section of the `<system.web>` section of your `Web.config` file:
 
-{{{
-#!xml
+```xml
 <add verb="*" path="/sparql" validate="false" type="VDS.RDF.Web.QueryHandler" />
 ```
 
@@ -71,8 +68,7 @@ Under IIS 6x you will need to get IIS to serve the request even when the physica
 
 Configuring a SPARQL Endpoint under IIS 7x is very easy if you are using ASP.Net's integrated pipeline mode (if not follow the instructions for IIS 6x). Simply add a line like the following to the `<handlers>` section of the `<system.webServer>` section of your `Web.config` file:
 
-{{{
-#!xml
+```xml
 
 <add name="/sparql" verb="*" path="/sparql" type="VDS.RDF.Web.QueryHandler" />
 ```
@@ -85,15 +81,13 @@ You may need to make some additional changes to `Web.config` in order to get han
 
 If you are creating SPARQL endpoints you may need to add the following to the `<system.web>` section of your config if you are using .Net 4.0+ as otherwise the ASP.Net engine may reject queries and updates as potentially dangerous requests:
 
-{{{
-#!xml
+```xml
 <httpRuntime requestValidationMode="2.0" />
 ```
 
 You may also need to add the following to your `<system.webServer>` configuration to get your `Web.config` to be loaded:
 
-{{{
-#!xml
+```xml
 <validation validateIntegratedModeConfiguration="false" />
 ```
 

@@ -12,8 +12,7 @@ But sometimes this may not be enough since you may want more detailed control ov
 
 Locate the Directory where rdfEditor and the rest of the Tools are installed. You should see a file named `rdfEditor.exe.config`, open it and look for the following section:
 
-{{{
-#!xml
+```xml
     <applicationSettings>
         <VDS.RDF.Utilities.Editor.Properties.Settings>
             <setting name="UseCustomisedXshdFiles" serializeAs="String">
