@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/SPARQL Datasets|SPARQL Datasets]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[SPARQL Datasets|UserGuide-Configuration-SPARQL-Datasets]]
 
 # Configuring SPARQL Datasets 
 

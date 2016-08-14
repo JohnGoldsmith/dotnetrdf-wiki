@@ -143,37 +143,37 @@ As of the most recent release all of the following objects can be loaded from Co
 
 ## Core Objects 
 
-* [[UserGuide/Configuration/Graphs|Graphs]]
-* [[UserGuide/Configuration/Triple Stores|Triple Stores]]
+* [[Graphs|UserGuide-Configuration-Graphs]]
+* [[Triple Stores|UserGuide-Configuration-Triple-Stores]]
 * [[Object Factories|UserGuide-Configuration-Object-Factories]]
 * [[Readers and Writers|UserGuide-Configuration-Readers-And-Writers]]
 
 ## SPARQL Features 
 
-* [[UserGuide/Configuration/SPARQL Endpoints|SPARQL Endpoints]]
-* [[UserGuide/Configuration/Query Processors|Query Processors]]
-* [[UserGuide/Configuration/Update Processors|Update Processors]]
-* [[UserGuide/Configuration/Protocol Processors|Protocol Processors]]
-* [[UserGuide/Configuration/SPARQL Datasets|SPARQL Datasets]]
-* [[UserGuide/Configuration/SPARQL Expression Factories|SPARQL Expression Factories]]
+* [[SPARQL Endpoints|UserGuide-Configuration-SPARQL-Endpoints]]
+* [[Query Processors|UserGuide-Configuration-Query-Processors]]
+* [[Update Processors|UserGuide-Configuration-Update-Processors]]
+* [[Protocol Processors|UserGuide-Configuration-Protocol-Processors]]
+* [[SPARQL Datasets|UserGuide-Configuration-SPARQL-Datasets]]
+* [[SPARQL Expression Factories|UserGuide-Configuration-SPARQL-Expression-Factories]]
 * [[SPARQL Operators|UserGuide-Configuration-SPARQL-Operators]]
 * [[UserGuide/Configuration/SPARQL Optimisers|SPARQL Optimisers]]
-* [[UserGuide/Configuration/Full Text Query|Full Text Query]]
-* [[UserGuide/Configuration/Reasoners|Reasoners]]
+* [[Full Text Query|UserGuide-Configuration-Full-Text-Query]]
+* [[Reasoners|UserGuide-Configuration-Reasoners]]
 
 ## 3rd Party Triple Store Integration 
 
-* [[UserGuide/Configuration/Storage Providers|Storage Providers]]
+* [[Storage Providers|UserGuide-Configuration-Storage-Providers]]
 
 ## ASP.Net Integration 
 
 * [[HTTP Handlers|UserGuide-Configuration-HTTP-Handlers]]
-* [[UserGuide/Configuration/User Groups|User Groups]]
-* [[UserGuide/Configuration/Permissions|Permissions]]
-* [[UserGuide/Configuration/Users|Users]]
+* [[User Groups|UserGuide-Configuration-User-Groups]]
+* [[Permissions|UserGuide-Configuration-Permissions]]
+* [[Users|UserGuide-Configuration-Users]]
 
 ## Miscellaneous 
 
 * [[Static Options|UserGuide-Configuration-Options]]
-* [[UserGuide/Configuration/Proxy Servers|Proxy Servers]]
+* [[Proxy Servers|UserGuide-Configuration-Proxy-Servers]]
 

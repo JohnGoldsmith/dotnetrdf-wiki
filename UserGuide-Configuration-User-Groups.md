@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/User Groups|User Groups]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[User Groups|UserGuide-Configuration-User-Groups]]
 
 # Configuring User Groups 
 

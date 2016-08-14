@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/Storage Providers|Storage Providers]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[Storage Providers|UserGuide-Configuration-Storage-Providers]]
 
 # Configuring Storage Providers 
 

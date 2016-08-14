@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/Full Text Query|Full Text Query]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[Full Text Query|UserGuide-Configuration-Full-Text-Query]]
 
 # Configuring Full Text Query 
 

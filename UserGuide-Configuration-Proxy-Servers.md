@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/Proxy Servers|Proxy Servers]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[Proxy Servers|UserGuide-Configuration-Proxy-Servers]]
 
 # Configuring Proxy Servers 
 

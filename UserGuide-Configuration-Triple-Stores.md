@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/Triple Stores|Triple Stores]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[Triple Stores|UserGuide-Configuration-Triple-Stores]]
 
 # Configuration Triple Stores 
 

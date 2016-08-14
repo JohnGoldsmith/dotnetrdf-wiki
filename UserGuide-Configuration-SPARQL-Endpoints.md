@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[UserGuide/Configuration/SPARQL Endpoints|SPARQL Endpoints]]
+[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|UserGuide-Configuration-API]] > [[SPARQL Endpoints|UserGuide-Configuration-SPARQL-Endpoints]]
 
 # Configuring SPARQL Endpoints 
 
