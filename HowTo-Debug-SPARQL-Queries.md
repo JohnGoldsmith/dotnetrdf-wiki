@@ -1,4 +1,4 @@
-[[Home]] > [[How To]] > [[Debugging SPARQL Queries|HowTo-Debug-SPARQL-Queries]]
+[[Home]] > [[How To|HowTo]] > [[Debugging SPARQL Queries|HowTo-Debug-SPARQL-Queries]]
 
 # Debugging SPARQL Queries 
 
@@ -35,11 +35,11 @@ For `IQueryableStorage` check the documentation of the store you are using to se
 
 If not the best way to debug queries is to follow the following method:
 
-# Break your query down into its constituent parts i.e. individual triple patterns
-# Run each triple pattern to verify that it will return results
-# Start to build your query back up in small chunks i.e. individual graph patterns
-# Run each graph pattern to verify that it will return results
-# Start adding back in the `FILTER` and joins to your query
-# Run each form of the query to verify that it will return results
+1. Break your query down into its constituent parts i.e. individual triple patterns
+1. Run each triple pattern to verify that it will return results
+1. Start to build your query back up in small chunks i.e. individual graph patterns
+1. Run each graph pattern to verify that it will return results
+1. Start adding back in the `FILTER` and joins to your query
+1. Run each form of the query to verify that it will return results
 
 The general idea is to verify whether the blocks of your query actually return results and identify what block(s) are preventing your query from returning a result.  Once you have done this you can start to adjust your query to produce some results.
