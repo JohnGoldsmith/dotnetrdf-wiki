@@ -1,4 +1,4 @@
-[[Home]] > [[How To]] > [[HowTo/Reify Triples|Reify Triples]]
+[[Home]] > [[How To|HowTo]] > [[Reify Triples|HowTo-Reify-Triples]]
 
 # Reify Triples 
 
