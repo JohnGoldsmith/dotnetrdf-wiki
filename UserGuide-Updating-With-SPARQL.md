@@ -4,7 +4,7 @@
 
 SPARQL Update is a relatively new technology close to being standardised by the W3C SPARQL Working Group as part of the SPARQL 1.1 standard. dotNetRDF supports all of SPARQL Update as per the current Last Call draft of the specification. This article explains how to use SPARQL Updates using the dotNetRDF API.
 
-Advanced Users may want to take a look at the [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] and [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
+Advanced Users may want to take a look at the [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] and [[SPARQL Optimization|DeveloperGuide-SPARQL-Optimization]] pages for more details about how our in-memory SPARQL engine functions.
 
 # Update Representation 
 

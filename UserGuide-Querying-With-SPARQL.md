@@ -6,7 +6,7 @@ SPARQL is the standard query language for the Semantic Web and can be used to qu
 
 If you want to learn about SPARQL you should take a look at the [SPARQL Query Language Specification](http://www.w3.org/TR/sparql11-query/) which provides examples of all the various query forms as well as the full formal specifcation.
 
-Advanced Users may want to take a look at the [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] and [[DeveloperGuide/SPARQL/SPARQL Optimization|SPARQL Optimization]] pages for more details about how our in-memory SPARQL engine functions.
+Advanced Users may want to take a look at the [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] and [[SPARQL Optimization|DeveloperGuide-SPARQL-Optimization]] pages for more details about how our in-memory SPARQL engine functions.
 
 <<toc>>
 
