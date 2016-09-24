@@ -62,6 +62,8 @@
 # [[Developer Guide|DeveloperGuide]]
 
 1. [[ Architecture | DeveloperGuide-Architecture ]]
+  1. [[ Design | DeveloperGuide-Architecture-Design ]]
+  1. [[ Namespaces | DeveloperGuide-Architecture-Namespaces ]]
 1. [[ SPARQL Engine | DeveloperGuide-SPARQL-Engine ]]
   1. [[ SPARQL Optimization | DeveloperGuide-SPARQL-Optimization ]]
   1. [[ Implementing Custom Optimizers | DeveloperGuide-SPARQL-Implementing-Custom-Optimizers ]]
