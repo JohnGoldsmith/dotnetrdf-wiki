@@ -8,8 +8,6 @@ If you want to learn about SPARQL you should take a look at the [SPARQL Query La
 
 Advanced Users may want to take a look at the [[Advanced SPARQL|UserGuide-Advanced-SPARQL]] and [[SPARQL Optimization|DeveloperGuide-SPARQL-Optimization]] pages for more details about how our in-memory SPARQL engine functions.
 
-<<toc>>
-
 When using SPARQL you'll want to import the `VDS.RDF.Query` namespace using the following statement at the start of your code files:
 
 ```csharp
@@ -301,7 +299,7 @@ public class SparqlRemoteEndpointExample
 
 ## Native Query 
 
-We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the `INativelyQueryableStore` interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[UserGuide/Working with Triple Stores|Working with Triple Stores]] page you'll see an example of using the `PersistentTripleStore` class to query any of our supported stores.
+We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the `INativelyQueryableStore` interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[Working with Triple Stores|UserGuide-Working-With-Triple-Stores]] page you'll see an example of using the `PersistentTripleStore` class to query any of our supported stores.
 
 Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) interface  which most of our available [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) implementations also support, please see the [[Triple Store Integration|UserGuide/Triple Store Integration]] page for an example of this.
 
@@ -368,7 +366,7 @@ If you are still having problems with no results you can also look at [[Debuggin
 
 # Loading/Saving Results 
 
-A `SparqlResultSet` may be loaded/saved using the [ISparqlResultsReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader) and [ISparqlResultsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter) interfaces respectively. These are functionally very similar to the `IRdfReader` and `IRdfWriter` interfaces described on the [[UserGuide/Reading RDF|Reading RDF]] and [[Writing RDF|UserGuide-Writing-RDF]] pages.
+A `SparqlResultSet` may be loaded/saved using the [ISparqlResultsReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader) and [ISparqlResultsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter) interfaces respectively. These are functionally very similar to the `IRdfReader` and `IRdfWriter` interfaces described on the [[Reading RDF|UserGuide-Reading-RDF]] and [[Writing RDF|UserGuide-Writing-RDF]] pages.
 
 A quick example is as follows:
 
@@ -404,10 +402,10 @@ Note that one important difference between reading SPARQL results versus reading
 
 # Tutorial Navigation 
 
-The previous topic was [[UserGuide/Working with Triple Stores|Working with Triple Stores]], the next topic is [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
+The previous topic was [[Working with Triple Stores|UserGuide-Working-With-Triple-Stores]], the next topic is [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
 
 Users wishing to learn more may wish to jump straight to the following topics:
 * [[Advanced SPARQL|UserGuide-Advanced-SPARQL]]
 ** [[Result Formatting|UserGuide-Result-Formatting|]]
-* [[Triple Store Integration|UserGuide/Triple Store Integration]] 
-* [[UserGuide/Configuration/Query Processors|Configuration API - Query Processor]]
+* [[UserGuide-Triple-Store-Integration|Triple Store Integration]] 
+* [[Configuration API - Query Processor|UserGuide-Configuration-Query-Processors]]
