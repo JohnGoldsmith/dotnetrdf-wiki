@@ -1,4 +1,4 @@
-[[Home]] > [[How To]] > [[HowTo/Load OWL|Load OWL]]
+[[Home]] > [[How To|HowTo]] > [[Load OWL|HowTo-Load-OWL]]
 
 # Load OWL 
 
