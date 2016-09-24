@@ -1,4 +1,4 @@
-[[Home]] > [[How To]] > [[HowTo/Minimize Memory Usage|Minimize Memory Usage]]
+[[Home]] > [[How To|HowTo]] > [[Minimize Memory Usage|HowTo-Minimize-Memory-Usage]]
 
 # Minimize Memory Usage 
 
@@ -68,7 +68,7 @@ Graph g = new Graph(tripleCollection);
 
 # Stream Processing 
 
-If you can work with RDF/SPARQL Results in a stream then you can leverage the [[UserGuide/Handlers API|Handlers API]] as an alternative to loading your data fully into memory, this API gives you complete control over what happens to triples/results as they are generated.
+If you can work with RDF/SPARQL Results in a stream then you can leverage the [[Handlers API|UserGuide-Handlers-API]] as an alternative to loading your data fully into memory, this API gives you complete control over what happens to triples/results as they are generated.
 
 # Token Queue Mode 
 
