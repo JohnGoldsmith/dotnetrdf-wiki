@@ -1,4 +1,4 @@
-[[Home]] > [[How To]] > [[HowTo/Load RDF from a File|Load RDF from a File]]
+[[Home]] > [[How To|HowTo]] > [[Load RDF from a File|HowTo-Load-RDF-From-A-File]]
 
 # Load RDF from a File 
 
@@ -20,4 +20,4 @@ IGraph g = new Graph();
 g.LoadFromFile("example.ttl", new TurtleParser());
 ```
 
-Learn more by reading the [[UserGuide/Reading RDF|Reading RDF]] documentation.
+Learn more by reading the [[Reading RDF|UserGuide-Reading-RDF]] documentation.
