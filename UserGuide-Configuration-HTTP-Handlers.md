@@ -188,7 +188,7 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests on the URI `/update` by providing a SPARQL Update endpoint. The `dnr:updateProcessor` property is used to specify the class that processes the updates - for more details on configuring Update Processors see [[UserGuide/Configuration/Update Processors|Configuration API - Update Processors]].
+This specifies configuration for a Handler which responds to requests on the URI `/update` by providing a SPARQL Update endpoint. The `dnr:updateProcessor` property is used to specify the class that processes the updates - for more details on configuring Update Processors see [[Configuration API - Update Processors|UserGuide-Configuration-Update-Processors]].
 
 Update Handlers support the following additional properties. Note that while a Handler may have these properties specified not all update processors can/will use/respect these settings.
 

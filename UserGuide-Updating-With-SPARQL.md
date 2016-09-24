@@ -203,4 +203,4 @@ You've reached the end of the basic tutorial, the previous topic was [[Querying 
 Users wishing to learn more may wish to jump straight to the following topics:
 
 * [[Advanced SPARQL|UserGuide-Advanced-SPARQL]]
-* [[UserGuide/Configuration/Update Processors|Configuration API - Update Processors]]
+* [[Configuration API - Update Processors|UserGuide-Configuration-Update-Processors]]

@@ -63,7 +63,7 @@ The above configures a Generic Protocol Processor which processes requests using
 
 ## Protocol to Update Processor 
 
-The Protocol to Update Processor is a processor which operates using the supplied Query and Update processors, see [[UserGuide/Configuration/Query Processors|Configuration API - Query Processors]] and [[UserGuide/Configuration/Update Processors|Configuration API - Update Processors]] for details on configuring these.
+The Protocol to Update Processor is a processor which operates using the supplied Query and Update processors, see [[UserGuide/Configuration/Query Processors|Configuration API - Query Processors]] and [[Configuration API - Update Processors|UserGuide-Configuration-Update-Processors]] for details on configuring these.
 
 ```turtle
 
