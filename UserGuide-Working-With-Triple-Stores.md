@@ -117,7 +117,7 @@ The `Remove(Uri graphUri)` method is used to remove a graph that is in the tripl
 As you have seen the basic triple store interface simply allows you to enumerate over a triple store and to add and remove graphs from it. While this is useful in itself you'll often want to make queries over the entire store and for this you'll need to use one of the classes that implement [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm).
 One of the main things the `IInMemoryQueryableStore` does is to define equivalents of all the various `GetTriples()` methods from the `IGraph` interface for triple stores. It has two versions of each method, one which operates over all the triples in the triple Store and one which operates over a subset of the triples where the subset is defined by a list of Graph URIs.
 
-Perhaps the more important feature of the interface is that it defines an `ExecuteQuery()` method which can be used to execute SPARQL queries in-memory over the Triple Store. There are two variants of this method, one which takes the raw SPARQL query as a String and one which takes a [SparqlQuery](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery) object e.g.
+Perhaps the more important feature of the interface is that it defines an `ExecuteQuery()` method which can be used to execute SPARQL queries in-memory over the Triple Store. There are two variants of this method, one which takes the raw SPARQL query as a String and one which takes a [SparqlQuery](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlQuery.htm) object e.g.
 
 ```csharp
 
@@ -167,7 +167,7 @@ public class InMemoryTripleStoreExample
 }
 ```
 
-One of the advantages of using the [SparqlQueryParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQueryParser) is that is implements the [ITraceableTokeniser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.ITraceableTokeniser) interface which means you can easily debug queries which won't parse. The other is that by getting an actual `SparqlQuery` object you can manipulate certain properties of the query to control how it gets executed. For example the `Timeout` property is used to set a timeout in milliseconds after which query execution is aborted. Combined with the `PartialResultsOnTimeout` boolean property you can control what happens when queries take too long to run. Another useful property is the `QueryExecutionTime` property shown in the above example which allows you to see how long the actual execution of a query took.
+One of the advantages of using the [SparqlQueryParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_SparqlQueryParser.htm) is that is implements the [ITraceableTokeniser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_ITraceableTokeniser.htm) interface which means you can easily debug queries which won't parse. The other is that by getting an actual `SparqlQuery` object you can manipulate certain properties of the query to control how it gets executed. For example the `Timeout` property is used to set a timeout in milliseconds after which query execution is aborted. Combined with the `PartialResultsOnTimeout` boolean property you can control what happens when queries take too long to run. Another useful property is the `QueryExecutionTime` property shown in the above example which allows you to see how long the actual execution of a query took.
 
 # Natively Queryable Stores 
 
@@ -175,7 +175,7 @@ The [INativelyQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_INa
 
 An `INativelyQueryableStore` defines only one additional method which is `ExecuteQuery(String query)` which takes a SPARQL query as a String and executes it against the underlying SPARQL implementation. Note that these stores may only be queryable read-only wrappers around an underlying store.
 
-We provide a [PersistentTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_PersistentTripleStore.htm) class which is an implementation of the `INativelyQueryableStore` that can be used with any of the backing stores we support with [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
+We provide a [PersistentTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_PersistentTripleStore.htm) class which is an implementation of the `INativelyQueryableStore` that can be used with any of the backing stores we support with [IQueryableStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IQueryableStorage.htm) implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
 
 ```csharp
 
@@ -241,7 +241,7 @@ Often you want the information you place into an in-memory Triple Store to be pe
 
 RDF Dataset formats are single file formats which allow storing an RDF dataset represents as a set of named graphs in a single file. We currently support TriG, TriX and NQuads with classes for saving and loading from each format.
 
-For example in TriG (Turtle with Named Graphs) you would can save and load a Triple Store using the [TriGParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TriGParser) and [TriGWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.TriGWriter) classes as follows:
+For example in TriG (Turtle with Named Graphs) you would can save and load a Triple Store using the [TriGParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_TriGParser.htm) and [TriGWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_TriGWriter.htm) classes as follows:
 
 ```csharp
 
@@ -284,12 +284,12 @@ The Library contains the following standard `IStoreReader` and `IStoreWriter` im
 
 | Implementation | Description |
 | --- | --- |
-| [NQuadsParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.NQuadsParser) | Parses NQuads |
-| [NQuadsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.NQuadsWriter) | Writes NQuads |
-| [TriGParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TriGParser) | Parses TriG |
-| [TriGWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.TriGWriter) | Writes TriG |
-| [TriXParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.TriXParser) | Parses TriX |
-| [TriXWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.TrixWriter) | Writes TriX |
+| [NQuadsParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_NQuadsParser.htm) | Parses NQuads |
+| [NQuadsWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_NQuadsWriter.htm) | Writes NQuads |
+| [TriGParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_TriGParser.htm) | Parses TriG |
+| [TriGWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_TriGWriter.htm) | Writes TriG |
+| [TriXParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_TriXParser.htm) | Parses TriX |
+| [TriXWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_TrixWriter.htm) | Writes TriX |
 
 ----
 

@@ -78,7 +78,7 @@ It may be useful to increase this if you have a slow internet connection or are 
 
 Global timeout setting for in-memory query execution given in milliseconds, defaults to ` 180,000` i.e. 3 minutes.  This setting has no-effect for other forms of query execution.
 
-This can be overridden as a per-query level by the `Timeout` property of a [SparqlQuery](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery) instance.
+This can be overridden as a per-query level by the `Timeout` property of a [SparqlQuery](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlQuery.htm) instance.
 
 ### QueryOptimisation 
 
@@ -94,7 +94,7 @@ Controls whether certain optimizations which `may` make queries run faster but c
 
 ### QueryDefaultSyntax 
 
-Sets the default syntax used for parsing SPARQL queries, takes a value from the [SparqlQuerySyntax](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQuerySyntax) enumeration.  Defaults to `Sparql_1_1` i.e. SPARQL 1.1
+Sets the default syntax used for parsing SPARQL queries, takes a value from the [SparqlQuerySyntax](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_SparqlQuerySyntax.htm) enumeration.  Defaults to `Sparql_1_1` i.e. SPARQL 1.1
 
 ### QueryAllowUnknownFunctions 
 
@@ -124,7 +124,7 @@ May be useful to disable if you have a multi-core machine but only want to use a
 
 Sets the timeout used for in-memory update execution in milliseconds, defaults to ` 180,000` i.e. 3 minutes.  This setting has no-effect for other forms of update execution.
 
-This can be overridden as a per-update level by the `Timeout` property of a [SparqlUpdateCommandSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet) instance.
+This can be overridden as a per-update level by the `Timeout` property of a [SparqlUpdateCommandSet](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Update_SparqlUpdateCommandSet.htm) instance.
 
 ## Writing Options 
 

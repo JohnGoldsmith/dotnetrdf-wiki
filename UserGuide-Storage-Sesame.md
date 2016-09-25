@@ -8,9 +8,9 @@ Connectivity with Sesame is done via a number of classes:
 
 | Provider | Description |
 | --- | --- |
-| [SesameHttpProtocolConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SesameHttpProtocolConnector) | Connect to a Sesame server that uses the latest version of the Sesame protocol |
-| [SesameHttpProtocolVersion6Connector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SesameHttpProtocolVersion6Connector) | Connect to a Sesame server that uses Version 6 (the current version) of the Sesame protocol |
-| [SesameHttpProtocolVersion5Connector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SesameHttpProtocolVersion5Connector) | Connect to a Sesame server that uses Version 5 of the Sesame protocol.  Use this if you are using an older version of Sesame prior to the addition of SPARQL Update support. |
+| [SesameHttpProtocolConnector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_SesameHttpProtocolConnector.htm) | Connect to a Sesame server that uses the latest version of the Sesame protocol |
+| [SesameHttpProtocolVersion6Connector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_SesameHttpProtocolVersion6Connector.htm) | Connect to a Sesame server that uses Version 6 (the current version) of the Sesame protocol |
+| [SesameHttpProtocolVersion5Connector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_SesameHttpProtocolVersion5Connector.htm) | Connect to a Sesame server that uses Version 5 of the Sesame protocol.  Use this if you are using an older version of Sesame prior to the addition of SPARQL Update support. |
 
 Typically you will most likely just use the `SesameHttpProtocolConnector` since that will always reflect the current version of the Sesame protocol.
 

@@ -136,7 +136,7 @@ Navigate to the URL `/sparql` at your site and you should now have a working SPA
 
 There are two common error conditions you may run into:
 
-You get a [DotNetRdfConfigurationException](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.DotNetRdfConfigurationException) - this generally indicates that your Configuration file is invalid (note that `rdfWebDeploy -test` can only ensure general syntactic correctness and not validity). If you have debugging turned on you should normally see an informative message detailed what is wrong with your configuration. Correct the errors and retry - you may need to restart the IIS site to force the updated file to be read in some cases.
+You get a [DotNetRdfConfigurationException](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_DotNetRdfConfigurationException.htm) - this generally indicates that your Configuration file is invalid (note that `rdfWebDeploy -test` can only ensure general syntactic correctness and not validity). If you have debugging turned on you should normally see an informative message detailed what is wrong with your configuration. Correct the errors and retry - you may need to restart the IIS site to force the updated file to be read in some cases.
 
 You get an `Unable to load type VDS.RDF.Web.QueryHandler` or similar error. This is usually due to a failure to upload the required DLLs into the `bin/` directory of your site. If you have done this ensure that you are running as an IIS Application rather than a virtual directory. If you are running as a virtual directory (and cannot change to running as an IIS application) then move the DLLs from the `bin/` directory in your virtual folder to the `bin/` directory of the application root
 

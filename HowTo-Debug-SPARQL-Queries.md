@@ -4,7 +4,7 @@
 
 ## In-Memory Queries 
 
-If you are using our in-memory SPARQL engine then you can attempt to debug why your queries are not working by using the [ExplainQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ExplainQueryProcessor) to try and figure out what is happening with your queries.
+If you are using our in-memory SPARQL engine then you can attempt to debug why your queries are not working by using the [ExplainQueryProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_ExplainQueryProcessor.htm) to try and figure out what is happening with your queries.
 
 It is important to understand that explaining query evaluation will **substantially** impact performance so if you are trying to debug performance issues this is not the way to do so.
 
@@ -29,7 +29,7 @@ This will result in your query being evaluated but also explanations of the quer
 
 ## Remote/Native Queries 
 
-Debugging queries against remote endpoints or native SPARQL provided by a [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) is somewhat more difficult.
+Debugging queries against remote endpoints or native SPARQL provided by a [IQueryableStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IQueryableStorage.htm) is somewhat more difficult.
 
 For `IQueryableStorage` check the documentation of the store you are using to see if they provide any query debugging tools that you can use.
 

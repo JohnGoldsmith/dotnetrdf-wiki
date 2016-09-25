@@ -14,7 +14,7 @@ The API consists of a number of interfaces:
 | [INamespaceFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INamespaceFormatter) | Formats namespace declarations |
 | [INodeFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.INodeFormatter) | Formats [INode](https://dotnetrdf.github.io/api/html/T_VDS_RDF_INode.htm) instances |
 | [ITripleFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.ITripleFormatter) | Formats [Triple](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Triple.htm) instances |
-| [IResultFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IResultFormatter) | Formats [SparqlResult](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult) instances |
+| [IResultFormatter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.Formatting.IResultFormatter) | Formats [SparqlResult](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlResult.htm) instances |
 
 # Basic Usage 
 

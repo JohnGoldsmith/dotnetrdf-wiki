@@ -94,9 +94,9 @@ The API provides the following concepts which are wrappers over graphs, triples 
 
 | Class | Purpose |
 | --- | --- |
-| [OntologyGraph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyGraph) | Represents a graph whose ontology elements may be accessed |
-| [Ontology](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.Ontology) | Represents information about an ontology |
-| [OntologyResource](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyResource) | Represents a resource in the ontology, specific sub-classes expand the basic capabilities further |
-| [OntologyClass](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyClass) | Represents a class in an ontology |
-| [OntologyProperty](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.OntologyProperty) | Represents a property in an ontology |
-| [Individual](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Ontology.Individual) | Represents an instance of a class in an ontology |
+| [OntologyGraph](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_OntologyGraph.htm) | Represents a graph whose ontology elements may be accessed |
+| [Ontology](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_Ontology.htm) | Represents information about an ontology |
+| [OntologyResource](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_OntologyResource.htm) | Represents a resource in the ontology, specific sub-classes expand the basic capabilities further |
+| [OntologyClass](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_OntologyClass.htm) | Represents a class in an ontology |
+| [OntologyProperty](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_OntologyProperty.htm) | Represents a property in an ontology |
+| [Individual](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_Individual.htm) | Represents an instance of a class in an ontology |

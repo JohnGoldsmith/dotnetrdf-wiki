@@ -2,7 +2,7 @@
 
 # Servers API 
 
-The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [IStorageServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IStorageServer) and [IASyncStorageServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IAsyncStorageServer) interfaces.  These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) instances.
+The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [IStorageServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IStorageServer) and [IASyncStorageServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IAsyncStorageServer) interfaces.  These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [IStorageProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IStorageProvider.htm) instances.
 
 # Implementations 
 
@@ -18,7 +18,7 @@ The following implementations are currently provided:
 
 ## Properties 
 
-These interfaces provide a single `IOBehaviour` property which reports [IOBehaviour](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IOBehaviour) that describes the capabilities of an implementation i.e. which operations are supported.
+These interfaces provide a single `IOBehaviour` property which reports [IOBehaviour](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IOBehaviour.htm) that describes the capabilities of an implementation i.e. which operations are supported.
 
 ## Methods 
 

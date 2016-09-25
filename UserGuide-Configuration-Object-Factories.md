@@ -2,7 +2,7 @@
 
 # Configuring Object Factories 
 
-Object Factories are classes that are used to extend the [ConfigurationLoader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader) so it can load more complex or user defined objects. These classes must implement the [IObjectFactory](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory) interface and have a public unparameterized constructor. They can be configured as follows:
+Object Factories are classes that are used to extend the [ConfigurationLoader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_ConfigurationLoader.htm) so it can load more complex or user defined objects. These classes must implement the [IObjectFactory](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_IObjectFactory.htm) interface and have a public unparameterized constructor. They can be configured as follows:
 
 ```csharp
 

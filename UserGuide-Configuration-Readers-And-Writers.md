@@ -10,7 +10,7 @@ You can configure any type of reader/writer supported via the library using this
 
 The `http://www.w3.org/ns/formats/media_type` URI is used to reference MIME types with which the reader/writer should be associated and the `http://www.w3.org/ns/formats/preferred_suffix` URI is used to reference file extensions with which the reader/writer should be associated.
 
-The following example shows how to change the default RDF/XML writer to be the [PrettyRdfXmlWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Writing.PrettyRdfXmlWriter):
+The following example shows how to change the default RDF/XML writer to be the [PrettyRdfXmlWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_PrettyRdfXmlWriter.htm):
 
 ```turtle
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
