@@ -10,7 +10,7 @@ Datasets are configured using the [Configuration Vocabulary](http://www.dotnetrd
 
 # In-Memory Datasets 
 
-The in-memory dataset represents pure in-memory data which is the default operation mode for Leviathan. Any [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) instance can be wrapped in a [InMemoryDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset).
+The in-memory dataset represents pure in-memory data which is the default operation mode for Leviathan. Any [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) instance can be wrapped in a [InMemoryDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_InMemoryDataset.htm).
 
 The following example shows a Triple Store configuration being specified as the underlying source for a Dataset configuration:
 
@@ -38,11 +38,11 @@ _:b a dnr:Graph ;
 
 As you can see for an in-memory dataset you simply connect it to a `dnr:TripleStore` definition using the `dnr:usingStore` property.
 
-You may alternatively use the [InMemoryQuadDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryQuadDataset) just by changing the value of the `dnr:type` property appropriately. The quad dataset may be more performant if your queries access named graphs frequently.
+You may alternatively use the [InMemoryQuadDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_InMemoryQuadDataset.htm) just by changing the value of the `dnr:type` property appropriately. The quad dataset may be more performant if your queries access named graphs frequently.
 
 # Web Demand Datasets 
 
-The [WebDemandDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.WebDemandDataset) is a wrapper around another dataset that allows the dataset to load missing graphs on demand from the web.  It can be configured simply like so:
+The [WebDemandDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_WebDemandDataset.htm) is a wrapper around another dataset that allows the dataset to load missing graphs on demand from the web.  It can be configured simply like so:
 
 ```turtle
 

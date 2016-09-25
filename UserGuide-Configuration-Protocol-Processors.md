@@ -2,7 +2,7 @@
 
 # Configuring Protocol Processors 
 
-Protocol Processors are classes that can process SPARQL Graph Store HTTP Protocol requests and return appropriate responses. Protocol Processors implement the [ISparqlHttpProtocolProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.Protocol.ISparqlHttpProtocolProcessor) interface and the library provides 3 concrete implementations of this all of which can be configured using the Configuration API.
+Protocol Processors are classes that can process SPARQL Graph Store HTTP Protocol requests and return appropriate responses. Protocol Processors implement the [ISparqlHttpProtocolProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Update_Protocol_ISparqlHttpProtocolProcessor.htm) interface and the library provides 3 concrete implementations of this all of which can be configured using the Configuration API.
 
 # Basic Configuration 
 

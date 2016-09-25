@@ -134,7 +134,7 @@ _:graph a dnr:Graph ;
 
 ## Full Text Optimiser 
 
-The [FullTextOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.FullTextOptimiser) is the only optimiser provided by the Full Text library and is used to enable actual full text query support. It is configured as follows:
+The [FullTextOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_FullTextOptimiser.htm) is the only optimiser provided by the Full Text library and is used to enable actual full text query support. It is configured as follows:
 
 ```turtle
 
@@ -156,7 +156,7 @@ For details on how to attach this algebra optimiser to a HTTP Handler please see
 
 ## Datasets 
 
-You can use the [FullTextIndexedDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.FullTextIndexedDataset) as a decorator over another dataset to automatically keep an index in sync with a dataset as that dataset changes.
+You can use the [FullTextIndexedDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_FullTextIndexedDataset.htm) as a decorator over another dataset to automatically keep an index in sync with a dataset as that dataset changes.
 
 It is configured as follows:
 

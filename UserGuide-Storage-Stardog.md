@@ -39,15 +39,15 @@ Stardog is one of the few stores currently supported that support transactions, 
 
 # Managing a Server 
 
-We support managing a server via the [StardogServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer) class which implements our [[Servers API|UserGuide-Storage-Servers]]
+We support managing a server via the [StardogServer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_StardogServer.htm) class which implements our [[Servers API|UserGuide-Storage-Servers]]
 
-The `StardogServer` assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [StardogV1Server](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV1Server), [StardogV2Server](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV2Server) and [StardogV3Server](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogV3Server) are provided if you wish to be explicit about the version of Stardog you are connecting to.
+The `StardogServer` assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [StardogV1Server](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_StardogV1Server.htm), [StardogV2Server](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_StardogV2Server.htm) and [StardogV3Server](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_StardogV3Server.htm) are provided if you wish to be explicit about the version of Stardog you are connecting to.
 
 A `StardogConnector` provides access to its associated server via the `ParentServer` or `AsyncParentServer` property.
 
 ## Connecting to a Server 
 
-You can also connect directly to a server by creating an instance of the [StardogServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer) class.  This requires you to know the Base URI of the server:
+You can also connect directly to a server by creating an instance of the [StardogServer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_StardogServer.htm) class.  This requires you to know the Base URI of the server:
 
 ```csharp
 

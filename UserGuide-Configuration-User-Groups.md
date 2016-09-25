@@ -36,4 +36,4 @@ In the above example we specify a user group with a single member, members are s
 
 The `dnr:requiresAuthentication` property specifies whether the permissions apply only to authenticated users or to unauthenticated users i.e. guests. Setting to to false means that the permissions apply to guests.
 
-The `dnr:permissionModel` sets the permission model of the group to one of the supported models as specified by the [PermissionModel](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.Permissions.PermissionModel) enumeration.
+The `dnr:permissionModel` sets the permission model of the group to one of the supported models as specified by the [PermissionModel](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_Permissions_PermissionModel.htm) enumeration.

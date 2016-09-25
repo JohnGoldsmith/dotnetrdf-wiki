@@ -102,7 +102,7 @@ public class LeviathanUpdateProcessorExample
 }
 ```
 
-A key thing to notice here is that we create a [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset) instance which wraps our `IInMemoryQueryableStore` instance. This dataset allows us to control which graph is used as the default graph for updates or even to use the union of all graphs as the default graph.
+A key thing to notice here is that we create a [ISparqlDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_ISparqlDataset.htm) instance which wraps our `IInMemoryQueryableStore` instance. This dataset allows us to control which graph is used as the default graph for updates or even to use the union of all graphs as the default graph.
 
 A common error with making updates is that updates by default typically operate only over the unnamed default graph in the store (depending on your query processor). Therefore executing updates may yield no changes depending on what graphs your data is in and whether you configured your dataset correctly. Please see the [[SPARQL Datasets|UserGuide-SPARQL-Datasets]] page for discussions of configuring different kinds of dataset.  If your update has no effect it is always worth running an equivalent `SELECT` or `CONSTRUCT` query to see if that yields any results to make sure you are actually matching some data.
 

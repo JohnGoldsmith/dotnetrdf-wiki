@@ -2,7 +2,7 @@
 
 # rdfOptStats 
 
-rdfOptStats is a command line utility for generating statistics on RDF for use with our  [WeightedOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightedOptimiser) for SPARQL queries.
+rdfOptStats is a command line utility for generating statistics on RDF for use with our  [WeightedOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_WeightedOptimiser.htm) for SPARQL queries.
 
 ## Download 
 

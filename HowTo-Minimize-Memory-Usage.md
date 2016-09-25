@@ -72,7 +72,7 @@ If you can work with RDF/SPARQL Results in a stream then you can leverage the [[
 
 # Token Queue Mode 
 
-Token based parsers accept a [TokenQueueMode](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.Tokens.TokenQueueMode) which is defines how it tokenizes the input data, the choice of this can have a significant affect on memory usage.  The global default for this can be controlled via the `Options.DefaultTokenQueueMode` property.
+Token based parsers accept a [TokenQueueMode](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_Tokens_TokenQueueMode.htm) which is defines how it tokenizes the input data, the choice of this can have a significant affect on memory usage.  The global default for this can be controlled via the `Options.DefaultTokenQueueMode` property.
 
 | Queue Mode | Behaviour |
 | --- | --- |

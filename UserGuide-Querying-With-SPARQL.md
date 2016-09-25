@@ -221,7 +221,7 @@ public class LeviathanQueryProcessorExample
 }
 ```
 
-A key thing to notice here is that we create a [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset) instance which wraps our `IInMemoryQueryableStore` instance. This dataset allows us to control which graph is used as the default graph for queries or even to use the union of all graphs as the default graph.
+A key thing to notice here is that we create a [ISparqlDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_ISparqlDataset.htm) instance which wraps our `IInMemoryQueryableStore` instance. This dataset allows us to control which graph is used as the default graph for queries or even to use the union of all graphs as the default graph.
 
 In this example we have only printed results in full to the Console, to learn more about how to format results for display see [[Result Formatting|UserGuide-Result-Formatting|]].
 

@@ -2,7 +2,7 @@
 
 # Inference and Reasoning 
 
-Inference and Reasoning are mechanisms whereby an application can discover additional information that is not explicitly stated in the initial data. There are various scenarios when you might want to use this and having this capability in the library provides a powerful feature to end users. Inference and reasoning in dotNetRDF is currently based on the [IInferenceEngine](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.IInferenceEngine) interface which allows for both static and dynamic reasoners i.e. those that use a fixed set of rules and those that create their rules dynamically based on the input data.
+Inference and Reasoning are mechanisms whereby an application can discover additional information that is not explicitly stated in the initial data. There are various scenarios when you might want to use this and having this capability in the library provides a powerful feature to end users. Inference and reasoning in dotNetRDF is currently based on the [IInferenceEngine](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Inference_IInferenceEngine.htm) interface which allows for both static and dynamic reasoners i.e. those that use a fixed set of rules and those that create their rules dynamically based on the input data.
 
 # The IInferenceEngine interface 
 
@@ -16,7 +16,7 @@ As part of the library three types of reasoners are provided currently - an RDFS
 
 ### RDFS Reasoner 
 
-RDFS is an RDF vocabulary for expressing schemas for RDF data specified by the W3C. It allows for the definition of class and property hierarchies and specifying things like the domains and ranges of properties. We provide both a [StaticRdfsReasoner](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.StaticRdfsReasoner) which has to be initialised with one/more schemas and uses only those to make inferences and a [RdfsReasoner](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.RdfsReasoner) which is dynamic in that every Graph you apply reasoning to can extend the set of rules that the reasoner uses.
+RDFS is an RDF vocabulary for expressing schemas for RDF data specified by the W3C. It allows for the definition of class and property hierarchies and specifying things like the domains and ranges of properties. We provide both a [StaticRdfsReasoner](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Inference_StaticRdfsReasoner.htm) which has to be initialised with one/more schemas and uses only those to make inferences and a [RdfsReasoner](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Inference_RdfsReasoner.htm) which is dynamic in that every Graph you apply reasoning to can extend the set of rules that the reasoner uses.
 
 The RDFS reasoner does not apply the full range of possible RDFS based inferencing but does do the following:
 
@@ -96,7 +96,7 @@ public class RdfsReasoningExample
 
 SKOS is another RDF vocabulary specified by the W3C which is intended for use in defining taxonomies for classifying data. The SKOS reasoner included in the library is a simple concept hierarchy reasoner which can infer additional triples where the subject has an object which is a `skos:Concept` in the taxonomy by following `skos:narrower` and `skos:broader` links as appropriate.
 
-As with RDFS there is a [StaticSkosReasoner](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.StaticSkosReasoner) and a dynamic variant called [SkosReasoner](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.SkosReasoner).
+As with RDFS there is a [StaticSkosReasoner](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Inference_StaticSkosReasoner.htm) and a dynamic variant called [SkosReasoner](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Inference_SkosReasoner.htm).
 
 Consider the following classification of vehicles based on the earlier examples (taxonomy.ttl):
 
@@ -124,7 +124,7 @@ As seen in the RDFS example without inference we don't automatically know that a
 
 ### Simple N3 Rules Reasoner 
 
-The [SimpleN3RulesReasoner](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.SimpleN3RulesReasoner) is a reasoner that is able to apply simple N3 Rules. The reasoner must be initialised with a Graph that has been parsed from an input N3 file in order to contain any rules. A simple rule is expressed as follows:
+The [SimpleN3RulesReasoner](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Inference_SimpleN3RulesReasoner.htm) is a reasoner that is able to apply simple N3 Rules. The reasoner must be initialised with a Graph that has been parsed from an input N3 file in order to contain any rules. A simple rule is expressed as follows:
 
 ```
 { ?x a ex:Car } => { ?x a ex:Vehicle }

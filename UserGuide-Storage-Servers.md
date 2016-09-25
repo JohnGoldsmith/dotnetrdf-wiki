@@ -2,7 +2,7 @@
 
 # Servers API 
 
-The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [IStorageServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IStorageServer) and [IASyncStorageServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.IAsyncStorageServer) interfaces.  These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [IStorageProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IStorageProvider.htm) instances.
+The Servers API provides limited management capabilities for 3rd party triple stores.  It is represented by the [IStorageServer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_IStorageServer.htm) and [IASyncStorageServer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_IAsyncStorageServer.htm) interfaces.  These interfaces provide limited abilities to create, delete, get and list stores provided on a server i.e. the ability to manage and access multiple [IStorageProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IStorageProvider.htm) instances.
 
 # Implementations 
 
@@ -10,9 +10,9 @@ The following implementations are currently provided:
 
 | Implementation | Description |
 | --- | --- |
-| [AllegroGraphServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.AllegroGraphServer) | Manages a catalog of an AllegroGraph server, see the [[Allegro Graph|UserGuide-Storage-AllegroGraph]] documentation |
-| [SesameServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.SesameServer) | Manages a Sesame HTTP Protocol compliant server, see the [[Sesame|UserGuide-Storage-Sesame]] documentation |
-| [StardogServer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.StardogServer) | Manages a Stardog server, see the [[Stardog|UserGuide-Storage-Stardog]] documentation |
+| [AllegroGraphServer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_AllegroGraphServer.htm) | Manages a catalog of an AllegroGraph server, see the [[Allegro Graph|UserGuide-Storage-AllegroGraph]] documentation |
+| [SesameServer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_SesameServer.htm) | Manages a Sesame HTTP Protocol compliant server, see the [[Sesame|UserGuide-Storage-Sesame]] documentation |
+| [StardogServer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_StardogServer.htm) | Manages a Stardog server, see the [[Stardog|UserGuide-Storage-Stardog]] documentation |
 
 # Basic Usage 
 

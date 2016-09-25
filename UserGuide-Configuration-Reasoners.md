@@ -2,7 +2,7 @@
 
 # Configuring Reasoners 
 
-Reasoners are classes that can perform reasoning on Graphs/Triple Stores to infer additional triples. These classes must implement the [IInferenceEngine](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Inference.IInferenceEngine) interface.
+Reasoners are classes that can perform reasoning on Graphs/Triple Stores to infer additional triples. These classes must implement the [IInferenceEngine](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Inference_IInferenceEngine.htm) interface.
 
 Reasoners are attached to Graphs/Triple Stores using the `dnr:reasoner` property as described in [[UserGuide/Configuration/Graphs|Configuration API - Graphs]] and [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
 

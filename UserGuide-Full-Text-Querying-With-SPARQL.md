@@ -10,7 +10,7 @@ It uses [Lucene.Net](http://lucenenet.apache.org) to build and query full text i
 
 To use the library you'll need to add a reference to **dotNetRDF.Query.FullText.dll** into your project (or install it via NuGet) and you should ensure that Lucene.Net is included in your project as well as this provides the actual indexing and query functionality.  Using NuGet is the preferred way to install since it will sort out dependencies and framework versions for you.
 
-The majority of the classes provided by this library can be found in the `VDS.RDF.Query.FullText` namespace, the only other class you'll typically need is the [FullTextOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.FullTextOptimiser) which is located in the `VDS.RDF.Query.Optimisation` namespace.
+The majority of the classes provided by this library can be found in the `VDS.RDF.Query.FullText` namespace, the only other class you'll typically need is the [FullTextOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_FullTextOptimiser.htm) which is located in the `VDS.RDF.Query.Optimisation` namespace.
 
 ## Creating an Index 
 
@@ -232,4 +232,4 @@ You can use Full Text Querying with SPARQL Endpoints by configuring it via the [
 
 # Keeping an index in sync with Datasets 
 
-If your dataset is mutable then you may wish to keep your full text index in sync with your dataset as it changes. To do this you can use the [FullTextIndexedDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.FullTextIndexedDataset) which is a decorator that can be applied over another `ISparqlDataset` and will automatically keep your index in sync with changes made to the dataset.
+If your dataset is mutable then you may wish to keep your full text index in sync with your dataset as it changes. To do this you can use the [FullTextIndexedDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_FullTextIndexedDataset.htm) which is a decorator that can be applied over another `ISparqlDataset` and will automatically keep your index in sync with changes made to the dataset.

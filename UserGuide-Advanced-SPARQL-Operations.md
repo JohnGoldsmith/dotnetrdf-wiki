@@ -24,13 +24,13 @@ The library includes three different query optimisers:
 
 | Optimizer | Description |
 | --- | --- |
-| [DefaultOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.DefaultOptimiser) | The default optimiser which does reordering based on simple rules and places `FILTER` and assignments |
-| [NoReorderOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.NoReorderOptimiser) | An optimiser which doesn't reorder triple patterns but still places `FILTER` and assignments |
-| [WeightedOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.WeightOptimiser) | An optimiser which does the reordering based on weighting calculated from provided statistics about the data, also places `FILTER` and assignments |
+| [DefaultOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_DefaultOptimiser.htm) | The default optimiser which does reordering based on simple rules and places `FILTER` and assignments |
+| [NoReorderOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_NoReorderOptimiser.htm) | An optimiser which doesn't reorder triple patterns but still places `FILTER` and assignments |
+| [WeightedOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_WeightOptimiser.htm) | An optimiser which does the reordering based on weighting calculated from provided statistics about the data, also places `FILTER` and assignments |
 
 ### Global Query Optimiser 
 
-The global optimiser setting is changed by setting the `QueryOptimiser` property of the [SparqlOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.SparqlOptimiser) static class. This optimiser is used by all [SparqlQueryParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_SparqlQueryParser.htm) instances unless changed locally.
+The global optimiser setting is changed by setting the `QueryOptimiser` property of the [SparqlOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_SparqlOptimiser.htm) static class. This optimiser is used by all [SparqlQueryParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_SparqlQueryParser.htm) instances unless changed locally.
 
 ### Local Query Optimiser 
 
@@ -48,12 +48,12 @@ The library includes the following algebra optimisers which are automatically re
 
 | Optimizer | Purpose |
 | --- | --- |
-| [AskBgpOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.AskBgpOptimiser) | An optimiser which optimises the algebra form for `ASK` queries to use the special operators where possible. These are operators designed to find the first possible solution and then return as that is sufficient for `ASK` queries. |
-| [LazyBgpOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.LazyBgpOptimiser) | An optimiser which optimises queries with `LIMIT` clauses to use the special operators where possible. These are operators designed to find the requisite number of solutions and then return in order to minimise the work done. |
-| [StrictAlgebraOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.StrictAlgebraOptimiser) | Transforms the basic generated algebra into the strict form as far as possible. This makes the algebra easier to traverse for subsequent optimisers. |
-| [IdentityFilterOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.IdentityFilterOptimiser) | Optimises filters of the form `FILTER(?x = ex:constant)` for more efficient evaluation. |
-| [ImplicitJoinOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.ImplicitJoinOptimiser) | Optimises queries where a `FILTER` embodies an implict join e.g. `FILTER(?x = ?y)` or `FILTER(SAMETERM(?x, ?y))` which can significantly improve performance. |
-| [FilteredProductOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.FilteredProductOptimiser) | Optimisers queries where a `FILTER` occurs over a cross product to evaluate the filter as part of the cross product to improve performance. |
+| [AskBgpOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_AskBgpOptimiser.htm) | An optimiser which optimises the algebra form for `ASK` queries to use the special operators where possible. These are operators designed to find the first possible solution and then return as that is sufficient for `ASK` queries. |
+| [LazyBgpOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_LazyBgpOptimiser.htm) | An optimiser which optimises queries with `LIMIT` clauses to use the special operators where possible. These are operators designed to find the requisite number of solutions and then return in order to minimise the work done. |
+| [StrictAlgebraOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_StrictAlgebraOptimiser.htm) | Transforms the basic generated algebra into the strict form as far as possible. This makes the algebra easier to traverse for subsequent optimisers. |
+| [IdentityFilterOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_IdentityFilterOptimiser.htm) | Optimises filters of the form `FILTER(?x = ex:constant)` for more efficient evaluation. |
+| [ImplicitJoinOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_ImplicitJoinOptimiser.htm) | Optimises queries where a `FILTER` embodies an implict join e.g. `FILTER(?x = ?y)` or `FILTER(SAMETERM(?x, ?y))` which can significantly improve performance. |
+| [FilteredProductOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_FilteredProductOptimiser.htm) | Optimisers queries where a `FILTER` occurs over a cross product to evaluate the filter as part of the cross product to improve performance. |
 
 ### Global Algebra Optimisers 
 
@@ -73,7 +73,7 @@ Firstly our Leviathan SPARQL Engine which is used for all in-memory queries with
 
 ## When Thread-Safety applies 
 
-If the [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset) you are using also implements the [IThreadSafeDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.IThreadSafeDataset) interface then that dataset will be globally thread safe however many times you reuse it.
+If the [ISparqlDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_ISparqlDataset.htm) you are using also implements the [IThreadSafeDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_IThreadSafeDataset.htm) interface then that dataset will be globally thread safe however many times you reuse it.
 
 If it does not then the use of the dataset is thread safe only when used via a single Query/Update processor.
 
@@ -96,4 +96,4 @@ CREATE GRAPH <http://example.org/graph>
 
 ## When Transactions apply 
 
-Transactions apply when using a `ISparqlDataset` implementation which derives from [BaseTransactionalDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.BaseTransactionalDataset) or [BaseTranscationalQuadDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset). Note that 3rd party implementations may implement transactions without using this base class.
+Transactions apply when using a `ISparqlDataset` implementation which derives from [BaseTransactionalDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_BaseTransactionalDataset.htm) or [BaseTranscationalQuadDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_BaseTransactionalQuadDataset.htm). Note that 3rd party implementations may implement transactions without using this base class.

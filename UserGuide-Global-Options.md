@@ -102,7 +102,7 @@ Controls whether unknown SPARQL extension functions should be allowed, defaults 
 
 ### RigorousEvaluation 
 
-Controls whether the in-memory SPARQL engine rigorously checks the provided matches from the underlying [ISparqlDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.ISparqlDataset), defaults to `false` as this is usually unnecessary.
+Controls whether the in-memory SPARQL engine rigorously checks the provided matches from the underlying [ISparqlDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_ISparqlDataset.htm), defaults to `false` as this is usually unnecessary.
 
 You may need to enable this if your `ISparqlDataset` implementation cannot guarantee that a call to `GetTriplesWithX()` only returns triples matching the given arguments.
 
