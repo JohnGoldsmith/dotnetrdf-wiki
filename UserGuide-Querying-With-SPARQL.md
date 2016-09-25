@@ -406,6 +406,6 @@ The previous topic was [[Working with Triple Stores|UserGuide-Working-With-Tripl
 
 Users wishing to learn more may wish to jump straight to the following topics:
 * [[Advanced SPARQL|UserGuide-Advanced-SPARQL]]
-** [[Result Formatting|UserGuide-Result-Formatting|]]
+* [[Result Formatting|UserGuide-Result-Formatting|]]
 * [[Triple Store Integration|UserGuide-Triple-Store-Integration]] 
 * [[Configuration API - Query Processor|UserGuide-Configuration-Query-Processors]]
