@@ -2,7 +2,7 @@
 
 # Configuring Update Processors 
 
-Update Processors are used to process SPARQL Update commands. Update Processors implement the [ISparqlUpdateProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Update_ISparqlUpdateProcessor.htm interface and the library provides 3 concrete implementations which can be configured using the Configuration API
+Update Processors are used to process SPARQL Update commands. Update Processors implement the [ISparqlUpdateProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.ISparqlUpdateProcessor) interface and the library provides 3 concrete implementations which can be configured using the Configuration API
 
 # Basic Configuration 
 
@@ -38,9 +38,9 @@ Alternatively you may use the `dnr:usingDataset` property to connect it to a Dat
 
 ## Generic Update Processor 
 
-The Generic Update Processor is used to process updates against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [IStorageProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IStorageProvider.htm.
+The Generic Update Processor is used to process updates against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider).
 
-How updates are actually processed depends on the exact concrete implementation of `IStorageProvider` being used, if the implementation also implements [IUpdateableStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IUpdateableStorage.htm then the managers own SPARQL Update implementation is used. If this interface is not implemented then dotNetRDF will approximate SPARQL update implementation - in this case not all of SPARQL update may be supported or behave correctly depending on the capabilities of the `IStorageProvider` provided
+How updates are actually processed depends on the exact concrete implementation of `IStorageProvider` being used, if the implementation also implements [IUpdateableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IUpdateableStorage) then the managers own SPARQL Update implementation is used. If this interface is not implemented then dotNetRDF will approximate SPARQL update implementation - in this case not all of SPARQL update may be supported or behave correctly depending on the capabilities of the `IStorageProvider` provided
 
 To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
 

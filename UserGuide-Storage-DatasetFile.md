@@ -2,7 +2,7 @@
 
 # Dataset Files 
 
-You can treat a dataset file (NQuads, TriG or TriX) as a read-only triple store using the [DatasetFileManager](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_DatasetFileManager.htm class.
+You can treat a dataset file (NQuads, TriG or TriX) as a read-only triple store using the [DatasetFileManager](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.DatasetFileManager) class.
 
 ## Supported Capabilities 
 

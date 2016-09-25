@@ -2,7 +2,7 @@
 
 # Virtuoso 
 
-You can connect to an [OpenLink Virtuoso](http://virtuoso.openlinksw.com) server using the [VirtuosoManager](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_VirtuosoManager.htm class.  Since this requires additional dependencies in the form of the Virtuoso ADO.Net provider this functionality is in the separate library **dotNetRDF.Data.Virtuoso.dll**
+You can connect to an [OpenLink Virtuoso](http://virtuoso.openlinksw.com) server using the [VirtuosoManager](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.VirtuosoManager) class.  Since this requires additional dependencies in the form of the Virtuoso ADO.Net provider this functionality is in the separate library **dotNetRDF.Data.Virtuoso.dll**
 
 ## Supported Capabilities 
 

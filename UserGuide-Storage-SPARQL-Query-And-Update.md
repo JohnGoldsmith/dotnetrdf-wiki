@@ -2,7 +2,7 @@
 
 # SPARQL Query and Update Endpoints 
 
-You can treat any publicly accessible SPARQL store which has both Query and Update endpoints as a read-write store using the [ReadWriteSparqlConnector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_ReadWriteSparqlConnector.htm.
+You can treat any publicly accessible SPARQL store which has both Query and Update endpoints as a read-write store using the [ReadWriteSparqlConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.ReadWriteSparqlConnector).
 
 **Note:** If you were looking for documentation on querying a SPARQL endpoint please see [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
@@ -32,4 +32,4 @@ SparqlRemoteUpdateEndpoint updateEndpoint = new SparqlRemoteUpdateEndpoint(new U
 ReadWriteSparqlConnector sparql = new SparqlConnector(queryEndpoint, updateEndpoint);
 ```
 
-In both cases there is an overload which takes a [SparqlConnectorLoadMethods](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_SparqlConnectorLoadMethod.htm which determines whether the `LoadGraph()` method operates by making a `CONSTRUCT` or a `DESCRIBE` query, the default is `CONSTRUCT`
+In both cases there is an overload which takes a [SparqlConnectorLoadMethods](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlConnectorLoadMethod) which determines whether the `LoadGraph()` method operates by making a `CONSTRUCT` or a `DESCRIBE` query, the default is `CONSTRUCT`

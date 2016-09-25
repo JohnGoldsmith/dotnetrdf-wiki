@@ -2,7 +2,7 @@
 
 # SPARQL Query Endpoints 
 
-You can treat any publicly accessible SPARQL Query endpoint as a read-only store using the [SparqlConnector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_SparqlConnector.htm.
+You can treat any publicly accessible SPARQL Query endpoint as a read-only store using the [SparqlConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlConnector).
 
 **Note:** If you were looking for documentation on querying a SPARQL endpoint please see [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
@@ -29,4 +29,4 @@ SparqlRemoteEndpoint endpoint = new SparqlRemoteEndpoint(new Uri("http://example
 SparqlConnector sparql = new SparqlConnector(endpoint);
 ```
 
-In both cases there is an overload which takes a [SparqlConnectorLoadMethods](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_SparqlConnectorLoadMethod.htm which determines whether the `LoadGraph()` method operates by making a `CONSTRUCT` or a `DESCRIBE` query, the default is `CONSTRUCT`
+In both cases there is an overload which takes a [SparqlConnectorLoadMethods](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.SparqlConnectorLoadMethod) which determines whether the `LoadGraph()` method operates by making a `CONSTRUCT` or a `DESCRIBE` query, the default is `CONSTRUCT`
