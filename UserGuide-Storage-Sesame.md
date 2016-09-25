@@ -59,9 +59,9 @@ When creating a store the `SesameServer` will use one of the following templates
 
 | Template | Description |
 | --- | --- |
-| [SesameMemTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Sesame.SesameMemTemplate) | Used to create Sesame memory stores |
-| [SesameNativeTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Sesame.SesameNativeTemplate) | Used to create Sesame native stores |
-| [SesameHttpTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate) | Used to create Sesame HTTP stores i.e. pointers to other remote Sesame repositories |
+| [SesameMemTemplate](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_Provisioning_Sesame_SesameMemTemplate.htm) | Used to create Sesame memory stores |
+| [SesameNativeTemplate](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_Provisioning_Sesame_SesameNativeTemplate.htm) | Used to create Sesame native stores |
+| [SesameHttpTemplate](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_Provisioning_Sesame_SesameHttpTemplate.htm) | Used to create Sesame HTTP stores i.e. pointers to other remote Sesame repositories |
 
 Each template has various properties for configuring store type specific settings.
 

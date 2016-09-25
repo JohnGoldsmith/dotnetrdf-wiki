@@ -60,7 +60,7 @@ When creating a store the `StardogServer` will provide templates from the follow
 
 | Template | Description |
 | --- | --- |
-| [StardogDiskTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Stardog.StardogDiskTemplate) | Used to create a Stardog disk store |
-| [StardogMemTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Stardog.StardogMemTemplate) | Used to create a Stardog memory store |
+| [StardogDiskTemplate](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_Provisioning_Stardog_StardogDiskTemplate.htm) | Used to create a Stardog disk store |
+| [StardogMemTemplate](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_Provisioning_Stardog_StardogMemTemplate.htm) | Used to create a Stardog memory store |
 
-Both of these derive from the [BaseStardogTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.Stardog.BaseStardogTemplate) which provides a large range of properties that can be used to configure Stardog database options.
+Both of these derive from the [BaseStardogTemplate](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_Provisioning_Stardog_BaseStardogTemplate.htm) which provides a large range of properties that can be used to configure Stardog database options.

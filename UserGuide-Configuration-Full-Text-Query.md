@@ -88,7 +88,7 @@ Also you may optionally specify the `dnr-ft:schema` property to point to a Index
 
 ## Search Providers 
 
-A Search Provider provides the actual full text query capability, currently only one implementation [LuceneSearchProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider) is available and it is configured as follows:
+A Search Provider provides the actual full text query capability, currently only one implementation [LuceneSearchProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Search_Lucene_LuceneSearchProvider.htm) is available and it is configured as follows:
 
 ```turtle
 

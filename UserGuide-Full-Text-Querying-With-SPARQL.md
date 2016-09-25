@@ -20,7 +20,7 @@ Currently the following implementations are available:
 
 | Indexer | Description |
 | --- | --- |
-| [LuceneSubjectsIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.Lucene.LuceneSubjectsIndexer) | Relates the Subject of the Triple to the full text of the Literal Object |
+| [LuceneSubjectsIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_Lucene_LuceneSubjectsIndexer.htm) | Relates the Subject of the Triple to the full text of the Literal Object |
 | [LucenePredicatesIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_LucenePredicatesIndexer.htm) | Relates the Predicate of the Triple to the full text of the Literal Object |
 | [LuceneObjectsIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_LuceneObjectsIndexer.htm) | Relates the Object of the Triple to its own full text |
 
@@ -65,11 +65,11 @@ public class FullTextIndexingExample
 }
 ```
 
-Note that when we created the indexer we passed in a Lucene.Net `Directory` and an `Analyzer` - you can use whatever implementations of these you like with our indexers. The [DefaultIndexSchema](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.Schema.DefaultIndexSchema) is a schema used to control how the indexed data is stored onto fields on the documents in the index, for most use cases you will only ever need to use this default implementation but you can implement your own if you are an advanced user.
+Note that when we created the indexer we passed in a Lucene.Net `Directory` and an `Analyzer` - you can use whatever implementations of these you like with our indexers. The [DefaultIndexSchema](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_Schema_DefaultIndexSchema.htm) is a schema used to control how the indexed data is stored onto fields on the documents in the index, for most use cases you will only ever need to use this default implementation but you can implement your own if you are an advanced user.
 
 ## Querying an Index 
 
-To query an index you use a [IFullTextSearchProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Search_IFullTextSearchProvider.htm) instance, currently there is a single implementation [LuceneSearchProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider). The following example demonstrates its usage:
+To query an index you use a [IFullTextSearchProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Search_IFullTextSearchProvider.htm) instance, currently there is a single implementation [LuceneSearchProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Search_Lucene_LuceneSearchProvider.htm). The following example demonstrates its usage:
 
 ```csharp
 
@@ -115,7 +115,7 @@ public class FullTextSearchExample
 }
 ```
 
-As with our previous example the `LuceneSearchProvider` takes a Lucene.Net `Directory` and `Analyzer` plus a [IFullTextIndexSchema](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.Schema.IFullTextIndexSchema).
+As with our previous example the `LuceneSearchProvider` takes a Lucene.Net `Directory` and `Analyzer` plus a [IFullTextIndexSchema](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_Schema_IFullTextIndexSchema.htm).
 
 Note: This constructor allows you to omit either/both of the Analyzer or Schema, in this case this uses the default Lucene.Net `StandardAnalyzer` and/or the `DefaultIndexSchema`
 
