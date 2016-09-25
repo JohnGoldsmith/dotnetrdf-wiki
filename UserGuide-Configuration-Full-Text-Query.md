@@ -29,7 +29,7 @@ _:fulltextFactory a dnr:ObjectFactory ;
 
 ## Index Schema 
 
-Index Schemas are specified as follows, this example shows the [DefaultIndexSchema](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Schema.DefaultIndexSchema) which is the only schema included currently (advanced users can create their own schemas):
+Index Schemas are specified as follows, this example shows the [DefaultIndexSchema](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Schema_DefaultIndexSchema.htm) which is the only schema included currently (advanced users can create their own schemas):
 
 ```turtle
 
@@ -67,7 +67,7 @@ The optional `dnr-ft:version` property is used to specify the version of the ana
 
 ## Indexers 
 
-Indexers are classes that implement the [IFullTextIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.IFullTextIndexer) interface and can perform indexing. Their configuration looks like the following:
+Indexers are classes that implement the [IFullTextIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_IFullTextIndexer.htm) interface and can perform indexing. Their configuration looks like the following:
 
 ```turtle
 

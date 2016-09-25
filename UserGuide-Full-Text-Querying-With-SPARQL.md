@@ -14,15 +14,15 @@ The majority of the classes provided by this library can be found in the `VDS.RD
 
 ## Creating an Index 
 
-Before you can perform full text queries you must first build an index from your RDF data. To do this you will use an instance of the [IFullTextIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.IFullTextIndexer) interface, an indexer provides the means to index Triples, Graphs and Datasets and builds an index which relates the full text of literal objects to one of the nodes of each Triple.
+Before you can perform full text queries you must first build an index from your RDF data. To do this you will use an instance of the [IFullTextIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_IFullTextIndexer.htm) interface, an indexer provides the means to index Triples, Graphs and Datasets and builds an index which relates the full text of literal objects to one of the nodes of each Triple.
 
 Currently the following implementations are available:
 
 | Indexer | Description |
 | --- | --- |
 | [LuceneSubjectsIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.Lucene.LuceneSubjectsIndexer) | Relates the Subject of the Triple to the full text of the Literal Object |
-| [LucenePredicatesIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.LucenePredicatesIndexer) | Relates the Predicate of the Triple to the full text of the Literal Object |
-| [LuceneObjectsIndexer](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Indexing.LuceneObjectsIndexer) | Relates the Object of the Triple to its own full text |
+| [LucenePredicatesIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_LucenePredicatesIndexer.htm) | Relates the Predicate of the Triple to the full text of the Literal Object |
+| [LuceneObjectsIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_LuceneObjectsIndexer.htm) | Relates the Object of the Triple to its own full text |
 
 So let's look at an example of building an index:
 
@@ -69,7 +69,7 @@ Note that when we created the indexer we passed in a Lucene.Net `Directory` and 
 
 ## Querying an Index 
 
-To query an index you use a [IFullTextSearchProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Search.IFullTextSearchProvider) instance, currently there is a single implementation [LuceneSearchProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider). The following example demonstrates its usage:
+To query an index you use a [IFullTextSearchProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Search_IFullTextSearchProvider.htm) instance, currently there is a single implementation [LuceneSearchProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider). The following example demonstrates its usage:
 
 ```csharp
 

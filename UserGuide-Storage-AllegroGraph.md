@@ -69,4 +69,4 @@ AllegroGraphServer agraph = new AllegroGraphServer("http://localhost:9875");
 
 ## Creating Stores 
 
-When creating a store the `AllegroGraphServer` will provide only simple  [StoreTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.StoreTemplate) instances as templates.  No extra settings may currently be configured when creating stores on a Allegro Graph server.
+When creating a store the `AllegroGraphServer` will provide only simple  [StoreTemplate](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_Provisioning_StoreTemplate.htm) instances as templates.  No extra settings may currently be configured when creating stores on a Allegro Graph server.

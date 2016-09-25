@@ -96,7 +96,7 @@ public class ListStoresExample
 
 ### Creating a Store 
 
-Creating a store is the most complex operation is done with a combination of the `CreateStore()` and either the `GetDefaultTemplate()` or `GetAvailableTemplates()` method.  Creating a store requires that you provide a [IStoreTemplate](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.Management.Provisioning.IStoreTemplate) instance which indicates to the server what kind of store to create.
+Creating a store is the most complex operation is done with a combination of the `CreateStore()` and either the `GetDefaultTemplate()` or `GetAvailableTemplates()` method.  Creating a store requires that you provide a [IStoreTemplate](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_Management_Provisioning_IStoreTemplate.htm) instance which indicates to the server what kind of store to create.
 
 #### Templates 
 
