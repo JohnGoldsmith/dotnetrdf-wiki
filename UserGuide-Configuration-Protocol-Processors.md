@@ -38,7 +38,7 @@ Alternatively you may use the `dnr:usingDataset` property to connect it to a Dat
 
 ## Generic Protocol Processor 
 
-The Generic Protocol Processor is used to process protocol requests against some arbitrary store where the store you wish to connect to has an implementation of [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider).
+The Generic Protocol Processor is used to process protocol requests against some arbitrary store where the store you wish to connect to has an implementation of [IStorageProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IStorageProvider.htm.
 
 Not all features of the protocol may be supported or behave correctly depending on the capabilities of the `IStorageProvider` used.
 

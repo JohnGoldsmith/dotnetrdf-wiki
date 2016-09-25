@@ -2,9 +2,9 @@
 
 # Stardog 
 
-[Stardog](http://stardog.com) the RDF database from Clark & Parsia can be connected to via the [StardogConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogConnector).  This connector uses the Stardog HTTP interface so requires a running Stardog HTTP server.
+[Stardog](http://stardog.com) the RDF database from Clark & Parsia can be connected to via the [StardogConnector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_StardogConnector.htm.  This connector uses the Stardog HTTP interface so requires a running Stardog HTTP server.
 
-The `StardogConnector` assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [StardogV1Connector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV1Connector), [StardogV2Connector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV2Connector) and [StardogV3Connector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogV3Connector) are provided if you wish to be explicit about the version of Stardog you are connecting to.
+The `StardogConnector` assumes the latest version of Stardog is being used, currently these are the 3.x releases.  A [StardogV1Connector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_StardogV1Connector.htm, [StardogV2Connector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_StardogV2Connector.htm and [StardogV3Connector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_StardogV3Connector.htm are provided if you wish to be explicit about the version of Stardog you are connecting to.
 
 In terms of backwards compatibility the newer connectors may be able to talk to an older server but we can't guarantee this will work correctly, also newer connectors have support for newer Stardog features which will not work if used against an older server.
 
@@ -27,7 +27,7 @@ StardogConnector stardog = new StardogConnector("http://localhost:5820", "exampl
 
 ## Configurable Query Reasoning 
 
-Stardog 1.x and 2.x supports configurable reasoning levels on a per-query basis.  The current reasoning level is controlled by the `Reasoning` property and takes a value from the [StardogReasoningMode](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.StardogReasoningMode) enum.
+Stardog 1.x and 2.x supports configurable reasoning levels on a per-query basis.  The current reasoning level is controlled by the `Reasoning` property and takes a value from the [StardogReasoningMode](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_StardogReasoningMode.htm enum.
 
 Note that from Stardog 3.x the reasoning level is controlled at the database level and cannot be changed at the connection level.
 

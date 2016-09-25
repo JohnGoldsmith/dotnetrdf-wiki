@@ -2,7 +2,7 @@
 
 # Configuring Query Processors 
 
-Query Processors are classes that can process SPARQL Queries are return a [SparqlResultSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet) or [IGraph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph) as appropriate. Query Processors implement the [ISparqlQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ISparqlQueryProcessor) interface and the library provides 5 concrete implementations of this all of which can be configured using the Configuration API.
+Query Processors are classes that can process SPARQL Queries are return a [SparqlResultSet](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlResultSet.htm or [IGraph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph) as appropriate. Query Processors implement the [ISparqlQueryProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_ISparqlQueryProcessor.htm interface and the library provides 5 concrete implementations of this all of which can be configured using the Configuration API.
 
 # Basic Configuration 
 
@@ -38,7 +38,7 @@ Alternatively you may use the `dnr:usingDataset` property to connect it to a Dat
 
 ## Generic Query Processor 
 
-The Generic Query Processor is used to process queries against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage). To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
+The Generic Query Processor is used to process queries against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [IQueryableStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IQueryableStorage.htm. To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
 
 {{{
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .

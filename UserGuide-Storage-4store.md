@@ -2,7 +2,7 @@
 
 # 4store 
 
-[4store](http://4store.org) the open source triple store originally developed at Garlik may be connected to using the [FourStoreConnector](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.FourStoreConnector).
+[4store](http://4store.org) the open source triple store originally developed at Garlik may be connected to using the [FourStoreConnector](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_FourStoreConnector.htm.
 
 ## Supported Capabilities 
 

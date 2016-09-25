@@ -53,11 +53,11 @@ _:otherGraph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" .
 ```
 
-**Note:** While it is possible to potentially introduce circular references by this mechanism the [ConfigurationLoader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader) is designed such that these references are detected during the loading process and an error will be thrown.
+**Note:** While it is possible to potentially introduce circular references by this mechanism the [ConfigurationLoader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_ConfigurationLoader.htm is designed such that these references are detected during the loading process and an error will be thrown.
 
 ### Files 
 
-Loading data from files is specified as shown below using the `dnr:fromFile` property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [IPathResolver](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IPathResolver) implementation by setting the `PathResolver` property of the `ConfigurationLoader`. Files are expected to be RDF graphs in formats which dotNetRDF understands.
+Loading data from files is specified as shown below using the `dnr:fromFile` property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [IPathResolver](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_IPathResolver.htm implementation by setting the `PathResolver` property of the `ConfigurationLoader`. Files are expected to be RDF graphs in formats which dotNetRDF understands.
 
 ```turtle
 

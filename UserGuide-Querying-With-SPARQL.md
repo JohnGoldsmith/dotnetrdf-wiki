@@ -19,7 +19,7 @@ If you are going to parse SPARQL queries yourself you will also need to use the 
 
 # Representing Queries 
 
-While some parts of the library will allow you to pass a raw SPARQL query as a string often you will need to parse a [SparqlQuery](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery) object around. A `SparqlQuery` can be created in a couple of ways, firstly you can simply parse a raw SPARQL string into a query like so:
+While some parts of the library will allow you to pass a raw SPARQL query as a string often you will need to parse a [SparqlQuery](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlQuery.htm object around. A `SparqlQuery` can be created in a couple of ways, firstly you can simply parse a raw SPARQL string into a query like so:
 
 ```csharp
 
@@ -40,7 +40,7 @@ public class QueryParsingExample
 }
 ```
 
-Queries can be parsed from strings, files or streams as desired. This method works well if you have a relatively simple query but can become cumbersome if you are generating complicated queries in code because you have to build up the string in memory and ensure it is properly formatted yourself. If this is the case you will often be better off using the [SparqlParameterizedString](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlParameterizedString) class to build your query string, it provides a `SqlCommand` style interface for building a query string:
+Queries can be parsed from strings, files or streams as desired. This method works well if you have a relatively simple query but can become cumbersome if you are generating complicated queries in code because you have to build up the string in memory and ensure it is properly formatted yourself. If this is the case you will often be better off using the [SparqlParameterizedString](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlParameterizedString.htm class to build your query string, it provides a `SqlCommand` style interface for building a query string:
 
 ```csharp
 
@@ -79,7 +79,7 @@ public class SparqlParameterizedStringExample
 
 # Accessing Results 
 
-The key classes for accessing results when using SPARQL are the [SparqlResultSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet) and [SparqlResult](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResult) class, these represent a Result Set and an individual Result respectively. When you make any kind of SPARQL query through any of the methods described in this article you will always get a `SparqlResultSet` or an `IGraph` in return (unless an error occurs).
+The key classes for accessing results when using SPARQL are the [SparqlResultSet](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlResultSet.htm and [SparqlResult](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlResult.htm class, these represent a Result Set and an individual Result respectively. When you make any kind of SPARQL query through any of the methods described in this article you will always get a `SparqlResultSet` or an `IGraph` in return (unless an error occurs).
 
 ## Result Sets 
 
@@ -87,7 +87,7 @@ The `SparqlResultSet` class is used to represent the results of SELECT and ASK q
 
 ### ResultsType 
 
-The `ResultsType` property is used to determine what type of result set you have received. The possible values are from the [SparqlResultsType](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultsType) enumeration and are as follows:
+The `ResultsType` property is used to determine what type of result set you have received. The possible values are from the [SparqlResultsType](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlResultsType.htm enumeration and are as follows:
 
 | Type | Meaning |
 | --- | --- |
@@ -170,11 +170,11 @@ Now we'll look at the different ways in which you can actually make a query, the
 
 ## Query Processors 
 
-Query Processors are classes use to evaluate queries which abstract away from whatever the underlying query engine is. The [ISparqlQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ISparqlQueryProcessor) interface defines two methods for evaluating queries both called `ProcessQuery()`.  Query processors are the preferred means of evaluating queries in dotNetRDF and should used in preference to other methods wherever possible.
+Query Processors are classes use to evaluate queries which abstract away from whatever the underlying query engine is. The [ISparqlQueryProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_ISparqlQueryProcessor.htm interface defines two methods for evaluating queries both called `ProcessQuery()`.  Query processors are the preferred means of evaluating queries in dotNetRDF and should used in preference to other methods wherever possible.
 
 The first `ProcessQuery(SparqlQuery query)` takes in a `SparqlQuery` and returns either a `SparqlResultSet` or an `IGraph` instance. The second `ProcessQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, SparqlQuery query)` is for advanced users and gives much more detailed control over the processing of results.
 
-For example you can use the standard [LeviathanQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.LeviathanQueryProcessor) to evaluate queries in-memory e.g.
+For example you can use the standard [LeviathanQueryProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_LeviathanQueryProcessor.htm to evaluate queries in-memory e.g.
 
 ```csharp 
 
@@ -247,10 +247,10 @@ The library includes the following query processors:
 
 | Processor | Description |
 | --- | --- |
-| [LeviathanQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.LeviathanQueryProcessor) | Standard in-memory query processor |
-| [ExplainQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ExplainQueryProcessor) | Extension of the `LeviathanQueryProcessor` which executes queries and prints explanations to the Console |
-| [RemoteQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.RemoteQueryProcessor) | Executes queries against a remote SPARQL endpoint |
-| [GenericQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GenericQueryProcessor) | Executes a query against a [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) implementation |
+| [LeviathanQueryProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_LeviathanQueryProcessor.htm | Standard in-memory query processor |
+| [ExplainQueryProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_ExplainQueryProcessor.htm | Extension of the `LeviathanQueryProcessor` which executes queries and prints explanations to the Console |
+| [RemoteQueryProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_RemoteQueryProcessor.htm | Executes queries against a remote SPARQL endpoint |
+| [GenericQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GenericQueryProcessor) | Executes a query against a [IQueryableStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IQueryableStorage.htm implementation |
 
 ### Customizing Query Behaviour 
 
@@ -260,7 +260,7 @@ When you use the `ProcessQuery()` overload that takes a `SparqlQuery` object you
 
 # Remote Query 
 
-Remote SPARQL endpoints can be queried using the [SparqlRemoteEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlRemoteEndpoint) class. This class is a wrapper around a remote endpoint which sends queries to the endpoint and then turns the response into a `SparqlResultSet` or `IGraph` as appropriate.
+Remote SPARQL endpoints can be queried using the [SparqlRemoteEndpoint](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlRemoteEndpoint.htm class. This class is a wrapper around a remote endpoint which sends queries to the endpoint and then turns the response into a `SparqlResultSet` or `IGraph` as appropriate.
 
 A remote endpoint is a combination of an endpoint URI and an optional default Graph URI. A `SparqlRemoteEndpoint` provides specific strongly typed methods for making queries meaning that you don't need to type check and cast the result. The `QueryWithResultGraph(String sparqlQuery)` method can be used to make a CONSTRUCT or DESCRIBE query while the `QueryWithResultSet(String sparqlQuery)` method can be used to make SELECT and ASK queries. You can also use the `QueryRaw(String sparqlQuery, out String ctype)` method if you wish to get the raw response stream from the endpoint and process it yourself.
 
@@ -301,7 +301,7 @@ public class SparqlRemoteEndpointExample
 
 We use the term native query to refer to queries where you utilise the SPARQL implementation of other Triple Stores directly. This feature is provided by classes which implement the `INativelyQueryableStore` interface, we now provide support for doing this with any of the supported backing Stores. If you take a look at the [[Working with Triple Stores|UserGuide-Working-With-Triple-Stores]] page you'll see an example of using the `PersistentTripleStore` class to query any of our supported stores.
 
-Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) interface  which most of our available [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) implementations also support, please see the [[Triple Store Integration|UserGuide/Triple Store Integration]] page for an example of this.
+Alternatively you can make a query direct to a store without using any abstractions simply by using an instance of the [IQueryableStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IQueryableStorage.htm interface  which most of our available [IStorageProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IStorageProvider.htm implementations also support, please see the [[Triple Store Integration|UserGuide/Triple Store Integration]] page for an example of this.
 
 ## Direct Triple Store Query 
 

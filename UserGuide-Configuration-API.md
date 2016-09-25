@@ -2,9 +2,9 @@
 
 # Configuration API 
 
-The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [ConfigurationLoader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.ConfigurationLoader) class which is in the `VDS.RDF.Configuration` namespace.
+The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [ConfigurationLoader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_ConfigurationLoader.htm class which is in the `VDS.RDF.Configuration` namespace.
 
-Dynamic loading is done by classes which implement the [IObjectFactory](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Configuration.IObjectFactory) interface which means that this mechanism can be extended as desired. Either additional `IObjectFactory` instances can be registered programmatically with the `AddObjectFactory(IObjectFactory factory)` method or you can specify them in your configuration files and have the system automatically detect them by calling the `AutoConfigureObjectFactories(IGraph g)` function.
+Dynamic loading is done by classes which implement the [IObjectFactory](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_IObjectFactory.htm interface which means that this mechanism can be extended as desired. Either additional `IObjectFactory` instances can be registered programmatically with the `AddObjectFactory(IObjectFactory factory)` method or you can specify them in your configuration files and have the system automatically detect them by calling the `AutoConfigureObjectFactories(IGraph g)` function.
 
 # Configuration File structure 
 

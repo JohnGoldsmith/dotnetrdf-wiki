@@ -4,7 +4,7 @@
 
 SPARQL Endpoints are classes that provide access to remote SPARQL Query or Update endpoints.
 
-The library provides 2 concrete implementations for query endpoints which are [SparqlRemoteEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlRemoteEndpoint) and [FederatedSparqlRemoteEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.FederatedSparqlRemoteEndpoint). The latter of these can be used to federate the query across multiple endpoints and merge the results together.  There is also a [SparqlRemoteUpdateEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlRemoteUpdateEndpoint) which represents update endpoints.
+The library provides 2 concrete implementations for query endpoints which are [SparqlRemoteEndpoint](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlRemoteEndpoint.htm and [FederatedSparqlRemoteEndpoint](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FederatedSparqlRemoteEndpoint.htm. The latter of these can be used to federate the query across multiple endpoints and merge the results together.  There is also a [SparqlRemoteUpdateEndpoint](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Update_SparqlRemoteUpdateEndpoint.htm which represents update endpoints.
 
 ## Simple Query Endpoints 
 

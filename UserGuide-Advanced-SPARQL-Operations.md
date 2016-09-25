@@ -30,7 +30,7 @@ The library includes three different query optimisers:
 
 ### Global Query Optimiser 
 
-The global optimiser setting is changed by setting the `QueryOptimiser` property of the [SparqlOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.SparqlOptimiser) static class. This optimiser is used by all [SparqlQueryParser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Parsing.SparqlQueryParser) instances unless changed locally.
+The global optimiser setting is changed by setting the `QueryOptimiser` property of the [SparqlOptimiser](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Optimisation.SparqlOptimiser) static class. This optimiser is used by all [SparqlQueryParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_SparqlQueryParser.htm instances unless changed locally.
 
 ### Local Query Optimiser 
 
@@ -83,7 +83,7 @@ While in principle queries and updates are thread safe it is possible to write c
 
 # Transactions 
 
-Transactions are an advanced non-standard feature of our SPARQL Update implementation. Transactions track the sequence of actions that a [SparqlUpdateCommandSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.SparqlUpdateCommandSet) performs and only commit/rollback the changes at the end of processing a command set. By default if you process commands individually (i.e. by calling the relevant `ProcessXCommand()` method directly) these are auto-committed unless you change the `AutoCommit` property for the [LeviathanUpdateProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Update.LeviathanUpdateProcessor) you are using.
+Transactions are an advanced non-standard feature of our SPARQL Update implementation. Transactions track the sequence of actions that a [SparqlUpdateCommandSet](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Update_SparqlUpdateCommandSet.htm performs and only commit/rollback the changes at the end of processing a command set. By default if you process commands individually (i.e. by calling the relevant `ProcessXCommand()` method directly) these are auto-committed unless you change the `AutoCommit` property for the [LeviathanUpdateProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Update_LeviathanUpdateProcessor.htm you are using.
 
 Like thread-safety you do not need to do anything special to use transactions unless you want to control them in detail. Calling the `Flush()` or `Discard()` method on a `ISparqlDataset` that supports transactions will have the effect of committing or rolling back the current Transaction (if any)
 
