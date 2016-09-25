@@ -18,7 +18,7 @@ _:proc a dnr:SparqlHttpProtocolProcessor .
 
 ## Leviathan Protocol Processor 
 
-The Leviathan Protocol Processor is used to process protocol requests on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) interface e.g.
+The Leviathan Protocol Processor is used to process protocol requests on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) interface e.g.
 
 ```turtle
 

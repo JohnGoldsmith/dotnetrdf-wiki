@@ -90,11 +90,11 @@ When you apply a reasoner to a Store then that reasoner gets applied over all ex
 
 # Configuring Complex Triple Stores 
 
-It is possible to configure a number of more complex [ITripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ITripleStore) instances beyond the basic `TripleStore` demonstrated so far. This section of the document describes additional types of Triple Store that can be configured.
+It is possible to configure a number of more complex [ITripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_ITripleStore.htm) instances beyond the basic `TripleStore` demonstrated so far. This section of the document describes additional types of Triple Store that can be configured.
 
 ## Web Demand Triple Store 
 
-The [WebDemandTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.WebDemandTripleStore) is a Triple Store which attempts to load Graphs from the web whenever a Graph with a URI which is not currently in the Store is requested. Configuring this is as simple as altering the value of the dnr:type property like so:
+The [WebDemandTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_WebDemandTripleStore.htm) is a Triple Store which attempts to load Graphs from the web whenever a Graph with a URI which is not currently in the Store is requested. Configuring this is as simple as altering the value of the dnr:type property like so:
 
 ```turtle
 
@@ -106,7 +106,7 @@ _:store a dnr:TripleStore ;
 
 ## Persistent Triple Store 
 
-The [PersistentTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore) provides a view of an arbitrary store for which there is an [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) provided. The Triple Store can then be used for query and update operations on the underlying store. This is configured by setting the `dnr:type` property appropriately and then using the `dnr:storageProvider` property to point to a storage provider to be used e.g.
+The [PersistentTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_PersistentTripleStore.htm) provides a view of an arbitrary store for which there is an [IStorageProvider](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IStorageProvider) provided. The Triple Store can then be used for query and update operations on the underlying store. This is configured by setting the `dnr:type` property appropriately and then using the `dnr:storageProvider` property to point to a storage provider to be used e.g.
 
 ```turtle
 

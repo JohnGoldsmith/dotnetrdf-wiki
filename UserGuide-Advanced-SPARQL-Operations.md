@@ -79,7 +79,7 @@ If it does not then the use of the dataset is thread safe only when used via a s
 
 ## Breaking Thread-Safety 
 
-While in principle queries and updates are thread safe it is possible to write code that will allow you to break this e.g. wrapping the same [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) in multiple `ISparqlDataset` instances. We strongly recommend that you avoid doing this as behaviour in such cases is unpredictable.
+While in principle queries and updates are thread safe it is possible to write code that will allow you to break this e.g. wrapping the same [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) in multiple `ISparqlDataset` instances. We strongly recommend that you avoid doing this as behaviour in such cases is unpredictable.
 
 # Transactions 
 

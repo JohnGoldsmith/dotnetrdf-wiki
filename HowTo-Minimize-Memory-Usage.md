@@ -24,7 +24,7 @@ UriFactory.Clear();
 
 # Triple Indexing 
 
-By default the standard [Graph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph) implementation builds a number of triple indexes behind the scenes.  This help make the `GetTriplesWithX()` methods and SPARQL queries run very fast on in-memory data.  However depending on what you are doing with the graph you may either not need indexes at all or only need certain indexes.
+By default the standard [Graph](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Graph.htm) implementation builds a number of triple indexes behind the scenes.  This help make the `GetTriplesWithX()` methods and SPARQL queries run very fast on in-memory data.  However depending on what you are doing with the graph you may either not need indexes at all or only need certain indexes.
 
 By default indexed graphs in dotNetRDF will incorporate 6 indices:
 
@@ -39,7 +39,7 @@ The first three are considered simple indices and the last three compound indice
 
 ## Use No Indices 
 
-If you don't need the indices you can avoid using indices completely by always using the [NonIndexedGraph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.NonIndexedGraph) in place of the standard `Graph`
+If you don't need the indices you can avoid using indices completely by always using the [NonIndexedGraph](https://dotnetrdf.github.io/api/html/T_VDS_RDF_NonIndexedGraph.htm) in place of the standard `Graph`
 
 ## Use Only Simple Indexes 
 
@@ -55,7 +55,7 @@ With full triple indexing set to off only simple indices will be created for new
 
 == Use Specific Indexes ===
 
-The standard graph allows you to configure the underlying [BaseTripleCollection](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseTripleCollection) used so you can create a graph that only uses the indexes you want:
+The standard graph allows you to configure the underlying [BaseTripleCollection](https://dotnetrdf.github.io/api/html/T_VDS_RDF_BaseTripleCollection.htm) used so you can create a graph that only uses the indexes you want:
 
 ```csharp
 

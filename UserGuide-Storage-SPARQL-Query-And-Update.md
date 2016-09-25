@@ -22,7 +22,7 @@ You can create a connection either just by providing the endpoint URIs like so:
 SparqlConnector sparql = new SparqlConnector(new Uri("http://example.org/query"), new Uri("http://example.org/update"));
 ```
 
-Or you can provide a [SparqlRemoteEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.SparqlRemoteEndpoint) and [SparqlRemoteUpdateEndpoint](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.SparqlRemoteUpdateEndpoint) instance like so:
+Or you can provide a [SparqlRemoteEndpoint](https://dotnetrdf.github.io/api/html/T_VDS_RDF_SparqlRemoteEndpoint.htm) and [SparqlRemoteUpdateEndpoint](https://dotnetrdf.github.io/api/html/T_VDS_RDF_SparqlRemoteUpdateEndpoint.htm) instance like so:
 
 ```csharp
 

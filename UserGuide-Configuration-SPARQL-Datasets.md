@@ -10,7 +10,7 @@ Datasets are configured using the [Configuration Vocabulary](http://www.dotnetrd
 
 # In-Memory Datasets 
 
-The in-memory dataset represents pure in-memory data which is the default operation mode for Leviathan. Any [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) instance can be wrapped in a [InMemoryDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset).
+The in-memory dataset represents pure in-memory data which is the default operation mode for Leviathan. Any [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) instance can be wrapped in a [InMemoryDataset](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.Datasets.InMemoryDataset).
 
 The following example shows a Triple Store configuration being specified as the underlying source for a Dataset configuration:
 

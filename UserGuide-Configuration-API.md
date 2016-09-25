@@ -27,7 +27,7 @@ To specify an object you will need at least two triples, for example to specify 
 
 We use the `rdf:type` (specified here by the Turtle/N3 keyword `a`) predicate to specify that some Node has a type of `dnr:Graph` which is the class of Graphs in the Configuration Vocabulary. Then the `dnr:type` property is used to specify the .Net type of this object, for dotNetRDF types it is sufficient to specify the full namespace qualified name of the class. For any other class you will need to specify the Assembly Qualified Name of the class.
 
-If you fail to specify a `dnr:type` property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the `dnr:Graph` class the default type is [Graph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Graph).
+If you fail to specify a `dnr:type` property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the `dnr:Graph` class the default type is [Graph](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Graph.htm).
 
 ## Imports 
 

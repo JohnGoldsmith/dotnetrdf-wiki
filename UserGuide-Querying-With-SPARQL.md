@@ -235,7 +235,7 @@ The typical cause of this is that when you call `LoadFromFile()` or `LoadFromUri
 
 #### FROM and FROM NAMED 
 
-Another common error stems from misunderstandings about the purpose of `FROM` and `FROM NAMED` clauses.  These are used simply to identify the graphs used for the rest of the query and these graphs **MUST** exist in the dataset you are querying.  Note that providing a graph name does not cause that graph to be retrieved from a file or the web though we do provide the [DiskDemandTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.DiskDemandTripleStore) and the [WebDemandTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.WebDemandTripleStore) which can be used to add this behaviour if desired.
+Another common error stems from misunderstandings about the purpose of `FROM` and `FROM NAMED` clauses.  These are used simply to identify the graphs used for the rest of the query and these graphs **MUST** exist in the dataset you are querying.  Note that providing a graph name does not cause that graph to be retrieved from a file or the web though we do provide the [DiskDemandTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_DiskDemandTripleStore.htm) and the [WebDemandTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_WebDemandTripleStore.htm) which can be used to add this behaviour if desired.
 
 The graphs identified by the `FROM` clause are merged together and these form the default graph for the query, this is the graph that all triple patterns not contained in a `GRAPH` clause must match.  The graphs identified by the `FROM NAMED` clause are used individually for matching triple patterns contained within `GRAPH` clauses.
 
@@ -250,7 +250,7 @@ The library includes the following query processors:
 | [LeviathanQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.LeviathanQueryProcessor) | Standard in-memory query processor |
 | [ExplainQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ExplainQueryProcessor) | Extension of the `LeviathanQueryProcessor` which executes queries and prints explanations to the Console |
 | [RemoteQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.RemoteQueryProcessor) | Executes queries against a remote SPARQL endpoint |
-| [GenericQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.GenericQueryProcessor) | Executes a query against a [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) implementation |
+| [GenericQueryProcessor](https://dotnetrdf.github.io/api/html/T_VDS_RDF_GenericQueryProcessor.htm) | Executes a query against a [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) implementation |
 
 ### Customizing Query Behaviour 
 
@@ -305,7 +305,7 @@ Alternatively you can make a query direct to a store without using any abstracti
 
 ## Direct Triple Store Query 
 
-In-memory representations of Triple Stores which implement the [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) interface can be queried locally using the libraries in-memory SPARQL implementation.
+In-memory representations of Triple Stores which implement the [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) interface can be queried locally using the libraries in-memory SPARQL implementation.
 
 **Note:** This method of making queries is considered deprecated and should be avoided in preference of using a `ISparqlQueryProcessor` wherever possible.
 
@@ -366,7 +366,7 @@ If you are still having problems with no results you can also look at [[Debuggin
 
 # Loading/Saving Results 
 
-A `SparqlResultSet` may be loaded/saved using the [ISparqlResultsReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader) and [ISparqlResultsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter) interfaces respectively. These are functionally very similar to the `IRdfReader` and `IRdfWriter` interfaces described on the [[Reading RDF|UserGuide-Reading-RDF]] and [[Writing RDF|UserGuide-Writing-RDF]] pages.
+A `SparqlResultSet` may be loaded/saved using the [ISparqlResultsReader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_ISparqlResultsReader.htm) and [ISparqlResultsWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_ISparqlResultsWriter.htm) interfaces respectively. These are functionally very similar to the `IRdfReader` and `IRdfWriter` interfaces described on the [[Reading RDF|UserGuide-Reading-RDF]] and [[Writing RDF|UserGuide-Writing-RDF]] pages.
 
 A quick example is as follows:
 

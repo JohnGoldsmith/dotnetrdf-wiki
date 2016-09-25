@@ -2,7 +2,7 @@
 
 # Configuring Query Processors 
 
-Query Processors are classes that can process SPARQL Queries are return a [SparqlResultSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet) or [IGraph](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IGraph) as appropriate. Query Processors implement the [ISparqlQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ISparqlQueryProcessor) interface and the library provides 5 concrete implementations of this all of which can be configured using the Configuration API.
+Query Processors are classes that can process SPARQL Queries are return a [SparqlResultSet](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlResultSet) or [IGraph](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IGraph.htm) as appropriate. Query Processors implement the [ISparqlQueryProcessor](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.ISparqlQueryProcessor) interface and the library provides 5 concrete implementations of this all of which can be configured using the Configuration API.
 
 # Basic Configuration 
 
@@ -18,7 +18,7 @@ _:proc a dnr:SparqlQueryProcessor ;
 
 ## Leviathan Query Processor 
 
-The Leviathan Query Processor is used to process queries on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) interface e.g.
+The Leviathan Query Processor is used to process queries on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a `dnr:usingStore` property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) interface e.g.
 
 ```turtle
 
@@ -56,7 +56,7 @@ The above specifies a Query Processor which passes the queries to the SPARQL eng
 
 ## Simple Query Processor 
 
-Similar to the Generic Query Processor the Simple Query Processor passes queries to the `ExecuteQuery()` method of a Triple Store that implements the [INativelyQueryablerStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore) interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
+Similar to the Generic Query Processor the Simple Query Processor passes queries to the `ExecuteQuery()` method of a Triple Store that implements the [INativelyQueryablerStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_INativelyQueryableStore.htm) interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
 
 ```turtle
 

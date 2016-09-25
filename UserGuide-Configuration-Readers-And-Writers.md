@@ -30,9 +30,9 @@ The same basic configuration applies regardless of whether you are configuring a
 
 | RDF Class | .Net Class |
 | --- | --- |
-| `dnr:RdfWriter` | [IRdfWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfWriter) |
-| `dnr:RdfParser` | [IRdfReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IRdfReader) |
-| `dnr:DatasetParser` | [IStoreReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IStoreReader) |
-| `dnr:DatasetWriter` | [IStoreWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IStoreWriter) |
-| `dnr:SparqlResultsParser` | [ISparqlResultsReader](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsReader) |
-| `dnr:SparqlResultsWriter` | [ISparqlResultsWriter](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ISparqlResultsWriter) |
+| `dnr:RdfWriter` | [IRdfWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IRdfWriter.htm) |
+| `dnr:RdfParser` | [IRdfReader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IRdfReader.htm) |
+| `dnr:DatasetParser` | [IStoreReader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IStoreReader.htm) |
+| `dnr:DatasetWriter` | [IStoreWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IStoreWriter.htm) |
+| `dnr:SparqlResultsParser` | [ISparqlResultsReader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_ISparqlResultsReader.htm) |
+| `dnr:SparqlResultsWriter` | [ISparqlResultsWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_ISparqlResultsWriter.htm) |

@@ -145,7 +145,7 @@ The above is equivalent to the previous example since we've used a `@forall` dir
 
 # Using Inference with Triple Stores 
 
-The library also provides an [IInferencingTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInferencingTripleStore) interface which extends the basic `ITripleStore` interface with methods which allow for the attachment of reasoners (instances of `IInferenceEngine` implementations) to a Triple Store. Reasoning when used in this sense is static in that inference is applied only at certain points:
+The library also provides an [IInferencingTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInferencingTripleStore.htm) interface which extends the basic `ITripleStore` interface with methods which allow for the attachment of reasoners (instances of `IInferenceEngine` implementations) to a Triple Store. Reasoning when used in this sense is static in that inference is applied only at certain points:
 
 * When you add a reasoner the `IInferencingTripleStore` the implementations in the library will apply the reasoner to all existing Graphs in the Store
 * When you add a new Graph to the Store the reasoner will be applied to that Graph

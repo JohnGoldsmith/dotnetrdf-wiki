@@ -8,11 +8,11 @@ Triples Stores in dotNetRDF are used to represent collections of graphs and to a
 
 # Basic Properties 
 
-Triple Stores are based on the [ITripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.ITripleStore) interface which defines the basic properties of a triple store as follows:
+Triple Stores are based on the [ITripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_ITripleStore.htm) interface which defines the basic properties of a triple store as follows:
 
 ## Graphs 
 
-Gets the collection of graphs in the triple store which is a [BaseGraphCollection](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.BaseGraphCollection) - this collection allows you to enumerate through and count the number of graphs in the triple store.
+Gets the collection of graphs in the triple store which is a [BaseGraphCollection](https://dotnetrdf.github.io/api/html/T_VDS_RDF_BaseGraphCollection.htm) - this collection allows you to enumerate through and count the number of graphs in the triple store.
 
 Note that this only returns graphs loaded in-memory for the triple store and does not necessarily represent the entire triple store.
 
@@ -114,7 +114,7 @@ The `Remove(Uri graphUri)` method is used to remove a graph that is in the tripl
 
 # In-Memory Triple Stores 
 
-As you have seen the basic triple store interface simply allows you to enumerate over a triple store and to add and remove graphs from it. While this is useful in itself you'll often want to make queries over the entire store and for this you'll need to use one of the classes that implement [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore).
+As you have seen the basic triple store interface simply allows you to enumerate over a triple store and to add and remove graphs from it. While this is useful in itself you'll often want to make queries over the entire store and for this you'll need to use one of the classes that implement [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm).
 One of the main things the `IInMemoryQueryableStore` does is to define equivalents of all the various `GetTriples()` methods from the `IGraph` interface for triple stores. It has two versions of each method, one which operates over all the triples in the triple Store and one which operates over a subset of the triples where the subset is defined by a list of Graph URIs.
 
 Perhaps the more important feature of the interface is that it defines an `ExecuteQuery()` method which can be used to execute SPARQL queries in-memory over the Triple Store. There are two variants of this method, one which takes the raw SPARQL query as a String and one which takes a [SparqlQuery](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Query.SparqlQuery) object e.g.
@@ -171,11 +171,11 @@ One of the advantages of using the [SparqlQueryParser](http://www.dotnetrdf.org/
 
 # Natively Queryable Stores 
 
-The [INativelyQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.INativelyQueryableStore) interface is another extension to the `ITripleStore` interface which is disjoint from the `IInMemoryQueryableStore` interface i.e. a Store cannot be both In-Memory and Natively Queryable. Natively Queryable Stores represents Stores which provide their own SPARQL implementations and so can be queried directly.
+The [INativelyQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_INativelyQueryableStore.htm) interface is another extension to the `ITripleStore` interface which is disjoint from the `IInMemoryQueryableStore` interface i.e. a Store cannot be both In-Memory and Natively Queryable. Natively Queryable Stores represents Stores which provide their own SPARQL implementations and so can be queried directly.
 
 An `INativelyQueryableStore` defines only one additional method which is `ExecuteQuery(String query)` which takes a SPARQL query as a String and executes it against the underlying SPARQL implementation. Note that these stores may only be queryable read-only wrappers around an underlying store.
 
-We provide a [PersistentTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore) class which is an implementation of the `INativelyQueryableStore` that can be used with any of the backing stores we support with [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
+We provide a [PersistentTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_PersistentTripleStore.htm) class which is an implementation of the `INativelyQueryableStore` that can be used with any of the backing stores we support with [IQueryableStorage](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.Storage.IQueryableStorage) implementations. This class provides an in-memory view of an underlying store where changes to the in-memory view can be persisted to the underlying store (or discarded) as you desire.
 
 ```csharp
 
@@ -273,10 +273,10 @@ The Library contains the following standard `ITripleStore` implementations:
 
 | Implementation | Description |
 | --- | --- |
-| [DiskDemandTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.DiskDemandTripleStore) | Represents an in-memory store where Graphs are loaded on-demand from the local file system if they are not already in memory and provided the Graph Names are file URIs |
-| [PersistentTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.PersistentTripleStore) | Represents an in-memory view of some store provided by a IStorageProvider instance. |
-| [TripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.TripleStore) | In-memory Triple Store representation. |
-| [WebDemandTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.WebDemandTripleStore) | Represents an in-memory Store where Graphs are loaded on-demand from the Web if they are not already in-memory |
+| [DiskDemandTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_DiskDemandTripleStore.htm) | Represents an in-memory store where Graphs are loaded on-demand from the local file system if they are not already in memory and provided the Graph Names are file URIs |
+| [PersistentTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_PersistentTripleStore.htm) | Represents an in-memory view of some store provided by a IStorageProvider instance. |
+| [TripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_TripleStore.htm) | In-memory Triple Store representation. |
+| [WebDemandTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_WebDemandTripleStore.htm) | Represents an in-memory Store where Graphs are loaded on-demand from the Web if they are not already in-memory |
 
 # Standard RDF Dataset Parsers & Writers 
 

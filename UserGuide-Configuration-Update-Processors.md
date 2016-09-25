@@ -18,7 +18,7 @@ _:proc a dnr:SparqlUpdateProcessor .
 
 ## Leviathan Update Processor 
 
-The Leviathan Update Processor is used to process updates on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a dnr:usingStore property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IInMemoryQueryableStore) interface e.g.
+The Leviathan Update Processor is used to process updates on in-memory stores using the library's Leviathan SPARQL Engine. It is configured quite simply by adding a dnr:usingStore property to the basic configuration, the object pointed to by this property must be a Triple Store which implements the [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) interface e.g.
 
 ```turtle
 
@@ -63,7 +63,7 @@ The above specifies a Update Processor which applies the updates to the AllegroG
 
 ## Simple Update Processor 
 
-Similar to the Generic Update Processor the Simple Update Processor passes updates to the `ExecuteUpdate()` method of a Triple Store that implements the [IUpdateableTripleStore](http://www.dotnetrdf.org/api/index.asp?Topic=VDS.RDF.IUpdateableTripleStore) interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
+Similar to the Generic Update Processor the Simple Update Processor passes updates to the `ExecuteUpdate()` method of a Triple Store that implements the [IUpdateableTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IUpdateableTripleStore.htm) interface. To configure this add a using Store property that points to a Triple Store that implements the relevant interface e.g.
 
 ```turtle
 
