@@ -6,12 +6,12 @@ Triple Stores can be specified using the Configuration Vocabulary in a number of
 
 Triple Stores are loaded from configuration in the following way:
 
-# Create an instance of the relevant ITripleStore implementation based on the dnr:type property
-# Any automated loading that the implementation does starts occurring now
-# Read in any data sources in the following order
-## Graphs
-## Dataset Files
-# Apply reasoners
+1. Create an instance of the relevant ITripleStore implementation based on the dnr:type property
+1. Any automated loading that the implementation does starts occurring now
+1. Read in any data sources in the following order
+   1. Graphs
+   1. Dataset Files
+1. Apply reasoners
 
 # Basic Configuration 
 
