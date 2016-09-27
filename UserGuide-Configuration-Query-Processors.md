@@ -32,15 +32,15 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-For information on how to configure Triple Stores see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
+For information on how to configure Triple Stores see [[Configuration API - Triple Stores|UserGuide-Configuration-Triple-Stores]].
 
-Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and `dnr:usingStore` will be ignored.
+Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[Configuration API - Datasets|UserGuide-Configuration-SPARQL-Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and `dnr:usingStore` will be ignored.
 
 ## Generic Query Processor 
 
 The Generic Query Processor is used to process queries against some arbitrary store's SPARQL engine where the store you wish to connect to has an implementation of [IQueryableStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IQueryableStorage.htm). To configure these handlers simply add a `dnr:storageProvider` property to the basic configuration like so:
 
-{{{
+```turtle
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlQueryProcessor ;
@@ -52,7 +52,7 @@ _:manager a dnr:StorageProvider ;
   dnr:server <http://localhost:3030/dataset> .
 ```
 
-The above specifies a Query Processor which passes the queries to the SPARQL engine of the specified Fuseki store. See [[UserGuide/Configuration/Storage Providers|Configuration API - Storage Providers]] for more detail on configuring storage providers.
+The above specifies a Query Processor which passes the queries to the SPARQL engine of the specified Fuseki store. See [[Configuration API - Storage Providers|UserGuide-Configuration-Storage-Providers]] for more detail on configuring storage providers.
 
 ## Simple Query Processor 
 
@@ -79,7 +79,7 @@ The above configuration is effectively identical to the previous example, genera
 
 ## Remote Query Processor 
 
-The Remote Query Processor is used to farm out queries to a remote SPARQL endpoint, it can be configured to use any endpoint configurable as described on [[UserGuide/Configuration/SPARQL Endpoints|Configuration API - SPARQL Endpoints]].
+The Remote Query Processor is used to farm out queries to a remote SPARQL endpoint, it can be configured to use any endpoint configurable as described on [[Configuration API - SPARQL Endpoints|UserGuide-Configuration-SPARQL-Endpoints]].
 
 ```turtle
 
