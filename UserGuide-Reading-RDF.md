@@ -20,6 +20,7 @@ dotNetRDF currently supports reading RDF files in all of the following RDF seria
 * TriG (Turtle with Named Graphs)
 * TriX (Named Graphs in XML)
 * NQuads (NTriples plus Context)
+* JSON-LD (1.0 and 1.1)
 
 Several of these serialisations have multiple variants of them with differing syntax rules.  Where multiple variants are supported dotNetRDF will default to accepting the most recent supported variant for input *but* will use the oldest supported variant for output.  This is [Postel's Law](http://en.wikipedia.org/wiki/Robustness_principle) in action - we are liberal in what we accept and conservative in what we send.
 
@@ -241,6 +242,7 @@ These are the standard parser classes contained in the Library:
 | TriGParser | TriG |
 | TriXParser | TriX |
 | TurtleParser | Turtle, NTriples |
+| JsonLdParser | JSON-LD |
 
 ----
 
