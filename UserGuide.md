@@ -78,6 +78,7 @@ The following documentation covers what are considered advanced topics but which
 * [[Formatting API|UserGuide-Formatting-API]]
 * [[Configuration API|UserGuide-Configuration-API]]
 * [[Handlers API|UserGuide-Handlers-API]]
+* [[JSON-LD API|UserGuide-JsonLd-API]]
 
 ## Tools
 
