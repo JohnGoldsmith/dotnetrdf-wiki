@@ -57,6 +57,7 @@
    1. [[Static Options|UserGuide-Configuration-Options]]
    1. [[Proxy Servers|UserGuide-Configuration-Proxy-Servers]]   
 1. [[Handlers API|UserGuide-Handlers-API]]
+1. [[JSON-LD API|UserGuide-JsonLd-API]]
 1. [[Tools|UserGuide-Tools]]
 
 # [[Developer Guide|DeveloperGuide]]
