@@ -4,6 +4,8 @@ The namespace `VDS.RDF.JsonLd` contains classes related to the processing of JSO
 
 The APIs we implement are based on the [JSON-LD API Specification](https://json-ld.org/spec/latest/json-ld-api/), and are implemented as static methods on the class `VDS.RDF.JsonLd.JsonLdProcessor`. Where JSON objects or arrays are passed through the APIs, we use the Newtonsoft.JSON library's LINQ APIs to represent those objects.
 
+**NOTE** - at the time of writing, the JSON-LD 1.1 specifications are still in development. The current implementation is in sync with the specifications as of 25 May 2017.
+
 ## Features
 
 * [[Expansion|UserGuide-JsonLd-Expansion]]
