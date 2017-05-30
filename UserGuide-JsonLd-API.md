@@ -10,5 +10,5 @@ The APIs we implement are based on the [JSON-LD API Specification](https://json-
 * [[Compaction|UserGuide-JsonLd-Compaction]]
 * [[Flattening|UserGuide-JsonLd-Flattening]]
 * [[Framing|UserGuide-JsonLd-Framing]]
-* [[Processor Configuration|UserGuide-JsonLd-Configuration]]
+* [[Processor Options|UserGuide-JsonLd-ProcessorOptions]]
 * [[Error Handling|UserGuide-JsonLd-ErrorHandling]]
