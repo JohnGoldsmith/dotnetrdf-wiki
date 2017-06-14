@@ -10,7 +10,7 @@ To start this discussion of working with Graphs we're going to look at the prope
 
 ### BaseUri
 
-The `BaseUri` property gets/sets the Base URI of the Graph. A Base URI if the URI against which any relative URIs are resolved as well as any prefixed names in the default namespace (if the default namespace is not explicitly defined). Graphs are not required to have a Base URI and by default this property returns null . Typically the Base URI gets set when you read RDF from a file and the RDF syntax defines a Base URI or you retrieve RDF from a URI using the `UriLoader` in which case the URI retrieved is the Base URI.
+The `BaseUri` property gets/sets the Base URI of the Graph. A Base URI is the URI against which any relative URIs are resolved as well as any prefixed names in the default namespace (if the default namespace is not explicitly defined). Graphs are not required to have a Base URI and by default this property returns null . Typically the Base URI gets set when you read RDF from a file and the RDF syntax defines a Base URI or you retrieve RDF from a URI using the `UriLoader` in which case the URI retrieved is the Base URI.
 
 *Note:* The Base URI of a Graph is also considered to be the Graph name wherever code that handles Graphs works with Named Graphs. Also a null Base URI is treating as the Graph being the unnamed graph, this is often also known as the default graph.
 
