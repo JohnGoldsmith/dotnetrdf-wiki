@@ -173,7 +173,7 @@ Triples contain a reference to the Graph that they were created for (though not 
 
 A Triple Store represents a collection of Graphs and is used to work with larger quantities of RDF. Triple Stores are designed to be less tangible than Graphs in terms of their interface and implementations. While a specific implementation may represent some Triple Store it does not necessarily provide direct access to all the data in that Store i.e. a Triple Store is not necessarily in-memory.
 
-Triple Stores are actually based on several interfaces, the base interface for them is `ITripleStore`. This interface defines properties and methods relating to adding & removing Graphs and the retrieval or Graphs and Triples contained in the Store.
+Triple Stores are actually based on several interfaces, the base interface for them is `ITripleStore`. This interface defines properties and methods relating to adding & removing Graphs and the retrieval of Graphs and Triples contained in the Store.
 
 If you have a Store that is partially/fully in-memory then it will implement the `IInMemoryQueryableStore` interface which is an extension of `ITripleStore`. The `IInMemoryQueryableStore` interface defines a swathe of additional methods which provide for various forms of selection of Triples from the Store, it also provides two query methods which allow for executing SPARQL queries on the Triple Store using the libraries in-memory SPARQL implementation. The library contains a class called `TripleStore` which is the basic implementation of this interface.
 
