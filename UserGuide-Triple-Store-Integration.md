@@ -208,7 +208,7 @@ public class UpdateGraphExample
 
 ## Additional Interfaces
 
-Some Stores provide SPARQL Query and/or Update support and this support is indicated by the `IStorageProvider` implementation also implementing the `VDS.RDF.Storage.IQueryableStorage` and `VDS.RDF.IUpdateableStorage` interfaces.
+Some Stores provide SPARQL Query and/or Update support and this support is indicated by the `IStorageProvider` implementation also implementing the `VDS.RDF.Storage.IQueryableStorage` and `VDS.RDF.IUpdateableStorage` interfaces. In addition those stores that support query-time reasoning may implement the `VDS.RDF.Storage.IReasoningQueryableStorage` interface.
 
 There are also `VDS.RDF.Storage.IAsyncQueryableStorage` and `VDS.RDF.Storage.IAsyncUpdateableStorage` interfaces which are the async equivalents of the aforementioned interfaces.
 
@@ -247,6 +247,8 @@ public class SparqlQueryExample
 	}
 }
 ```
+
+Stores which implement the `IReasoningQueryableStorage` interface have an overload of the Query method which accepts a boolean parameter used to enable or disable query-time reasoning for the SPARQL query.
 
 ### Update()
 
