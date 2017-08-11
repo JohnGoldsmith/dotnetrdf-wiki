@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Tools|UserGuide-Tools]] > [[rdfConvert|UserGuide-Tools-rdfConvert]]
+[[Home]] > [[User Guide|UserGuide]] > [[Tools|UserGuide-Tools]] > rdfConvert
 
 # rdfConvert 
 
