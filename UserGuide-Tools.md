@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]]
+[[Home]] > [[User Guide|UserGuide]] > Tools
 
 # Tools 
 
@@ -6,7 +6,7 @@ Besides our developer APIs we also produce a suite of command line and GUI tools
 
 ## Download 
 
-You can download our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows) from our main website.
+You can download our Toolkit from the [Toolkit GitHub repository](https://github.com/dotnetrdf/dotNetRDF.Toolkit/releases). Each release is provided as an MSI installer package and as a plain zip file. 
 
 Using the Toolkit requires .Net 4.0 Framework Full to be installed on your machine.
 
