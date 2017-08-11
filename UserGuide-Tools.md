@@ -4,11 +4,15 @@
 
 Besides our developer APIs we also produce a suite of command line and GUI tools for working with RDF and SPARQL, you can find links to their documentation in this section of the user guide.
 
-## Download 
+## Download and Pre-requisites
 
-You can download the dotNetRDF toolkit from our [GitHub Repository](https://github.com/dotnetrdf/dotNetRDF.Toolkit/releases).
+You can download the dotNetRDF toolkit from our [GitHub Repository](https://github.com/dotnetrdf/dotNetRDF.Toolkit/releases). The tools are released in two packages:
 
-Using the Toolkit requires .Net 4.0 Framework Full to be installed on your machine.
+* `dotNetRDFToolkit-Installer-*.zip` is a zip file containing a setup.exe and MSI installer package for the tools. Download and unzip and then run the setup.exe to install the tools. This is also the smaller of the two packages as shared files are included in the installer only once.
+
+* `dotNetRDFToolkit-noInstaller-*.zip` is a zip file containing the binaries. You can simply download and unzip the files to what ever location is most convenient for you.
+
+NOTE: Using the Toolkit requires .Net 4.0 Framework Full to be installed on your machine.
 
 ## Available Tools 
 
