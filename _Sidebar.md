@@ -59,6 +59,9 @@
 1. [[Handlers API|UserGuide-Handlers-API]]
 1. [[JSON-LD API|UserGuide-JsonLd-API]]
 1. [[Tools|UserGuide-Tools]]
+   1. [[rdfConvert|UserGuide-Tools-rdfConvert]]
+   1. [[rdfEditor|UserGuide-Tools-rdfEditor]]
+   1. [[rdfOptStats|UserGuide-Tools-rdfOptStats]]
 
 # [[Developer Guide|DeveloperGuide]]
 
