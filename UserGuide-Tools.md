@@ -6,7 +6,7 @@ Besides our developer APIs we also produce a suite of command line and GUI tools
 
 ## Download 
 
-You can download our Toolkit from the [Toolkit GitHub repository](https://github.com/dotnetrdf/dotNetRDF.Toolkit/releases). Each release is provided as an MSI installer package and as a plain zip file. 
+You can download the dotNetRDF toolkit from our [GitHub Repository](https://github.com/dotnetrdf/dotNetRDF.Toolkit/releases).
 
 Using the Toolkit requires .Net 4.0 Framework Full to be installed on your machine.
 
@@ -14,13 +14,13 @@ Using the Toolkit requires .Net 4.0 Framework Full to be installed on your machi
 
 | Tool | Description |
 | --- | --- |
-| [[UserGuide/Tools/rdfConvert|rdfConvert]] | Utility for converting between different RDF formats |
-| [[UserGuide/Tools/rdfEditor|rdfEditor]] | Notepad replacement for editing of RDF files |
-| [[UserGuide/Tools/rdfOptStats|rdfOptStats]] | Utility for generating stats for use with our in-memory stats based optimizer |
-| [[UserGuide/Tools/rdfQuery|rdfQuery]] | Utility for making SPARQL queries at the command line |
-| [[UserGuide/Tools/rdfServer|rdfServer]] | Utility for running a simple SPARQL server |
-| [[UserGuide/Tools/rdfServerGui|rdfServerGui]] | Simple GUI for managing rdfServer instances |
+| [[rdfConvert|UserGuide-Tools-rdfConvert]] | Utility for converting between different RDF formats |
+| [[rdfEditor|UserGuide-Tools-rdfEditor]] | Notepad replacement for editing of RDF files |
+| [[rdfOptStats|UserGuide-Tools-rdfOptStats]] | Utility for generating stats for use with our in-memory stats based optimizer |
+| [[rdfQuery|UserGuide-Tools-rdfQuery]] | Utility for making SPARQL queries at the command line |
+| [[rdfServer|UserGuide-Tools-rdfServer]] | Utility for running a simple SPARQL server |
+| [[rdfServerGui|UserGuide-Tools-rdfServerGui]] | Simple GUI for managing rdfServer instances |
 | [[rdfWebDeploy|UserGuide-Tools-rdfWebDeploy]] | Utility for helping with deployment of our [[ASP.Net Integration|UserGuide-ASPNET-Integration]] features |
-| [[UserGuide/Tools/soh|soh]] | Utility for accessing SPARQL servers via the command line |
-| [[UserGuide/Tools/SparqlGui|SparqlGui]] | GUI for experimenting with SPARQL queries using our in-memory SPARQL implementation |
-| [[UserGuide/Tools/Store Manager|Store Manager]] | GUI for working with and managing any supported Triple Store for which we have a [[UserGuide/Storage/Providers|Storage Provider]] |
+| [[soh|UserGuide-Tools-soh]] | Utility for accessing SPARQL servers via the command line |
+| [[SparqlGui|UserGuide-Tools-SparqlGui]] | GUI for experimenting with SPARQL queries using our in-memory SPARQL implementation |
+| [[Store Manager|UserGuide-Tools-StoreManager]] | GUI for working with and managing any supported Triple Store for which we have a [[Storage Provider|UserGuide-Storage-Providers]] |
