@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfOptStats|rdfOptStats]]
+[[Home]] > [[User Guide|UserGuide]] > [[Tools|UserGuide-Tools]] > rdfOptStats
 
 # rdfOptStats 
 
@@ -6,23 +6,25 @@ rdfOptStats is a command line utility for generating statistics on RDF for use w
 
 ## Download 
 
-You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
+You can download this tool as part of our [[Toolkit|UserGuide-Tools]]
 
 ## Documentation 
 
 Command usage is as follows:
 
-{{{
+```
 rdfOptStats.exe [options] input1 [input2 [input3 ...]]
 ```
 
 e.g. Generate all stats to a file `stats.ttl` for the input files `data1.rdf` and `data2.rdf`
-{{{
+
+```
 rdfOptStats.exe -all -output stats.ttl data1.rdf data2.rdf
 ```
 
 e.g. Generate all stats for all files within a given directory
-{{{
+
+```
 rdfOptStats.exe -all -output stats.nt data\*
 ```
 
