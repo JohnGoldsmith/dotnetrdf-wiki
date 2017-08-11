@@ -1,14 +1,14 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/Store Manager|Store Manager]]
+[[Home]] > [[User Guide|UserGuide]] > [[Tools|UserGuide-Tools]] > Store Manager
 
 # Store Manager 
 
-The Store Manager is a utility which allows you to use a simple GUI interface to view and manage the contents of Triple Stores. You can work with any of the supported native Triple Stores, see [[Storage Providers|UserGuide/Storage/Providers]] for the list of currently supported stores.
+The Store Manager is a utility which allows you to use a simple GUI interface to view and manage the contents of Triple Stores. You can work with any of the supported native Triple Stores, see [[Storage Providers|UserGuide-Storage-Providers]] for the list of currently supported stores.
 
 Functionality differs depending on the type of store and the capabilities of the given store (or more specifically of our integration with that store).
 
 ## Download 
 
-You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
+You can download this tool as part of our [[Toolkit|UserGuide-Tools]]
 
 ## Documentation 
 
