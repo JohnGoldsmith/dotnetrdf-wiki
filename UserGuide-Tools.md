@@ -27,4 +27,4 @@ NOTE: Using the Toolkit requires .Net 4.0 Framework Full to be installed on your
 | [[rdfWebDeploy|UserGuide-Tools-rdfWebDeploy]] | Utility for helping with deployment of our [[ASP.Net Integration|UserGuide-ASPNET-Integration]] features |
 | [[soh|UserGuide-Tools-soh]] | Utility for accessing SPARQL servers via the command line |
 | [[SparqlGui|UserGuide-Tools-SparqlGui]] | GUI for experimenting with SPARQL queries using our in-memory SPARQL implementation |
-| [[Store Manager|UserGuide-Tools-StoreManager]] | GUI for working with and managing any supported Triple Store for which we have a [[Storage Provider|UserGuide-Storage-Providers]] |
+| [[Store Manager|UserGuide-Tools-Store-Manager]] | GUI for working with and managing any supported Triple Store for which we have a [[Storage Provider|UserGuide-Storage-Providers]] |
