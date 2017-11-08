@@ -21,6 +21,13 @@ Currently dotNetRDF supports writing Graphs in the following formats:
   * CSV
   * TSV
 
+In addition the following formats are supported when writing a Triple Store containing multiple graphs:
+
+* NQuads
+* TriX
+* TriG
+* JSON-LD
+
 Several of these serialisations have multiple variants of them with differing syntax rules.  Where multiple variants are supported dotNetRDF will default to accepting the most recent supported variant for input *but* will use the oldest supported variant for output.  This is [Postel's Law](http://en.wikipedia.org/wiki/Robustness_principle) in action - we are liberal in what we accept and conservative in what we send.
 
 To learn about how to save Graphs to forms of Storage other than files on disk see [[Working with Graphs|UserGuide-Working-With-Graphs]] and for information on saving Triple Stores see [[Working with Triple Stores|UserGuide-Working-With-Triple-Stores]]
