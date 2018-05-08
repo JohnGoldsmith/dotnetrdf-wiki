@@ -2,7 +2,7 @@
 
 # Working with Triple Stores 
 
-Triples Stores in dotNetRDF are used to represent collections of graphs and to allow you to work with larger quantities of RDF easily. As stated in the [[UserGuide/Library Overview|Library Overview]] our triple stores are designed to be less tangible than graphs since a triple store does not necessarily have to be in-memory and may simply represent an interface to or a partial view on some actual underlying store.
+Triples Stores in dotNetRDF are used to represent collections of graphs and to allow you to work with larger quantities of RDF easily. As stated in the [[Library Overview|UserGuide-Library-Overview]] our triple stores are designed to be less tangible than graphs since a triple store does not necessarily have to be in-memory and may simply represent an interface to or a partial view on some actual underlying store.
 
 **Note:** This document primarily discusses Triple Stores in terms of their representation in-memory within the library. For details of working with external Triple Stores please see [[Triple Store Integration|UserGuide/Triple Store Integration]]
 
@@ -297,7 +297,7 @@ In addition we also provide a [GraphMLWriter](https://dotnetrdf.github.io/api/ht
 
 # Tutorial Navigation 
 
-The previous topic was [[UserGuide-Typed-Values-And-Lists|Typed Values and Lists]], the next topic is [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
+The previous topic was [[Typed Values and Lists|UserGuide-Typed-Values-And-Lists]], the next topic is [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
 Users wishing to learn more may wish to jump straight to one of the following pages:
 
