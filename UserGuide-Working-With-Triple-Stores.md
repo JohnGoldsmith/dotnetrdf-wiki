@@ -235,7 +235,7 @@ public class PersistentTripleStoreExample
 Often you want the information you place into an in-memory Triple Store to be persisted over time and be able to load/save that triple store as required. Currently we provide the means to save/load a Triple Store in the following ways:
 
 * As a file in a RDF dataset format - TriG, TriX or NQuads
-* As explained in [[UserGuide/Working with Graphs|Working with Graphs]] you can also load/save individual Graphs from arbitrary stores for which there is an `IStorageProvider` defined.
+* As explained in [[Working with Graphs|UserGuide-Working-With-Graphs|]] you can also load/save individual Graphs from arbitrary stores for which there is an `IStorageProvider` defined.
 
 ## RDF Dataset Storage 
 
