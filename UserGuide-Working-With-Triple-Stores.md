@@ -291,11 +291,13 @@ The Library contains the following standard `IStoreReader` and `IStoreWriter` im
 | [TriXParser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_TriXParser.htm) | Parses TriX |
 | [TriXWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_TrixWriter.htm) | Writes TriX |
 
+In addition we also provide a [GraphMLWriter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_GraphMLWriter.htm) class. This writer does not output RDF, but instead [GraphML](http://graphml.graphdrawing.org/) and XML representation of the graphs structure of the store. This file can be loaded into suitable tools for graph visualization.
+
 ----
 
 # Tutorial Navigation 
 
-The previous topic was [[UserGuide/Typed Values and Lists|Typed Values and Lists]], the next topic is [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
+The previous topic was [[UserGuide-Typed-Values-and-Lists|Typed Values and Lists]], the next topic is [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
 Users wishing to learn more may wish to jump straight to one of the following pages:
 
