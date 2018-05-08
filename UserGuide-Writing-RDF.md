@@ -157,6 +157,8 @@ These are the standard Writer classes contained in the library:
 
 In addition, there is a helper class, `SingleGraphWriter` which implements the `IRdfWriter` interface and allows a graph to be written using a writer that implements the `IStoreWriter` interface. This allows a graph to be written using the serialization formats described at [[Working with Triple Stores|UserGuide-Working-With-Triple-Stores]].
 
+We also provide a `GraphVizWriter` which does not output RDF. Instead it generates a GraphViz DOT format file suitable for visualizing the content of a single RDF graph.
+
 ----
 
 # Tutorial Navigation
