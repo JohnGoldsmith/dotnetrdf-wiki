@@ -297,7 +297,7 @@ In addition we also provide a [GraphMLWriter](https://dotnetrdf.github.io/api/ht
 
 # Tutorial Navigation 
 
-The previous topic was [[UserGuide-Typed-Values-and-Lists|Typed Values and Lists]], the next topic is [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
+The previous topic was [[UserGuide-Typed-Values-And-Lists|Typed Values and Lists]], the next topic is [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 
 Users wishing to learn more may wish to jump straight to one of the following pages:
 
