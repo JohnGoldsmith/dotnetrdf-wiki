@@ -7,7 +7,7 @@ HTTP Handler configuration is used to specify the settings for HTTP Handlers tha
 When you specify a handler definition you must use a special dotNetRDF URI as the subject like so:
 
 ```turtle
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 <dotnetrdf:/folder/endpoint> a dnr:HttpHandler ;
   dnr:type "VDS.RDF.Web.QueryHandler" .
