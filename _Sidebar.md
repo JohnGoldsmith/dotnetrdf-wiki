@@ -7,6 +7,7 @@
 1. [[Working With Graphs|UserGuide-Working-With-Graphs]]
 1. [[Typed Values and Lists|UserGuide-Typed-Values-And-Lists]]
 1. [[Working with Triple Stores|UserGuide-Working-With-Triple-Stores]]
+1. [[Building SPARQL|UserGuide-Building-SPARQL]]
 1. [[Querying with SPARQL|UserGuide-Querying-With-SPARQL]]
 1. [[Updating with SPARQL|UserGuide-Updating-With-SPARQL]]
 
