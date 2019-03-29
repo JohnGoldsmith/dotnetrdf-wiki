@@ -4,6 +4,12 @@
 
 ## Nodes as dictionaries
 
+- [Simple](#Simple)
+- [Resource node recursion](#resource-node-recursion)
+- [Literal node translation](#literal-node-translation)
+- [Dictionary key conversion](#dictionary-key-conversion)
+- [Querying node dictionaries](#querying-node-dictionaries)
+
 ### Simple
 
 Nodes in a graph can be thought of as dictionaries (maps, hashes) where keys are predicates of outgoing statements (where given node is subject) and values are collections of objects of those statements.
@@ -59,6 +65,8 @@ var s = new Dictionary<INode, ICollection<INode>>
   },
 };
 ```
+
+[top](#nodes-as-dictionaries)
 
 ### Resource node recursion
 
@@ -118,6 +126,8 @@ var s1 = new Dictionary<INode, ICollection<object>>
 };
 ```
 
+[top](#nodes-as-dictionaries)
+
 ### Literal node translation 
 
 Literal objects on the other hand can be translated to their corresponding primitive types.
@@ -167,7 +177,9 @@ var s = new Dictionary<INode, ICollection<object>>
 };
 ```
 
-### Dictionary key conversions
+[top](#nodes-as-dictionaries)
+
+### Dictionary key conversion
 
 When looking at nodes as dictionaries, keys represent statement predicates, and so they are ultimately Uri nodes.
 
@@ -233,37 +245,99 @@ is equivalent to all of these dictionaries:
 var objects = new [] { "o" };
 
 // Uri node
-var s = new Dictionary<INode, ICollection<object> { {
+var s = new Dictionary<INode, ICollection<object>> { {
   f.CreateUriNode(new Uri("http://example.com/p")),
   objects } };
 
 // Absolute Uri
-var s = new Dictionary<Uri, ICollection<object> { {
+var s = new Dictionary<Uri, ICollection<object>> { {
   new Uri("http://example.com/p"),
   objects } };
 
 // Relative Uri
-var s = new Dictionary<Uri, ICollection<object> { {
+var s = new Dictionary<Uri, ICollection<object>> { {
   new Uri("p", UriKind.Relative), 
   objects } };
 
 // Absolute Uri string
-var s = new Dictionary<string, ICollection<object> { {
+var s = new Dictionary<string, ICollection<object>> { {
   "http://example.com/p", 
   objects } };
 
 // Relative Uri string
-var s = new Dictionary<string, ICollection<object> { {
+var s = new Dictionary<string, ICollection<object>> { {
   "p", 
   objects } };
 
 // QName
-var s = new Dictionary<string, ICollection<object> { {
+var s = new Dictionary<string, ICollection<object>> { {
   "ex:p", 
   objects } };
 
 // QName with default (empty) prefix
-var s = new Dictionary<string, ICollection<object> { {
+var s = new Dictionary<string, ICollection<object>> { {
   ":p", 
   objects } };
-``
+```
+
+[top](#nodes-as-dictionaries)
+
+### Querying node dictionaries
+
+Assuming the following graph
+
+```turtle
+:s1
+  :p1
+    "o1" ;     # t1
+    :s2 ,      # t2
+    [          # t3
+      :p2
+        "o2"   # t4
+    ] .
+
+:s2 :p3 "o3" . # t5
+```
+
+![image of graph](UserGuide-Dynamic-API/5.svg)
+
+one could get the values of the literal objects at `t1`, `t4` and `t5` like so:
+
+```csharp
+var o1 = s1.Graph
+  .GetTriplesWithSubjectPredicate(s1, s1.Graph.CreateUriNode(new Uri("http://example.com/p1")))
+  .Select(t => t.Object)
+  .First()
+  .AsValuedNode()
+  .AsString();
+
+var o3 = s1.Graph
+  .GetTriplesWithSubjectPredicate(s1, s1.Graph.CreateUriNode(new Uri("http://example.com/p1")))
+  .Skip(1)
+  .SelectMany(o => s1.Graph
+    .GetTriplesWithSubjectPredicate(t.Object, s1.Graph.CreateUriNode(new Uri("http://example.com/p3")))
+    .Select(t => t.Object))
+  .Single()
+  .AsValuedNode()
+  .AsString();
+
+var o3 = g
+  .GetTriplesWithSubjectPredicate(s1, s1.Graph.CreateUriNode(new Uri("http://example.com/p1")))
+  .Last()
+  .SelectMany(o => s1.Graph
+    .GetTriplesWithSubjectPredicate(t.Object, s1.Graph.CreateUriNode(new Uri("http://example.com/p2")))
+    .Select(t => t.Object))
+  .Single()
+  .AsValuedNode()
+  .AsString();
+```
+
+Looking at the same graph as a dictionary, we can obtain the same values like so:
+
+```csharp
+var o1 = s1["p1"].First();                // t1
+var o3 = s1["p1"].Skip(1)["p3"].Single(); // t2 & t5
+var o2 = s1["p1"].Last()["p2"].Single();  // t3 & t4
+```
+
+[top](#nodes-as-dictionaries)
