@@ -2,6 +2,112 @@
 
 # Dynamic API 
 
+## Introduction
+
+The Dynamic API allows developers to access and update RDF graphs and SPARQL results sets as a collection of C# dynamic objects. The API is capable of mapping between known literal datatypes and .NET datatypes and uses triple predicates to define properties on C# dynamic objects.
+
+## Accessing the Dynamic API
+
+The extension method `IGraph.AsDynamic()` allows a dotNetRDF graph to be accessed as a dynamic collection. This method accepts two optional parameters:
+
+* `subjectBaseUri` - a base URI that will be used to resolve relative subject URI references in dynamic API calls. If not defined, this defaults to the base URI of the graph that is being accessed.
+* `predicateBaseUri` - a base URI that will be used to resolve relative predicate URI references in dynamic API calls. If not defined, this defaults to the `subjectBaseUri` (or to the graph base URI if `subjectBaseUri` is also undefined).
+
+### Accessing the nodes of a Graph
+
+The graph dynamic collection is a dynamic object whose properties are the subject nodes in the RDF graph. These nodes can be accessed using index notation or property notation on the dynamic object. As a simple example:
+
+```c#
+// This creates the graph that we will access as a dynamic collection
+var g = new Graph();
+g.LoadFromString(@"<urn:s> <urn:p> ""o"" .");
+
+// Create the dynamic collection wrapper for the graph, with an overridden base URI for the subject nodes
+var d = g.AsDynamic(UriFactory.Create("urn:"));
+
+// Access a the <urn:s> subject node as a property of the dynamic collection
+var s = d.s; // s will be an INode instance, the property name "s" is treated as a relative URI
+
+// Access the <urn:s> subject node as an indexed member of the dynamic collection
+s = d["s"]; // d["urn:s"] also works
+```
+
+The API allows new data to be added to the graph just as easily. The following creates an equivalent graph to
+the one loaded in the previous example.
+
+```c#
+var graph = new Graph();
+var d = graph.AsDynamic(UriFactory.Create("urn:"));
+d["s"] = new { p = "o" }; // String property value becomes an RDF string literal
+```
+
+To add more properties to an existing node, you can use the Add method instead:
+
+```c#
+// This creates the graph that we will access as a dynamic collection
+var g = new Graph();
+g.LoadFromString(@"<urn:s> <urn:p> ""o"" .");
+var d = graph.AsDynamic(UriFactory.Create("urn:"));
+d["s"].Add(new { p = "o2" });
+```
+
+If a subject node does not exist, it will be created as needed, and then you can use the Add method of the subject node.
+
+```c#
+var graph = new Graph();
+var d = graph.AsDynamic(UriFactory.Create("urn:"));
+var s = d.s; // A new subject node <urn:s>
+s.Add({ p = "o" };) // Add a property to the subject node
+```
+
+You can just as easily remove a subject node from the graph:
+
+```c#
+// This creates the graph that we will access as a dynamic collection
+var g = new Graph();
+g.LoadFromString(@"<urn:s> <urn:p> ""o"" .");
+var d = graph.AsDynamic(UriFactory.Create("urn:"));
+d.Remove("s");
+// Graph is now empty
+```
+
+### Accessing nodes
+
+The properties of a node returned by the Dynamic API can be accessed as properties of the node dynamic object:
+
+```c#
+var g = new Graph();
+g.LoadFromString(@"<urn:s> <urn:p> ""o"" .");
+var d = graph.AsDynamic(UriFactory.Create("urn:"));
+var s = d.s; // s is a dynamic node object
+var o = s.p; // == "o"; s["p"] also works as does s["urn:p"]
+```
+
+Setting a node property is supported through direct assignment:
+
+```c#
+var g = new Graph();
+g.LoadFromString(@"<urn:s> <urn:p> ""o"" .");
+var d = graph.AsDynamic(UriFactory.Create("urn:"));
+var s = d.s;
+s["p"] = "o2";
+// Graph content is now <urn:s> <urn:p> "o2"
+```
+
+Add and remove is also supported and node property values can be collections of values:
+
+```c#
+var g = new Graph();
+g.LoadFromString(@"<urn:s> <urn:p> ""o"" .");
+var d = graph.AsDynamic(UriFactory.Create("urn:"));
+var s = d.s;
+s.p.Add("o2"); // or s["p"].Add("o2"), or s.Add("p", "o2")
+// Graph content is now two triples:
+// <urn:s> <urn:p> "o" .
+// <urn:s> <urn:p> "o2" .
+var objectCount = s.p.Count(); // == 2
+```
+
 ## Nodes as dictionaries
 
 - [Simple](#Simple)
