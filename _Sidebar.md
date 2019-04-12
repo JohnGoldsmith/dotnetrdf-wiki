@@ -35,6 +35,7 @@
    1. [[Creating SPARQL Endpoints|UserGuide-ASP-Creating-SPARQL-Endpoints]]
    1. [[Deploying with rdfWebDeploy|UserGuide-ASP-Deploying-With-rdfWebDeploy]]
 1. [[Global Options|UserGuide-Global-Options]]
+1. [[Dynamic API|UserGuide-Dynamic-API]]
 1. [[Formatting API|UserGuide-Formatting-API]]
 1. [[Configuration API|UserGuide-Configuration-API]]
    1. [[Graphs|UserGuide-Configuration-Graphs]]
