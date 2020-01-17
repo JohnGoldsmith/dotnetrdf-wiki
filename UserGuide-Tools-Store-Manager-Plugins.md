@@ -1,8 +1,8 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/Store Manager|Store Manager]] > [[UserGuide/Tools/StoreManager/Plugins|Store Manager Plugins]]
+[[Home]] > [[User Guide|UserGuide]] > [[Tools|UserGuide-Tools]] > [[Store Manager|UserGuide-Tools-Store-Manager]] > [[Store Manager Plugins|UserGuide-Tools-StoreManager-Plugins]]
 
 # Store Manager Plugins 
 
-[[UserGuide/Tools/Store Manager|Store Manager]] supports a plugin system which allows you to manage any store that you've exposed via dotNetRDF's `IStorageProvider` interface using Store Manager without having to make any code changes to the tool.
+[[Store Manager|UserGuide-Tools-Store-Manager]] supports a plugin system which allows you to manage any store that you've exposed via dotNetRDF's `IStorageProvider` interface using Store Manager without having to make any code changes to the tool.
 
 ## Plugin Requirements 
 

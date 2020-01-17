@@ -1,10 +1,10 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfServer|rdfServer]]
+[[Home]] > [[User Guide|UserGuide]] > [[Tools|UserGuide-Tools]] > [[rdfServer|UserGuide-Tools-rdfServer]]
 
 # rdfServer 
 
 rdfServer is a command line HTTP server which provides a SPARQL Server.
 
-You can use the related [[UserGuide/Tools/rdfServerGui|rdfServerGui]] tool to provide a simple GUI for the creation and management of these servers.
+You can use the related [[rdfServerGui|UserGuide-Tools-rdfServerGui]] tool to provide a simple GUI for the creation and management of these servers.
 
 ## Download 
 

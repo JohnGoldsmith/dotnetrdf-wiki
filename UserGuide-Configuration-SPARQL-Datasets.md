@@ -4,7 +4,7 @@
 
 SPARQL Datasets are an abstraction dotNetRDF which separates the Leviathan engine (our in-memory SPARQL engine) from the data so that arbitrary datasets can be plugged into it. This allows for datasets which don't have to be in-memory themselves though they do have to materialise triples in-memory as needed by the engine.
 
-As a general rule anywhere you could have used a Triple Store (see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]]) via the `dnr:usingStore` property you can use a Dataset instead via the `dnr:usingDataset` property.
+As a general rule anywhere you could have used a Triple Store (see [[Configuration API - Triple Stores|UserGuide-Configuration-Triple-Stores]]) via the `dnr:usingStore` property you can use a Dataset instead via the `dnr:usingDataset` property.
 
 Datasets are configured using the [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#) in a number of ways, as each dataset is different each has its own unique configuration.
 

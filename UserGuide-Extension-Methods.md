@@ -1,10 +1,10 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Extension Methods|Extension Methods]]
+[[Home]] > [[User Guide|UserGuide]] > [[Extension Methods|UserGuide-Extension-Methods]]
 
 # Extension Methods 
 
 The library provides a number of extension methods that can be used to simplify some common tasks and marginally decrease the amount of code you have to write. These extension methods are located in several static class called [Extensions](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Extensions.htm), [LiteralExtensions](https://dotnetrdf.github.io/api/html/T_VDS_RDF_LiteralExtensions.htm), [GraphExtensions](https://dotnetrdf.github.io/api/html/T_VDS_RDF_GraphExtensions.htm) and [TripleStoreExtensions](https://dotnetrdf.github.io/api/html/T_VDS_RDF_TripleStoreExtensions.htm) in the `VDS.RDF` namespace so anywhere you reference `VDS.RDF` you have the option of using these methods.
 
-Some of these methods are shorthand for other static methods in the API such as the `Tools.CopyNode()` and `Tools.CopyTriple()` methods which are described in more detail in the [[UserGuide/Utility Methods|Utility Methods]] article.
+Some of these methods are shorthand for other static methods in the API such as the `Tools.CopyNode()` and `Tools.CopyTriple()` methods which are described in more detail in the [[Utility Methods|UserGuide-Utility-Methods]] article.
 
 ## Assert 
 
@@ -32,11 +32,11 @@ Note that these methods of asserting are semantically identical, they both asser
 
 ## CopyNode 
 
-The `CopyNode(this INode original, IGraph target)` method is used to copy Nodes from one Graph to another. See the [[UserGuide/Utility Methods|Utility Methods]] article for a full description of the usage of this method.
+The `CopyNode(this INode original, IGraph target)` method is used to copy Nodes from one Graph to another. See the [[Utility Methods|UserGuide-Utility-Methods]] article for a full description of the usage of this method.
 
 ## CopyTriple 
 
-The `CopyTriple(this Triple t, IGraph target)` method is used to copy Triples from one Graph to another. See the [[UserGuide/Utility Methods|Utility Methods]] article for a full description of the usage of this method.
+The `CopyTriple(this Triple t, IGraph target)` method is used to copy Triples from one Graph to another. See the [[Utility Methods|UserGuide-Utility-Methods]] article for a full description of the usage of this method.
 
 ## GetEnhancedHashCode 
 
@@ -46,7 +46,7 @@ In most applications this wouldn't matter since the fragment identifier is usual
 
 ## LoadFromFile, LoadFromUri, LoadFromEmbeddedResource and LoadFromString 
 
-These extension methods for `IGraph` instances all provide shortcuts for invoking the various static loader classes that can be used to load RDF from various common sources as detailed in the [[UserGuide/Reading RDF#!reading-rdf-from-common-sources|Reading RDF]] documentation.
+These extension methods for `IGraph` instances all provide shortcuts for invoking the various static loader classes that can be used to load RDF from various common sources as detailed in the [[Reading RDF|UserGuide-Reading-RDF#reading-rdf-from-common-sources]] documentation.
 
 
 ## Retract 

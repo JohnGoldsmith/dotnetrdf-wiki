@@ -20,7 +20,7 @@ You can customise practically every aspect of the display of RDF, you can access
 
 {{http://www.dotnetrdf.org/images/screenshots/editor_appearance.jpg|rdfEditor - Customize Appearance}}
 
-For information on advanced customisation see [[UserGuide/Tools/rdfEditor/Advanced Settings|Advanced Settings]]
+For information on advanced customisation see [[Advanced Settings|UserGuide-Tools-rdfEditor-Advanced-Settings]]
 
 ### Converting between Formats 
 

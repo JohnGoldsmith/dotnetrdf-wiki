@@ -27,11 +27,11 @@ _:store a dnr:TripleStore ;
 
 ## Data Source Configuration 
 
-There are only 2 ways to specify Graphs to be loaded into a Triple Store but since 1 of these is from other Graphs specified in the configuration file you can actually use any of the data sources supported by Graphs as described in [[UserGuide/Configuration/Graphs|Configuration API - Graphs]].
+There are only 2 ways to specify Graphs to be loaded into a Triple Store but since 1 of these is from other Graphs specified in the configuration file you can actually use any of the data sources supported by Graphs as described in [[Configuration API - Graphs|UserGuide-Configuration-Graphs]].
 
 ### Other Graphs 
 
-Using the `dnr:usingGraph` property any number of Graphs can be loaded into a Triple Store. Note that each graph must have a unique Base URI or the Triple Store will throw an error, as described in [[UserGuide/Configuration/Graphs|Configuration API - Graphs]] you can use the `dnr:assignUri` property to ensure this.
+Using the `dnr:usingGraph` property any number of Graphs can be loaded into a Triple Store. Note that each graph must have a unique Base URI or the Triple Store will throw an error, as described in [[Configuration API - Graphs|UserGuide-Configuration-Graphs]] you can use the `dnr:assignUri` property to ensure this.
 
 The following example shows loading two graphs into a Triple Store
 

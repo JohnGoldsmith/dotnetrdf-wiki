@@ -32,9 +32,9 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-For information on how to configure Triple Stores see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
+For information on how to configure Triple Stores see [[Configuration API - Triple Stores|UserGuide-Configuration-Triple-Stores]].
 
-Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and the value for `dnr:usingStore` is ignored.
+Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[Configuration API - Datasets|UserGuide-Configuration-SPARQL-Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and the value for `dnr:usingStore` is ignored.
 
 ## Generic Update Processor 
 
@@ -59,7 +59,7 @@ _:manager a dnr:GenericIOManager ;
   dnr:storeID "store" .
 ```
 
-The above specifies a Update Processor which applies the updates to the AllegroGraph repository store in the catalog catalog on the server `http://agraph.example.com`. See [[UserGuide/Configuration/Storage Providers|Configuration API - Storage Providers]] for more detail on configuring storage providers.
+The above specifies a Update Processor which applies the updates to the AllegroGraph repository store in the catalog catalog on the server `http://agraph.example.com`. See [[Configuration API - Storage Providers|UserGuide-Configuration-Storage-Providers]] for more detail on configuring storage providers.
 
 ## Simple Update Processor 
 

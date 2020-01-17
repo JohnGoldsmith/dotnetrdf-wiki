@@ -1,8 +1,8 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfServerGui|rdfServerGui]]
+[[Home]] > [[User Guide|UserGuide]] > [[Tools|UserGuide-Tools]] > [[rdfServerGui|UserGuide-Tools-rdfServerGui]]
 
 # rdfServerGui 
 
-rdfServerGui is a basic GUI for working with [[UserGuide/Tools/rdfServer|rdfServer]]
+rdfServerGui is a basic GUI for working with [[rdfServer|UserGuide-Tools-rdfServer]]
 
 ## Download 
 
@@ -10,7 +10,7 @@ You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?con
 
 ## Documentation 
 
-rdfServerGui is a basic GUI that can be used to manage [[UserGuide/Tools/rdfServer|rdfServer]] instances.  The basic UI looks like the following:
+rdfServerGui is a basic GUI that can be used to manage [[rdfServer|UserGuide-Tools-rdfServer]] instances.  The basic UI looks like the following:
 
 {{http://www.dotnetrdf.org/images/screenshots/rdfservergui.jpg|rdfServerGui}}
 
@@ -57,4 +57,4 @@ If you restart the GUI you will be able to see running external servers but you 
 
 ### Create Server Advanced 
 
-Create Server Advanced simply allows you to create a server by specifying the same command line arguments as if you were starting [[UserGuide/Tools/rdfServer|rdfServer]] directly.  Servers created this way always run as external servers and give you complete control over the options you pass to the server.
+Create Server Advanced simply allows you to create a server by specifying the same command line arguments as if you were starting [[rdfServer|UserGuide-Tools-rdfServer]] directly.  Servers created this way always run as external servers and give you complete control over the options you pass to the server.

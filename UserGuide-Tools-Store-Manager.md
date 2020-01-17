@@ -32,7 +32,7 @@ When you've chosen to create a New Connection either via the File Menu or the St
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_newconnection.jpg|Store Manager - New Connection}}
 
-Available stores are any store which we provide support in any of our publicly released libraries or for which you have a [[UserGuide/Tools/StoreManager/Plugins|Store Plugin]] available in your `plugins/` folder.
+Available stores are any store which we provide support in any of our publicly released libraries or for which you have a [[Store Plugin|UserGuide-Tools-StoreManager-Plugins]] available in your `plugins/` folder.
 
 ### Graph List 
 
@@ -46,7 +46,7 @@ Provided your chosen store supports SPARQL you can query against it using the SP
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_improved_editor.png|Store Manager - SPARQL Query}}
 
-As with the [[UserGuide/Tools/SparqlGui|SparqlGui]] you can save and load queries to text files as desired. 
+As with the [[SparqlGui|UserGuide-Tools-SparqlGui]] you can save and load queries to text files as desired. 
 
 Results are displayed in the same window like so, results from multiple queries are presented as tabs that can be switched between. You can hit the detach button to open a set of results in a separate window if you prefer that:
 

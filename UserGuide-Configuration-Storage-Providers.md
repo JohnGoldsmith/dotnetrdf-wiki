@@ -138,7 +138,7 @@ _:endpoint a dnr:SparqlQueryEndpoint ;
   dnr:namedGraphUri "http://example.org/namedGraph" .
 ```
 
-This defines the same connection as in the previous example but has the advantage that more complex endpoints can be specified in this way as described in [[UserGuide/Configuration/SPARQL Endpoints|Configuration API - SPARQL Endpoints]].
+This defines the same connection as in the previous example but has the advantage that more complex endpoints can be specified in this way as described in [[Configuration API - SPARQL Endpoints|UserGuide-Configuration-SPARQL-Endpoints]].
 
 ## SPARQL Query and Update Endpoints 
 

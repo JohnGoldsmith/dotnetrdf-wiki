@@ -1,4 +1,4 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/RDF Serialisations|RDF Serialisations]]
+[[Home]] > [[User Guide|UserGuide]] > [[RDF Serialisations|UserGuide-RDF-Serialisations]]
 
 = RDF Serialisations
 

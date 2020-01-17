@@ -32,9 +32,9 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-For information on how to configure Triple Stores see [[UserGuide/Configuration/Triple Stores|Configuration API - Triple Stores]].
+For information on how to configure Triple Stores see [[Configuration API - Triple Stores|UserGuide-Configuration-Triple-Stores]].
 
-Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[UserGuide/Configuration/SPARQL Datasets|Configuration API - Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and the value of `dnr:usingStore` is ignored.
+Alternatively you may use the `dnr:usingDataset` property to connect it to a Dataset instead. See [[Configuration API - Datasets|UserGuide-Configuration-SPARQL-Datasets]] for details. If both `dnr:usingDataset` and `dnr:usingStore` are present then `dnr:usingDataset` has priority and the value of `dnr:usingStore` is ignored.
 
 ## Generic Protocol Processor 
 
@@ -63,7 +63,7 @@ The above configures a Generic Protocol Processor which processes requests using
 
 ## Protocol to Update Processor 
 
-The Protocol to Update Processor is a processor which operates using the supplied Query and Update processors, see [[UserGuide/Configuration/Query Processors|Configuration API - Query Processors]] and [[Configuration API - Update Processors|UserGuide-Configuration-Update-Processors]] for details on configuring these.
+The Protocol to Update Processor is a processor which operates using the supplied Query and Update processors, see [[Configuration API - Query Processors|UserGuide-Configuration-Query-Processors]] and [[Configuration API - Update Processors|UserGuide-Configuration-Update-Processors]] for details on configuring these.
 
 ```turtle
 

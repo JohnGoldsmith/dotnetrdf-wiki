@@ -1,8 +1,8 @@
-[[Home]] > [[User Guide|UserGuide]] > [[UserGuide/Tools|Tools]] > [[UserGuide/Tools/rdfEditor|rdfEditor]] > [[UserGuide/Tools/rdfEditor/Advanced Settings|Advanced Settings]]
+[[Home]] > [[User Guide|UserGuide]] > [[Tools|UserGuide-Tools]] > [[rdfEditor|UserGuide-Tools-rdfEditor]] > [[Advanced Settings|UserGuide-Tools-rdfEditor-Advanced-Settings]]
 
 # rdfEditor Advanced Settings 
 
-As seen in the main page for [[UserGuide/Tools/rdfEditor|rdfEditor]] you have significant control over the display of RDF in the editor:
+As seen in the main page for [[rdfEditor|UserGuide-Tools-rdfEditor]] you have significant control over the display of RDF in the editor:
 
 {{http://www.dotnetrdf.org/images/screenshots/editor_appearance.jpg|rdfEditor - Appearance Settings}}
 

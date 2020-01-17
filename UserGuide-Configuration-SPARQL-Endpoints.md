@@ -40,7 +40,7 @@ _:endpoint a dnr:SparqlQueryEndpoint ;
 
 ### Proxy Settings 
 
-You can also specify settings for a proxy server which must be used for requests using the dnr:proxy property to point to an object of type `dnr:Proxy`. See [[UserGuide/Configuration/Proxy Servers|Configuration API - Proxies]] for how to configure proxies.
+You can also specify settings for a proxy server which must be used for requests using the dnr:proxy property to point to an object of type `dnr:Proxy`. See [[Configuration API - Proxies|UserGuide-Configuration-Proxy-Servers]] for how to configure proxies.
 
 Note that if the user credentials for the endpoint also apply to the proxy you can omit specifying them on the proxy object and use the `dnr:useCredentialsForProxy` property to state that the same credentials are used for the proxy.
 
