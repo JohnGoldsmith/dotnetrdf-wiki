@@ -23,7 +23,7 @@ All handlers have a standard set of properties that can be used to specify some 
 
 ### dnr:userGroup 
 
-The `dnr:userGroup` property is used to associate user groups (see [[UserGuide/Configuration/User Groups|Configuration API - User Groups]]) with a Handler for basic authentication purposes. Note that this feature is currently experimental and may be revised in future releases.
+The `dnr:userGroup` property is used to associate user groups (see [[Configuration API - User Groups|UserGuide-Configuration-User-Groups]]) with a Handler for basic authentication purposes. Note that this feature is currently experimental and may be revised in future releases.
 
 ### dnr:showErrors 
 
@@ -43,7 +43,7 @@ The `dnr:cacheSliding` property specifies whether sliding cache expiration is us
 
 ### dnr:expressionFactory 
 
-The `dnr:expressionFactory` property adds locally scoped SPARQL expression factories to a Handler which the Handler will use when parsing SPARQL. See [[UserGuide/Configuration/SPARQL Expression Factories|Configuration API - Expression Factories]] for more details.
+The `dnr:expressionFactory` property adds locally scoped SPARQL expression factories to a Handler which the Handler will use when parsing SPARQL. See [[Configuration API - Expression Factories|UserGuide-Configuration-SPARQL-Expression-Factories]] for more details.
 
 ### dnr:enableCors 
 
@@ -83,7 +83,7 @@ The `dnr:stylesheet` property specifies a path to a stylesheet that is used for 
 
 ### dnr:importNamespacesFrom 
 
-The `dnr:importNamespacesFrom` property points to a Graph that defines default namespaces (see [[UserGuide/Configuration/Graphs|Configuration API - Graphs]]), these are used for any output that can use QNames to compress output. Defaults to `rdf`, `rdfs` and `xsd` namespaces if not specified.
+The `dnr:importNamespacesFrom` property points to a Graph that defines default namespaces (see [[Configuration API - Graphs|UserGuide-Configuration-Graphs]]), these are used for any output that can use QNames to compress output. Defaults to `rdf`, `rdfs` and `xsd` namespaces if not specified.
 
 # Handler Configurations 
 
@@ -108,7 +108,7 @@ _:graph a dnr:Graph ;
   dnr:fromFile "~/App_Data/example.rdf" .
 ```
 
-This creates configuration for a Handler which responds to requests on the URI /graph by sending back the Graph specified by the `dnr:usingGraph` property. For details of how to configure Graphs see [[UserGuide/Configuration/Graphs|Configuration API - Graphs]].
+This creates configuration for a Handler which responds to requests on the URI /graph by sending back the Graph specified by the `dnr:usingGraph` property. For details of how to configure Graphs see [[Configuration API - Graphs|UserGuide-Configuration-Graphs]].
 
 For serving graphs at wildcard paths replace the URI with `<dotnetrdf:/graph/*>` and change the value of `dnr:type` to `VDS.RDF.Web.WildcardGraphHandler`. This would result in a handler which responds to requests to any URI under `/graph/` with the specified Graph.
 
@@ -134,7 +134,7 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests on the URI `/sparql` by providing a SPARQL Query endpoint. The `dnr:queryProcessor` property is used to specify the class that processes the queries - for more details on configuring Query Processors see [[UserGuide/Configuration/Query Processors|Configuration API - Query Processors]].
+This specifies configuration for a Handler which responds to requests on the URI `/sparql` by providing a SPARQL Query endpoint. The `dnr:queryProcessor` property is used to specify the class that processes the queries - for more details on configuring Query Processors see [[Configuration API - Query Processors|UserGuide-Configuration-Query-Processors]].
 
 Query Handlers support the following additional properties. Note that while a Handler may have these properties specified not all query processors can/will use/respect these settings.
 
@@ -160,11 +160,11 @@ The `dnr:defaultQueryFile` property specifies a path to a file containing the de
 
 ### dnr:queryOptimiser 
 
-The `dnr:queryOptimiser` property specifies a Query Optimiser (see [[UserGuide/Configuration/SPARQL Optimisers|Configuration API - Optimisers]]) to be used for optimising SPARQL Queries.
+The `dnr:queryOptimiser` property specifies a Query Optimiser (see [[Configuration API - Optimisers|UserGuide-Configuration-SPARQL-Optimisers]]) to be used for optimising SPARQL Queries.
 
 ### dnr:algebraOptimiser 
 
-The `dnr:algebraOptimiser` property specifies Algebra Optimisers (see [[UserGuide/Configuration/SPARQL Optimisers|Configuration API - Optimisers]]) to be used for optimising SPARQL Algebra prior to evaluation.
+The `dnr:algebraOptimiser` property specifies Algebra Optimisers (see [[Configuration API - Optimisers|UserGuide-Configuration-SPARQL-Optimisers]]) to be used for optimising SPARQL Algebra prior to evaluation.
 
 ## Update Handlers 
 
@@ -222,7 +222,7 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests under the URI /protocol/ by providing a SPARQL Graph Store HTTP Protocol endpoint. The `dnr:protocolProcessor` property is used to specify the class that processes the protocol requests - for more details on configuring Protocol Processors see [[UserGuide/Configuration/Protocol Processors|Configuration API - Protocol Processors]].
+This specifies configuration for a Handler which responds to requests under the URI /protocol/ by providing a SPARQL Graph Store HTTP Protocol endpoint. The `dnr:protocolProcessor` property is used to specify the class that processes the protocol requests - for more details on configuring Protocol Processors see [[Configuration API - Protocol Processors|UserGuide-Configuration-Protocol-Processors]].
 
 ## SPARQL Servers 
 
