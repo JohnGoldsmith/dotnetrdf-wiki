@@ -10,7 +10,7 @@ Basic Configuration for a Protocol Processor looks like the following:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlHttpProtocolProcessor .
   dnr:type "VDS.RDF.Update.Protocol.LeviathanProtocolProcessor" .
@@ -22,7 +22,7 @@ The Leviathan Protocol Processor is used to process protocol requests on in-memo
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlHttpProtocolProcessor .
   dnr:type "VDS.RDF.Update.Protocol.LeviathanProtocolProcessor" ;
@@ -46,7 +46,7 @@ To configure these handlers simply add a `dnr:storageProvider` property to the b
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlHttpProtocolProcessor .
   dnr:type "VDS.RDF.Update.Protocol.GenericProtocolProcessor" ;
@@ -67,7 +67,7 @@ The Protocol to Update Processor is a processor which operates using the supplie
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlHttpProtocolProcessor .
   dnr:type "VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor" ;

@@ -6,7 +6,7 @@ Permissions are configured very simply as follows:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:permission a dnr:Permission ;
   dnr:type "VDS.RDF.Configuration.Permissions.Permission" ;
@@ -17,7 +17,7 @@ Or you can specify permission sets which specify that allow multiple actions to 
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:permission a dnr:Permission ;
   dnr:type "VDS.RDF.Configuration.Permissions.PermissionSet" ;

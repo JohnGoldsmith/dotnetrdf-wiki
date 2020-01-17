@@ -6,7 +6,7 @@ Proxy Servers are configured very simply as follows:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proxy a dnr:Proxy ;
   dnr:server "http://proxy.example.com" ;

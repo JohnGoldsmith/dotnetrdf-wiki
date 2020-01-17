@@ -10,7 +10,7 @@ You can specify a connection to an Allegro Graph server as follows:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:agraph a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.AllegroGraphConnector" ;
@@ -33,7 +33,7 @@ You can specify a read-only connection to an RDF dataset file like so:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:datasetFile a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.DatasetFileManager" ;
@@ -49,7 +49,7 @@ The `dnr:fromFile` property is used to specify the dataset file to connect to an
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:fourStore a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.FourStoreConnector" ;
@@ -67,7 +67,7 @@ You can connect to any store which is exposed via a Fuseki server using the foll
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:fuseki a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.FusekiConnector" ;
@@ -82,7 +82,7 @@ Any server which supports the Sesame HTTP Protocol can be connected to as follow
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:sesame a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.SesameHttpProtocolConnector" ;
@@ -104,7 +104,7 @@ It is possible to create read-only connections to SPARQL Query endpoints in two 
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:sparqlQuery a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.SparqlConnector" ;
@@ -124,7 +124,7 @@ The `dnr:loadMode` property takes a value of either `Describe` or `Construct` an
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:sparqlQuery a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.SparqlConnector" ;
@@ -146,7 +146,7 @@ Where a store provides both a query and update endpoint you may specify a connec
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:sparqlQuery a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.ReadWriteSparqlConnector" ;
@@ -171,7 +171,7 @@ SPARQL 1.1 introduces a new RESTful HTTP Protocol for Graph Stores and you can c
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:sparqlHttp a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.SparqlHttpProtocolConnector" ;
@@ -186,7 +186,7 @@ You can specify a connection to an Stardog server as follows:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:stardog a dnr:StorageProvider ;
   dnr:type "VDS.RDF.Storage.StardogConnector" ;
@@ -206,7 +206,7 @@ Connections to Virtuoso's native quad store can be defined as follows:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 # Object Factory must be declared, if you have multiple objects from the Data.Virtuoso
 # you need only declare it once in the file

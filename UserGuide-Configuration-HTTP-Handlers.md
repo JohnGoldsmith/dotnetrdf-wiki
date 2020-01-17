@@ -97,7 +97,7 @@ Configuration for these Handlers looks like the following:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 <dotnetrdf:/graph> a dnr:HttpHandler ;
   dnr:type "VDS.RDF.Web.GraphHandler" ;
@@ -120,7 +120,7 @@ An example configuration might look like the following:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 <dotnetrdf:/sparql> a dnr:HttpHandler ;
   dnr:type "VDS.RDF.Web.QueryHandler" ;
@@ -174,7 +174,7 @@ An example configuration might look like the following:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 <dotnetrdf:/update> a dnr:HttpHandler ;
   dnr:type "VDS.RDF.Web.UpdateHandler" ;
@@ -208,7 +208,7 @@ An example configuration is as follows:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 <dotnetrdf:/protocol/*> a dnr:HttpHandler ;
   dnr:type "VDS.RDF.Web.WildcardProtocolHandler" ;
@@ -232,7 +232,7 @@ Configuration is essentially the combination of configuration for a Query, Updat
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 <dotnetrdf:/server/*> a dnr:HttpHandler ;
   dnr:type "VDS.RDF.Web.SparqlServer" ;

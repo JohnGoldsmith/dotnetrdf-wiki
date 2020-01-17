@@ -10,7 +10,7 @@ Basic Configuration for a Update Processor looks like the following:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlUpdateProcessor .
   dnr:type "VDS.RDF.Update.LeviathanUpdateProcessor" .
@@ -22,7 +22,7 @@ The Leviathan Update Processor is used to process updates on in-memory stores us
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlUpdateProcessor .
   dnr:type "VDS.RDF.Update.LeviathanUpdateProcessor" ;
@@ -46,7 +46,7 @@ To configure these handlers simply add a `dnr:storageProvider` property to the b
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlUpdateProcessor .
   dnr:type "VDS.RDF.Update.GenericUpdateProcessor" ;
@@ -67,7 +67,7 @@ Similar to the Generic Update Processor the Simple Update Processor passes updat
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:proc a dnr:SparqlUpdateProcessor .
   dnr:type "VDS.RDF.Update.SimpleUpdateProcessor" ;

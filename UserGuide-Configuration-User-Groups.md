@@ -6,7 +6,7 @@ User Groups are configured very simply as follows:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:group a dnr:UserGroup ;
   dnr:type "VDS.RDF.Configuration.Permissions.UserGroup" ;

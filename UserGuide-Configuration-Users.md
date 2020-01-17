@@ -6,7 +6,7 @@ Users are configured very simply as follows:
 
 ```turtle
 
-@prefix <http://www.dotnetrdf.org/configuration#> .
+@prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 _:user a dnr:User ;
   dnr:user "username" ;
