@@ -143,6 +143,8 @@ Additionally if you use `@forsome` or `@forall` to define tokens as being variab
 
 The above is equivalent to the previous example since we've used a `@forall` directive to specify that :x is a variable.  Generally speaking specifying variables directly is always preferred.
 
+**NOTE**: The current N3 reasoner implementation only supports the implication operation (`http://www.w3.org/2000/10/swap/log#implies`). Other N3 logic operations, string functions and math functions are not currently implemented by the reasoner.
+
 # Using Inference with Triple Stores 
 
 The library also provides an [IInferencingTripleStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInferencingTripleStore.htm) interface which extends the basic `ITripleStore` interface with methods which allow for the attachment of reasoners (instances of `IInferenceEngine` implementations) to a Triple Store. Reasoning when used in this sense is static in that inference is applied only at certain points:
