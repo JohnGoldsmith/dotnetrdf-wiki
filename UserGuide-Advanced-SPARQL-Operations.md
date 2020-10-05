@@ -26,7 +26,7 @@ The library includes three different query optimisers:
 | --- | --- |
 | [DefaultOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_DefaultOptimiser.htm) | The default optimiser which does reordering based on simple rules and places `FILTER` and assignments |
 | [NoReorderOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_NoReorderOptimiser.htm) | An optimiser which doesn't reorder triple patterns but still places `FILTER` and assignments |
-| [WeightedOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_WeightOptimiser.htm) | An optimiser which does the reordering based on weighting calculated from provided statistics about the data, also places `FILTER` and assignments |
+| [WeightedOptimiser](https://www.dotnetrdf.org/api/html/T_VDS_RDF_Query_Optimisation_WeightedOptimiser.htm) | An optimiser which does the reordering based on weighting calculated from provided statistics about the data, also places `FILTER` and assignments |
 
 ### Global Query Optimiser 
 
